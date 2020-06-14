@@ -1,0 +1,12 @@
+[
+X : i32 = 0,
+Y : i32 = 200
+]
+
+//Test: passed
+
+(land
+  (sgt (add X (i32 5)) (i32 0))
+  (sgt (add X (i32 5)) (i32 2))
+)
+
