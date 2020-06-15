@@ -46,8 +46,8 @@ int main()
 }
 
 ```
-2. The next step is to generate bitcode using clang compiler  
-----------------------------------------------------------------
+2. The next step is to generate bitcode using clang compiler. Instruction to install LLVM from source code and build STGInstrument pass can be found in the [pass_readme](https://github.com/soneyahossain/STG-I/blob/master/pass/README.md) 
+-----------------------------------------------------------------------------------------------------------------------
 
 ```
 clang -emit-llvm -fno-discard-value-names if_else_ladder.cpp -c -o PUT.bc
