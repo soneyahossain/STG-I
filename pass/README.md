@@ -9,7 +9,7 @@ Please follow https://llvm.org/docs/GettingStarted.html#getting-the-source-code-
 Instructions to run this pass:
 ---------------------------------------------------------------------------------------------------------------------
 
-1. Create a folder inside your **..\llvm\lib\Transforms** directory (such as STGInstrument) and copy STGInstrument\CMakeLists.txt, STGInstrument\Sym_trace.cpp, STGInstrument\Sym_trace.exports files into the folder.
+1. Create a folder inside your **..\llvm\lib\Transforms** directory (such as STGInstrument) and copy STGInstrument\CMakeLists.txt, STGInstrument\STGInstrument.cpp, STGInstrument\Sym_trace.exports files into the folder.
 2. Add "add_subdirectory(STGInstrument)" in ..\llvm\lib\Transforms\CMakeLists.txt file
 3. Run "make" command to build the llvm with STGInstrument pass, to expedite the build process utilize multiple cores by using " make -j number_of_cores" command, i.e., "make -j 7" or "make -j 5"
 4. A file called LLVMSTGInstrument.so will be generated in your ... /build/lib/ directory (In case of macOS LLVMSTGInstrument.dylib file will be generated)
