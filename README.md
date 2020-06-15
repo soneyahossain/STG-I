@@ -103,3 +103,21 @@ llc -filetype=obj linked.bc
 ./a.out
 
 ```
+
+Constraints file for the above test will look like as below and can be found at [stg_pc_0.stg](https://github.com/soneyahossain/STG-I/blob/master/test_programs/if_else_ladder_test/stg-out/stg_pc_0.stg) file
+---------------------------------------------------------------------------------------------------------------------
+```
+[
+X : i32 = 0,
+Y : i32 = 38
+]
+
+//Test: failed
+
+(land
+  (lnot(eq X Y))
+  (lnot(sgt X Y))
+)
+```
+
+
