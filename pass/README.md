@@ -6,7 +6,7 @@ Please follow https://llvm.org/docs/GettingStarted.html#getting-the-source-code-
 
 [STGInstrumenter](https://github.com/soneyahossain/STG-I/tree/master/pass/STGInstrumenter) folder contains Symbolic Test Generalization Instrumentation pass for instrumenting LLVM bitcode 
 
-Instructions to run this pass:
+Instructions to run this pass-
 ---------------------------------------------------------------------------------------------------------------------
 
 1. Create a folder inside your **..\llvm\lib\Transforms** directory (such as STGInstrumenter) and copy STGInstrumenter\CMakeLists.txt, STGInstrumenter\STGInstrumenter.cpp, STGInstrumenter\STGInstrumenter.exports files into the folder.
