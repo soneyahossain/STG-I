@@ -8,7 +8,7 @@ Instructions to build LLVM and SGTI pass can be found in the pass [readme](https
 
 Run below commands to test classify.cpp program:
 ---------------------------------------------------
-1. Clone this repository using "https://github.com/soneyahossain/STG-I.git" 
+1. git clone https://github.com/soneyahossain/STG-I.git
 2. cd STG-I/test
 3. bash commandLine.sh
 
