@@ -105,7 +105,7 @@ llc -filetype=obj linked.bc
 ```
 
 Constraints file for the above test will look like as below and can be found at [stg_pc_0.stg](https://github.com/soneyahossain/STG-I/blob/master/test_programs/if_else_ladder_test/stg-out/stg_pc_0.stg) file
----------------------------------------------------------------------------------------------------------------------
+
 ```
 [
 X : i32 = 0,
