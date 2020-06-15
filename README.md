@@ -20,12 +20,12 @@ To to generate symbolic constarints of a program P -
 #include <stdio.h>    
 #include "../lib/stg.h"    * need to include stg.h file *  
 
-bool isGreaterOrEq(int number1, int number2)  
+bool isGreaterOrEq(int x, int y)  
 {  
-    if (number1 == number2) {  
+    if (x == y) {  
         return true;  
     }  
-    else if (number1 > number2) {  
+    else if (x > y) {  
         return true;  
     }  
     else {  
