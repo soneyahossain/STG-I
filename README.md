@@ -16,32 +16,33 @@ Instruction to generate symbolic constarints of a program
 To to generate symbolic constarints of a program P -
 
 1. Need to define which variables are symbolic varibales and need to assign concrete values to those varibales. For example, consider the below program-
+```
+    #include <stdio.h>    
+    #include "../lib/stg.h"    * need to include stg.h file *  
 
-  #include <stdio.h>    
-  #include "../lib/stg.h"    * need to include stg.h file *  
+    bool isGreaterOrEq(int number1, int number2)  
+    {  
+        if (number1 == number2) {  
+            return true;  
+        }  
+        else if (number1 > number2) {  
+            return true;  
+        }  
+        else {  
+            return false;  
+        }  
+    }   
 
-  bool isGreaterOrEq(int number1, int number2)  
-  {  
-      if (number1 == number2) {  
-          return true;  
-      }  
-      else if (number1 > number2) {  
-          return true;  
-      }  
-      else {  
-          return false;  
-      }  
-  }   
+    int main()  
+    {
+        int x, y;  
+        stg_begin_test();  
+        stg_symbolic_variable(&x, "X");  
+        stg_symbolic_variable(&y, "Y");  
+        stg_input_int(&x, 0);  
+        stg_input_int(&y, 38);  
+        stg_assert(isGreaterOrEq(x, y));  
+        stg_end_test();  
+    }
 
-  int main()  
-  {
-      int x, y;  
-      stg_begin_test();  
-      stg_symbolic_variable(&x, "X");  
-      stg_symbolic_variable(&y, "Y");  
-      stg_input_int(&x, 0);  
-      stg_input_int(&y, 38);  
-      stg_assert(isGreaterOrEq(x, y));  
-      stg_end_test();  
-  }
-
+```
