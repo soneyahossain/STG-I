@@ -2,7 +2,7 @@
 # from the hello plugin.
 if( NOT LLVM_REQUIRES_RTTI )
   if( NOT LLVM_REQUIRES_EH )
-    set(LLVM_EXPORTED_SYMBOL_FILE ${CMAKE_CURRENT_SOURCE_DIR}/STGInstrument.exports)
+    set(LLVM_EXPORTED_SYMBOL_FILE ${CMAKE_CURRENT_SOURCE_DIR}/STGInstrumenter.exports)
   endif()
 endif()
 
@@ -10,8 +10,8 @@ if(WIN32 OR CYGWIN)
   set(LLVM_LINK_COMPONENTS Core Support)
 endif()
 
-add_llvm_library( LLVMSTGInstrument MODULE BUILDTREE_ONLY
-  STGInstrument.cpp
+add_llvm_library( LLVMSTGInstrumenter MODULE BUILDTREE_ONLY
+  STGInstrumenter.cpp
 
   DEPENDS
   intrinsics_gen

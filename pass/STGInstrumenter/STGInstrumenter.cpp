@@ -1,4 +1,4 @@
-//===- SymbTraceInstrumentation.cpp a LLVM pass developed by Soneya Binta Hossain , CS@UVA" ---------------===//
+//===- STGInstrument.cpp a LLVM pass developed by Soneya Binta Hossain, CS@UVA" ---------------===//
 //
 //===----------------------------------------------------------------------===//
 #include "llvm/ADT/Statistic.h"
@@ -19,17 +19,17 @@
 #include <algorithm>
 using namespace llvm;
 
-#define DEBUG_TYPE "hello"
+#define DEBUG_TYPE "stginstrument"
 
 namespace {
 
 // Symbolic Trace Instrumentation Pass
 
-struct SymbTraceInstrumentation : public ModulePass {
+struct STGInstrumenter: public ModulePass {
 
     static char ID; // Pass identification, replacement for type id
-    int symbolic_var_counter = 0; // to generate symbolic variable e.g. S0, S1
-    int isFileCleared = 0; // before instrumenting a program, clear the file only once and this value prevents from further clear call untill finish
+    //int symbolic_var_counter = 0; // to generate symbolic variable e.g. S0, S1
+    //int isFileCleared = 0; // before instrumenting a program, clear the file only once and this value prevents from further clear call untill finish
     Function* stg_update_op;
     Function* stg_update_char;
     Function* stg_update_int;
@@ -48,60 +48,41 @@ struct SymbTraceInstrumentation : public ModulePass {
     Function* stg_update_cast;
     Function* stg_update_load_i64;
     Function* stg_update_store_i64;
+    Function* stg_update_float;
+    Function* stg_update_double;
 
     GlobalVariable* prevBB;
-    std::map<std::string, GlobalVariable*> mapOfGV;
+    //std::map<std::string, GlobalVariable*> mapOfGV;
     //std::map<std::string, std::string> bitcastMap;
 
     std::vector<std::string> function_doNotInstrument = {"stg_symbolic_variable", "stg_symbolic_array", "stg_assert", "stg_begin_test", "stg_end_test", "stg_set_symbolic", "stg_update_char",
     "stg_update_int", "stg_update_op", "stg_update_pc", "stg_update_phi", "stg_input_int", "printf", "stg_input_double", "stg_input_float","stg_update_load" ,"stg_update_store", "stg_update_load_i8" ,"stg_update_store_i8",
-    "stg_update_store_float","stg_update_load_float", "stg_symbolic_array", "stg_input_array","is_number","stg_update_cmp", "stg_update_cast","stg_update_load_i64","stg_update_store_i64", "stg_update_store_double","stg_update_load_double"};
+    "stg_update_store_float","stg_update_load_float", "stg_symbolic_array", "stg_input_array","is_number","stg_update_cmp", "stg_update_cast","stg_update_load_i64","stg_update_store_i64", "stg_update_store_double","stg_update_load_double","stg_update_float","stg_update_double"};
 
-    SymbTraceInstrumentation() : ModulePass(ID){}
+    STGInstrumenter() : ModulePass(ID){}
 
     bool runOnModule(Module& M) override
     {
 
         llvm::LLVMContext& context = M.getContext();
         static IRBuilder<> Builder(context);
-
         Module* ModuleOb = &M;
+        prevBB = createGlob(Builder, "prev_bb",ModuleOb );  //global variable to store previous BB to process phi node
 
         //print module name
         StringRef module_name = M.getName();
         errs() << "module name=" << module_name << "\n";
 
-        //iterate over the global variables
-        for (auto gv_iter = M.global_begin(); gv_iter != M.global_end(); gv_iter++) {
-
-            GlobalVariable* gv = &*gv_iter;
-            std::string gv_name = gv->getName().str();
-
-            //Constant* value = gv->getInitializer();
-
-            //call getConstant method to get the constant value
-            //std::string value_ = getConstant(errs(), value);
-
-            //insert the global variables into a map
-
-            mapOfGV[gv_name] = gv;
-
-            //mapOfGV.insert(std::make_pair(gv_name, value));
-        }
-
-        createFunc(Builder, ModuleOb);   // create function declarations for the symbolic state update
-        prevBB = createGlob(Builder, "prev_bb",ModuleOb );  //global variable to store previous BB to process phi node.
+        createFunc(Builder, ModuleOb);   // create function declarations
 
         for (Module::iterator F = M.begin(), y = M.end(); F != y; ++F) {
-
           //do not instrument lib functions
            if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), F->getName().str()) == function_doNotInstrument.end())
               instrumentFunction(*F, M);
-
         }
 
         errs() << "instrumentation successful " << "\n";
-        return false;
+        return true;
     }
 
     //-----------------------------------------------------------------------------------------------------------------------
@@ -113,9 +94,7 @@ struct SymbTraceInstrumentation : public ModulePass {
         std::string function_name = F.getName().str();
         llvm::LLVMContext& context = M.getContext();
 
-        errs() << "function inside :  " << function_name << "\n";
-
-        // Do not instrument the functions used in the instrumentation
+        errs() << "Instrumenting function :  " << function_name << "\n";
 
             for (BasicBlock& BB : F) // iterating all the basic block
             {
@@ -127,19 +106,12 @@ struct SymbTraceInstrumentation : public ModulePass {
                 for (Instruction& i : BB) // iterating all the instructions within current BB
                 {
                     if (!i.hasName() && !i.getType()->isVoidTy())
-                        i.setName("tmp_"+F.getName());
+                        i.setName("tmp_"+F.getName());         // if the instruction doesnt have a name, giving a name to it
 
                     Instruction* I = &i; // current instruction
-                   // I->dump();  // print instruction
+                    // I->dump();  // print instruction
 
-                   if(I->isCast())
-                   {
-
-                      errs() << "Cast Inst: ";
-                      I->dump();
-                   }
-
-                    if (LoadInst* loadInst = dyn_cast<LoadInst>(I)) { //read from memory
+                    if (LoadInst* loadInst = dyn_cast<LoadInst>(I)) {   //read from memory
 
                         std::string result = loadInst->getName().str();
                         llvm::Value* result_ = builder.CreateGlobalStringPtr(result);
@@ -151,12 +123,27 @@ struct SymbTraceInstrumentation : public ModulePass {
                         if(isa<GlobalVariable>(loadAddress)) {
 
                             //errs() << "got Global Variable :  " << loadAddressName << " with type ";
-                            loadInst->getType()->dump();
+                            //loadInst->getType()->dump();
+
+                            const Type* T = loadInst->getType();
 
                             std::vector<Value*> args;
                             args.push_back(result_);
                             args.push_back(loadInst);  // loadInst has the actual value of the global variable, can't use getInitializer as for non consant global it will not give current value
-                            CallInst::Create(stg_update_int, args)->insertAfter(I);
+
+
+                            if(T==Type::getInt32Ty(context))
+                            {
+                             CallInst::Create(stg_update_int, args)->insertAfter(I);  //maybe need to handle other type globals such as double, float, char
+
+                            }else if(T==Type::getFloatTy(context))
+                            {
+                              CallInst::Create(stg_update_float, args)->insertAfter(I);
+                            }
+                            else if(T==Type::getDoubleTy(context))
+                            {
+                              CallInst::Create(stg_update_double, args)->insertAfter(I);
+                            }
 
                         }
                         else {     // %tmp = load i32, i32* %x, align 4
@@ -167,24 +154,22 @@ struct SymbTraceInstrumentation : public ModulePass {
                             args.push_back(loadAddress);
                             args.push_back(result_);
 
-
                             const Type* T = loadInst->getPointerOperandType();
-
 
                             if(T==Type::getInt32PtrTy(context))
                             {
-                             CallInst::Create(stg_update_load, args)->insertAfter(I);
+                                CallInst::Create(stg_update_load, args)->insertAfter(I);
                             }else if(T==Type::getInt8PtrTy(context))
                             {
-                              CallInst::Create(stg_update_load_i8, args)->insertAfter(I);
+                                CallInst::Create(stg_update_load_i8, args)->insertAfter(I);
                             }
                             else if(T==Type::getInt64PtrTy(context))
                             {
-                              CallInst::Create(stg_update_load_i64, args)->insertAfter(I);
+                                CallInst::Create(stg_update_load_i64, args)->insertAfter(I);
                             }
                             else if(T==Type::getFloatPtrTy(context))
                             {
-                               CallInst::Create(stg_update_load_float, args)->insertAfter(I);
+                                CallInst::Create(stg_update_load_float, args)->insertAfter(I);
                             }
                             else if(T==Type::getDoublePtrTy(context))
                             {
@@ -203,7 +188,6 @@ struct SymbTraceInstrumentation : public ModulePass {
                         //llvm::Value* memory_address_name_ = builder.CreateGlobalStringPtr("v(" + memory_address_name + ")");
 
                         // get the value to be stored at the address
-
                         Value* valToStore = storeInst->getOperand(0);
                         std::string valToStoreStr = "";
 
@@ -213,7 +197,6 @@ struct SymbTraceInstrumentation : public ModulePass {
                          valToStore->getType()->print(type);
 
                         // errs() <<"StoreInst Type ==========="<<type.str() <<"\n";
-
 
                         if (ConstantInt* CI = dyn_cast<ConstantInt>(valToStore)) // if value is integer or any constant
                         {
@@ -225,7 +208,7 @@ struct SymbTraceInstrumentation : public ModulePass {
 
                             valToStoreStr =  "("+ type.str()+ " "+ valToStoreStr+")";
 
-                        }else if(ConstantFP *constfp= llvm::dyn_cast<llvm::ConstantFP>(valToStore))
+                        }else if(ConstantFP *constfp = llvm::dyn_cast<llvm::ConstantFP>(valToStore))
                         {
                              if(valToStore->getType()->isDoubleTy()){
 
@@ -248,10 +231,7 @@ struct SymbTraceInstrumentation : public ModulePass {
                         args.push_back(memory_address);
                         args.push_back(valToStoreStr_);
 
-
                        const Type* T = storeInst->getPointerOperandType();
-                       //errs() <<"Type==========="<<T;
-
 
                        if(T==Type::getInt32PtrTy(context))
                        {
@@ -288,33 +268,7 @@ struct SymbTraceInstrumentation : public ModulePass {
 
                         }
                     }
-                    /*else if( ZExtInst* zExtInst = dyn_cast<ZExtInst>(I))
-                    {
 
-                          llvm::Value* result = builder.CreateGlobalStringPtr(zExtInst->getName().str());
-
-
-                          std::string type_str;
-                          llvm::raw_string_ostream type(type_str);
-                          zExtInst->getType()->print(type);
-
-                          errs() <<"trunc Type==========="<<type.str() <<"\n";
-
-
-                          llvm::Value* value = builder.CreateGlobalStringPtr(zExtInst->getOperand(0)->getName().str());
-                          llvm::Value* castop = builder.CreateGlobalStringPtr("zext");
-                          llvm::Value* type_ = builder.CreateGlobalStringPtr(type.str());
-
-
-                          std::vector<Value*> args;
-                          args.push_back(result);
-                          args.push_back(value);
-                          args.push_back(castop);
-                          args.push_back(type_);
-                          CallInst::Create(stg_update_cast, args)->insertBefore(I);
-
-                    }
-                    */
                      else if(I->isCast()) //isa<FPTruncInst>(I) || isa<FPToSIInst>(I) || isa<FPExtInst>(I) || isa<FPToUIInst>(I) || isa<ZExtInst>(I) || isa<FPExtInst>(I) || isa<TruncInst>(I) || isa<SExtInst>(I) )
                      {
                          //%X = fptrunc double 16777217.0 to float    ; yields float:16777216.0
@@ -349,172 +303,7 @@ struct SymbTraceInstrumentation : public ModulePass {
                       CallInst::Create(stg_update_cast, args)->insertBefore(I);
 
                      }
-                     /*
-                     else if( FPExtInst* fPExtInst = dyn_cast<FPExtInst>(I))
-                     {
 
-                           llvm::Value* result = builder.CreateGlobalStringPtr(fPExtInst->getName().str());
-
-                           std::string type_str;
-                           llvm::raw_string_ostream type(type_str);
-                           fPExtInst->getType()->print(type);
-
-                           errs() <<"fPExtInst Type==========="<<type.str() <<"\n";
-
-                          llvm::Value* value = builder.CreateGlobalStringPtr(fPExtInst->getOperand(0)->getName().str());
-                          llvm::Value* castop = builder.CreateGlobalStringPtr("fpext");
-                          llvm::Value* type_ = builder.CreateGlobalStringPtr(type.str());
-
-
-                          std::vector<Value*> args;
-                          args.push_back(result);
-                          args.push_back(value);
-                          args.push_back(castop);
-                          args.push_back(type_);
-                          CallInst::Create(stg_update_cast, args)->insertBefore(I);
-
-                    }
-
-                    else if(TruncInst* truncInst = dyn_cast<TruncInst>(I))
-                    {
-                          llvm::Value* result = builder.CreateGlobalStringPtr(truncInst->getName().str());
-
-                          std::string type_str;
-                          llvm::raw_string_ostream type(type_str);
-                          truncInst->getType()->print(type);
-
-                          errs() <<"trunc Type==========="<<type.str() <<"\n";
-
-                          llvm::Value* value = builder.CreateGlobalStringPtr(truncInst->getOperand(0)->getName().str());
-                          llvm::Value* castop = builder.CreateGlobalStringPtr("trunc");
-                          llvm::Value* type_ = builder.CreateGlobalStringPtr(type.str());
-
-
-                          std::vector<Value*> args;
-                          args.push_back(result);
-                          args.push_back(value);
-                          args.push_back(castop);
-                          args.push_back(type_);
-                          CallInst::Create(stg_update_cast, args)->insertBefore(I);
-
-                    }
-
-                    else if (SExtInst* sextInst = dyn_cast<SExtInst>(I)) {   //%X = sext i8  -1 to i16  ; yields i16   :65535
-
-                        //handle this later
-                        llvm::Value* result = builder.CreateGlobalStringPtr(sextInst->getName().str());
-                        std::string type_str;
-
-                          llvm::raw_string_ostream type(type_str);
-                          sextInst->getType()->print(type);
-
-                          errs() <<"sext Type==========="<<type.str() <<"\n";
-
-                          llvm::Value* value = builder.CreateGlobalStringPtr(sextInst->getOperand(0)->getName().str());
-                          llvm::Value* castop = builder.CreateGlobalStringPtr("sext");
-                          llvm::Value* type_ = builder.CreateGlobalStringPtr(type.str());
-
-
-                          std::vector<Value*> args;
-                          args.push_back(result);
-                          args.push_back(value);
-                          args.push_back(castop);
-                          args.push_back(type_);
-                          CallInst::Create(stg_update_cast, args)->insertBefore(I);
-                    } else if (UIToFPInst* uIToFPInst = dyn_cast<UIToFPInst>(I)  ) {
-
-                         //handle this later
-                         llvm::Value* result = builder.CreateGlobalStringPtr(I->getName().str());
-                         std::string type_str;
-
-                         llvm::raw_string_ostream type(type_str);
-                         I->getType()->print(type);
-
-                         errs() <<" Type==========="<<type.str() <<"\n";
-
-                          errs() <<"opcode name ==========="<<I->getOpcodeName() <<"\n";
-
-
-
-                         llvm::Value* value = builder.CreateGlobalStringPtr(I->getOperand(0)->getName().str());
-                         llvm::Value* castop = builder.CreateGlobalStringPtr("uitofp");
-                         llvm::Value* type_ = builder.CreateGlobalStringPtr(type.str());
-
-
-                         std::vector<Value*> args;
-                         args.push_back(result);
-                         args.push_back(value);
-                         args.push_back(castop);
-                         args.push_back(type_);
-                         CallInst::Create(stg_update_cast, args)->insertBefore(I);
-
-                    }else if(SIToFPInst* sitoFPInst = dyn_cast<SIToFPInst>(I))
-                    {
-
-                         //handle this later
-                         llvm::Value* result = builder.CreateGlobalStringPtr(sitoFPInst->getName().str());
-                         std::string type_str;
-
-                         llvm::raw_string_ostream type(type_str);
-                         sitoFPInst->getType()->print(type);
-
-                         errs() <<" Type==========="<<type.str() <<"\n";
-
-                          errs() <<"opcode name ==========="<<sitoFPInst->getOpcodeName() <<"\n";
-
-                         llvm::Value* value = builder.CreateGlobalStringPtr(sitoFPInst->getOperand(0)->getName().str());
-                         llvm::Value* castop = builder.CreateGlobalStringPtr("sitofp");
-                         llvm::Value* type_ = builder.CreateGlobalStringPtr(type.str());
-
-
-                         std::vector<Value*> args;
-                         args.push_back(result);
-                         args.push_back(value);
-                         args.push_back(castop);
-                         args.push_back(type_);
-                         CallInst::Create(stg_update_cast, args)->insertBefore(I);
-
-                    }
-
-                    else if (BitCastInst* bitCastInst = dyn_cast<BitCastInst>(I))
-                    {
-                         // bit cast
-
-
-                         std::string  result;
-                         std::string  valueTocast_;
-                         llvm::Value* valueTocast = bitCastInst->getOperand(0);
-                         //valueTocast->dump();
-                         //result->getType()->dump();
-
-                         const Type* T = valueTocast->getType();
-
-
-                         if(T->isPointerTy())
-                         {
-
-                          result = "v(" + bitCastInst->getName().str() + ")";
-                          valueTocast_ = "v(" + valueTocast->getName().str() + ")";
-
-                         }
-                         else
-                         {
-                            result = bitCastInst->getName().str();
-                            valueTocast_ = valueTocast->getName().str();
-                         }
-
-                         //errs()<<"bitcast map[" << result <<"]="<<  valueTocast <<"\n";
-
-                         bitcastMap[result]=valueTocast_;
-
-                          //std::vector<Value*> args;
-                          //args.push_back(result);
-                          // args.push_back(valueTocast_);
-                          // CallInst::Create(stg_update_char, args)->insertBefore(I);
-
-                    }
-
-                    */
                     else if (CallInst* callInst = dyn_cast<CallInst>(I)) {
 
                         //handle memcpy and scanf call
@@ -799,37 +588,32 @@ struct SymbTraceInstrumentation : public ModulePass {
                         fCmpInst->getOperand(0)->getType()->print(type);
                         errs()<<"fCmpInst type============="<< type.str() <<"\n";
 
-                        /*
-
-                        std::string Op = "";
-
-                        if (fCmpInst->getPredicate() == FCmpInst::FCMP_UEQ || fCmpInst->getPredicate() == FCmpInst::FCMP_OEQ)  {
-                            Op = "==";
-                        }
-                        else if (fCmpInst->getPredicate() == FCmpInst::FCMP_UNE || fCmpInst->getPredicate() ==  FCmpInst::FCMP_ONE) {
-                            Op = "!=";
-                        }
-                        else if (fCmpInst->getPredicate() == FCmpInst::FCMP_UGT || fCmpInst->getPredicate() == FCmpInst::FCMP_OGT) {
-                            Op = ">";
-                        }
-                        else if (fCmpInst->getPredicate() == FCmpInst::FCMP_UGE || fCmpInst->getPredicate() == FCmpInst::FCMP_OGE) {
-                            Op = ">=";
-                        }
-                        else if (fCmpInst->getPredicate() == FCmpInst::FCMP_ULT || fCmpInst->getPredicate() == FCmpInst::FCMP_OLT) {
-                            Op = "<";
-                        }
-                        else if (fCmpInst->getPredicate() == FCmpInst::FCMP_OLE || fCmpInst->getPredicate() == FCmpInst::FCMP_ULE) {
-                            Op = "<=";
-                        }
-
-                        */
-
 
                         Value* l_op = fCmpInst->getOperand(0);
-                        std::string l_operand = l_op->getName().str();
+                        std::string l_operand ;  //= l_op->getName().str();
                         Value* r_op = fCmpInst->getOperand(1);
                         std::string r_operand;
                         std::ostringstream flp;
+
+
+                        // call functions for that
+
+                        if(ConstantFP *constfp= llvm::dyn_cast<llvm::ConstantFP>(l_op))
+                        {
+                               if(l_op->getType()->isDoubleTy()){
+
+                                   double fpval = (constfp->getValueAPF()).convertToDouble();
+                                   l_op->getType()->dump();
+
+                                   l_operand = "("+type.str()+" "+ std::to_string(fpval)+")";
+                               }else if(l_op->getType()->isFloatTy()){
+
+                                   float fpval = (constfp->getValueAPF()).convertToFloat();
+                                   l_op->getType()->dump();
+                                   l_operand = "("+type.str()+" "+ std::to_string(fpval)+")";
+                               }
+                        }
+                        else l_operand = l_op->getName().str();
 
                         if(ConstantFP *constfp= llvm::dyn_cast<llvm::ConstantFP>(r_op))
                         {
@@ -847,6 +631,8 @@ struct SymbTraceInstrumentation : public ModulePass {
                                }
                         }
                         else r_operand = r_op->getName().str();
+
+
 
                         Value* result_ = builder.CreateGlobalStringPtr(result);
                         llvm::Value* leftOperand = builder.CreateGlobalStringPtr(l_operand);
@@ -1192,8 +978,15 @@ struct SymbTraceInstrumentation : public ModulePass {
          stg_update_store_double = llvm::Function::Create(funcType12, llvm::Function::ExternalLinkage, "stg_update_store_double", ModuleOb);
          stg_update_load_double = llvm::Function::Create(funcType12, llvm::Function::ExternalLinkage, "stg_update_load_double", ModuleOb);
 
+         std::vector<Type*> arg13;
+         arg13.push_back(Type::getInt8PtrTy(context));
+         arg13.push_back(Builder.getFloatTy());
+         stg_update_float = llvm::Function::Create(llvm::FunctionType::get(Builder.getVoidTy(), arg13, false), llvm::Function::ExternalLinkage, "stg_update_float", ModuleOb);
 
-
+         std::vector<Type*> arg14;
+         arg14.push_back(Type::getInt8PtrTy(context));
+         arg14.push_back(Builder.getDoubleTy());
+         stg_update_double = llvm::Function::Create(llvm::FunctionType::get(Builder.getVoidTy(), arg14, false), llvm::Function::ExternalLinkage, "stg_update_double", ModuleOb);
 
 
          //errs() << "function declarations created successfully"<< "\n";
@@ -1388,5 +1181,5 @@ struct SymbTraceInstrumentation : public ModulePass {
 };
 }
 
-char SymbTraceInstrumentation::ID = 0;
-static RegisterPass<SymbTraceInstrumentation> X("symbTraceInstrumentation", "A Symbolic Trace Instrumentation Pass ");
+char STGInstrumenter::ID = 0;
+static RegisterPass<STGInstrumenter> X("STGInstrumenter", "A SGT Instrumentation Pass ");

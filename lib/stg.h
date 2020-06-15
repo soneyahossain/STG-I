@@ -52,6 +52,8 @@ extern "C" void stg_update_load_double(double* addr, char *val) ;
 extern "C" void stg_update_char(char *key, char *val);
 extern "C" void stg_update_cast(char* key, char* val, char* castOp, char* typeTocast );
 extern "C" void stg_update_int(char *key, int val);
+extern "C" void stg_update_float(char *key, float val);
+extern "C" void stg_update_double(char *key, double val);
 extern "C" void stg_update_op(char *key, char *lhs, char *op, char *rhs);
 extern "C" void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* type_ );
 extern "C" void stg_update_pc(bool cnd_value, char *cnd_name);

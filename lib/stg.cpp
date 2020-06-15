@@ -400,6 +400,22 @@ void stg_update_int(char* key, int val)
     stg_state << "state[" << key << " --> " << val << "]\n";
 }
 
+void stg_update_float(char* key, float val)
+{
+
+    //store symbolic values in S-expression syntax
+    state[key] = std::to_string(val);
+    stg_state << "state[" << key << " --> " << val << "]\n";
+}
+
+void stg_update_double(char* key, double val)
+{
+    //store symbolic values in S-expression syntax
+    state[key] = std::to_string(val);
+    stg_state << "state[" << key << " --> " << val << "]\n";
+}
+
+
 void stg_update_pc(bool cnd_value, char* cnd_name)
 {
 
