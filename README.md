@@ -15,7 +15,7 @@ Instruction to generate symbolic constarints of a program
 
 To to generate symbolic constarints of a program P -
 
-1. Need to define which variables are symbolic varibales and need to assign concrete values to those varibales. For example, consider the below program-
+1. Need to define which variables are symbolic varibales and need to assign concrete values to those varibales. For example, consider the below if_else_ladder.cpp program-
 ```
 #include <stdio.h>    
 #include "../lib/stg.h"    * need to include stg.h file *  
@@ -44,5 +44,62 @@ int main()
     stg_assert(isGreaterOrEq(x, y));    //checking whether test passed or failed 
     stg_end_test();  // end test
 }
+
+```
+2. The next step is to generate bitcode using clang compiler  
+----------------------------------------------------------------
+
+```
+clang -emit-llvm -fno-discard-value-names if_else_ladder.cpp -c -o PUT.bc
+
+```
+3. Now, need ro run llvm-opt command to instrument LLVM bitcode
+----------------------------------------------------------------
+
+in linux-
+
+```
+opt -load=..llvm/build/lib/LLVMSTGInstrument.so -symbTraceInstrumentation PUT.bc -o IPUT.bc
+```
+in macOS-
+
+```
+opt -load=..llvm/build/lib/LLVMSTGInstrument.dylib -symbTraceInstrumentation PUT.bc -o IPUT.bc
+
+```
+
+4. Generate bitcode for stg.cpp using clang compiler 
+----------------------------------------------------------------
+
+```
+clang++ -std=c++11 -emit-llvm ../lib/stg.cpp -c -o stg.bc
+
+```
+
+5. run llvm-link command to link all modules together
+----------------------------------------------------------------
+
+```
+llvm-link IPUT.bc stg.bc -o linked.bc
+
+```
+
+6. run llvm-llc command to compile linked file 
+----------------------------------------------------------------
+
+```
+llc -filetype=obj linked.bc
+
+```
+
+7. run clang++ command to generate object file 
+---------------------------------------------------------------------------------------------------------------------
+```
+8. clang++ -o a.out  linked.o
+```
+8. execute object file
+---------------------------------------------------------------------------------------------------------------------
+```
+./a.out
 
 ```
