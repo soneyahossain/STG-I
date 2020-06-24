@@ -185,7 +185,7 @@ void stg_update_op(char* key, char* lhs, char* op, char* rhs)
 }
 
 
-void stg_update_load(int* addr, char* val)
+void stg_update_load_i32(int* addr, char* val)
 {
 
     //std::cout << "stg_address__[" << add << " --> " << val << "]\n";
@@ -267,7 +267,7 @@ void stg_update_load_double(double* addr, char* val)
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
 
-void stg_update_store(int* addr, char* val)
+void stg_update_store_i32(int* addr, char* val)
 {
 
     //std::cout << "stg_address__[" << add << " --> " << val << "]\n";

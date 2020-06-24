@@ -39,8 +39,8 @@ extern "C" void stg_assert(bool pred);
  * state and the recorded path condition.
  */
 
-extern "C" void stg_update_load(int* addr, char *val);
-extern "C" void stg_update_store(int* addr, char *val) ;
+extern "C" void stg_update_load_i32(int* addr, char *val);
+extern "C" void stg_update_store_i32(int* addr, char *val) ;
 extern "C" void stg_update_load_i8(void* addr, char *val);
 extern "C" void stg_update_load_i64(long* addr, char* val);
 extern "C" void stg_update_store_i8(void* addr, char *val) ;
