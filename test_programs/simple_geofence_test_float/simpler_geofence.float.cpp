@@ -79,7 +79,7 @@ int main()
     stg_assert(checkGeofence(lat, lon, altitude, true, high_lat, low_lat, high_lon, low_lon));
     stg_end_test();
 
-    // TEST #1
+    // TEST #2
     // now start with a second test, this time one expected to fail
     stg_begin_test();
     stg_input_float(&lat, 38.0);
