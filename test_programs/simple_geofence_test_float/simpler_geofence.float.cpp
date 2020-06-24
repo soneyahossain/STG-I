@@ -38,7 +38,7 @@ bool checkGeofence(float lat, float lon, float altitude, bool inclusion,
     float high_lat, float low_lat, float high_lon, float low_lon)
 {
     bool acceptable = true;
-    float max_vertical_altitude = 400.0;
+    float max_vertical_altitude = 400.0; // 400 ft, as per FAA Small Unmanned Aircraft Regulations (Part 107)
 
     // quick vertical ceiling check
     if (altitude > max_vertical_altitude) {
