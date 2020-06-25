@@ -21,7 +21,7 @@
 	void stg_input_float(float*, float) {}
 	void stg_input_int(int*, int) {}
 #else
-	#include "stgi/stg.h"
+	#include "stg.h"
 #endif
 
 bool insideFence(float lat, float lon, int inclusion, float high_lat, float low_lat, float high_lon, float low_lon)
