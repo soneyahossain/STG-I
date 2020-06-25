@@ -11,7 +11,16 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "stg.h"
+
+#ifdef NOSTG
+	// make STG a no-op
+	#define stg_begin_test() {}
+	#define stg_end_test() {}
+	#define stg_assert(x) x 
+	void stg_symbolic_variable(void *, const char*) {}
+#else
+	#include "stg.h"
+#endif
 
 bool insideFence(float lat, float lon, int inclusion, float high_lat, float low_lat, float high_lon, float low_lon)
 {
@@ -79,6 +88,7 @@ int main(int argc, char **argv)
 	// each line of the input file contains test parameters and expected checkGeofence result
 	while (fgets(buf, 1000, params)) 
 	{
+		if (buf[0] == '#') continue; // # is a comment line
 		sscanf(buf, "%f %f %f %d %f %f %f %f %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
 
 		printf("lat=%f lon=%f alt=%f inc=%d hlat=%f llat=%f hlon=%f llon=%f expected=%d\n", 
