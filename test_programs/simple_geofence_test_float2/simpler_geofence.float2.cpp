@@ -18,8 +18,10 @@
 	#define stg_end_test() {}
 	#define stg_assert(x) x 
 	void stg_symbolic_variable(void *, const char*) {}
+	void stg_input_float(float*, float) {}
+	void stg_input_int(int*, int) {}
 #else
-	#include "stg.h"
+	#include "stgi/stg.h"
 #endif
 
 bool insideFence(float lat, float lon, int inclusion, float high_lat, float low_lat, float high_lon, float low_lon)
@@ -95,6 +97,15 @@ int main(int argc, char **argv)
 			lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected); 
 
 		stg_begin_test();
+
+		stg_input_float(&lat, lat);
+		stg_input_float(&lon, lon);
+		stg_input_float(&altitude, altitude);
+		stg_input_int(&inclusion, inclusion);
+		stg_input_float(&high_lat, high_lat);
+		stg_input_float(&low_lat, low_lat);
+		stg_input_float(&high_lon, high_lon);
+		stg_input_float(&low_lon, low_lon);
 
 		if (expected)
 				stg_assert(checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon));
