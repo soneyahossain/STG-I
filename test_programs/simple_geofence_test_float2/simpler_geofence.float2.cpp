@@ -77,7 +77,7 @@ int main(int argc, char **argv)
 	else {
 		params = fopen(argv[1], "r");
 		if (!params) {
-			fprintf(stderr, "Invalid file specified");
+			fprintf(stderr, "Invalid file specified\n");
 			exit(1);
 		}
 	}
