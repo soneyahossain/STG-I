@@ -66,7 +66,6 @@ int main(int argc, char **argv)
 {
 	float lat, lon, altitude, high_lat, low_lat, high_lon, low_lon;
 	int inclusion;
-	int expected;
 	FILE *params;
 	char buf[1001];
 
@@ -94,6 +93,7 @@ int main(int argc, char **argv)
 	// each line of the input file contains test parameters and expected checkGeofence result
 	while (fgets(buf, 1000, params)) 
 	{
+		int expected;
 		if (buf[0] == '#') continue; // # is a comment line
 		sscanf(buf, "%f %f %f %d %f %f %f %f %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
 
@@ -111,10 +111,9 @@ int main(int argc, char **argv)
 		stg_input_float(&high_lon, high_lon);
 		stg_input_float(&low_lon, low_lon);
 
-		if (expected)
-				stg_assert(checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon));
-		else
-				stg_assert(!checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon));
+		bool isGeofenced = checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
+		bool testPassed = expected ? isGeofenced : !isGeofenced;
+		stg_assert(testPassed);
 
 		stg_end_test();
 	}
