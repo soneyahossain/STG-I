@@ -97,8 +97,7 @@ int main(int argc, char **argv)
 		if (buf[0] == '#') continue; // # is a comment line
 		sscanf(buf, "%f %f %f %d %f %f %f %f %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
 
-		printf("lat=%f lon=%f alt=%f inc=%d hlat=%f llat=%f hlon=%f llon=%f expected=%d\n", 
-			lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected); 
+		printf("lat=%f lon=%f alt=%f inc=%d hlat=%f llat=%f hlon=%f llon=%f expected=%d\n", lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected);
 
 		stg_begin_test();
 
