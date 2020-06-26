@@ -111,10 +111,10 @@ int main(int argc, char **argv)
 		stg_input_float(&low_lon, low_lon);
 
 		bool isGeofenced = checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
-		bool testPassed = expected ? isGeofenced : !isGeofenced;
-		stg_assert(testPassed);
+        stg_end_test();
 
-		stg_end_test();
+        bool testPassed = expected ? isGeofenced : !isGeofenced;
+        stg_record_test(testPassed);
 	}
 
 	fclose(params);
