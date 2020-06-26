@@ -1,12 +1,12 @@
 [
-LAT : float = 10,
-LON : float = 30,
-ALT : float = 200,
-INC : i32 = 1,
-HLAT : float = 20,
-LLAT : float = 12,
+LAT : float = 25.01,
+LON : float = 30.3,
+ALT : float = 200.2,
+INC : i32 = 0,
+HLAT : float = 20.04,
+LLAT : float = 5,
 HLON : float = 40,
-LLON : float = 20
+LLON : float = 20.24
 ]
 
 //Test: passed
@@ -20,10 +20,10 @@ LLON : float = 20
       (land
         (olt LON HLON)
         (land
-          (olt LAT HLAT)
+          (lnot(olt LAT HLAT))
           (land
-            (lnot(ogt LAT LLAT))
-            (ne INC (i32 0))
+            (lnot(ne INC (i32 0)))
+            (lnot(trunc i1 (i8 0)))
           )
         )
       )

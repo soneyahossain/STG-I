@@ -559,9 +559,7 @@ void stg_input_double(void* addr, double value)
 
 void stg_begin_test()
 {
-
     //create output directory and files
-
     if (!outputDirCreated) {
         //"stg-out-<i>"
         int i = 0;
@@ -644,8 +642,8 @@ void stg_end_test()
     }
     //std::cout << "path_condition:\n" << path_condition <<"\n";
     //end:  code to construct path condition according to constraint grammar
-
-    stg_pc << "\n" << path_condition << "\n";
+    stg_pc << "]\n\n";
+   
 
 
     ///////////////////////////
@@ -654,10 +652,10 @@ void stg_end_test()
 void stg_record_test(bool pred)
 {
 
-    stg_pc << "]\n\n";
+    
 
     stg_pc << "//Test: " << (pred ? "passed" : "failed") << "\n";
-
+    stg_pc << "\n" << path_condition << "\n";
    // std::cout << "map size: " << path_condition_count <<"\n";
 
     needComma=false;
