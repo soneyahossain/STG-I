@@ -38,7 +38,7 @@ bool checkGeofence(float lat, float lon, float altitude, bool inclusion,
     float high_lat, float low_lat, float high_lon, float low_lon)
 {
     bool acceptable = true;
-    float max_vertical_altitude = 400.0;
+    float max_vertical_altitude = 400.0; // 400 ft, as per FAA Small Unmanned Aircraft Regulations (Part 107)
 
     // quick vertical ceiling check
     if (altitude > max_vertical_altitude) {
@@ -79,7 +79,7 @@ int main()
     stg_assert(checkGeofence(lat, lon, altitude, true, high_lat, low_lat, high_lon, low_lon));
     stg_end_test();
 
-    // TEST #1
+    // TEST #2
     // now start with a second test, this time one expected to fail
     stg_begin_test();
     stg_input_float(&lat, 38.0);
@@ -90,6 +90,6 @@ int main()
     stg_input_float(&high_lon, 85.0);
     stg_input_float(&low_lon, 35.0);
 
-    stg_assert(!checkGeofence(lat, lon, altitude, true, high_lat, low_lat, high_lon, low_lon));
+    stg_assert(checkGeofence(lat, lon, altitude, true, high_lat, low_lat, high_lon, low_lon));
     stg_end_test();
 }
