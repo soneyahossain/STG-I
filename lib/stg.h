@@ -32,7 +32,7 @@ extern "C" void stg_end_test();
  * This replaces the usual "assert()" function in order to allow stg
  * to record the test outcome.
  */
-extern "C" void stg_assert(bool pred);
+extern "C" void stg_record_test(bool pred);
 
 /*
  * These are inserted via instrumentation to update the symbolic
