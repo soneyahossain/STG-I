@@ -4,7 +4,7 @@
 all: geo.cov.exe
 clean:
 	-rm *.gcov *.gcda *.gcno >/dev/null 2>&1
-	-rm -fr *.o *.bc stg-out* *.exe
+	-rm -fr *.o *.bc *.exe
 
 #
 # build with coverage information without STG
