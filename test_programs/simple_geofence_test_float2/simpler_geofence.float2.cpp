@@ -16,7 +16,7 @@
 	// make STG a no-op
 	#define stg_begin_test() {}
 	#define stg_end_test() {}
-	#define stg_assert(x) x 
+	#define stg_record_test(x) x 
 	void stg_symbolic_variable(void *, const char*) {}
 	void stg_input_float(float*, float) {}
 	void stg_input_int(int*, int) {}
