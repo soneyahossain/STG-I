@@ -419,6 +419,7 @@ void stg_update_double(char* key, double val, char* type_)
 }
 
 
+
 void stg_update_pc(bool cnd_value, char* cnd_name)
 {
 
@@ -432,7 +433,7 @@ void stg_update_pc(bool cnd_value, char* cnd_name)
 
     // Only update the PC if the condition is symbolic
 
-    if (!((cnd_value != 0 && value == "1") || (cnd_value == 0 && value == "0"))) {
+    if (!((cnd_value != 0 && value == "1") || (cnd_value == 0 && value == "0")) && fileCreated) {
         path_conditions["PC"+std::to_string(path_condition_count)]=value;
         std::cout << "PC"+std::to_string(path_condition_count) <<": " <<value<< "\n";
         path_condition_count++;
@@ -466,23 +467,7 @@ void stg_update_phi(char* lhs, char* prevBB, char* valBBpairs)
     stg_state << "state[" << key << " --> " << token << "]\n";
 }
 
-void stg_end_test()
-{
-    //reset state map , concrete map,
-    needComma=false;
-    path_condition_count=0;
-    fileCreated = false;
-    state.clear();
-    path_condition.clear();
-    //con_state.clear();
-    state = sym_state;
 
-    path_condition.clear();
-
-    stg_state.close(); //file close
-    stg_pc.close(); //file close
-    //clear maps
-}
 
 void stg_symbolic_variable(void* addr, const char* name)
 {
@@ -496,38 +481,6 @@ void stg_symbolic_variable(void* addr, const char* name)
     stg_set_symbolic(add.c_str(), name);
     //stg_state << "state[" << add << " --> " << name << "]\n";
     std::cout << "stg_address[" << add << " --> " << name << "]\n";
-}
-
-void stg_begin_test()
-{
-
-    //create output directory and files
-
-    if (!outputDirCreated) {
-        //"stg-out-<i>"
-        int i = 0;
-        for (; i <= 50; ++i) {
-            std::string d("stg-out-");
-            d = d + std::to_string(i);
-            if (mkdir(d.c_str(), 0775) == 0) {
-                output_dir = d;
-                std::cout << "output folder :" << output_dir << "\n";
-                outputDirCreated = true;
-                break;
-            }
-        }
-    }
-
-    assert(outputDirCreated);
-
-    if (!fileCreated && outputDirCreated) {
-        stg_state.open(output_dir + "/" + "stg_state_" + std::to_string(testcount) + ".txt");
-        stg_pc.open(output_dir + "/" + "stg_pc_" + std::to_string(testcount) + ".stg");
-        fileCreated = true;
-        testcount++;
-    }
-
-     stg_pc << "[\n";
 }
 
 void stg_input_int(void* addr, int value)
@@ -607,16 +560,42 @@ void stg_input_double(void* addr, double value)
     stg_pc << sym_name <<" : double"<< " = " <<  value;
 }
 
-void stg_assert(bool pred)
+
+void stg_begin_test()
 {
+    //create output directory and files
+    if (!outputDirCreated) {
+        //"stg-out-<i>"
+        int i = 0;
+        for (; i <= 50; ++i) {
+            std::string d("stg-out-");
+            d = d + std::to_string(i);
+            if (mkdir(d.c_str(), 0775) == 0) {
+                output_dir = d;
+                std::cout << "output folder :" << output_dir << "\n";
+                outputDirCreated = true;
+                break;
+            }
+        }
+    }
 
-    stg_pc << "\n]\n\n";
+    assert(outputDirCreated);
 
-    stg_pc << "//Test: " << (pred ? "passed" : "failed") << "\n";
+    if (!fileCreated && outputDirCreated) {
+        stg_state.open(output_dir + "/" + "stg_state_" + std::to_string(testcount) + ".txt");
+        stg_pc.open(output_dir + "/" + "stg_pc_" + std::to_string(testcount) + ".stg");
+        fileCreated = true;
+        testcount++;
+    }
 
-    std::cout << "map size: " << path_condition_count <<"\n";
+     stg_pc << "[\n";
+}
 
-
+void stg_end_test()
+{
+    //reset state map , concrete map,
+    stg_pc << "\n";
+    
     if(path_condition_count==1)
     {
      path_condition= path_conditions["PC"+std::to_string(0)]+"\n";
@@ -667,9 +646,35 @@ void stg_assert(bool pred)
     }
     //std::cout << "path_condition:\n" << path_condition <<"\n";
     //end:  code to construct path condition according to constraint grammar
+    stg_pc << "]\n\n";
+   
 
+
+    ///////////////////////////
+
+}
+void stg_record_test(bool pred)
+{
+
+    
+
+    stg_pc << "//Test: " << (pred ? "passed" : "failed") << "\n";
     stg_pc << "\n" << path_condition << "\n";
+   // std::cout << "map size: " << path_condition_count <<"\n";
 
+    needComma=false;
+    path_condition_count=0;
+    fileCreated = false;
+    state.clear();
+    path_condition.clear();
+    //con_state.clear();
+    state = sym_state;
+
+    path_condition.clear();
+
+    stg_state.close(); //file close
+    stg_pc.close(); //file close
+    //clear maps
 }
 
 void stg_symbolic_array(void* array, const char* type, int num, const char* prefix)

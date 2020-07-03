@@ -32,7 +32,7 @@ extern "C" void stg_end_test();
  * This replaces the usual "assert()" function in order to allow stg
  * to record the test outcome.
  */
-extern "C" void stg_assert(bool pred);
+extern "C" void stg_record_test(bool pred);
 
 /*
  * These are inserted via instrumentation to update the symbolic
@@ -51,7 +51,6 @@ extern "C" void stg_update_store_double(double* addr, char *val) ;
 extern "C" void stg_update_load_double(double* addr, char *val) ;
 extern "C" void stg_update_char(char *key, char *val);
 extern "C" void stg_update_cast(char* key, char* val, char* castOp, char* typeTocast );
-
 extern "C" void stg_update_int(char *key, int val, char* type_);
 extern "C" void stg_update_float(char *key, float val, char* type_);
 extern "C" void stg_update_double(char *key, double val, char* type_);
