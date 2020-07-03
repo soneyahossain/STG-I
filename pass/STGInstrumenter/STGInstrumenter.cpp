@@ -149,13 +149,17 @@ struct STGInstrumenter : public ModulePass {
 
                     if (isa<GlobalVariable>(loadAddress)) {
 
-                        // errs() << "got Global Variable :  " << loadAddressName << " with type "; loadInst->getType()->dump();
-
                         const Type* T = loadInst->getType();
+                        std::string type_str;
+                        llvm::raw_string_ostream type(type_str);
+                        loadInst->getType()->print(type);
+
+                        errs() << "got Global Variable :  " << loadAddressName << " with type "<< type.str() <<"\n";
 
                         std::vector<Value*> args;
                         args.push_back(result_);
-                        args.push_back(loadInst); // loadInst has the actual value of the global  variable, can't use getInitializer as for non  consant global it will not give current value
+                        args.push_back(loadInst);  //loadInst has the actual value of the global variable, can't use getInitializer as for non  consant global it will not give current value
+                        args.push_back(builder.CreateGlobalStringPtr(type.str()));
 
                         if (T == Type::getInt32Ty(context)) {
                             CallInst::Create(stg_update_int, args)->insertAfter(I); // maybe need to handle other type globals// such as double, float, char
@@ -166,6 +170,7 @@ struct STGInstrumenter : public ModulePass {
                         else if (T == Type::getDoubleTy(context)) {
                             CallInst::Create(stg_update_double, args)->insertAfter(I);
                         }
+
                     }
                     else { // %tmp = load i32, i32* %x, align 4
 
@@ -728,6 +733,7 @@ struct STGInstrumenter : public ModulePass {
         std::vector<Type*> arg6;
         arg6.push_back(Builder.getInt8PtrTy());
         arg6.push_back(Builder.getInt32Ty());
+        arg6.push_back(Builder.getInt8PtrTy());
         FunctionType* funcType6 = llvm::FunctionType::get(Builder.getVoidTy(), arg6, false);
         stg_update_int = llvm::Function::Create(
             funcType6, llvm::Function::ExternalLinkage, "stg_update_int", ModuleOb);
@@ -781,6 +787,7 @@ struct STGInstrumenter : public ModulePass {
         std::vector<Type*> arg13;
         arg13.push_back(Type::getInt8PtrTy(context));
         arg13.push_back(Builder.getFloatTy());
+        arg13.push_back(Type::getInt8PtrTy(context));
         stg_update_float = llvm::Function::Create(
             llvm::FunctionType::get(Builder.getVoidTy(), arg13, false),
             llvm::Function::ExternalLinkage, "stg_update_float", ModuleOb);
@@ -788,6 +795,7 @@ struct STGInstrumenter : public ModulePass {
         std::vector<Type*> arg14;
         arg14.push_back(Type::getInt8PtrTy(context));
         arg14.push_back(Builder.getDoubleTy());
+        arg14.push_back(Type::getInt8PtrTy(context));
         stg_update_double = llvm::Function::Create(
             llvm::FunctionType::get(Builder.getVoidTy(), arg14, false),
             llvm::Function::ExternalLinkage, "stg_update_double", ModuleOb);
