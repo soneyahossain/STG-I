@@ -18,13 +18,12 @@
 	#define stg_end_test() {}
 	#define stg_record_test(x) x 
 	void stg_symbolic_variable(void *, const char*) {}
-	void stg_input_float(float*, float) {}
 	void stg_input_int(int*, int) {}
 #else
 	#include "stg.h"
 #endif
 
-bool insideFence(float lat, float lon, int inclusion, float high_lat, float low_lat, float high_lon, float low_lon)
+bool insideFence(int lat, int lon, int inclusion, int high_lat, int low_lat, int high_lon, int low_lon)
 {
 	bool inside = false;
 
@@ -46,11 +45,11 @@ bool insideFence(float lat, float lon, int inclusion, float high_lat, float low_
 }
 
 // Takes a point, a fence type, and 2 points defining a rectangular fence, and it returns if the point is  acceptable given that fence
-bool checkGeofence(float lat, float lon, float altitude, int inclusion,
-				float high_lat, float low_lat, float high_lon, float low_lon)
+bool checkGeofence(int lat, int lon, int altitude, int inclusion,
+				int high_lat, int low_lat, int high_lon, int low_lon)
 {
 	bool acceptable = true;
-	float max_vertical_altitude = 400.0; // 400 ft, as per FAA Small Unmanned Aircraft Regulations (Part 107)
+	int max_vertical_altitude = 400.0; // 400 ft, as per FAA Small Unmanned Aircraft Regulations (Part 107)
 
 	// quick vertical ceiling check
 	if (altitude > max_vertical_altitude) {
@@ -64,7 +63,7 @@ bool checkGeofence(float lat, float lon, float altitude, int inclusion,
 
 int main(int argc, char **argv)
 {
-	float lat, lon, altitude, high_lat, low_lat, high_lon, low_lon;
+	int lat, lon, altitude, high_lat, low_lat, high_lon, low_lon;
 	int inclusion;
 	FILE *params;
 	char buf[1001];
@@ -95,26 +94,26 @@ int main(int argc, char **argv)
 	{
 		int expected;
 		if (buf[0] == '#') continue; // # is a comment line
-		sscanf(buf, "%f %f %f %d %f %f %f %f %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
+		sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
 
-		printf("lat=%f lon=%f alt=%f inc=%d hlat=%f llat=%f hlon=%f llon=%f expected=%d\n", lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected);
+		printf("lat=%d lon=%d alt=%d inc=%d hlat=%d llat=%d hlon=%d llon=%d expected=%d\n", lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected);
 
 		stg_begin_test();
 
-		stg_input_float(&lat, lat);
-		stg_input_float(&lon, lon);
-		stg_input_float(&altitude, altitude);
+		stg_input_int(&lat, lat);
+		stg_input_int(&lon, lon);
+		stg_input_int(&altitude, altitude);
 		stg_input_int(&inclusion, inclusion);
-		stg_input_float(&high_lat, high_lat);
-		stg_input_float(&low_lat, low_lat);
-		stg_input_float(&high_lon, high_lon);
-		stg_input_float(&low_lon, low_lon);
+		stg_input_int(&high_lat, high_lat);
+		stg_input_int(&low_lat, low_lat);
+		stg_input_int(&high_lon, high_lon);
+		stg_input_int(&low_lon, low_lon);
 
 		bool isGeofenced = checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
-        stg_end_test();
+		stg_end_test();
 
-        bool testPassed = expected ? isGeofenced : !isGeofenced;
-        stg_record_test(testPassed);
+		bool testPassed = expected ? isGeofenced : !isGeofenced;
+		stg_record_test(testPassed);
 	}
 
 	fclose(params);
