@@ -31,7 +31,7 @@ struct STGInstrumenter : public ModulePass {
     Function* stg_update_op;
     Function* stg_update_char;
     Function* stg_update_int;
-    Function* stg_set_symbolic;
+    //Function* stg_set_symbolic;
     Function* stg_update_pc;
     Function* stg_update_phi;
     Function* stg_update_load_i32;
@@ -48,6 +48,11 @@ struct STGInstrumenter : public ModulePass {
     Function* stg_update_store_i64;
     Function* stg_update_float;
     Function* stg_update_double;
+
+    Function* stg_update_input_i32;
+    Function* stg_update_input_i64;
+    Function* stg_update_input_float;
+    Function* stg_update_input_double;
 
     GlobalVariable* prevBB; // global variable pointer to store basic block
 
@@ -83,7 +88,16 @@ struct STGInstrumenter : public ModulePass {
         "stg_update_store_double",
         "stg_update_load_double",
         "stg_update_float",
-        "stg_update_double"
+        "stg_update_double", "scanf",
+        "stg_update_input_i32",
+        "stg_update_input_i64",
+        "stg_update_input_float",
+        "stg_update_input_double", "stg_record_test", "sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit"
+    };
+
+
+    std::vector<std::string> isInterceptable = {
+            "llvm.fma.f64"
     };
 
     STGInstrumenter() : ModulePass(ID){}
@@ -291,7 +305,6 @@ struct STGInstrumenter : public ModulePass {
                     args.push_back(type_);
                     CallInst::Create(stg_update_cast, args)->insertBefore(I);
                 }
-
                 else if (CallInst* callInst = dyn_cast<CallInst>(I)) {
 
                     // handle memcpy and scanf call
@@ -346,24 +359,90 @@ struct STGInstrumenter : public ModulePass {
                             args.push_back(rettype);
                             CallInst::Create(stg_update_cast, args)->insertBefore(I);
                         }
-                    } /*
-                    else if (functionName.find("memcpy") != std::string::npos) {
+                    }else if(functionName.compare("sscanf") == 0 )  //handle file reading
+                    {
 
-                        MemCpyInst* MDep = dyn_cast<MemCpyInst>(callInst);
+                       unsigned no_of_params = callInst->getNumArgOperands();
+                       errs() <<"in sscanf no_of_params==========="<< no_of_params <<"\n";
 
-                        std::string srcName = MDep->getSource()->getName().str();
-                        std::string destName = MDep->getDest()->getName().str();
 
-                        std::string srcVale;
 
-                        llvm::Value* srcName_ = builder.CreateGlobalStringPtr("v(&" + srcVale + ")");
-                        llvm::Value* destName_ = builder.CreateGlobalStringPtr(destName);
+                       for (unsigned i =2; i<no_of_params; i++)
+                       {
+
+
+                            llvm::Value * arg_operand = callInst->getArgOperand(i);
+
+                            const Type* T = arg_operand->getType();
+                            std::string type_str;
+                            llvm::raw_string_ostream type(type_str);
+                            T->print(type);
+
+                            errs() <<"Type in the scanf ==========="<< type.str() <<"\n";   //got the type, now add instruction to get the value from this address
+                            errs() <<"name ==========="<< arg_operand->getName().str() <<"\n";
+
+
+
+                           std::vector<Value*> args;
+                           args.push_back(arg_operand);
+
+                           if (T == Type::getInt32PtrTy(context)) {
+                               CallInst::Create(stg_update_input_i32, args)->insertAfter(I);
+                           }
+                           else if (T == Type::getInt64PtrTy(context)) {
+                               CallInst::Create(stg_update_input_i64, args)->insertAfter(I);
+                           }
+                           else if (T == Type::getFloatPtrTy(context)) {
+                               CallInst::Create(stg_update_input_float, args)->insertAfter(I);
+                           }
+                           else if (T == Type::getDoublePtrTy(context)) {
+                               CallInst::Create(stg_update_input_double, args)->insertAfter(I);
+                           }
+                       }
+
+
+                    }else if(functionName.find("scanf") != std::string::npos )  // handle scanf
+                    {
+
+                         llvm::Value * arg_operand = callInst->getArgOperand(1);
+
+                         const Type* T = arg_operand->getType();
+                         std::string type_str;
+                         llvm::raw_string_ostream type(type_str);
+                         T->print(type);
+
+                         errs() <<"Type in the scanf ==========="<< type.str() <<"\n";   //got the type, now add instruction to get the value from this address
+                         errs() <<"name ==========="<< arg_operand->getName().str() <<"\n";
+
+
 
                         std::vector<Value*> args;
-                        args.push_back(destName_);
-                        args.push_back(srcName_);
-                    } */
+                        args.push_back(arg_operand);
+
+                        if (T == Type::getInt32PtrTy(context)) {
+                            CallInst::Create(stg_update_input_i32, args)->insertAfter(I);
+                        }
+                        else if (T == Type::getInt64PtrTy(context)) {
+                            CallInst::Create(stg_update_input_i64, args)->insertAfter(I);
+                        }
+                        else if (T == Type::getFloatPtrTy(context)) {
+                            CallInst::Create(stg_update_input_float, args)->insertAfter(I);
+                        }
+                        else if (T == Type::getDoublePtrTy(context)) {
+                            CallInst::Create(stg_update_input_double, args)->insertAfter(I);
+                        }
+
+
+
+
+
+
+
+                    }
                     else if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), functionName) == function_doNotInstrument.end()) {
+
+
+                    //--------int add(int x, int y)--->> here x and y are parameter;  add(1,2) -->> here 1 and 2 are argument
 
                         int i = 0;
                         for (auto arg = F->arg_begin(); arg != F->arg_end(); ++arg) {
@@ -556,16 +635,16 @@ struct STGInstrumenter : public ModulePass {
                         l_operand = l_op->getName().str();
 
                     /*
-                     ICMP_EQ    = 32, 	///< equal
-                     ICMP_NE    = 33, 	///< not equal
-                     ICMP_UGT   = 34, 	///< unsigned greater than
-                     ICMP_UGE   = 35, 	///< unsigned greater or equal
-                     ICMP_ULT   = 36, 	///< unsigned less than
-                     ICMP_ULE   = 37, 	///< unsigned less or equal
-                     ICMP_SGT   = 38, 	///< signed greater than
-                     ICMP_SGE   = 39, 	///< signed greater or equal
-                     ICMP_SLT   = 40, 	///< signed less than
-                     ICMP_SLE   = 41, 	///< signed less or equal
+                     ICMP_EQ    = 32,   ///< equal
+                     ICMP_NE    = 33,   ///< not equal
+                     ICMP_UGT   = 34,   ///< unsigned greater than
+                     ICMP_UGE   = 35,   ///< unsigned greater or equal
+                     ICMP_ULT   = 36,   ///< unsigned less than
+                     ICMP_ULE   = 37,   ///< unsigned less or equal
+                     ICMP_SGT   = 38,   ///< signed greater than
+                     ICMP_SGE   = 39,   ///< signed greater or equal
+                     ICMP_SLT   = 40,   ///< signed less than
+                     ICMP_SLE   = 41,   ///< signed less or equal
                    */
 
                     std::vector<Value*> args;
@@ -715,10 +794,17 @@ struct STGInstrumenter : public ModulePass {
         stg_update_pc = llvm::Function::Create(
             funcType2, llvm::Function::ExternalLinkage, "stg_update_pc", ModuleOb);
 
+
+        /*
+
+
         std::vector<Type*> arg3(2, Builder.getInt8PtrTy());
         FunctionType* funcType3 = llvm::FunctionType::get(Builder.getVoidTy(), arg3, false);
         stg_set_symbolic = llvm::Function::Create(funcType3, llvm::Function::ExternalLinkage,
             "stg_set_symbolic", ModuleOb);
+
+
+         */
 
         std::vector<Type*> arg4(2, Builder.getInt8PtrTy());
         FunctionType* funcType4 = llvm::FunctionType::get(Builder.getVoidTy(), arg4, false);
@@ -744,6 +830,22 @@ struct STGInstrumenter : public ModulePass {
         FunctionType* funcType7 = llvm::FunctionType::get(Builder.getVoidTy(), arg7, false);
         stg_update_load_i32 = llvm::Function::Create(funcType7, llvm::Function::ExternalLinkage,
             "stg_update_load_i32", ModuleOb);
+
+
+        //std::vector<Type*> arg_scanf;
+        //arg_scanf.push_back(Type::getInt32PtrTy(context));
+        //arg_scanf.push_back(Builder.getInt8PtrTy());
+        //FunctionType* funcType_arg_scanf = llvm::FunctionType::get(Builder.getVoidTy(), Type::getInt32PtrTy(context), false);
+        stg_update_input_i32 = llvm::Function::Create(llvm::FunctionType::get(Builder.getVoidTy(), Type::getInt32PtrTy(context), false), llvm::Function::ExternalLinkage,
+                                        "stg_update_input_i32", ModuleOb);
+        stg_update_input_i64 = llvm::Function::Create(llvm::FunctionType::get(Builder.getVoidTy(), Type::getInt64PtrTy(context), false), llvm::Function::ExternalLinkage,
+                                                 "stg_update_input_i64", ModuleOb);
+        stg_update_input_float = llvm::Function::Create(llvm::FunctionType::get(Builder.getVoidTy(), Type::getFloatPtrTy(context), false), llvm::Function::ExternalLinkage,
+                                                   "stg_update_input_float", ModuleOb);
+        stg_update_input_double = llvm::Function::Create(llvm::FunctionType::get(Builder.getVoidTy(), Type::getDoublePtrTy(context), false), llvm::Function::ExternalLinkage,
+                                                    "stg_update_input_double", ModuleOb);
+
+
 
         stg_update_store_i32 = llvm::Function::Create(funcType7, llvm::Function::ExternalLinkage,
             "stg_update_store_i32", ModuleOb);
@@ -799,6 +901,9 @@ struct STGInstrumenter : public ModulePass {
         stg_update_double = llvm::Function::Create(
             llvm::FunctionType::get(Builder.getVoidTy(), arg14, false),
             llvm::Function::ExternalLinkage, "stg_update_double", ModuleOb);
+
+
+
 
         // errs() << "function declarations created successfully"<< "\n";
         return true;

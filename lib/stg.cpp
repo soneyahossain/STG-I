@@ -26,11 +26,17 @@ bool fileCreated = false;
 std::ofstream stg_state;
 std::ofstream stg_pc;
 
+
+/*
+
+
 bool is_number(const std::string s)
 {
     static const std::regex doubleRegex{ R"([+|-]?(?:0|[1-9]|d*)(?:|.|d*)?(?:[eE][+|-]?|d+)?)" };
     return std::regex_match(s, doubleRegex);
 }
+*/
+
 
 void stg_set_symbolic(const char* key, const char* val)
 {
@@ -44,6 +50,10 @@ void stg_set_symbolic(const char* key, const char* val)
 
     //std::cout << "stg_state[" << key << " --> " << operand << "]\n";
 }
+
+
+
+
 
 void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* type_ )
 {
@@ -110,76 +120,6 @@ void stg_update_op(char* key, char* lhs, char* op, char* rhs)
 
     std::cout << key << "--> " << lvalue << " " << oper << " " << rvalue << "\n";
 
-
-    /*
-
-    if (oper.find("+") != std::string::npos) {
-        if (is_number(lvalue) && is_number(rvalue)) {
-
-            double lval = atof(lvalue.c_str());
-            double rval = atof(rvalue.c_str());
-
-            double result = result = lval + rval;
-
-            if (std::floor(result) == result)
-                state[key] = std::to_string((int)result);
-            else
-                state[key] = std::to_string(result);
-        }
-    }
-    else if (oper.find("-") != std::string::npos) {
-
-        if (is_number(lvalue) && is_number(rvalue)) {
-
-            double lval = atof(lvalue.c_str());
-            double rval = atof(rvalue.c_str());
-
-            double result = lval - rval;
-
-            if (std::floor(result) == result)
-                state[key] = std::to_string((int)result);
-            else
-                state[key] = std::to_string(result);
-        }
-    }
-
-    else if (oper.find("*") != std::string::npos) {
-
-        if (is_number(lvalue) && is_number(rvalue)) {
-
-            double lval = atof(lvalue.c_str());
-            double rval = atof(rvalue.c_str());
-
-            double result = lval * rval;
-
-            if (std::floor(result) == result)
-                state[key] = std::to_string((int)result);
-            else
-                state[key] = std::to_string(result);
-        }
-    }
-
-    else if (oper.find("/") != std::string::npos) {
-
-        if (is_number(lvalue) && is_number(rvalue)) {
-
-            double lval = atof(lvalue.c_str());
-            double rval = atof(rvalue.c_str());
-
-            double result = lval / rval;
-
-            if (std::floor(result) == result)
-                state[key] = std::to_string((int)result);
-            else
-                state[key] = std::to_string(result);
-        }
-    }
-
-    else
-        state[key] = "(" + oper + " " + lvalue + " " + rvalue + ")";
-
-    */
-
     state[key] = "("+oper+" "+lvalue+" "+rvalue+")";
     stg_state << "state[" << key << " --> " << state[key] << "]\n";
 }
@@ -202,6 +142,78 @@ void stg_update_load_i32(int* addr, char* val)
     state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
+//------------ testing scanf---------
+
+void  stg_update_user_input(std::string address, std::string value,std::string type )
+{
+    //check if this variable is symbolic, if then do update dictionary , else update symbolic map with value
+
+    auto itr = con_state.find(address);
+    if (itr != con_state.end())
+    {
+
+        std::cout << address << "--> " << value << " " << type << "\n";
+        std::string sym_name = itr->second;
+
+        if(needComma )stg_pc <<",\n";
+        else needComma=true;
+        stg_pc << sym_name <<" : "<<type<< " = " << value;
+
+    }else {
+
+       std::string key = "v(" + address + ")";
+       std::string val = "( "+type +" "+ value +")";
+
+       state[key] = val;
+       stg_state << "state[" << val << " --> " << val << "]\n";
+    }
+}
+
+void  stg_update_input_float(float* addr)
+{
+    std::stringstream address;
+    address << addr;
+    std::string address_ = address.str();
+    std::string value_ =  std::to_string(*addr);
+
+    stg_update_user_input(address_,value_, "float");
+}
+
+void  stg_update_input_i32(int* addr)
+{
+    std::stringstream address;
+    address << addr;
+    std::string address_ = address.str();
+    std::string value_ =  std::to_string(*addr);
+
+    stg_update_user_input(address_,value_, "i32");
+}
+
+void  stg_update_input_double(double* addr)
+{
+    std::stringstream address;
+    address << addr;
+    std::string address_ = address.str();
+    std::string value_ =  std::to_string(*addr);
+
+    stg_update_user_input(address_,value_, "double");
+}
+
+void  stg_update_input_i64(long* addr)
+{
+    std::stringstream address;
+    address << addr;
+    std::string address_ = address.str();
+    std::string value_ =  std::to_string(*addr);
+
+    stg_update_user_input(address_,value_, "i64");
+}
+
+
+
+//------------ testing scanf---------
+
+
 void stg_update_load_i64(long* addr, char* val)
 {
 

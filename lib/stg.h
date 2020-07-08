@@ -1,3 +1,7 @@
+
+#include <string>
+
+
 /*
  * Routine for defining addresses as symbolic for constraint recording.
  * The names are used in representing the symbolic constraints.
@@ -60,3 +64,10 @@ extern "C" void stg_update_op(char *key, char *lhs, char *op, char *rhs);
 extern "C" void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* type_ );
 extern "C" void stg_update_pc(bool cnd_value, char *cnd_name);
 extern "C" void stg_update_phi(char *lhs, char *prevBB, char *valBBpairs);
+
+
+extern "C"  void  stg_update_user_input(std::string address, std::string value,std::string type );
+extern "C"  void  stg_update_input_float(float* addr);
+extern "C"  void  stg_update_input_i32(int* addr);
+extern "C"  void  stg_update_input_double(double* addr);
+extern "C"  void  stg_update_input_i64(long* addr);
