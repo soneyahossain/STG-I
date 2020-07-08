@@ -1,0 +1,8 @@
+[
+S0 : double = 6.000000
+]
+
+//Test: passed
+
+(ogt (fadd S0 (double 5.000000)) ( double 9.000000))
+
