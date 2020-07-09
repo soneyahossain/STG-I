@@ -1,0 +1,15 @@
+[
+LLON : i32 = 85,
+HLON : i32 = 35,
+LLAT : i32 = 35,
+HLAT : i32 = 79,
+INC : i32 = 1,
+ALT : i32 = 100,
+LON : i32 = 78,
+LAT : i32 = 38
+]
+
+//Test: passed
+
+(slt HLON LLON)
+

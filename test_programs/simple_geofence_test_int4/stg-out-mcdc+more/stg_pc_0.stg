@@ -1,0 +1,39 @@
+[
+LLON : i32 = 20,
+HLON : i32 = 40,
+LLAT : i32 = 5,
+HLAT : i32 = 20,
+INC : i32 = 1,
+ALT : i32 = 200,
+LON : i32 = 30,
+LAT : i32 = 10
+]
+
+//Test: passed
+
+(land
+  (lnot(slt HLON LLON))
+  (land
+    (lnot(slt HLAT LLAT))
+    (land
+      (lnot(sgt ALT (i32 400)))
+      (land
+        (trunc i1 (i8 1))
+        (land
+          (sgt LON LLON)
+          (land
+            (slt LON HLON)
+            (land
+              (slt LAT HLAT)
+              (land
+                (sgt LAT LLAT)
+                (ne INC (i32 0))
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+
