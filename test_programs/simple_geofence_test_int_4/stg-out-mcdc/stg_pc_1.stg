@@ -18,15 +18,12 @@ LAT : i32 = 25
     (land
       (lnot(sgt ALT (i32 400)))
       (land
-        (trunc i1 (i8 1))
+        (sge LON LLON)
         (land
-          (sgt LON LLON)
+          (sle LON HLON)
           (land
-            (slt LON HLON)
-            (land
-              (lnot(slt LAT HLAT))
-              (ne INC (i32 0))
-            )
+            (lnot(sle LAT HLAT))
+            (ne INC (i32 0))
           )
         )
       )

@@ -1,18 +1,33 @@
 [
 LLON : i32 = 20,
-HLON : i32 = 25,
-LLAT : i32 = 20,
-HLAT : i32 = 12,
-INC : i32 = 0,
+HLON : i32 = 40,
+LLAT : i32 = 5,
+HLAT : i32 = 20,
+INC : i32 = 1,
 ALT : i32 = -20,
 LON : i32 = 30,
-LAT : i32 = 10
+LAT : i32 = 25
 ]
 
 //Test: passed
 
 (land
   (lnot(slt HLON LLON))
-  (slt HLAT LLAT)
+  (land
+    (lnot(slt HLAT LLAT))
+    (land
+      (lnot(sgt ALT (i32 400)))
+      (land
+        (sge LON LLON)
+        (land
+          (sle LON HLON)
+          (land
+            (lnot(sle LAT HLAT))
+            (ne INC (i32 0))
+          )
+        )
+      )
+    )
+  )
 )
 

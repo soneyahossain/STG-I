@@ -1,9 +1,9 @@
 [
-LLON : i32 = 40,
-HLON : i32 = 20,
-LLAT : i32 = 12,
+LLON : i32 = 20,
+HLON : i32 = 40,
+LLAT : i32 = 5,
 HLAT : i32 = 20,
-INC : i32 = 0,
+INC : i32 = 1,
 ALT : i32 = -20,
 LON : i32 = 30,
 LAT : i32 = 10
@@ -11,5 +11,26 @@ LAT : i32 = 10
 
 //Test: passed
 
-(slt HLON LLON)
+(land
+  (lnot(slt HLON LLON))
+  (land
+    (lnot(slt HLAT LLAT))
+    (land
+      (lnot(sgt ALT (i32 400)))
+      (land
+        (sge LON LLON)
+        (land
+          (sle LON HLON)
+          (land
+            (sle LAT HLAT)
+            (land
+              (sge LAT LLAT)
+              (ne INC (i32 0))
+            )
+          )
+        )
+      )
+    )
+  )
+)
 

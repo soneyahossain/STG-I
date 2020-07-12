@@ -28,8 +28,8 @@ bool insideFence(int lat, int lon, int inclusion, int high_lat, int low_lat, int
 	bool inside = false;
 
 	// Very limited check
-	if (lon > low_lon && lon < high_lon)
-		if (lat < high_lat && lat > low_lat)
+	if (lon >= low_lon && lon <= high_lon)
+		if (lat <= high_lat && lat >= low_lat)
 			inside = true;
 
 	if (!inclusion) // exclusion geofence area - must remain outside
@@ -45,24 +45,22 @@ bool insideFence(int lat, int lon, int inclusion, int high_lat, int low_lat, int
 }
 
 // Takes a point, a fence type, and 2 points defining a rectangular fence, and it returns if the point is  acceptable given that fence
-bool checkGeofence(int lat, int lon, int altitude, int inclusion,
-				int high_lat, int low_lat, int high_lon, int low_lon)
+bool checkGeofence(int lat, int lon, int altitude, int inclusion,int high_lat, int low_lat, int high_lon, int low_lon)
 {
 	bool acceptable = true;
 	int max_vertical_altitude = 400.0; // 400 ft, as per FAA Small Unmanned Aircraft Regulations (Part 107)
 
 
-
-	if (high_lon < low_lon || high_lat < low_lat)
+	if (high_lon < low_lon || high_lat < low_lat){    //new condition added
 	   return false;
-	
+
 	// quick vertical ceiling check
 	if (altitude > max_vertical_altitude) {
 		acceptable = false;
+	    return false;
 	}
 
-	acceptable = acceptable && insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);
-
+	acceptable =  insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);  // changed from acceptable =  acceptable && insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);
 	return acceptable;
 }
 
@@ -74,7 +72,7 @@ int main(int argc, char **argv)
 	char buf[1001];
 
 	if (argc != 2) {
-		fprintf(stderr, "Missing test parameter file\n");    
+		fprintf(stderr, "Missing test parameter file\n");
 		exit(1);
 	}
 	else {
@@ -95,7 +93,7 @@ int main(int argc, char **argv)
 	stg_symbolic_variable(&low_lon, "LLON");
 
 	// each line of the input file contains test parameters and expected checkGeofence result
-	while (fgets(buf, 1000, params)) 
+	while (fgets(buf, 1000, params))
 	{
 		int expected;
 		if (buf[0] == '#') continue; // # is a comment line
@@ -104,16 +102,7 @@ int main(int argc, char **argv)
 
 		sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
 
-		printf("lat=%d lon=%d alt=%d inc=%d hlat=%d llat=%d hlon=%d llon=%d expected=%d\n", lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected);
-
-		//stg_input_int(&lat, lat);
-		//stg_input_int(&lon, lon);
-		//stg_input_int(&altitude, altitude);
-		//stg_input_int(&inclusion, inclusion);
-		//stg_input_int(&high_lat, high_lat);
-		//stg_input_int(&low_lat, low_lat);
-		//stg_input_int(&high_lon, high_lon);
-		//stg_input_int(&low_lon, low_lon);
+	    printf("lat=%d lon=%d alt=%d inc=%d hlat=%d llat=%d hlon=%d llon=%d expected=%d\n", lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected);
 
 		bool isGeofenced = checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
 		stg_end_test();

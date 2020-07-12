@@ -1,9 +1,9 @@
 [
 LLON : i32 = 20,
 HLON : i32 = 40,
-LLAT : i32 = 5,
+LLAT : i32 = 12,
 HLAT : i32 = 20,
-INC : i32 = 1,
+INC : i32 = 0,
 ALT : i32 = -20,
 LON : i32 = 30,
 LAT : i32 = 10
@@ -18,16 +18,16 @@ LAT : i32 = 10
     (land
       (lnot(sgt ALT (i32 400)))
       (land
-        (trunc i1 (i8 1))
+        (sge LON LLON)
         (land
-          (sgt LON LLON)
+          (sle LON HLON)
           (land
-            (slt LON HLON)
+            (sle LAT HLAT)
             (land
-              (slt LAT HLAT)
+              (lnot(sge LAT LLAT))
               (land
-                (sgt LAT LLAT)
-                (ne INC (i32 0))
+                (lnot(ne INC (i32 0)))
+                (lnot(trunc i1 (i8 0)))
               )
             )
           )
