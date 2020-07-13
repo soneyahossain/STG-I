@@ -1,12 +1,12 @@
 [
-LLON : i32 = 20,
-HLON : i32 = 15,
-LLAT : i32 = 25,
-HLAT : i32 = 20,
+LLAT : i32 = 20,
+HLAT : i32 = 15,
+LLON : i32 = 25,
+HLON : i32 = 20,
 INC : i32 = 1,
 ALT : i32 = 500,
-LON : i32 = 15,
-LAT : i32 = 10
+LAT : i32 = 15,
+LON : i32 = 10
 ]
 
 //Test: passed

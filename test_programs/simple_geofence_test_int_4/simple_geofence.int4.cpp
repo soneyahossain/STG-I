@@ -100,7 +100,10 @@ int main(int argc, char **argv)
 
 		stg_begin_test();
 
-		sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
+		//sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
+
+		sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lon, &lat, &altitude, &inclusion, &high_lon, &low_lon, &high_lat, &low_lat, &expected);
+
 
 	    printf("lat=%d lon=%d alt=%d inc=%d hlat=%d llat=%d hlon=%d llon=%d expected=%d\n", lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected);
 

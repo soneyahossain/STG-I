@@ -1,18 +1,15 @@
 [
-LLON : i32 = 35,
-HLON : i32 = 85,
-LLAT : i32 = 79,
-HLAT : i32 = 35,
+LLAT : i32 = 35,
+HLAT : i32 = 85,
+LLON : i32 = 79,
+HLON : i32 = 35,
 INC : i32 = 1,
 ALT : i32 = 100,
-LON : i32 = 78,
-LAT : i32 = 38
+LAT : i32 = 78,
+LON : i32 = 38
 ]
 
 //Test: passed
 
-(land
-  (lnot(slt HLON LLON))
-  (slt HLAT LLAT)
-)
+(slt HLON LLON)
 
