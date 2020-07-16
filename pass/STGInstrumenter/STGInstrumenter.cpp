@@ -92,7 +92,7 @@ struct STGInstrumenter : public ModulePass {
         "stg_update_input_i32",
         "stg_update_input_i64",
         "stg_update_input_float",
-        "stg_update_input_double", "stg_record_test", "sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit"
+        "stg_update_input_double", "stg_record_test", "sscanf", "__isoc99_sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit"
     };
 
 
@@ -359,7 +359,7 @@ struct STGInstrumenter : public ModulePass {
                             args.push_back(rettype);
                             CallInst::Create(stg_update_cast, args)->insertBefore(I);
                         }
-                    }else if(functionName.compare("sscanf") == 0 )  //handle file reading
+                    }else if(functionName.compare("sscanf") == 0 || functionName.compare("__isoc99_sscanf") == 0)  //handle file reading
                     {
 
                        unsigned no_of_params = callInst->getNumArgOperands();

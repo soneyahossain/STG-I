@@ -11,6 +11,7 @@ clean:
 #
 fixed_fence.bc: fixed_fence.cpp
 	clang -I$(STGI_INC) -emit-llvm -fno-discard-value-names $< -c -o $@
+	llvm-dis $@ -o $<.ll
 
 #
 # link against STGI instrumentation bitcode

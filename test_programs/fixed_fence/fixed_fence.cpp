@@ -82,8 +82,10 @@ int main(int argc, char **argv)
 		stg_begin_test();
 
 		sscanf(buf, "%d %d %d", &lat, &lon, &expected);
+		/*
 		stg_input_int(&lat, lat);
 		stg_input_int(&lon, lon);
+		*/
 
 	    	printf("lat=%d lon=%d alt=%d lalt=%d halt=%d llat=%d hlat=%d llon=%d hlon=%d expected=%d\n", lat, lon, altitude, low_alt, high_alt, low_lat, high_lat, low_lon, high_lon, expected);
 
