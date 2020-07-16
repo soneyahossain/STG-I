@@ -65,7 +65,7 @@ void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* 
     std::string lvalue;
     std::string rvalue;
 
-    std::cout << key << "--> " << loperand << " " << predicate << " " << roperand << "\n";
+   // std::cout << key << "--> " << loperand << " " << predicate << " " << roperand << "\n";
 
     auto itr = state.find(loperand);
     if (itr != state.end())
@@ -80,7 +80,7 @@ void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* 
     else
         rvalue = roperand;
 
-    std::cout << key << "--> " << lvalue << " " << predicate << " " << rvalue << "\n";
+    //std::cout << key << "--> " << lvalue << " " << predicate << " " << rvalue << "\n";
 
 
     state[key] = "(" + predicate + " " + lvalue + " " + rvalue + ")";
@@ -103,7 +103,7 @@ void stg_update_op(char* key, char* lhs, char* op, char* rhs)
     std::string lvalue;
     std::string rvalue;
 
-    std::cout << key << "--> " << loperand << " " << oper << " " << roperand << "\n";
+    //std::cout << key << "--> " << loperand << " " << oper << " " << roperand << "\n";
 
     auto itr = state.find(loperand);
     if (itr != state.end())
@@ -118,7 +118,7 @@ void stg_update_op(char* key, char* lhs, char* op, char* rhs)
     else
         rvalue = roperand;
 
-    std::cout << key << "--> " << lvalue << " " << oper << " " << rvalue << "\n";
+    //std::cout << key << "--> " << lvalue << " " << oper << " " << rvalue << "\n";
 
     state[key] = "("+oper+" "+lvalue+" "+rvalue+")";
     stg_state << "state[" << key << " --> " << state[key] << "]\n";
@@ -152,7 +152,7 @@ void  stg_update_user_input(std::string address, std::string value,std::string t
     if (itr != con_state.end())
     {
 
-        std::cout << address << "--> " << value << " " << type << "\n";
+        //std::cout << address << "--> " << value << " " << type << "\n";
         std::string sym_name = itr->second;
 
         if(needComma )stg_pc <<",\n";
@@ -447,7 +447,7 @@ void stg_update_pc(bool cnd_value, char* cnd_name)
 
     if (!((cnd_value != 0 && value == "1") || (cnd_value == 0 && value == "0")) && fileCreated) {
         path_conditions["PC"+std::to_string(path_condition_count)]=value;
-        std::cout << "PC"+std::to_string(path_condition_count) <<": " <<value<< "\n";
+        //std::cout << "PC"+std::to_string(path_condition_count) <<": " <<value<< "\n";
         path_condition_count++;
     }
 
@@ -492,7 +492,7 @@ void stg_symbolic_variable(void* addr, const char* name)
 
     stg_set_symbolic(add.c_str(), name);
     //stg_state << "state[" << add << " --> " << name << "]\n";
-    std::cout << "stg_address[" << add << " --> " << name << "]\n";
+    //std::cout << "stg_address[" << add << " --> " << name << "]\n";
 }
 
 void stg_input_int(void* addr, int value)
@@ -500,7 +500,7 @@ void stg_input_int(void* addr, int value)
     std::stringstream address_;
     address_ << addr;
     std::string add = address_.str();
-    std::cout << "address:" << add << "\n";
+   // std::cout << "address:" << add << "\n";
     std::string sym_name;
 
     //find the symbolic name and tag the concrete value with it
@@ -515,7 +515,7 @@ void stg_input_int(void* addr, int value)
 
     int* addr_c = (int*)addr;
     *addr_c = value;
-    std::cout << *addr_c << "\n";
+    //std::cout << *addr_c << "\n";
 
     if(needComma )stg_pc <<",\n";
     else needComma=true;
@@ -541,7 +541,7 @@ void stg_input_float(void* addr, float value)
 
     float* addr_c = (float*)addr;
     *addr_c = value;
-    std::cout << *addr_c << "\n";
+    //std::cout << *addr_c << "\n";
     if(needComma )stg_pc <<",\n";
         else needComma=true;
     stg_pc << sym_name <<" : float"<< " = " <<value;
@@ -566,7 +566,7 @@ void stg_input_double(void* addr, double value)
 
     double* addr_c = (double*)addr;
     *addr_c = value;
-    std::cout << *addr_c << "\n";
+    //std::cout << *addr_c << "\n";
     if(needComma )stg_pc <<",\n";
         else needComma=true;
     stg_pc << sym_name <<" : double"<< " = " <<  value;
