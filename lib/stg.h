@@ -1,5 +1,4 @@
 
-
 #include <string>
 
 
@@ -7,7 +6,7 @@
  * Routine for defining addresses as symbolic for constraint recording.
  * The names are used in representing the symbolic constraints.
  */
-extern "C" void stg_symbolic_variable(void* addr, const char *name);
+extern "C" void stg_symbolic_variable(void* addr, const char *name, double min, double max);
 
 /* 
  * This version creates a name for each of num elements of the array,
@@ -72,3 +71,7 @@ extern "C"  void  stg_update_input_float(float* addr);
 extern "C"  void  stg_update_input_i32(int* addr);
 extern "C"  void  stg_update_input_double(double* addr);
 extern "C"  void  stg_update_input_i64(long* addr);
+extern "C"  void  stg_update_bin_intrinsic(char* result, char* arg1, char* arg2, char* fun_name, char* type);
+
+
+extern "C"  void  print_maps();
