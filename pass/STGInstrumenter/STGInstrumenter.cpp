@@ -53,7 +53,6 @@ struct STGInstrumenter : public ModulePass {
     Function* stg_update_input_i64;
     Function* stg_update_input_float;
     Function* stg_update_input_double;
-    Function* stg_update_bin_intrinsic;
 
     GlobalVariable* prevBB; // global variable pointer to store basic block
 
@@ -93,7 +92,7 @@ struct STGInstrumenter : public ModulePass {
         "stg_update_input_i32",
         "stg_update_input_i64",
         "stg_update_input_float",
-        "stg_update_input_double", "stg_record_test", "sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit","stg_update_bin_intrinsic"
+        "stg_update_input_double", "stg_record_test", "sscanf", "__isoc99_sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit"
     };
 
 
@@ -314,23 +313,15 @@ struct STGInstrumenter : public ModulePass {
                     std::string functionName = F->getName().str();
                     std::string dest = I->getName().str();
 
-
-
                     if (IntrinsicInst* intrinsicInst = dyn_cast<IntrinsicInst>(I)) {
 
-
-                        llvm::Value* arg_dest = builder.CreateGlobalStringPtr(dest);
-
-                        std::vector<Value*> args;
-                        args.push_back(arg_dest);
-
-
+                        errs() << "got IntrinsicInst......." << functionName << "\n";
 
                         std::string type_;
                         llvm::raw_string_ostream ret_type(type_);
                         intrinsicInst->getType()->print(ret_type);
 
-
+                        errs() << "got IntrinsicInst......." << functionName << "\n";
 
                         int i = 0;
                         std::string argument;
@@ -352,28 +343,23 @@ struct STGInstrumenter : public ModulePass {
                             }
                             else
                                 argument = arg_value->getName().str();
-
-                            args.push_back(builder.CreateGlobalStringPtr(argument));
                         }
-
-
-                        llvm::Value* fun_name = builder.CreateGlobalStringPtr(functionName);
-                        llvm::Value* rettype = builder.CreateGlobalStringPtr(ret_type.str());
-                        args.push_back(fun_name);
-                        args.push_back(rettype);
 
                         if (i == 1) {
 
-                            errs() << "got unary Intrinsic call" << functionName << "\n";
+                            llvm::Value* arg_dest = builder.CreateGlobalStringPtr(dest);
+                            llvm::Value* arg_val = builder.CreateGlobalStringPtr(argument);
+                            llvm::Value* fun_name = builder.CreateGlobalStringPtr(functionName);
+                            llvm::Value* rettype = builder.CreateGlobalStringPtr(ret_type.str());
+
+                            std::vector<Value*> args;
+                            args.push_back(arg_dest);
+                            args.push_back(arg_val);
+                            args.push_back(fun_name);
+                            args.push_back(rettype);
                             CallInst::Create(stg_update_cast, args)->insertBefore(I);
-
-                        }else if(i == 2)
-                        {
-                            errs() << "got binary Intrinsic call" << functionName << "\n";
-                            CallInst::Create(stg_update_bin_intrinsic, args)->insertBefore(I);
                         }
-
-                    }else if(functionName.compare("sscanf") == 0 )  //handle file reading
+                    }else if(functionName.compare("sscanf") == 0 || functionName.compare("__isoc99_sscanf") == 0)  //handle file reading
                     {
 
                        unsigned no_of_params = callInst->getNumArgOperands();
@@ -917,11 +903,6 @@ struct STGInstrumenter : public ModulePass {
             llvm::Function::ExternalLinkage, "stg_update_double", ModuleOb);
 
 
-
-        std::vector<Type*> arg15(5, Builder.getInt8PtrTy());
-        stg_update_bin_intrinsic = llvm::Function::Create(
-                 llvm::FunctionType::get(Builder.getVoidTy(), arg15, false),
-                 llvm::Function::ExternalLinkage, "stg_update_bin_intrinsic", ModuleOb);
 
 
         // errs() << "function declarations created successfully"<< "\n";

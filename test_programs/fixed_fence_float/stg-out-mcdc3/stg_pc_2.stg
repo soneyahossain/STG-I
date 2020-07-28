@@ -1,0 +1,24 @@
+[
+LON : float = 179.000000,
+LAT : float = 90.000000
+]
+
+//Test: passed
+
+(land
+  (lnot(olt (float 200.000000) (float 0.000000)))
+  (land
+    (lnot(ogt (float 200.000000) (float 400.000000)))
+    (land
+      (lnot(olt LAT (float 70.000000)))
+      (land
+        (ogt LAT (float 80.000000))
+        (land
+          (lnot(olt LON (float 150.000000)))
+          (ogt LON (float 170.000000))
+        )
+      )
+    )
+  )
+)
+

@@ -1,0 +1,24 @@
+[
+LON : i32 = 179,
+LAT : i32 = 90
+]
+
+//Test: passed
+
+(land
+  (lnot(slt (i32 200) (i32 0)))
+  (land
+    (lnot(sgt (i32 200) (i32 400)))
+    (land
+      (lnot(slt LAT (i32 70)))
+      (land
+        (sgt LAT (i32 80))
+        (land
+          (lnot(slt LON (i32 150)))
+          (sgt LON (i32 170))
+        )
+      )
+    )
+  )
+)
+
