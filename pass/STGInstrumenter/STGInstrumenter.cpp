@@ -375,12 +375,8 @@ struct STGInstrumenter : public ModulePass {
 
                     }else if(functionName.compare("sscanf") == 0 || functionName.compare("__isoc99_sscanf") == 0)  //handle file reading
                     {
-
-
                        unsigned no_of_params = callInst->getNumArgOperands();
                        errs() <<"in sscanf no_of_params==========="<< no_of_params <<"\n";
-
-
 
                        for (unsigned i =2; i<no_of_params; i++)
                        {
