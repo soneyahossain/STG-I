@@ -28,8 +28,8 @@ bool insideFence(int lat, int lon, int inclusion, int high_lat, int low_lat, int
 	bool inside = false;
 
 	// Very limited check
-	if (lon > low_lon && lon < high_lon)
-		if (lat < high_lat && lat > low_lat)
+	if (lon >= low_lon && lon <= high_lon)
+		if (lat <= high_lat && lat >= low_lat)
 			inside = true;
 
 	if (!inclusion) // exclusion geofence area - must remain outside
@@ -45,11 +45,14 @@ bool insideFence(int lat, int lon, int inclusion, int high_lat, int low_lat, int
 }
 
 // Takes a point, a fence type, and 2 points defining a rectangular fence, and it returns if the point is  acceptable given that fence
-bool checkGeofence(int lat, int lon, int altitude, int inclusion,
-				int high_lat, int low_lat, int high_lon, int low_lon)
+bool checkGeofence(int lat, int lon, int altitude, int inclusion,int high_lat, int low_lat, int high_lon, int low_lon)
 {
 	bool acceptable = true;
 	int max_vertical_altitude = 400.0; // 400 ft, as per FAA Small Unmanned Aircraft Regulations (Part 107)
+
+
+	If (high_lon < low_long || high_lat < low_lat)
+	   return false;
 
 	// quick vertical ceiling check
 	if (altitude > max_vertical_altitude) {
