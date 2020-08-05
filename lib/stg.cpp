@@ -16,7 +16,18 @@ std::map<std::string, std::string> sym_var_map;  // for storing address of symbo
 
 //std::map<std::string, std::string> con_state;
 std::map<std::string, double> sym_range;  // for storing min and max range of symbolic variables
-std::map<std::string, std::string> path_conditions; 
+
+//---------- added on august 5, 20  --------------
+//address of the symbolic variable and other parameters
+
+// <adress_disID, value> will store distribution id
+// <adress_dis_param1, value> will store distribution paramter 1
+// <adress_dis_param2, value> will store distribution paramter 2 [this is only required for normal distributiuon as it has min and std ]
+
+std::map<std::string, double> sym_distribution;  // for storing min and max range of symbolic variables
+
+
+std::map<std::string, std::string> path_conditions;
 
 int testcount = 0;
 int path_condition_count = 0;
@@ -161,9 +172,9 @@ void  stg_update_user_input(std::string address, std::string value,std::string t
 
         if(needComma )stg_pc <<",\n";
         else needComma=true;
-        
 
-        stg_pc << sym_name <<" : "<<type<< " = " << value << ", R:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]";
+
+        stg_pc << sym_name <<" : "<<type<< " = " << value << ", R:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"], D:["<<sym_distribution[address+"_disID"] <<","<<sym_distribution[address+"_param1"] <<","<<sym_distribution[address+"_param2"]<<"]";
 
         //std::cout << sym_name <<" : "<<type<< " = " << value << ", R:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]";
 
@@ -415,44 +426,6 @@ void stg_update_cast(char* key, char* val, char* castOp, char* typeTocast )
 }
 
 
-void  stg_update_bin_intrinsic(char* result, char* arg1, char* arg2, char* fun_name, char* type)
-{
-
-
-
-    std::string arg1_(arg1);
-    std::string arg2_(arg2);
-    std::string fun_name_(fun_name);
-    std::string type_(type);
-
-
-
-    std::string arg_1_val;
-
-    auto itr = sym_state.find(arg1_);
-    if (itr != sym_state.end())
-        arg_1_val = itr->second;
-    else
-        arg_1_val = arg1_;
-    //assert(itr != state.end());
-
-
-    std::string arg_2_val;
-
-    itr = sym_state.find(arg2_);
-    if (itr != sym_state.end())
-        arg_2_val = itr->second;
-    else
-        arg_2_val = arg2_;
-
-
-    //store symbolic values in S-expression syntax
-    sym_state[result] = "("+fun_name_+" "+type_+" "+ arg_1_val+ " "+ arg_2_val+")";
-    stg_state << "state[" << result << " --> " << sym_state[result] << "]\n";
-
-}
-
-
 void stg_update_int(char* key, int val, char* type_)
 {
 
@@ -528,15 +501,13 @@ void stg_update_phi(char* lhs, char* prevBB, char* valBBpairs)
     stg_state << "state[" << key << " --> " << token << "]\n";
 }
 
-
-
-void stg_symbolic_variable(void* addr, const char* name, double min, double max)
+void stg_symbolic_variable(void* addr, const char *name, double min, double max,int dis_id, double parm_1, double param_2)
 {
 
     //std::cout << "min=" << min << "\n";
     //std::cout << "max=" << max << "\n";
-    
-    
+
+
     std::stringstream address_;
     address_ << addr;
 
@@ -550,6 +521,11 @@ void stg_symbolic_variable(void* addr, const char* name, double min, double max)
     sym_var_map[add.c_str()] = name; //updating symbolic map
     sym_state[add.c_str()] = name; // updating the main main also
     stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
+
+    sym_distribution[address_.str()+"_disID"] = dis_id;
+    sym_distribution[address_.str()+"_param1"] = parm_1;
+    sym_distribution[address_.str()+"_param2"] = param_2;
+
 }
 
 void stg_input_int(void* addr, int value)
@@ -562,7 +538,7 @@ void stg_input_int(void* addr, int value)
 
     //find the symbolic name and tag the concrete value with it
 
-    
+
     auto itr = sym_var_map.find("v(" + add + ")");
     if (itr != sym_var_map.end())
     {
@@ -578,7 +554,8 @@ void stg_input_int(void* addr, int value)
 
     if(needComma )stg_pc <<",\n";
     else needComma=true;
-    stg_pc << sym_name <<" : i32"<< " = " << value;
+    stg_pc << sym_name <<" : i32"<< " = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
+
 }
 
 void stg_input_float(void* addr, float value)
@@ -603,9 +580,10 @@ void stg_input_float(void* addr, float value)
     *addr_c = value;
     //std::cout << *addr_c << "\n";
     if(needComma )stg_pc <<",\n";
-        else needComma=true;
+    else needComma=true;
 
-    stg_pc << sym_name <<" : float"<<" = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]";
+    stg_pc << sym_name <<" : float"<<" = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
+
 
 //stg_pc << sym_name <<" : float"<< " = " <<value;
 
@@ -633,10 +611,10 @@ void stg_input_double(void* addr, double value)
     *addr_c = value;
     //std::cout << *addr_c << "\n";
     if(needComma )stg_pc <<",\n";
-        else needComma=true;
+    else needComma=true;
 
 
-   stg_pc << sym_name <<" : double"<<" = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]";
+   stg_pc << sym_name <<" : double"<<" = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
 
     //stg_pc << sym_name <<" : double"<< " = " <<  value;
 }
@@ -676,7 +654,7 @@ void stg_end_test()
 {
     //reset state map , concrete map,
     stg_pc << "\n";
-    
+
     if(path_condition_count==1)
     {
      path_condition= path_conditions["PC"+std::to_string(0)]+"\n";
@@ -728,7 +706,7 @@ void stg_end_test()
     //std::cout << "path_condition:\n" << path_condition <<"\n";
     //end:  code to construct path condition according to constraint grammar
     stg_pc << "]\n\n";
-   
+
 
 
     ///////////////////////////
@@ -852,6 +830,9 @@ void print_maps()
         std::cout << x.first << ": " << x.second << "\n";
     }
 
+   for (const auto& x : sym_distribution) {
+        std::cout << x.first << ": " << x.second << "\n";
+    }
 
 
 
