@@ -37,8 +37,9 @@ int main()
 {
     int x, y;  
     stg_begin_test();   // start test
-    stg_symbolic_variable(&x, "X");  //making int x as symbolic
-    stg_symbolic_variable(&y, "Y");  //making int y as symbolic
+
+    stg_symbolic_variable(&x, "X", 0, 100);  //stg_symbolic_variable takes the address of a variable, its symbolic name, min and max range 
+    stg_symbolic_variable(&y, "Y", 0, 100);  //making int y as symbolic
     stg_input_int(&x, 0);   //assigning 0 to int x 
     stg_input_int(&y, 38);   //assigning 38 to int x 
     stg_assert(isGreaterOrEq(x, y));    //checking whether test passed or failed 

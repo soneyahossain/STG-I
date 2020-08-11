@@ -1,0 +1,12 @@
+[
+B : double = 4.500000, R:[2.22507e-308,1.79769e+308],
+P : double = -5.000000, R:[1.17549e-38,3.40282e+38]
+]
+
+//Test: failed
+
+(land
+  (lnot(ogt (llvm.pow.f64 double B P) (llvm.pow.f64 double B (sitofp double (i32 2)))))
+  (lnot(ogt (llvm.pow.f64 double B P) (double 0.500000)))
+)
+

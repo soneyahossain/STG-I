@@ -1,0 +1,9 @@
+[
+T : double = 45.000000, R:[2.22507e-308,1.79769e+308],
+H : double = 2.000000, R:[2.22507e-308,1.79769e+308]
+]
+
+//Test: passed
+
+(olt (fsub (fmul (llvm.sin.f64 double (fdiv (fmul T (double 3.141593)) (double 180.000000))) (llvm.sqrt.f64 double H)) (fmul (llvm.cos.f64 double (fdiv (fmul T (double 3.141593)) (double 180.000000))) (llvm.sqrt.f64 double H))) (double 0.001000))
+

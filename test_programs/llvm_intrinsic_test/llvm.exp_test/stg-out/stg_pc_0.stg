@@ -1,0 +1,8 @@
+[
+S0 : double = 12.000000, R:[2.22507e-308,1.79769e+308],
+S1 : float = 9.000000, R:[1.17549e-38,3.40282e+38]
+]
+
+//Test: passed
+
+(ogt (llvm.exp.f64 double S0) (fpext double (llvm.exp.f32 float S1)))

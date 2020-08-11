@@ -46,8 +46,7 @@ bool insideFence(float lat, float lon, int inclusion, float high_lat, float low_
 }
 
 // Takes a point, a fence type, and 2 points defining a rectangular fence, and it returns if the point is  acceptable given that fence
-bool checkGeofence(float lat, float lon, float altitude, int inclusion,
-				float high_lat, float low_lat, float high_lon, float low_lon)
+bool checkGeofence(float lat, float lon, float altitude, int inclusion, float high_lat, float low_lat, float high_lon, float low_lon)
 {
 	bool acceptable = true;
 	float max_vertical_altitude = 400.0; // 400 ft, as per FAA Small Unmanned Aircraft Regulations (Part 107)
