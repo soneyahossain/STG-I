@@ -45,6 +45,33 @@ VelocitySmoothing::VelocitySmoothing(float initial_accel, float initial_vel, flo
 	reset(initial_accel, initial_vel, initial_pos);
 }
 
+/**
+ * Getters and setters
+ */
+float VelocitySmoothing::getMaxJerk() const { return _max_jerk; }
+void VelocitySmoothing::setMaxJerk(float max_jerk) { _max_jerk = max_jerk; }
+
+float VelocitySmoothing::getMaxAccel() const { return _max_accel; }
+void VelocitySmoothing::setMaxAccel(float max_accel) { _max_accel = max_accel; }
+
+float VelocitySmoothing::getMaxVel() const { return _max_vel; }
+void VelocitySmoothing::setMaxVel(float max_vel) { _max_vel = max_vel; }
+
+float VelocitySmoothing::getCurrentJerk() const { return _state.j; }
+void VelocitySmoothing::setCurrentAcceleration(const float accel) { _state.a = _state_init.a = accel; }
+float VelocitySmoothing::getCurrentAcceleration() const { return _state.a; }
+void VelocitySmoothing::setCurrentVelocity(const float vel) { _state.v = _state_init.v = vel; }
+float VelocitySmoothing::getCurrentVelocity() const { return _state.v; }
+void VelocitySmoothing::setCurrentPosition(const float pos) { _state.x = _state_init.x = pos; }
+float VelocitySmoothing::getCurrentPosition() const { return _state.x; }
+
+float VelocitySmoothing::getVelSp() const { return _vel_sp; }
+
+float VelocitySmoothing::getT1() const { return _T1; }
+float VelocitySmoothing::getT2() const { return _T2; }
+float VelocitySmoothing::getT3() const { return _T3; }
+float VelocitySmoothing::getTotalTime() const { return _T1 + _T2 + _T3; }
+
 void VelocitySmoothing::reset(float accel, float vel, float pos)
 {
 	_state.j = 0.f;

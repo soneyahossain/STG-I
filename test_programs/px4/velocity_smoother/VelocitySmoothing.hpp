@@ -90,29 +90,29 @@ public:
 	/**
 	 * Getters and setters
 	 */
-	float getMaxJerk() const { return _max_jerk; }
-	void setMaxJerk(float max_jerk) { _max_jerk = max_jerk; }
+	float getMaxJerk() const;
+	void setMaxJerk(float max_jerk);
 
-	float getMaxAccel() const { return _max_accel; }
-	void setMaxAccel(float max_accel) { _max_accel = max_accel; }
+	float getMaxAccel() const;
+	void setMaxAccel(float max_accel);
 
-	float getMaxVel() const { return _max_vel; }
-	void setMaxVel(float max_vel) { _max_vel = max_vel; }
+	float getMaxVel() const;
+	void setMaxVel(float max_vel);
 
-	float getCurrentJerk() const { return _state.j; }
-	void setCurrentAcceleration(const float accel) { _state.a = _state_init.a = accel; }
-	float getCurrentAcceleration() const { return _state.a; }
-	void setCurrentVelocity(const float vel) { _state.v = _state_init.v = vel; }
-	float getCurrentVelocity() const { return _state.v; }
-	void setCurrentPosition(const float pos) { _state.x = _state_init.x = pos; }
-	float getCurrentPosition() const { return _state.x; }
+	float getCurrentJerk() const;
+	void setCurrentAcceleration(const float accel);
+	float getCurrentAcceleration() const;
+	void setCurrentVelocity(const float vel);
+	float getCurrentVelocity() const;
+	void setCurrentPosition(const float pos);
+	float getCurrentPosition() const;
 
-	float getVelSp() const { return _vel_sp; }
+	float getVelSp() const;
 
-	float getT1() const { return _T1; }
-	float getT2() const { return _T2; }
-	float getT3() const { return _T3; }
-	float getTotalTime() const { return _T1 + _T2 + _T3; }
+	float getT1() const;
+	float getT2() const;
+	float getT3() const;
+	float getTotalTime() const;
 
 	/**
 	 * Synchronize several trajectories to have the same total time. This is required to generate
