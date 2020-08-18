@@ -12,3 +12,7 @@ tests: test_velocity_smoothing
 
 clean:
 	@-rm test_velocity_smoothing test_velocity_smoothing_mcdc *.gcda *.gcov *.gcno
+
+coverage: clean test_velocity_smoothing_mcdc
+	./test_velocity_smoothing_mcdc
+	 llvm-cov-10 gcov VelocitySmoothing.cpp
