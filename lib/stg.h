@@ -2,12 +2,36 @@
 #include <string>
 
 
+
+/*
+Below are the distribution ids to be used in the stg_symbolic_variable calls
+
+     'UNIFORM' -->1
+     'EXPONENTIAL' --> 2
+     'BINOMIAL' --> 3
+     'POISSON' --> 4
+     'GEOMETRIC' --> 5
+     'NORMAL' -->6
+
+These are the parameters for the distribution:
+	EXPONENTIAL: $MEAN
+	BINOMIAL: $NUMBER_OF_TRIALS $PROBABILITY
+	POISSON: $LAMBDA
+	GEOMETRIC: $PROBABILITY
+	UNIFORM_INT/REAL: NONE
+	NORMAL: $MEAN $STANDARD_DEVIATION
+
+*/
+
+
+
 /*
  * Routine for defining addresses as symbolic for constraint recording.
  * The names are used in representing the symbolic constraints.
  */
-extern "C" void stg_symbolic_variable(void* addr, const char *name, double min, double max);
-
+extern "C" void stg_symbolic_variable(void* addr, const char *name, double min, double max,int dis_id=0, double parm_1=0, double param_2=0);
+//extern "C" void stg_symbolic_variable(void* addr, const char *name, double min, double max, int dis_id, double parm_1);
+//extern "C" void stg_symbolic_variable(void* addr, const char *name, double min, int dis_id, double parm_1, double param_2);
 /* 
  * This version creates a name for each of num elements of the array,
  * whose stride is given, using the prefix as a base of the name.
