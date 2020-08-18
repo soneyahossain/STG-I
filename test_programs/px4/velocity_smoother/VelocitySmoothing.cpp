@@ -200,7 +200,6 @@ void VelocitySmoothing::updateDurations(float vel_setpoint)
 
 	if (_direction != 0) {
 		updateDurationsMinimizeTotalTime();
-
 	} else {
 		_T1 = _T2 = _T3 = 0.f;
 	}
