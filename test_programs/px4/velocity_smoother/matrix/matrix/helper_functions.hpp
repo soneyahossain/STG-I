@@ -81,7 +81,7 @@ Type wrap_2pi(Type x)
 template<typename T>
 int sign(T val)
 {
-    //soneya:: I changed the function to eliminate zext llvm instruction, as zext is not supported by qcoral.
+    //soneya:: changed the function to eliminate zext llvm instruction, as zext is not supported by qcoral.
     if(T(FLT_EPSILON) < val ) return 1;
     else if(val < T(FLT_EPSILON) ) return -1;
     else return 0;

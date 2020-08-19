@@ -49,6 +49,13 @@
 
 namespace math
 {
+// Type-safe abs
+template<typename _Tp>
+_Tp fabs_t(_Tp val)
+{
+	return ((val > (_Tp)0) ? val : -val);
+}
+
 
 template<typename _Tp>
 constexpr _Tp min(_Tp a, _Tp b)
@@ -96,13 +103,13 @@ constexpr T degrees(T radians)
 /** Safe way to check if float is zero */
 inline bool isZero(float val)
 {
-	return abs_t(val - 0.0f) < FLT_EPSILON;
+	return fabs_t(val - 0.0f) < FLT_EPSILON;
 }
 
 /** Safe way to check if double is zero */
 inline bool isZero(double val)
 {
-	return abs_t(val - 0.0) < DBL_EPSILON;
+	return fabs_t(val - 0.0) < DBL_EPSILON;
 }
 
 }
