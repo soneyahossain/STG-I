@@ -10,6 +10,8 @@
 #include "stg.h"
 #include <sstream>
 #include <cmath>
+
+
 // trivial initialization of map
 std::map<std::string, std::string> sym_state; // for propagating symbolic states in the bitcode
 std::map<std::string, std::string> sym_var_map;  // for storing address of symbolic vars and their symbolic names 
@@ -24,7 +26,7 @@ std::map<std::string, double> sym_range;  // for storing min and max range of sy
 // <adress_dis_param1, value> will store distribution paramter 1
 // <adress_dis_param2, value> will store distribution paramter 2 [this is only required for normal distributiuon as it has min and std ]
 
-std::map<std::string, double> sym_distribution;  // for storing min and max range of symbolic variables
+std::map<std::string, std::string> sym_distribution;  // for storing min and max range of symbolic variables
 
 
 std::map<std::string, std::string> path_conditions;
@@ -38,7 +40,7 @@ bool needComma = false;
 bool fileCreated = false;
 std::ofstream stg_state;
 std::ofstream stg_pc;
-
+std::string prev_bb;
 
 /*
 
@@ -145,11 +147,47 @@ void stg_update_load_i32(int* addr, char* val)
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
         key = itr->second;
+    else
+    {
+     //if in the else block, perhaps not symbolic , get the concrete value
+     key = std::to_string(*addr);
+    }
 
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
 //------------ testing scanf---------
+
+
+std::string getDistributionSpec(std::string address)
+{
+
+
+
+    std::string dis_name = sym_distribution[address+"_disID"];
+    std::string disSpec="";
+
+    if(dis_name.compare("uniform")== 0)
+    {
+        disSpec= dis_name;
+
+    }else if (dis_name.compare("exponential")== 0 || dis_name.compare("geometric")== 0)
+    {
+         disSpec= dis_name+" ("+sym_distribution[address+"_param1"] +")";
+
+    }
+    else if (dis_name.compare("binomial")== 0 || dis_name.compare("poisson")== 0 || dis_name.compare("normal")== 0 )
+    {
+        disSpec= dis_name+" ( "+sym_distribution[address+"_param1"] +","+ sym_distribution[address+"_param2"]+ " )";
+    }
+    else
+      assert(false);  // distribution name error
+
+
+    return disSpec;
+
+}
+
 
 void  stg_update_user_input(std::string address, std::string value,std::string type )
 {
@@ -174,9 +212,15 @@ void  stg_update_user_input(std::string address, std::string value,std::string t
         else needComma=true;
 
 
-        stg_pc << sym_name <<" : "<<type<< " = " << value << ", R:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"], D:["<<sym_distribution[address+"_disID"] <<","<<sym_distribution[address+"_param1"] <<","<<sym_distribution[address+"_param2"]<<"]";
 
-        //std::cout << sym_name <<" : "<<type<< " = " << value << ", R:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]";
+
+
+        stg_pc << sym_name <<" : "<<type<< " = " << value << ", range:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]," << getDistributionSpec(address);
+
+
+         //D:["<<sym_distribution[address+"_disID"] <<","<<sym_distribution[address+"_param1"] <<","<<sym_distribution[address+"_param2"]<<"]";
+
+        //std::cout << sym_name <<" : "<<type<< " = " << value << ", range:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]";
 
 
     }else {
@@ -188,6 +232,8 @@ void  stg_update_user_input(std::string address, std::string value,std::string t
        stg_state << "state[" << val << " --> " << val << "]\n";
     }
 }
+
+
 
 //------------ testing scanf---------
 
@@ -249,14 +295,17 @@ void stg_update_load_i64(long* addr, char* val)
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
         key = itr->second;
-
+    else
+    {
+     //if in the else block, perhaps not symbolic , get the concrete value
+     key = std::to_string(*addr);
+    }
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
 
-void stg_update_load_i8(void* addr, char* val)
+void stg_update_load_i8(char* addr, char* val)
 {
-
     std::stringstream loadaddress;
     loadaddress << addr;
     std::string key = "v(" + loadaddress.str() + ")";
@@ -265,7 +314,11 @@ void stg_update_load_i8(void* addr, char* val)
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
         key = itr->second;
-
+    else
+    {
+     //if here, then perhaps not symbolic, get the concrete value
+     key = *addr+"";
+    }
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
@@ -296,6 +349,35 @@ void stg_update_load_double(double* addr, char* val)
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
         key = itr->second;
+     else
+     {
+
+     //if in the else block, perhaps not symbolic , get the concrete value
+
+     key = std::to_string(*addr);
+
+     }
+
+    sym_state[val] = key;
+    stg_state << "state[" << val << " --> " << key << "]\n";
+}
+
+void stg_update_load_float(float* addr, char* val)
+{
+
+    std::stringstream loadaddress;
+    loadaddress << addr;
+    std::string key = "v(" + loadaddress.str() + ")";
+    std::string value(val);
+
+    auto itr = sym_state.find(key);
+    if (itr != sym_state.end())
+        key = itr->second;
+    else
+    {
+     //if in the else block, perhaps not symbolic , get the concrete value
+     key = std::to_string(*addr);
+    }
 
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
@@ -352,21 +434,7 @@ void stg_update_store_i8(void* addr, char* val)
     stg_state << "state[" << key << " --> " << value << "]\n";
 }
 
-void stg_update_load_float(float* addr, char* val)
-{
 
-    std::stringstream loadaddress;
-    loadaddress << addr;
-    std::string key = "v(" + loadaddress.str() + ")";
-    std::string value(val);
-
-    auto itr = sym_state.find(key);
-    if (itr != sym_state.end())
-        key = itr->second;
-
-    sym_state[val] = key;
-    stg_state << "state[" << val << " --> " << key << "]\n";
-}
 void stg_update_store_float(float* addr, char* val)
 {
 
@@ -476,11 +544,11 @@ void stg_update_pc(bool cnd_value, char* cnd_name)
 
 }
 
-void stg_update_phi(char* lhs, char* prevBB, char* valBBpairs)
+void stg_update_phi(char* lhs, char* valBBpairs)
 {
 
     std::string key(lhs);
-    std::string prevBB_(prevBB);
+    std::string prevBB_(prev_bb);
     std::string valBBpairs_(valBBpairs);
 
     size_t pos = 0;
@@ -501,11 +569,11 @@ void stg_update_phi(char* lhs, char* prevBB, char* valBBpairs)
     stg_state << "state[" << key << " --> " << token << "]\n";
 }
 
-void stg_symbolic_variable(void* addr, const char *name, double min, double max,int dis_id, double parm_1, double param_2)
+void stg_symbolic_variable(void* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2)
 {
 
-    //std::cout << "min=" << min << "\n";
-    //std::cout << "max=" << max << "\n";
+    std::cout << "min=" << range_min << "\n";
+    std::cout << "max=" << range_max << "\n";
 
 
     std::stringstream address_;
@@ -513,8 +581,8 @@ void stg_symbolic_variable(void* addr, const char *name, double min, double max,
 
     //auto ret = sym_range.insert(std::make_pair<std::string, double[2]>(address_.str(), {min, max}));
 
-    sym_range[address_.str()+"_min"] = min; //"R:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
-    sym_range[address_.str()+"_max"] = max;
+    sym_range[address_.str()+"_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
+    sym_range[address_.str()+"_max"] = range_max;
 
     std::string add = "v(" + address_.str() + ")";
 
@@ -523,8 +591,8 @@ void stg_symbolic_variable(void* addr, const char *name, double min, double max,
     stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
 
     sym_distribution[address_.str()+"_disID"] = dis_id;
-    sym_distribution[address_.str()+"_param1"] = parm_1;
-    sym_distribution[address_.str()+"_param2"] = param_2;
+    sym_distribution[address_.str()+"_param1"] = std::to_string(parm_1);
+    sym_distribution[address_.str()+"_param2"] = std::to_string(param_2);
 
 }
 
@@ -554,7 +622,9 @@ void stg_input_int(void* addr, int value)
 
     if(needComma )stg_pc <<",\n";
     else needComma=true;
-    stg_pc << sym_name <<" : i32"<< " = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
+    stg_pc << sym_name <<" : i32"<< " = " << value << ",range:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]," << getDistributionSpec(add);
+
+    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
 
 }
 
@@ -582,7 +652,10 @@ void stg_input_float(void* addr, float value)
     if(needComma )stg_pc <<",\n";
     else needComma=true;
 
-    stg_pc << sym_name <<" : float"<<" = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
+    stg_pc << sym_name <<" : float"<<" = " << value << ", range:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]," << getDistributionSpec(add);
+
+
+    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
 
 
 //stg_pc << sym_name <<" : float"<< " = " <<value;
@@ -614,7 +687,10 @@ void stg_input_double(void* addr, double value)
     else needComma=true;
 
 
-   stg_pc << sym_name <<" : double"<<" = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
+   stg_pc << sym_name <<" : double"<<" = " << value << ",range:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]," << getDistributionSpec(add);
+
+
+   //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
 
     //stg_pc << sym_name <<" : double"<< " = " <<  value;
 }
@@ -734,7 +810,7 @@ void stg_record_test(bool pred)
     //clear maps
 }
 
-void stg_symbolic_array(void* array, const char* type, int num, const char* prefix, double min, double max)
+void stg_symbolic_array(void* array, const char* type, int num, const char* prefix, double range_min, double range_max, char*  dis_id, double param_1, double param_2)
 {
     // extend this if you want to support more types
 
@@ -752,7 +828,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             int* array_addr = (int*)array;
-            stg_symbolic_variable(array_addr + i, name, min,max);
+            stg_symbolic_variable(array_addr + i, name, range_min,range_max,dis_id,param_1,param_2);
         }
     }
     else if (strcmp(type, "float") == 0) {
@@ -762,7 +838,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             float* array_addr = (float*)array;
-            stg_symbolic_variable((array_addr + i), name, min,max);
+            stg_symbolic_variable((array_addr + i), name, range_min,range_max,dis_id,param_1,param_2);
         }
     }
     else if (strcmp(type, "double") == 0) {
@@ -772,7 +848,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             double* array_addr = (double*)array;
-            stg_symbolic_variable((array_addr + (s * i)), name,min,max);
+            stg_symbolic_variable((array_addr + (s * i)), name, range_min,range_max,dis_id,param_1,param_2);
         }
     }
 }
@@ -820,6 +896,12 @@ void stg_input_array(void* array, const char* type, int num, void* values)
 }
 
 
+void stg_update_prev_bb(char *bbname){
+    prev_bb = bbname;
+    //std::cout <<prev_bb <<"\n";
+}
+
+
 void print_maps()
 {
     for (const auto& x : sym_var_map) {
@@ -833,7 +915,4 @@ void print_maps()
    for (const auto& x : sym_distribution) {
         std::cout << x.first << ": " << x.second << "\n";
     }
-
-
-
 }
