@@ -54,8 +54,9 @@ struct STGInstrumenter : public ModulePass {
     Function* stg_update_input_float;
     Function* stg_update_input_double;
     Function* stg_update_bin_intrinsic;
+    Function* stg_update_prev_bb;
 
-    GlobalVariable* prevBB; // global variable pointer to store basic block
+   // GlobalVariable* prevBB; // global variable pointer to store basic block
 
     std::vector<std::string> function_doNotInstrument = {
         "stg_symbolic_variable",
@@ -93,7 +94,7 @@ struct STGInstrumenter : public ModulePass {
         "stg_update_input_i32",
         "stg_update_input_i64",
         "stg_update_input_float",
-        "stg_update_input_double", "stg_record_test", "sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit","stg_update_bin_intrinsic"
+        "stg_update_input_double", "stg_record_test", "sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit","stg_update_bin_intrinsic","stg_update_prev_bb"
     };
 
 
@@ -113,7 +114,7 @@ struct STGInstrumenter : public ModulePass {
         StringRef module_name = M.getName();
         outs() << "Instrumenting Module :  " << module_name << "\n";
 
-        prevBB = createGlob(Builder, "prev_bb", &M); // global variable to store previous BB to process phi node
+       // prevBB = createGlob(Builder, "prev_bb", &M); // global variable to store previous BB to process phi node
         bool isSuccess = createFunc(Builder, &M); // creating function declarations for runtime symbolic handling, these functions definitions are declared inside lib/stg.h file
 
         for (Module::iterator F = M.begin(), y = M.end(); F != y; ++F) {
@@ -145,12 +146,24 @@ struct STGInstrumenter : public ModulePass {
             BasicBlock* B = &BB; // getting the current BB
             IRBuilder<> builder(B); // builder for the current bb
 
+
+
+            Instruction* I;
             for (Instruction& i : BB) // iterating all the instructions within current BB
             {
                 if (!i.hasName() && !i.getType()->isVoidTy())
                     i.setName("tmp_" + F.getName()); // if the instruction doesn't have a name, giving it name
 
-                Instruction* I = &i; // current instruction
+                else if( i.hasName() && !i.getType()->isVoidTy() )
+
+                   i.setName(i.getName()+"_" + F.getName()); // if the instruction doesn't have a name, giving it name
+
+
+
+
+
+
+                I = &i; // current instruction
                 // I->dump();  // print instruction
 
                 if (LoadInst* loadInst = dyn_cast<LoadInst>(I)) { // read from memory
@@ -375,8 +388,12 @@ struct STGInstrumenter : public ModulePass {
 
                     }else if(functionName.compare("sscanf") == 0 || functionName.compare("__isoc99_sscanf") == 0)  //handle file reading
                     {
+
+
                        unsigned no_of_params = callInst->getNumArgOperands();
                        errs() <<"in sscanf no_of_params==========="<< no_of_params <<"\n";
+
+
 
                        for (unsigned i =2; i<no_of_params; i++)
                        {
@@ -572,6 +589,9 @@ struct STGInstrumenter : public ModulePass {
                 }
                 else if (FCmpInst* fCmpInst = dyn_cast<FCmpInst>(I)) {
 
+
+                    I->dump();
+
                     std::string result = fCmpInst->getName().str();
 
                     std::string predicate_name = (fCmpInst->getPredicateName(fCmpInst->getPredicate())).str();
@@ -581,7 +601,7 @@ struct STGInstrumenter : public ModulePass {
                     std::string type_str;
                     llvm::raw_string_ostream type(type_str);
                     fCmpInst->getOperand(0)->getType()->print(type);
-                    //errs() << "fCmpInst type=============" << type.str() << "\n";
+                    errs() << "fCmpInst type=============" << type.str() << "\n";
 
                     Value* l_op = fCmpInst->getOperand(0);
                     std::string l_operand; //= l_op->getName().str();
@@ -695,16 +715,19 @@ struct STGInstrumenter : public ModulePass {
                     }
 
                     llvm::Value* lhs_ = builder.CreateGlobalStringPtr(lhs);
-                    llvm::Value* prevbb_ = prevBB->getInitializer();
+                    //llvm::Value* prevbb_ = builder.CreateGlobalStringPtr("mock");  //delete this once tested
                     llvm::Value* val_bb_pairs_ = builder.CreateGlobalStringPtr(val_bb_pairs);
 
                     std::vector<Value*> args;
                     args.push_back(lhs_);
-                    args.push_back(prevbb_);
+                    //args.push_back(prevbb_);
                     args.push_back(val_bb_pairs_);
+
+                    Instruction* non-phi =  BB.getFirstNonPHI();
 
                     CallInst::Create(stg_update_phi, args)->insertAfter(I);
                 }
+
                 else if (GetElementPtrInst* gep = dyn_cast<GetElementPtrInst>(I)) {
                     //TO DO
                 }
@@ -747,8 +770,17 @@ struct STGInstrumenter : public ModulePass {
                 }
             }
             // set the global value with BB name
-            Constant* bb_name = builder.CreateGlobalStringPtr(BB.getName().str());
-            prevBB->setInitializer(bb_name);
+            //Constant* bb_name = builder.CreateGlobalStringPtr(BB.getName().str());
+            //prevBB->setInitializer(bb_name);
+
+            llvm::Value* bb_name = builder.CreateGlobalStringPtr(BB.getName().str());
+
+            std::vector<Value*> args;
+            args.push_back(bb_name);
+            CallInst::Create(stg_update_prev_bb, args)->insertBefore(I);
+
+
+
         }
 
         return true;
@@ -807,14 +839,10 @@ struct STGInstrumenter : public ModulePass {
 
 
         /*
-
-
         std::vector<Type*> arg3(2, Builder.getInt8PtrTy());
         FunctionType* funcType3 = llvm::FunctionType::get(Builder.getVoidTy(), arg3, false);
         stg_set_symbolic = llvm::Function::Create(funcType3, llvm::Function::ExternalLinkage,
             "stg_set_symbolic", ModuleOb);
-
-
          */
 
         std::vector<Type*> arg4(2, Builder.getInt8PtrTy());
@@ -822,7 +850,7 @@ struct STGInstrumenter : public ModulePass {
         stg_update_char = llvm::Function::Create(funcType4, llvm::Function::ExternalLinkage,
             "stg_update_char", ModuleOb);
 
-        std::vector<Type*> arg5(3, Builder.getInt8PtrTy());
+        std::vector<Type*> arg5(2, Builder.getInt8PtrTy());
         FunctionType* funcType5 = llvm::FunctionType::get(Builder.getVoidTy(), arg5, false);
         stg_update_phi = llvm::Function::Create(
             funcType5, llvm::Function::ExternalLinkage, "stg_update_phi", ModuleOb);
@@ -847,6 +875,7 @@ struct STGInstrumenter : public ModulePass {
         //arg_scanf.push_back(Type::getInt32PtrTy(context));
         //arg_scanf.push_back(Builder.getInt8PtrTy());
         //FunctionType* funcType_arg_scanf = llvm::FunctionType::get(Builder.getVoidTy(), Type::getInt32PtrTy(context), false);
+
         stg_update_input_i32 = llvm::Function::Create(llvm::FunctionType::get(Builder.getVoidTy(), Type::getInt32PtrTy(context), false), llvm::Function::ExternalLinkage,
                                         "stg_update_input_i32", ModuleOb);
         stg_update_input_i64 = llvm::Function::Create(llvm::FunctionType::get(Builder.getVoidTy(), Type::getInt64PtrTy(context), false), llvm::Function::ExternalLinkage,
@@ -913,27 +942,38 @@ struct STGInstrumenter : public ModulePass {
             llvm::FunctionType::get(Builder.getVoidTy(), arg14, false),
             llvm::Function::ExternalLinkage, "stg_update_double", ModuleOb);
 
-
-
         std::vector<Type*> arg15(5, Builder.getInt8PtrTy());
         stg_update_bin_intrinsic = llvm::Function::Create(
                  llvm::FunctionType::get(Builder.getVoidTy(), arg15, false),
                  llvm::Function::ExternalLinkage, "stg_update_bin_intrinsic", ModuleOb);
 
 
+        stg_update_prev_bb = llvm::Function::Create(
+                        llvm::FunctionType::get(Builder.getVoidTy(), Builder.getInt8PtrTy(), false),
+                        llvm::Function::ExternalLinkage, "stg_update_prev_bb", ModuleOb);
+
+
         // errs() << "function declarations created successfully"<< "\n";
         return true;
     }
 
+
+/*
+
     GlobalVariable* createGlob(IRBuilder<>& Builder, std::string Name, Module* ModuleOb)
     {
+          ModuleOb->getOrInsertGlobal(Name, Builder.getInt8PtrTy());
+          GlobalVariable *gVar = ModuleOb->getNamedGlobal(Name);
+          gVar->setLinkage(GlobalValue::ExternalLinkage);
+          gVar->setAlignment(4);
 
-        ModuleOb->getOrInsertGlobal(Name, Builder.getInt8PtrTy());
-        GlobalVariable* gVar = ModuleOb->getNamedGlobal(Name);
-        gVar->setLinkage(GlobalValue::ExternalLinkage);
-        //gVar->setAlignment(4);
-        return gVar;
+          //Constant* bb_name = Builder.CreateGlobalStringPtr("entry");
+          //gVar->setInitializer(bb_name);
+          return gVar;
+
     }
+
+*/
 
     //-----------------------------------------------------------------------------------------------------------------------
 };
