@@ -227,7 +227,7 @@ float VelocitySmoothing::computeVelAtZeroAcc()
 {
 	float vel_zero_acc = _state.v;
 
-	if (fabsf(_state.a) > FLT_EPSILON) {
+	if (math::abs_t(_state.a) > FLT_EPSILON) {
 		float j_zero_acc = -sign(_state.a) * _max_jerk; // Required jerk to reduce the acceleration
 		float t_zero_acc = -_state.a / j_zero_acc; // Required time to cancel the current acceleration
 		vel_zero_acc = _state.v + _state.a * t_zero_acc + 0.5f * j_zero_acc * t_zero_acc * t_zero_acc;

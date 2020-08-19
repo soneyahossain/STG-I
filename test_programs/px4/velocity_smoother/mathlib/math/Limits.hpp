@@ -96,13 +96,13 @@ constexpr T degrees(T radians)
 /** Safe way to check if float is zero */
 inline bool isZero(float val)
 {
-	return fabsf(val - 0.0f) < FLT_EPSILON;
+	return abs_t(val - 0.0f) < FLT_EPSILON;
 }
 
 /** Safe way to check if double is zero */
 inline bool isZero(double val)
 {
-	return fabs(val - 0.0) < DBL_EPSILON;
+	return abs_t(val - 0.0) < DBL_EPSILON;
 }
 
 }
