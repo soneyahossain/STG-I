@@ -41,13 +41,14 @@
 // 
 #define private public
 #define protected public
-#define inline
-#define RUN_TEST(x, f) if (f() == TEST_PASS) printf("Test %s: pass\n", x); else printf("Test %s: fail\n", x);
+//#define inline
+//#define RUN_TEST(x, f) if (f() == TEST_PASS) printf("Test %s: pass\n", x); else printf("Test %s: fail\n", x);
 #define TEST_PASS 0
 #define TEST_FAIL 1
 
 #include "VelocitySmoothing.hpp"
 #include "matrix/matrix/math.hpp"
+#include "stg_lib/stg.h"
 
 // Test various getters with initial default conditions
 int test_initial_conditions()
@@ -137,29 +138,63 @@ int test_trajectory()
 {
 	VelocitySmoothing trajectory[3];
 
-	float a0[3] = {0.f, 0.f, 0.f};
-	float v0[3] = {0.f, 0.f, 0.f};
-	float x0[3] = {0.f, 0.f, 0.f};
+    float j_max;
+    float a_max;
+    float v_max;
 
-	float j_max = 55.2f;
-	float a_max = 6.f;
-	float v_max = 6.f;
+    stg_symbolic_variable(&j_max, "M_J", 50, 55.2f, "normal" , 0,0);  //some random min, max
+    stg_symbolic_variable(&a_max, "M_A", 4, 6,"geometric",0,0);
+    stg_symbolic_variable(&v_max, "M_V",4, 6,"uniform",0,0);
 
-	for (int i = 0; i < 3; i++) {
-		trajectory[i].setMaxJerk(j_max);
-		trajectory[i].setMaxAccel(a_max);
-		trajectory[i].setMaxVel(v_max);
-		trajectory[i].setCurrentAcceleration(a0[i]);
-		trajectory[i].setCurrentVelocity(v0[i]);
-	}
 
-	const float dt = 0.01f;
+    float a0[3] = {0.f, 0.f, 0.f};
+    float v0[3] = {0.f, 0.f, 0.f};
+    float x0[3] = {0.f, 0.f, 0.f};
 
-	float velocity_setpoint[3] = {1.f, 0.f, -1.f};
-	for (int i = 0; i < 3; i++) {
-		trajectory[i].updateDurations(velocity_setpoint[i]);
-	}
+    stg_symbolic_array(a0,"float", 3, "A0_",0, 0,"poisson",0,0);
+    stg_symbolic_array(v0,"float", 3, "V0_",0, 0,"uniform",0,0);
+    stg_symbolic_array(x0,"float", 3, "X0_",0, 0, "uniform",0,0);
 
+    const float dt = 0.01f;
+    float velocity_setpoint[3] = {-3.f, 0.f, -1.f};
+
+    stg_symbolic_array(velocity_setpoint,"float", 3, "VP_", 0, 0, "uniform",0,0);
+
+
+    stg_begin_test();
+
+    stg_input_float(&j_max, 55.2f);
+    stg_input_float(&a_max, 6.f);
+    stg_input_float(&v_max, 6.f);
+
+
+    stg_input_array(a0,"float", 3, a0);
+    stg_input_array(v0,"float", 3, v0);
+    stg_input_array(x0,"float", 3, x0);
+
+    stg_input_array(velocity_setpoint,"float", 3, velocity_setpoint);
+
+
+    for (int i = 0; i < 3; i++) {
+        trajectory[i].setMaxJerk(j_max);
+        trajectory[i].setMaxAccel(a_max);
+        trajectory[i].setMaxVel(v_max);
+        trajectory[i].setCurrentAcceleration(a0[i]);
+        trajectory[i].setCurrentVelocity(v0[i]);
+    }
+
+
+    for (int i = 0; i < 3; i++) {
+        trajectory[i].updateDurations(velocity_setpoint[i]);
+        break;
+    }
+
+/*
+    float t123 = trajectory[0].getTotalTime();
+    int nb_steps = ceil(t123 / dt);
+    printf("Nb steps = %d\n", nb_steps);
+
+*/
 	// old outer loop with multiple timesteps has been removed
 	// we are only doing 1 time step (dt=0.01)
 
@@ -189,16 +224,23 @@ int test_trajectory()
 	//
 	// @TODO: check something so that this is an actual test (i.e. it can actually fail)
 	//
+
+
+
+	stg_end_test();
+    stg_record_test(true);
 	return TEST_PASS;
 }
 
 int main(int argc, char *argv[])
 {
-	RUN_TEST("initial conditions", test_initial_conditions);
-	RUN_TEST("getter/setter", test_getter_setter);
-	RUN_TEST("computeT1", test_computeT1);
-	RUN_TEST("edge cases", test_edge_case);
-	RUN_TEST("trajectory", test_trajectory);
+	//RUN_TEST("initial conditions", test_initial_conditions);
+	//RUN_TEST("getter/setter", test_getter_setter);
+	//RUN_TEST("computeT1", test_computeT1);
+	//RUN_TEST("edge cases", test_edge_case);
+	//RUN_TEST("trajectory", test_trajectory);
+
+	test_trajectory();
 
 	return 0;
 }

@@ -38,19 +38,52 @@
 
 #include "VelocitySmoothing.hpp"
 #include <cstdio>
-#include <matrix/matrix/math.hpp>
+#include "matrix/matrix/math.hpp"
+
+#include "stg_lib/stg.h"
+
 
 int main(int argc, char *argv[])
 {
-	VelocitySmoothing trajectory[3];
+
+    VelocitySmoothing trajectory[3];
+
+    float j_max;
+	float a_max;
+	float v_max;
+
+	stg_symbolic_variable(&j_max, "M_J", 50, 55.2f, "normal" , 0,0);  //some random min, max
+    stg_symbolic_variable(&a_max, "M_A", 4, 6,"geometric",0,0);
+    stg_symbolic_variable(&v_max, "M_V",4, 6,"uniform",0,0);
+
 
 	float a0[3] = {0.f, 0.f, 0.f};
 	float v0[3] = {0.f, 0.f, 0.f};
 	float x0[3] = {0.f, 0.f, 0.f};
 
-	float j_max = 55.2f;
-	float a_max = 6.f;
-	float v_max = 6.f;
+	stg_symbolic_array(a0,"float", 3, "A0_",0, 0,"poisson",0,0);
+	stg_symbolic_array(v0,"float", 3, "V0_",0, 0,"uniform",0,0);
+	stg_symbolic_array(x0,"float", 3, "X0_",0, 0, "uniform",0,0);
+
+	const float dt = 0.01f;
+    float velocity_setpoint[3] = {-3.f, 0.f, -1.f};
+
+    stg_symbolic_array(velocity_setpoint,"float", 3, "VP_", 0, 0, "uniform",0,0);
+
+
+    stg_begin_test();
+
+    stg_input_float(&j_max, 55.2f);
+    stg_input_float(&a_max, 6.f);
+    stg_input_float(&v_max, 6.f);
+
+
+    stg_input_array(a0,"float", 3, a0);
+    stg_input_array(v0,"float", 3, v0);
+    stg_input_array(x0,"float", 3, x0);
+
+    stg_input_array(velocity_setpoint,"float", 3, velocity_setpoint);
+
 
 	for (int i = 0; i < 3; i++) {
 		trajectory[i].setMaxJerk(j_max);
@@ -60,40 +93,36 @@ int main(int argc, char *argv[])
 		trajectory[i].setCurrentVelocity(v0[i]);
 	}
 
-	const float dt = 0.01f;
-
-	float velocity_setpoint[3] = {1.f, 0.f, -1.f};
 
 	for (int i = 0; i < 3; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
+		break;
 	}
 
-	float t123 = trajectory[0].getTotalTime();
+
+    float t123 = trajectory[0].getTotalTime();
 	int nb_steps = ceil(t123 / dt);
 	printf("Nb steps = %d\n", nb_steps);
 
-	for (int i = 0; i < nb_steps; i++) {
-		for (int i = 0; i < 3; i++) {
-			trajectory[i].updateTraj(dt);
-		}
 
-		for (int i = 0; i < 3; i++) {
-			trajectory[i].updateDurations(velocity_setpoint[i]);
-		}
 
-		VelocitySmoothing::timeSynchronization(trajectory, 2);
+	for (int i = 0; i < 3; i++) {   //ran only 3 times
+    		for (int i = 0; i < 3; i++) {
+    			trajectory[i].updateTraj(dt);
+    		}
 
-		for (int i = 0; i < 1; i++) {
-			printf("Traj[%d]\n", i);
-			printf("jerk = %.3f\taccel = %.3f\tvel = %.3f\tpos = %.3f\n",
-			       trajectory[i].getCurrentJerk(),
-			       trajectory[i].getCurrentAcceleration(),
-			       trajectory[i].getCurrentVelocity(),
-			       trajectory[i].getCurrentPosition());
-			printf("T1 = %.3f\tT2 = %.3f\tT3 = %.3f\n", trajectory[i].getT1(), trajectory[i].getT2(), trajectory[i].getT3());
-			printf("\n");
-		}
-	}
+    		for (int i = 0; i < 3; i++) {
+    			trajectory[i].updateDurations(velocity_setpoint[i]);
+    		}
 
-	return 0;
+    		VelocitySmoothing::timeSynchronization(trajectory, 2);
+    }
+
+
+    stg_end_test();
+    stg_record_test(true);
+
+    return 0;
+
+
 }
