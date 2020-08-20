@@ -27,4 +27,12 @@ int main()
 
 	if (oe.isOdd())
 		printf("%d is odd\n", myNumber);
+
+	/*
+	 * Question for Soneya:
+	 *
+	 * If OddEven._number were public, could you do something like this:
+	 *
+	 *    set_symbolic(&oe._number, "NUM");
+	 */
 }
