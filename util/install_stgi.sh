@@ -32,7 +32,8 @@ install_stg_llvm_pass()
 	mkdir $TEMPDIR
 	pushd $TEMPDIR
 	cmake $STGI_HOME/pass/STGInstrumenter/fromllvminstall
-	sudo -E make install
+	sudo -E make
+       	sudo -E make install
 	popd
 	rm -fr $TEMPDIR
 
