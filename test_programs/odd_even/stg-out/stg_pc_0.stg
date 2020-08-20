@@ -1,0 +1,11 @@
+[
+NUM : i32 = 5,range:[50,60],normal ( 0.000000,0.000000 )
+]
+
+//Test: passed
+
+(land
+  (ne (srem NUM (i32 2)) (i32 0))
+  (lnot(xor (ne (srem NUM (i32 2)) (i32 0)) (i1 1)))
+)
+
