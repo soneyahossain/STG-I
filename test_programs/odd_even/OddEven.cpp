@@ -1,4 +1,5 @@
 #include "OddEven.hpp"
+#include "stdio.h"
 //#include "stdio.h"  // is this required?
 #include "stg_lib/stg.h"
 
@@ -36,4 +37,17 @@ int main()
 
    stg_end_test();
    stg_record_test(true);
+
+
+
+   /*
+   	 * Question for Soneya:
+   	 *
+   	 * If OddEven._number were public, could you do something like this:
+   	 *
+   	 *    set_symbolic(&oe._number, "NUM");
+   	 */
+
+
+
 }
