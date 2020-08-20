@@ -77,21 +77,64 @@ int test_getter_setter()
 {
 	VelocitySmoothing trajectory;
 
-	trajectory.setMaxJerk(55.2f);
-	if (trajectory.getMaxJerk() != 55.2f)
-		return TEST_FAIL;
 
-	trajectory.setMaxAccel(6.f);
-	if (trajectory.getMaxAccel() != 6.f)
-		return TEST_FAIL;
+	//symbolic variables
+	float j_max;
+	float a_max;
+    float v_max;
 
-	trajectory.setMaxVel(6.f);
-	if (trajectory.getMaxVel() != 6.f)
-		return TEST_FAIL;
+    stg_symbolic_variable(&j_max, "M_J", 50, 55.2f, "normal" , 0,0);  //some random min, max
+    stg_symbolic_variable(&a_max, "M_A", 4, 6,"geometric",0,0);
+    stg_symbolic_variable(&v_max, "M_V",4, 6,"uniform",0,0);
 
+	stg_begin_test();
+
+    stg_input_float(&j_max, 55.2f);
+    stg_input_float(&a_max, 6.f);
+    stg_input_float(&v_max, 6.f);
+
+	trajectory.setMaxJerk(j_max);
+	if (trajectory.getMaxJerk() != j_max){
+
+	    stg_end_test();
+        stg_record_test(TEST_FAIL);
+
+	   return TEST_FAIL;
+	}
+
+
+	trajectory.setMaxAccel(a_max);
+	if (trajectory.getMaxAccel() != a_max)
+	{
+
+        	    stg_end_test();
+                stg_record_test(TEST_FAIL);
+
+        	   return TEST_FAIL;
+    }
+
+	trajectory.setMaxVel(v_max);
+	if (trajectory.getMaxVel() != v_max)
+    {
+
+        	    stg_end_test();
+                stg_record_test(TEST_FAIL);
+
+        	   return TEST_FAIL;
+    }
 	trajectory.setCurrentPosition(1.f);
 	if(trajectory.getCurrentPosition() != 1.f)
-		return TEST_FAIL;
+	{
+
+        	    stg_end_test();
+                stg_record_test(TEST_FAIL);
+
+        	   return TEST_FAIL;
+    }
+
+
+    stg_end_test();
+    stg_record_test(true);
 
 	return TEST_PASS;
 }
@@ -189,12 +232,13 @@ int test_trajectory()
         break;
     }
 
-/*
-    float t123 = trajectory[0].getTotalTime();
-    int nb_steps = ceil(t123 / dt);
-    printf("Nb steps = %d\n", nb_steps);
+    /*
+        float t123 = trajectory[0].getTotalTime();
+        int nb_steps = ceil(t123 / dt);
+        printf("Nb steps = %d\n", nb_steps);
 
-*/
+    */
+
 	// old outer loop with multiple timesteps has been removed
 	// we are only doing 1 time step (dt=0.01)
 
@@ -239,7 +283,7 @@ int main(int argc, char *argv[])
 	//RUN_TEST("computeT1", test_computeT1);
 	//RUN_TEST("edge cases", test_edge_case);
 	//RUN_TEST("trajectory", test_trajectory);
-
+    test_getter_setter();
 	test_trajectory();
 
 	return 0;
