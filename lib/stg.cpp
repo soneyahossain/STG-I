@@ -10,13 +10,26 @@
 #include "stg.h"
 #include <sstream>
 #include <cmath>
+
+
 // trivial initialization of map
 std::map<std::string, std::string> sym_state; // for propagating symbolic states in the bitcode
 std::map<std::string, std::string> sym_var_map;  // for storing address of symbolic vars and their symbolic names 
 
 //std::map<std::string, std::string> con_state;
 std::map<std::string, double> sym_range;  // for storing min and max range of symbolic variables
-std::map<std::string, std::string> path_conditions; 
+
+//---------- added on august 5, 20  --------------
+//address of the symbolic variable and other parameters
+
+// <adress_disID, value> will store distribution id
+// <adress_dis_param1, value> will store distribution paramter 1
+// <adress_dis_param2, value> will store distribution paramter 2 [this is only required for normal distributiuon as it has min and std ]
+
+std::map<std::string, std::string> sym_distribution;  // for storing min and max range of symbolic variables
+
+
+std::map<std::string, std::string> path_conditions;
 
 int testcount = 0;
 int path_condition_count = 0;
@@ -27,7 +40,7 @@ bool needComma = false;
 bool fileCreated = false;
 std::ofstream stg_state;
 std::ofstream stg_pc;
-
+std::string prev_bb;
 
 /*
 
@@ -134,11 +147,47 @@ void stg_update_load_i32(int* addr, char* val)
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
         key = itr->second;
+    else
+    {
+     //if in the else block, perhaps not symbolic , get the concrete value
+     key = std::to_string(*addr);
+    }
 
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
 //------------ testing scanf---------
+
+
+std::string getDistributionSpec(std::string address)
+{
+
+
+
+    std::string dis_name = sym_distribution[address+"_disID"];
+    std::string disSpec="";
+
+    if(dis_name.compare("uniform")== 0)
+    {
+        disSpec= dis_name;
+
+    }else if (dis_name.compare("exponential")== 0 || dis_name.compare("geometric")== 0)
+    {
+         disSpec= dis_name+" ("+sym_distribution[address+"_param1"] +")";
+
+    }
+    else if (dis_name.compare("binomial")== 0 || dis_name.compare("poisson")== 0 || dis_name.compare("normal")== 0 )
+    {
+        disSpec= dis_name+" ( "+sym_distribution[address+"_param1"] +","+ sym_distribution[address+"_param2"]+ " )";
+    }
+    else
+      assert(false);  // distribution name error
+
+
+    return disSpec;
+
+}
+
 
 void  stg_update_user_input(std::string address, std::string value,std::string type )
 {
@@ -161,11 +210,17 @@ void  stg_update_user_input(std::string address, std::string value,std::string t
 
         if(needComma )stg_pc <<",\n";
         else needComma=true;
-        
 
-        stg_pc << sym_name <<" : "<<type<< " = " << value << ", R:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]";
 
-        //std::cout << sym_name <<" : "<<type<< " = " << value << ", R:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]";
+
+
+
+        stg_pc << sym_name <<" : "<<type<< " = " << value << ", range:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]," << getDistributionSpec(address);
+
+
+         //D:["<<sym_distribution[address+"_disID"] <<","<<sym_distribution[address+"_param1"] <<","<<sym_distribution[address+"_param2"]<<"]";
+
+        //std::cout << sym_name <<" : "<<type<< " = " << value << ", range:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]";
 
 
     }else {
@@ -177,6 +232,8 @@ void  stg_update_user_input(std::string address, std::string value,std::string t
        stg_state << "state[" << val << " --> " << val << "]\n";
     }
 }
+
+
 
 //------------ testing scanf---------
 
@@ -238,14 +295,17 @@ void stg_update_load_i64(long* addr, char* val)
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
         key = itr->second;
-
+    else
+    {
+     //if in the else block, perhaps not symbolic , get the concrete value
+     key = std::to_string(*addr);
+    }
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
 
-void stg_update_load_i8(void* addr, char* val)
+void stg_update_load_i8(char* addr, char* val)
 {
-
     std::stringstream loadaddress;
     loadaddress << addr;
     std::string key = "v(" + loadaddress.str() + ")";
@@ -254,7 +314,11 @@ void stg_update_load_i8(void* addr, char* val)
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
         key = itr->second;
-
+    else
+    {
+     //if here, then perhaps not symbolic, get the concrete value
+     key = *addr+"";
+    }
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
@@ -285,6 +349,35 @@ void stg_update_load_double(double* addr, char* val)
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
         key = itr->second;
+     else
+     {
+
+     //if in the else block, perhaps not symbolic , get the concrete value
+
+     key = std::to_string(*addr);
+
+     }
+
+    sym_state[val] = key;
+    stg_state << "state[" << val << " --> " << key << "]\n";
+}
+
+void stg_update_load_float(float* addr, char* val)
+{
+
+    std::stringstream loadaddress;
+    loadaddress << addr;
+    std::string key = "v(" + loadaddress.str() + ")";
+    std::string value(val);
+
+    auto itr = sym_state.find(key);
+    if (itr != sym_state.end())
+        key = itr->second;
+    else
+    {
+     //if in the else block, perhaps not symbolic , get the concrete value
+     key = std::to_string(*addr);
+    }
 
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
@@ -341,21 +434,7 @@ void stg_update_store_i8(void* addr, char* val)
     stg_state << "state[" << key << " --> " << value << "]\n";
 }
 
-void stg_update_load_float(float* addr, char* val)
-{
 
-    std::stringstream loadaddress;
-    loadaddress << addr;
-    std::string key = "v(" + loadaddress.str() + ")";
-    std::string value(val);
-
-    auto itr = sym_state.find(key);
-    if (itr != sym_state.end())
-        key = itr->second;
-
-    sym_state[val] = key;
-    stg_state << "state[" << val << " --> " << key << "]\n";
-}
 void stg_update_store_float(float* addr, char* val)
 {
 
@@ -415,44 +494,6 @@ void stg_update_cast(char* key, char* val, char* castOp, char* typeTocast )
 }
 
 
-void  stg_update_bin_intrinsic(char* result, char* arg1, char* arg2, char* fun_name, char* type)
-{
-
-
-
-    std::string arg1_(arg1);
-    std::string arg2_(arg2);
-    std::string fun_name_(fun_name);
-    std::string type_(type);
-
-
-
-    std::string arg_1_val;
-
-    auto itr = sym_state.find(arg1_);
-    if (itr != sym_state.end())
-        arg_1_val = itr->second;
-    else
-        arg_1_val = arg1_;
-    //assert(itr != state.end());
-
-
-    std::string arg_2_val;
-
-    itr = sym_state.find(arg2_);
-    if (itr != sym_state.end())
-        arg_2_val = itr->second;
-    else
-        arg_2_val = arg2_;
-
-
-    //store symbolic values in S-expression syntax
-    sym_state[result] = "("+fun_name_+" "+type_+" "+ arg_1_val+ " "+ arg_2_val+")";
-    stg_state << "state[" << result << " --> " << sym_state[result] << "]\n";
-
-}
-
-
 void stg_update_int(char* key, int val, char* type_)
 {
 
@@ -503,11 +544,11 @@ void stg_update_pc(bool cnd_value, char* cnd_name)
 
 }
 
-void stg_update_phi(char* lhs, char* prevBB, char* valBBpairs)
+void stg_update_phi(char* lhs, char* valBBpairs)
 {
 
     std::string key(lhs);
-    std::string prevBB_(prevBB);
+    std::string prevBB_(prev_bb);
     std::string valBBpairs_(valBBpairs);
 
     size_t pos = 0;
@@ -528,28 +569,31 @@ void stg_update_phi(char* lhs, char* prevBB, char* valBBpairs)
     stg_state << "state[" << key << " --> " << token << "]\n";
 }
 
-
-
-void stg_symbolic_variable(void* addr, const char* name, double min, double max)
+void stg_symbolic_variable(void* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2)
 {
 
-    //std::cout << "min=" << min << "\n";
-    //std::cout << "max=" << max << "\n";
-    
-    
+    std::cout << "min=" << range_min << "\n";
+    std::cout << "max=" << range_max << "\n";
+
+
     std::stringstream address_;
     address_ << addr;
 
     //auto ret = sym_range.insert(std::make_pair<std::string, double[2]>(address_.str(), {min, max}));
 
-    sym_range[address_.str()+"_min"] = min; //"R:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
-    sym_range[address_.str()+"_max"] = max;
+    sym_range[address_.str()+"_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
+    sym_range[address_.str()+"_max"] = range_max;
 
     std::string add = "v(" + address_.str() + ")";
 
     sym_var_map[add.c_str()] = name; //updating symbolic map
     sym_state[add.c_str()] = name; // updating the main main also
     stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
+
+    sym_distribution[address_.str()+"_disID"] = dis_id;
+    sym_distribution[address_.str()+"_param1"] = std::to_string(parm_1);
+    sym_distribution[address_.str()+"_param2"] = std::to_string(param_2);
+
 }
 
 void stg_input_int(void* addr, int value)
@@ -562,7 +606,7 @@ void stg_input_int(void* addr, int value)
 
     //find the symbolic name and tag the concrete value with it
 
-    
+
     auto itr = sym_var_map.find("v(" + add + ")");
     if (itr != sym_var_map.end())
     {
@@ -578,7 +622,10 @@ void stg_input_int(void* addr, int value)
 
     if(needComma )stg_pc <<",\n";
     else needComma=true;
-    stg_pc << sym_name <<" : i32"<< " = " << value;
+    stg_pc << sym_name <<" : i32"<< " = " << value << ",range:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]," << getDistributionSpec(add);
+
+    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
+
 }
 
 void stg_input_float(void* addr, float value)
@@ -603,9 +650,13 @@ void stg_input_float(void* addr, float value)
     *addr_c = value;
     //std::cout << *addr_c << "\n";
     if(needComma )stg_pc <<",\n";
-        else needComma=true;
+    else needComma=true;
 
-    stg_pc << sym_name <<" : float"<<" = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]";
+    stg_pc << sym_name <<" : float"<<" = " << value << ", range:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]," << getDistributionSpec(add);
+
+
+    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
+
 
 //stg_pc << sym_name <<" : float"<< " = " <<value;
 
@@ -633,10 +684,13 @@ void stg_input_double(void* addr, double value)
     *addr_c = value;
     //std::cout << *addr_c << "\n";
     if(needComma )stg_pc <<",\n";
-        else needComma=true;
+    else needComma=true;
 
 
-   stg_pc << sym_name <<" : double"<<" = " << value << ", R:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]";
+   stg_pc << sym_name <<" : double"<<" = " << value << ",range:["<<sym_range[add+"_min"] <<","<<sym_range[add+"_max"]<<"]," << getDistributionSpec(add);
+
+
+   //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
 
     //stg_pc << sym_name <<" : double"<< " = " <<  value;
 }
@@ -676,7 +730,7 @@ void stg_end_test()
 {
     //reset state map , concrete map,
     stg_pc << "\n";
-    
+
     if(path_condition_count==1)
     {
      path_condition= path_conditions["PC"+std::to_string(0)]+"\n";
@@ -728,7 +782,7 @@ void stg_end_test()
     //std::cout << "path_condition:\n" << path_condition <<"\n";
     //end:  code to construct path condition according to constraint grammar
     stg_pc << "]\n\n";
-   
+
 
 
     ///////////////////////////
@@ -756,7 +810,7 @@ void stg_record_test(bool pred)
     //clear maps
 }
 
-void stg_symbolic_array(void* array, const char* type, int num, const char* prefix, double min, double max)
+void stg_symbolic_array(void* array, const char* type, int num, const char* prefix, double range_min, double range_max, char*  dis_id, double param_1, double param_2)
 {
     // extend this if you want to support more types
 
@@ -774,7 +828,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             int* array_addr = (int*)array;
-            stg_symbolic_variable(array_addr + i, name, min,max);
+            stg_symbolic_variable(array_addr + i, name, range_min,range_max,dis_id,param_1,param_2);
         }
     }
     else if (strcmp(type, "float") == 0) {
@@ -784,7 +838,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             float* array_addr = (float*)array;
-            stg_symbolic_variable((array_addr + i), name, min,max);
+            stg_symbolic_variable((array_addr + i), name, range_min,range_max,dis_id,param_1,param_2);
         }
     }
     else if (strcmp(type, "double") == 0) {
@@ -794,7 +848,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             double* array_addr = (double*)array;
-            stg_symbolic_variable((array_addr + (s * i)), name,min,max);
+            stg_symbolic_variable((array_addr + (s * i)), name, range_min,range_max,dis_id,param_1,param_2);
         }
     }
 }
@@ -842,6 +896,12 @@ void stg_input_array(void* array, const char* type, int num, void* values)
 }
 
 
+void stg_update_prev_bb(char *bbname){
+    prev_bb = bbname;
+    //std::cout <<prev_bb <<"\n";
+}
+
+
 void print_maps()
 {
     for (const auto& x : sym_var_map) {
@@ -852,7 +912,7 @@ void print_maps()
         std::cout << x.first << ": " << x.second << "\n";
     }
 
-
-
-
+   for (const auto& x : sym_distribution) {
+        std::cout << x.first << ": " << x.second << "\n";
+    }
 }

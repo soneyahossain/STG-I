@@ -1,0 +1,19 @@
+[
+M_J : float = 55.2, range:[50,55.2],normal ( 0.000000,0.000000 ),
+M_A : float = 6, range:[4,6],geometric (0.000000),
+M_V : float = 6, range:[4,6],uniform
+]
+
+//Test: passed
+
+(land
+  (lnot(fune M_J M_J))
+  (land
+    (lnot(fune M_A M_A))
+    (land
+      (lnot(fune M_V M_V))
+      (lnot(fune (float 1.000000) (float 1.000000)))
+    )
+  )
+)
+
