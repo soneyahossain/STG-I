@@ -723,7 +723,7 @@ struct STGInstrumenter : public ModulePass {
                     //args.push_back(prevbb_);
                     args.push_back(val_bb_pairs_);
 
-                    Instruction* non-phi =  BB.getFirstNonPHI();
+                   // Instruction* non-phi =  BB.getFirstNonPHI();
 
                     CallInst::Create(stg_update_phi, args)->insertAfter(I);
                 }

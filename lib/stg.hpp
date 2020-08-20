@@ -93,5 +93,5 @@ void  stg_update_input_i32(int* addr);
 void  stg_update_input_double(double* addr);
 void  stg_update_input_i64(long* addr);
 void  stg_update_bin_intrinsic(char* result, char* arg1, char* arg2, char* fun_name, char* type);
-void stg_update_prev_bb(char *bbname);
+void  stg_update_prev_bb(char *bbname);
 void  print_maps();
