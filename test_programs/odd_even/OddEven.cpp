@@ -1,8 +1,8 @@
-#include "OddEven.hpp"
 #include "stdio.h"
-//#include "stdio.h"  // is this required?
-#include "stg_lib/stg.h"
+#include "stg.h"
 
+#define private public
+#include "OddEven.hpp"
 
 OddEven::OddEven()
 {
@@ -20,34 +20,17 @@ bool OddEven::isOdd() {
 int main()
 {
 	OddEven oe;
-	int myNumber ;//= 5;
 
-	// set_symbolic(&myNumber, "NUM");
-	stg_symbolic_variable(&myNumber, "NUM", 50, 60, "normal" , 0,0);  //some random min, max
+	stg_symbolic_variable(&oe._number, "NUM", 50, 60, "normal" , 0,0);  //some random min, max
 	stg_begin_test();
-    stg_input_int(&myNumber, 5);
-
-	oe.setNumber(myNumber);
+	stg_input_int(&oe._number, 5);
 
 	if (oe.isEven())
-		printf("%d is even\n", myNumber);
+		printf("%d is even\n", oe._number);
 
 	if (oe.isOdd())
-		printf("%d is odd\n", myNumber);
+		printf("%d is odd\n", oe._number);
 
-   stg_end_test();
-   stg_record_test(true);
-
-
-
-   /*
-   	 * Question for Soneya:
-   	 *
-   	 * If OddEven._number were public, could you do something like this:
-   	 *
-   	 *    set_symbolic(&oe._number, "NUM");
-   	 */
-
-
-
+	stg_end_test();
+	stg_record_test(true);
 }
