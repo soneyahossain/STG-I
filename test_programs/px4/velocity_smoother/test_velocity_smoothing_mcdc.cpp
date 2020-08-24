@@ -127,7 +127,7 @@ void stg_initial_trajectory(VelocitySmoothing *traj)
 
 
 // @FIXME @TODO: in general, need to turn off tracing in oracle functions
-bool stg_oracle(VelocitySmoothing *traj) {
+bool check_kinematic_constraints(VelocitySmoothing *traj) {
 	bool oracle = true;
 	if (traj->getCurrentJerk() > traj->getMaxJerk())
 		oracle = false;
@@ -434,7 +434,7 @@ int test_trajectory_sync()
 	// @fixme: need oracles after every state update in the test
 	//         oracle needs to turn off/on tracing
 	// @fixme: allow multiple oracles to record test results
-	stg_oracle(&trajectory[0]);
+	check_kinematic_constraints(&trajectory[0]);
 	//stg_record_test(TEST_PASS);
 	return TEST_PASS;
 }
