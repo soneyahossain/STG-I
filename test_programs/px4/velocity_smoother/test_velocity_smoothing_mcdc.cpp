@@ -345,23 +345,35 @@ int test_trajectory_sync()
 	}
 
 #ifdef STG
+#ifdef SYMBOLIC_JERK
 	stg_symbolic_variable(&trajectory[0]._max_jerk, "M_J", -55.2f, 55.2f, "uniform" , 0,0);  
-	stg_symbolic_variable(&trajectory[0]._max_accel, "M_A", -10, 10,"uniform",0,0); 
-	stg_symbolic_variable(&trajectory[0]._max_veloc, "M_V",-10, 10,"uniform",0,0); 
 	stg_symbolic_variable(&trajectory[0]._state.j, "J", -55.2f, 55.2f, "uniform" , 0,0);  
+#endif
+#ifdef SYMBOLIC_ACCEL
+	stg_symbolic_variable(&trajectory[0]._max_accel, "M_A", -10, 10,"uniform",0,0); 
 	stg_symbolic_variable(&trajectory[0]._state.a, "A", -10, 10,"uniform",0,0); 
+#endif
+#ifdef SYMBOLIC_VEL
+	stg_symbolic_variable(&trajectory[0]._max_veloc, "M_V",-10, 10,"uniform",0,0); 
 	stg_symbolic_variable(&trajectory[0]._state.v, "V", -10, 10,"uniform",0,0); 
 	stg_symbolic_variable(&trajectory[0]._vel_sp, "VSP",-10, 10,"uniform",0,0); 
+#endif
 
 	stg_begin_test();
 
+#ifdef SYMBOLIC_JERK
 	stg_input_float(&trajectory[0]._max_jerk, trajectory._max_jerk); 
-	stg_input_float(&trajectory[0]._max_accel, trajectory._max_accel); 
-	stg_input_float(&trajectory[0]._max_veloc, trajectory._max_veloc); 
 	stg_input_float(&trajectory[0]._state.j, trajectory._state.j); 
+#endif
+#ifdef SYMBOLIC_ACCEL
+	stg_input_float(&trajectory[0]._max_accel, trajectory._max_accel); 
 	stg_input_float(&trajectory[0]._state.a, trajectory._state.a); 
+#endif
+#ifdef SYMBOLIC_VEL
+	stg_input_float(&trajectory[0]._max_veloc, trajectory._max_veloc); 
 	stg_input_float(&trajectory[0]._state.v, trajectory._state.v); 
 	stg_input_float(&trajectory[0]._vel_sp.v, trajectory._vel_sp);
+#endif
 #endif
 
 	const float dt = 0.01f;
