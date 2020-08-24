@@ -65,7 +65,7 @@ void stg_symbolic_variable(void *, const char*) {}
 #define TEST_PASS 1
 #define TEST_FAIL 0
 
-//#define STG_ORACLE
+#define STG_ORACLE
 
 // define type of variables to make symbolic
 //#define SYMBOLIC_JERK
@@ -125,8 +125,6 @@ void stg_initial_trajectory(VelocitySmoothing *traj)
 #endif
 }
 
-/*
-
 
 // @FIXME @TODO: in general, need to turn off tracing in oracle functions
 bool stg_oracle(VelocitySmoothing *traj) {
@@ -142,8 +140,6 @@ bool stg_oracle(VelocitySmoothing *traj) {
 #endif
 	return oracle;
 }
-
-*/
 
 // Test various getters with initial default conditions
 int test_initial_conditions()
@@ -438,8 +434,8 @@ int test_trajectory_sync()
 	// @fixme: need oracles after every state update in the test
 	//         oracle needs to turn off/on tracing
 	// @fixme: allow multiple oracles to record test results
-	//stg_oracle(&trajectory[0]);
-	stg_record_test(TEST_PASS);
+	stg_oracle(&trajectory[0]);
+	//stg_record_test(TEST_PASS);
 	return TEST_PASS;
 }
 
