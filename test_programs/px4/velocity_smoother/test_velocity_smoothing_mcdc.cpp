@@ -74,6 +74,7 @@ void stg_symbolic_variable(void *, const char*) {}
 
 #include "VelocitySmoothing.hpp"
 #include "matrix/matrix/math.hpp"
+#include "mathlib/mathlib.h"
 
 void stg_make_trajectory_symbolic(VelocitySmoothing *trajectory)
 {
@@ -222,7 +223,7 @@ int test_computeT1()
 		return TEST_FAIL;
 
 	T1 = trajectory.computeT1(0.861905, 0.769221, 0.052579, 0.966730, 0.334284);
-	if (fabs(T1 - (-0.449905)) > 0.00001)
+	if (math::fabs_t(T1 - (-0.449905)) > 0.00001)
 		return TEST_FAIL;
 
 	stg_end_test();
