@@ -278,11 +278,11 @@ int test_velsp_neg()
 
 	printf("test_velsp_neg(): total time = %f\n", t123);
 
-	trajectory.updateTraj(dt);
-	trajectory.updateDurations(velocity_setpoint);
+	for (int i = 0; i < 3; ++i) {
+		trajectory.updateTraj(dt);
+		trajectory.updateDurations(velocity_setpoint);
+	}
 
-	trajectory.updateTraj(dt);
-	trajectory.updateDurations(velocity_setpoint);
 
 	stg_end_test();
 	stg_record_test(TEST_PASS);
@@ -311,11 +311,10 @@ int test_velsp_zero()
 
 	float t123 = trajectory.getTotalTime();
 	const float dt = t123 / 3.0;
-	int nb_steps = ceil(t123 / dt);
 
 	printf("test_velsp_zero(): total time = %f\n", t123);
 
-	for (int i = 0; i < nb_steps; ++i) {
+	for (int i = 0; i < 3; ++i) {
 		trajectory.updateTraj(dt);
 		trajectory.updateDurations(velocity_setpoint);
 	}
@@ -347,7 +346,7 @@ int test_velsp_pos()
 
 	float t123 = trajectory.getTotalTime();
 	const float dt = t123 / 3.0;
-	int nb_steps = ceil(t123 / dt);
+	const int nb_steps = 3;
 
 	printf("test_velsp_pos(): total time = %f\n", t123);
 
