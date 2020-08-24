@@ -407,23 +407,23 @@ int test_trajectory_sync()
 	float velocity_setpoint[2] = {1.f, 0.f};
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
-		stg_oracle(&trajectory[i]);
 	}
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateTraj(dt);
-		stg_oracle(&trajectory[i]);
 	}
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
-		stg_oracle(&trajectory[i]);
 	}
 
 	VelocitySmoothing::timeSynchronization(trajectory, 2);
-	stg_oracle(&trajectory[0]);
 
 	stg_end_test();
+	// for now, put oracles after end of test
+	// @fixme: need oracles after every state update in the test
+	//         oracle needs to turn off/on tracing
+	stg_oracle(&trajectory[0]);
 	stg_record_test(TEST_PASS);
 	return TEST_PASS;
 }
