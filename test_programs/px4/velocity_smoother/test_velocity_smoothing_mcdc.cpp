@@ -35,9 +35,10 @@
 // Notes:
 //   - coverage of unit tests: branch and MC/DC (branch => MC/DC for code)
 //   - some unit tests are still only traces (ok for now, assume all pass)
-//   - need API to turn on/off tracing for oracles
-//
+//   - @todo: need API to turn on/off tracing for oracles
 //   - @todo: hook up to google's test framework instead of ad-hoc testing
+//   - @todo: allow oracles to record results multiple times
+//   - @todo: allow oracles to record results inside of single tests
 //
 
 /**
@@ -423,8 +424,9 @@ int test_trajectory_sync()
 	// for now, put oracles after end of test
 	// @fixme: need oracles after every state update in the test
 	//         oracle needs to turn off/on tracing
+	// @fixme: allow multiple oracles to record test results
 	stg_oracle(&trajectory[0]);
-	stg_record_test(TEST_PASS);
+//	stg_record_test(TEST_PASS);
 	return TEST_PASS;
 }
 
