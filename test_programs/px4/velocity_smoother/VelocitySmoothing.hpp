@@ -152,32 +152,32 @@ private:
 	/**
 	 * Compute increasing acceleration time
 	 */
-	inline float computeT1(float a0, float v3, float j_max, float a_max);
+	float computeT1(float a0, float v3, float j_max, float a_max);
 
 	/**
 	 * Compute increasing acceleration time using total time constraint
 	 */
-	inline float computeT1(float T123, float a0, float v3, float j_max, float a_max);
+	float computeT1(float T123, float a0, float v3, float j_max, float a_max);
 
 	/**
 	 * Saturate T1 in order to respect the maximum acceleration constraint
 	 */
-	inline float saturateT1ForAccel(float a0, float j_max, float T1, float a_max);
+	float saturateT1ForAccel(float a0, float j_max, float T1, float a_max);
 
 	/**
 	 * Compute constant acceleration time
 	 */
-	inline float computeT2(float T1, float T3, float a0, float v3, float j_max);
+	float computeT2(float T1, float T3, float a0, float v3, float j_max);
 
 	/**
 	 * Compute constant acceleration time using total time constraint
 	 */
-	inline float computeT2(float T123, float T1, float T3);
+	float computeT2(float T123, float T1, float T3);
 
 	/**
 	 * Compute decreasing acceleration time
 	 */
-	inline float computeT3(float T1, float a0, float j_max);
+	float computeT3(float T1, float a0, float j_max);
 
 	/**
 	 * Compute the jerk, acceleration, velocity and position
@@ -189,7 +189,7 @@ private:
 	 * @param t current time
 	 * @param d direction
 	 */
-	inline Trajectory evaluatePoly(float j, float a0, float v0, float x0, float t, int d);
+	Trajectory evaluatePoly(float j, float a0, float v0, float x0, float t, int d);
 
 	/* Input */
 	float _vel_sp{0.0f};

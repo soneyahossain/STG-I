@@ -158,13 +158,8 @@ struct STGInstrumenter : public ModulePass {
 
                    i.setName(i.getName()+"_" + F.getName()); // if the instruction doesn't have a name, giving it name
 
-
-
-
-
-
                 I = &i; // current instruction
-                // I->dump();  // print instruction
+                //I->dump();  // print instruction
 
                 if (LoadInst* loadInst = dyn_cast<LoadInst>(I)) { // read from memory
 
@@ -535,7 +530,7 @@ struct STGInstrumenter : public ModulePass {
                     llvm::raw_string_ostream type(type_str);
                     I->getType()->print(type);
 
-                    //errs() << "Type===========" << type.str() << "\n";
+                    errs() << "Type===========" << type.str() << "\n";
 
                     Value* l_op = I->getOperand(0); // left operand
                     std::string left_operand = "";
@@ -572,7 +567,7 @@ struct STGInstrumenter : public ModulePass {
                         right_operand = r_op->getName().str();
                     }
 
-                    //errs() << result << "--> " << left_operand << " " << opCodeName << " "<< right_operand << "\n";
+                    errs() << result << "--> " << left_operand << " " << opCodeName << " "<< right_operand << "\n";
 
                     llvm::Value* addAddress_ = builder.CreateGlobalStringPtr(result);
                     llvm::Value* lhs = builder.CreateGlobalStringPtr(left_operand);
@@ -783,6 +778,7 @@ struct STGInstrumenter : public ModulePass {
 
         }
 
+        outs() << "Done instrumenting function :  " << function_name << "\n";
         return true;
     }
 
