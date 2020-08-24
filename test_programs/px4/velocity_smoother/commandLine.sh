@@ -4,8 +4,9 @@
 # generate bicode for the the system under test; if there are multimple files emit llvm bitcode first and then link all of them together before running STG-I instrumentation Pass
 # if program under test is a C file run ( clang -emit-llvm -fno-discard-value-names put.c -S -o PUT_.bc ) command, and rest of the steps should be same
 
-clang++ -std=c++14 -emit-llvm -fno-discard-value-names VelocitySmoothing.cpp -c -o PUT_.bc
-clang++ -std=c++14 -emit-llvm -fno-discard-value-names test_velocity_smoothing_mcdc_symbolic.cpp  -c -o test_PUT.bc
+clang++ -std=c++14 -DSTG -emit-llvm -fno-discard-value-names VelocitySmoothing.cpp -c -o PUT_.bc
+clang++ -std=c++14 -DSTG -emit-llvm -fno-discard-value-names test_velocity_smoothing_mcdc.cpp  -c -o test_PUT.bc
+#clang++ -std=c++14 -emit-llvm -fno-discard-value-names test_velocity_smoothing_mcdc_symbolic.cpp  -c -o test_PUT.bc
 /Users/soneyabintahossain/llvm_project/llvm-project/build/bin/llvm-link PUT_.bc test_PUT.bc -o PUT.bc
 
 # below command is not really necessary, but it generates a readable version of the bitcode for debugging purspose
