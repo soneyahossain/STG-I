@@ -252,17 +252,16 @@ int test_velsp_zero()
 	trajectory.updateTraj(0.f);
 	trajectory.updateDurations(velocity_setpoint);
 
-	const float dt = 0.1f;
 	float t123 = trajectory.getTotalTime();
+	const float dt = t123 / 3.0;
 	int nb_steps = ceil(t123 / dt);
 
 	printf("test_velsp_zero(): total time = %f\n", t123);
 
-	trajectory.updateTraj(dt);
-	trajectory.updateDurations(velocity_setpoint);
-
-	trajectory.updateTraj(dt);
-	trajectory.updateDurations(velocity_setpoint);
+	for (int i = 0; i < nb_steps; ++i) {
+		trajectory.updateTraj(dt);
+		trajectory.updateDurations(velocity_setpoint);
+	}
 
 #ifdef STG
 	stg_end_test();
@@ -292,17 +291,17 @@ int test_velsp_pos()
 	trajectory.updateTraj(0.f);
 	trajectory.updateDurations(velocity_setpoint);
 
-	const float dt = 0.1f;
 	float t123 = trajectory.getTotalTime();
+	const float dt = t123 / 3.0;
 	int nb_steps = ceil(t123 / dt);
 
 	printf("test_velsp_pos(): total time = %f\n", t123);
 
-	trajectory.updateTraj(dt);
-	trajectory.updateDurations(velocity_setpoint);
+	for (int i = 0; i < nb_steps; ++i) {
+		trajectory.updateTraj(dt);
+		trajectory.updateDurations(velocity_setpoint);
+	}
 
-	trajectory.updateTraj(dt);
-	trajectory.updateDurations(velocity_setpoint);
 
 #ifdef STG
 	stg_end_test();
