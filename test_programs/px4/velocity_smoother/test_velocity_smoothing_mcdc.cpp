@@ -312,7 +312,7 @@ int test_velsp_zero()
 
 	float t123 = trajectory.getTotalTime();
 	const float dt = t123 / 3.0;
-	int nb_steps = ceil(t123 / dt);
+	int nb_steps = 3;
 
 	printf("test_velsp_zero(): total time = %f\n", t123);
 
@@ -348,7 +348,7 @@ int test_velsp_pos()
 
 	float t123 = trajectory.getTotalTime();
 	const float dt = t123 / 3.0;
-	int nb_steps = ceil(t123 / dt);
+	int nb_steps = 3;
 
 	printf("test_velsp_pos(): total time = %f\n", t123);
 
