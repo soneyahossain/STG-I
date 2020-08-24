@@ -68,8 +68,8 @@ void stg_symbolic_variable(void *, const char*) {}
 //#define STG_ORACLE
 
 // define type of variables to make symbolic
-//#define SYMBOLIC_JERK
-//#define SYMBOLIC_ACCEL
+#define SYMBOLIC_JERK
+#define SYMBOLIC_ACCEL
 #define SYMBOLIC_VEL
 
 #include "VelocitySmoothing.hpp"
@@ -81,19 +81,19 @@ void stg_make_trajectory_symbolic(VelocitySmoothing *trajectory)
 
 #ifdef STG
 #ifdef SYMBOLIC_JERK
-	stg_symbolic_variable(&trajectory->_max_jerk, "M_J", -55.2f, 55.2f, "uniform" , 0,0);
-	stg_symbolic_variable(&trajectory->_state.j, "J", -55.2f, 55.2f, "uniform" , 0,0);
+	stg_symbolic_variable(&trajectory->_max_jerk, "M_J", -100.0f, 100.0f, "uniform" , 0,0);
+	stg_symbolic_variable(&trajectory->_state.j, "J", -100.0f, 100.0f, "uniform" , 0,0);
 #endif
 
 #ifdef SYMBOLIC_ACCEL
-	stg_symbolic_variable(&trajectory->_max_accel, "M_A", -10, 10,"uniform",0,0);
-	stg_symbolic_variable(&trajectory->_state.a, "A", -10, 10,"uniform",0,0);
+	stg_symbolic_variable(&trajectory->_max_accel, "M_A", -20.f, 20.f,"uniform",0,0);
+	stg_symbolic_variable(&trajectory->_state.a, "A", -20.f, 20.f,"uniform",0,0);
 #endif
 
 #ifdef SYMBOLIC_VEL
-	stg_symbolic_variable(&trajectory->_max_vel, "M_V",-10, 10,"uniform",0,0);
-	stg_symbolic_variable(&trajectory->_state.v, "V",-10, 10,"uniform",0,0);
-	stg_symbolic_variable(&trajectory->_vel_sp, "VSP",-10, 10,"uniform",0,0);
+	stg_symbolic_variable(&trajectory->_max_vel, "M_V",-20.f, 20.f,"uniform",0,0);
+	stg_symbolic_variable(&trajectory->_state.v, "V",-20.f, 20.f,"uniform",0,0);
+	stg_symbolic_variable(&trajectory->_vel_sp, "VSP",-20.f, 20.f,"uniform",0,0);
 #endif
 #endif
 }
@@ -278,11 +278,11 @@ int test_velsp_neg()
 
 	printf("test_velsp_neg(): total time = %f\n", t123);
 
-	for (int i = 0; i < 3; ++i) {
-		trajectory.updateTraj(dt);
-		trajectory.updateDurations(velocity_setpoint);
-	}
+	trajectory.updateTraj(dt);
+	trajectory.updateDurations(velocity_setpoint);
 
+	trajectory.updateTraj(dt);
+	trajectory.updateDurations(velocity_setpoint);
 
 	stg_end_test();
 	stg_record_test(TEST_PASS);
@@ -311,10 +311,11 @@ int test_velsp_zero()
 
 	float t123 = trajectory.getTotalTime();
 	const float dt = t123 / 3.0;
+	int nb_steps = ceil(t123 / dt);
 
 	printf("test_velsp_zero(): total time = %f\n", t123);
 
-	for (int i = 0; i < 3; ++i) {
+	for (int i = 0; i < nb_steps; ++i) {
 		trajectory.updateTraj(dt);
 		trajectory.updateDurations(velocity_setpoint);
 	}
@@ -346,7 +347,7 @@ int test_velsp_pos()
 
 	float t123 = trajectory.getTotalTime();
 	const float dt = t123 / 3.0;
-	const int nb_steps = 3;
+	int nb_steps = ceil(t123 / dt);
 
 	printf("test_velsp_pos(): total time = %f\n", t123);
 
@@ -384,17 +385,17 @@ int test_trajectory_sync()
 
 #ifdef STG
 #ifdef SYMBOLIC_JERK
-	stg_symbolic_variable(&trajectory[0]._max_jerk, "M_J", -55.2f, 55.2f, "uniform" , 0,0);
-	stg_symbolic_variable(&trajectory[0]._state.j, "J", -55.2f, 55.2f, "uniform" , 0,0);
+	stg_symbolic_variable(&trajectory[0]._max_jerk, "M_J", -100.0f, 100.0f, "uniform" , 0,0);
+	stg_symbolic_variable(&trajectory[0]._state.j, "J", -100.0f, 100.0f, "uniform" , 0,0);
 #endif
 #ifdef SYMBOLIC_ACCEL
-	stg_symbolic_variable(&trajectory[0]._max_accel, "M_A", -10, 10,"uniform",0,0);
-	stg_symbolic_variable(&trajectory[0]._state.a, "A", -10, 10,"uniform",0,0);
+	stg_symbolic_variable(&trajectory[0]._max_accel, "M_A", -20.f, 20.f,"uniform",0,0);
+	stg_symbolic_variable(&trajectory[0]._state.a, "A", -20.f, 20.f,"uniform",0,0);
 #endif
 #ifdef SYMBOLIC_VEL
-	stg_symbolic_variable(&trajectory[0]._max_vel, "M_V",-10, 10,"uniform",0,0);
-	stg_symbolic_variable(&trajectory[0]._state.v, "V", -10, 10,"uniform",0,0);
-	stg_symbolic_variable(&trajectory[0]._vel_sp, "VSP",-10, 10,"uniform",0,0);
+	stg_symbolic_variable(&trajectory[0]._max_vel, "M_V",-20.f, 20.f,"uniform",0,0);
+	stg_symbolic_variable(&trajectory[0]._state.v, "V", -20.f, 20.f,"uniform",0,0);
+	stg_symbolic_variable(&trajectory[0]._vel_sp, "VSP",-20.f, 20.f,"uniform",0,0);
 #endif
 
 	stg_begin_test();
