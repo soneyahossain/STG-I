@@ -69,8 +69,8 @@ void stg_symbolic_variable(void *, const char*) {}
 
 // define type of variables to make symbolic
 #define SYMBOLIC_JERK
-//#define SYMBOLIC_ACCEL
-//#define SYMBOLIC_VEL
+#define SYMBOLIC_ACCEL
+#define SYMBOLIC_VEL
 
 #include "VelocitySmoothing.hpp"
 #include "matrix/matrix/math.hpp"
