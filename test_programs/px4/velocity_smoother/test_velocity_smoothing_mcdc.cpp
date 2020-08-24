@@ -31,6 +31,15 @@
  *
  ****************************************************************************/
 
+// 
+// Notes:
+//   - coverage of unit tests: branch and MC/DC (branch => MC/DC for code)
+//   - some unit tests are still only traces (ok for now, assume all pass)
+//   - need API to turn on/off tracing for oracles
+//
+//   - @todo: hook up to google's test framework instead of ad-hoc testing
+//
+
 /**
  * Test code for the Velocity Smoothing library
  * Build and run using: make && ./test_velocity_smoothing_mcdc
@@ -50,12 +59,14 @@
 #define stg_end_test() {}
 #define stg_record_test(x) x
 void stg_symbolic_variable(void *, const char*) {}
-void stg_input_float(float*, float) {}
 #endif
 
 #define TEST_PASS 1
 #define TEST_FAIL 0
 
+#define STG_ORACLE
+
+// define type of variables to make symbolic
 #define SYMBOLIC_JERK
 #define SYMBOLIC_ACCEL
 #define SYMBOLIC_VEL
@@ -103,6 +114,21 @@ void stg_initial_trajectory(VelocitySmoothing *traj)
 	stg_input_float(&traj->_vel_sp.v, traj->_vel_sp);
 #endif
 #endif
+}
+
+// @FIXME @TODO: in general, need to turn off tracing in oracle functions
+bool stg_oracle(VelocitySmoothing *traj) {
+	bool oracle = true;
+	if (traj->getCurrentJerk() > traj->getMaxJerk())
+		oracle = false;
+	if (traj->getCurrentAcceleration() > traj->getMaxAccel())
+		oracle = false;
+	if (traj->getCurrentVelocity() > traj->getMaxVel())
+		oracle = false;
+#ifdef STG_ORACLE
+	stg_record_test(oracle);
+#endif
+	return oracle;
 }
 
 // Test various getters with initial default conditions
@@ -381,17 +407,21 @@ int test_trajectory_sync()
 	float velocity_setpoint[2] = {1.f, 0.f};
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
+		stg_oracle(&trajectory[i]);
 	}
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateTraj(dt);
+		stg_oracle(&trajectory[i]);
 	}
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
+		stg_oracle(&trajectory[i]);
 	}
 
 	VelocitySmoothing::timeSynchronization(trajectory, 2);
+	stg_oracle(&trajectory[0]);
 
 	stg_end_test();
 	stg_record_test(TEST_PASS);
