@@ -1,0 +1,46 @@
+[
+M_V : float = 6, range:[-20,20],uniform,
+V : float = 0, range:[-20,20],uniform,
+VSP : float = 0, range:[-20,20],uniform
+]
+
+//Test: passed
+
+(land
+  (lnot(olt (float 0.000000) (fsub (float -0.000000) M_V)))
+  (land
+    (lnot(ogt (float 0.000000) M_V))
+    (land
+      (ogt (float 0.000000) (float 0.000000))
+      (land
+        (lnot(ogt (float 0.000000) (float 0.000000)))
+        (land
+          (lnot(olt (float 0.000000) (fsub (float 0.000000) V)))
+          (land
+            (lnot(olt (fsub (float 0.000000) V) (float 0.000000)))
+            (land
+              (eq (i32 0) (i32 0))
+              (land
+                (lnot(olt (float 0.000000) (float 0.000000)))
+                (land
+                  (lnot(olt (float 0.000000) (float 0.000000)))
+                  (land
+                    (lnot(ne (i32 0) (i32 0)))
+                    (land
+                      (lnot(fune (float 0.000000) (float 0.000000)))
+                      (land
+                        (lnot(fune (float 0.000000) (float 0.000000)))
+                        (lnot(fune (float 0.000000) (float 0.000000)))
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

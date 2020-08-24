@@ -1,0 +1,23 @@
+[
+M_J : float = 55.2, range:[-100,100],uniform,
+J : float = 0, range:[-100,100],uniform,
+M_A : float = 6, range:[-20,20],uniform,
+A : float = 0, range:[-20,20],uniform,
+M_V : float = 6, range:[-20,20],uniform,
+V : float = 0, range:[-20,20],uniform,
+VSP : float = 0, range:[-20,20],uniform
+]
+
+//Test: passed
+
+(land
+  (lnot(fune (float 55.200001) (float 55.200001)))
+  (land
+    (lnot(fune (float 6.000000) (float 6.000000)))
+    (land
+      (lnot(fune (float 6.000000) (float 6.000000)))
+      (lnot(fune (float 1.000000) (float 1.000000)))
+    )
+  )
+)
+
