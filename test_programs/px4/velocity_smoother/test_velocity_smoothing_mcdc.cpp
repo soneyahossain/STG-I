@@ -96,9 +96,13 @@ void stg_make_trajectory_symbolic(VelocitySmoothing *traj)
 #endif
 }
 
+// define type and assign initial value
+// @todo: those 2 concepts should be decoupled?
+//        or the 2nd argument optional?
 void stg_initial_trajectory(VelocitySmoothing *traj) 
 {
 #ifdef STG
+
 #ifdef SYMBOLIC_JERK
 	stg_input_float(&traj->_max_jerk, traj->_max_jerk); 
 	stg_input_float(&traj->_state.j, traj->_state.j); 
@@ -114,6 +118,7 @@ void stg_initial_trajectory(VelocitySmoothing *traj)
 	stg_input_float(&traj->_state.v, traj->_state.v);
 	stg_input_float(&traj->_vel_sp.v, traj->_vel_sp);
 #endif
+
 #endif
 }
 
