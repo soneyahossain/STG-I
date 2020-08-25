@@ -41,6 +41,7 @@ bool fileCreated = false;
 std::ofstream stg_state;
 std::ofstream stg_pc;
 std::string prev_bb;
+bool pause_recording=false;
 
 /*
 
@@ -150,7 +151,8 @@ void stg_update_load_i32(int* addr, char* val)
     else
     {
      //if in the else block, perhaps not symbolic , get the concrete value
-     key = std::to_string(*addr);
+     key = "(i32 "+ std::to_string(*addr) +")";
+
     }
 
     sym_state[val] = key;
@@ -278,10 +280,6 @@ void  stg_update_input_i64(long* addr)
     stg_update_user_input(address_,value_, "i64");
 }
 
-
-
-
-
 void stg_update_load_i64(long* addr, char* val)
 {
 
@@ -298,13 +296,15 @@ void stg_update_load_i64(long* addr, char* val)
     else
     {
      //if in the else block, perhaps not symbolic , get the concrete value
-     key = std::to_string(*addr);
+     //key = std::to_string(*addr);
+     key = "(i64 "+ std::to_string(*addr) +")";
+
     }
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
 }
 
-void stg_update_load_i8(char* addr, char* val)
+void stg_update_load_i8(void* addr, char* val)
 {
     std::stringstream loadaddress;
     loadaddress << addr;
@@ -317,7 +317,10 @@ void stg_update_load_i8(char* addr, char* val)
     else
     {
      //if here, then perhaps not symbolic, get the concrete value
-     key = *addr+"";
+      char* value_ptr = (char*)addr;  //converting void pointer to char*
+      std::string value(value_ptr);  //reading the value as string
+      key = "(i8 "+value +")";
+      //key = value;
     }
     sym_state[val] = key;
     stg_state << "state[" << val << " --> " << key << "]\n";
@@ -354,7 +357,7 @@ void stg_update_load_double(double* addr, char* val)
 
      //if in the else block, perhaps not symbolic , get the concrete value
 
-     key = std::to_string(*addr);
+     key = "(double "+std::to_string(*addr) +")";
 
      }
 
@@ -376,7 +379,7 @@ void stg_update_load_float(float* addr, char* val)
     else
     {
      //if in the else block, perhaps not symbolic , get the concrete value
-     key = std::to_string(*addr);
+     key = "(float "+std::to_string(*addr) +")";
     }
 
     sym_state[val] = key;
@@ -535,7 +538,7 @@ void stg_update_pc(bool cnd_value, char* cnd_name)
 
     // Only update the PC if the condition is symbolic
 
-    if (!((cnd_value != 0 && value == "1") || (cnd_value == 0 && value == "0")) && fileCreated) {
+    if (!((cnd_value != 0 && value == "1") || (cnd_value == 0 && value == "0")) && fileCreated && !pause_recording) {
         path_conditions["PC"+std::to_string(path_condition_count)]=value;
         //std::cout << "PC"+std::to_string(path_condition_count) <<": " <<value<< "\n";
         path_condition_count++;
@@ -899,6 +902,20 @@ void stg_input_array(void* array, const char* type, int num, void* values)
 void stg_update_prev_bb(char *bbname){
     prev_bb = bbname;
     //std::cout <<prev_bb <<"\n";
+}
+
+
+void stg_pause_recording()
+{
+
+  pause_recording=true;
+
+}
+void stg_resume_recording()
+{
+
+  pause_recording=false;
+
 }
 
 

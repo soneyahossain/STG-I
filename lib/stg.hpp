@@ -53,6 +53,10 @@ void stg_input_array(void* array, const char* type, int num, void* values);
 void stg_begin_test();
 void stg_end_test();
 
+void stg_pause_recording();
+void stg_resume_recording();
+
+
 /*
  * This replaces the usual "assert()" function in order to allow stg
  * to record the test outcome.
@@ -93,5 +97,5 @@ void  stg_update_input_i32(int* addr);
 void  stg_update_input_double(double* addr);
 void  stg_update_input_i64(long* addr);
 void  stg_update_bin_intrinsic(char* result, char* arg1, char* arg2, char* fun_name, char* type);
-void  stg_update_prev_bb(char *bbname);
+void stg_update_prev_bb(char *bbname);
 void  print_maps();
