@@ -70,18 +70,16 @@ void stg_symbolic_variable(void *, const char*) {}
 #define STG_ORACLE
 
 // define type of variables to make symbolic
-#define SYMBOLIC_JERK
+//#define SYMBOLIC_JERK
 #define SYMBOLIC_ACCEL
-#define SYMBOLIC_VEL
+//#define SYMBOLIC_VEL
 
 #include "VelocitySmoothing.hpp"
 #include "matrix/matrix/math.hpp"
 #include "mathlib/mathlib.h"
 
-void stg_make_trajectory_symbolic(VelocitySmoothing *trajectory)
+void make_trajectory_symbolic(VelocitySmoothing *trajectory)
 {
-
-
 #ifdef STG
 #ifdef SYMBOLIC_JERK
 	stg_symbolic_variable(&trajectory->_max_jerk, "M_J", -100.0f, 100.0f, "uniform" , 0,0);
@@ -151,7 +149,7 @@ int test_initial_conditions()
 {
 	VelocitySmoothing trajectory;
 
-	stg_make_trajectory_symbolic(&trajectory);
+	make_trajectory_symbolic(&trajectory);
 	stg_begin_test();
 	stg_initial_trajectory(&trajectory);
 
@@ -179,14 +177,15 @@ int test_initial_conditions()
 int test_getter_setter()
 {
 	VelocitySmoothing trajectory;
-	stg_make_trajectory_symbolic(&trajectory);
-
-	trajectory.setMaxJerk(55.2f);
-	trajectory.setMaxAccel(6.f);
-	trajectory.setMaxVel(6.f);
-	trajectory.setCurrentPosition(1.f);
+	auto maxAcceleration = 6.f;
+	make_trajectory_symbolic(&trajectory);
 
 	stg_begin_test();
+
+	trajectory.setMaxJerk(55.2f);
+	trajectory.setMaxAccel(maxAcceleration);
+	trajectory.setMaxVel(6.f);
+	trajectory.setCurrentPosition(1.f);
 	stg_initial_trajectory(&trajectory);
 
 	if (trajectory.getMaxJerk() != 55.2f)
@@ -211,7 +210,7 @@ int test_computeT1()
 {
 	VelocitySmoothing trajectory;
 
-	stg_make_trajectory_symbolic(&trajectory);
+	make_trajectory_symbolic(&trajectory);
 	stg_begin_test();
 	stg_initial_trajectory(&trajectory);
 
@@ -236,13 +235,16 @@ int test_computeT1()
 int test_edge_case()
 {
 	VelocitySmoothing trajectory;
-	trajectory.setCurrentAcceleration(FLT_EPSILON);
 
-	stg_make_trajectory_symbolic(&trajectory);
+	const auto acceleration = FLT_EPSILON;
+
+	make_trajectory_symbolic(&trajectory);
 	stg_begin_test();
 	stg_initial_trajectory(&trajectory);
 
+	trajectory.setCurrentAcceleration(acceleration);
 	trajectory.updateDurations(FLT_EPSILON);
+
 	if (trajectory.getT1() != 0.f)
 		return TEST_FAIL;
 	if (trajectory.getT2() != 0.f)
@@ -259,15 +261,18 @@ int test_edge_case()
 int test_velsp_neg()
 {
 	VelocitySmoothing trajectory;
-	trajectory.setMaxJerk(55.2f);
-	trajectory.setMaxAccel(6.f);
-	trajectory.setMaxVel(6.f);
-	trajectory.setCurrentVelocity(0.f);
-	trajectory.setCurrentAcceleration(0.f);
+	const auto acceleration = 0.f;
+	const auto maxAcceleration = 6.f;
 
-	stg_make_trajectory_symbolic(&trajectory);
+	make_trajectory_symbolic(&trajectory);
 	stg_begin_test();
 	stg_initial_trajectory(&trajectory);
+
+	trajectory.setMaxJerk(55.2f);
+	trajectory.setMaxAccel(maxAcceleration);
+	trajectory.setMaxVel(6.f);
+	trajectory.setCurrentVelocity(0.f);
+	trajectory.setCurrentAcceleration(acceleration);
 
 	float velocity_setpoint = -1.0;
 
@@ -301,7 +306,7 @@ int test_velsp_zero()
 	trajectory.setCurrentVelocity(0.f);
 	trajectory.setCurrentAcceleration(0.f);
 
-	stg_make_trajectory_symbolic(&trajectory);
+	make_trajectory_symbolic(&trajectory);
 	stg_begin_test();
 	stg_initial_trajectory(&trajectory);
 
@@ -331,14 +336,18 @@ int test_velsp_zero()
 int test_velsp_pos()
 {
 	VelocitySmoothing trajectory;
+	const auto acceleration = 0.f;
+	const auto maxAcceleration = 6.f;
+
+	make_trajectory_symbolic(&trajectory);
+
+	stg_begin_test();
+
 	trajectory.setMaxJerk(55.2f);
-	trajectory.setMaxAccel(6.f);
+	trajectory.setMaxAccel(maxAcceleration);
 	trajectory.setMaxVel(6.f);
 	trajectory.setCurrentVelocity(0.f);
-	trajectory.setCurrentAcceleration(0.f);
-
-	stg_make_trajectory_symbolic(&trajectory);
-	stg_begin_test();
+	trajectory.setCurrentAcceleration(acceleration);
 	stg_initial_trajectory(&trajectory);
 
 	float velocity_setpoint = 1.f;
@@ -357,7 +366,6 @@ int test_velsp_pos()
 		trajectory.updateTraj(dt);
 		trajectory.updateDurations(velocity_setpoint);
 	}
-
 
 	stg_end_test();
 	stg_record_test(TEST_PASS);
@@ -451,20 +459,20 @@ int main(int argc, char *argv[])
 #ifdef STG
 	test_initial_conditions();
 	test_getter_setter();
-	test_computeT1();
+//	test_computeT1();
 	test_edge_case();
 	test_velsp_neg();
-	test_velsp_zero();
-	test_velsp_pos();
+//	test_velsp_zero();
+//	test_velsp_pos();
 	test_trajectory_sync();
 #else
 	RUN_TEST("initial conditions", test_initial_conditions);
 	RUN_TEST("getter/setter", test_getter_setter);
-	RUN_TEST("computeT1", test_computeT1);
+//	RUN_TEST("computeT1", test_computeT1);
 	RUN_TEST("edge cases", test_edge_case);
 	RUN_TEST("velocity setpoint -1", test_velsp_neg);
-	RUN_TEST("velocity setpoint 0", test_velsp_zero);
-	RUN_TEST("velocity setpoint +1", test_velsp_pos);
+//	RUN_TEST("velocity setpoint 0", test_velsp_zero);
+//	RUN_TEST("velocity setpoint +1", test_velsp_pos);
 	RUN_TEST("trajectory sync", test_trajectory_sync);
 #endif
 	return 0;
