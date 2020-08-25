@@ -59,6 +59,8 @@
 #define stg_begin_test() {}
 #define stg_end_test() {}
 #define stg_record_test(x) x
+#define stg_pause_recording() {}
+#define stg_resume_recording() {}
 void stg_symbolic_variable(void *, const char*) {}
 #endif
 
@@ -128,6 +130,9 @@ void stg_initial_trajectory(VelocitySmoothing *traj)
 
 // @FIXME @TODO: in general, need to turn off tracing in oracle functions
 bool check_kinematic_constraints(VelocitySmoothing *traj) {
+#ifdef STG_ORACLE
+	stg_pause_recording();
+#endif
 	bool oracle = true;
 	if (traj->getCurrentJerk() > traj->getMaxJerk())
 		oracle = false;
@@ -136,6 +141,7 @@ bool check_kinematic_constraints(VelocitySmoothing *traj) {
 	if (traj->getCurrentVelocity() > traj->getMaxVel())
 		oracle = false;
 #ifdef STG_ORACLE
+	stg_resume_recording();
 	stg_record_test(oracle);
 #endif
 	return oracle;
@@ -417,17 +423,22 @@ int test_trajectory_sync()
 	float velocity_setpoint[2] = {1.f, 0.f};
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
+		check_kinematic_constraints(&trajectory[i]);
 	}
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateTraj(dt);
+		check_kinematic_constraints(&trajectory[i]);
 	}
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
+		check_kinematic_constraints(&trajectory[i]);
 	}
 
 	VelocitySmoothing::timeSynchronization(trajectory, 2);
+	check_kinematic_constraints(&trajectory[0]);
+	check_kinematic_constraints(&trajectory[1]);
 
 	stg_end_test();
 	// for now, put oracles after end of test
