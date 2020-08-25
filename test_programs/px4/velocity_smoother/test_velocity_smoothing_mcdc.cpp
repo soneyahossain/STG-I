@@ -142,7 +142,6 @@ bool check_kinematic_constraints(VelocitySmoothing *traj) {
 		oracle = false;
 #ifdef STG_ORACLE
 	stg_resume_recording();
-	stg_record_test(oracle);
 #endif
 	return oracle;
 }
@@ -418,35 +417,32 @@ int test_trajectory_sync()
 #endif
 #endif
 
+	bool oracle = true;
 	const float dt = 0.01f;
 
 	float velocity_setpoint[2] = {1.f, 0.f};
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
-		check_kinematic_constraints(&trajectory[i]);
+		oracle &= check_kinematic_constraints(&trajectory[i]);
 	}
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateTraj(dt);
-		check_kinematic_constraints(&trajectory[i]);
+		oracle &= check_kinematic_constraints(&trajectory[i]);
 	}
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].updateDurations(velocity_setpoint[i]);
-		check_kinematic_constraints(&trajectory[i]);
+		oracle &= check_kinematic_constraints(&trajectory[i]);
 	}
 
 	VelocitySmoothing::timeSynchronization(trajectory, 2);
-	check_kinematic_constraints(&trajectory[0]);
-	check_kinematic_constraints(&trajectory[1]);
+	oracle &= check_kinematic_constraints(&trajectory[0]);
+	oracle &= check_kinematic_constraints(&trajectory[1]);
 
 	stg_end_test();
-	// for now, put oracles after end of test
-	// @fixme: need oracles after every state update in the test
-	//         oracle needs to turn off/on tracing
-	// @fixme: allow multiple oracles to record test results
 	check_kinematic_constraints(&trajectory[0]);
-	//stg_record_test(TEST_PASS);
+	stg_record_test(oracle);
 	return TEST_PASS;
 }
 
