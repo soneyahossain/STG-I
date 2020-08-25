@@ -177,28 +177,40 @@ int test_initial_conditions()
 int test_getter_setter()
 {
 	VelocitySmoothing trajectory;
-	auto maxAcceleration = 6.f;
+	//auto maxAcceleration = 6.f;
+
 	make_trajectory_symbolic(&trajectory);
 
 	stg_begin_test();
-
 	trajectory.setMaxJerk(55.2f);
-	trajectory.setMaxAccel(maxAcceleration);
+	//trajectory.setMaxAccel(maxAcceleration);  // as you are setting the concrete value from stg_initial_trajectory call, no need to assign value if you intend to make it symbolic,
 	trajectory.setMaxVel(6.f);
 	trajectory.setCurrentPosition(1.f);
+
+
 	stg_initial_trajectory(&trajectory);
 
-	if (trajectory.getMaxJerk() != 55.2f)
-		return TEST_FAIL;
+    bool oracle=true;
 
-	if (trajectory.getMaxAccel() != 6.f)
-		return TEST_FAIL;
+	if (trajectory.getMaxJerk() != 55.2f){
+	   //printf("returning getMaxJerk\n");
+	   oracle = TEST_FAIL;
+	}
 
-	if (trajectory.getMaxVel() != 6.f)
-		return TEST_FAIL;
+	if (trajectory.getMaxAccel() != 6.f){
+	    //printf("returning getMaxAccel\n");
+		oracle = TEST_FAIL;
+	}
 
-	if(trajectory.getCurrentPosition() != 1.f)
-		return TEST_FAIL;
+	if (trajectory.getMaxVel() != 6.f){
+         //printf("returning from max vel \n");
+         oracle = TEST_FAIL;
+	}
+
+	if(trajectory.getCurrentPosition() != 1.f){
+        //printf("returning \n");
+        oracle = TEST_FAIL;
+	}
 
 	stg_end_test();
 	stg_record_test(TEST_PASS);
@@ -457,14 +469,14 @@ int test_trajectory_sync()
 int main(int argc, char *argv[])
 {
 #ifdef STG
-	test_initial_conditions();
+	//test_initial_conditions();
 	test_getter_setter();
 //	test_computeT1();
-	test_edge_case();
-	test_velsp_neg();
+//	test_edge_case();
+//	test_velsp_neg();
 //	test_velsp_zero();
 //	test_velsp_pos();
-	test_trajectory_sync();
+//	test_trajectory_sync();
 #else
 	RUN_TEST("initial conditions", test_initial_conditions);
 	RUN_TEST("getter/setter", test_getter_setter);
