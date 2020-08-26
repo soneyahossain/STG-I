@@ -1,5 +1,4 @@
 [
-M_A : float = 8, range:[-20,20],uniform,
 A : float = 0, range:[-20,20],uniform
 ]
 
