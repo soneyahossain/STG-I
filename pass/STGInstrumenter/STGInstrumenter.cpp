@@ -93,7 +93,7 @@ struct STGInstrumenter : public ModulePass {
         "stg_update_double", "scanf",
         "stg_update_input_i32",
         "stg_update_input_i64",
-        "stg_update_input_float",
+        "stg_update_input_float","stg_oracle",
         "stg_update_input_double", "stg_record_test", "sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit","stg_update_bin_intrinsic","stg_update_prev_bb"
     };
 
@@ -146,20 +146,17 @@ struct STGInstrumenter : public ModulePass {
             BasicBlock* B = &BB; // getting the current BB
             IRBuilder<> builder(B); // builder for the current bb
 
-
-
             Instruction* I;
             for (Instruction& i : BB) // iterating all the instructions within current BB
             {
                 if (!i.hasName() && !i.getType()->isVoidTy())
                     i.setName("tmp_" + F.getName()); // if the instruction doesn't have a name, giving it name
 
-                else if( i.hasName() && !i.getType()->isVoidTy() )
-
-                   i.setName(i.getName()+"_" + F.getName()); // if the instruction doesn't have a name, giving it name
+                else if( i.hasName() && !i.getType()->isVoidTy())
+                    i.setName(i.getName()+"_" + F.getName()); // if the instruction doesn't have a name, giving it name
 
                 I = &i; // current instruction
-                //I->dump();  // print instruction
+                // I->dump();  // print instruction
 
                 if (LoadInst* loadInst = dyn_cast<LoadInst>(I)) { // read from memory
 
@@ -193,7 +190,6 @@ struct STGInstrumenter : public ModulePass {
                         else if (T == Type::getDoubleTy(context)) {
                             CallInst::Create(stg_update_double, args)->insertAfter(I);
                         }
-
                     }
                     else { // %tmp = load i32, i32* %x, align 4
 
@@ -204,7 +200,6 @@ struct STGInstrumenter : public ModulePass {
                         args.push_back(result_);
 
                         const Type* T = loadInst->getPointerOperandType();
-
 
                         if (T == Type::getInt8PtrTy(context)) {
                             CallInst::Create(stg_update_load_i8, args)->insertAfter(I);
@@ -333,11 +328,9 @@ struct STGInstrumenter : public ModulePass {
                         args.push_back(arg_dest);
 
 
-
                         std::string type_;
                         llvm::raw_string_ostream ret_type(type_);
                         intrinsicInst->getType()->print(ret_type);
-
 
 
                         int i = 0;
@@ -364,7 +357,6 @@ struct STGInstrumenter : public ModulePass {
                             args.push_back(builder.CreateGlobalStringPtr(argument));
                         }
 
-
                         llvm::Value* fun_name = builder.CreateGlobalStringPtr(functionName);
                         llvm::Value* rettype = builder.CreateGlobalStringPtr(ret_type.str());
                         args.push_back(fun_name);
@@ -384,15 +376,11 @@ struct STGInstrumenter : public ModulePass {
                     }else if(functionName.compare("sscanf") == 0 || functionName.compare("__isoc99_sscanf") == 0)  //handle file reading
                     {
 
-
                        unsigned no_of_params = callInst->getNumArgOperands();
                        errs() <<"in sscanf no_of_params==========="<< no_of_params <<"\n";
 
-
-
                        for (unsigned i =2; i<no_of_params; i++)
                        {
-
 
                             llvm::Value * arg_operand = callInst->getArgOperand(i);
 
@@ -403,7 +391,6 @@ struct STGInstrumenter : public ModulePass {
 
                             errs() <<"Type in the scanf ==========="<< type.str() <<"\n";   //got the type, now add instruction to get the value from this address
                             errs() <<"name ==========="<< arg_operand->getName().str() <<"\n";
-
 
 
                            std::vector<Value*> args;
@@ -427,16 +414,15 @@ struct STGInstrumenter : public ModulePass {
                     }else if(functionName.find("scanf") != std::string::npos )  // handle scanf
                     {
 
-                         llvm::Value * arg_operand = callInst->getArgOperand(1);
+                        llvm::Value * arg_operand = callInst->getArgOperand(1);
 
-                         const Type* T = arg_operand->getType();
-                         std::string type_str;
-                         llvm::raw_string_ostream type(type_str);
-                         T->print(type);
+                        const Type* T = arg_operand->getType();
+                        std::string type_str;
+                        llvm::raw_string_ostream type(type_str);
+                        T->print(type);
 
-                         errs() <<"Type in the scanf ==========="<< type.str() <<"\n";   //got the type, now add instruction to get the value from this address
-                         errs() <<"name ==========="<< arg_operand->getName().str() <<"\n";
-
+                        errs() <<"Type in the scanf ==========="<< type.str() <<"\n";   //got the type, now add instruction to get the value from this address
+                        errs() <<"name ==========="<< arg_operand->getName().str() <<"\n";
 
 
                         std::vector<Value*> args;
@@ -454,12 +440,6 @@ struct STGInstrumenter : public ModulePass {
                         else if (T == Type::getDoublePtrTy(context)) {
                             CallInst::Create(stg_update_input_double, args)->insertAfter(I);
                         }
-
-
-
-
-
-
 
                     }
                     else if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), functionName) == function_doNotInstrument.end()) {
@@ -530,7 +510,7 @@ struct STGInstrumenter : public ModulePass {
                     llvm::raw_string_ostream type(type_str);
                     I->getType()->print(type);
 
-                    errs() << "Type===========" << type.str() << "\n";
+                    //errs() << "Type===========" << type.str() << "\n";
 
                     Value* l_op = I->getOperand(0); // left operand
                     std::string left_operand = "";
@@ -567,7 +547,7 @@ struct STGInstrumenter : public ModulePass {
                         right_operand = r_op->getName().str();
                     }
 
-                    errs() << result << "--> " << left_operand << " " << opCodeName << " "<< right_operand << "\n";
+                    //errs() << result << "--> " << left_operand << " " << opCodeName << " "<< right_operand << "\n";
 
                     llvm::Value* addAddress_ = builder.CreateGlobalStringPtr(result);
                     llvm::Value* lhs = builder.CreateGlobalStringPtr(left_operand);
@@ -778,7 +758,6 @@ struct STGInstrumenter : public ModulePass {
 
         }
 
-        outs() << "Done instrumenting function :  " << function_name << "\n";
         return true;
     }
 
@@ -953,9 +932,7 @@ struct STGInstrumenter : public ModulePass {
         return true;
     }
 
-
 /*
-
     GlobalVariable* createGlob(IRBuilder<>& Builder, std::string Name, Module* ModuleOb)
     {
           ModuleOb->getOrInsertGlobal(Name, Builder.getInt8PtrTy());
@@ -966,12 +943,10 @@ struct STGInstrumenter : public ModulePass {
           //Constant* bb_name = Builder.CreateGlobalStringPtr("entry");
           //gVar->setInitializer(bb_name);
           return gVar;
-
     }
-
 */
 
-    //-----------------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------------
 };
 } // namespace
 

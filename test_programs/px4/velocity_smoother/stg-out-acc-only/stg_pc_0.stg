@@ -15,4 +15,3 @@ A : float = 0, range:[-20,20],uniform
     )
   )
 )
-
