@@ -206,16 +206,10 @@ void  stg_update_user_input(std::string address, std::string value,std::string t
         //std::cout << "found the symbolic var in map" <<"\n";
         std::string sym_name = itr->second;
 
-
         //std::cout << "found the symbolic var in map" <<"\n";
-
 
         if(needComma )stg_pc <<",\n";
         else needComma=true;
-
-
-
-
 
         stg_pc << sym_name <<" : "<<type<< " = " << value << ", range:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]," << getDistributionSpec(address);
 
@@ -523,8 +517,6 @@ void stg_update_double(char* key, double val, char* type_)
     stg_state << "state[" << key << " --> " << val << "]\n";
 }
 
-
-
 void stg_update_pc(bool cnd_value, char* cnd_name)
 {
 
@@ -543,8 +535,6 @@ void stg_update_pc(bool cnd_value, char* cnd_name)
         //std::cout << "PC"+std::to_string(path_condition_count) <<": " <<value<< "\n";
         path_condition_count++;
     }
-
-
 }
 
 void stg_update_phi(char* lhs, char* valBBpairs)
