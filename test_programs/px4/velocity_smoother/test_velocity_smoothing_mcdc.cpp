@@ -61,7 +61,6 @@
 #define stg_record_test(x) x
 #define stg_pause_recording() {}
 #define stg_resume_recording() {}
-void stg_symbolic_variable(void *, const char*) {}
 #endif
 
 #define TEST_PASS 1
@@ -126,7 +125,7 @@ void stg_initial_trajectory(VelocitySmoothing *traj)
 }
 
 
-// @FIXME @TODO: in general, need to turn off tracing in oracle functions
+// boolean oracle
 bool check_kinematic_constraints(VelocitySmoothing *traj) {
 #ifdef STG_ORACLE
 	stg_pause_recording();
@@ -148,28 +147,32 @@ bool check_kinematic_constraints(VelocitySmoothing *traj) {
 int test_initial_conditions()
 {
 	VelocitySmoothing trajectory;
+	const auto acceleration = 0.f;
 
-	make_trajectory_symbolic(&trajectory);
+#ifdef STG
+	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0, 0);
 	stg_begin_test();
-	stg_initial_trajectory(&trajectory);
+	stg_input_float(&acceleration, acceleration);
+#endif
 
+	bool result = true;
 	if (trajectory.getT1() != 0.0)
-		return TEST_FAIL;
+		result = false;
 	if (trajectory.getT2() != 0.0)
-		return TEST_FAIL;
+		result = false;
 	if (trajectory.getT3() != 0.0)
-		return TEST_FAIL;
+		result = false;
 	if (trajectory.getCurrentJerk() != 0.0)
-		return TEST_FAIL;
+		result = false;
 	if (trajectory.getVelSp() != 0.0)
-		return TEST_FAIL;
+		result = false;
 	if (trajectory.getCurrentVelocity() != 0.0)
-		return TEST_FAIL;
+		result = false;
 	if (trajectory.getCurrentAcceleration() != 0.0)
-		return TEST_FAIL;
+		result = false;
 
 	stg_end_test();
-	stg_record_test(TEST_PASS);
+	stg_record_test(result);
 	return TEST_PASS;
 }
 
@@ -177,43 +180,38 @@ int test_initial_conditions()
 int test_getter_setter()
 {
 	VelocitySmoothing trajectory;
-	//auto maxAcceleration = 6.f;
+	auto maxAcceleration = 6.f;
 
-	make_trajectory_symbolic(&trajectory);
-
+#ifdef STG
+	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
 	stg_begin_test();
+	stg_input_float(&maxAcceleration, maxAcceleration);
+	trajectory.setMaxAcceleration(maxAcceleration);
+#endif
 	trajectory.setMaxJerk(55.2f);
-	//trajectory.setMaxAccel(maxAcceleration);  // as you are setting the concrete value from stg_initial_trajectory call, no need to assign value if you intend to make it symbolic,
 	trajectory.setMaxVel(6.f);
 	trajectory.setCurrentPosition(1.f);
 
-
-	stg_initial_trajectory(&trajectory);
-
-    bool oracle=true;
+	bool oracle=true;
 
 	if (trajectory.getMaxJerk() != 55.2f){
-	   //printf("returning getMaxJerk\n");
-	   oracle = TEST_FAIL;
+	   oracle = false;
 	}
 
 	if (trajectory.getMaxAccel() != 6.f){
-	    //printf("returning getMaxAccel\n");
-		oracle = TEST_FAIL;
+		oracle = false;
 	}
 
 	if (trajectory.getMaxVel() != 6.f){
-         //printf("returning from max vel \n");
-         oracle = TEST_FAIL;
+		oracle = false;
 	}
 
 	if(trajectory.getCurrentPosition() != 1.f){
-        //printf("returning \n");
-        oracle = TEST_FAIL;
+        	oracle = false;
 	}
 
 	stg_end_test();
-	stg_record_test(TEST_PASS);
+	stg_record_test(oracle);
 	return TEST_PASS;
 }
 
@@ -250,9 +248,11 @@ int test_edge_case()
 
 	const auto acceleration = FLT_EPSILON;
 
-	make_trajectory_symbolic(&trajectory);
+#ifdef STG
+	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
 	stg_begin_test();
-	stg_initial_trajectory(&trajectory);
+	stg_input_float(&acceleration, acceleration);
+#endif
 
 	trajectory.setCurrentAcceleration(acceleration);
 	trajectory.updateDurations(FLT_EPSILON);
@@ -276,10 +276,15 @@ int test_velsp_neg()
 	const auto acceleration = 0.f;
 	const auto maxAcceleration = 6.f;
 
-	make_trajectory_symbolic(&trajectory);
-	stg_begin_test();
-	stg_initial_trajectory(&trajectory);
+#ifdef STG
+	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
+	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
 
+	stg_begin_test();
+
+	stg_input_float(&acceleration, acceleration);
+	stg_input_float(&maxAcceleration, maxAcceleration);
+#endif
 	trajectory.setMaxJerk(55.2f);
 	trajectory.setMaxAccel(maxAcceleration);
 	trajectory.setMaxVel(6.f);
@@ -294,14 +299,13 @@ int test_velsp_neg()
 
 	const float dt = 0.1f;
 	float t123 = trajectory.getTotalTime();
+	int nb_steps = 3;
 
 	printf("test_velsp_neg(): total time = %f\n", t123);
-
-	trajectory.updateTraj(dt);
-	trajectory.updateDurations(velocity_setpoint);
-
-	trajectory.updateTraj(dt);
-	trajectory.updateDurations(velocity_setpoint);
+	for (int i = 0; i < nb_steps; ++i) {
+		trajectory.updateTraj(dt);
+		trajectory.updateDurations(velocity_setpoint);
+	}
 
 	stg_end_test();
 	stg_record_test(TEST_PASS);
@@ -312,15 +316,21 @@ int test_velsp_neg()
 int test_velsp_zero()
 {
 	VelocitySmoothing trajectory;
+	const auto acceleration = 0.f;
+	const auto maxAcceleration = 6.f;
+
+#ifdef STG
+	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
+	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
+
+	stg_begin_test();
+#endif
+
 	trajectory.setMaxJerk(55.2f);
-	trajectory.setMaxAccel(6.f);
+	trajectory.setMaxAccel(maxAcceleration);
 	trajectory.setMaxVel(6.f);
 	trajectory.setCurrentVelocity(0.f);
-	trajectory.setCurrentAcceleration(0.f);
-
-	make_trajectory_symbolic(&trajectory);
-	stg_begin_test();
-	stg_initial_trajectory(&trajectory);
+	trajectory.setCurrentAcceleration(acceleration);
 
 	float velocity_setpoint = 0.f;
 
@@ -351,16 +361,18 @@ int test_velsp_pos()
 	const auto acceleration = 0.f;
 	const auto maxAcceleration = 6.f;
 
-	make_trajectory_symbolic(&trajectory);
+#ifdef STG
+	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
+	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
 
 	stg_begin_test();
+#endif
 
 	trajectory.setMaxJerk(55.2f);
 	trajectory.setMaxAccel(maxAcceleration);
 	trajectory.setMaxVel(6.f);
 	trajectory.setCurrentVelocity(0.f);
 	trajectory.setCurrentAcceleration(acceleration);
-	stg_initial_trajectory(&trajectory);
 
 	float velocity_setpoint = 1.f;
 
@@ -388,54 +400,33 @@ int test_velsp_pos()
 int test_trajectory_sync()
 {
 	VelocitySmoothing trajectory[2];
+	const auto acceleration = 0.f;
+	const auto maxAcceleration = 6.f;
+
+#ifdef STG
+	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
+	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
+
+	stg_begin_test();
+
+	stg_input_float(&acceleration, acceleration);
+	stg_input_float(&maxAcceleration, maxAcceleration);
+#endif
 
 	float a0[3] = {0.f, 0.f};
 	float v0[3] = {0.f, 0.f};
 	float x0[3] = {0.f, 0.f};
 
 	float j_max = 55.2f;
-	float a_max = 6.f;
 	float v_max = 6.f;
 
 	for (int i = 0; i < 2; i++) {
 		trajectory[i].setMaxJerk(j_max);
-		trajectory[i].setMaxAccel(a_max);
+		trajectory[i].setMaxAccel(maxAcceleration);
 		trajectory[i].setMaxVel(v_max);
-		trajectory[i].setCurrentAcceleration(a0[i]);
+		trajectory[i].setCurrentAcceleration(acceleration);
 		trajectory[i].setCurrentVelocity(v0[i]);
 	}
-
-#ifdef STG
-#ifdef SYMBOLIC_JERK
-	stg_symbolic_variable(&trajectory[0]._max_jerk, "M_J", -100.0f, 100.0f, "uniform" , 0,0);
-	stg_symbolic_variable(&trajectory[0]._state.j, "J", -100.0f, 100.0f, "uniform" , 0,0);
-#endif
-#ifdef SYMBOLIC_ACCEL
-	stg_symbolic_variable(&trajectory[0]._max_accel, "M_A", -20.f, 20.f,"uniform",0,0);
-	stg_symbolic_variable(&trajectory[0]._state.a, "A", -20.f, 20.f,"uniform",0,0);
-#endif
-#ifdef SYMBOLIC_VEL
-	stg_symbolic_variable(&trajectory[0]._max_vel, "M_V",-20.f, 20.f,"uniform",0,0);
-	stg_symbolic_variable(&trajectory[0]._state.v, "V", -20.f, 20.f,"uniform",0,0);
-	stg_symbolic_variable(&trajectory[0]._vel_sp, "VSP",-20.f, 20.f,"uniform",0,0);
-#endif
-
-	stg_begin_test();
-
-#ifdef SYMBOLIC_JERK
-	stg_input_float(&trajectory[0]._max_jerk, trajectory[0]._max_jerk);
-	stg_input_float(&trajectory[0]._state.j, trajectory[0]._state.j);
-#endif
-#ifdef SYMBOLIC_ACCEL
-	stg_input_float(&trajectory[0]._max_accel, trajectory[0]._max_accel);
-	stg_input_float(&trajectory[0]._state.a, trajectory[0]._state.a);
-#endif
-#ifdef SYMBOLIC_VEL
-	stg_input_float(&trajectory[0]._max_vel, trajectory[0]._max_vel);
-	stg_input_float(&trajectory[0]._state.v, trajectory[0]._state.v);
-	stg_input_float(&trajectory[0]._vel_sp, trajectory[0]._vel_sp);
-#endif
-#endif
 
 	bool oracle = true;
 	const float dt = 0.01f;
@@ -461,7 +452,6 @@ int test_trajectory_sync()
 	oracle &= check_kinematic_constraints(&trajectory[1]);
 
 	stg_end_test();
-	check_kinematic_constraints(&trajectory[0]);
 	stg_record_test(oracle);
 	return TEST_PASS;
 }
@@ -469,14 +459,14 @@ int test_trajectory_sync()
 int main(int argc, char *argv[])
 {
 #ifdef STG
-	//test_initial_conditions();
+	test_initial_conditions();
 	test_getter_setter();
 //	test_computeT1();
-//	test_edge_case();
-//	test_velsp_neg();
+	test_edge_case();
+	test_velsp_neg();
 //	test_velsp_zero();
 //	test_velsp_pos();
-//	test_trajectory_sync();
+	test_trajectory_sync();
 #else
 	RUN_TEST("initial conditions", test_initial_conditions);
 	RUN_TEST("getter/setter", test_getter_setter);
