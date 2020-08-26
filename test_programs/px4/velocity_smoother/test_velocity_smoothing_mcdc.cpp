@@ -147,7 +147,7 @@ bool check_kinematic_constraints(VelocitySmoothing *traj) {
 int test_initial_conditions()
 {
 	VelocitySmoothing trajectory;
-	const auto acceleration = 0.f;
+	float acceleration = 0.f;
 
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0, 0);
@@ -180,7 +180,7 @@ int test_initial_conditions()
 int test_getter_setter()
 {
 	VelocitySmoothing trajectory;
-	auto maxAcceleration = 6.f;
+	float maxAcceleration = 6.f;
 
 #ifdef STG
 	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
@@ -246,8 +246,8 @@ int test_edge_case()
 {
 	VelocitySmoothing trajectory;
 
-	const auto acceleration = FLT_EPSILON;
-	const auto maxAcceleration = trajectory.getMaxAccel();
+	float acceleration = FLT_EPSILON;
+	float maxAcceleration = trajectory.getMaxAccel();
 
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
@@ -279,8 +279,8 @@ int test_edge_case()
 int test_velsp_neg()
 {
 	VelocitySmoothing trajectory;
-	const auto acceleration = 0.f;
-	const auto maxAcceleration = 6.f;
+	float acceleration = 0.f;
+	float maxAcceleration = 6.f;
 
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
@@ -322,8 +322,8 @@ int test_velsp_neg()
 int test_velsp_zero()
 {
 	VelocitySmoothing trajectory;
-	const auto acceleration = 0.f;
-	const auto maxAcceleration = 6.f;
+	float acceleration = 0.f;
+	float maxAcceleration = 6.f;
 
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
@@ -367,8 +367,8 @@ int test_velsp_zero()
 int test_velsp_pos()
 {
 	VelocitySmoothing trajectory;
-	const auto acceleration = 0.f;
-	const auto maxAcceleration = 6.f;
+	float acceleration = 0.f;
+	float maxAcceleration = 6.f;
 
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
@@ -412,8 +412,8 @@ int test_velsp_pos()
 int test_trajectory_sync()
 {
 	VelocitySmoothing trajectory[2];
-	const auto acceleration = 0.f;
-	const auto maxAcceleration = 6.f;
+	float acceleration = 0.f;
+	float maxAcceleration = 6.f;
 
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
