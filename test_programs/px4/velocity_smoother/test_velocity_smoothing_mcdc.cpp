@@ -155,6 +155,8 @@ int test_initial_conditions()
 	stg_input_float(&acceleration, acceleration);
 #endif
 
+	trajectory.setCurrentAcceleration(acceleration);
+
 	bool result = true;
 	if (trajectory.getT1() != 0.0)
 		result = false;
