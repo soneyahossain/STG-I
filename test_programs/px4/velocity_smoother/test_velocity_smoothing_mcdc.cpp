@@ -186,7 +186,7 @@ int test_getter_setter()
 	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
 	stg_begin_test();
 	stg_input_float(&maxAcceleration, maxAcceleration);
-	trajectory.setMaxAcceleration(maxAcceleration);
+	trajectory.setMaxAccel(maxAcceleration);
 #endif
 	trajectory.setMaxJerk(55.2f);
 	trajectory.setMaxVel(6.f);
