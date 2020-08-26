@@ -247,14 +247,20 @@ int test_edge_case()
 	VelocitySmoothing trajectory;
 
 	const auto acceleration = FLT_EPSILON;
+	const auto maxAcceleration = trajectory.getMaxAccel();
 
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
+	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
 	stg_begin_test();
 	stg_input_float(&acceleration, acceleration);
+	stg_input_float(&maxAcceleration, maxAcceleration);
 #endif
 
+	trajectory.setMaxAccel(maxAcceleration);
 	trajectory.setCurrentAcceleration(acceleration);
+
+	// how are we supposed to know that updateDuration uses maxAcceleration?
 	trajectory.updateDurations(FLT_EPSILON);
 
 	if (trajectory.getT1() != 0.f)
@@ -324,6 +330,9 @@ int test_velsp_zero()
 	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
 
 	stg_begin_test();
+
+	stg_input_float(&acceleration, acceleration);
+	stg_input_float(&maxAcceleration, maxAcceleration);
 #endif
 
 	trajectory.setMaxJerk(55.2f);
@@ -366,6 +375,9 @@ int test_velsp_pos()
 	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
 
 	stg_begin_test();
+
+	stg_input_float(&acceleration, acceleration);
+	stg_input_float(&maxAcceleration, maxAcceleration);
 #endif
 
 	trajectory.setMaxJerk(55.2f);
