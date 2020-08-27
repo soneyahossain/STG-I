@@ -467,7 +467,7 @@ int test_trajectory_sync()
 	return true;
 }
 
-int test_t1_saturation()
+int test_t1_saturation(float t1)
 {
 	VelocitySmoothing trajectory;
 	float acceleration = 0.f;
@@ -491,13 +491,7 @@ int test_t1_saturation()
 	// for a test, should verify returned T1 value
 	
 	// clip negative
-	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  -7.42, trajectory.getMaxAccel());
-
-	// clip positive
-	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  7.42, trajectory.getMaxAccel());
-
-	// no clipping
-	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  0.0, trajectory.getMaxAccel());
+	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(), t1, trajectory.getMaxAccel());
 
 	stg_end_test();
 	stg_record_test(true);
@@ -515,7 +509,9 @@ int main(int argc, char *argv[])
 //	test_velsp_zero();
 //	test_velsp_pos();
 //	test_trajectory_sync();
-	test_t1_saturation();
+	test_t1_saturation(-7.42);
+	test_t1_saturation(7.42);
+	test_t1_saturation(0);
 #else
 //	RUN_TEST("initial conditions", test_initial_conditions);
 //	RUN_TEST("getter/setter", test_getter_setter);
@@ -525,7 +521,9 @@ int main(int argc, char *argv[])
 //	RUN_TEST("velocity setpoint 0", test_velsp_zero);
 //	RUN_TEST("velocity setpoint +1", test_velsp_pos);
 //	RUN_TEST("trajectory sync", test_trajectory_sync);
-	RUN_TEST("t1_saturation", test_t1_saturation);
+//	RUN_TEST("t1_saturation (-t1)", test_t1_saturation);
+//	RUN_TEST("t1_saturation (+t1)", test_t1_saturation);
+//	RUN_TEST("t1_saturation (t1=0)", test_t1_saturation);
 #endif
 	return 0;
 }
