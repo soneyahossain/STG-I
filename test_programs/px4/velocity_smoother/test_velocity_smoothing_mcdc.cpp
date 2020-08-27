@@ -491,7 +491,9 @@ int test_t1_saturation()
 	trajectory.setCurrentAcceleration(acceleration);
 	trajectory.setMaxAccel(maxAcceleration);
 
-	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  -7.42, trajectory.getMaxAccel());
+	// for a test, should at least verify that returned value >= 0.0
+//	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  -7.42, trajectory.getMaxAccel());
+	trajectory.saturateT1ForAccel(acceleration, trajectory.getMaxJerk(),  -7.42, maxAcceleration);
 
 	stg_end_test();
 	stg_record_test(true);
