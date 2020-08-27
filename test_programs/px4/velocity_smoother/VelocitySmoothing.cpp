@@ -84,16 +84,18 @@ void VelocitySmoothing::reset(float accel, float vel, float pos)
 
 float VelocitySmoothing::saturateT1ForAccel(float a0, float j_max, float T1, float a_max)
 {
+	printf("saturateT1ForAccel(): accel[%f] maxAccell[%f]\n", a0, a_max);
 	/* Check maximum acceleration, saturate and recompute T1 if needed */
 	float accel_T1 = a0 + j_max * T1;
 	float T1_new = T1;
 
 	if (accel_T1 > a_max) {
 		T1_new = (a_max - a0) / j_max;
-
+	printf("saturateT1ForAccel(): clip+: clip T1 [%f] to [%f]\n", accel_T1, T1_new);
 	} else if (accel_T1 < -a_max) {
+	printf("saturateT1ForAccel(): clip-: clip T1 [%f] to [%f]\n", accel_T1, T1_new);
 		T1_new = (-a_max - a0) / j_max;
-	}
+	} else printf("no clipping\n");
 
 	return T1_new;
 }

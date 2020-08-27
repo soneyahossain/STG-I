@@ -470,26 +470,56 @@ int test_trajectory_sync()
 	return TEST_PASS;
 }
 
+int test_t1_saturation()
+{
+	VelocitySmoothing trajectory;
+	float acceleration = 0.f;
+	float maxAcceleration = 6.f;
+
+#ifdef STG
+	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
+	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
+
+	stg_begin_test();
+
+	stg_input_float(&acceleration, acceleration);
+	stg_input_float(&maxAcceleration, maxAcceleration);
+#endif
+	trajectory.setMaxJerk(55.2f);
+	trajectory.setMaxVel(6.f);
+	trajectory.setCurrentVelocity(0.f);
+	trajectory.setCurrentAcceleration(acceleration);
+	trajectory.setMaxAccel(maxAcceleration);
+
+	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  -7.42, trajectory.getMaxAccel());
+
+	stg_end_test();
+	stg_record_test(true);
+	return TEST_PASS;
+}
+
 int main(int argc, char *argv[])
 {
 #ifdef STG
-	test_initial_conditions();
-	test_getter_setter();
+//	test_initial_conditions();
+//	test_getter_setter();
 //	test_computeT1();
-	test_edge_case();
-	test_velsp_neg();
+//	test_edge_case();
+//	test_velsp_neg();
 //	test_velsp_zero();
 //	test_velsp_pos();
-	test_trajectory_sync();
+//	test_trajectory_sync();
+	test_t1_saturation();
 #else
-	RUN_TEST("initial conditions", test_initial_conditions);
-	RUN_TEST("getter/setter", test_getter_setter);
+//	RUN_TEST("initial conditions", test_initial_conditions);
+//	RUN_TEST("getter/setter", test_getter_setter);
 //	RUN_TEST("computeT1", test_computeT1);
-	RUN_TEST("edge cases", test_edge_case);
-	RUN_TEST("velocity setpoint -1", test_velsp_neg);
+//	RUN_TEST("edge cases", test_edge_case);
+//	RUN_TEST("velocity setpoint -1", test_velsp_neg);
 //	RUN_TEST("velocity setpoint 0", test_velsp_zero);
 //	RUN_TEST("velocity setpoint +1", test_velsp_pos);
-	RUN_TEST("trajectory sync", test_trajectory_sync);
+//	RUN_TEST("trajectory sync", test_trajectory_sync);
+	RUN_TEST("t1_saturation", test_t1_saturation);
 #endif
 	return 0;
 }
