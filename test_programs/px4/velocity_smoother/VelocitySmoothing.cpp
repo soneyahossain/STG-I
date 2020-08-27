@@ -96,6 +96,7 @@ float VelocitySmoothing::saturateT1ForAccel(float a0, float j_max, float T1, flo
 //	printf("saturateT1ForAccel(): clip-: clip T1 [%f] to [%f]\n", accel_T1, T1_new);
 		T1_new = (-a_max - a0) / j_max;
 	} 
+//	else printf("no clipping");
 
 	return T1_new;
 }

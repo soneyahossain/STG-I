@@ -55,16 +55,13 @@
 #ifdef STG
 #include "stg_lib/stg.h"
 #else
-#define RUN_TEST(x, f) if (f() == TEST_PASS) printf("Test %s: pass\n", x); else printf("Test %s: fail\n", x);
+#define RUN_TEST(x, f) if (f()) printf("Test %s: pass\n", x); else printf("Test %s: fail\n", x);
 #define stg_begin_test() {}
 #define stg_end_test() {}
 #define stg_record_test(x) x
 #define stg_pause_recording() {}
 #define stg_resume_recording() {}
 #endif
-
-#define TEST_PASS 1
-#define TEST_FAIL 0
 
 #define STG_ORACLE
 
@@ -175,7 +172,7 @@ int test_initial_conditions()
 
 	stg_end_test();
 	stg_record_test(result);
-	return TEST_PASS;
+	return true;
 }
 
 // Test getter and setter methods
@@ -214,7 +211,7 @@ int test_getter_setter()
 
 	stg_end_test();
 	stg_record_test(oracle);
-	return TEST_PASS;
+	return true;
 }
 
 // Test computeT1()
@@ -228,19 +225,19 @@ int test_computeT1()
 
 	float T1 = trajectory.computeT1(1.0, -2.052579, 4.966730, 0.334284);
 	if (T1 != 0.0f)
-		return TEST_FAIL;
+		return false;
 
 	T1 = trajectory.computeT1(1.0, 1.1, 1.2, 0.0, 5.0);
 	if (T1 != 0.f)
-		return TEST_FAIL;
+		return false;
 
 	T1 = trajectory.computeT1(0.861905, 0.769221, 0.052579, 0.966730, 0.334284);
 	if (math::fabs_t(T1 - (-0.449905)) > 0.00001)
-		return TEST_FAIL;
+		return false;
 
 	stg_end_test();
-	stg_record_test(TEST_PASS);
-	return TEST_PASS;
+	stg_record_test(true);
+	return true;
 }
 
 // Test edge case
@@ -266,15 +263,15 @@ int test_edge_case()
 	trajectory.updateDurations(FLT_EPSILON);
 
 	if (trajectory.getT1() != 0.f)
-		return TEST_FAIL;
+		return false;
 	if (trajectory.getT2() != 0.f)
-		return TEST_FAIL;
+		return false;
 	if (trajectory.getT3() != 0.f)
-		return TEST_FAIL;
+		return false;
 
 	stg_end_test();
-	stg_record_test(TEST_PASS);
-	return TEST_PASS;
+	stg_record_test(true);
+	return true;
 }
 
 // negative velocity setpoint
@@ -316,8 +313,8 @@ int test_velsp_neg()
 	}
 
 	stg_end_test();
-	stg_record_test(TEST_PASS);
-	return TEST_PASS;
+	stg_record_test(true);
+	return true;
 }
 
 // zero velocity setpoint
@@ -361,8 +358,8 @@ int test_velsp_zero()
 	}
 
 	stg_end_test();
-	stg_record_test(TEST_PASS);
-	return TEST_PASS;
+	stg_record_test(true);
+	return true;
 }
 
 // pos velocity setpoint
@@ -406,8 +403,8 @@ int test_velsp_pos()
 	}
 
 	stg_end_test();
-	stg_record_test(TEST_PASS);
-	return TEST_PASS;
+	stg_record_test(true);
+	return true;
 }
 
 // Test trajectory scenario
@@ -467,7 +464,7 @@ int test_trajectory_sync()
 
 	stg_end_test();
 	stg_record_test(oracle);
-	return TEST_PASS;
+	return true;
 }
 
 int test_t1_saturation()
@@ -491,13 +488,20 @@ int test_t1_saturation()
 	trajectory.setCurrentAcceleration(acceleration);
 	trajectory.setMaxAccel(maxAcceleration);
 
-	// for a test, should at least verify that returned value >= 0.0
-//	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  -7.42, trajectory.getMaxAccel());
-	trajectory.saturateT1ForAccel(acceleration, trajectory.getMaxJerk(),  -7.42, maxAcceleration);
+	// for a test, should verify returned T1 value
+	
+	// clip negative
+	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  -7.42, trajectory.getMaxAccel());
+
+	// clip positive
+	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  7.42, trajectory.getMaxAccel());
+
+	// no clipping
+	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(),  0.0, trajectory.getMaxAccel());
 
 	stg_end_test();
 	stg_record_test(true);
-	return TEST_PASS;
+	return true;
 }
 
 int main(int argc, char *argv[])
