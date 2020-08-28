@@ -1,0 +1,15 @@
+[
+LLAT : i32 = 20, range:[-20,20],uniform,
+HLAT : i32 = 40, range:[-20,20],uniform,
+LLON : i32 = 5, range:[-20,20],uniform,
+HLON : i32 = 20, range:[-20,20],uniform,
+INC : i32 = 0, range:[-20,20],uniform,
+ALT : i32 = 200, range:[-20,20],uniform,
+LAT : i32 = 30, range:[-20,20],uniform,
+LON : i32 = 25, range:[-20,20],uniform
+]
+
+//Test: passed
+
+(slt ALT (i32 401))
+

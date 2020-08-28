@@ -1,0 +1,67 @@
+folder details:
+
+stg_out-O0 contains stg constraints with -O0 optimization
+stg_out-O2 contains stg constraints with -O2 optimization
+
+each directory contains multiple stg files for better comparison between these two optimization level
+
+
+
+file name: simpler_geofence.cpp
+
+                                    optimization 0                 optimization 1
+
+bitcode size (line) :                 351                               270
+
+
+Interesting findings:
+
+-haven't seen cast instructions with -O2 ,  easy for constant/cast folding
+-constraints sizes are comparatively small, compact with -O2
+-llvm does further optimization according to the function arguments !! I have seen a few lines of code missing inside the main function those were present in the inside fence function.
+I was wondering why these instructions are missing in the main.
+Then I figures out that inclusion variable was always true , which makes that portion of code not reachable and that's llvm did not copy over those live of codes inside main function. then I added more test cases to cover those statements and llvm brought back them inside main.
+- I manually converted the inside fence function's  inside boolean calculation to
+     bool inside=  ((lon > low_lon) && (lon < high_lon) && (lat < high_lat) && (lat > low_lat)) xor (!inclusion);
+and eliminated all if -else , I believe I got the same result every time , therefore these conversions are equivalent.
+
+
+Confusions:
+
+not sure how positively/negatively these optimization will affect stg-quantification
+
+
+Takeaway:
+
+I guess optimization significantly reduces constraints size, less constant/ cast folding will require, for big SUT optimization will be very promising.
+However, the challenges stg-I may need to handle more instructions, stg-q will also need to handle them as well.
+
+
+
+Code Generation Options
+----------------------------
+
+-O0, -O1, -O2, -O3, -Ofast, -Os, -Oz, -Og, -O, -O4
+Specify which optimization level to use:
+
+-O0 Means “no optimization”: this level compiles the fastest and generates the most debuggable code.
+
+-O1 Somewhere between -O0 and -O2.
+
+-O2 Moderate level of optimization which enables most optimizations.
+
+-O3 Like -O2, except that it enables optimizations that take longer to perform or that may generate larger code (in an attempt to make the program run faster).
+
+-Ofast Enables all the optimizations from -O3 along with other aggressive optimizations that may violate strict compliance with language standards.
+
+-Os Like -O2 with extra optimizations to reduce code size.
+
+-Oz Like -Os (and thus -O2), but reduces code size further.
+
+-Og Like -O1. In future versions, this option might disable different optimizations in order to improve debug ability.
+
+-O Equivalent to -O2.
+
+-O4 and higher
+
+Currently equivalent to -O3
