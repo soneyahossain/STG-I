@@ -1,0 +1,33 @@
+Evaluation 1 - Sep 2020
+-----------------------
+
+Requirement 1: Velocity smoothing respects kinematic profile
+
+Constraints:
+- maximum velocity
+- maximum acceleration
+- maximum jerk
+
+State (current trajectory):
+- velocity
+- acceleration
+- jerk
+
+Set following variables to be symbolic:
+traj.v, max_vel
+traj.a, max_accel
+traj.j, max_jerk
+
+Inputs to VelocitySmoothing, aka initial conditions
+- initial acceleration
+- initial velocity
+- initial position
+
+Main usage pattern seems to be:
+[0] goal: given initial conditions, fastest time to reach setpoint velocity
+(1) set initial conditions
+(2) call updateTrajectory at time 0 to get total time
+(3) compute number of steps given dt
+(4) repeatedly call updateTrajectory(dt, velocity setpoint)
+(5) at the end we should have reached our target velocity setpoint
+
