@@ -339,6 +339,9 @@ int test_velsp(float velsp)
 #endif
 
 #ifdef STG
+		// FIXME
+		// here we are not getting the expected symbolic variables
+		// in the constraints
 		acceleration = trajectory.getCurrentAcceleration();
 		maxAcceleration = trajectory.getMaxAccel();
 
