@@ -320,9 +320,6 @@ int test_velsp(float velsp)
 
 	for (int i = 0; i < nb_steps; ++i) {
 #ifdef STG
-		acceleration = trajectory.getCurrentAcceleration();
-		maxAcceleration = trajectory.getMaxAccel();
-
 		stg_begin_test();
 		// dictionary
 		stg_input_float(&acceleration, acceleration);
