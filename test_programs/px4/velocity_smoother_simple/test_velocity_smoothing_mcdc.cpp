@@ -305,8 +305,10 @@ int test_velsp(float velsp)
 	stg_begin_test();
 	stg_input_float(&acceleration, acceleration);
 	stg_input_float(&maxAcceleration, maxAcceleration);
+	/*
 	trajectory.setMaxAccel(maxAcceleration);
 	trajectory.setCurrentAcceleration(acceleration);
+	*/
 #endif
 	trajectory.updateDurations(velsp);
 #ifdef STG
@@ -325,8 +327,10 @@ int test_velsp(float velsp)
 		stg_input_float(&acceleration, acceleration);
 		stg_input_float(&maxAcceleration, maxAcceleration);
 		// propagate symbolic vars
+		 /*
 		trajectory.setMaxAccel(maxAcceleration);
 		trajectory.setCurrentAcceleration(acceleration);
+		*/
 #endif
 		trajectory.updateTraj(dt);
 #ifdef STG
@@ -339,16 +343,20 @@ int test_velsp(float velsp)
 		// FIXME
 		// here we are not getting the expected symbolic variables
 		// in the constraints
+		/* 
 		acceleration = trajectory.getCurrentAcceleration();
 		maxAcceleration = trajectory.getMaxAccel();
+		*/
 
 		stg_begin_test();
 		// dictionary
 		stg_input_float(&acceleration, acceleration);
 		stg_input_float(&maxAcceleration, maxAcceleration);
 		// propagate symbolic vars
+		/*
 		trajectory.setMaxAccel(maxAcceleration);
 		trajectory.setCurrentAcceleration(acceleration);
+		*/
 #endif
 		trajectory.updateDurations(velsp);
 #ifdef STG
