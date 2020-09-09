@@ -1,0 +1,35 @@
+[
+a_0 : i32 = 1000,range:[-20,20],uniform,
+a_1 : i32 = 2,range:[-20,20],uniform,
+a_2 : i32 = 3,range:[-20,20],uniform,
+a_3 : i32 = 17,range:[-20,20],uniform
+]
+
+//Test: passed
+
+(land
+  (slt (i32 0) (i32 4))
+  (land
+    (eq (srem a_0 (i32 2)) (i32 0))
+    (land
+      (slt (add (i32 0) (i32 1)) (i32 4))
+      (land
+        (eq (srem a_1 (i32 2)) (i32 0))
+        (land
+          (slt (add (add (i32 0) (i32 1)) (i32 1)) (i32 4))
+          (land
+            (lnot(eq (srem a_2 (i32 2)) (i32 0)))
+            (land
+              (slt (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 4))
+              (land
+                (lnot(eq (srem a_3 (i32 2)) (i32 0)))
+                (lnot(slt (add (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 1)) (i32 4)))
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+
