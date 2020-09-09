@@ -282,11 +282,8 @@ int test_velsp(float velsp)
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
 	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
-
-	stg_begin_test();
-	stg_input_float(&acceleration, acceleration);
-	stg_input_float(&maxAcceleration, maxAcceleration);
 #endif
+
 	trajectory.setMaxJerk(55.2f);
 	trajectory.setMaxVel(6.f);
 	trajectory.setCurrentVelocity(0.f);
@@ -294,21 +291,12 @@ int test_velsp(float velsp)
 	trajectory.setCurrentAcceleration(acceleration);
 
 	trajectory.updateTraj(0.f);
-#ifdef STG
-	check_kinematic_constraints(&trajectory);
-	stg_end_test();
-	stg_record_test(true);
-#endif
 
-
+	// This is test #1
 #ifdef STG
 	stg_begin_test();
 	stg_input_float(&acceleration, acceleration);
 	stg_input_float(&maxAcceleration, maxAcceleration);
-	/*
-	trajectory.setMaxAccel(maxAcceleration);
-	trajectory.setCurrentAcceleration(acceleration);
-	*/
 #endif
 	trajectory.updateDurations(velsp);
 #ifdef STG
@@ -321,42 +309,11 @@ int test_velsp(float velsp)
 	int nb_steps = NUM_STEPS;
 
 	for (int i = 0; i < nb_steps; ++i) {
-#ifdef STG
-		stg_begin_test();
-		// dictionary
-		stg_input_float(&acceleration, acceleration);
-		stg_input_float(&maxAcceleration, maxAcceleration);
-		// propagate symbolic vars
-		 /*
-		trajectory.setMaxAccel(maxAcceleration);
-		trajectory.setCurrentAcceleration(acceleration);
-		*/
-#endif
 		trajectory.updateTraj(dt);
 #ifdef STG
-		check_kinematic_constraints(&trajectory);
-		stg_end_test();
-		stg_record_test(true);
-#endif
-
-#ifdef STG
-		// FIXME
-		// here we are not getting the expected symbolic variables
-		// in the constraints
-		/* 
-		acceleration = trajectory.getCurrentAcceleration();
-		maxAcceleration = trajectory.getMaxAccel();
-		*/
-
 		stg_begin_test();
-		// dictionary
 		stg_input_float(&acceleration, acceleration);
 		stg_input_float(&maxAcceleration, maxAcceleration);
-		// propagate symbolic vars
-		/*
-		trajectory.setMaxAccel(maxAcceleration);
-		trajectory.setCurrentAcceleration(acceleration);
-		*/
 #endif
 		trajectory.updateDurations(velsp);
 #ifdef STG
@@ -410,8 +367,10 @@ int main(int argc, char *argv[])
 	*/
 
 	test_velsp(-1.0);
+	/*
 	test_velsp(0.0);
 	test_velsp(1.0);
+	*/
 
 	/*
 	test_t1_saturation(-7.42);
