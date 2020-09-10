@@ -1,12 +1,5 @@
 /* 
  ** Simplified version of: https://github.com/PX4/Firmware/blob/master/src/modules/navigator/geofence.cpp
- ** Removed C++ idioms
- ** Replace polygon and circle fences with rectangular fences specified by 2 pairs of lat/long
- ** Used separate variables instead of arrays to make it simpler
- ** Remove utility methods, only kept check fence 
- ** Added main with sample calls, just as placeholder for symbolic or test invocations
- **
- ** Sebastian: 5/7/20
  */
 
 #include <stdlib.h>
@@ -18,7 +11,6 @@
 	#define stg_end_test() {}
 	#define stg_record_test(x) x 
 	void stg_symbolic_variable(void *, const char*) {}
-	void stg_input_int(int*, int) {}
 	void stg_input_float(float*, float) {}
 #else
 	#include "stg.h"
@@ -83,14 +75,9 @@ int main(int argc, char **argv)
 		stg_begin_test();
 
 		sscanf(buf, "%f %f %d", &lat, &lon, &expected);
-		/*
-		stg_input_int(&lat, lat);
-		stg_input_int(&lon, lon);
-		*/
 
 	    	printf("lat=%f lon=%f alt=%f lalt=%f halt=%f llat=%f hlat=%f llon=%f hlon=%f expected=%d\n", lat, lon, altitude, low_alt, high_alt, low_lat, high_lat, low_lon, high_lon, expected);
 
-//		bool isGeofenced = checkGeofence(lat, lon, altitude, low_alt, high_alt, low_lat, high_lat, low_lon, high_lon);
 		bool isGeofenced = checkGeofence(lat, lon, 200, 0, 400, 70, 80, 150, 170);
 		
 		stg_end_test();
