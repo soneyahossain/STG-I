@@ -10,8 +10,6 @@ This will serve to normalize the denominator across tests of differing length.  
 
 */
 #include <iostream>
-#include <string>
-#include <sstream>
 #include "stg_lib/stg.h"
 #include "stg_lib/distribution.hpp"
 //using namespace std;
@@ -28,8 +26,6 @@ int main () {
 
    //pass pointer to the array as an argument.
    avg = getAverageOfAllEvenNUmber(values_0, 4);
-
-   /*
 
    int values_1[7] = {1000, 2, 3, 17, 50, 90, 67};
    avg = getAverageOfAllEvenNUmber(values_1, 7);
@@ -48,8 +44,6 @@ int main () {
 
    printf("------------------------%lf\n", avg);
 
-   */
-
    //output the returned value
    //std::cout << "Average value is: " << avg << "\n";
    return 0;
@@ -62,7 +56,7 @@ double getAverageOfAllEvenNUmber(int arr[], int size) {
    stg_begin_test();
    stg_input_array(arr, "int", 10 , arr);
 
-   int i,count=0,sum = 0;
+   int i, count=0, sum = 0;
    double avg;
 
    for (i = 0; i < size; ++i) {
