@@ -21,11 +21,14 @@
 	void stg_input_int(int*, int) {}
 #else
 	#include "stg_lib/stg.h"
+	#include "stg_lib/distribution.hpp"
 #endif
 
 bool insideFence(int lat, int lon, int inclusion, int high_lat, int low_lat, int high_lon, int low_lon)
 {
 	bool inside = false;
+	bool inside_=  ((lon > low_lon) && (lon < high_lon) && (lat < high_lat) && (lat > low_lat)) xor (!inclusion);
+
 
 	// Very limited check
 	if (lon >= low_lon && lon <= high_lon)
@@ -41,6 +44,10 @@ bool insideFence(int lat, int lon, int inclusion, int high_lat, int low_lat, int
 			inside = true;
 		}
 	}
+
+
+	if(inside==inside_) printf("got same value\n");
+    else  printf("got different value\n");
 	return inside;
 }
 
@@ -51,7 +58,7 @@ bool checkGeofence(int lat, int lon, int altitude, int inclusion,int high_lat, i
 	int max_vertical_altitude = 400.0; // 400 ft, as per FAA Small Unmanned Aircraft Regulations (Part 107)
 
 
-	if (high_lon < low_lon || high_lat < low_lat){    //new condition added
+	if (high_lon < low_lon || high_lat < low_lat)   //new condition added
 	   return false;
 
 	// quick vertical ceiling check
@@ -83,14 +90,14 @@ int main(int argc, char **argv)
 		}
 	}
 
-	stg_symbolic_variable(&lat, "LAT");
-	stg_symbolic_variable(&lon, "LON");
-	stg_symbolic_variable(&altitude, "ALT");
-	stg_symbolic_variable(&inclusion, "INC");
-	stg_symbolic_variable(&high_lat, "HLAT");
-	stg_symbolic_variable(&low_lat, "LLAT");
-	stg_symbolic_variable(&high_lon, "HLON");
-	stg_symbolic_variable(&low_lon, "LLON");
+	stg_symbolic_variable(&lat, "LAT", -20, 20,uniform,0,0);
+	stg_symbolic_variable(&lon, "LON", -20, 20,uniform,0,0);
+	stg_symbolic_variable(&altitude, "ALT", -20, 20,uniform,0,0);
+	stg_symbolic_variable(&inclusion, "INC", -20, 20,uniform,0,0);
+	stg_symbolic_variable(&high_lat, "HLAT", -20, 20,uniform,0,0);
+	stg_symbolic_variable(&low_lat, "LLAT", -20, 20,uniform,0,0);
+	stg_symbolic_variable(&high_lon, "HLON", -20, 20,uniform,0,0);
+	stg_symbolic_variable(&low_lon, "LLON", -20, 20,uniform,0,0);
 
 	// each line of the input file contains test parameters and expected checkGeofence result
 	while (fgets(buf, 1000, params))
