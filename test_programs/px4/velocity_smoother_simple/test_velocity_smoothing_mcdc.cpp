@@ -312,9 +312,40 @@ int test_velsp(float velsp)
 		trajectory.updateTraj(dt);
 #ifdef STG
 		stg_begin_test();
+
+
+		/*
+lets say  the current value of accel is  CA, and max_accel is MA
+So, trajectory.getCurrentAcceleration() will return CA and trajectory.getMaxAccel() will return MA
+Now, if you call stg_input_float(&acceleration, trajectory.getCurrentAcceleration()) , this will set acceleration=CA and write these value to the dictionary
+if you call stg_input_float(&maxAcceleration, trajectory.getMaxAccel()), this will set maxAcceleration=MA and write these value to the dictionary
+Therefore, both of your symbolic varibales are updated to the concrete values to want
+
+Now,  if you call the below, your program will with the correct concrete values for accel and max_accel
+  trajectory.setMaxAccel(maxAcceleration);
+  trajectory.setCurrentAcceleration(acceleration);
+
+----------------------------------
+Now if you call the below lines first accel and max_accel are updated with old values ,
+  trajectory.setMaxAccel(maxAcceleration);
+  trajectory.setCurrentAcceleration(acceleration);
+
+
+and whenever you call the below stg_input_float call you are updating acceleration and maxAcceleration with the same wrong value even your symbolic linkw will work but program will definitely
+execute in a different path according to the concrete state of the program which you dont exxpect.
+
+stg_input_float(&acceleration, trajectory.getCurrentAcceleration())
+stg_input_float(&maxAcceleration, trajectory.getMaxAccel())
+
+*/
+
+
 		stg_input_float(&acceleration, trajectory.getCurrentAcceleration());
 		stg_input_float(&maxAcceleration, trajectory.getMaxAccel());
 #endif
+
+        trajectory.setMaxAccel(maxAcceleration);
+        trajectory.setCurrentAcceleration(acceleration);
 		trajectory.updateDurations(velsp);
 #ifdef STG
 		check_kinematic_constraints(&trajectory);
