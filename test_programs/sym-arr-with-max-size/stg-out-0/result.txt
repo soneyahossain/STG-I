@@ -1,0 +1,23 @@
+For stg-out-0 => combined result:  samples=5000000, mean=3.201700e-02, variance=6.198382e-09, time=90.670563, stdev = 7.872981e-05
+
+Individual Results:
+
+
+5 variables:
+
+0 -> samples=5000000, mean=3.201700e-02, variance=6.198382e-09, time=23.597172, stdev=7.872981e-05
+
+7 variables:
+1 -> samples=5000000, mean=8.009600e-03, variance=1.589089e-09, time=22.140404, stdev=3.986338e-05
+
+8 variables:
+2 -> samples=5000000, mean=3.905000e-03, variance=7.779502e-10, time=22.830357, stdev=2.789176e-05
+
+9 variables:
+3 -> samples=5000000, mean=2.099200e-03, variance=4.189587e-10, time=23.187861, stdev=2.046848e-05
+
+10 variables:
+4 -> samples=5000000, mean=1.078200e-03, variance=2.154075e-10, time=23.746601, stdev=1.467677e-05
+
+10 variables: even the array length was 11
+5 -> samples=5000000, mean=1.078200e-03, variance=2.154075e-10, time=25.694713, stdev=1.467677e-05
