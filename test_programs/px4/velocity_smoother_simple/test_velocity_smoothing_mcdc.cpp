@@ -212,7 +212,7 @@ int test_getter_setter()
 	}
 
 	if(trajectory.getCurrentPosition() != 1.f){
-        	oracle = false;
+        oracle = false;
 	}
 
 	stg_end_test();
@@ -314,7 +314,7 @@ int test_velsp(float velsp)
 		stg_begin_test();
 
 
-		/*
+/*
 lets say  the current value of accel is  CA, and max_accel is MA
 So, trajectory.getCurrentAcceleration() will return CA and trajectory.getMaxAccel() will return MA
 Now, if you call stg_input_float(&acceleration, trajectory.getCurrentAcceleration()) , this will set acceleration=CA and write these value to the dictionary
@@ -326,10 +326,9 @@ Now,  if you call the below, your program will with the correct concrete values 
   trajectory.setCurrentAcceleration(acceleration);
 
 ----------------------------------
-Now if you call the below lines first accel and max_accel are updated with old values ,
+Now, if you call the below lines first accel and max_accel are updated with old values ,
   trajectory.setMaxAccel(maxAcceleration);
   trajectory.setCurrentAcceleration(acceleration);
-
 
 and whenever you call the below stg_input_float call you are updating acceleration and maxAcceleration with the same wrong value even your symbolic linkw will work but program will definitely
 execute in a different path according to the concrete state of the program which you dont exxpect.
@@ -338,8 +337,6 @@ stg_input_float(&acceleration, trajectory.getCurrentAcceleration())
 stg_input_float(&maxAcceleration, trajectory.getMaxAccel())
 
 */
-
-
 		stg_input_float(&acceleration, trajectory.getCurrentAcceleration());
 		stg_input_float(&maxAcceleration, trajectory.getMaxAccel());
 #endif
