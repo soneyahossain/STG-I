@@ -296,7 +296,7 @@ int test_velsp(float velsp)
 #ifdef STG
 	stg_begin_test();
 	stg_input_float(&acceleration, acceleration);
-	stg_input_float(&maxAcceleration, maxAcceleration);
+//	stg_input_float(&maxAcceleration, maxAcceleration);
 #endif
 	trajectory.updateDurations(velsp);
 #ifdef STG
@@ -338,7 +338,7 @@ stg_input_float(&maxAcceleration, trajectory.getMaxAccel())
 
 */
 		stg_input_float(&acceleration, trajectory.getCurrentAcceleration());
-		stg_input_float(&maxAcceleration, trajectory.getMaxAccel());
+//		stg_input_float(&maxAcceleration, trajectory.getMaxAccel());
 #endif
 
         trajectory.setMaxAccel(maxAcceleration);

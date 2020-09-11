@@ -84,19 +84,19 @@ void VelocitySmoothing::reset(float accel, float vel, float pos)
 
 float VelocitySmoothing::saturateT1ForAccel(float a0, float j_max, float T1, float a_max)
 {
-//	printf("saturateT1ForAccel(): accel[%f] maxAccell[%f]\n", a0, a_max);
+	printf("saturateT1ForAccel(): accel[%f] maxAccell[%f]\n", a0, a_max);
 	/* Check maximum acceleration, saturate and recompute T1 if needed */
 	float accel_T1 = a0 + j_max * T1;
 	float T1_new = T1;
 
 	if (accel_T1 > a_max) {
 		T1_new = (a_max - a0) / j_max;
-//	printf("saturateT1ForAccel(): clip+: clip T1 [%f] to [%f]\n", accel_T1, T1_new);
+	printf("saturateT1ForAccel(): clip+: clip T1 [%f] to [%f]\n", accel_T1, T1_new);
 	} else if (accel_T1 < -a_max) {
-//	printf("saturateT1ForAccel(): clip-: clip T1 [%f] to [%f]\n", accel_T1, T1_new);
+	printf("saturateT1ForAccel(): clip-: clip T1 [%f] to [%f]\n", accel_T1, T1_new);
 		T1_new = (-a_max - a0) / j_max;
 	} 
-//	else printf("no clipping");
+	else printf("no clipping\n");
 
 	return T1_new;
 }
@@ -176,6 +176,7 @@ float VelocitySmoothing::computeT2(float T1, float T3, float a0, float v3, float
 	float den = a0 + j_max * T1;
 
 	if (math::abs_t(den) > FLT_EPSILON) {
+		printf("computeT2(): abs_t(A + g(A)) > 0.0000001\n");
 		T2 = (-0.5f * T1 * T1 * j_max - T1 * T3 * j_max - T1 * a0 + 0.5f * T3 * T3 * j_max - T3 * a0 + v3) / den;
 	}
 
@@ -233,12 +234,19 @@ float VelocitySmoothing::computeVelAtZeroAcc()
 {
 	float vel_zero_acc = _state.v;
 
+	// if we don't take this branch, then the constraint emitted will look like
+	//      A < 0.00000001 (and so there is no hope of getting any input volume generalization here)
 	if (math::abs_t(_state.a) > FLT_EPSILON) {
+		printf("computeVelAtXeroAcc(): took abs value of _state.a\n");
 		float j_zero_acc = -sign(_state.a) * _max_jerk; // Required jerk to reduce the acceleration
 		float t_zero_acc = -_state.a / j_zero_acc; // Required time to cancel the current acceleration
 		vel_zero_acc = _state.v + _state.a * t_zero_acc + 0.5f * j_zero_acc * t_zero_acc * t_zero_acc;
 	}
 
+
+	
+
+	printf("computeVelAtXeroAcc(): return vel_zero_acc = %f\n", vel_zero_acc);
 	return vel_zero_acc;
 }
 
