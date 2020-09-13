@@ -281,7 +281,7 @@ int test_velsp(float velsp)
 
 #ifdef STG
 	stg_symbolic_variable(&acceleration, "A", -20.0f, 20.0f, "uniform" , 0,0);
-	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
+//	stg_symbolic_variable(&maxAcceleration, "M_A", -20.0f, 20.0f, "uniform" , 0,0);
 #endif
 
 	trajectory.setMaxJerk(55.2f);
