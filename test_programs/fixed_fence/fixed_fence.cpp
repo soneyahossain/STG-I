@@ -23,6 +23,8 @@
 	#include "stg.h"
 #endif
 
+
+
 // Takes a point, a fence type, and 2 points defining a rectangular fence, and it returns if the point is acceptable given that fence
 bool checkGeofence(int lat, int lon, int altitude, int low_alt, int high_alt, int low_lat, int high_lat, int low_lon, int high_lon)
 {
@@ -57,8 +59,8 @@ int main(int argc, char **argv)
 	}
 
 	// lat/lon position of drone is symbolic
-	stg_symbolic_variable(&lat, "LAT");
-	stg_symbolic_variable(&lon, "LON");
+	stg_symbolic_variable(&lat, "LAT", 0.0, 180.0, "normal", 0.0, 0.0);
+	stg_symbolic_variable(&lon, "LON", 0.0, 180.0, "normal", 0.0, 0.0);
 
 	// everything else is fixed
 	

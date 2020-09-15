@@ -565,7 +565,7 @@ struct STGInstrumenter : public ModulePass {
                 else if (FCmpInst* fCmpInst = dyn_cast<FCmpInst>(I)) {
 
 
-                    I->dump();
+//                    I->dump();
 
                     std::string result = fCmpInst->getName().str();
 

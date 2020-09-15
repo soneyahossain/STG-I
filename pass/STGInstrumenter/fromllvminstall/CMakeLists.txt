@@ -2,7 +2,8 @@
 # Install STGInstrumenter LLVM pass
 # for binary installation of LLVM
 #
-cmake_minimum_required(VERSION 3.16)
+#cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.00)
 project(stgi)
 
 #

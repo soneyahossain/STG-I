@@ -50,8 +50,8 @@ int main(int argc, char **argv)
 	}
 
 	// lat/lon position of drone is symbolic
-	stg_symbolic_variable(&lat, "LAT");
-	stg_symbolic_variable(&lon, "LON");
+	stg_symbolic_variable(&lat, "LAT", -90.0, 90.0, (char*)"normal", 0.0, 0.0);
+	stg_symbolic_variable(&lon, "LON", -180.0, 180.0, (char*)"normal", 0.0, 0.0);
 
 	// everything else is fixed
 	
