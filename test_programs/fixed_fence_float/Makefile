@@ -10,7 +10,7 @@ clean:
 # generate bitcode for program under test
 #
 fixed_fence.float.bc: fixed_fence.float.cpp
-	clang -I$(STGI_INC) -emit-llvm -fno-discard-value-names $< -c -o $@
+	clang++ -I$(STGI_INC) -emit-llvm -fno-discard-value-names $< -c -o $@
 	llvm-dis $@ -o $<.ll
 
 #
