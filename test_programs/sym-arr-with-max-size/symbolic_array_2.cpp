@@ -28,12 +28,11 @@ int main () {
    getAverageOfAllEvenNUmber(arr_2_3,2);
 
 
-
    //int array with 3 elements.
    int arr_3_0[3] = {1,1,1};  //o, o, o
    int arr_3_1[3] = {2,4,6};  //e, e, e
    int arr_3_2[3] = {1,1,2};  //o, o, e
-   int arr_3_3[3] = {1,1,1};  //o, o, o
+   int arr_3_3[3] = {2,1,1};  //e, o, o
    getAverageOfAllEvenNUmber(arr_3_0,3);
    getAverageOfAllEvenNUmber(arr_3_1,3);
    getAverageOfAllEvenNUmber(arr_3_2,3);
@@ -58,6 +57,7 @@ int main () {
    getAverageOfAllEvenNUmber(arr_4_5,4);
    getAverageOfAllEvenNUmber(arr_4_6,4);
    getAverageOfAllEvenNUmber(arr_4_7,4);
+
 
    return 0;
 }
