@@ -16,7 +16,7 @@ This will serve to normalize the denominator across tests of differing length.  
 void getAverageOfAllEvenNUmber(int arr[], int size);
 
 int main () {
-/*
+
    //int array with 2 elements.
    int arr_2_0[2] = {2,3};  //e, o
    int arr_2_1[2] = {2,4};  //e, e
@@ -27,7 +27,7 @@ int main () {
    getAverageOfAllEvenNUmber(arr_2_2,2);
    getAverageOfAllEvenNUmber(arr_2_3,2);
 
-*/
+
 
    //int array with 3 elements.
    int arr_3_0[3] = {1,1,1};  //o, o, o
@@ -39,9 +39,6 @@ int main () {
    getAverageOfAllEvenNUmber(arr_3_2,3);
    getAverageOfAllEvenNUmber(arr_3_3,3);
 
-
-
-/*
 
    //int array with 4 elements.
    int arr_4_0[4] = {1,1,1,1};  //o, o, o, o
@@ -62,7 +59,6 @@ int main () {
    getAverageOfAllEvenNUmber(arr_4_6,4);
    getAverageOfAllEvenNUmber(arr_4_7,4);
 
-*/
    return 0;
 }
 
