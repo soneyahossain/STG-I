@@ -1,0 +1,22 @@
+[
+a_0 : i32 = 1,range:[0,100],uniform,
+a_1 : i32 = 4,range:[0,100],uniform,
+S : i32 = 2,range:[2,4],uniform
+]
+
+//Test: passed
+
+(land
+  (slt (i32 0) S)
+  (land
+    (lnot(eq (srem a_0 (i32 2)) (i32 0)))
+    (land
+      (slt (add (i32 0) (i32 1)) S)
+      (land
+        (eq (srem a_1 (i32 2)) (i32 0))
+        (lnot(slt (add (add (i32 0) (i32 1)) (i32 1)) S))
+      )
+    )
+  )
+)
+
