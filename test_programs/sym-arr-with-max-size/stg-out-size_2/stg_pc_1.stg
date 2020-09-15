@@ -1,0 +1,30 @@
+[
+a_0 : i32 = 2,range:[0,100],uniform,
+a_1 : i32 = 4,range:[0,100],uniform,
+a_2 : i32 = 2,range:[0,100],uniform,
+a_3 : i32 = 3,range:[0,100],uniform,
+a_4 : i32 = -262012815,range:[0,100],uniform,
+a_5 : i32 = -2043311931,range:[0,100],uniform,
+a_6 : i32 = 0,range:[0,100],uniform,
+a_7 : i32 = 0,range:[0,100],uniform,
+a_8 : i32 = -421607008,range:[0,100],uniform,
+a_9 : i32 = 32766,range:[0,100],uniform,
+S : i32 = 2,range:[0,4],uniform
+]
+
+//Test: passed
+
+(land
+  (slt (i32 0) S)
+  (land
+    (eq (srem a_0 (i32 2)) (i32 0))
+    (land
+      (slt (add (i32 0) (i32 1)) S)
+      (land
+        (eq (srem a_1 (i32 2)) (i32 0))
+        (lnot(slt (add (add (i32 0) (i32 1)) (i32 1)) S))
+      )
+    )
+  )
+)
+

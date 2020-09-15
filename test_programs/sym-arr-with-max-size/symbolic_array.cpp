@@ -52,7 +52,7 @@ int main () {
 
 double getAverageOfAllEvenNUmber(int arr[], int size) {
 
-   stg_symbolic_array(arr, "int",10 , "a_", -20, 20, uniform, 0,0);
+   stg_symbolic_array(arr, "int", 10 , "a_", -20, 20, uniform, 0,0);
    stg_begin_test();
    stg_input_array(arr, "int", 10 , arr);
 
