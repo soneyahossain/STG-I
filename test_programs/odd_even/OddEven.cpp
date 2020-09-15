@@ -1,5 +1,5 @@
 #include "stdio.h"
-#include "stg.h"
+#include "stgi/stg.h"
 
 #define private public
 #include "OddEven.hpp"
@@ -21,7 +21,7 @@ int main()
 {
 	OddEven oe;
 
-	stg_symbolic_variable(&oe._number, "NUM", 50, 60, "normal" , 0,0);  //some random min, max
+	stg_symbolic_variable(&oe._number, "NUM", 50, 60, (char*)"normal", 0,0);  //some random min, max
 	stg_begin_test();
 	stg_input_int(&oe._number, 5);
 

@@ -16,7 +16,7 @@ sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-10 100
 sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-10 100
 sudo update-alternatives --install /usr/bin/opt opt /usr/bin/opt-10 100
 sudo update-alternatives --install /usr/bin/llvm-link llvm-link /usr/bin/llvm-link-10 100
-sudo update-alternatives --install /usr/bin/llvm-dis llvm-link /usr/bin/llvm-dis-10 100
+sudo update-alternatives --install /usr/bin/llvm-dis llvm-dis /usr/bin/llvm-dis-10 100
 sudo update-alternatives --install /usr/bin/llc llc /usr/bin/llc-10 100
 
 #
