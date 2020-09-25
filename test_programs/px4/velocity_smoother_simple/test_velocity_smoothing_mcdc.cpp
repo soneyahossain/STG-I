@@ -395,8 +395,10 @@ int main(int argc, char *argv[])
 	*/
 
 	test_velsp(-1.0);
+	/*
 	test_velsp(0.0);
 	test_velsp(1.0);
+	*/
 
 	/*
 	test_t1_saturation(-7.42);
