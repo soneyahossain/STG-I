@@ -5,7 +5,7 @@
 # Install latest LLVM (currently at 11)
 #
 
-VERSION=11
+VERSION=10
 
 # bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 
