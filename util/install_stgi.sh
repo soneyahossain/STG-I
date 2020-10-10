@@ -1,3 +1,5 @@
+#!/bin/bash -x
+
 usage()
 {
 	echo "Make sure to define the following environment variables:"

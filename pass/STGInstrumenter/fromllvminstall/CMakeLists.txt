@@ -12,7 +12,7 @@ project(stgi)
 
 
 list(APPEND CMAKE_PREFIX_PATH "${LLVM_DIR}/lib/cmake/llvm/")
-find_package(LLVM 10.0.0 REQUIRED CONFIG)
+find_package(LLVM 11.0.0 REQUIRED CONFIG)
 include_directories(SYSTEM ${LLVM_INCLUDE_DIRS})
 
 # Use the same C++ standard as LLVM does
