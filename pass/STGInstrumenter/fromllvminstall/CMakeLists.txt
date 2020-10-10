@@ -2,7 +2,6 @@
 # Install STGInstrumenter LLVM pass
 # for binary installation of LLVM
 #
-#cmake_minimum_required(VERSION 3.16)
 cmake_minimum_required(VERSION 3.00)
 project(stgi)
 
@@ -12,7 +11,7 @@ project(stgi)
 
 
 list(APPEND CMAKE_PREFIX_PATH "${LLVM_DIR}/lib/cmake/llvm/")
-find_package(LLVM 11.0.0 REQUIRED CONFIG)
+find_package(LLVM 10 REQUIRED CONFIG)
 include_directories(SYSTEM ${LLVM_INCLUDE_DIRS})
 
 # Use the same C++ standard as LLVM does
