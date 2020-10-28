@@ -1,0 +1,48 @@
+
+GOOGLE_TEST_LIB = gtest
+GOOGLE_TEST_INCLUDE = /usr/local/include
+TEST_DIR=../test
+LIB_DIR=../../../lib/
+
+
+
+CC = clang++ -std=c++14
+CFLAGS  = -c -Wall -I $(GOOGLE_TEST_INCLUDE)
+LD_FLAGS = -L /usr/local/lib -l $(GOOGLE_TEST_LIB) -l pthread
+
+
+OBJECTS = stg.o simpler_mission_feasibility_test.o simpler_mission_feasibility_checker.o simpler_missionWaypoint_checker.o simpler_missionPositionAltitude_checker.o  simpler_missionCommand_checker.o simpler_missionGeofence_checker.o
+TARGET = missionChecker
+
+
+default: $(TARGET)
+
+missionChecker:  $(OBJECTS)
+	$(CC)  -o $(TARGET) $(OBJECTS) $(LD_FLAGS)
+
+simpler_mission_feasibility_test.o: $(TEST_DIR)/mission_feasibility_test.cpp simpler_mission.h $(LIB_DIR)/stg.h $(LIB_DIR)/distribution.hpp
+	$(CC) $(CFLAGS) -c $(TEST_DIR)/mission_feasibility_test.cpp -o simpler_mission_feasibility_test.o
+
+stg.o: $(LIB_DIR)/stg.cpp $(LIB_DIR)/stg.h $(LIB_DIR)/stg.hpp
+	$(CC) $(CFLAGS) -c $(LIB_DIR)/stg.cpp
+
+simpler_mission_feasibility_checker.o:  simpler_mission_feasibility_checker.cpp simpler_mission.h
+	$(CC) $(CFLAGS) -c simpler_mission_feasibility_checker.cpp
+
+simple_missionWaypoint_checker.o:  simpler_missionWaypoint_checker.cpp simpler_mission.h
+	$(CC) $(CFLAGS) -c simpler_missionWaypoint_checker.cpp
+
+simpler_missionPositionAltitude_checker.o:  simpler_missionPositionAltitude_checker.cpp simpler_mission.h
+	$(CC) $(CFLAGS) -c simpler_missionPositionAltitude_checker.cpp
+
+simpler_missionCommand_checker.o:  simpler_missionCommand_checker.cpp simpler_mission.h
+	$(CC) $(CFLAGS) -c simpler_missionCommand_checker.cpp
+
+simpler_missionGeofence_checker.o:  simpler_missionGeofence_checker.cpp simpler_mission.h
+	$(CC) $(CFLAGS) -c simpler_missionGeofence_checker.cpp
+
+#%.o : %.cpp simpler_mission.h
+	#$(CC) $(CFLAGS) -c $<
+
+clean: #cleaning all object files and the combined file
+	$(RM) *.o missionChecker

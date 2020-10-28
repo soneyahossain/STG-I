@@ -1,0 +1,148 @@
+; ModuleID = 'simpler_mission_feasibility_checker.cpp'
+source_filename = "simpler_mission_feasibility_checker.cpp"
+target datalayout = "e-m:o-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-macosx10.14.0"
+
+%struct.mission_s = type { [20 x %struct.mission_item_s], i32 }
+%struct.mission_item_s = type { double, double, float, i32, i8 }
+
+; Function Attrs: noinline optnone ssp uwtable
+define zeroext i1 @_Z20checkMissionFeasibleRK9mission_sfbfbiiii(%struct.mission_s* dereferenceable(648) %mission, float %max_distance_between_waypoints, i1 zeroext %home_alt_valid, float %home_alt, i1 zeroext %inclusion, i32 %high_lat, i32 %low_lat, i32 %high_lon, i32 %low_lon) #0 {
+entry:
+  %retval = alloca i1, align 1
+  %mission.addr = alloca %struct.mission_s*, align 8
+  %max_distance_between_waypoints.addr = alloca float, align 4
+  %home_alt_valid.addr = alloca i8, align 1
+  %home_alt.addr = alloca float, align 4
+  %inclusion.addr = alloca i8, align 1
+  %high_lat.addr = alloca i32, align 4
+  %low_lat.addr = alloca i32, align 4
+  %high_lon.addr = alloca i32, align 4
+  %low_lon.addr = alloca i32, align 4
+  %failed = alloca i8, align 1
+  store %struct.mission_s* %mission, %struct.mission_s** %mission.addr, align 8
+  store float %max_distance_between_waypoints, float* %max_distance_between_waypoints.addr, align 4
+  %frombool = zext i1 %home_alt_valid to i8
+  store i8 %frombool, i8* %home_alt_valid.addr, align 1
+  store float %home_alt, float* %home_alt.addr, align 4
+  %frombool1 = zext i1 %inclusion to i8
+  store i8 %frombool1, i8* %inclusion.addr, align 1
+  store i32 %high_lat, i32* %high_lat.addr, align 4
+  store i32 %low_lat, i32* %low_lat.addr, align 4
+  store i32 %high_lon, i32* %high_lon.addr, align 4
+  store i32 %low_lon, i32* %low_lon.addr, align 4
+  %0 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %0, i32 0, i32 1
+  %1 = load i32, i32* %count, align 8
+  %cmp = icmp sle i32 %1, 0
+  br i1 %cmp, label %if.then, label %if.end
+
+if.then:                                          ; preds = %entry
+  store i1 false, i1* %retval, align 1
+  br label %return
+
+if.end:                                           ; preds = %entry
+  store i8 0, i8* %failed, align 1
+  %2 = load i8, i8* %home_alt_valid.addr, align 1
+  %tobool = trunc i8 %2 to i1
+  br i1 %tobool, label %if.end3, label %if.then2
+
+if.then2:                                         ; preds = %if.end
+  store i8 1, i8* %failed, align 1
+  br label %if.end3
+
+if.end3:                                          ; preds = %if.then2, %if.end
+  %3 = load i8, i8* %failed, align 1
+  %tobool4 = trunc i8 %3 to i1
+  br i1 %tobool4, label %lor.end, label %lor.rhs
+
+lor.rhs:                                          ; preds = %if.end3
+  %4 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %call = call zeroext i1 @_Z24checkMissionItemValidityRK9mission_s(%struct.mission_s* dereferenceable(648) %4)
+  %lnot = xor i1 %call, true
+  br label %lor.end
+
+lor.end:                                          ; preds = %lor.rhs, %if.end3
+  %5 = phi i1 [ true, %if.end3 ], [ %lnot, %lor.rhs ]
+  %frombool5 = zext i1 %5 to i8
+  store i8 %frombool5, i8* %failed, align 1
+  %6 = load i8, i8* %failed, align 1
+  %tobool6 = trunc i8 %6 to i1
+  br i1 %tobool6, label %lor.end10, label %lor.rhs7
+
+lor.rhs7:                                         ; preds = %lor.end
+  %7 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %8 = load float, float* %max_distance_between_waypoints.addr, align 4
+  %call8 = call zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sf(%struct.mission_s* dereferenceable(648) %7, float %8)
+  %lnot9 = xor i1 %call8, true
+  br label %lor.end10
+
+lor.end10:                                        ; preds = %lor.rhs7, %lor.end
+  %9 = phi i1 [ true, %lor.end ], [ %lnot9, %lor.rhs7 ]
+  %frombool11 = zext i1 %9 to i8
+  store i8 %frombool11, i8* %failed, align 1
+  %10 = load i8, i8* %failed, align 1
+  %tobool12 = trunc i8 %10 to i1
+  br i1 %tobool12, label %lor.end17, label %lor.rhs13
+
+lor.rhs13:                                        ; preds = %lor.end10
+  %11 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %12 = load i8, i8* %inclusion.addr, align 1
+  %tobool14 = trunc i8 %12 to i1
+  %13 = load i32, i32* %high_lat.addr, align 4
+  %14 = load i32, i32* %low_lat.addr, align 4
+  %15 = load i32, i32* %high_lon.addr, align 4
+  %16 = load i32, i32* %low_lon.addr, align 4
+  %call15 = call zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648) %11, i1 zeroext %tobool14, i32 %13, i32 %14, i32 %15, i32 %16)
+  %lnot16 = xor i1 %call15, true
+  br label %lor.end17
+
+lor.end17:                                        ; preds = %lor.rhs13, %lor.end10
+  %17 = phi i1 [ true, %lor.end10 ], [ %lnot16, %lor.rhs13 ]
+  %frombool18 = zext i1 %17 to i8
+  store i8 %frombool18, i8* %failed, align 1
+  %18 = load i8, i8* %failed, align 1
+  %tobool19 = trunc i8 %18 to i1
+  br i1 %tobool19, label %lor.end24, label %lor.rhs20
+
+lor.rhs20:                                        ; preds = %lor.end17
+  %19 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %20 = load float, float* %home_alt.addr, align 4
+  %21 = load i8, i8* %home_alt_valid.addr, align 1
+  %tobool21 = trunc i8 %21 to i1
+  %call22 = call zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sfb(%struct.mission_s* dereferenceable(648) %19, float %20, i1 zeroext %tobool21)
+  %lnot23 = xor i1 %call22, true
+  br label %lor.end24
+
+lor.end24:                                        ; preds = %lor.rhs20, %lor.end17
+  %22 = phi i1 [ true, %lor.end17 ], [ %lnot23, %lor.rhs20 ]
+  %frombool25 = zext i1 %22 to i8
+  store i8 %frombool25, i8* %failed, align 1
+  %23 = load i8, i8* %failed, align 1
+  %tobool26 = trunc i8 %23 to i1
+  store i1 %tobool26, i1* %retval, align 1
+  br label %return
+
+return:                                           ; preds = %lor.end24, %if.then
+  %24 = load i1, i1* %retval, align 1
+  ret i1 %24
+}
+
+declare zeroext i1 @_Z24checkMissionItemValidityRK9mission_s(%struct.mission_s* dereferenceable(648)) #1
+
+declare zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sf(%struct.mission_s* dereferenceable(648), float) #1
+
+declare zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648), i1 zeroext, i32, i32, i32, i32) #1
+
+declare zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sfb(%struct.mission_s* dereferenceable(648), float, i1 zeroext) #1
+
+attributes #0 = { noinline optnone ssp uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="penryn" "target-features"="+cx16,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="penryn" "target-features"="+cx16,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.module.flags = !{!0, !1, !2}
+!llvm.ident = !{!3}
+
+!0 = !{i32 2, !"SDK Version", [2 x i32] [i32 10, i32 14]}
+!1 = !{i32 1, !"wchar_size", i32 4}
+!2 = !{i32 7, !"PIC Level", i32 2}
+!3 = !{!"Apple LLVM version 10.0.1 (clang-1001.0.46.4)"}
