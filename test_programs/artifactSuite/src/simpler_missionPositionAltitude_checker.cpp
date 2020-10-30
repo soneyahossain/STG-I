@@ -23,8 +23,16 @@
 */
 bool checkHomePositionAltitude(const mission_s &mission, float home_alt, bool home_alt_valid)
 {
+
+
+
+
 	/* Check if all waypoints are above the home altitude */
 	for (size_t i = 0; i < mission.count; i++) {
+
+
+
+	    printf("from function %p\n",&mission.items[i].altitude);
  
  		/* reject relative alt without home set */
 		if (mission.items[i].altitude_is_relative && !home_alt_valid) {
@@ -41,6 +49,9 @@ bool checkHomePositionAltitude(const mission_s &mission, float home_alt, bool ho
 
 	return true;
 }
+
+
+
 
 
 /* Tests 

@@ -6,7 +6,9 @@ target triple = "x86_64-apple-macosx10.14.0"
 %struct.mission_s = type { [20 x %struct.mission_item_s], i32 }
 %struct.mission_item_s = type { double, double, float, i32, i8 }
 
-; Function Attrs: noinline nounwind optnone ssp uwtable
+@.str = private unnamed_addr constant [18 x i8] c"from function %p\0A\00", align 1
+
+; Function Attrs: noinline optnone ssp uwtable
 define zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sfb(%struct.mission_s* dereferenceable(648) %mission, float %home_alt, i1 zeroext %home_alt_valid) #0 {
 entry:
   %retval = alloca i1, align 1
@@ -36,68 +38,74 @@ for.body:                                         ; preds = %for.cond
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %3, i32 0, i32 0
   %4 = load i64, i64* %i, align 8
   %arrayidx = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items, i64 0, i64 %4
-  %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx, i32 0, i32 4
-  %5 = load i8, i8* %altitude_is_relative, align 8
-  %tobool = trunc i8 %5 to i1
+  %altitude = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx, i32 0, i32 2
+  %call = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str, i32 0, i32 0), float* %altitude)
+  %5 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items1 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %5, i32 0, i32 0
+  %6 = load i64, i64* %i, align 8
+  %arrayidx2 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items1, i64 0, i64 %6
+  %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx2, i32 0, i32 4
+  %7 = load i8, i8* %altitude_is_relative, align 8
+  %tobool = trunc i8 %7 to i1
   br i1 %tobool, label %land.lhs.true, label %if.end
 
 land.lhs.true:                                    ; preds = %for.body
-  %6 = load i8, i8* %home_alt_valid.addr, align 1
-  %tobool1 = trunc i8 %6 to i1
-  br i1 %tobool1, label %if.end, label %if.then
+  %8 = load i8, i8* %home_alt_valid.addr, align 1
+  %tobool3 = trunc i8 %8 to i1
+  br i1 %tobool3, label %if.end, label %if.then
 
 if.then:                                          ; preds = %land.lhs.true
   store i1 false, i1* %retval, align 1
   br label %return
 
 if.end:                                           ; preds = %land.lhs.true, %for.body
-  %7 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items2 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %7, i32 0, i32 0
-  %8 = load i64, i64* %i, align 8
-  %arrayidx3 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items2, i64 0, i64 %8
-  %altitude_is_relative4 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx3, i32 0, i32 4
-  %9 = load i8, i8* %altitude_is_relative4, align 8
-  %tobool5 = trunc i8 %9 to i1
-  br i1 %tobool5, label %cond.true, label %cond.false
+  %9 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items4 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %9, i32 0, i32 0
+  %10 = load i64, i64* %i, align 8
+  %arrayidx5 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items4, i64 0, i64 %10
+  %altitude_is_relative6 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx5, i32 0, i32 4
+  %11 = load i8, i8* %altitude_is_relative6, align 8
+  %tobool7 = trunc i8 %11 to i1
+  br i1 %tobool7, label %cond.true, label %cond.false
 
 cond.true:                                        ; preds = %if.end
-  %10 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items6 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %10, i32 0, i32 0
-  %11 = load i64, i64* %i, align 8
-  %arrayidx7 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items6, i64 0, i64 %11
-  %altitude = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 2
-  %12 = load float, float* %altitude, align 8
-  %13 = load float, float* %home_alt.addr, align 4
-  %add = fadd float %12, %13
+  %12 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items8 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %12, i32 0, i32 0
+  %13 = load i64, i64* %i, align 8
+  %arrayidx9 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items8, i64 0, i64 %13
+  %altitude10 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx9, i32 0, i32 2
+  %14 = load float, float* %altitude10, align 8
+  %15 = load float, float* %home_alt.addr, align 4
+  %add = fadd float %14, %15
   br label %cond.end
 
 cond.false:                                       ; preds = %if.end
-  %14 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items8 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %14, i32 0, i32 0
-  %15 = load i64, i64* %i, align 8
-  %arrayidx9 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items8, i64 0, i64 %15
-  %altitude10 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx9, i32 0, i32 2
-  %16 = load float, float* %altitude10, align 8
+  %16 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items11 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %16, i32 0, i32 0
+  %17 = load i64, i64* %i, align 8
+  %arrayidx12 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items11, i64 0, i64 %17
+  %altitude13 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx12, i32 0, i32 2
+  %18 = load float, float* %altitude13, align 8
   br label %cond.end
 
 cond.end:                                         ; preds = %cond.false, %cond.true
-  %cond = phi float [ %add, %cond.true ], [ %16, %cond.false ]
+  %cond = phi float [ %add, %cond.true ], [ %18, %cond.false ]
   store float %cond, float* %wp_alt, align 4
-  %17 = load float, float* %home_alt.addr, align 4
-  %18 = load float, float* %wp_alt, align 4
-  %cmp11 = fcmp ogt float %17, %18
-  br i1 %cmp11, label %if.then12, label %if.end13
+  %19 = load float, float* %home_alt.addr, align 4
+  %20 = load float, float* %wp_alt, align 4
+  %cmp14 = fcmp ogt float %19, %20
+  br i1 %cmp14, label %if.then15, label %if.end16
 
-if.then12:                                        ; preds = %cond.end
+if.then15:                                        ; preds = %cond.end
   store i1 false, i1* %retval, align 1
   br label %return
 
-if.end13:                                         ; preds = %cond.end
+if.end16:                                         ; preds = %cond.end
   br label %for.inc
 
-for.inc:                                          ; preds = %if.end13
-  %19 = load i64, i64* %i, align 8
-  %inc = add i64 %19, 1
+for.inc:                                          ; preds = %if.end16
+  %21 = load i64, i64* %i, align 8
+  %inc = add i64 %21, 1
   store i64 %inc, i64* %i, align 8
   br label %for.cond
 
@@ -105,12 +113,15 @@ for.end:                                          ; preds = %for.cond
   store i1 true, i1* %retval, align 1
   br label %return
 
-return:                                           ; preds = %for.end, %if.then12, %if.then
-  %20 = load i1, i1* %retval, align 1
-  ret i1 %20
+return:                                           ; preds = %for.end, %if.then15, %if.then
+  %22 = load i1, i1* %retval, align 1
+  ret i1 %22
 }
 
-attributes #0 = { noinline nounwind optnone ssp uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="penryn" "target-features"="+cx16,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+declare i32 @printf(i8*, ...) #1
+
+attributes #0 = { noinline optnone ssp uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="penryn" "target-features"="+cx16,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="penryn" "target-features"="+cx16,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
 
 !llvm.module.flags = !{!0, !1, !2}
 !llvm.ident = !{!3}
