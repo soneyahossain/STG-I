@@ -132,7 +132,7 @@ TEST(CheckGeofence, InsideTooHigh_)
 	//printf("Inside but exc/reject: 38, 78, 100, false, 79, 35, 85, 35: %d\n", checkGeofence(38, 78, 100, false,  79, 35, 85, 35));
 }
 
-
+/*
 
 TEST(CheckGeofence, InsideTooHigh)
 {
@@ -144,7 +144,6 @@ TEST(CheckGeofence, InsideTooHigh)
 
 	mission.items[0].altitude_is_relative = false;
 
-
     stg_symbolic_variable(&lat, "LAT", -20, 20, uniform,0,0);
     stg_symbolic_variable(&lon, "LON", -20, 20, uniform,0,0);
     stg_symbolic_variable(&altitude, "ALT", -20, 20, uniform,0,0);
@@ -153,7 +152,6 @@ TEST(CheckGeofence, InsideTooHigh)
     stg_symbolic_variable(&low_lat, "LLAT", -20, 20,uniform,0,0);
     stg_symbolic_variable(&high_lon, "HLON", -20, 20,uniform,0,0);
     stg_symbolic_variable(&low_lon, "LLON", -20, 20,uniform,0,0);
-
 
     stg_begin_test();
 
@@ -177,6 +175,157 @@ TEST(CheckGeofence, InsideTooHigh)
 
 	//printf("Inside but too high/reject: 38, 78, 1000, true, 79, 35, 85, 35: %d\n", isGeofenced);
 }
+
+*/
+
+TEST(CheckWayPoints, CloseWaypoints)
+ {
+
+    struct mission_s mission;
+
+ 	// Sample test with a mission of 3 waypoints close by
+ 	mission.count = 3;
+ 	mission.items[0].lat = 50;
+ 	mission.items[0].lon = 50;
+ 	mission.items[0].altitude = 500;
+ 	mission.items[1].lat = 51;
+ 	mission.items[1].lon = 51;
+ 	mission.items[1].altitude = 510;
+ 	mission.items[2].lat = 52;
+ 	mission.items[2].lon = 52;
+ 	mission.items[2].altitude = 520;
+ 	ASSERT_EQ(true, checkDistancesBetweenWaypoints(mission, 400));
+ 	//printf("Check 3 waypoints: %d\n", checkDistancesBetweenWaypoints(mission, 400));
+ }
+
+
+ TEST(CheckWayPoints, TooCloseWaypoints)
+ {
+ 	// Sample test with a mission of 2 waypoints that are too close
+ 	struct mission_s mission;
+ 	mission.count = 3;
+ 	mission.items[0].lat = 50;
+ 	mission.items[0].lon = 50;
+ 	mission.items[0].altitude = 500;
+ 	mission.items[1].lat = 50;
+ 	mission.items[1].lon = 50;
+ 	mission.items[1].altitude = 500;
+ 	ASSERT_EQ(false, checkDistancesBetweenWaypoints(mission, 400));
+ 	//printf("Check 2 waypoints that are too close: %d\n", checkDistancesBetweenWaypoints(mission, 400));
+ }
+
+
+  TEST(CheckWayPoints, AltituteBreaker)
+  {
+    // Sample test with a mission of 3 waypoints that break altitude barrier
+    struct mission_s mission;
+ 	mission.count = 3;
+ 	mission.items[0].lat = 50;
+ 	mission.items[0].lon = 50;
+ 	mission.items[0].altitude = 500;
+ 	mission.items[1].lat = 51;
+ 	mission.items[1].lon = 51;
+ 	mission.items[1].altitude = 10000;
+ 	ASSERT_EQ(false, checkDistancesBetweenWaypoints(mission, 400));
+ 	//printf("Check 2 waypoints one is too high: %d\n", checkDistancesBetweenWaypoints(mission, 40));
+
+  }
+
+
+  TEST(CheckAltitute, ValidMission)
+  {
+    struct mission_s mission;
+
+  	// Sample test with a mission of 3 valid altitude waypoints
+  	mission.count = 3;
+  	mission.items[0].lat = 50;
+  	mission.items[0].lon = 50;
+  	mission.items[0].altitude = 500;
+  	mission.items[0].altitude_is_relative = false;
+  	mission.items[1].lat = 51;
+  	mission.items[1].lon = 51;
+  	mission.items[1].altitude = 510;
+  	mission.items[1].altitude_is_relative = false;
+  	mission.items[2].lat = 52;
+  	mission.items[2].lon = 52;
+  	mission.items[2].altitude = 520;
+  	mission.items[2].altitude_is_relative = false;
+  	ASSERT_EQ(true, checkHomePositionAltitude(mission, 20, true));
+  	//printf("Check 3 waypoints: %s (valid mission)\n", checkHomePositionAltitude(mission, 20, true)?"valid":"invalid");
+   }
+
+
+   TEST(CheckAltitute, InvalidMission)
+   {
+
+       // Sample test with a mission of 1 invalid altitude setup waypoint
+       struct mission_s mission;
+        mission.count = 3;
+        mission.items[0].lat = 50;
+        mission.items[0].lon = 50;
+        mission.items[0].altitude = 500;
+        mission.items[0].altitude_is_relative = false;
+        mission.items[1].lat = 51;
+        mission.items[1].lon = 51;
+        mission.items[1].altitude = 510;
+        mission.items[1].altitude_is_relative = false;
+        mission.items[2].lat = 52;
+        mission.items[2].lon = 52;
+        mission.items[2].altitude = 520;
+        mission.items[2].altitude_is_relative = true;
+        ASSERT_EQ(false, checkHomePositionAltitude(mission, 20, false));
+        //printf("Check 3 waypoints: %s (invalid mission, last point is relative but home is not set)\n", checkHomePositionAltitude(mission, 20, false)?"valid":"invalid");
+   }
+
+   TEST(CheckAltitute, InvalidMission2pointbelowhome)
+   {
+        // Sample test with a mission with second wapoint invalid altitude below home
+        struct mission_s mission;
+
+        int home_lat, alt0, alt1, alt2;
+        stg_symbolic_variable(&home_lat, "HOME_LAT", -20, 20, uniform,0,0);
+        stg_symbolic_variable(&alt0, "ALT0", -20, 20, uniform,0,0);
+        stg_symbolic_variable(&alt1, "ALT1", -20, 20, uniform,0,0);
+        stg_symbolic_variable(&alt2, "ALT2", -20, 20, uniform,0,0);
+
+        mission.count = 3;
+        mission.items[0].lat = 50;
+        mission.items[0].lon = 50;
+        //mission.items[0].altitude = 500;
+        mission.items[0].altitude_is_relative = false;
+        mission.items[1].lat = 51;
+        mission.items[1].lon = 51;
+        //mission.items[1].altitude = 10;
+        mission.items[1].altitude_is_relative = false;
+        mission.items[2].lat = 52;
+        mission.items[2].lon = 52;
+        //mission.items[2].altitude = 520;
+        mission.items[2].altitude_is_relative = false;
+
+
+        stg_begin_test();
+
+        stg_input_int(&home_lat, 20);
+        stg_input_int(&alt0, 500);
+        stg_input_int(&alt1, 10);
+        stg_input_int(&alt2, 520);
+
+        mission.items[0].altitude = alt0;
+        mission.items[1].altitude = alt1;
+        mission.items[2].altitude = alt2;
+
+        printf("from test 0===%p\n",&mission.items[0].altitude);
+        printf("from test 1 ===%p\n",&mission.items[1].altitude);
+        printf("from test 2===%p\n",&mission.items[2].altitude);
+
+
+        bool isValid = checkHomePositionAltitude(mission, home_lat, true);
+        stg_end_test();
+        stg_record_test(isValid==false);
+        ASSERT_EQ(false, isValid);
+        //printf("Check 3 waypoints: %s (invalid mission, 2nd point below home)\n", checkHomePositionAltitude(mission, 20, true)?"valid":"invalid");
+
+   }
 
 
 int main(int argc, char **argv) {
