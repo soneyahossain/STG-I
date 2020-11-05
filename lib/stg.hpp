@@ -27,7 +27,10 @@ These are the parameters for the distribution:
  */
 
 
-void stg_symbolic_variable(void* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
+void stg_symbolic_variable_int(int* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
+void stg_symbolic_variable_float(float* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
+void stg_symbolic_variable_double(double* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
+
 
 /*
  * This version creates a name for each of num elements of the array,
@@ -68,6 +71,10 @@ void stg_record_test(bool pred);
  * state and the recorded path condition.
  */
 
+
+void stg_update_load_i1(bool* addr, char *val);
+void stg_update_store_i1(bool* addr, char *val) ;
+
 void stg_update_load_i32(int* addr, char *val);
 void stg_update_store_i32(int* addr, char *val) ;
 void stg_update_load_i8(void* addr, char *val);
@@ -79,7 +86,36 @@ void stg_update_store_float(float* addr, char *val) ;
 void stg_update_store_double(double* addr, char *val) ;
 void stg_update_load_double(double* addr, char *val) ;
 void stg_update_char(char *key, char *val);
-void stg_update_cast(char* key, char* val, char* castOp, char* typeTocast );
+void stg_update_cast_i1(char* key, char* val_name, char* castOp, char* srcty, char* dstty, bool value );
+
+void stg_update_cast_i8(char* key, char* val_name, char* castOp, char* srcty, char* dstty, char value );
+
+
+void stg_update_cast_i16(char* key, char* val_name, char* castOp, char* srcty, char* dstty, int value );
+
+
+
+
+void stg_update_cast_i32(char* key, char* val_name, char* castOp, char* srcty, char* dstty, int value );
+
+
+
+void stg_update_cast_i64(char* key, char* val_name, char* castOp, char* srcty, char* dstty, int value );
+
+
+
+void stg_update_cast_float(char* key, char* val_name, char* castOp, char* srcty, char* dstty, float value );
+
+
+void stg_update_cast_double(char* key, char* val_name, char* castOp, char* srcty, char* dstty, double value );
+
+
+
+
+
+
+
+
 void stg_update_int(char *key, int val, char* type_);
 void stg_update_float(char *key, float val, char* type_);
 void stg_update_double(char *key, double val, char* type_);
@@ -90,12 +126,19 @@ void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* 
 void stg_update_pc(bool cnd_value, char *cnd_name);
 void stg_update_phi(char *lhs,char *valBBpairs);
 
+void stg_update_select(char* key, bool condition, char* t_value, char* f_value, char* type_, char* cndName);
+
 
 void  stg_update_user_input(char* address, char* value, char* type );  //what is wrong with this std::string and char *
 void  stg_update_input_float(float* addr);
 void  stg_update_input_i32(int* addr);
 void  stg_update_input_double(double* addr);
 void  stg_update_input_i64(long* addr);
-void  stg_update_bin_intrinsic(char* result, char* arg1, char* arg2, char* fun_name, char* type);
+
+void stg_update_una_intrinsic(char* result, char* arg, char* fun_name, char* ret_type);
+void  stg_update_bin_intrinsic(char* result, char* fun_name, char* type, char* arg1, char* arg2 );
 void stg_update_prev_bb(char *bbname);
 void  print_maps();
+void clear_maps();
+void update_bb_sequence(char* key);
+void stg_test_separator(int test_id);
