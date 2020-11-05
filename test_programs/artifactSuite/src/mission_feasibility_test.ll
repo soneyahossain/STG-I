@@ -81,16 +81,18 @@ target triple = "x86_64-apple-macosx10.14.0"
 %"class.testing::internal::TestFactoryImpl.42" = type { %"class.testing::internal::TestFactoryBase" }
 %class.CheckGeofence_InsideTooHigh__Test = type { %"class.testing::Test" }
 %"class.testing::internal::TestFactoryImpl.43" = type { %"class.testing::internal::TestFactoryBase" }
-%class.CheckWayPoints_CloseWaypoints_Test = type { %"class.testing::Test" }
+%class.CheckGeofence_InsideTooHigh_Test = type { %"class.testing::Test" }
 %"class.testing::internal::TestFactoryImpl.44" = type { %"class.testing::internal::TestFactoryBase" }
-%class.CheckWayPoints_TooCloseWaypoints_Test = type { %"class.testing::Test" }
+%class.CheckWayPoints_CloseWaypoints_Test = type { %"class.testing::Test" }
 %"class.testing::internal::TestFactoryImpl.45" = type { %"class.testing::internal::TestFactoryBase" }
-%class.CheckWayPoints_AltituteBreaker_Test = type { %"class.testing::Test" }
+%class.CheckWayPoints_TooCloseWaypoints_Test = type { %"class.testing::Test" }
 %"class.testing::internal::TestFactoryImpl.46" = type { %"class.testing::internal::TestFactoryBase" }
-%class.CheckAltitute_ValidMission_Test = type { %"class.testing::Test" }
+%class.CheckWayPoints_AltituteBreaker_Test = type { %"class.testing::Test" }
 %"class.testing::internal::TestFactoryImpl.47" = type { %"class.testing::internal::TestFactoryBase" }
-%class.CheckAltitute_InvalidMission_Test = type { %"class.testing::Test" }
+%class.CheckAltitute_ValidMission_Test = type { %"class.testing::Test" }
 %"class.testing::internal::TestFactoryImpl.48" = type { %"class.testing::internal::TestFactoryBase" }
+%class.CheckAltitute_InvalidMission_Test = type { %"class.testing::Test" }
+%"class.testing::internal::TestFactoryImpl.49" = type { %"class.testing::internal::TestFactoryBase" }
 %class.CheckAltitute_InvalidMission2pointbelowhome_Test = type { %"class.testing::Test" }
 %"class.testing::UnitTest" = type { i32 (...)**, %"class.testing::internal::Mutex", %"class.testing::internal::UnitTestImpl"* }
 %"class.testing::internal::UnitTestImpl" = type opaque
@@ -132,57 +134,67 @@ target triple = "x86_64-apple-macosx10.14.0"
 @.str.1 = private unnamed_addr constant [13 x i8] c"MissionCheck\00", align 1
 @.str.2 = private unnamed_addr constant [14 x i8] c"CheckCombined\00", align 1
 @.str.3 = private unnamed_addr constant [37 x i8] c"../test/mission_feasibility_test.cpp\00", align 1
-@.str.4 = private unnamed_addr constant [5 x i8] c"true\00", align 1
-@.str.5 = private unnamed_addr constant [68 x i8] c"checkMissionFeasible (mission, 400, true, 10, true, 79, 35, 85, 35)\00", align 1
+@.str.4 = private unnamed_addr constant [5 x i8] c"LAT0\00", align 1
+@.str.5 = private unnamed_addr constant [5 x i8] c"LON0\00", align 1
+@.str.6 = private unnamed_addr constant [5 x i8] c"ALT0\00", align 1
+@.str.7 = private unnamed_addr constant [5 x i8] c"LAT1\00", align 1
+@.str.8 = private unnamed_addr constant [5 x i8] c"LON1\00", align 1
+@.str.9 = private unnamed_addr constant [5 x i8] c"ALT1\00", align 1
+@.str.10 = private unnamed_addr constant [5 x i8] c"LAT2\00", align 1
+@.str.11 = private unnamed_addr constant [5 x i8] c"LON2\00", align 1
+@.str.12 = private unnamed_addr constant [5 x i8] c"ALT2\00", align 1
+@.str.13 = private unnamed_addr constant [5 x i8] c"HLAT\00", align 1
+@.str.14 = private unnamed_addr constant [5 x i8] c"LLAT\00", align 1
+@.str.15 = private unnamed_addr constant [5 x i8] c"HLON\00", align 1
+@.str.16 = private unnamed_addr constant [5 x i8] c"LLON\00", align 1
+@.str.17 = private unnamed_addr constant [8 x i8] c"MAX_DIS\00", align 1
+@.str.18 = private unnamed_addr constant [9 x i8] c"HOME_LAT\00", align 1
+@.str.19 = private unnamed_addr constant [5 x i8] c"true\00", align 1
+@.str.20 = private unnamed_addr constant [18 x i8] c"isFeasibleMission\00", align 1
 @_ZN37MissionCommandCheck_ValidCommand_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.7 = private unnamed_addr constant [20 x i8] c"MissionCommandCheck\00", align 1
-@.str.8 = private unnamed_addr constant [13 x i8] c"ValidCommand\00", align 1
-@.str.9 = private unnamed_addr constant [34 x i8] c"checkMissionItemValidity(mission)\00", align 1
+@.str.22 = private unnamed_addr constant [20 x i8] c"MissionCommandCheck\00", align 1
+@.str.23 = private unnamed_addr constant [13 x i8] c"ValidCommand\00", align 1
+@.str.24 = private unnamed_addr constant [34 x i8] c"checkMissionItemValidity(mission)\00", align 1
 @_ZN39MissionCommandCheck_InValidCommand_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.11 = private unnamed_addr constant [15 x i8] c"InValidCommand\00", align 1
-@.str.12 = private unnamed_addr constant [6 x i8] c"false\00", align 1
+@.str.26 = private unnamed_addr constant [15 x i8] c"InValidCommand\00", align 1
+@.str.27 = private unnamed_addr constant [6 x i8] c"false\00", align 1
 @_ZN40MissionCommandCheck_InValidWaypoint_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.14 = private unnamed_addr constant [16 x i8] c"InValidWaypoint\00", align 1
+@.str.29 = private unnamed_addr constant [16 x i8] c"InValidWaypoint\00", align 1
 @_ZN30CheckGeofence_InsideInclu_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.16 = private unnamed_addr constant [14 x i8] c"CheckGeofence\00", align 1
-@.str.17 = private unnamed_addr constant [12 x i8] c"InsideInclu\00", align 1
-@.str.18 = private unnamed_addr constant [45 x i8] c"checkGeofence(mission,true, 79, 35, 85, 35 )\00", align 1
+@.str.31 = private unnamed_addr constant [14 x i8] c"CheckGeofence\00", align 1
+@.str.32 = private unnamed_addr constant [12 x i8] c"InsideInclu\00", align 1
+@.str.33 = private unnamed_addr constant [66 x i8] c"checkGeofence(mission,true, high_lat, low_lat, high_lon, low_lon)\00", align 1
 @_ZN31CheckGeofence_OutsideInclu_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.20 = private unnamed_addr constant [13 x i8] c"OutsideInclu\00", align 1
-@.str.21 = private unnamed_addr constant [44 x i8] c"checkGeofence(mission,true, 79, 35, 85, 35)\00", align 1
+@.str.35 = private unnamed_addr constant [13 x i8] c"OutsideInclu\00", align 1
 @_ZN29CheckGeofence_OutsideExc_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.23 = private unnamed_addr constant [11 x i8] c"OutsideExc\00", align 1
-@.str.24 = private unnamed_addr constant [44 x i8] c"checkGeofence(mission,false,79, 35, 85, 35)\00", align 1
+@.str.37 = private unnamed_addr constant [11 x i8] c"OutsideExc\00", align 1
+@.str.38 = private unnamed_addr constant [66 x i8] c"checkGeofence(mission,false,high_lat, low_lat, high_lon, low_lon)\00", align 1
 @_ZN28CheckGeofence_InsideExc_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.26 = private unnamed_addr constant [10 x i8] c"InsideExc\00", align 1
-@.str.27 = private unnamed_addr constant [45 x i8] c"checkGeofence(mission,false, 79, 35, 85, 35)\00", align 1
+@.str.40 = private unnamed_addr constant [10 x i8] c"InsideExc\00", align 1
+@.str.41 = private unnamed_addr constant [67 x i8] c"checkGeofence(mission,false, high_lat, low_lat, high_lon, low_lon)\00", align 1
 @_ZN33CheckGeofence_InsideTooHigh__Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.29 = private unnamed_addr constant [15 x i8] c"InsideTooHigh_\00", align 1
+@.str.43 = private unnamed_addr constant [15 x i8] c"InsideTooHigh_\00", align 1
+@_ZN32CheckGeofence_InsideTooHigh_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
+@.str.45 = private unnamed_addr constant [14 x i8] c"InsideTooHigh\00", align 1
+@.str.46 = private unnamed_addr constant [4 x i8] c"LAT\00", align 1
+@.str.47 = private unnamed_addr constant [4 x i8] c"LON\00", align 1
+@.str.48 = private unnamed_addr constant [4 x i8] c"ALT\00", align 1
+@.str.49 = private unnamed_addr constant [12 x i8] c"isGeofenced\00", align 1
 @_ZN34CheckWayPoints_CloseWaypoints_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.31 = private unnamed_addr constant [15 x i8] c"CheckWayPoints\00", align 1
-@.str.32 = private unnamed_addr constant [15 x i8] c"CloseWaypoints\00", align 1
-@.str.33 = private unnamed_addr constant [45 x i8] c"checkDistancesBetweenWaypoints(mission, 400)\00", align 1
+@.str.51 = private unnamed_addr constant [15 x i8] c"CheckWayPoints\00", align 1
+@.str.52 = private unnamed_addr constant [15 x i8] c"CloseWaypoints\00", align 1
+@.str.53 = private unnamed_addr constant [8 x i8] c"isValid\00", align 1
 @_ZN37CheckWayPoints_TooCloseWaypoints_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.35 = private unnamed_addr constant [18 x i8] c"TooCloseWaypoints\00", align 1
+@.str.55 = private unnamed_addr constant [18 x i8] c"TooCloseWaypoints\00", align 1
 @_ZN35CheckWayPoints_AltituteBreaker_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.37 = private unnamed_addr constant [16 x i8] c"AltituteBreaker\00", align 1
+@.str.57 = private unnamed_addr constant [16 x i8] c"AltituteBreaker\00", align 1
 @_ZN31CheckAltitute_ValidMission_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.39 = private unnamed_addr constant [14 x i8] c"CheckAltitute\00", align 1
-@.str.40 = private unnamed_addr constant [13 x i8] c"ValidMission\00", align 1
-@.str.41 = private unnamed_addr constant [45 x i8] c"checkHomePositionAltitude(mission, 20, true)\00", align 1
+@.str.59 = private unnamed_addr constant [14 x i8] c"CheckAltitute\00", align 1
+@.str.60 = private unnamed_addr constant [13 x i8] c"ValidMission\00", align 1
 @_ZN33CheckAltitute_InvalidMission_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.43 = private unnamed_addr constant [15 x i8] c"InvalidMission\00", align 1
-@.str.44 = private unnamed_addr constant [46 x i8] c"checkHomePositionAltitude(mission, 20, false)\00", align 1
+@.str.62 = private unnamed_addr constant [15 x i8] c"InvalidMission\00", align 1
 @_ZN48CheckAltitute_InvalidMission2pointbelowhome_Test10test_info_E = global %"class.testing::TestInfo"* null, align 8
-@.str.46 = private unnamed_addr constant [30 x i8] c"InvalidMission2pointbelowhome\00", align 1
-@.str.47 = private unnamed_addr constant [9 x i8] c"HOME_LAT\00", align 1
-@.str.48 = private unnamed_addr constant [5 x i8] c"ALT0\00", align 1
-@.str.49 = private unnamed_addr constant [5 x i8] c"ALT1\00", align 1
-@.str.50 = private unnamed_addr constant [5 x i8] c"ALT2\00", align 1
-@.str.51 = private unnamed_addr constant [18 x i8] c"from test 0===%p\0A\00", align 1
-@.str.52 = private unnamed_addr constant [19 x i8] c"from test 1 ===%p\0A\00", align 1
-@.str.53 = private unnamed_addr constant [18 x i8] c"from test 2===%p\0A\00", align 1
-@.str.54 = private unnamed_addr constant [8 x i8] c"isValid\00", align 1
+@.str.64 = private unnamed_addr constant [30 x i8] c"InvalidMission2pointbelowhome\00", align 1
 @_ZTV31MissionCheck_CheckCombined_Test = unnamed_addr constant { [8 x i8*] } { [8 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTI31MissionCheck_CheckCombined_Test to i8*), i8* bitcast (void (%class.MissionCheck_CheckCombined_Test*)* @_ZN31MissionCheck_CheckCombined_TestD1Ev to i8*), i8* bitcast (void (%class.MissionCheck_CheckCombined_Test*)* @_ZN31MissionCheck_CheckCombined_TestD0Ev to i8*), i8* bitcast (void (%"class.testing::Test"*)* @_ZN7testing4Test5SetUpEv to i8*), i8* bitcast (void (%"class.testing::Test"*)* @_ZN7testing4Test8TearDownEv to i8*), i8* bitcast (void (%class.MissionCheck_CheckCombined_Test*)* @_ZN31MissionCheck_CheckCombined_Test8TestBodyEv to i8*), i8* bitcast (%"struct.testing::Test::Setup_should_be_spelled_SetUp"* (%"class.testing::Test"*)* @_ZN7testing4Test5SetupEv to i8*)] }, align 8
 @_ZTVN10__cxxabiv120__si_class_type_infoE = external global i8*
 @_ZTS31MissionCheck_CheckCombined_Test = constant [34 x i8] c"31MissionCheck_CheckCombined_Test\00"
@@ -212,6 +224,9 @@ target triple = "x86_64-apple-macosx10.14.0"
 @_ZTV33CheckGeofence_InsideTooHigh__Test = unnamed_addr constant { [8 x i8*] } { [8 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTI33CheckGeofence_InsideTooHigh__Test to i8*), i8* bitcast (void (%class.CheckGeofence_InsideTooHigh__Test*)* @_ZN33CheckGeofence_InsideTooHigh__TestD1Ev to i8*), i8* bitcast (void (%class.CheckGeofence_InsideTooHigh__Test*)* @_ZN33CheckGeofence_InsideTooHigh__TestD0Ev to i8*), i8* bitcast (void (%"class.testing::Test"*)* @_ZN7testing4Test5SetUpEv to i8*), i8* bitcast (void (%"class.testing::Test"*)* @_ZN7testing4Test8TearDownEv to i8*), i8* bitcast (void (%class.CheckGeofence_InsideTooHigh__Test*)* @_ZN33CheckGeofence_InsideTooHigh__Test8TestBodyEv to i8*), i8* bitcast (%"struct.testing::Test::Setup_should_be_spelled_SetUp"* (%"class.testing::Test"*)* @_ZN7testing4Test5SetupEv to i8*)] }, align 8
 @_ZTS33CheckGeofence_InsideTooHigh__Test = constant [36 x i8] c"33CheckGeofence_InsideTooHigh__Test\00"
 @_ZTI33CheckGeofence_InsideTooHigh__Test = constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([36 x i8], [36 x i8]* @_ZTS33CheckGeofence_InsideTooHigh__Test, i32 0, i32 0), i8* bitcast (i8** @_ZTIN7testing4TestE to i8*) }
+@_ZTV32CheckGeofence_InsideTooHigh_Test = unnamed_addr constant { [8 x i8*] } { [8 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTI32CheckGeofence_InsideTooHigh_Test to i8*), i8* bitcast (void (%class.CheckGeofence_InsideTooHigh_Test*)* @_ZN32CheckGeofence_InsideTooHigh_TestD1Ev to i8*), i8* bitcast (void (%class.CheckGeofence_InsideTooHigh_Test*)* @_ZN32CheckGeofence_InsideTooHigh_TestD0Ev to i8*), i8* bitcast (void (%"class.testing::Test"*)* @_ZN7testing4Test5SetUpEv to i8*), i8* bitcast (void (%"class.testing::Test"*)* @_ZN7testing4Test8TearDownEv to i8*), i8* bitcast (void (%class.CheckGeofence_InsideTooHigh_Test*)* @_ZN32CheckGeofence_InsideTooHigh_Test8TestBodyEv to i8*), i8* bitcast (%"struct.testing::Test::Setup_should_be_spelled_SetUp"* (%"class.testing::Test"*)* @_ZN7testing4Test5SetupEv to i8*)] }, align 8
+@_ZTS32CheckGeofence_InsideTooHigh_Test = constant [35 x i8] c"32CheckGeofence_InsideTooHigh_Test\00"
+@_ZTI32CheckGeofence_InsideTooHigh_Test = constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([35 x i8], [35 x i8]* @_ZTS32CheckGeofence_InsideTooHigh_Test, i32 0, i32 0), i8* bitcast (i8** @_ZTIN7testing4TestE to i8*) }
 @_ZTV34CheckWayPoints_CloseWaypoints_Test = unnamed_addr constant { [8 x i8*] } { [8 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTI34CheckWayPoints_CloseWaypoints_Test to i8*), i8* bitcast (void (%class.CheckWayPoints_CloseWaypoints_Test*)* @_ZN34CheckWayPoints_CloseWaypoints_TestD1Ev to i8*), i8* bitcast (void (%class.CheckWayPoints_CloseWaypoints_Test*)* @_ZN34CheckWayPoints_CloseWaypoints_TestD0Ev to i8*), i8* bitcast (void (%"class.testing::Test"*)* @_ZN7testing4Test5SetUpEv to i8*), i8* bitcast (void (%"class.testing::Test"*)* @_ZN7testing4Test8TearDownEv to i8*), i8* bitcast (void (%class.CheckWayPoints_CloseWaypoints_Test*)* @_ZN34CheckWayPoints_CloseWaypoints_Test8TestBodyEv to i8*), i8* bitcast (%"struct.testing::Test::Setup_should_be_spelled_SetUp"* (%"class.testing::Test"*)* @_ZN7testing4Test5SetupEv to i8*)] }, align 8
 @_ZTS34CheckWayPoints_CloseWaypoints_Test = constant [37 x i8] c"34CheckWayPoints_CloseWaypoints_Test\00"
 @_ZTI34CheckWayPoints_CloseWaypoints_Test = constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([37 x i8], [37 x i8]* @_ZTS34CheckWayPoints_CloseWaypoints_Test, i32 0, i32 0), i8* bitcast (i8** @_ZTIN7testing4TestE to i8*) }
@@ -237,7 +252,7 @@ target triple = "x86_64-apple-macosx10.14.0"
 @_ZTIN7testing8internal15TestFactoryBaseE = linkonce_odr constant { i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv117__class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([37 x i8], [37 x i8]* @_ZTSN7testing8internal15TestFactoryBaseE, i32 0, i32 0) }
 @_ZTIN7testing8internal15TestFactoryImplI31MissionCheck_CheckCombined_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([72 x i8], [72 x i8]* @_ZTSN7testing8internal15TestFactoryImplI31MissionCheck_CheckCombined_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
 @_ZTVN7testing8internal15TestFactoryBaseE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryBase"*)* @_ZN7testing8internal15TestFactoryBaseD1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryBase"*)* @_ZN7testing8internal15TestFactoryBaseD0Ev to i8*), i8* bitcast (void ()* @__cxa_pure_virtual to i8*)] }, align 8
-@.str.55 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
+@.str.65 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 @_ZTVN7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.35"*)* @_ZN7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.35"*)* @_ZN7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.35"*)* @_ZN7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestE10CreateTestEv to i8*)] }, align 8
 @_ZTSN7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestEE = linkonce_odr constant [78 x i8] c"N7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestEE\00"
 @_ZTIN7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([78 x i8], [78 x i8]* @_ZTSN7testing8internal15TestFactoryImplI37MissionCommandCheck_ValidCommand_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
@@ -262,31 +277,34 @@ target triple = "x86_64-apple-macosx10.14.0"
 @_ZTVN7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.42"*)* @_ZN7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.42"*)* @_ZN7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.42"*)* @_ZN7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestE10CreateTestEv to i8*)] }, align 8
 @_ZTSN7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestEE = linkonce_odr constant [74 x i8] c"N7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestEE\00"
 @_ZTIN7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([74 x i8], [74 x i8]* @_ZTSN7testing8internal15TestFactoryImplI33CheckGeofence_InsideTooHigh__TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
-@_ZTVN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.43"*)* @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.43"*)* @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.43"*)* @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestE10CreateTestEv to i8*)] }, align 8
+@_ZTVN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.43"*)* @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.43"*)* @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.43"*)* @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestE10CreateTestEv to i8*)] }, align 8
+@_ZTSN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEE = linkonce_odr constant [73 x i8] c"N7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEE\00"
+@_ZTIN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([73 x i8], [73 x i8]* @_ZTSN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
+@_ZTVN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.44"*)* @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.44"*)* @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.44"*)* @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestE10CreateTestEv to i8*)] }, align 8
 @_ZTSN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE = linkonce_odr constant [75 x i8] c"N7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE\00"
 @_ZTIN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([75 x i8], [75 x i8]* @_ZTSN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
-@_ZTVN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.44"*)* @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.44"*)* @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.44"*)* @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestE10CreateTestEv to i8*)] }, align 8
+@_ZTVN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.45"*)* @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.45"*)* @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.45"*)* @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestE10CreateTestEv to i8*)] }, align 8
 @_ZTSN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE = linkonce_odr constant [78 x i8] c"N7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE\00"
 @_ZTIN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([78 x i8], [78 x i8]* @_ZTSN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
-@_ZTVN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.45"*)* @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.45"*)* @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.45"*)* @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestE10CreateTestEv to i8*)] }, align 8
+@_ZTVN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.46"*)* @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.46"*)* @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.46"*)* @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestE10CreateTestEv to i8*)] }, align 8
 @_ZTSN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE = linkonce_odr constant [76 x i8] c"N7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE\00"
 @_ZTIN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([76 x i8], [76 x i8]* @_ZTSN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
-@_ZTVN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.46"*)* @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.46"*)* @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.46"*)* @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestE10CreateTestEv to i8*)] }, align 8
+@_ZTVN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.47"*)* @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.47"*)* @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.47"*)* @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestE10CreateTestEv to i8*)] }, align 8
 @_ZTSN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE = linkonce_odr constant [72 x i8] c"N7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE\00"
 @_ZTIN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([72 x i8], [72 x i8]* @_ZTSN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
-@_ZTVN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.47"*)* @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.47"*)* @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.47"*)* @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestE10CreateTestEv to i8*)] }, align 8
+@_ZTVN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.48"*)* @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.48"*)* @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.48"*)* @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestE10CreateTestEv to i8*)] }, align 8
 @_ZTSN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE = linkonce_odr constant [74 x i8] c"N7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE\00"
 @_ZTIN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([74 x i8], [74 x i8]* @_ZTSN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
-@_ZTVN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.48"*)* @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.48"*)* @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.48"*)* @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestE10CreateTestEv to i8*)] }, align 8
+@_ZTVN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE = linkonce_odr unnamed_addr constant { [5 x i8*] } { [5 x i8*] [i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTIN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.49"*)* @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED1Ev to i8*), i8* bitcast (void (%"class.testing::internal::TestFactoryImpl.49"*)* @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED0Ev to i8*), i8* bitcast (%"class.testing::Test"* (%"class.testing::internal::TestFactoryImpl.49"*)* @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestE10CreateTestEv to i8*)] }, align 8
 @_ZTSN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE = linkonce_odr constant [89 x i8] c"N7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE\00"
 @_ZTIN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([89 x i8], [89 x i8]* @_ZTSN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE, i32 0, i32 0), i8* bitcast ({ i8*, i8* }* @_ZTIN7testing8internal15TestFactoryBaseE to i8*) }
-@.str.56 = private unnamed_addr constant [51 x i8] c"/usr/local/include/gtest/internal/gtest-internal.h\00", align 1
-@.str.57 = private unnamed_addr constant [51 x i8] c"Condition !test_case_fp || !test_suite_fp failed. \00", align 1
-@.str.58 = private unnamed_addr constant [107 x i8] c"Test can not provide both SetUpTestSuite and SetUpTestCase, please make sure there is only one present at \00", align 1
-@.str.59 = private unnamed_addr constant [2 x i8] c":\00", align 1
+@.str.66 = private unnamed_addr constant [51 x i8] c"/usr/local/include/gtest/internal/gtest-internal.h\00", align 1
+@.str.67 = private unnamed_addr constant [51 x i8] c"Condition !test_case_fp || !test_suite_fp failed. \00", align 1
+@.str.68 = private unnamed_addr constant [107 x i8] c"Test can not provide both SetUpTestSuite and SetUpTestCase, please make sure there is only one present at \00", align 1
+@.str.69 = private unnamed_addr constant [2 x i8] c":\00", align 1
 @_ZNSt3__15ctypeIcE2idE = external global %"class.std::__1::locale::id", align 8
 @_ZNSt3__14cerrE = external global %"class.std::__1::basic_ostream", align 8
-@.str.60 = private unnamed_addr constant [112 x i8] c"Test can not provide both TearDownTestSuite and TearDownTestCase, please make sure there is only one present at\00", align 1
+@.str.70 = private unnamed_addr constant [112 x i8] c"Test can not provide both TearDownTestSuite and TearDownTestCase, please make sure there is only one present at\00", align 1
 @_ZTVNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE = linkonce_odr unnamed_addr constant { [5 x i8*], [5 x i8*], [5 x i8*] } { [5 x i8*] [i8* inttoptr (i64 128 to i8*), i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTINSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_stringstream"*)* @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_stringstream"*)* @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED0Ev to i8*)], [5 x i8*] [i8* inttoptr (i64 112 to i8*), i8* inttoptr (i64 -16 to i8*), i8* bitcast ({ i8*, i8*, i8* }* @_ZTINSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_stringstream"*)* @_ZThn16_NSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_stringstream"*)* @_ZThn16_NSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED0Ev to i8*)], [5 x i8*] [i8* inttoptr (i64 -128 to i8*), i8* inttoptr (i64 -128 to i8*), i8* bitcast ({ i8*, i8*, i8* }* @_ZTINSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_stringstream"*)* @_ZTv0_n24_NSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_stringstream"*)* @_ZTv0_n24_NSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED0Ev to i8*)] }, align 8
 @_ZTTNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE = linkonce_odr unnamed_addr constant [10 x i8*] [i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*], [5 x i8*] }* @_ZTVNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, i32 0, inrange i32 0, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*], [5 x i8*] }* @_ZTCNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE0_NS_14basic_iostreamIcS2_EE, i32 0, inrange i32 0, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*] }* @_ZTCNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE0_NS_13basic_istreamIcS2_EE, i32 0, inrange i32 0, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*] }* @_ZTCNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE0_NS_13basic_istreamIcS2_EE, i32 0, inrange i32 1, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*] }* @_ZTCNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE16_NS_13basic_ostreamIcS2_EE, i32 0, inrange i32 0, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*] }* @_ZTCNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE16_NS_13basic_ostreamIcS2_EE, i32 0, inrange i32 1, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*], [5 x i8*] }* @_ZTCNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE0_NS_14basic_iostreamIcS2_EE, i32 0, inrange i32 2, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*], [5 x i8*] }* @_ZTCNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE0_NS_14basic_iostreamIcS2_EE, i32 0, inrange i32 1, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*], [5 x i8*] }* @_ZTVNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, i32 0, inrange i32 2, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*], [5 x i8*] }* @_ZTVNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, i32 0, inrange i32 1, i32 3) to i8*)]
 @_ZTCNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE0_NS_14basic_iostreamIcS2_EE = linkonce_odr unnamed_addr constant { [5 x i8*], [5 x i8*], [5 x i8*] } { [5 x i8*] [i8* inttoptr (i64 128 to i8*), i8* null, i8* bitcast (i8** @_ZTINSt3__114basic_iostreamIcNS_11char_traitsIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_iostream"*)* @_ZNSt3__114basic_iostreamIcNS_11char_traitsIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_iostream"*)* @_ZNSt3__114basic_iostreamIcNS_11char_traitsIcEEED0Ev to i8*)], [5 x i8*] [i8* inttoptr (i64 112 to i8*), i8* inttoptr (i64 -16 to i8*), i8* bitcast (i8** @_ZTINSt3__114basic_iostreamIcNS_11char_traitsIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_iostream"*)* @_ZThn16_NSt3__114basic_iostreamIcNS_11char_traitsIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_iostream"*)* @_ZThn16_NSt3__114basic_iostreamIcNS_11char_traitsIcEEED0Ev to i8*)], [5 x i8*] [i8* inttoptr (i64 -128 to i8*), i8* inttoptr (i64 -128 to i8*), i8* bitcast (i8** @_ZTINSt3__114basic_iostreamIcNS_11char_traitsIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_iostream"*)* @_ZTv0_n24_NSt3__114basic_iostreamIcNS_11char_traitsIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_iostream"*)* @_ZTv0_n24_NSt3__114basic_iostreamIcNS_11char_traitsIcEEED0Ev to i8*)] }
@@ -303,7 +321,7 @@ target triple = "x86_64-apple-macosx10.14.0"
 @_ZTSNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE = linkonce_odr constant [66 x i8] c"NSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE\00"
 @_ZTINSt3__115basic_streambufIcNS_11char_traitsIcEEEE = external constant i8*
 @_ZTINSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE = linkonce_odr constant { i8*, i8*, i8* } { i8* bitcast (i8** getelementptr inbounds (i8*, i8** @_ZTVN10__cxxabiv120__si_class_type_infoE, i64 2) to i8*), i8* getelementptr inbounds ([66 x i8], [66 x i8]* @_ZTSNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, i32 0, i32 0), i8* bitcast (i8** @_ZTINSt3__115basic_streambufIcNS_11char_traitsIcEEEE to i8*) }
-@.str.61 = private unnamed_addr constant [68 x i8] c"allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size\00", align 1
+@.str.71 = private unnamed_addr constant [68 x i8] c"allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size\00", align 1
 @_ZTISt12length_error = external constant i8*
 @_ZTVSt12length_error = external unnamed_addr constant { [5 x i8*] }
 @llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_mission_feasibility_test.cpp, i8* null }]
@@ -316,7 +334,7 @@ entry:
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 8)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 11)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -324,11 +342,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 8)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 11)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 8)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 11)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -465,16 +483,16 @@ if.then:                                          ; preds = %lor.end
   br label %if.end
 
 if.else:                                          ; preds = %lor.end
-  call void @_ZN7testing8internal8GTestLogC1ENS0_16GTestLogSeverityEPKci(%"class.testing::internal::GTestLog"* %ref.tmp, i32 3, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.56, i32 0, i32 0), i32 516)
+  call void @_ZN7testing8internal8GTestLogC1ENS0_16GTestLogSeverityEPKci(%"class.testing::internal::GTestLog"* %ref.tmp, i32 3, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.66, i32 0, i32 0), i32 516)
   %call4 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZN7testing8internal8GTestLog9GetStreamEv(%"class.testing::internal::GTestLog"* %ref.tmp)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %if.else
-  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call4, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.57, i32 0, i32 0))
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call4, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.67, i32 0, i32 0))
           to label %invoke.cont5 unwind label %lpad
 
 invoke.cont5:                                     ; preds = %invoke.cont
-  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call6, i8* getelementptr inbounds ([107 x i8], [107 x i8]* @.str.58, i32 0, i32 0))
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call6, i8* getelementptr inbounds ([107 x i8], [107 x i8]* @.str.68, i32 0, i32 0))
           to label %invoke.cont7 unwind label %lpad
 
 invoke.cont7:                                     ; preds = %invoke.cont5
@@ -483,7 +501,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
           to label %invoke.cont9 unwind label %lpad
 
 invoke.cont9:                                     ; preds = %invoke.cont7
-  %call12 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call10, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.59, i32 0, i32 0))
+  %call12 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call10, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.69, i32 0, i32 0))
           to label %invoke.cont11 unwind label %lpad
 
 invoke.cont11:                                    ; preds = %invoke.cont9
@@ -565,16 +583,16 @@ if.then:                                          ; preds = %lor.end
   br label %if.end
 
 if.else:                                          ; preds = %lor.end
-  call void @_ZN7testing8internal8GTestLogC1ENS0_16GTestLogSeverityEPKci(%"class.testing::internal::GTestLog"* %ref.tmp, i32 3, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.56, i32 0, i32 0), i32 531)
+  call void @_ZN7testing8internal8GTestLogC1ENS0_16GTestLogSeverityEPKci(%"class.testing::internal::GTestLog"* %ref.tmp, i32 3, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.66, i32 0, i32 0), i32 531)
   %call4 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZN7testing8internal8GTestLog9GetStreamEv(%"class.testing::internal::GTestLog"* %ref.tmp)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %if.else
-  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call4, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.57, i32 0, i32 0))
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call4, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.67, i32 0, i32 0))
           to label %invoke.cont5 unwind label %lpad
 
 invoke.cont5:                                     ; preds = %invoke.cont
-  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call6, i8* getelementptr inbounds ([112 x i8], [112 x i8]* @.str.60, i32 0, i32 0))
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call6, i8* getelementptr inbounds ([112 x i8], [112 x i8]* @.str.70, i32 0, i32 0))
           to label %invoke.cont7 unwind label %lpad
 
 invoke.cont7:                                     ; preds = %invoke.cont5
@@ -583,7 +601,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
           to label %invoke.cont9 unwind label %lpad
 
 invoke.cont9:                                     ; preds = %invoke.cont7
-  %call12 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call10, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.59, i32 0, i32 0))
+  %call12 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call10, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.69, i32 0, i32 0))
           to label %invoke.cont11 unwind label %lpad
 
 invoke.cont11:                                    ; preds = %invoke.cont9
@@ -663,17 +681,29 @@ declare void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1E
 define void @_ZN31MissionCheck_CheckCombined_Test8TestBodyEv(%class.MissionCheck_CheckCombined_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.MissionCheck_CheckCombined_Test*, align 8
+  %high_lat = alloca i32, align 4
+  %low_lat = alloca i32, align 4
+  %high_lon = alloca i32, align 4
+  %low_lon = alloca i32, align 4
+  %max_dis = alloca float, align 4
+  %home_lat = alloca float, align 4
   %mission = alloca %struct.mission_s, align 8
+  %isFeasibleMission = alloca i8, align 1
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
-  %ref.tmp32 = alloca i8, align 1
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %ref.tmp34 = alloca %"class.testing::Message", align 8
-  %ref.tmp36 = alloca %"class.testing::internal::AssertHelper", align 8
+  %ref.tmp60 = alloca %"class.testing::Message", align 8
+  %ref.tmp62 = alloca %"class.testing::internal::AssertHelper", align 8
   %cleanup.dest.slot = alloca i32, align 4
   store %class.MissionCheck_CheckCombined_Test* %this, %class.MissionCheck_CheckCombined_Test** %this.addr, align 8
   %this1 = load %class.MissionCheck_CheckCombined_Test*, %class.MissionCheck_CheckCombined_Test** %this.addr, align 8
+  store i32 79, i32* %high_lat, align 4
+  store i32 35, i32* %low_lat, align 4
+  store i32 85, i32* %high_lon, align 4
+  store i32 35, i32* %low_lon, align 4
+  store float 4.000000e+02, float* %max_dis, align 4
+  store float 1.000000e+01, float* %home_lat, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 3, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -724,79 +754,143 @@ entry:
   %arrayidx30 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items29, i64 0, i64 2
   %altitude_is_relative31 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx30, i32 0, i32 4
   store i8 0, i8* %altitude_is_relative31, align 8
-  store i8 1, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z20checkMissionFeasibleRK9mission_sfbfbiiii(%struct.mission_s* dereferenceable(648) %mission, float 4.000000e+02, i1 zeroext true, float 1.000000e+01, i1 zeroext true, i32 79, i32 35, i32 85, i32 35)
+  call void @stg_begin_test()
+  %items32 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx33 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items32, i64 0, i64 0
+  %lat34 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx33, i32 0, i32 0
+  %0 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat34, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %0, double 0.000000e+00, double 0.000000e+00)
+  %items35 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx36 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items35, i64 0, i64 0
+  %lon37 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx36, i32 0, i32 1
+  %1 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon37, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.5, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
+  %items38 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx39 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items38, i64 0, i64 0
+  %altitude40 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx39, i32 0, i32 2
+  %2 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude40, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.6, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %2, double 0.000000e+00, double 0.000000e+00)
+  %items41 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx42 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items41, i64 0, i64 1
+  %lat43 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx42, i32 0, i32 0
+  %3 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat43, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.7, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
+  %items44 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx45 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items44, i64 0, i64 1
+  %lon46 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx45, i32 0, i32 1
+  %4 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon46, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.8, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %4, double 0.000000e+00, double 0.000000e+00)
+  %items47 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx48 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items47, i64 0, i64 1
+  %altitude49 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx48, i32 0, i32 2
+  %5 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude49, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.9, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %5, double 0.000000e+00, double 0.000000e+00)
+  %items50 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx51 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items50, i64 0, i64 2
+  %lat52 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx51, i32 0, i32 0
+  %6 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat52, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.10, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %6, double 0.000000e+00, double 0.000000e+00)
+  %items53 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx54 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items53, i64 0, i64 2
+  %lon55 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx54, i32 0, i32 1
+  %7 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon55, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.11, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %7, double 0.000000e+00, double 0.000000e+00)
+  %items56 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx57 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items56, i64 0, i64 2
+  %altitude58 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx57, i32 0, i32 2
+  %8 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude58, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.12, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %8, double 0.000000e+00, double 0.000000e+00)
+  %9 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_int(i32* %high_lat, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.13, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %9, double 0.000000e+00, double 0.000000e+00)
+  %10 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_int(i32* %low_lat, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.14, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %10, double 0.000000e+00, double 0.000000e+00)
+  %11 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_int(i32* %high_lon, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.15, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %11, double 0.000000e+00, double 0.000000e+00)
+  %12 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_int(i32* %low_lon, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.16, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %12, double 0.000000e+00, double 0.000000e+00)
+  %13 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %max_dis, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.17, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %13, double 0.000000e+00, double 0.000000e+00)
+  %14 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %home_lat, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.18, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %14, double 0.000000e+00, double 0.000000e+00)
+  %call = call zeroext i1 @_Z20checkMissionFeasibleRK9mission_sRfbS2_bRiS3_S3_S3_(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %max_dis, i1 zeroext true, float* dereferenceable(4) %home_lat, i1 zeroext true, i32* dereferenceable(4) %high_lat, i32* dereferenceable(4) %low_lat, i32* dereferenceable(4) %high_lon, i32* dereferenceable(4) %low_lon)
   %frombool = zext i1 %call to i8
-  store i8 %frombool, i8* %ref.tmp32, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.5, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp32)
-  %call33 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
+  store i8 %frombool, i8* %isFeasibleMission, align 1
+  call void @stg_end_test()
+  %15 = load i8, i8* %isFeasibleMission, align 1
+  %tobool = trunc i8 %15 to i1
+  %conv = zext i1 %tobool to i32
+  %cmp = icmp eq i32 %conv, 1
+  call void @stg_record_test(i1 zeroext %cmp)
+  store i8 1, i8* %ref.tmp, align 1
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.19, i32 0, i32 0), i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.20, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isFeasibleMission)
+  %call59 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  br i1 %call33, label %if.then, label %if.else
+  br i1 %call59, label %if.then, label %if.else
 
 if.then:                                          ; preds = %invoke.cont
   br label %if.end
 
 lpad:                                             ; preds = %if.else, %entry
-  %0 = landingpad { i8*, i32 }
+  %16 = landingpad { i8*, i32 }
           cleanup
-  %1 = extractvalue { i8*, i32 } %0, 0
-  store i8* %1, i8** %exn.slot, align 8
-  %2 = extractvalue { i8*, i32 } %0, 1
-  store i32 %2, i32* %ehselector.slot, align 4
-  br label %ehcleanup43
+  %17 = extractvalue { i8*, i32 } %16, 0
+  store i8* %17, i8** %exn.slot, align 8
+  %18 = extractvalue { i8*, i32 } %16, 1
+  store i32 %18, i32* %ehselector.slot, align 4
+  br label %ehcleanup69
 
 if.else:                                          ; preds = %invoke.cont
-  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp34)
-          to label %invoke.cont35 unwind label %lpad
+  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp60)
+          to label %invoke.cont61 unwind label %lpad
 
-invoke.cont35:                                    ; preds = %if.else
-  %call39 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
-          to label %invoke.cont38 unwind label %lpad37
+invoke.cont61:                                    ; preds = %if.else
+  %call65 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont64 unwind label %lpad63
 
-invoke.cont38:                                    ; preds = %invoke.cont35
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp36, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 25, i8* %call39)
-          to label %invoke.cont40 unwind label %lpad37
+invoke.cont64:                                    ; preds = %invoke.cont61
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp62, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 73, i8* %call65)
+          to label %invoke.cont66 unwind label %lpad63
 
-invoke.cont40:                                    ; preds = %invoke.cont38
-  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp36, %"class.testing::Message"* dereferenceable(8) %ref.tmp34)
-          to label %invoke.cont42 unwind label %lpad41
+invoke.cont66:                                    ; preds = %invoke.cont64
+  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp62, %"class.testing::Message"* dereferenceable(8) %ref.tmp60)
+          to label %invoke.cont68 unwind label %lpad67
 
-invoke.cont42:                                    ; preds = %invoke.cont40
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
+invoke.cont68:                                    ; preds = %invoke.cont66
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp62) #14
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp60) #14
   store i32 1, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-lpad37:                                           ; preds = %invoke.cont38, %invoke.cont35
-  %3 = landingpad { i8*, i32 }
+lpad63:                                           ; preds = %invoke.cont64, %invoke.cont61
+  %19 = landingpad { i8*, i32 }
           cleanup
-  %4 = extractvalue { i8*, i32 } %3, 0
-  store i8* %4, i8** %exn.slot, align 8
-  %5 = extractvalue { i8*, i32 } %3, 1
-  store i32 %5, i32* %ehselector.slot, align 4
+  %20 = extractvalue { i8*, i32 } %19, 0
+  store i8* %20, i8** %exn.slot, align 8
+  %21 = extractvalue { i8*, i32 } %19, 1
+  store i32 %21, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad41:                                           ; preds = %invoke.cont40
-  %6 = landingpad { i8*, i32 }
+lpad67:                                           ; preds = %invoke.cont66
+  %22 = landingpad { i8*, i32 }
           cleanup
-  %7 = extractvalue { i8*, i32 } %6, 0
-  store i8* %7, i8** %exn.slot, align 8
-  %8 = extractvalue { i8*, i32 } %6, 1
-  store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp62) #14
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad41, %lpad37
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
-  br label %ehcleanup43
+ehcleanup:                                        ; preds = %lpad67, %lpad63
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp60) #14
+  br label %ehcleanup69
 
 if.end:                                           ; preds = %if.then
   store i32 0, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-cleanup:                                          ; preds = %if.end, %invoke.cont42
+cleanup:                                          ; preds = %if.end, %invoke.cont68
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   %cleanup.dest = load i32, i32* %cleanup.dest.slot, align 4
   switch i32 %cleanup.dest, label %unreachable [
@@ -807,20 +901,34 @@ cleanup:                                          ; preds = %if.end, %invoke.con
 cleanup.cont:                                     ; preds = %cleanup, %cleanup
   ret void
 
-ehcleanup43:                                      ; preds = %ehcleanup, %lpad
+ehcleanup69:                                      ; preds = %ehcleanup, %lpad
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup43
+eh.resume:                                        ; preds = %ehcleanup69
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val44 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val44
+  %lpad.val70 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val70
 
 unreachable:                                      ; preds = %cleanup
   unreachable
 }
+
+declare void @stg_begin_test() #1
+
+declare void @stg_symbolic_variable_double(double*, i8*, double, double, i8*, double, double) #1
+
+declare void @stg_symbolic_variable_float(float*, i8*, double, double, i8*, double, double) #1
+
+declare void @stg_symbolic_variable_int(i32*, i8*, double, double, i8*, double, double) #1
+
+declare zeroext i1 @_Z20checkMissionFeasibleRK9mission_sRfbS2_bRiS3_S3_S3_(%struct.mission_s* dereferenceable(648), float* dereferenceable(4), i1 zeroext, float* dereferenceable(4), i1 zeroext, i32* dereferenceable(4), i32* dereferenceable(4), i32* dereferenceable(4), i32* dereferenceable(4)) #1
+
+declare void @stg_end_test() #1
+
+declare void @stg_record_test(i1 zeroext) #1
 
 ; Function Attrs: noinline optnone ssp uwtable
 define linkonce_odr void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* noalias sret %agg.result, i8* %lhs_expression, i8* %rhs_expression, i8* dereferenceable(1) %lhs, i8* dereferenceable(1) %rhs) #2 align 2 {
@@ -840,8 +948,6 @@ entry:
   call void @_ZN7testing8internal11CmpHelperEQIbbEENS_15AssertionResultEPKcS4_RKT_RKT0_(%"class.testing::AssertionResult"* sret %agg.result, i8* %0, i8* %1, i8* dereferenceable(1) %2, i8* dereferenceable(1) %3)
   ret void
 }
-
-declare zeroext i1 @_Z20checkMissionFeasibleRK9mission_sfbfbiiii(%struct.mission_s* dereferenceable(648), float, i1 zeroext, float, i1 zeroext, i32, i32, i32, i32) #1
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
 define linkonce_odr zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %this) #5 align 2 {
@@ -895,14 +1001,14 @@ entry:
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.6() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.21() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 28)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 81)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -910,11 +1016,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 28)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 81)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 28)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 81)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -928,7 +1034,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.35"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.7, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.8, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.22, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.23, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -1024,7 +1130,7 @@ entry:
   %call = call zeroext i1 @_Z24checkMissionItemValidityRK9mission_s(%struct.mission_s* dereferenceable(648) %mission)
   %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %ref.tmp8, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.9, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.19, i32 0, i32 0), i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.24, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
   %call9 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
@@ -1052,7 +1158,7 @@ invoke.cont11:                                    ; preds = %if.else
           to label %invoke.cont14 unwind label %lpad13
 
 invoke.cont14:                                    ; preds = %invoke.cont11
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 37, i8* %call15)
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 90, i8* %call15)
           to label %invoke.cont16 unwind label %lpad13
 
 invoke.cont16:                                    ; preds = %invoke.cont14
@@ -1121,14 +1227,14 @@ unreachable:                                      ; preds = %cleanup
 declare zeroext i1 @_Z24checkMissionItemValidityRK9mission_s(%struct.mission_s* dereferenceable(648)) #1
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.10() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.25() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 41)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 94)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -1136,11 +1242,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 41)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 94)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 41)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 94)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -1154,7 +1260,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.36"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.7, i32 0, i32 0), i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.11, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.22, i32 0, i32 0), i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.26, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -1250,7 +1356,7 @@ entry:
   %call = call zeroext i1 @_Z24checkMissionItemValidityRK9mission_s(%struct.mission_s* dereferenceable(648) %mission)
   %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %ref.tmp8, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.9, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.24, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
   %call9 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
@@ -1278,7 +1384,7 @@ invoke.cont11:                                    ; preds = %if.else
           to label %invoke.cont14 unwind label %lpad13
 
 invoke.cont14:                                    ; preds = %invoke.cont11
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 49, i8* %call15)
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 102, i8* %call15)
           to label %invoke.cont16 unwind label %lpad13
 
 invoke.cont16:                                    ; preds = %invoke.cont14
@@ -1345,14 +1451,14 @@ unreachable:                                      ; preds = %cleanup
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.13() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.28() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 53)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 106)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -1360,11 +1466,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 53)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 106)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 53)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 106)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -1378,7 +1484,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.37"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.7, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.14, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.22, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.29, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -1466,7 +1572,7 @@ entry:
   %call = call zeroext i1 @_Z24checkMissionItemValidityRK9mission_s(%struct.mission_s* dereferenceable(648) %mission)
   %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %ref.tmp2, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.9, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp2)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.24, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp2)
   %call3 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
@@ -1494,7 +1600,7 @@ invoke.cont5:                                     ; preds = %if.else
           to label %invoke.cont8 unwind label %lpad7
 
 invoke.cont8:                                     ; preds = %invoke.cont5
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp6, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 59, i8* %call9)
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp6, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 112, i8* %call9)
           to label %invoke.cont10 unwind label %lpad7
 
 invoke.cont10:                                    ; preds = %invoke.cont8
@@ -1561,14 +1667,14 @@ unreachable:                                      ; preds = %cleanup
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.15() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.30() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 65)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 118)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -1576,11 +1682,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 65)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 118)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 65)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 118)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -1594,7 +1700,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.38"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.16, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.17, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.32, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -1661,6 +1767,10 @@ entry:
 define void @_ZN30CheckGeofence_InsideInclu_Test8TestBodyEv(%class.CheckGeofence_InsideInclu_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckGeofence_InsideInclu_Test*, align 8
+  %high_lat = alloca i32, align 4
+  %low_lat = alloca i32, align 4
+  %high_lon = alloca i32, align 4
+  %low_lon = alloca i32, align 4
   %mission = alloca %struct.mission_s, align 8
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
@@ -1672,6 +1782,10 @@ entry:
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckGeofence_InsideInclu_Test* %this, %class.CheckGeofence_InsideInclu_Test** %this.addr, align 8
   %this1 = load %class.CheckGeofence_InsideInclu_Test*, %class.CheckGeofence_InsideInclu_Test** %this.addr, align 8
+  store i32 79, i32* %high_lat, align 4
+  store i32 35, i32* %low_lat, align 4
+  store i32 85, i32* %high_lon, align 4
+  store i32 35, i32* %low_lon, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 1, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -1691,10 +1805,10 @@ entry:
   %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 4
   store i8 0, i8* %altitude_is_relative, align 8
   store i8 1, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext true, i32 79, i32 35, i32 85, i32 35)
+  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbRiS2_S2_S2_(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext true, i32* dereferenceable(4) %high_lat, i32* dereferenceable(4) %low_lat, i32* dereferenceable(4) %high_lon, i32* dereferenceable(4) %low_lon)
   %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %ref.tmp8, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i8* getelementptr inbounds ([45 x i8], [45 x i8]* @.str.18, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.19, i32 0, i32 0), i8* getelementptr inbounds ([66 x i8], [66 x i8]* @.str.33, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
   %call9 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
@@ -1722,7 +1836,7 @@ invoke.cont11:                                    ; preds = %if.else
           to label %invoke.cont14 unwind label %lpad13
 
 invoke.cont14:                                    ; preds = %invoke.cont11
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 75, i8* %call15)
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 128, i8* %call15)
           to label %invoke.cont16 unwind label %lpad13
 
 invoke.cont16:                                    ; preds = %invoke.cont14
@@ -1788,17 +1902,17 @@ unreachable:                                      ; preds = %cleanup
   unreachable
 }
 
-declare zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648), i1 zeroext, i32, i32, i32, i32) #1
+declare zeroext i1 @_Z13checkGeofenceRK9mission_sbRiS2_S2_S2_(%struct.mission_s* dereferenceable(648), i1 zeroext, i32* dereferenceable(4), i32* dereferenceable(4), i32* dereferenceable(4), i32* dereferenceable(4)) #1
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.19() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.34() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 79)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 134)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -1806,11 +1920,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 79)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 134)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 79)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 134)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -1824,7 +1938,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.39"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.16, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.20, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.35, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -1891,6 +2005,10 @@ entry:
 define void @_ZN31CheckGeofence_OutsideInclu_Test8TestBodyEv(%class.CheckGeofence_OutsideInclu_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckGeofence_OutsideInclu_Test*, align 8
+  %high_lat = alloca i32, align 4
+  %low_lat = alloca i32, align 4
+  %high_lon = alloca i32, align 4
+  %low_lon = alloca i32, align 4
   %mission = alloca %struct.mission_s, align 8
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
@@ -1902,6 +2020,10 @@ entry:
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckGeofence_OutsideInclu_Test* %this, %class.CheckGeofence_OutsideInclu_Test** %this.addr, align 8
   %this1 = load %class.CheckGeofence_OutsideInclu_Test*, %class.CheckGeofence_OutsideInclu_Test** %this.addr, align 8
+  store i32 79, i32* %high_lat, align 4
+  store i32 35, i32* %low_lat, align 4
+  store i32 85, i32* %high_lon, align 4
+  store i32 35, i32* %low_lon, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 1, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -1921,10 +2043,10 @@ entry:
   %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 4
   store i8 0, i8* %altitude_is_relative, align 8
   store i8 0, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext true, i32 79, i32 35, i32 85, i32 35)
+  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbRiS2_S2_S2_(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext true, i32* dereferenceable(4) %high_lat, i32* dereferenceable(4) %low_lat, i32* dereferenceable(4) %high_lon, i32* dereferenceable(4) %low_lon)
   %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %ref.tmp8, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([44 x i8], [44 x i8]* @.str.21, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([66 x i8], [66 x i8]* @.str.33, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
   %call9 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
@@ -1952,7 +2074,7 @@ invoke.cont11:                                    ; preds = %if.else
           to label %invoke.cont14 unwind label %lpad13
 
 invoke.cont14:                                    ; preds = %invoke.cont11
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 89, i8* %call15)
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 144, i8* %call15)
           to label %invoke.cont16 unwind label %lpad13
 
 invoke.cont16:                                    ; preds = %invoke.cont14
@@ -2019,14 +2141,14 @@ unreachable:                                      ; preds = %cleanup
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.22() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.36() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 93)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 148)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -2034,11 +2156,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 93)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 148)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 93)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 148)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -2052,7 +2174,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.40"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.16, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.23, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.37, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -2119,6 +2241,10 @@ entry:
 define void @_ZN29CheckGeofence_OutsideExc_Test8TestBodyEv(%class.CheckGeofence_OutsideExc_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckGeofence_OutsideExc_Test*, align 8
+  %high_lat = alloca i32, align 4
+  %low_lat = alloca i32, align 4
+  %high_lon = alloca i32, align 4
+  %low_lon = alloca i32, align 4
   %mission = alloca %struct.mission_s, align 8
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
@@ -2130,6 +2256,10 @@ entry:
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckGeofence_OutsideExc_Test* %this, %class.CheckGeofence_OutsideExc_Test** %this.addr, align 8
   %this1 = load %class.CheckGeofence_OutsideExc_Test*, %class.CheckGeofence_OutsideExc_Test** %this.addr, align 8
+  store i32 79, i32* %high_lat, align 4
+  store i32 35, i32* %low_lat, align 4
+  store i32 85, i32* %high_lon, align 4
+  store i32 35, i32* %low_lon, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 1, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -2149,10 +2279,10 @@ entry:
   %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 4
   store i8 0, i8* %altitude_is_relative, align 8
   store i8 1, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext false, i32 79, i32 35, i32 85, i32 35)
+  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbRiS2_S2_S2_(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext false, i32* dereferenceable(4) %high_lat, i32* dereferenceable(4) %low_lat, i32* dereferenceable(4) %high_lon, i32* dereferenceable(4) %low_lon)
   %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %ref.tmp8, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i8* getelementptr inbounds ([44 x i8], [44 x i8]* @.str.24, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.19, i32 0, i32 0), i8* getelementptr inbounds ([66 x i8], [66 x i8]* @.str.38, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
   %call9 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
@@ -2180,7 +2310,7 @@ invoke.cont11:                                    ; preds = %if.else
           to label %invoke.cont14 unwind label %lpad13
 
 invoke.cont14:                                    ; preds = %invoke.cont11
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 103, i8* %call15)
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 158, i8* %call15)
           to label %invoke.cont16 unwind label %lpad13
 
 invoke.cont16:                                    ; preds = %invoke.cont14
@@ -2247,14 +2377,14 @@ unreachable:                                      ; preds = %cleanup
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.25() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.39() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 107)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 162)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -2262,11 +2392,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 107)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 162)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 107)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 162)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -2280,7 +2410,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.41"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.16, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.26, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.40, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -2347,6 +2477,10 @@ entry:
 define void @_ZN28CheckGeofence_InsideExc_Test8TestBodyEv(%class.CheckGeofence_InsideExc_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckGeofence_InsideExc_Test*, align 8
+  %high_lat = alloca i32, align 4
+  %low_lat = alloca i32, align 4
+  %high_lon = alloca i32, align 4
+  %low_lon = alloca i32, align 4
   %mission = alloca %struct.mission_s, align 8
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
@@ -2358,6 +2492,10 @@ entry:
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckGeofence_InsideExc_Test* %this, %class.CheckGeofence_InsideExc_Test** %this.addr, align 8
   %this1 = load %class.CheckGeofence_InsideExc_Test*, %class.CheckGeofence_InsideExc_Test** %this.addr, align 8
+  store i32 79, i32* %high_lat, align 4
+  store i32 35, i32* %low_lat, align 4
+  store i32 85, i32* %high_lon, align 4
+  store i32 35, i32* %low_lon, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 1, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -2377,10 +2515,10 @@ entry:
   %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 4
   store i8 0, i8* %altitude_is_relative, align 8
   store i8 0, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext false, i32 79, i32 35, i32 85, i32 35)
+  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbRiS2_S2_S2_(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext false, i32* dereferenceable(4) %high_lat, i32* dereferenceable(4) %low_lat, i32* dereferenceable(4) %high_lon, i32* dereferenceable(4) %low_lon)
   %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %ref.tmp8, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([45 x i8], [45 x i8]* @.str.27, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([67 x i8], [67 x i8]* @.str.41, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
   %call9 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
@@ -2408,7 +2546,7 @@ invoke.cont11:                                    ; preds = %if.else
           to label %invoke.cont14 unwind label %lpad13
 
 invoke.cont14:                                    ; preds = %invoke.cont11
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 117, i8* %call15)
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 173, i8* %call15)
           to label %invoke.cont16 unwind label %lpad13
 
 invoke.cont16:                                    ; preds = %invoke.cont14
@@ -2475,14 +2613,14 @@ unreachable:                                      ; preds = %cleanup
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.28() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.42() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 121)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 177)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -2490,11 +2628,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 121)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 177)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 121)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 177)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -2508,7 +2646,7 @@ invoke.cont7:                                     ; preds = %invoke.cont5
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.42"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.16, i32 0, i32 0), i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.29, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.43, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -2575,6 +2713,10 @@ entry:
 define void @_ZN33CheckGeofence_InsideTooHigh__Test8TestBodyEv(%class.CheckGeofence_InsideTooHigh__Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckGeofence_InsideTooHigh__Test*, align 8
+  %high_lat = alloca i32, align 4
+  %low_lat = alloca i32, align 4
+  %high_lon = alloca i32, align 4
+  %low_lon = alloca i32, align 4
   %mission = alloca %struct.mission_s, align 8
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
@@ -2586,6 +2728,10 @@ entry:
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckGeofence_InsideTooHigh__Test* %this, %class.CheckGeofence_InsideTooHigh__Test** %this.addr, align 8
   %this1 = load %class.CheckGeofence_InsideTooHigh__Test*, %class.CheckGeofence_InsideTooHigh__Test** %this.addr, align 8
+  store i32 79, i32* %high_lat, align 4
+  store i32 35, i32* %low_lat, align 4
+  store i32 85, i32* %high_lon, align 4
+  store i32 35, i32* %low_lon, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 1, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -2605,10 +2751,10 @@ entry:
   %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 4
   store i8 0, i8* %altitude_is_relative, align 8
   store i8 0, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext true, i32 79, i32 35, i32 85, i32 35)
+  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbRiS2_S2_S2_(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext false, i32* dereferenceable(4) %high_lat, i32* dereferenceable(4) %low_lat, i32* dereferenceable(4) %high_lon, i32* dereferenceable(4) %low_lon)
   %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %ref.tmp8, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([44 x i8], [44 x i8]* @.str.21, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([67 x i8], [67 x i8]* @.str.41, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp8)
   %call9 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
@@ -2636,7 +2782,7 @@ invoke.cont11:                                    ; preds = %if.else
           to label %invoke.cont14 unwind label %lpad13
 
 invoke.cont14:                                    ; preds = %invoke.cont11
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 131, i8* %call15)
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp12, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 189, i8* %call15)
           to label %invoke.cont16 unwind label %lpad13
 
 invoke.cont16:                                    ; preds = %invoke.cont14
@@ -2703,14 +2849,14 @@ unreachable:                                      ; preds = %cleanup
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.30() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.44() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 181)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 195)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -2718,11 +2864,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 181)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 195)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 181)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 195)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -2731,12 +2877,276 @@ invoke.cont5:                                     ; preds = %invoke.cont3
 
 invoke.cont7:                                     ; preds = %invoke.cont5
   %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.43"*
-  invoke void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.43"* %0)
+  invoke void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.43"* %0)
           to label %invoke.cont10 unwind label %lpad9
 
 invoke.cont10:                                    ; preds = %invoke.cont7
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.43"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.32, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.45, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+          to label %invoke.cont11 unwind label %lpad1
+
+invoke.cont11:                                    ; preds = %invoke.cont10
+  call void @_ZN7testing8internal12CodeLocationD1Ev(%"struct.testing::internal::CodeLocation"* %agg.tmp) #14
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #14
+  store %"class.testing::TestInfo"* %call12, %"class.testing::TestInfo"** @_ZN32CheckGeofence_InsideTooHigh_Test10test_info_E, align 8
+  ret void
+
+lpad:                                             ; preds = %entry
+  %2 = landingpad { i8*, i32 }
+          cleanup
+  %3 = extractvalue { i8*, i32 } %2, 0
+  store i8* %3, i8** %exn.slot, align 8
+  %4 = extractvalue { i8*, i32 } %2, 1
+  store i32 %4, i32* %ehselector.slot, align 4
+  br label %ehcleanup13
+
+lpad1:                                            ; preds = %invoke.cont10, %invoke.cont5, %invoke.cont3, %invoke.cont2, %invoke.cont
+  %5 = landingpad { i8*, i32 }
+          cleanup
+  %6 = extractvalue { i8*, i32 } %5, 0
+  store i8* %6, i8** %exn.slot, align 8
+  %7 = extractvalue { i8*, i32 } %5, 1
+  store i32 %7, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad9:                                            ; preds = %invoke.cont7
+  %8 = landingpad { i8*, i32 }
+          cleanup
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot, align 8
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot, align 4
+  call void @_ZdlPv(i8* %call8) #15
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad9, %lpad1
+  call void @_ZN7testing8internal12CodeLocationD1Ev(%"struct.testing::internal::CodeLocation"* %agg.tmp) #14
+  br label %ehcleanup13
+
+ehcleanup13:                                      ; preds = %ehcleanup, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #14
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup13
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val14 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val14
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #2 align 2 {
+entry:
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.43"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.43"* %this, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.43"*, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.43"* %this1)
+  ret void
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @_ZN32CheckGeofence_InsideTooHigh_Test8TestBodyEv(%class.CheckGeofence_InsideTooHigh_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %this.addr = alloca %class.CheckGeofence_InsideTooHigh_Test*, align 8
+  %high_lat = alloca i32, align 4
+  %low_lat = alloca i32, align 4
+  %high_lon = alloca i32, align 4
+  %low_lon = alloca i32, align 4
+  %mission = alloca %struct.mission_s, align 8
+  %isGeofenced = alloca i8, align 1
+  %gtest_ar = alloca %"class.testing::AssertionResult", align 8
+  %ref.tmp = alloca i8, align 1
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %ref.tmp18 = alloca %"class.testing::Message", align 8
+  %ref.tmp20 = alloca %"class.testing::internal::AssertHelper", align 8
+  %cleanup.dest.slot = alloca i32, align 4
+  store %class.CheckGeofence_InsideTooHigh_Test* %this, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  %this1 = load %class.CheckGeofence_InsideTooHigh_Test*, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  store i32 79, i32* %high_lat, align 4
+  store i32 35, i32* %low_lat, align 4
+  store i32 85, i32* %high_lon, align 4
+  store i32 35, i32* %low_lon, align 4
+  %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
+  store i32 1, i32* %count, align 8
+  %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items, i64 0, i64 0
+  %lat = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx, i32 0, i32 0
+  store double 3.800000e+01, double* %lat, align 8
+  %items2 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx3 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items2, i64 0, i64 0
+  %lon = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx3, i32 0, i32 1
+  store double 7.800000e+01, double* %lon, align 8
+  %items4 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx5 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items4, i64 0, i64 0
+  %altitude = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx5, i32 0, i32 2
+  store float 1.000000e+03, float* %altitude, align 8
+  %items6 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx7 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items6, i64 0, i64 0
+  %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 4
+  store i8 0, i8* %altitude_is_relative, align 8
+  call void @stg_begin_test()
+  %items8 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx9 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items8, i64 0, i64 0
+  %lat10 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx9, i32 0, i32 0
+  %0 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat10, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.46, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %0, double 0.000000e+00, double 0.000000e+00)
+  %items11 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx12 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items11, i64 0, i64 0
+  %lon13 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx12, i32 0, i32 1
+  %1 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon13, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.47, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
+  %items14 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx15 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items14, i64 0, i64 0
+  %altitude16 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx15, i32 0, i32 2
+  %2 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude16, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.48, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %2, double 0.000000e+00, double 0.000000e+00)
+  %3 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_int(i32* %high_lat, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.13, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
+  %4 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_int(i32* %low_lat, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.14, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %4, double 0.000000e+00, double 0.000000e+00)
+  %5 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_int(i32* %high_lon, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.15, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %5, double 0.000000e+00, double 0.000000e+00)
+  %6 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_int(i32* %low_lon, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.16, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %6, double 0.000000e+00, double 0.000000e+00)
+  %call = call zeroext i1 @_Z13checkGeofenceRK9mission_sbRiS2_S2_S2_(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext true, i32* dereferenceable(4) %high_lat, i32* dereferenceable(4) %low_lat, i32* dereferenceable(4) %high_lon, i32* dereferenceable(4) %low_lon)
+  %frombool = zext i1 %call to i8
+  store i8 %frombool, i8* %isGeofenced, align 1
+  call void @stg_end_test()
+  %7 = load i8, i8* %isGeofenced, align 1
+  %tobool = trunc i8 %7 to i1
+  call void @stg_record_test(i1 zeroext %tobool)
+  store i8 0, i8* %ref.tmp, align 1
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.49, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isGeofenced)
+  %call17 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  br i1 %call17, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont
+  br label %if.end
+
+lpad:                                             ; preds = %if.else, %entry
+  %8 = landingpad { i8*, i32 }
+          cleanup
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot, align 8
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot, align 4
+  br label %ehcleanup27
+
+if.else:                                          ; preds = %invoke.cont
+  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp18)
+          to label %invoke.cont19 unwind label %lpad
+
+invoke.cont19:                                    ; preds = %if.else
+  %call23 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont22 unwind label %lpad21
+
+invoke.cont22:                                    ; preds = %invoke.cont19
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp20, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 220, i8* %call23)
+          to label %invoke.cont24 unwind label %lpad21
+
+invoke.cont24:                                    ; preds = %invoke.cont22
+  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp20, %"class.testing::Message"* dereferenceable(8) %ref.tmp18)
+          to label %invoke.cont26 unwind label %lpad25
+
+invoke.cont26:                                    ; preds = %invoke.cont24
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp20) #14
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp18) #14
+  store i32 1, i32* %cleanup.dest.slot, align 4
+  br label %cleanup
+
+lpad21:                                           ; preds = %invoke.cont22, %invoke.cont19
+  %11 = landingpad { i8*, i32 }
+          cleanup
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot, align 8
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad25:                                           ; preds = %invoke.cont24
+  %14 = landingpad { i8*, i32 }
+          cleanup
+  %15 = extractvalue { i8*, i32 } %14, 0
+  store i8* %15, i8** %exn.slot, align 8
+  %16 = extractvalue { i8*, i32 } %14, 1
+  store i32 %16, i32* %ehselector.slot, align 4
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp20) #14
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad25, %lpad21
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp18) #14
+  br label %ehcleanup27
+
+if.end:                                           ; preds = %if.then
+  store i32 0, i32* %cleanup.dest.slot, align 4
+  br label %cleanup
+
+cleanup:                                          ; preds = %if.end, %invoke.cont26
+  call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
+  %cleanup.dest = load i32, i32* %cleanup.dest.slot, align 4
+  switch i32 %cleanup.dest, label %unreachable [
+    i32 0, label %cleanup.cont
+    i32 1, label %cleanup.cont
+  ]
+
+cleanup.cont:                                     ; preds = %cleanup, %cleanup
+  ret void
+
+ehcleanup27:                                      ; preds = %ehcleanup, %lpad
+  call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup27
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val28 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val28
+
+unreachable:                                      ; preds = %cleanup
+  unreachable
+}
+
+; Function Attrs: noinline ssp uwtable
+define internal void @__cxx_global_var_init.50() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
+  %ref.tmp = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 227)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %call = invoke i8* @_ZN7testing8internal13GetTestTypeIdEv()
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 227)
+          to label %invoke.cont3 unwind label %lpad1
+
+invoke.cont3:                                     ; preds = %invoke.cont2
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 227)
+          to label %invoke.cont5 unwind label %lpad1
+
+invoke.cont5:                                     ; preds = %invoke.cont3
+  %call8 = invoke i8* @_Znwm(i64 8) #13
+          to label %invoke.cont7 unwind label %lpad1
+
+invoke.cont7:                                     ; preds = %invoke.cont5
+  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.44"*
+  invoke void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.44"* %0)
+          to label %invoke.cont10 unwind label %lpad9
+
+invoke.cont10:                                    ; preds = %invoke.cont7
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %0 to %"class.testing::internal::TestFactoryBase"*
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.51, i32 0, i32 0), i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.52, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -2790,12 +3200,12 @@ eh.resume:                                        ; preds = %ehcleanup13
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #2 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #2 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.43"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.43"* %this, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.43"*, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.43"* %this1)
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.44"* %this1)
   ret void
 }
 
@@ -2803,17 +3213,19 @@ entry:
 define void @_ZN34CheckWayPoints_CloseWaypoints_Test8TestBodyEv(%class.CheckWayPoints_CloseWaypoints_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckWayPoints_CloseWaypoints_Test*, align 8
+  %max_dis = alloca float, align 4
   %mission = alloca %struct.mission_s, align 8
+  %isValid = alloca i8, align 1
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
-  %ref.tmp24 = alloca i8, align 1
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %ref.tmp26 = alloca %"class.testing::Message", align 8
-  %ref.tmp28 = alloca %"class.testing::internal::AssertHelper", align 8
+  %ref.tmp52 = alloca %"class.testing::Message", align 8
+  %ref.tmp54 = alloca %"class.testing::internal::AssertHelper", align 8
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckWayPoints_CloseWaypoints_Test* %this, %class.CheckWayPoints_CloseWaypoints_Test** %this.addr, align 8
   %this1 = load %class.CheckWayPoints_CloseWaypoints_Test*, %class.CheckWayPoints_CloseWaypoints_Test** %this.addr, align 8
+  store float 4.000000e+02, float* %max_dis, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 3, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -2852,79 +3264,133 @@ entry:
   %arrayidx22 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items21, i64 0, i64 2
   %altitude23 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx22, i32 0, i32 2
   store float 5.200000e+02, float* %altitude23, align 8
-  store i8 1, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sf(%struct.mission_s* dereferenceable(648) %mission, float 4.000000e+02)
+  call void @stg_begin_test()
+  %0 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %max_dis, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.17, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %0, double 0.000000e+00, double 0.000000e+00)
+  %items24 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx25 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items24, i64 0, i64 0
+  %lat26 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx25, i32 0, i32 0
+  %1 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat26, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
+  %items27 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx28 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items27, i64 0, i64 0
+  %lon29 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx28, i32 0, i32 1
+  %2 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon29, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.5, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %2, double 0.000000e+00, double 0.000000e+00)
+  %items30 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx31 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items30, i64 0, i64 0
+  %altitude32 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx31, i32 0, i32 2
+  %3 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude32, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.6, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
+  %items33 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx34 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items33, i64 0, i64 1
+  %lat35 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx34, i32 0, i32 0
+  %4 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat35, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.7, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %4, double 0.000000e+00, double 0.000000e+00)
+  %items36 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx37 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items36, i64 0, i64 1
+  %lon38 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx37, i32 0, i32 1
+  %5 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon38, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.8, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %5, double 0.000000e+00, double 0.000000e+00)
+  %items39 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx40 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items39, i64 0, i64 1
+  %altitude41 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx40, i32 0, i32 2
+  %6 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude41, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.9, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %6, double 0.000000e+00, double 0.000000e+00)
+  %items42 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx43 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items42, i64 0, i64 2
+  %lat44 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx43, i32 0, i32 0
+  %7 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat44, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.10, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %7, double 0.000000e+00, double 0.000000e+00)
+  %items45 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx46 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items45, i64 0, i64 2
+  %lon47 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx46, i32 0, i32 1
+  %8 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon47, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.11, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %8, double 0.000000e+00, double 0.000000e+00)
+  %items48 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx49 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items48, i64 0, i64 2
+  %altitude50 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx49, i32 0, i32 2
+  %9 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude50, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.12, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %9, double 0.000000e+00, double 0.000000e+00)
+  %call = call zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sRf(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %max_dis)
   %frombool = zext i1 %call to i8
-  store i8 %frombool, i8* %ref.tmp24, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i8* getelementptr inbounds ([45 x i8], [45 x i8]* @.str.33, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp24)
-  %call25 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
+  store i8 %frombool, i8* %isValid, align 1
+  call void @stg_end_test()
+  %10 = load i8, i8* %isValid, align 1
+  %tobool = trunc i8 %10 to i1
+  %conv = zext i1 %tobool to i32
+  %cmp = icmp eq i32 %conv, 1
+  call void @stg_record_test(i1 zeroext %cmp)
+  store i8 1, i8* %ref.tmp, align 1
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.19, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.53, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isValid)
+  %call51 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  br i1 %call25, label %if.then, label %if.else
+  br i1 %call51, label %if.then, label %if.else
 
 if.then:                                          ; preds = %invoke.cont
   br label %if.end
 
 lpad:                                             ; preds = %if.else, %entry
-  %0 = landingpad { i8*, i32 }
+  %11 = landingpad { i8*, i32 }
           cleanup
-  %1 = extractvalue { i8*, i32 } %0, 0
-  store i8* %1, i8** %exn.slot, align 8
-  %2 = extractvalue { i8*, i32 } %0, 1
-  store i32 %2, i32* %ehselector.slot, align 4
-  br label %ehcleanup35
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot, align 8
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot, align 4
+  br label %ehcleanup61
 
 if.else:                                          ; preds = %invoke.cont
-  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp26)
-          to label %invoke.cont27 unwind label %lpad
+  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp52)
+          to label %invoke.cont53 unwind label %lpad
 
-invoke.cont27:                                    ; preds = %if.else
-  %call31 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
-          to label %invoke.cont30 unwind label %lpad29
+invoke.cont53:                                    ; preds = %if.else
+  %call57 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont56 unwind label %lpad55
 
-invoke.cont30:                                    ; preds = %invoke.cont27
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp28, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 197, i8* %call31)
-          to label %invoke.cont32 unwind label %lpad29
+invoke.cont56:                                    ; preds = %invoke.cont53
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp54, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 263, i8* %call57)
+          to label %invoke.cont58 unwind label %lpad55
 
-invoke.cont32:                                    ; preds = %invoke.cont30
-  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp28, %"class.testing::Message"* dereferenceable(8) %ref.tmp26)
-          to label %invoke.cont34 unwind label %lpad33
+invoke.cont58:                                    ; preds = %invoke.cont56
+  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp54, %"class.testing::Message"* dereferenceable(8) %ref.tmp52)
+          to label %invoke.cont60 unwind label %lpad59
 
-invoke.cont34:                                    ; preds = %invoke.cont32
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp28) #14
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp26) #14
+invoke.cont60:                                    ; preds = %invoke.cont58
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp54) #14
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp52) #14
   store i32 1, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-lpad29:                                           ; preds = %invoke.cont30, %invoke.cont27
-  %3 = landingpad { i8*, i32 }
+lpad55:                                           ; preds = %invoke.cont56, %invoke.cont53
+  %14 = landingpad { i8*, i32 }
           cleanup
-  %4 = extractvalue { i8*, i32 } %3, 0
-  store i8* %4, i8** %exn.slot, align 8
-  %5 = extractvalue { i8*, i32 } %3, 1
-  store i32 %5, i32* %ehselector.slot, align 4
+  %15 = extractvalue { i8*, i32 } %14, 0
+  store i8* %15, i8** %exn.slot, align 8
+  %16 = extractvalue { i8*, i32 } %14, 1
+  store i32 %16, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad33:                                           ; preds = %invoke.cont32
-  %6 = landingpad { i8*, i32 }
+lpad59:                                           ; preds = %invoke.cont58
+  %17 = landingpad { i8*, i32 }
           cleanup
-  %7 = extractvalue { i8*, i32 } %6, 0
-  store i8* %7, i8** %exn.slot, align 8
-  %8 = extractvalue { i8*, i32 } %6, 1
-  store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp28) #14
+  %18 = extractvalue { i8*, i32 } %17, 0
+  store i8* %18, i8** %exn.slot, align 8
+  %19 = extractvalue { i8*, i32 } %17, 1
+  store i32 %19, i32* %ehselector.slot, align 4
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp54) #14
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad33, %lpad29
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp26) #14
-  br label %ehcleanup35
+ehcleanup:                                        ; preds = %lpad59, %lpad55
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp52) #14
+  br label %ehcleanup61
 
 if.end:                                           ; preds = %if.then
   store i32 0, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-cleanup:                                          ; preds = %if.end, %invoke.cont34
+cleanup:                                          ; preds = %if.end, %invoke.cont60
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   %cleanup.dest = load i32, i32* %cleanup.dest.slot, align 4
   switch i32 %cleanup.dest, label %unreachable [
@@ -2935,32 +3401,32 @@ cleanup:                                          ; preds = %if.end, %invoke.con
 cleanup.cont:                                     ; preds = %cleanup, %cleanup
   ret void
 
-ehcleanup35:                                      ; preds = %ehcleanup, %lpad
+ehcleanup61:                                      ; preds = %ehcleanup, %lpad
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup35
+eh.resume:                                        ; preds = %ehcleanup61
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val36 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val36
+  %lpad.val62 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val62
 
 unreachable:                                      ; preds = %cleanup
   unreachable
 }
 
-declare zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sf(%struct.mission_s* dereferenceable(648), float) #1
+declare zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sRf(%struct.mission_s* dereferenceable(648), float* dereferenceable(4)) #1
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.34() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.54() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 202)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 272)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -2968,11 +3434,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 202)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 272)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 202)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 272)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -2980,13 +3446,13 @@ invoke.cont5:                                     ; preds = %invoke.cont3
           to label %invoke.cont7 unwind label %lpad1
 
 invoke.cont7:                                     ; preds = %invoke.cont5
-  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.44"*
-  invoke void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.44"* %0)
+  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.45"*
+  invoke void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.45"* %0)
           to label %invoke.cont10 unwind label %lpad9
 
 invoke.cont10:                                    ; preds = %invoke.cont7
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.35, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %0 to %"class.testing::internal::TestFactoryBase"*
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.51, i32 0, i32 0), i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.55, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -3040,12 +3506,12 @@ eh.resume:                                        ; preds = %ehcleanup13
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #2 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #2 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.44"* %this1)
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.45"* %this1)
   ret void
 }
 
@@ -3053,17 +3519,19 @@ entry:
 define void @_ZN37CheckWayPoints_TooCloseWaypoints_Test8TestBodyEv(%class.CheckWayPoints_TooCloseWaypoints_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckWayPoints_TooCloseWaypoints_Test*, align 8
+  %max_dis = alloca float, align 4
   %mission = alloca %struct.mission_s, align 8
+  %isValid = alloca i8, align 1
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
-  %ref.tmp15 = alloca i8, align 1
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %ref.tmp17 = alloca %"class.testing::Message", align 8
-  %ref.tmp19 = alloca %"class.testing::internal::AssertHelper", align 8
+  %ref.tmp34 = alloca %"class.testing::Message", align 8
+  %ref.tmp36 = alloca %"class.testing::internal::AssertHelper", align 8
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckWayPoints_TooCloseWaypoints_Test* %this, %class.CheckWayPoints_TooCloseWaypoints_Test** %this.addr, align 8
   %this1 = load %class.CheckWayPoints_TooCloseWaypoints_Test*, %class.CheckWayPoints_TooCloseWaypoints_Test** %this.addr, align 8
+  store float 4.000000e+02, float* %max_dis, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 3, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -3090,79 +3558,118 @@ entry:
   %arrayidx13 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items12, i64 0, i64 1
   %altitude14 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx13, i32 0, i32 2
   store float 5.000000e+02, float* %altitude14, align 8
-  store i8 0, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sf(%struct.mission_s* dereferenceable(648) %mission, float 4.000000e+02)
+  call void @stg_begin_test()
+  %0 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %max_dis, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.17, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %0, double 0.000000e+00, double 0.000000e+00)
+  %items15 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx16 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items15, i64 0, i64 0
+  %lat17 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx16, i32 0, i32 0
+  %1 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat17, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
+  %items18 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx19 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items18, i64 0, i64 0
+  %lon20 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx19, i32 0, i32 1
+  %2 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon20, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.5, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %2, double 0.000000e+00, double 0.000000e+00)
+  %items21 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx22 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items21, i64 0, i64 0
+  %altitude23 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx22, i32 0, i32 2
+  %3 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude23, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.6, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
+  %items24 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx25 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items24, i64 0, i64 1
+  %lat26 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx25, i32 0, i32 0
+  %4 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat26, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.7, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %4, double 0.000000e+00, double 0.000000e+00)
+  %items27 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx28 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items27, i64 0, i64 1
+  %lon29 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx28, i32 0, i32 1
+  %5 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon29, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.8, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %5, double 0.000000e+00, double 0.000000e+00)
+  %items30 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx31 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items30, i64 0, i64 1
+  %altitude32 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx31, i32 0, i32 2
+  %6 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude32, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.9, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %6, double 0.000000e+00, double 0.000000e+00)
+  %call = call zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sRf(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %max_dis)
   %frombool = zext i1 %call to i8
-  store i8 %frombool, i8* %ref.tmp15, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([45 x i8], [45 x i8]* @.str.33, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp15)
-  %call16 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
+  store i8 %frombool, i8* %isValid, align 1
+  call void @stg_end_test()
+  %7 = load i8, i8* %isValid, align 1
+  %tobool = trunc i8 %7 to i1
+  %conv = zext i1 %tobool to i32
+  %cmp = icmp eq i32 %conv, 0
+  call void @stg_record_test(i1 zeroext %cmp)
+  store i8 0, i8* %ref.tmp, align 1
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.53, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isValid)
+  %call33 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  br i1 %call16, label %if.then, label %if.else
+  br i1 %call33, label %if.then, label %if.else
 
 if.then:                                          ; preds = %invoke.cont
   br label %if.end
 
 lpad:                                             ; preds = %if.else, %entry
-  %0 = landingpad { i8*, i32 }
+  %8 = landingpad { i8*, i32 }
           cleanup
-  %1 = extractvalue { i8*, i32 } %0, 0
-  store i8* %1, i8** %exn.slot, align 8
-  %2 = extractvalue { i8*, i32 } %0, 1
-  store i32 %2, i32* %ehselector.slot, align 4
-  br label %ehcleanup26
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot, align 8
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot, align 4
+  br label %ehcleanup43
 
 if.else:                                          ; preds = %invoke.cont
-  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp17)
-          to label %invoke.cont18 unwind label %lpad
+  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp34)
+          to label %invoke.cont35 unwind label %lpad
 
-invoke.cont18:                                    ; preds = %if.else
-  %call22 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
-          to label %invoke.cont21 unwind label %lpad20
+invoke.cont35:                                    ; preds = %if.else
+  %call39 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont38 unwind label %lpad37
 
-invoke.cont21:                                    ; preds = %invoke.cont18
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp19, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 213, i8* %call22)
-          to label %invoke.cont23 unwind label %lpad20
+invoke.cont38:                                    ; preds = %invoke.cont35
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp36, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 300, i8* %call39)
+          to label %invoke.cont40 unwind label %lpad37
 
-invoke.cont23:                                    ; preds = %invoke.cont21
-  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp19, %"class.testing::Message"* dereferenceable(8) %ref.tmp17)
-          to label %invoke.cont25 unwind label %lpad24
+invoke.cont40:                                    ; preds = %invoke.cont38
+  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp36, %"class.testing::Message"* dereferenceable(8) %ref.tmp34)
+          to label %invoke.cont42 unwind label %lpad41
 
-invoke.cont25:                                    ; preds = %invoke.cont23
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp19) #14
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp17) #14
+invoke.cont42:                                    ; preds = %invoke.cont40
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
   store i32 1, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-lpad20:                                           ; preds = %invoke.cont21, %invoke.cont18
-  %3 = landingpad { i8*, i32 }
+lpad37:                                           ; preds = %invoke.cont38, %invoke.cont35
+  %11 = landingpad { i8*, i32 }
           cleanup
-  %4 = extractvalue { i8*, i32 } %3, 0
-  store i8* %4, i8** %exn.slot, align 8
-  %5 = extractvalue { i8*, i32 } %3, 1
-  store i32 %5, i32* %ehselector.slot, align 4
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot, align 8
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad24:                                           ; preds = %invoke.cont23
-  %6 = landingpad { i8*, i32 }
+lpad41:                                           ; preds = %invoke.cont40
+  %14 = landingpad { i8*, i32 }
           cleanup
-  %7 = extractvalue { i8*, i32 } %6, 0
-  store i8* %7, i8** %exn.slot, align 8
-  %8 = extractvalue { i8*, i32 } %6, 1
-  store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp19) #14
+  %15 = extractvalue { i8*, i32 } %14, 0
+  store i8* %15, i8** %exn.slot, align 8
+  %16 = extractvalue { i8*, i32 } %14, 1
+  store i32 %16, i32* %ehselector.slot, align 4
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad24, %lpad20
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp17) #14
-  br label %ehcleanup26
+ehcleanup:                                        ; preds = %lpad41, %lpad37
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
+  br label %ehcleanup43
 
 if.end:                                           ; preds = %if.then
   store i32 0, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-cleanup:                                          ; preds = %if.end, %invoke.cont25
+cleanup:                                          ; preds = %if.end, %invoke.cont42
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   %cleanup.dest = load i32, i32* %cleanup.dest.slot, align 4
   switch i32 %cleanup.dest, label %unreachable [
@@ -3173,30 +3680,30 @@ cleanup:                                          ; preds = %if.end, %invoke.con
 cleanup.cont:                                     ; preds = %cleanup, %cleanup
   ret void
 
-ehcleanup26:                                      ; preds = %ehcleanup, %lpad
+ehcleanup43:                                      ; preds = %ehcleanup, %lpad
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup26
+eh.resume:                                        ; preds = %ehcleanup43
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val27 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val27
+  %lpad.val44 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val44
 
 unreachable:                                      ; preds = %cleanup
   unreachable
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.36() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.56() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 218)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 307)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -3204,11 +3711,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 218)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 307)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 218)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 307)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -3216,13 +3723,13 @@ invoke.cont5:                                     ; preds = %invoke.cont3
           to label %invoke.cont7 unwind label %lpad1
 
 invoke.cont7:                                     ; preds = %invoke.cont5
-  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.45"*
-  invoke void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.45"* %0)
+  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.46"*
+  invoke void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.46"* %0)
           to label %invoke.cont10 unwind label %lpad9
 
 invoke.cont10:                                    ; preds = %invoke.cont7
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.31, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.37, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %0 to %"class.testing::internal::TestFactoryBase"*
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.51, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.57, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -3276,12 +3783,12 @@ eh.resume:                                        ; preds = %ehcleanup13
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #2 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #2 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.45"* %this1)
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.46"* %this1)
   ret void
 }
 
@@ -3289,17 +3796,19 @@ entry:
 define void @_ZN35CheckWayPoints_AltituteBreaker_Test8TestBodyEv(%class.CheckWayPoints_AltituteBreaker_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckWayPoints_AltituteBreaker_Test*, align 8
+  %max_dis = alloca float, align 4
   %mission = alloca %struct.mission_s, align 8
+  %isValid = alloca i8, align 1
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
-  %ref.tmp15 = alloca i8, align 1
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %ref.tmp17 = alloca %"class.testing::Message", align 8
-  %ref.tmp19 = alloca %"class.testing::internal::AssertHelper", align 8
+  %ref.tmp34 = alloca %"class.testing::Message", align 8
+  %ref.tmp36 = alloca %"class.testing::internal::AssertHelper", align 8
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckWayPoints_AltituteBreaker_Test* %this, %class.CheckWayPoints_AltituteBreaker_Test** %this.addr, align 8
   %this1 = load %class.CheckWayPoints_AltituteBreaker_Test*, %class.CheckWayPoints_AltituteBreaker_Test** %this.addr, align 8
+  store float 4.000000e+02, float* %max_dis, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 3, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -3326,79 +3835,118 @@ entry:
   %arrayidx13 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items12, i64 0, i64 1
   %altitude14 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx13, i32 0, i32 2
   store float 1.000000e+04, float* %altitude14, align 8
-  store i8 0, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sf(%struct.mission_s* dereferenceable(648) %mission, float 4.000000e+02)
+  call void @stg_begin_test()
+  %0 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %max_dis, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.17, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %0, double 0.000000e+00, double 0.000000e+00)
+  %items15 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx16 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items15, i64 0, i64 0
+  %lat17 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx16, i32 0, i32 0
+  %1 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat17, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
+  %items18 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx19 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items18, i64 0, i64 0
+  %lon20 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx19, i32 0, i32 1
+  %2 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon20, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.5, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %2, double 0.000000e+00, double 0.000000e+00)
+  %items21 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx22 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items21, i64 0, i64 0
+  %altitude23 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx22, i32 0, i32 2
+  %3 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude23, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.6, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
+  %items24 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx25 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items24, i64 0, i64 1
+  %lat26 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx25, i32 0, i32 0
+  %4 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lat26, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.7, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %4, double 0.000000e+00, double 0.000000e+00)
+  %items27 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx28 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items27, i64 0, i64 1
+  %lon29 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx28, i32 0, i32 1
+  %5 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_double(double* %lon29, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.8, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %5, double 0.000000e+00, double 0.000000e+00)
+  %items30 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx31 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items30, i64 0, i64 1
+  %altitude32 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx31, i32 0, i32 2
+  %6 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude32, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.9, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %6, double 0.000000e+00, double 0.000000e+00)
+  %call = call zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sRf(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %max_dis)
   %frombool = zext i1 %call to i8
-  store i8 %frombool, i8* %ref.tmp15, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([45 x i8], [45 x i8]* @.str.33, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp15)
-  %call16 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
+  store i8 %frombool, i8* %isValid, align 1
+  call void @stg_end_test()
+  %7 = load i8, i8* %isValid, align 1
+  %tobool = trunc i8 %7 to i1
+  %conv = zext i1 %tobool to i32
+  %cmp = icmp eq i32 %conv, 0
+  call void @stg_record_test(i1 zeroext %cmp)
+  store i8 0, i8* %ref.tmp, align 1
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.53, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isValid)
+  %call33 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  br i1 %call16, label %if.then, label %if.else
+  br i1 %call33, label %if.then, label %if.else
 
 if.then:                                          ; preds = %invoke.cont
   br label %if.end
 
 lpad:                                             ; preds = %if.else, %entry
-  %0 = landingpad { i8*, i32 }
+  %8 = landingpad { i8*, i32 }
           cleanup
-  %1 = extractvalue { i8*, i32 } %0, 0
-  store i8* %1, i8** %exn.slot, align 8
-  %2 = extractvalue { i8*, i32 } %0, 1
-  store i32 %2, i32* %ehselector.slot, align 4
-  br label %ehcleanup26
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot, align 8
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot, align 4
+  br label %ehcleanup43
 
 if.else:                                          ; preds = %invoke.cont
-  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp17)
-          to label %invoke.cont18 unwind label %lpad
+  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp34)
+          to label %invoke.cont35 unwind label %lpad
 
-invoke.cont18:                                    ; preds = %if.else
-  %call22 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
-          to label %invoke.cont21 unwind label %lpad20
+invoke.cont35:                                    ; preds = %if.else
+  %call39 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont38 unwind label %lpad37
 
-invoke.cont21:                                    ; preds = %invoke.cont18
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp19, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 229, i8* %call22)
-          to label %invoke.cont23 unwind label %lpad20
+invoke.cont38:                                    ; preds = %invoke.cont35
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp36, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 337, i8* %call39)
+          to label %invoke.cont40 unwind label %lpad37
 
-invoke.cont23:                                    ; preds = %invoke.cont21
-  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp19, %"class.testing::Message"* dereferenceable(8) %ref.tmp17)
-          to label %invoke.cont25 unwind label %lpad24
+invoke.cont40:                                    ; preds = %invoke.cont38
+  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp36, %"class.testing::Message"* dereferenceable(8) %ref.tmp34)
+          to label %invoke.cont42 unwind label %lpad41
 
-invoke.cont25:                                    ; preds = %invoke.cont23
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp19) #14
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp17) #14
+invoke.cont42:                                    ; preds = %invoke.cont40
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
   store i32 1, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-lpad20:                                           ; preds = %invoke.cont21, %invoke.cont18
-  %3 = landingpad { i8*, i32 }
+lpad37:                                           ; preds = %invoke.cont38, %invoke.cont35
+  %11 = landingpad { i8*, i32 }
           cleanup
-  %4 = extractvalue { i8*, i32 } %3, 0
-  store i8* %4, i8** %exn.slot, align 8
-  %5 = extractvalue { i8*, i32 } %3, 1
-  store i32 %5, i32* %ehselector.slot, align 4
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot, align 8
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad24:                                           ; preds = %invoke.cont23
-  %6 = landingpad { i8*, i32 }
+lpad41:                                           ; preds = %invoke.cont40
+  %14 = landingpad { i8*, i32 }
           cleanup
-  %7 = extractvalue { i8*, i32 } %6, 0
-  store i8* %7, i8** %exn.slot, align 8
-  %8 = extractvalue { i8*, i32 } %6, 1
-  store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp19) #14
+  %15 = extractvalue { i8*, i32 } %14, 0
+  store i8* %15, i8** %exn.slot, align 8
+  %16 = extractvalue { i8*, i32 } %14, 1
+  store i32 %16, i32* %ehselector.slot, align 4
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad24, %lpad20
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp17) #14
-  br label %ehcleanup26
+ehcleanup:                                        ; preds = %lpad41, %lpad37
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
+  br label %ehcleanup43
 
 if.end:                                           ; preds = %if.then
   store i32 0, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-cleanup:                                          ; preds = %if.end, %invoke.cont25
+cleanup:                                          ; preds = %if.end, %invoke.cont42
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   %cleanup.dest = load i32, i32* %cleanup.dest.slot, align 4
   switch i32 %cleanup.dest, label %unreachable [
@@ -3409,30 +3957,30 @@ cleanup:                                          ; preds = %if.end, %invoke.con
 cleanup.cont:                                     ; preds = %cleanup, %cleanup
   ret void
 
-ehcleanup26:                                      ; preds = %ehcleanup, %lpad
+ehcleanup43:                                      ; preds = %ehcleanup, %lpad
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup26
+eh.resume:                                        ; preds = %ehcleanup43
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val27 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val27
+  %lpad.val44 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val44
 
 unreachable:                                      ; preds = %cleanup
   unreachable
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.38() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.58() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 235)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 346)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -3440,11 +3988,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 235)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 346)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 235)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 346)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -3452,13 +4000,13 @@ invoke.cont5:                                     ; preds = %invoke.cont3
           to label %invoke.cont7 unwind label %lpad1
 
 invoke.cont7:                                     ; preds = %invoke.cont5
-  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.46"*
-  invoke void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.46"* %0)
+  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.47"*
+  invoke void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.47"* %0)
           to label %invoke.cont10 unwind label %lpad9
 
 invoke.cont10:                                    ; preds = %invoke.cont7
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.39, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.40, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %0 to %"class.testing::internal::TestFactoryBase"*
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.59, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.60, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -3512,12 +4060,12 @@ eh.resume:                                        ; preds = %ehcleanup13
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #2 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #2 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.46"* %this1)
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.47"* %this1)
   ret void
 }
 
@@ -3525,17 +4073,19 @@ entry:
 define void @_ZN31CheckAltitute_ValidMission_Test8TestBodyEv(%class.CheckAltitute_ValidMission_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckAltitute_ValidMission_Test*, align 8
+  %home_lat = alloca float, align 4
   %mission = alloca %struct.mission_s, align 8
+  %isValid = alloca i8, align 1
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
-  %ref.tmp32 = alloca i8, align 1
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %ref.tmp34 = alloca %"class.testing::Message", align 8
-  %ref.tmp36 = alloca %"class.testing::internal::AssertHelper", align 8
+  %ref.tmp42 = alloca %"class.testing::Message", align 8
+  %ref.tmp44 = alloca %"class.testing::internal::AssertHelper", align 8
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckAltitute_ValidMission_Test* %this, %class.CheckAltitute_ValidMission_Test** %this.addr, align 8
   %this1 = load %class.CheckAltitute_ValidMission_Test*, %class.CheckAltitute_ValidMission_Test** %this.addr, align 8
+  store float 2.000000e+01, float* %home_lat, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 3, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -3586,79 +4136,103 @@ entry:
   %arrayidx30 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items29, i64 0, i64 2
   %altitude_is_relative31 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx30, i32 0, i32 4
   store i8 0, i8* %altitude_is_relative31, align 8
-  store i8 1, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sfb(%struct.mission_s* dereferenceable(648) %mission, float 2.000000e+01, i1 zeroext true)
+  call void @stg_begin_test()
+  %0 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %home_lat, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.18, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %0, double 0.000000e+00, double 0.000000e+00)
+  %items32 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx33 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items32, i64 0, i64 0
+  %altitude34 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx33, i32 0, i32 2
+  %1 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude34, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.6, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
+  %items35 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx36 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items35, i64 0, i64 1
+  %altitude37 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx36, i32 0, i32 2
+  %2 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude37, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.9, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %2, double 0.000000e+00, double 0.000000e+00)
+  %items38 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx39 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items38, i64 0, i64 2
+  %altitude40 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx39, i32 0, i32 2
+  %3 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude40, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.12, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
+  %call = call zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sRfb(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %home_lat, i1 zeroext true)
   %frombool = zext i1 %call to i8
-  store i8 %frombool, i8* %ref.tmp32, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i8* getelementptr inbounds ([45 x i8], [45 x i8]* @.str.41, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp32)
-  %call33 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
+  store i8 %frombool, i8* %isValid, align 1
+  call void @stg_end_test()
+  %4 = load i8, i8* %isValid, align 1
+  %tobool = trunc i8 %4 to i1
+  %conv = zext i1 %tobool to i32
+  %cmp = icmp eq i32 %conv, 1
+  call void @stg_record_test(i1 zeroext %cmp)
+  store i8 1, i8* %ref.tmp, align 1
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.19, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.53, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isValid)
+  %call41 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  br i1 %call33, label %if.then, label %if.else
+  br i1 %call41, label %if.then, label %if.else
 
 if.then:                                          ; preds = %invoke.cont
   br label %if.end
 
 lpad:                                             ; preds = %if.else, %entry
-  %0 = landingpad { i8*, i32 }
+  %5 = landingpad { i8*, i32 }
           cleanup
-  %1 = extractvalue { i8*, i32 } %0, 0
-  store i8* %1, i8** %exn.slot, align 8
-  %2 = extractvalue { i8*, i32 } %0, 1
-  store i32 %2, i32* %ehselector.slot, align 4
-  br label %ehcleanup43
+  %6 = extractvalue { i8*, i32 } %5, 0
+  store i8* %6, i8** %exn.slot, align 8
+  %7 = extractvalue { i8*, i32 } %5, 1
+  store i32 %7, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
 
 if.else:                                          ; preds = %invoke.cont
-  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp34)
-          to label %invoke.cont35 unwind label %lpad
+  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp42)
+          to label %invoke.cont43 unwind label %lpad
 
-invoke.cont35:                                    ; preds = %if.else
-  %call39 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
-          to label %invoke.cont38 unwind label %lpad37
+invoke.cont43:                                    ; preds = %if.else
+  %call47 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont46 unwind label %lpad45
 
-invoke.cont38:                                    ; preds = %invoke.cont35
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp36, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 253, i8* %call39)
-          to label %invoke.cont40 unwind label %lpad37
+invoke.cont46:                                    ; preds = %invoke.cont43
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp44, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 377, i8* %call47)
+          to label %invoke.cont48 unwind label %lpad45
 
-invoke.cont40:                                    ; preds = %invoke.cont38
-  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp36, %"class.testing::Message"* dereferenceable(8) %ref.tmp34)
-          to label %invoke.cont42 unwind label %lpad41
+invoke.cont48:                                    ; preds = %invoke.cont46
+  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp44, %"class.testing::Message"* dereferenceable(8) %ref.tmp42)
+          to label %invoke.cont50 unwind label %lpad49
 
-invoke.cont42:                                    ; preds = %invoke.cont40
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
+invoke.cont50:                                    ; preds = %invoke.cont48
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp44) #14
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp42) #14
   store i32 1, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-lpad37:                                           ; preds = %invoke.cont38, %invoke.cont35
-  %3 = landingpad { i8*, i32 }
+lpad45:                                           ; preds = %invoke.cont46, %invoke.cont43
+  %8 = landingpad { i8*, i32 }
           cleanup
-  %4 = extractvalue { i8*, i32 } %3, 0
-  store i8* %4, i8** %exn.slot, align 8
-  %5 = extractvalue { i8*, i32 } %3, 1
-  store i32 %5, i32* %ehselector.slot, align 4
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot, align 8
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad41:                                           ; preds = %invoke.cont40
-  %6 = landingpad { i8*, i32 }
+lpad49:                                           ; preds = %invoke.cont48
+  %11 = landingpad { i8*, i32 }
           cleanup
-  %7 = extractvalue { i8*, i32 } %6, 0
-  store i8* %7, i8** %exn.slot, align 8
-  %8 = extractvalue { i8*, i32 } %6, 1
-  store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot, align 8
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot, align 4
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp44) #14
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad41, %lpad37
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
-  br label %ehcleanup43
+ehcleanup:                                        ; preds = %lpad49, %lpad45
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp42) #14
+  br label %ehcleanup51
 
 if.end:                                           ; preds = %if.then
   store i32 0, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-cleanup:                                          ; preds = %if.end, %invoke.cont42
+cleanup:                                          ; preds = %if.end, %invoke.cont50
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   %cleanup.dest = load i32, i32* %cleanup.dest.slot, align 4
   switch i32 %cleanup.dest, label %unreachable [
@@ -3669,32 +4243,32 @@ cleanup:                                          ; preds = %if.end, %invoke.con
 cleanup.cont:                                     ; preds = %cleanup, %cleanup
   ret void
 
-ehcleanup43:                                      ; preds = %ehcleanup, %lpad
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup43
+eh.resume:                                        ; preds = %ehcleanup51
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val44 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val44
+  %lpad.val52 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val52
 
 unreachable:                                      ; preds = %cleanup
   unreachable
 }
 
-declare zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sfb(%struct.mission_s* dereferenceable(648), float, i1 zeroext) #1
+declare zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sRfb(%struct.mission_s* dereferenceable(648), float* dereferenceable(4), i1 zeroext) #1
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.42() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.61() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 258)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 387)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -3702,11 +4276,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 258)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 387)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 258)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 387)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -3714,13 +4288,13 @@ invoke.cont5:                                     ; preds = %invoke.cont3
           to label %invoke.cont7 unwind label %lpad1
 
 invoke.cont7:                                     ; preds = %invoke.cont5
-  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.47"*
-  invoke void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.47"* %0)
+  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.48"*
+  invoke void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.48"* %0)
           to label %invoke.cont10 unwind label %lpad9
 
 invoke.cont10:                                    ; preds = %invoke.cont7
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.39, i32 0, i32 0), i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.43, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %0 to %"class.testing::internal::TestFactoryBase"*
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.59, i32 0, i32 0), i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.62, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -3774,12 +4348,12 @@ eh.resume:                                        ; preds = %ehcleanup13
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #2 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #2 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.47"* %this1)
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.48"* %this1)
   ret void
 }
 
@@ -3787,17 +4361,19 @@ entry:
 define void @_ZN33CheckAltitute_InvalidMission_Test8TestBodyEv(%class.CheckAltitute_InvalidMission_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckAltitute_InvalidMission_Test*, align 8
+  %home_lat = alloca float, align 4
   %mission = alloca %struct.mission_s, align 8
+  %isValid = alloca i8, align 1
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
-  %ref.tmp32 = alloca i8, align 1
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %ref.tmp34 = alloca %"class.testing::Message", align 8
-  %ref.tmp36 = alloca %"class.testing::internal::AssertHelper", align 8
+  %ref.tmp42 = alloca %"class.testing::Message", align 8
+  %ref.tmp44 = alloca %"class.testing::internal::AssertHelper", align 8
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckAltitute_InvalidMission_Test* %this, %class.CheckAltitute_InvalidMission_Test** %this.addr, align 8
   %this1 = load %class.CheckAltitute_InvalidMission_Test*, %class.CheckAltitute_InvalidMission_Test** %this.addr, align 8
+  store float 2.000000e+01, float* %home_lat, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 3, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -3848,79 +4424,103 @@ entry:
   %arrayidx30 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items29, i64 0, i64 2
   %altitude_is_relative31 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx30, i32 0, i32 4
   store i8 1, i8* %altitude_is_relative31, align 8
-  store i8 0, i8* %ref.tmp, align 1
-  %call = call zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sfb(%struct.mission_s* dereferenceable(648) %mission, float 2.000000e+01, i1 zeroext false)
+  call void @stg_begin_test()
+  %0 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %home_lat, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.18, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %0, double 0.000000e+00, double 0.000000e+00)
+  %items32 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx33 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items32, i64 0, i64 0
+  %altitude34 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx33, i32 0, i32 2
+  %1 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude34, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.6, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
+  %items35 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx36 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items35, i64 0, i64 1
+  %altitude37 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx36, i32 0, i32 2
+  %2 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude37, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.9, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %2, double 0.000000e+00, double 0.000000e+00)
+  %items38 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx39 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items38, i64 0, i64 2
+  %altitude40 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx39, i32 0, i32 2
+  %3 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude40, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.12, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
+  %call = call zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sRfb(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %home_lat, i1 zeroext false)
   %frombool = zext i1 %call to i8
-  store i8 %frombool, i8* %ref.tmp32, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([46 x i8], [46 x i8]* @.str.44, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %ref.tmp32)
-  %call33 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
+  store i8 %frombool, i8* %isValid, align 1
+  call void @stg_end_test()
+  %4 = load i8, i8* %isValid, align 1
+  %tobool = trunc i8 %4 to i1
+  %conv = zext i1 %tobool to i32
+  %cmp = icmp eq i32 %conv, 0
+  call void @stg_record_test(i1 zeroext %cmp)
+  store i8 0, i8* %ref.tmp, align 1
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.53, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isValid)
+  %call41 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  br i1 %call33, label %if.then, label %if.else
+  br i1 %call41, label %if.then, label %if.else
 
 if.then:                                          ; preds = %invoke.cont
   br label %if.end
 
 lpad:                                             ; preds = %if.else, %entry
-  %0 = landingpad { i8*, i32 }
+  %5 = landingpad { i8*, i32 }
           cleanup
-  %1 = extractvalue { i8*, i32 } %0, 0
-  store i8* %1, i8** %exn.slot, align 8
-  %2 = extractvalue { i8*, i32 } %0, 1
-  store i32 %2, i32* %ehselector.slot, align 4
-  br label %ehcleanup43
+  %6 = extractvalue { i8*, i32 } %5, 0
+  store i8* %6, i8** %exn.slot, align 8
+  %7 = extractvalue { i8*, i32 } %5, 1
+  store i32 %7, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
 
 if.else:                                          ; preds = %invoke.cont
-  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp34)
-          to label %invoke.cont35 unwind label %lpad
+  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp42)
+          to label %invoke.cont43 unwind label %lpad
 
-invoke.cont35:                                    ; preds = %if.else
-  %call39 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
-          to label %invoke.cont38 unwind label %lpad37
+invoke.cont43:                                    ; preds = %if.else
+  %call47 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont46 unwind label %lpad45
 
-invoke.cont38:                                    ; preds = %invoke.cont35
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp36, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 276, i8* %call39)
-          to label %invoke.cont40 unwind label %lpad37
+invoke.cont46:                                    ; preds = %invoke.cont43
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp44, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 420, i8* %call47)
+          to label %invoke.cont48 unwind label %lpad45
 
-invoke.cont40:                                    ; preds = %invoke.cont38
-  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp36, %"class.testing::Message"* dereferenceable(8) %ref.tmp34)
-          to label %invoke.cont42 unwind label %lpad41
+invoke.cont48:                                    ; preds = %invoke.cont46
+  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp44, %"class.testing::Message"* dereferenceable(8) %ref.tmp42)
+          to label %invoke.cont50 unwind label %lpad49
 
-invoke.cont42:                                    ; preds = %invoke.cont40
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
+invoke.cont50:                                    ; preds = %invoke.cont48
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp44) #14
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp42) #14
   store i32 1, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-lpad37:                                           ; preds = %invoke.cont38, %invoke.cont35
-  %3 = landingpad { i8*, i32 }
+lpad45:                                           ; preds = %invoke.cont46, %invoke.cont43
+  %8 = landingpad { i8*, i32 }
           cleanup
-  %4 = extractvalue { i8*, i32 } %3, 0
-  store i8* %4, i8** %exn.slot, align 8
-  %5 = extractvalue { i8*, i32 } %3, 1
-  store i32 %5, i32* %ehselector.slot, align 4
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot, align 8
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad41:                                           ; preds = %invoke.cont40
-  %6 = landingpad { i8*, i32 }
+lpad49:                                           ; preds = %invoke.cont48
+  %11 = landingpad { i8*, i32 }
           cleanup
-  %7 = extractvalue { i8*, i32 } %6, 0
-  store i8* %7, i8** %exn.slot, align 8
-  %8 = extractvalue { i8*, i32 } %6, 1
-  store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp36) #14
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot, align 8
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot, align 4
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp44) #14
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad41, %lpad37
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp34) #14
-  br label %ehcleanup43
+ehcleanup:                                        ; preds = %lpad49, %lpad45
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp42) #14
+  br label %ehcleanup51
 
 if.end:                                           ; preds = %if.then
   store i32 0, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-cleanup:                                          ; preds = %if.end, %invoke.cont42
+cleanup:                                          ; preds = %if.end, %invoke.cont50
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   %cleanup.dest = load i32, i32* %cleanup.dest.slot, align 4
   switch i32 %cleanup.dest, label %unreachable [
@@ -3931,30 +4531,30 @@ cleanup:                                          ; preds = %if.end, %invoke.con
 cleanup.cont:                                     ; preds = %cleanup, %cleanup
   ret void
 
-ehcleanup43:                                      ; preds = %ehcleanup, %lpad
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup43
+eh.resume:                                        ; preds = %ehcleanup51
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val44 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val44
+  %lpad.val52 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val52
 
 unreachable:                                      ; preds = %cleanup
   unreachable
 }
 
 ; Function Attrs: noinline ssp uwtable
-define internal void @__cxx_global_var_init.45() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @__cxx_global_var_init.63() #0 section "__TEXT,__StaticInit,regular,pure_instructions" personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %agg.tmp = alloca %"struct.testing::internal::CodeLocation", align 8
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0))
-  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 280)
+  invoke void @_ZN7testing8internal12CodeLocationC1ERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEEi(%"struct.testing::internal::CodeLocation"* %agg.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i32 428)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -3962,11 +4562,11 @@ invoke.cont:                                      ; preds = %entry
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 280)
+  %call4 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE19GetSetUpCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 428)
           to label %invoke.cont3 unwind label %lpad1
 
 invoke.cont3:                                     ; preds = %invoke.cont2
-  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 280)
+  %call6 = invoke void ()* @_ZN7testing8internal16SuiteApiResolverINS_4TestEE22GetTearDownCaseOrSuiteEPKci(i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 428)
           to label %invoke.cont5 unwind label %lpad1
 
 invoke.cont5:                                     ; preds = %invoke.cont3
@@ -3974,13 +4574,13 @@ invoke.cont5:                                     ; preds = %invoke.cont3
           to label %invoke.cont7 unwind label %lpad1
 
 invoke.cont7:                                     ; preds = %invoke.cont5
-  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.48"*
-  invoke void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.48"* %0)
+  %0 = bitcast i8* %call8 to %"class.testing::internal::TestFactoryImpl.49"*
+  invoke void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.49"* %0)
           to label %invoke.cont10 unwind label %lpad9
 
 invoke.cont10:                                    ; preds = %invoke.cont7
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %0 to %"class.testing::internal::TestFactoryBase"*
-  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.39, i32 0, i32 0), i8* getelementptr inbounds ([30 x i8], [30 x i8]* @.str.46, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.49"* %0 to %"class.testing::internal::TestFactoryBase"*
+  %call12 = invoke %"class.testing::TestInfo"* @_ZN7testing8internal23MakeAndRegisterTestInfoEPKcS2_S2_S2_NS0_12CodeLocationEPKvPFvvES7_PNS0_15TestFactoryBaseE(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.59, i32 0, i32 0), i8* getelementptr inbounds ([30 x i8], [30 x i8]* @.str.64, i32 0, i32 0), i8* null, i8* null, %"struct.testing::internal::CodeLocation"* %agg.tmp, i8* %call, void ()* %call4, void ()* %call6, %"class.testing::internal::TestFactoryBase"* %1)
           to label %invoke.cont11 unwind label %lpad1
 
 invoke.cont11:                                    ; preds = %invoke.cont10
@@ -4034,12 +4634,12 @@ eh.resume:                                        ; preds = %ehcleanup13
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #2 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEC1Ev(%"class.testing::internal::TestFactoryImpl.49"* %this) unnamed_addr #2 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.48"* %this1)
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.49"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.49"* %this, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.49"*, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.49"* %this1)
   ret void
 }
 
@@ -4047,33 +4647,19 @@ entry:
 define void @_ZN48CheckAltitute_InvalidMission2pointbelowhome_Test8TestBodyEv(%class.CheckAltitute_InvalidMission2pointbelowhome_Test* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %class.CheckAltitute_InvalidMission2pointbelowhome_Test*, align 8
+  %home_lat = alloca float, align 4
   %mission = alloca %struct.mission_s, align 8
-  %home_lat = alloca i32, align 4
-  %alt0 = alloca i32, align 4
-  %alt1 = alloca i32, align 4
-  %alt2 = alloca i32, align 4
   %isValid = alloca i8, align 1
   %gtest_ar = alloca %"class.testing::AssertionResult", align 8
   %ref.tmp = alloca i8, align 1
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %ref.tmp49 = alloca %"class.testing::Message", align 8
-  %ref.tmp51 = alloca %"class.testing::internal::AssertHelper", align 8
+  %ref.tmp42 = alloca %"class.testing::Message", align 8
+  %ref.tmp44 = alloca %"class.testing::internal::AssertHelper", align 8
   %cleanup.dest.slot = alloca i32, align 4
   store %class.CheckAltitute_InvalidMission2pointbelowhome_Test* %this, %class.CheckAltitute_InvalidMission2pointbelowhome_Test** %this.addr, align 8
   %this1 = load %class.CheckAltitute_InvalidMission2pointbelowhome_Test*, %class.CheckAltitute_InvalidMission2pointbelowhome_Test** %this.addr, align 8
-  %0 = bitcast i32* %home_lat to i8*
-  %1 = load i8*, i8** @uniform, align 8
-  call void @stg_symbolic_variable(i8* %0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.47, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
-  %2 = bitcast i32* %alt0 to i8*
-  %3 = load i8*, i8** @uniform, align 8
-  call void @stg_symbolic_variable(i8* %2, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.48, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
-  %4 = bitcast i32* %alt1 to i8*
-  %5 = load i8*, i8** @uniform, align 8
-  call void @stg_symbolic_variable(i8* %4, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.49, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %5, double 0.000000e+00, double 0.000000e+00)
-  %6 = bitcast i32* %alt2 to i8*
-  %7 = load i8*, i8** @uniform, align 8
-  call void @stg_symbolic_variable(i8* %6, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.50, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %7, double 0.000000e+00, double 0.000000e+00)
+  store float 2.000000e+01, float* %home_lat, align 4
   %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 1
   store i32 3, i32* %count, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
@@ -4086,152 +4672,141 @@ entry:
   store double 5.000000e+01, double* %lon, align 8
   %items4 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
   %arrayidx5 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items4, i64 0, i64 0
-  %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx5, i32 0, i32 4
-  store i8 0, i8* %altitude_is_relative, align 8
+  %altitude = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx5, i32 0, i32 2
+  store float 5.000000e+02, float* %altitude, align 8
   %items6 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx7 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items6, i64 0, i64 1
-  %lat8 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 0
-  store double 5.100000e+01, double* %lat8, align 8
-  %items9 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx10 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items9, i64 0, i64 1
-  %lon11 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx10, i32 0, i32 1
-  store double 5.100000e+01, double* %lon11, align 8
-  %items12 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx13 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items12, i64 0, i64 1
-  %altitude_is_relative14 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx13, i32 0, i32 4
-  store i8 0, i8* %altitude_is_relative14, align 8
-  %items15 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx16 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items15, i64 0, i64 2
-  %lat17 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx16, i32 0, i32 0
-  store double 5.200000e+01, double* %lat17, align 8
-  %items18 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx19 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items18, i64 0, i64 2
-  %lon20 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx19, i32 0, i32 1
-  store double 5.200000e+01, double* %lon20, align 8
-  %items21 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx22 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items21, i64 0, i64 2
-  %altitude_is_relative23 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx22, i32 0, i32 4
-  store i8 0, i8* %altitude_is_relative23, align 8
+  %arrayidx7 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items6, i64 0, i64 0
+  %altitude_is_relative = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx7, i32 0, i32 4
+  store i8 0, i8* %altitude_is_relative, align 8
+  %items8 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx9 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items8, i64 0, i64 1
+  %lat10 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx9, i32 0, i32 0
+  store double 5.100000e+01, double* %lat10, align 8
+  %items11 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx12 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items11, i64 0, i64 1
+  %lon13 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx12, i32 0, i32 1
+  store double 5.100000e+01, double* %lon13, align 8
+  %items14 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx15 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items14, i64 0, i64 1
+  %altitude16 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx15, i32 0, i32 2
+  store float 1.000000e+01, float* %altitude16, align 8
+  %items17 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx18 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items17, i64 0, i64 1
+  %altitude_is_relative19 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx18, i32 0, i32 4
+  store i8 0, i8* %altitude_is_relative19, align 8
+  %items20 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx21 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items20, i64 0, i64 2
+  %lat22 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx21, i32 0, i32 0
+  store double 5.200000e+01, double* %lat22, align 8
+  %items23 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx24 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items23, i64 0, i64 2
+  %lon25 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx24, i32 0, i32 1
+  store double 5.200000e+01, double* %lon25, align 8
+  %items26 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx27 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items26, i64 0, i64 2
+  %altitude28 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx27, i32 0, i32 2
+  store float 5.200000e+02, float* %altitude28, align 8
+  %items29 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx30 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items29, i64 0, i64 2
+  %altitude_is_relative31 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx30, i32 0, i32 4
+  store i8 0, i8* %altitude_is_relative31, align 8
   call void @stg_begin_test()
-  %8 = bitcast i32* %home_lat to i8*
-  call void @stg_input_int(i8* %8, i32 20)
-  %9 = bitcast i32* %alt0 to i8*
-  call void @stg_input_int(i8* %9, i32 500)
-  %10 = bitcast i32* %alt1 to i8*
-  call void @stg_input_int(i8* %10, i32 10)
-  %11 = bitcast i32* %alt2 to i8*
-  call void @stg_input_int(i8* %11, i32 520)
-  %12 = load i32, i32* %alt0, align 4
-  %conv = sitofp i32 %12 to float
-  %items24 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx25 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items24, i64 0, i64 0
-  %altitude = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx25, i32 0, i32 2
-  store float %conv, float* %altitude, align 8
-  %13 = load i32, i32* %alt1, align 4
-  %conv26 = sitofp i32 %13 to float
-  %items27 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx28 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items27, i64 0, i64 1
-  %altitude29 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx28, i32 0, i32 2
-  store float %conv26, float* %altitude29, align 8
-  %14 = load i32, i32* %alt2, align 4
-  %conv30 = sitofp i32 %14 to float
-  %items31 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx32 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items31, i64 0, i64 2
-  %altitude33 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx32, i32 0, i32 2
-  store float %conv30, float* %altitude33, align 8
-  %items34 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx35 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items34, i64 0, i64 0
-  %altitude36 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx35, i32 0, i32 2
-  %call = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.51, i32 0, i32 0), float* %altitude36)
-  %items37 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx38 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items37, i64 0, i64 1
-  %altitude39 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx38, i32 0, i32 2
-  %call40 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.52, i32 0, i32 0), float* %altitude39)
-  %items41 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
-  %arrayidx42 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items41, i64 0, i64 2
-  %altitude43 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx42, i32 0, i32 2
-  %call44 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.53, i32 0, i32 0), float* %altitude43)
-  %15 = load i32, i32* %home_lat, align 4
-  %conv45 = sitofp i32 %15 to float
-  %call46 = call zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sfb(%struct.mission_s* dereferenceable(648) %mission, float %conv45, i1 zeroext true)
-  %frombool = zext i1 %call46 to i8
+  %0 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %home_lat, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.18, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %0, double 0.000000e+00, double 0.000000e+00)
+  %items32 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx33 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items32, i64 0, i64 0
+  %altitude34 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx33, i32 0, i32 2
+  %1 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude34, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.6, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %1, double 0.000000e+00, double 0.000000e+00)
+  %items35 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx36 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items35, i64 0, i64 1
+  %altitude37 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx36, i32 0, i32 2
+  %2 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude37, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.9, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %2, double 0.000000e+00, double 0.000000e+00)
+  %items38 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %mission, i32 0, i32 0
+  %arrayidx39 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items38, i64 0, i64 2
+  %altitude40 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx39, i32 0, i32 2
+  %3 = load i8*, i8** @uniform, align 8
+  call void @stg_symbolic_variable_float(float* %altitude40, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.12, i32 0, i32 0), double -2.000000e+01, double 2.000000e+01, i8* %3, double 0.000000e+00, double 0.000000e+00)
+  %call = call zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sRfb(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %home_lat, i1 zeroext true)
+  %frombool = zext i1 %call to i8
   store i8 %frombool, i8* %isValid, align 1
   call void @stg_end_test()
-  %16 = load i8, i8* %isValid, align 1
-  %tobool = trunc i8 %16 to i1
-  %conv47 = zext i1 %tobool to i32
-  %cmp = icmp eq i32 %conv47, 0
+  %4 = load i8, i8* %isValid, align 1
+  %tobool = trunc i8 %4 to i1
+  %conv = zext i1 %tobool to i32
+  %cmp = icmp eq i32 %conv, 0
   call void @stg_record_test(i1 zeroext %cmp)
   store i8 0, i8* %ref.tmp, align 1
-  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.54, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isValid)
-  %call48 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
+  call void @_ZN7testing8internal8EqHelper7CompareIbbLPv0EEENS_15AssertionResultEPKcS6_RKT_RKT0_(%"class.testing::AssertionResult"* sret %gtest_ar, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.53, i32 0, i32 0), i8* dereferenceable(1) %ref.tmp, i8* dereferenceable(1) %isValid)
+  %call41 = invoke zeroext i1 @_ZNK7testing15AssertionResultcvbEv(%"class.testing::AssertionResult"* %gtest_ar)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  br i1 %call48, label %if.then, label %if.else
+  br i1 %call41, label %if.then, label %if.else
 
 if.then:                                          ; preds = %invoke.cont
   br label %if.end
 
 lpad:                                             ; preds = %if.else, %entry
-  %17 = landingpad { i8*, i32 }
+  %5 = landingpad { i8*, i32 }
           cleanup
-  %18 = extractvalue { i8*, i32 } %17, 0
-  store i8* %18, i8** %exn.slot, align 8
-  %19 = extractvalue { i8*, i32 } %17, 1
-  store i32 %19, i32* %ehselector.slot, align 4
-  br label %ehcleanup58
+  %6 = extractvalue { i8*, i32 } %5, 0
+  store i8* %6, i8** %exn.slot, align 8
+  %7 = extractvalue { i8*, i32 } %5, 1
+  store i32 %7, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
 
 if.else:                                          ; preds = %invoke.cont
-  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp49)
-          to label %invoke.cont50 unwind label %lpad
+  invoke void @_ZN7testing7MessageC1Ev(%"class.testing::Message"* %ref.tmp42)
+          to label %invoke.cont43 unwind label %lpad
 
-invoke.cont50:                                    ; preds = %if.else
-  %call54 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
-          to label %invoke.cont53 unwind label %lpad52
+invoke.cont43:                                    ; preds = %if.else
+  %call47 = invoke i8* @_ZNK7testing15AssertionResult15failure_messageEv(%"class.testing::AssertionResult"* %gtest_ar)
+          to label %invoke.cont46 unwind label %lpad45
 
-invoke.cont53:                                    ; preds = %invoke.cont50
-  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp51, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 325, i8* %call54)
-          to label %invoke.cont55 unwind label %lpad52
+invoke.cont46:                                    ; preds = %invoke.cont43
+  invoke void @_ZN7testing8internal12AssertHelperC1ENS_14TestPartResult4TypeEPKciS5_(%"class.testing::internal::AssertHelper"* %ref.tmp44, i32 2, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.3, i32 0, i32 0), i32 461, i8* %call47)
+          to label %invoke.cont48 unwind label %lpad45
 
-invoke.cont55:                                    ; preds = %invoke.cont53
-  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp51, %"class.testing::Message"* dereferenceable(8) %ref.tmp49)
-          to label %invoke.cont57 unwind label %lpad56
+invoke.cont48:                                    ; preds = %invoke.cont46
+  invoke void @_ZNK7testing8internal12AssertHelperaSERKNS_7MessageE(%"class.testing::internal::AssertHelper"* %ref.tmp44, %"class.testing::Message"* dereferenceable(8) %ref.tmp42)
+          to label %invoke.cont50 unwind label %lpad49
 
-invoke.cont57:                                    ; preds = %invoke.cont55
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp51) #14
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp49) #14
+invoke.cont50:                                    ; preds = %invoke.cont48
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp44) #14
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp42) #14
   store i32 1, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-lpad52:                                           ; preds = %invoke.cont53, %invoke.cont50
-  %20 = landingpad { i8*, i32 }
+lpad45:                                           ; preds = %invoke.cont46, %invoke.cont43
+  %8 = landingpad { i8*, i32 }
           cleanup
-  %21 = extractvalue { i8*, i32 } %20, 0
-  store i8* %21, i8** %exn.slot, align 8
-  %22 = extractvalue { i8*, i32 } %20, 1
-  store i32 %22, i32* %ehselector.slot, align 4
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot, align 8
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad56:                                           ; preds = %invoke.cont55
-  %23 = landingpad { i8*, i32 }
+lpad49:                                           ; preds = %invoke.cont48
+  %11 = landingpad { i8*, i32 }
           cleanup
-  %24 = extractvalue { i8*, i32 } %23, 0
-  store i8* %24, i8** %exn.slot, align 8
-  %25 = extractvalue { i8*, i32 } %23, 1
-  store i32 %25, i32* %ehselector.slot, align 4
-  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp51) #14
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot, align 8
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot, align 4
+  call void @_ZN7testing8internal12AssertHelperD1Ev(%"class.testing::internal::AssertHelper"* %ref.tmp44) #14
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad56, %lpad52
-  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp49) #14
-  br label %ehcleanup58
+ehcleanup:                                        ; preds = %lpad49, %lpad45
+  call void @_ZN7testing7MessageD1Ev(%"class.testing::Message"* %ref.tmp42) #14
+  br label %ehcleanup51
 
 if.end:                                           ; preds = %if.then
   store i32 0, i32* %cleanup.dest.slot, align 4
   br label %cleanup
 
-cleanup:                                          ; preds = %if.end, %invoke.cont57
+cleanup:                                          ; preds = %if.end, %invoke.cont50
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   %cleanup.dest = load i32, i32* %cleanup.dest.slot, align 4
   switch i32 %cleanup.dest, label %unreachable [
@@ -4242,32 +4817,20 @@ cleanup:                                          ; preds = %if.end, %invoke.con
 cleanup.cont:                                     ; preds = %cleanup, %cleanup
   ret void
 
-ehcleanup58:                                      ; preds = %ehcleanup, %lpad
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad
   call void @_ZN7testing15AssertionResultD1Ev(%"class.testing::AssertionResult"* %gtest_ar) #14
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup58
+eh.resume:                                        ; preds = %ehcleanup51
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val59 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val59
+  %lpad.val52 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val52
 
 unreachable:                                      ; preds = %cleanup
   unreachable
 }
-
-declare void @stg_symbolic_variable(i8*, i8*, double, double, i8*, double, double) #1
-
-declare void @stg_begin_test() #1
-
-declare void @stg_input_int(i8*, i32) #1
-
-declare i32 @printf(i8*, ...) #1
-
-declare void @stg_end_test() #1
-
-declare void @stg_record_test(i1 zeroext) #1
 
 ; Function Attrs: noinline norecurse optnone ssp uwtable
 define i32 @main(i32 %argc, i8** %argv) #7 {
@@ -4501,6 +5064,28 @@ entry:
   %this1 = load %class.CheckGeofence_InsideTooHigh__Test*, %class.CheckGeofence_InsideTooHigh__Test** %this.addr, align 8
   call void @_ZN33CheckGeofence_InsideTooHigh__TestD1Ev(%class.CheckGeofence_InsideTooHigh__Test* %this1) #14
   %0 = bitcast %class.CheckGeofence_InsideTooHigh__Test* %this1 to i8*
+  call void @_ZdlPv(i8* %0) #15
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define linkonce_odr void @_ZN32CheckGeofence_InsideTooHigh_TestD1Ev(%class.CheckGeofence_InsideTooHigh_Test* %this) unnamed_addr #5 align 2 {
+entry:
+  %this.addr = alloca %class.CheckGeofence_InsideTooHigh_Test*, align 8
+  store %class.CheckGeofence_InsideTooHigh_Test* %this, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  %this1 = load %class.CheckGeofence_InsideTooHigh_Test*, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  call void @_ZN32CheckGeofence_InsideTooHigh_TestD2Ev(%class.CheckGeofence_InsideTooHigh_Test* %this1) #14
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define linkonce_odr void @_ZN32CheckGeofence_InsideTooHigh_TestD0Ev(%class.CheckGeofence_InsideTooHigh_Test* %this) unnamed_addr #5 align 2 {
+entry:
+  %this.addr = alloca %class.CheckGeofence_InsideTooHigh_Test*, align 8
+  store %class.CheckGeofence_InsideTooHigh_Test* %this, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  %this1 = load %class.CheckGeofence_InsideTooHigh_Test*, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  call void @_ZN32CheckGeofence_InsideTooHigh_TestD1Ev(%class.CheckGeofence_InsideTooHigh_Test* %this1) #14
+  %0 = bitcast %class.CheckGeofence_InsideTooHigh_Test* %this1 to i8*
   call void @_ZdlPv(i8* %0) #15
   ret void
 }
@@ -4847,7 +5432,7 @@ cond.false:                                       ; preds = %entry
   br label %cond.end
 
 cond.end:                                         ; preds = %cond.false, %cond.true
-  %cond = phi i8* [ %call4, %cond.true ], [ getelementptr inbounds ([1 x i8], [1 x i8]* @.str.55, i32 0, i32 0), %cond.false ]
+  %cond = phi i8* [ %call4, %cond.true ], [ getelementptr inbounds ([1 x i8], [1 x i8]* @.str.65, i32 0, i32 0), %cond.false ]
   ret i8* %cond
 }
 
@@ -6127,7 +6712,7 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #5 align 2 {
 entry:
   %this.addr = alloca %"class.testing::internal::TestFactoryImpl.43"*, align 8
   store %"class.testing::internal::TestFactoryImpl.43"* %this, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
@@ -6135,40 +6720,144 @@ entry:
   %0 = bitcast %"class.testing::internal::TestFactoryImpl.43"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseC2Ev(%"class.testing::internal::TestFactoryBase"* %0)
   %1 = bitcast %"class.testing::internal::TestFactoryImpl.43"* %this1 to i32 (...)***
-  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [5 x i8*] }, { [5 x i8*] }* @_ZTVN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [5 x i8*] }, { [5 x i8*] }* @_ZTVN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestEE, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED1Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestED1Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #5 align 2 {
 entry:
   %this.addr = alloca %"class.testing::internal::TestFactoryImpl.43"*, align 8
   store %"class.testing::internal::TestFactoryImpl.43"* %this, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
   %this1 = load %"class.testing::internal::TestFactoryImpl.43"*, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED2Ev(%"class.testing::internal::TestFactoryImpl.43"* %this1) #14
+  call void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestED2Ev(%"class.testing::internal::TestFactoryImpl.43"* %this1) #14
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED0Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestED0Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #5 align 2 {
 entry:
   %this.addr = alloca %"class.testing::internal::TestFactoryImpl.43"*, align 8
   store %"class.testing::internal::TestFactoryImpl.43"* %this, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
   %this1 = load %"class.testing::internal::TestFactoryImpl.43"*, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED1Ev(%"class.testing::internal::TestFactoryImpl.43"* %this1) #14
+  call void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestED1Ev(%"class.testing::internal::TestFactoryImpl.43"* %this1) #14
   %0 = bitcast %"class.testing::internal::TestFactoryImpl.43"* %this1 to i8*
   call void @_ZdlPv(i8* %0) #15
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %"class.testing::internal::TestFactoryImpl.43"*, align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   store %"class.testing::internal::TestFactoryImpl.43"* %this, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
   %this1 = load %"class.testing::internal::TestFactoryImpl.43"*, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
+  %call = call i8* @_Znwm(i64 16) #13
+  %0 = bitcast i8* %call to %class.CheckGeofence_InsideTooHigh_Test*
+  invoke void @_ZN32CheckGeofence_InsideTooHigh_TestC1Ev(%class.CheckGeofence_InsideTooHigh_Test* %0)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %1 = bitcast %class.CheckGeofence_InsideTooHigh_Test* %0 to %"class.testing::Test"*
+  ret %"class.testing::Test"* %1
+
+lpad:                                             ; preds = %entry
+  %2 = landingpad { i8*, i32 }
+          cleanup
+  %3 = extractvalue { i8*, i32 } %2, 0
+  store i8* %3, i8** %exn.slot, align 8
+  %4 = extractvalue { i8*, i32 } %2, 1
+  store i32 %4, i32* %ehselector.slot, align 4
+  call void @_ZdlPv(i8* %call) #15
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %lpad
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val2 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val2
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI32CheckGeofence_InsideTooHigh_TestED2Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #5 align 2 {
+entry:
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.43"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.43"* %this, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.43"*, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.43"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  call void @_ZN7testing8internal15TestFactoryBaseD2Ev(%"class.testing::internal::TestFactoryBase"* %0) #14
+  ret void
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define linkonce_odr void @_ZN32CheckGeofence_InsideTooHigh_TestC1Ev(%class.CheckGeofence_InsideTooHigh_Test* %this) unnamed_addr #2 align 2 {
+entry:
+  %this.addr = alloca %class.CheckGeofence_InsideTooHigh_Test*, align 8
+  store %class.CheckGeofence_InsideTooHigh_Test* %this, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  %this1 = load %class.CheckGeofence_InsideTooHigh_Test*, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  call void @_ZN32CheckGeofence_InsideTooHigh_TestC2Ev(%class.CheckGeofence_InsideTooHigh_Test* %this1)
+  ret void
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define linkonce_odr void @_ZN32CheckGeofence_InsideTooHigh_TestC2Ev(%class.CheckGeofence_InsideTooHigh_Test* %this) unnamed_addr #2 align 2 {
+entry:
+  %this.addr = alloca %class.CheckGeofence_InsideTooHigh_Test*, align 8
+  store %class.CheckGeofence_InsideTooHigh_Test* %this, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  %this1 = load %class.CheckGeofence_InsideTooHigh_Test*, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  %0 = bitcast %class.CheckGeofence_InsideTooHigh_Test* %this1 to %"class.testing::Test"*
+  call void @_ZN7testing4TestC2Ev(%"class.testing::Test"* %0)
+  %1 = bitcast %class.CheckGeofence_InsideTooHigh_Test* %this1 to i32 (...)***
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [8 x i8*] }, { [8 x i8*] }* @_ZTV32CheckGeofence_InsideTooHigh_Test, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #5 align 2 {
+entry:
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  call void @_ZN7testing8internal15TestFactoryBaseC2Ev(%"class.testing::internal::TestFactoryBase"* %0)
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %this1 to i32 (...)***
+  store i32 (...)** bitcast (i8** getelementptr inbounds ({ [5 x i8*] }, { [5 x i8*] }* @_ZTVN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestEE, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED1Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #5 align 2 {
+entry:
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED2Ev(%"class.testing::internal::TestFactoryImpl.44"* %this1) #14
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED0Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #5 align 2 {
+entry:
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED1Ev(%"class.testing::internal::TestFactoryImpl.44"* %this1) #14
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %this1 to i8*
+  call void @_ZdlPv(i8* %0) #15
+  ret void
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
   %call = call i8* @_Znwm(i64 16) #13
   %0 = bitcast i8* %call to %class.CheckWayPoints_CloseWaypoints_Test*
   invoke void @_ZN34CheckWayPoints_CloseWaypoints_TestC1Ev(%class.CheckWayPoints_CloseWaypoints_Test* %0)
@@ -6197,12 +6886,12 @@ eh.resume:                                        ; preds = %lpad
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED2Ev(%"class.testing::internal::TestFactoryImpl.43"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI34CheckWayPoints_CloseWaypoints_TestED2Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.43"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.43"* %this, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.43"*, %"class.testing::internal::TestFactoryImpl.43"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.43"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseD2Ev(%"class.testing::internal::TestFactoryBase"* %0) #14
   ret void
 }
@@ -6231,48 +6920,48 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseC2Ev(%"class.testing::internal::TestFactoryBase"* %0)
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %this1 to i32 (...)***
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %this1 to i32 (...)***
   store i32 (...)** bitcast (i8** getelementptr inbounds ({ [5 x i8*] }, { [5 x i8*] }* @_ZTVN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestEE, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED1Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED1Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED2Ev(%"class.testing::internal::TestFactoryImpl.44"* %this1) #14
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED2Ev(%"class.testing::internal::TestFactoryImpl.45"* %this1) #14
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED0Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED0Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED1Ev(%"class.testing::internal::TestFactoryImpl.44"* %this1) #14
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %this1 to i8*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED1Ev(%"class.testing::internal::TestFactoryImpl.45"* %this1) #14
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %this1 to i8*
   call void @_ZdlPv(i8* %0) #15
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
+  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
   %call = call i8* @_Znwm(i64 16) #13
   %0 = bitcast i8* %call to %class.CheckWayPoints_TooCloseWaypoints_Test*
   invoke void @_ZN37CheckWayPoints_TooCloseWaypoints_TestC1Ev(%class.CheckWayPoints_TooCloseWaypoints_Test* %0)
@@ -6301,12 +6990,12 @@ eh.resume:                                        ; preds = %lpad
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED2Ev(%"class.testing::internal::TestFactoryImpl.44"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI37CheckWayPoints_TooCloseWaypoints_TestED2Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.44"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.44"* %this, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.44"*, %"class.testing::internal::TestFactoryImpl.44"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.44"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseD2Ev(%"class.testing::internal::TestFactoryBase"* %0) #14
   ret void
 }
@@ -6335,48 +7024,48 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseC2Ev(%"class.testing::internal::TestFactoryBase"* %0)
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %this1 to i32 (...)***
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %this1 to i32 (...)***
   store i32 (...)** bitcast (i8** getelementptr inbounds ({ [5 x i8*] }, { [5 x i8*] }* @_ZTVN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestEE, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED1Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED1Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED2Ev(%"class.testing::internal::TestFactoryImpl.45"* %this1) #14
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED2Ev(%"class.testing::internal::TestFactoryImpl.46"* %this1) #14
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED0Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED0Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED1Ev(%"class.testing::internal::TestFactoryImpl.45"* %this1) #14
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %this1 to i8*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED1Ev(%"class.testing::internal::TestFactoryImpl.46"* %this1) #14
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %this1 to i8*
   call void @_ZdlPv(i8* %0) #15
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
+  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
   %call = call i8* @_Znwm(i64 16) #13
   %0 = bitcast i8* %call to %class.CheckWayPoints_AltituteBreaker_Test*
   invoke void @_ZN35CheckWayPoints_AltituteBreaker_TestC1Ev(%class.CheckWayPoints_AltituteBreaker_Test* %0)
@@ -6405,12 +7094,12 @@ eh.resume:                                        ; preds = %lpad
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED2Ev(%"class.testing::internal::TestFactoryImpl.45"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI35CheckWayPoints_AltituteBreaker_TestED2Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.45"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.45"* %this, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.45"*, %"class.testing::internal::TestFactoryImpl.45"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.45"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseD2Ev(%"class.testing::internal::TestFactoryBase"* %0) #14
   ret void
 }
@@ -6439,48 +7128,48 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseC2Ev(%"class.testing::internal::TestFactoryBase"* %0)
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %this1 to i32 (...)***
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %this1 to i32 (...)***
   store i32 (...)** bitcast (i8** getelementptr inbounds ({ [5 x i8*] }, { [5 x i8*] }* @_ZTVN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestEE, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED1Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED1Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED2Ev(%"class.testing::internal::TestFactoryImpl.46"* %this1) #14
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED2Ev(%"class.testing::internal::TestFactoryImpl.47"* %this1) #14
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED0Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED0Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED1Ev(%"class.testing::internal::TestFactoryImpl.46"* %this1) #14
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %this1 to i8*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED1Ev(%"class.testing::internal::TestFactoryImpl.47"* %this1) #14
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %this1 to i8*
   call void @_ZdlPv(i8* %0) #15
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
+  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
   %call = call i8* @_Znwm(i64 16) #13
   %0 = bitcast i8* %call to %class.CheckAltitute_ValidMission_Test*
   invoke void @_ZN31CheckAltitute_ValidMission_TestC1Ev(%class.CheckAltitute_ValidMission_Test* %0)
@@ -6509,12 +7198,12 @@ eh.resume:                                        ; preds = %lpad
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED2Ev(%"class.testing::internal::TestFactoryImpl.46"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI31CheckAltitute_ValidMission_TestED2Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.46"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.46"* %this, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.46"*, %"class.testing::internal::TestFactoryImpl.46"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.46"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseD2Ev(%"class.testing::internal::TestFactoryBase"* %0) #14
   ret void
 }
@@ -6543,48 +7232,48 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseC2Ev(%"class.testing::internal::TestFactoryBase"* %0)
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %this1 to i32 (...)***
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %this1 to i32 (...)***
   store i32 (...)** bitcast (i8** getelementptr inbounds ({ [5 x i8*] }, { [5 x i8*] }* @_ZTVN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestEE, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED1Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED1Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED2Ev(%"class.testing::internal::TestFactoryImpl.47"* %this1) #14
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED2Ev(%"class.testing::internal::TestFactoryImpl.48"* %this1) #14
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED0Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED0Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED1Ev(%"class.testing::internal::TestFactoryImpl.47"* %this1) #14
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %this1 to i8*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED1Ev(%"class.testing::internal::TestFactoryImpl.48"* %this1) #14
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %this1 to i8*
   call void @_ZdlPv(i8* %0) #15
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
+  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
   %call = call i8* @_Znwm(i64 16) #13
   %0 = bitcast i8* %call to %class.CheckAltitute_InvalidMission_Test*
   invoke void @_ZN33CheckAltitute_InvalidMission_TestC1Ev(%class.CheckAltitute_InvalidMission_Test* %0)
@@ -6613,12 +7302,12 @@ eh.resume:                                        ; preds = %lpad
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED2Ev(%"class.testing::internal::TestFactoryImpl.47"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI33CheckAltitute_InvalidMission_TestED2Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.47"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.47"* %this, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.47"*, %"class.testing::internal::TestFactoryImpl.47"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.47"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseD2Ev(%"class.testing::internal::TestFactoryBase"* %0) #14
   ret void
 }
@@ -6647,48 +7336,48 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEC2Ev(%"class.testing::internal::TestFactoryImpl.49"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.49"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.49"* %this, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.49"*, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.49"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseC2Ev(%"class.testing::internal::TestFactoryBase"* %0)
-  %1 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %this1 to i32 (...)***
+  %1 = bitcast %"class.testing::internal::TestFactoryImpl.49"* %this1 to i32 (...)***
   store i32 (...)** bitcast (i8** getelementptr inbounds ({ [5 x i8*] }, { [5 x i8*] }* @_ZTVN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestEE, i32 0, inrange i32 0, i32 2) to i32 (...)**), i32 (...)*** %1, align 8
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED1Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED1Ev(%"class.testing::internal::TestFactoryImpl.49"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED2Ev(%"class.testing::internal::TestFactoryImpl.48"* %this1) #14
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.49"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.49"* %this, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.49"*, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED2Ev(%"class.testing::internal::TestFactoryImpl.49"* %this1) #14
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED0Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED0Ev(%"class.testing::internal::TestFactoryImpl.49"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  call void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED1Ev(%"class.testing::internal::TestFactoryImpl.48"* %this1) #14
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %this1 to i8*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.49"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.49"* %this, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.49"*, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  call void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED1Ev(%"class.testing::internal::TestFactoryImpl.49"* %this1) #14
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.49"* %this1 to i8*
   call void @_ZdlPv(i8* %0) #15
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr %"class.testing::Test"* @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestE10CreateTestEv(%"class.testing::internal::TestFactoryImpl.49"* %this) unnamed_addr #2 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.49"*, align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
+  store %"class.testing::internal::TestFactoryImpl.49"* %this, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.49"*, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
   %call = call i8* @_Znwm(i64 16) #13
   %0 = bitcast i8* %call to %class.CheckAltitute_InvalidMission2pointbelowhome_Test*
   invoke void @_ZN48CheckAltitute_InvalidMission2pointbelowhome_TestC1Ev(%class.CheckAltitute_InvalidMission2pointbelowhome_Test* %0)
@@ -6717,12 +7406,12 @@ eh.resume:                                        ; preds = %lpad
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED2Ev(%"class.testing::internal::TestFactoryImpl.48"* %this) unnamed_addr #5 align 2 {
+define linkonce_odr void @_ZN7testing8internal15TestFactoryImplI48CheckAltitute_InvalidMission2pointbelowhome_TestED2Ev(%"class.testing::internal::TestFactoryImpl.49"* %this) unnamed_addr #5 align 2 {
 entry:
-  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.48"*, align 8
-  store %"class.testing::internal::TestFactoryImpl.48"* %this, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  %this1 = load %"class.testing::internal::TestFactoryImpl.48"*, %"class.testing::internal::TestFactoryImpl.48"** %this.addr, align 8
-  %0 = bitcast %"class.testing::internal::TestFactoryImpl.48"* %this1 to %"class.testing::internal::TestFactoryBase"*
+  %this.addr = alloca %"class.testing::internal::TestFactoryImpl.49"*, align 8
+  store %"class.testing::internal::TestFactoryImpl.49"* %this, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  %this1 = load %"class.testing::internal::TestFactoryImpl.49"*, %"class.testing::internal::TestFactoryImpl.49"** %this.addr, align 8
+  %0 = bitcast %"class.testing::internal::TestFactoryImpl.49"* %this1 to %"class.testing::internal::TestFactoryBase"*
   call void @_ZN7testing8internal15TestFactoryBaseD2Ev(%"class.testing::internal::TestFactoryBase"* %0) #14
   ret void
 }
@@ -6852,6 +7541,17 @@ entry:
   store %class.CheckGeofence_InsideTooHigh__Test* %this, %class.CheckGeofence_InsideTooHigh__Test** %this.addr, align 8
   %this1 = load %class.CheckGeofence_InsideTooHigh__Test*, %class.CheckGeofence_InsideTooHigh__Test** %this.addr, align 8
   %0 = bitcast %class.CheckGeofence_InsideTooHigh__Test* %this1 to %"class.testing::Test"*
+  call void @_ZN7testing4TestD2Ev(%"class.testing::Test"* %0) #14
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define linkonce_odr void @_ZN32CheckGeofence_InsideTooHigh_TestD2Ev(%class.CheckGeofence_InsideTooHigh_Test* %this) unnamed_addr #5 align 2 {
+entry:
+  %this.addr = alloca %class.CheckGeofence_InsideTooHigh_Test*, align 8
+  store %class.CheckGeofence_InsideTooHigh_Test* %this, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  %this1 = load %class.CheckGeofence_InsideTooHigh_Test*, %class.CheckGeofence_InsideTooHigh_Test** %this.addr, align 8
+  %0 = bitcast %class.CheckGeofence_InsideTooHigh_Test* %this1 to %"class.testing::Test"*
   call void @_ZN7testing4TestD2Ev(%"class.testing::Test"* %0) #14
   ret void
 }
@@ -9763,7 +10463,7 @@ entry:
   %1 = load i8, i8* %x.addr, align 1
   %tobool = trunc i8 %1 to i1
   %2 = zext i1 %tobool to i64
-  %cond = select i1 %tobool, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.12, i32 0, i32 0)
+  %cond = select i1 %tobool, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.19, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0)
   %call = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %0, i8* %cond)
   ret void
 }
@@ -10381,7 +11081,7 @@ entry:
   br i1 %cmp, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  call void @_ZNSt3__1L20__throw_length_errorEPKc(i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.61, i32 0, i32 0)) #17
+  call void @_ZNSt3__1L20__throw_length_errorEPKc(i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.71, i32 0, i32 0)) #17
   unreachable
 
 if.end:                                           ; preds = %entry
@@ -10573,20 +11273,21 @@ entry:
 define internal void @_GLOBAL__sub_I_mission_feasibility_test.cpp() #0 section "__TEXT,__StaticInit,regular,pure_instructions" {
 entry:
   call void @__cxx_global_var_init()
-  call void @__cxx_global_var_init.6()
-  call void @__cxx_global_var_init.10()
-  call void @__cxx_global_var_init.13()
-  call void @__cxx_global_var_init.15()
-  call void @__cxx_global_var_init.19()
-  call void @__cxx_global_var_init.22()
+  call void @__cxx_global_var_init.21()
   call void @__cxx_global_var_init.25()
   call void @__cxx_global_var_init.28()
   call void @__cxx_global_var_init.30()
   call void @__cxx_global_var_init.34()
   call void @__cxx_global_var_init.36()
-  call void @__cxx_global_var_init.38()
+  call void @__cxx_global_var_init.39()
   call void @__cxx_global_var_init.42()
-  call void @__cxx_global_var_init.45()
+  call void @__cxx_global_var_init.44()
+  call void @__cxx_global_var_init.50()
+  call void @__cxx_global_var_init.54()
+  call void @__cxx_global_var_init.56()
+  call void @__cxx_global_var_init.58()
+  call void @__cxx_global_var_init.61()
+  call void @__cxx_global_var_init.63()
   ret void
 }
 

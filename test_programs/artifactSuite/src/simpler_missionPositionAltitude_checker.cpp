@@ -21,16 +21,12 @@
 *  home_alt is the altitude at the home waypoint
 *  home_alt_valid is a boolean that is false if the home altitude is not set
 */
-bool checkHomePositionAltitude(const mission_s &mission, float home_alt, bool home_alt_valid)
+bool checkHomePositionAltitude(const mission_s &mission, float &home_alt, bool home_alt_valid)
 {
-
-
 
 
 	/* Check if all waypoints are above the home altitude */
 	for (size_t i = 0; i < mission.count; i++) {
-
-
 
 	    printf("from function %p\n",&mission.items[i].altitude);
  

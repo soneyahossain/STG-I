@@ -12,9 +12,9 @@
 #include "simpler_mission.h"
 
 bool checkMissionFeasible(const mission_s &mission,
-		float max_distance_between_waypoints,
-		bool home_alt_valid, float home_alt,
-		bool inclusion,  int high_lat, int  low_lat, int high_lon, int low_lon)
+		float &max_distance_between_waypoints,
+		bool home_alt_valid, float &home_alt,
+		bool inclusion,  int &high_lat, int  &low_lat, int &high_lon, int &low_lon)
 {
 	// trivial case: A mission with length zero cannot be valid
 	if ((int)mission.count <= 0) {
@@ -37,11 +37,8 @@ bool checkMissionFeasible(const mission_s &mission,
 }
 
 
-
 /* Sample Test */
 /*
-
-
 
 TEST(MissionCheck, CheckCombined) {
 

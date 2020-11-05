@@ -33,7 +33,7 @@ float get_distance_to_next_waypoint(double lat_now, double lon_now, double lat_n
 }
 
 
-bool checkDistancesBetweenWaypoints(const  mission_s &mission, float max_distance)
+bool checkDistancesBetweenWaypoints(const  mission_s &mission, float &max_distance)
 {
 	if (max_distance <= 0.0f) {
 		/* param not set, check is ok */
@@ -48,8 +48,7 @@ bool checkDistancesBetweenWaypoints(const  mission_s &mission, float max_distanc
 	for (int i = 0; i < mission.count; i++) 
 	{
 		/* check distance from current position to item */
-		const float dist_between_waypoints = get_distance_to_next_waypoint(
-				mission.items[i].lat, mission.items[i].lon, last_lat, last_lon);
+		const float dist_between_waypoints = get_distance_to_next_waypoint(mission.items[i].lat, mission.items[i].lon, last_lat, last_lon);
 
 		if (dist_between_waypoints > max_distance) 
 				return false;
