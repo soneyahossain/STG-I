@@ -1,0 +1,147 @@
+[
+
+LAT0 : double = 50,range:[-20,20],uniform
+LON0 : double = 50,range:[-20,20],uniform
+ALT0 : float = 500,range:[-20,20],uniform
+LAT1 : double = 51,range:[-20,20],uniform
+LON1 : double = 51,range:[-20,20],uniform
+ALT1 : float = 510,range:[-20,20],uniform
+LAT2 : double = 52,range:[-20,20],uniform
+LON2 : double = 52,range:[-20,20],uniform
+ALT2 : float = 520,range:[-20,20],uniform
+HLAT : i32 = 79,range:[-20,20],uniform
+LLAT : i32 = 35,range:[-20,20],uniform
+HLON : i32 = 85,range:[-20,20],uniform
+LLON : i32 = 35,range:[-20,20],uniform
+MAX_DIS : float = 400,range:[-20,20],uniform
+HOME_LAT : float = 10,range:[-20,20],uniform
+
+]
+
+//Test: passed
+
+(land
+  (lnot(sle (i32 3) (i32 0)))
+  (land
+    (trunc i1 (zext i8 1))
+    (land
+      (lnot(trunc i1 (i8 0)))
+      (land
+        (ult (i64 0) (sext i64 (i32 3)))
+        (land
+          (ne (i32 32767) (i32 0))
+          (land
+            (ne (i32 32767) (i32 16))
+            (land
+              (ne (i32 32767) (i32 17))
+              (land
+                (ne (i32 32767) (i32 19))
+                (land
+                  (ne (i32 32767) (i32 20))
+                  (land
+                    (ne (i32 32767) (i32 21))
+                    (land
+                      (ne (i32 32767) (i32 22))
+                      (land
+                        (ne (i32 32767) (i32 31))
+                        (land
+                          (ne (i32 32767) (i32 84))
+                          (land
+                            (ne (i32 32767) (i32 85))
+                            (land
+                              (ne (i32 32767) (i32 93))
+                              (land
+                                (ne (i32 32767) (i32 4501))
+                                (land
+                                  (ne (i32 32767) (i32 177))
+                                  (land
+                                    (ne (i32 32767) (i32 178))
+                                    (land
+                                      (ne (i32 32767) (i32 179))
+                                      (land
+                                        (ne (i32 32767) (i32 183))
+                                        (land
+                                          (ne (i32 32767) (i32 189))
+                                          (land
+                                            (ne (i32 32767) (i32 2003))
+                                            (land
+                                              (ne (i32 32767) (i32 203))
+                                              (land
+                                                (ne (i32 32767) (i32 2000))
+                                                (land
+                                                  (ne (i32 32767) (i32 2001))
+                                                  (land
+                                                    (ne (i32 32767) (i32 2500))
+                                                    (land
+                                                      (ne (i32 32767) (i32 2501))
+                                                      (land
+                                                        (ne (i32 32767) (i32 200))
+                                                        (land
+                                                          (ne (i32 32767) (i32 204))
+                                                          (land
+                                                            (ne (i32 32767) (i32 205))
+                                                            (land
+                                                              (ne (i32 32767) (i32 201))
+                                                              (land
+                                                                (ne (i32 32767) (i32 195))
+                                                                (land
+                                                                  (ne (i32 32767) (i32 196))
+                                                                  (land
+                                                                    (ne (i32 32767) (i32 197))
+                                                                    (land
+                                                                      (ne (i32 32767) (i32 206))
+                                                                      (land
+                                                                        (ne (i32 32767) (i32 214))
+                                                                        (land
+                                                                          (ne (i32 32767) (i32 530))
+                                                                          (land
+                                                                            (ne (i32 32767) (i32 531))
+                                                                            (land
+                                                                              (ne (i32 32767) (i32 3000))
+                                                                              (land
+                                                                                (trunc i1 (zext i8 (xor (i1 0) (i1 1))))
+                                                                                (land
+                                                                                  (trunc i1 (zext i8 1))
+                                                                                  (trunc i1 (zext i8 1))
+                                                                                )
+                                                                              )
+                                                                            )
+                                                                          )
+                                                                        )
+                                                                      )
+                                                                    )
+                                                                  )
+                                                                )
+                                                              )
+                                                            )
+                                                          )
+                                                        )
+                                                      )
+                                                    )
+                                                  )
+                                                )
+                                              )
+                                            )
+                                          )
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

@@ -5,7 +5,17 @@
 #include "../../../lib/distribution.hpp"
 #include <stdio.h>
 
+
+
+
 TEST(MissionCheck, CheckCombined) {
+
+
+    //step1: decalre all the variables and assign values
+
+    int high_lat=79, low_lat=35, high_lon=85, low_lon=35;
+    float max_dis=400;
+    float home_lat=10;
 
     struct mission_s mission;
  	mission.count = 3;
@@ -22,8 +32,51 @@ TEST(MissionCheck, CheckCombined) {
 	mission.items[2].altitude = 520;
 	mission.items[2].altitude_is_relative = false;
 
-    ASSERT_EQ(true, checkMissionFeasible (mission, 400, true, 10, true,  79, 35, 85, 35));
+
+    //step 2: call stg_begin_test()
+
+
+    stg_begin_test();
+
+    //step 3: decalre all symbolic variables 
+
+    stg_symbolic_variable_double(&mission.items[0].lat, "LAT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[0].lon, "LON0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[0].altitude, "ALT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[1].lat, "LAT1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[1].lon, "LON1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[2].lat, "LAT2", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[2].lon, "LON2", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform,0,0);
+    stg_symbolic_variable_int(&high_lat, "HLAT", -20, 20,uniform,0,0);
+    stg_symbolic_variable_int(&low_lat, "LLAT", -20, 20,uniform,0,0);
+    stg_symbolic_variable_int(&high_lon, "HLON", -20, 20,uniform,0,0);
+    stg_symbolic_variable_int(&low_lon, "LLON", -20, 20,uniform,0,0);
+    stg_symbolic_variable_float(&max_dis, "MAX_DIS", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&home_lat, "HOME_LAT", -20, 20, uniform,0,0);
+
+
+
+    //step 4: call function and store the result in a boolean var 
+
+    bool isFeasibleMission = checkMissionFeasible (mission, max_dis, true, home_lat, true,  high_lat, low_lat, high_lon, low_lon);
+    
+
+    //step 5: end test 
+    stg_end_test();
+
+    //step 6: record test 
+    stg_record_test(isFeasibleMission==true);
+
+    // test oracles 
+    ASSERT_EQ(true, isFeasibleMission);
+
+    // note that all the stg_input_  calls are removed to simply src code annotations 
+
 }
+
+
 
 TEST(MissionCommandCheck, ValidCommand)
 {
@@ -64,7 +117,7 @@ TEST(MissionCommandCheck, InValidWaypoint)
 
 TEST(CheckGeofence, InsideInclu)
 {
-
+    int high_lat=79, low_lat=35, high_lon=85, low_lon=35;
     struct mission_s mission;
  	mission.count = 1;
 	mission.items[0].lat = 38;
@@ -72,13 +125,15 @@ TEST(CheckGeofence, InsideInclu)
 	mission.items[0].altitude = 100;
 	mission.items[0].altitude_is_relative = false;
 
-	ASSERT_EQ(true, checkGeofence(mission,true, 79, 35, 85, 35 ));
+	ASSERT_EQ(true, checkGeofence(mission,true, high_lat, low_lat, high_lon, low_lon));
 	//printf("Inside/accept: 38, 78, 100, true, 79, 35, 85, 35: %d\n", checkGeofence(38, 78, 100, true,  79, 35, 85, 35));
 }
 
+
+
 TEST(CheckGeofence, OutsideInclu)
 {
-
+    int high_lat=79, low_lat=35, high_lon=85, low_lon=35;
     struct mission_s mission;
  	mission.count = 1;
 	mission.items[0].lat = 38;
@@ -86,13 +141,13 @@ TEST(CheckGeofence, OutsideInclu)
 	mission.items[0].altitude = 100;
 	mission.items[0].altitude_is_relative = false;
 
-	ASSERT_EQ(false, checkGeofence(mission,true,  79, 35, 85, 35)); //checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
+	ASSERT_EQ(false, checkGeofence(mission,true, high_lat, low_lat, high_lon, low_lon));
 	//printf("Outside/reject: 38, 100, 100, true, 79, 35, 85, 35: %d\n", checkGeofence(38, 100, 100, true,  79, 35, 85, 35));
 }
 
 TEST(CheckGeofence, OutsideExc)
 {
-
+    int high_lat=79, low_lat=35, high_lon=85, low_lon=35;
     struct mission_s mission;
  	mission.count = 1;
 	mission.items[0].lat = 38;
@@ -100,12 +155,13 @@ TEST(CheckGeofence, OutsideExc)
 	mission.items[0].altitude = 100;
 	mission.items[0].altitude_is_relative = false;
 
-	ASSERT_EQ(true, checkGeofence(mission,false,79, 35, 85, 35)); //checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
+	ASSERT_EQ(true, checkGeofence(mission,false,high_lat, low_lat, high_lon, low_lon)); 
 	//printf("Outside but exc/accept: 38, 78, 100, false, 79, 35, 85, 35: %d\n", checkGeofence(38, 100, 100, false,  79, 35, 85, 35));
 }
 
 TEST(CheckGeofence, InsideExc)
 {
+    int high_lat=79, low_lat=35, high_lon=85, low_lon=35;
 
     struct mission_s mission;
  	mission.count = 1;
@@ -114,12 +170,14 @@ TEST(CheckGeofence, InsideExc)
 	mission.items[0].altitude = 100;
 	mission.items[0].altitude_is_relative = false;
 
-	ASSERT_EQ(false, checkGeofence(mission,false, 79, 35, 85, 35)); //checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
+	ASSERT_EQ(false, checkGeofence(mission,false, high_lat, low_lat, high_lon, low_lon)); //checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
 	//printf("Inside but exc/reject: 38, 78, 100, false, 79, 35, 85, 35: %d\n", checkGeofence(38, 78, 100, false,  79, 35, 85, 35));
 }
 
 TEST(CheckGeofence, InsideTooHigh_)
 {
+
+    int high_lat=79, low_lat=35, high_lon=85, low_lon=35;
 
     struct mission_s mission;
  	mission.count = 1;
@@ -128,47 +186,35 @@ TEST(CheckGeofence, InsideTooHigh_)
 	mission.items[0].altitude = 1000;
 	mission.items[0].altitude_is_relative = false;
 
-	ASSERT_EQ(false, checkGeofence(mission,true, 79, 35, 85, 35)); //checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
+	ASSERT_EQ(false, checkGeofence(mission,false, high_lat, low_lat, high_lon, low_lon)); //checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
 	//printf("Inside but exc/reject: 38, 78, 100, false, 79, 35, 85, 35: %d\n", checkGeofence(38, 78, 100, false,  79, 35, 85, 35));
 }
 
-/*
+
 
 TEST(CheckGeofence, InsideTooHigh)
 {
 
-    int  lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon;
+    int high_lat=79, low_lat=35, high_lon=85, low_lon=35;
 
     struct mission_s mission;
  	mission.count = 1;
-
-	mission.items[0].altitude_is_relative = false;
-
-    stg_symbolic_variable(&lat, "LAT", -20, 20, uniform,0,0);
-    stg_symbolic_variable(&lon, "LON", -20, 20, uniform,0,0);
-    stg_symbolic_variable(&altitude, "ALT", -20, 20, uniform,0,0);
-    stg_symbolic_variable(&inclusion, "INC", -20, 20,uniform,0,0);
-    stg_symbolic_variable(&high_lat, "HLAT", -20, 20,uniform,0,0);
-    stg_symbolic_variable(&low_lat, "LLAT", -20, 20,uniform,0,0);
-    stg_symbolic_variable(&high_lon, "HLON", -20, 20,uniform,0,0);
-    stg_symbolic_variable(&low_lon, "LLON", -20, 20,uniform,0,0);
+    mission.items[0].lat = 38;
+    mission.items[0].lon = 78;
+    mission.items[0].altitude = 1000;
+    mission.items[0].altitude_is_relative = false;
 
     stg_begin_test();
+    stg_symbolic_variable_double(&mission.items[0].lat, "LAT", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[0].lon, "LON", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[0].altitude, "ALT", -20, 20, uniform,0,0);
+    //stg_symbolic_variable(&inclusion, "INC", -20, 20,uniform,0,0);
+    stg_symbolic_variable_int(&high_lat, "HLAT", -20, 20,uniform,0,0);
+    stg_symbolic_variable_int(&low_lat, "LLAT", -20, 20,uniform,0,0);
+    stg_symbolic_variable_int(&high_lon, "HLON", -20, 20,uniform,0,0);
+    stg_symbolic_variable_int(&low_lon, "LLON", -20, 20,uniform,0,0);
 
-    stg_input_int(&lat, 38);
-    stg_input_int(&lon, 78);
-    stg_input_int(&altitude, 1000);
-    stg_input_int(&inclusion, 1);
-    stg_input_int(&high_lat, 79);
-    stg_input_int(&low_lat, 35);
-    stg_input_int(&high_lon, 85);
-    stg_input_int(&low_lon, 35);
-
-    mission.items[0].lat = lat;
-    mission.items[0].lon = lon;
-    mission.items[0].altitude = altitude;
-
-    bool isGeofenced = checkGeofence(mission,inclusion, high_lat, low_lat, high_lon, low_lon);
+    bool isGeofenced = checkGeofence(mission,true, high_lat, low_lat, high_lon, low_lon);
     stg_end_test();
     stg_record_test(isGeofenced);
 	ASSERT_EQ(false, isGeofenced);
@@ -176,32 +222,59 @@ TEST(CheckGeofence, InsideTooHigh)
 	//printf("Inside but too high/reject: 38, 78, 1000, true, 79, 35, 85, 35: %d\n", isGeofenced);
 }
 
-*/
+
 
 TEST(CheckWayPoints, CloseWaypoints)
- {
-
+{
+    
+    float max_dis=400;
     struct mission_s mission;
+    mission.count = 3;
+    mission.items[0].lat = 50;
+    mission.items[0].lon = 50;
+    mission.items[0].altitude = 500;
+    mission.items[1].lat = 51;
+    mission.items[1].lon = 51;
+    mission.items[1].altitude = 510;
+    mission.items[2].lat = 52;
+    mission.items[2].lon = 52;
+    mission.items[2].altitude = 520;
 
- 	// Sample test with a mission of 3 waypoints close by
- 	mission.count = 3;
- 	mission.items[0].lat = 50;
- 	mission.items[0].lon = 50;
- 	mission.items[0].altitude = 500;
- 	mission.items[1].lat = 51;
- 	mission.items[1].lon = 51;
- 	mission.items[1].altitude = 510;
- 	mission.items[2].lat = 52;
- 	mission.items[2].lon = 52;
- 	mission.items[2].altitude = 520;
- 	ASSERT_EQ(true, checkDistancesBetweenWaypoints(mission, 400));
+
+    // Sample test with a mission of 3 waypoints close by
+
+    stg_begin_test();
+    stg_symbolic_variable_float(&max_dis, "MAX_DIS", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[0].lat, "LAT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[0].lon, "LON0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[0].altitude, "ALT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[1].lat, "LAT1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[1].lon, "LON1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[2].lat, "LAT2", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[2].lon, "LON2", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform,0,0);
+
+  
+    
+    bool isValid = checkDistancesBetweenWaypoints(mission, max_dis);
+    stg_end_test();
+    stg_record_test(isValid==true);
+    ASSERT_EQ(true, isValid);
+
+ 	//ASSERT_EQ(true, checkDistancesBetweenWaypoints(mission, 400));
  	//printf("Check 3 waypoints: %d\n", checkDistancesBetweenWaypoints(mission, 400));
- }
+}
+
+
 
 
  TEST(CheckWayPoints, TooCloseWaypoints)
  {
  	// Sample test with a mission of 2 waypoints that are too close
+
+    float max_dis=400;
+
  	struct mission_s mission;
  	mission.count = 3;
  	mission.items[0].lat = 50;
@@ -210,7 +283,23 @@ TEST(CheckWayPoints, CloseWaypoints)
  	mission.items[1].lat = 50;
  	mission.items[1].lon = 50;
  	mission.items[1].altitude = 500;
- 	ASSERT_EQ(false, checkDistancesBetweenWaypoints(mission, 400));
+
+ 	stg_begin_test();
+
+    stg_symbolic_variable_float(&max_dis, "MAX_DIS", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[0].lat, "LAT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[0].lon, "LON0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[0].altitude, "ALT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[1].lat, "LAT1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[1].lon, "LON1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform,0,0);
+
+    bool isValid = checkDistancesBetweenWaypoints(mission, max_dis);
+    stg_end_test();
+    stg_record_test(isValid==false);
+    ASSERT_EQ(false, isValid);
+
+ 	//ASSERT_EQ(false, checkDistancesBetweenWaypoints(mission, 400));
  	//printf("Check 2 waypoints that are too close: %d\n", checkDistancesBetweenWaypoints(mission, 400));
  }
 
@@ -218,6 +307,7 @@ TEST(CheckWayPoints, CloseWaypoints)
   TEST(CheckWayPoints, AltituteBreaker)
   {
     // Sample test with a mission of 3 waypoints that break altitude barrier
+    float max_dis=400;
     struct mission_s mission;
  	mission.count = 3;
  	mission.items[0].lat = 50;
@@ -226,7 +316,28 @@ TEST(CheckWayPoints, CloseWaypoints)
  	mission.items[1].lat = 51;
  	mission.items[1].lon = 51;
  	mission.items[1].altitude = 10000;
- 	ASSERT_EQ(false, checkDistancesBetweenWaypoints(mission, 400));
+
+
+
+    stg_begin_test();
+
+
+    stg_symbolic_variable_float(&max_dis, "MAX_DIS", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[0].lat, "LAT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[0].lon, "LON0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[0].altitude, "ALT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[1].lat, "LAT1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_double(&mission.items[1].lon, "LON1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform,0,0);
+
+ 	
+    bool isValid = checkDistancesBetweenWaypoints(mission, max_dis);
+    stg_end_test();
+    stg_record_test(isValid==false);
+    ASSERT_EQ(false, isValid);
+
+
+ 	//ASSERT_EQ(false, checkDistancesBetweenWaypoints(mission, 400));
  	//printf("Check 2 waypoints one is too high: %d\n", checkDistancesBetweenWaypoints(mission, 40));
 
   }
@@ -234,9 +345,11 @@ TEST(CheckWayPoints, CloseWaypoints)
 
   TEST(CheckAltitute, ValidMission)
   {
+    
+    // Sample test with a mission of 3 valid altitude waypoints
+    float home_lat=20;
     struct mission_s mission;
-
-  	// Sample test with a mission of 3 valid altitude waypoints
+  
   	mission.count = 3;
   	mission.items[0].lat = 50;
   	mission.items[0].lon = 50;
@@ -250,16 +363,35 @@ TEST(CheckWayPoints, CloseWaypoints)
   	mission.items[2].lon = 52;
   	mission.items[2].altitude = 520;
   	mission.items[2].altitude_is_relative = false;
-  	ASSERT_EQ(true, checkHomePositionAltitude(mission, 20, true));
+
+  	stg_begin_test();
+
+    stg_symbolic_variable_float(&home_lat, "HOME_LAT", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[0].altitude, "ALT0", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform,0,0);
+    stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform,0,0);
+
+    bool isValid = checkHomePositionAltitude(mission, home_lat, true);
+    stg_end_test();
+    stg_record_test(isValid==true);
+    ASSERT_EQ(true, isValid);
+
+
+
+  	//ASSERT_EQ(true, checkHomePositionAltitude(mission, 20, true));
   	//printf("Check 3 waypoints: %s (valid mission)\n", checkHomePositionAltitude(mission, 20, true)?"valid":"invalid");
    }
+   
 
 
    TEST(CheckAltitute, InvalidMission)
    {
 
        // Sample test with a mission of 1 invalid altitude setup waypoint
-       struct mission_s mission;
+        float home_lat=20;
+        struct mission_s mission;
+       
+
         mission.count = 3;
         mission.items[0].lat = 50;
         mission.items[0].lon = 50;
@@ -273,50 +405,54 @@ TEST(CheckWayPoints, CloseWaypoints)
         mission.items[2].lon = 52;
         mission.items[2].altitude = 520;
         mission.items[2].altitude_is_relative = true;
-        ASSERT_EQ(false, checkHomePositionAltitude(mission, 20, false));
+
+
+        stg_begin_test();
+
+        stg_symbolic_variable_float(&home_lat, "HOME_LAT", -20, 20, uniform,0,0);
+        stg_symbolic_variable_float(&mission.items[0].altitude, "ALT0", -20, 20, uniform,0,0);
+        stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform,0,0);
+        stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform,0,0);
+
+        bool isValid = checkHomePositionAltitude(mission, home_lat, false);
+        stg_end_test();
+        stg_record_test(isValid==false);
+        ASSERT_EQ(false, isValid);
+
+
+        //ASSERT_EQ(false, checkHomePositionAltitude(mission, 20, false));
         //printf("Check 3 waypoints: %s (invalid mission, last point is relative but home is not set)\n", checkHomePositionAltitude(mission, 20, false)?"valid":"invalid");
    }
+
 
    TEST(CheckAltitute, InvalidMission2pointbelowhome)
    {
         // Sample test with a mission with second wapoint invalid altitude below home
+        float home_lat=20;
         struct mission_s mission;
 
-        int home_lat, alt0, alt1, alt2;
-        stg_symbolic_variable(&home_lat, "HOME_LAT", -20, 20, uniform,0,0);
-        stg_symbolic_variable(&alt0, "ALT0", -20, 20, uniform,0,0);
-        stg_symbolic_variable(&alt1, "ALT1", -20, 20, uniform,0,0);
-        stg_symbolic_variable(&alt2, "ALT2", -20, 20, uniform,0,0);
 
         mission.count = 3;
         mission.items[0].lat = 50;
         mission.items[0].lon = 50;
-        //mission.items[0].altitude = 500;
+        mission.items[0].altitude = 500;
         mission.items[0].altitude_is_relative = false;
         mission.items[1].lat = 51;
         mission.items[1].lon = 51;
-        //mission.items[1].altitude = 10;
+        mission.items[1].altitude = 10;
         mission.items[1].altitude_is_relative = false;
         mission.items[2].lat = 52;
         mission.items[2].lon = 52;
-        //mission.items[2].altitude = 520;
+        mission.items[2].altitude = 520;
         mission.items[2].altitude_is_relative = false;
 
 
         stg_begin_test();
 
-        stg_input_int(&home_lat, 20);
-        stg_input_int(&alt0, 500);
-        stg_input_int(&alt1, 10);
-        stg_input_int(&alt2, 520);
-
-        mission.items[0].altitude = alt0;
-        mission.items[1].altitude = alt1;
-        mission.items[2].altitude = alt2;
-
-        printf("from test 0===%p\n",&mission.items[0].altitude);
-        printf("from test 1 ===%p\n",&mission.items[1].altitude);
-        printf("from test 2===%p\n",&mission.items[2].altitude);
+        stg_symbolic_variable_float(&home_lat, "HOME_LAT", -20, 20, uniform,0,0);
+        stg_symbolic_variable_float(&mission.items[0].altitude, "ALT0", -20, 20, uniform,0,0);
+        stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform,0,0);
+        stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform,0,0);
 
 
         bool isValid = checkHomePositionAltitude(mission, home_lat, true);
@@ -326,7 +462,6 @@ TEST(CheckWayPoints, CloseWaypoints)
         //printf("Check 3 waypoints: %s (invalid mission, 2nd point below home)\n", checkHomePositionAltitude(mission, 20, true)?"valid":"invalid");
 
    }
-
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);

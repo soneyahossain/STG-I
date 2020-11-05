@@ -35,23 +35,23 @@ stg.ll: $(LIB_DIR)/stg.cpp $(LIB_DIR)/stg.h $(LIB_DIR)/stg.hpp #do not instrumen
 
 simpler_mission_feasibility_checker.ll:  simpler_mission_feasibility_checker.cpp simpler_mission.h
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) simpler_mission_feasibility_checker.cpp -o simpler_mission_feasibility_checker.bc
-	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -STGInstrumenter simpler_mission_feasibility_checker.bc -o simpler_mission_feasibility_checker.ll
+	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter simpler_mission_feasibility_checker.bc -o simpler_mission_feasibility_checker.ll
 
 simpler_missionWaypoint_checker.ll:  simpler_missionWaypoint_checker.cpp simpler_mission.h
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) simpler_missionWaypoint_checker.cpp -o simpler_missionWaypoint_checker.bc
-	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -STGInstrumenter simpler_missionWaypoint_checker.bc -o simpler_missionWaypoint_checker.ll
+	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter simpler_missionWaypoint_checker.bc -o simpler_missionWaypoint_checker.ll
 
 simpler_missionPositionAltitude_checker.ll:  simpler_missionPositionAltitude_checker.cpp simpler_mission.h
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) simpler_missionPositionAltitude_checker.cpp -o simpler_missionPositionAltitude_checker.bc
-	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -STGInstrumenter simpler_missionPositionAltitude_checker.bc -o simpler_missionPositionAltitude_checker.ll
+	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter simpler_missionPositionAltitude_checker.bc -o simpler_missionPositionAltitude_checker.ll
 
 simpler_missionCommand_checker.ll:  simpler_missionCommand_checker.cpp simpler_mission.h
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) simpler_missionCommand_checker.cpp -o simpler_missionCommand_checker.bc
-	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -STGInstrumenter simpler_missionCommand_checker.bc -o simpler_missionCommand_checker.ll
+	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter simpler_missionCommand_checker.bc -o simpler_missionCommand_checker.ll
 
 simpler_missionGeofence_checker.ll:  simpler_missionGeofence_checker.cpp simpler_mission.h
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) simpler_missionGeofence_checker.cpp -o simpler_missionGeofence_checker.bc
-	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -STGInstrumenter simpler_missionGeofence_checker.bc -o simpler_missionGeofence_checker.ll
+	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter simpler_missionGeofence_checker.bc -o simpler_missionGeofence_checker.ll
 
 clean: #cleaning all object files and the combined file
 	$(RM) *.ll missionChecker.out

@@ -45,49 +45,48 @@ target triple = "x86_64-apple-macosx10.14.0"
 %"class.std::__1::__tree_iterator" = type { %"class.std::__1::__tree_end_node"* }
 %"struct.std::__1::pair" = type { %"class.std::__1::basic_string", %"class.std::__1::basic_string" }
 %"struct.std::__1::__value_type" = type { %"struct.std::__1::pair" }
-%"struct.std::__1::pair.30" = type <{ %"class.std::__1::__tree_iterator", i8, [7 x i8] }>
+%"struct.std::__1::pair.28" = type <{ %"class.std::__1::__tree_iterator", i8, [7 x i8] }>
 %"class.std::__1::tuple" = type { %"struct.std::__1::__tuple_impl" }
 %"struct.std::__1::__tuple_impl" = type { %"class.std::__1::__tuple_leaf" }
 %"class.std::__1::__tuple_leaf" = type { %"class.std::__1::basic_string"* }
-%"class.std::__1::tuple.31" = type { i8 }
-%"struct.std::__1::integral_constant.36" = type { i8 }
+%"class.std::__1::tuple.29" = type { i8 }
+%"struct.std::__1::integral_constant.34" = type { i8 }
 %"class.std::__1::basic_stringstream" = type { %"class.std::__1::basic_iostream.base", %"class.std::__1::basic_stringbuf", %"class.std::__1::basic_ios.base" }
 %"class.std::__1::basic_iostream.base" = type { %"class.std::__1::basic_istream.base", %"class.std::__1::basic_ostream.base" }
 %"class.std::__1::basic_istream.base" = type { i32 (...)**, i64 }
 %"class.std::__1::basic_stringbuf" = type <{ %"class.std::__1::basic_streambuf", %"class.std::__1::basic_string", i8*, i32, [4 x i8] }>
 %"class.std::__1::basic_iostream" = type { %"class.std::__1::basic_istream.base", %"class.std::__1::basic_ostream.base", %"class.std::__1::basic_ios.base" }
 %"class.std::__1::allocator.17" = type { i8 }
-%"struct.std::__1::pair.39" = type <{ %"class.std::__1::__tree_iterator.20", i8, [7 x i8] }>
-%"class.std::__1::__tree_iterator.20" = type { %"class.std::__1::__tree_end_node"* }
-%"struct.std::__1::__value_type.23" = type { %"struct.std::__1::pair.21" }
+%"struct.std::__1::pair.37" = type <{ %"class.std::__1::__tree_iterator.38", i8, [7 x i8] }>
+%"class.std::__1::__tree_iterator.38" = type { %"class.std::__1::__tree_end_node"* }
+%"struct.std::__1::__value_type.20" = type { %"struct.std::__1::pair.21" }
 %"struct.std::__1::pair.21" = type { %"class.std::__1::basic_string", double }
-%"class.std::__1::tuple.48" = type { %"struct.std::__1::__tuple_impl.49" }
-%"struct.std::__1::__tuple_impl.49" = type { %"class.std::__1::__tuple_leaf.50" }
-%"class.std::__1::__tuple_leaf.50" = type { %"class.std::__1::basic_string"* }
-%"class.std::__1::__map_iterator.19" = type { %"class.std::__1::__tree_iterator.20" }
+%"class.std::__1::tuple.47" = type { %"struct.std::__1::__tuple_impl.48" }
+%"struct.std::__1::__tuple_impl.48" = type { %"class.std::__1::__tuple_leaf.49" }
+%"class.std::__1::__tuple_leaf.49" = type { %"class.std::__1::basic_string"* }
 %"class.std::__1::__tree_node" = type { %"class.std::__1::__tree_node_base.base", %"struct.std::__1::__value_type" }
 %"class.std::__1::__tree_node_base.base" = type <{ %"class.std::__1::__tree_end_node", %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_end_node"*, i8 }>
 %"class.std::__1::allocator" = type { i8 }
 %"struct.std::__1::integral_constant" = type { i8 }
 %"struct.std::__1::__has_destroy" = type { i8 }
 %"struct.std::__1::__compressed_pair_elem.0" = type { i8 }
-%"class.std::__1::__tree_node.22" = type { %"class.std::__1::__tree_node_base.base", %"struct.std::__1::__value_type.23" }
+%"class.std::__1::__tree_node.19" = type { %"class.std::__1::__tree_node_base.base", %"struct.std::__1::__value_type.20" }
 %"class.std::__1::allocator.8" = type { i8 }
-%"struct.std::__1::__has_destroy.24" = type { i8 }
+%"struct.std::__1::__has_destroy.22" = type { i8 }
 %"struct.std::__1::__compressed_pair_elem.7" = type { i8 }
-%"class.std::__1::unique_ptr" = type { %"class.std::__1::__compressed_pair.25" }
-%"class.std::__1::__compressed_pair.25" = type { %"struct.std::__1::__compressed_pair_elem.26", %"struct.std::__1::__compressed_pair_elem.27" }
-%"struct.std::__1::__compressed_pair_elem.26" = type { %struct.__sFILE* }
-%"struct.std::__1::__compressed_pair_elem.27" = type { i32 (%struct.__sFILE*)* }
+%"class.std::__1::unique_ptr" = type { %"class.std::__1::__compressed_pair.23" }
+%"class.std::__1::__compressed_pair.23" = type { %"struct.std::__1::__compressed_pair_elem.24", %"struct.std::__1::__compressed_pair_elem.25" }
+%"struct.std::__1::__compressed_pair_elem.24" = type { %struct.__sFILE* }
+%"struct.std::__1::__compressed_pair_elem.25" = type { i32 (%struct.__sFILE*)* }
 %"class.std::__1::fpos" = type { %union.__mbstate_t, i64 }
 %"struct.std::__1::__less" = type { i8 }
 %"class.std::bad_cast" = type { %"class.std::exception" }
 %"class.std::exception" = type { i32 (...)** }
-%"struct.std::__1::__less.28" = type { i8 }
+%"struct.std::__1::__less.26" = type { i8 }
 %"class.std::__1::basic_istream" = type { i32 (...)**, i64, %"class.std::__1::basic_ios.base" }
 %"struct.std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__short" = type { %union.anon.15, [23 x i8] }
 %union.anon.15 = type { i8 }
-%"struct.std::__1::__less.29" = type { i8 }
+%"struct.std::__1::__less.27" = type { i8 }
 %"class.std::__1::__map_value_compare" = type { i8 }
 %"struct.std::__1::less" = type { i8 }
 %"struct.std::__1::__compressed_pair_elem.3" = type { i8 }
@@ -97,19 +96,19 @@ target triple = "x86_64-apple-macosx10.14.0"
 %"struct.std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__raw" = type { [3 x i64] }
 %"struct.std::__1::__compressed_pair_elem.16" = type { i8 }
 %"class.std::__1::basic_string_view" = type { i8*, i64 }
-%"class.std::__1::unique_ptr.32" = type { %"class.std::__1::__compressed_pair.33" }
-%"class.std::__1::__compressed_pair.33" = type { %"struct.std::__1::__compressed_pair_elem.34", %"struct.std::__1::__compressed_pair_elem.35" }
-%"struct.std::__1::__compressed_pair_elem.34" = type { %"class.std::__1::__tree_node"* }
-%"struct.std::__1::__compressed_pair_elem.35" = type { %"class.std::__1::__tree_node_destructor" }
+%"class.std::__1::unique_ptr.30" = type { %"class.std::__1::__compressed_pair.31" }
+%"class.std::__1::__compressed_pair.31" = type { %"struct.std::__1::__compressed_pair_elem.32", %"struct.std::__1::__compressed_pair_elem.33" }
+%"struct.std::__1::__compressed_pair_elem.32" = type { %"class.std::__1::__tree_node"* }
+%"struct.std::__1::__compressed_pair_elem.33" = type { %"class.std::__1::__tree_node_destructor" }
 %"class.std::__1::__tree_node_destructor" = type <{ %"class.std::__1::allocator"*, i8, [7 x i8] }>
 %"struct.std::__1::__has_construct" = type { i8 }
 %"class.std::length_error" = type { %"class.std::logic_error" }
 %"class.std::logic_error" = type { %"class.std::exception", %"class.std::__1::__libcpp_refstring" }
 %"class.std::__1::__libcpp_refstring" = type { i8* }
 %"struct.std::__1::__tuple_indices" = type { i8 }
-%"struct.std::__1::__tuple_indices.37" = type { i8 }
+%"struct.std::__1::__tuple_indices.35" = type { i8 }
 %"struct.std::__1::__tuple_types" = type { i8 }
-%"struct.std::__1::__tuple_types.38" = type { i8 }
+%"struct.std::__1::__tuple_types.36" = type { i8 }
 %"class.std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry" = type { i8, %"class.std::__1::basic_ostream"* }
 %"class.std::__1::ostreambuf_iterator" = type { %"class.std::__1::basic_streambuf"* }
 %"struct.std::__1::iterator" = type { i8 }
@@ -117,14 +116,14 @@ target triple = "x86_64-apple-macosx10.14.0"
 %"struct.std::__1::__second_tag" = type { i8 }
 %"struct.std::__1::random_access_iterator_tag" = type { i8 }
 %"struct.std::__1::__has_max_size" = type { i8 }
-%"class.std::__1::unique_ptr.41" = type { %"class.std::__1::__compressed_pair.42" }
-%"class.std::__1::__compressed_pair.42" = type { %"struct.std::__1::__compressed_pair_elem.43", %"struct.std::__1::__compressed_pair_elem.44" }
-%"struct.std::__1::__compressed_pair_elem.43" = type { %"class.std::__1::__tree_node.22"* }
-%"struct.std::__1::__compressed_pair_elem.44" = type { %"class.std::__1::__tree_node_destructor.45" }
-%"class.std::__1::__tree_node_destructor.45" = type <{ %"class.std::__1::allocator.8"*, i8, [7 x i8] }>
-%"struct.std::__1::__has_construct.47" = type { i8 }
-%"struct.std::__1::__has_construct.51" = type { i8 }
-%"struct.std::__1::__tuple_types.52" = type { i8 }
+%"class.std::__1::unique_ptr.40" = type { %"class.std::__1::__compressed_pair.41" }
+%"class.std::__1::__compressed_pair.41" = type { %"struct.std::__1::__compressed_pair_elem.42", %"struct.std::__1::__compressed_pair_elem.43" }
+%"struct.std::__1::__compressed_pair_elem.42" = type { %"class.std::__1::__tree_node.19"* }
+%"struct.std::__1::__compressed_pair_elem.43" = type { %"class.std::__1::__tree_node_destructor.44" }
+%"class.std::__1::__tree_node_destructor.44" = type <{ %"class.std::__1::allocator.8"*, i8, [7 x i8] }>
+%"struct.std::__1::__has_construct.46" = type { i8 }
+%"struct.std::__1::__has_construct.50" = type { i8 }
+%"struct.std::__1::__tuple_types.51" = type { i8 }
 
 @sym_state = global %"class.std::__1::map" zeroinitializer, align 8
 @__dso_handle = external hidden global i8
@@ -186,43 +185,42 @@ target triple = "x86_64-apple-macosx10.14.0"
 @.str.47 = private unnamed_addr constant [7 x i8] c"double\00", align 1
 @.str.48 = private unnamed_addr constant [4 x i8] c"i64\00", align 1
 @.str.49 = private unnamed_addr constant [6 x i8] c"(i64 \00", align 1
-@.str.50 = private unnamed_addr constant [5 x i8] c"(i8 \00", align 1
-@.str.51 = private unnamed_addr constant [9 x i8] c"(double \00", align 1
-@.str.52 = private unnamed_addr constant [8 x i8] c"(float \00", align 1
-@.str.53 = private unnamed_addr constant [3 x i8] c": \00", align 1
+@.str.50 = private unnamed_addr constant [5 x i8] c"(i1 \00", align 1
+@.str.51 = private unnamed_addr constant [5 x i8] c"(i8 \00", align 1
+@.str.52 = private unnamed_addr constant [9 x i8] c"(double \00", align 1
+@.str.53 = private unnamed_addr constant [8 x i8] c"(float \00", align 1
 @.str.54 = private unnamed_addr constant [2 x i8] c"1\00", align 1
 @.str.55 = private unnamed_addr constant [2 x i8] c"0\00", align 1
-@.str.56 = private unnamed_addr constant [5 x i8] c"min=\00", align 1
-@.str.57 = private unnamed_addr constant [5 x i8] c"max=\00", align 1
+@.str.56 = private unnamed_addr constant [7 x i8] c" : i32\00", align 1
+@.str.57 = private unnamed_addr constant [9 x i8] c",range:[\00", align 1
+@.str.58 = private unnamed_addr constant [9 x i8] c" : float\00", align 1
+@.str.59 = private unnamed_addr constant [10 x i8] c" : double\00", align 1
 @__func__.stg_input_int = private unnamed_addr constant [14 x i8] c"stg_input_int\00", align 1
-@.str.58 = private unnamed_addr constant [7 x i8] c" : i32\00", align 1
-@.str.59 = private unnamed_addr constant [9 x i8] c",range:[\00", align 1
 @__func__.stg_input_float = private unnamed_addr constant [16 x i8] c"stg_input_float\00", align 1
-@.str.60 = private unnamed_addr constant [9 x i8] c" : float\00", align 1
 @__func__.stg_input_double = private unnamed_addr constant [17 x i8] c"stg_input_double\00", align 1
-@.str.61 = private unnamed_addr constant [10 x i8] c" : double\00", align 1
-@.str.62 = private unnamed_addr constant [9 x i8] c"stg-out-\00", align 1
-@.str.63 = private unnamed_addr constant [16 x i8] c"output folder :\00", align 1
+@.str.60 = private unnamed_addr constant [9 x i8] c"stg-out-\00", align 1
+@.str.61 = private unnamed_addr constant [16 x i8] c"output folder :\00", align 1
 @__func__.stg_begin_test = private unnamed_addr constant [15 x i8] c"stg_begin_test\00", align 1
-@.str.64 = private unnamed_addr constant [17 x i8] c"outputDirCreated\00", align 1
-@.str.65 = private unnamed_addr constant [2 x i8] c"/\00", align 1
-@.str.66 = private unnamed_addr constant [11 x i8] c"stg_state_\00", align 1
-@.str.67 = private unnamed_addr constant [5 x i8] c".txt\00", align 1
-@.str.68 = private unnamed_addr constant [8 x i8] c"stg_pc_\00", align 1
-@.str.69 = private unnamed_addr constant [5 x i8] c".stg\00", align 1
-@.str.70 = private unnamed_addr constant [3 x i8] c"[\0A\00", align 1
-@.str.71 = private unnamed_addr constant [3 x i8] c"  \00", align 1
-@.str.72 = private unnamed_addr constant [7 x i8] c"(land\0A\00", align 1
-@.str.73 = private unnamed_addr constant [3 x i8] c")\0A\00", align 1
-@.str.74 = private unnamed_addr constant [4 x i8] c"]\0A\0A\00", align 1
-@.str.75 = private unnamed_addr constant [9 x i8] c"//Test: \00", align 1
-@.str.76 = private unnamed_addr constant [7 x i8] c"passed\00", align 1
-@.str.77 = private unnamed_addr constant [7 x i8] c"failed\00", align 1
-@.str.78 = private unnamed_addr constant [4 x i8] c"int\00", align 1
-@.str.79 = private unnamed_addr constant [7 x i8] c"s= %d\0A\00", align 1
-@.str.80 = private unnamed_addr constant [5 x i8] c"%s%d\00", align 1
-@.str.81 = private unnamed_addr constant [12 x i8] c"value : %d\0A\00", align 1
-@.str.82 = private unnamed_addr constant [12 x i8] c"value : %f\0A\00", align 1
+@.str.62 = private unnamed_addr constant [17 x i8] c"outputDirCreated\00", align 1
+@.str.63 = private unnamed_addr constant [2 x i8] c"/\00", align 1
+@.str.64 = private unnamed_addr constant [11 x i8] c"stg_state_\00", align 1
+@.str.65 = private unnamed_addr constant [5 x i8] c".txt\00", align 1
+@.str.66 = private unnamed_addr constant [8 x i8] c"stg_pc_\00", align 1
+@.str.67 = private unnamed_addr constant [5 x i8] c".stg\00", align 1
+@.str.68 = private unnamed_addr constant [3 x i8] c"[\0A\00", align 1
+@.str.69 = private unnamed_addr constant [3 x i8] c"  \00", align 1
+@.str.70 = private unnamed_addr constant [7 x i8] c"(land\0A\00", align 1
+@.str.71 = private unnamed_addr constant [3 x i8] c")\0A\00", align 1
+@.str.72 = private unnamed_addr constant [4 x i8] c"]\0A\0A\00", align 1
+@.str.73 = private unnamed_addr constant [9 x i8] c"//Test: \00", align 1
+@.str.74 = private unnamed_addr constant [7 x i8] c"passed\00", align 1
+@.str.75 = private unnamed_addr constant [7 x i8] c"failed\00", align 1
+@.str.76 = private unnamed_addr constant [4 x i8] c"int\00", align 1
+@.str.77 = private unnamed_addr constant [7 x i8] c"s= %d\0A\00", align 1
+@.str.78 = private unnamed_addr constant [5 x i8] c"%s%d\00", align 1
+@.str.79 = private unnamed_addr constant [12 x i8] c"value : %d\0A\00", align 1
+@.str.80 = private unnamed_addr constant [12 x i8] c"value : %f\0A\00", align 1
+@.str.81 = private unnamed_addr constant [3 x i8] c": \00", align 1
 @_ZTVNSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE = linkonce_odr unnamed_addr constant { [5 x i8*], [5 x i8*] } { [5 x i8*] [i8* inttoptr (i64 416 to i8*), i8* null, i8* bitcast ({ i8*, i8*, i8* }* @_ZTINSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_ofstream"*)* @_ZNSt3__114basic_ofstreamIcNS_11char_traitsIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_ofstream"*)* @_ZNSt3__114basic_ofstreamIcNS_11char_traitsIcEEED0Ev to i8*)], [5 x i8*] [i8* inttoptr (i64 -416 to i8*), i8* inttoptr (i64 -416 to i8*), i8* bitcast ({ i8*, i8*, i8* }* @_ZTINSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_ofstream"*)* @_ZTv0_n24_NSt3__114basic_ofstreamIcNS_11char_traitsIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_ofstream"*)* @_ZTv0_n24_NSt3__114basic_ofstreamIcNS_11char_traitsIcEEED0Ev to i8*)] }, align 8
 @_ZTTNSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE = linkonce_odr unnamed_addr constant [4 x i8*] [i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*] }* @_ZTVNSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE, i32 0, inrange i32 0, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*] }* @_ZTCNSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE0_NS_13basic_ostreamIcS2_EE, i32 0, inrange i32 0, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*] }* @_ZTCNSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE0_NS_13basic_ostreamIcS2_EE, i32 0, inrange i32 1, i32 3) to i8*), i8* bitcast (i8** getelementptr inbounds ({ [5 x i8*], [5 x i8*] }, { [5 x i8*], [5 x i8*] }* @_ZTVNSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE, i32 0, inrange i32 1, i32 3) to i8*)]
 @_ZTCNSt3__114basic_ofstreamIcNS_11char_traitsIcEEEE0_NS_13basic_ostreamIcS2_EE = linkonce_odr unnamed_addr constant { [5 x i8*], [5 x i8*] } { [5 x i8*] [i8* inttoptr (i64 416 to i8*), i8* null, i8* bitcast (i8** @_ZTINSt3__113basic_ostreamIcNS_11char_traitsIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_ostream"*)* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_ostream"*)* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEED0Ev to i8*)], [5 x i8*] [i8* inttoptr (i64 -416 to i8*), i8* inttoptr (i64 -416 to i8*), i8* bitcast (i8** @_ZTINSt3__113basic_ostreamIcNS_11char_traitsIcEEEE to i8*), i8* bitcast (void (%"class.std::__1::basic_ostream"*)* @_ZTv0_n24_NSt3__113basic_ostreamIcNS_11char_traitsIcEEED1Ev to i8*), i8* bitcast (void (%"class.std::__1::basic_ostream"*)* @_ZTv0_n24_NSt3__113basic_ostreamIcNS_11char_traitsIcEEED0Ev to i8*)] }
@@ -251,22 +249,22 @@ target triple = "x86_64-apple-macosx10.14.0"
 @_ZTVNSt3__19basic_iosIcNS_11char_traitsIcEEEE = external unnamed_addr constant { [4 x i8*] }
 @_ZTVNSt3__18ios_baseE = external unnamed_addr constant { [4 x i8*] }
 @_ZNSt3__1L19piecewise_constructE = internal constant %"struct.std::__1::piecewise_construct_t" undef, align 1
-@.str.83 = private unnamed_addr constant [68 x i8] c"allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size\00", align 1
+@.str.82 = private unnamed_addr constant [68 x i8] c"allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size\00", align 1
 @_ZTISt12length_error = external constant i8*
 @_ZTVSt12length_error = external unnamed_addr constant { [5 x i8*] }
 @_ZNSt3__15ctypeIcE2idE = external global %"class.std::__1::locale::id", align 8
-@.str.84 = private unnamed_addr constant [2 x i8] c"w\00", align 1
-@.str.85 = private unnamed_addr constant [2 x i8] c"a\00", align 1
-@.str.86 = private unnamed_addr constant [2 x i8] c"r\00", align 1
-@.str.87 = private unnamed_addr constant [3 x i8] c"r+\00", align 1
-@.str.88 = private unnamed_addr constant [3 x i8] c"w+\00", align 1
-@.str.89 = private unnamed_addr constant [3 x i8] c"a+\00", align 1
-@.str.90 = private unnamed_addr constant [3 x i8] c"wb\00", align 1
-@.str.91 = private unnamed_addr constant [3 x i8] c"ab\00", align 1
-@.str.92 = private unnamed_addr constant [3 x i8] c"rb\00", align 1
-@.str.93 = private unnamed_addr constant [4 x i8] c"r+b\00", align 1
-@.str.94 = private unnamed_addr constant [4 x i8] c"w+b\00", align 1
-@.str.95 = private unnamed_addr constant [4 x i8] c"a+b\00", align 1
+@.str.83 = private unnamed_addr constant [2 x i8] c"w\00", align 1
+@.str.84 = private unnamed_addr constant [2 x i8] c"a\00", align 1
+@.str.85 = private unnamed_addr constant [2 x i8] c"r\00", align 1
+@.str.86 = private unnamed_addr constant [3 x i8] c"r+\00", align 1
+@.str.87 = private unnamed_addr constant [3 x i8] c"w+\00", align 1
+@.str.88 = private unnamed_addr constant [3 x i8] c"a+\00", align 1
+@.str.89 = private unnamed_addr constant [3 x i8] c"wb\00", align 1
+@.str.90 = private unnamed_addr constant [3 x i8] c"ab\00", align 1
+@.str.91 = private unnamed_addr constant [3 x i8] c"rb\00", align 1
+@.str.92 = private unnamed_addr constant [4 x i8] c"r+b\00", align 1
+@.str.93 = private unnamed_addr constant [4 x i8] c"w+b\00", align 1
+@.str.94 = private unnamed_addr constant [4 x i8] c"a+b\00", align 1
 @llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_stg.cpp, i8* null }]
 
 ; Function Attrs: noinline ssp uwtable
@@ -991,10 +989,10 @@ define linkonce_odr dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3
 entry:
   %this.addr = alloca %"class.std::__1::map"*, align 8
   %__k.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %ref.tmp = alloca %"struct.std::__1::pair.30", align 8
+  %ref.tmp = alloca %"struct.std::__1::pair.28", align 8
   %ref.tmp2 = alloca %"class.std::__1::tuple", align 8
-  %ref.tmp6 = alloca %"class.std::__1::tuple.31", align 1
-  %undef.agg.tmp = alloca %"class.std::__1::tuple.31", align 1
+  %ref.tmp6 = alloca %"class.std::__1::tuple.29", align 1
+  %undef.agg.tmp = alloca %"class.std::__1::tuple.29", align 1
   store %"class.std::__1::map"* %this, %"class.std::__1::map"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__k, %"class.std::__1::basic_string"** %__k.addr, align 8
   %this1 = load %"class.std::__1::map"*, %"class.std::__1::map"** %this.addr, align 8
@@ -1008,15 +1006,15 @@ entry:
   %coerce.dive5 = getelementptr inbounds %"class.std::__1::__tuple_leaf", %"class.std::__1::__tuple_leaf"* %coerce.dive4, i32 0, i32 0
   store %"class.std::__1::basic_string"* %call3, %"class.std::__1::basic_string"** %coerce.dive5, align 8
   call void @_ZNSt3__1L16forward_as_tupleIJEEENS_5tupleIJDpOT_EEES4_() #2
-  %call7 = call { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree"* %__tree_, %"class.std::__1::basic_string"* dereferenceable(24) %0, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) @_ZNSt3__1L19piecewise_constructE, %"class.std::__1::tuple"* dereferenceable(8) %ref.tmp2, %"class.std::__1::tuple.31"* dereferenceable(1) %ref.tmp6)
-  %2 = bitcast %"struct.std::__1::pair.30"* %ref.tmp to { %"class.std::__1::__tree_end_node"*, i8 }*
+  %call7 = call { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree"* %__tree_, %"class.std::__1::basic_string"* dereferenceable(24) %0, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) @_ZNSt3__1L19piecewise_constructE, %"class.std::__1::tuple"* dereferenceable(8) %ref.tmp2, %"class.std::__1::tuple.29"* dereferenceable(1) %ref.tmp6)
+  %2 = bitcast %"struct.std::__1::pair.28"* %ref.tmp to { %"class.std::__1::__tree_end_node"*, i8 }*
   %3 = getelementptr inbounds { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %2, i32 0, i32 0
   %4 = extractvalue { %"class.std::__1::__tree_end_node"*, i8 } %call7, 0
   store %"class.std::__1::__tree_end_node"* %4, %"class.std::__1::__tree_end_node"** %3, align 8
   %5 = getelementptr inbounds { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %2, i32 0, i32 1
   %6 = extractvalue { %"class.std::__1::__tree_end_node"*, i8 } %call7, 1
   store i8 %6, i8* %5, align 8
-  %first = getelementptr inbounds %"struct.std::__1::pair.30", %"struct.std::__1::pair.30"* %ref.tmp, i32 0, i32 0
+  %first = getelementptr inbounds %"struct.std::__1::pair.28", %"struct.std::__1::pair.28"* %ref.tmp, i32 0, i32 0
   %call8 = call %"struct.std::__1::__value_type"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EEPNS_11__tree_nodeIS8_PvEElEptEv(%"class.std::__1::__tree_iterator"* %first)
   %call9 = call dereferenceable(48) %"struct.std::__1::pair"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_E11__get_valueEv(%"struct.std::__1::__value_type"* %call8)
   %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call9, i32 0, i32 1
@@ -1028,7 +1026,7 @@ define internal dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__11
 entry:
   %this.addr = alloca %"class.std::__1::basic_string"*, align 8
   %__str.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %agg.tmp = alloca %"struct.std::__1::integral_constant.36", align 1
+  %agg.tmp = alloca %"struct.std::__1::integral_constant.34", align 1
   store %"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__str, %"class.std::__1::basic_string"** %__str.addr, align 8
   %this1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %this.addr, align 8
@@ -2989,10 +2987,10 @@ define linkonce_odr dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringI
 entry:
   %this.addr = alloca %"class.std::__1::map.4"*, align 8
   %__k.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %ref.tmp = alloca %"struct.std::__1::pair.39", align 8
+  %ref.tmp = alloca %"struct.std::__1::pair.37", align 8
   %ref.tmp2 = alloca %"class.std::__1::tuple", align 8
-  %ref.tmp6 = alloca %"class.std::__1::tuple.31", align 1
-  %undef.agg.tmp = alloca %"class.std::__1::tuple.31", align 1
+  %ref.tmp6 = alloca %"class.std::__1::tuple.29", align 1
+  %undef.agg.tmp = alloca %"class.std::__1::tuple.29", align 1
   store %"class.std::__1::map.4"* %this, %"class.std::__1::map.4"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__k, %"class.std::__1::basic_string"** %__k.addr, align 8
   %this1 = load %"class.std::__1::map.4"*, %"class.std::__1::map.4"** %this.addr, align 8
@@ -3006,17 +3004,17 @@ entry:
   %coerce.dive5 = getelementptr inbounds %"class.std::__1::__tuple_leaf", %"class.std::__1::__tuple_leaf"* %coerce.dive4, i32 0, i32 0
   store %"class.std::__1::basic_string"* %call3, %"class.std::__1::basic_string"** %coerce.dive5, align 8
   call void @_ZNSt3__1L16forward_as_tupleIJEEENS_5tupleIJDpOT_EEES4_() #2
-  %call7 = call { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree.5"* %__tree_, %"class.std::__1::basic_string"* dereferenceable(24) %0, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) @_ZNSt3__1L19piecewise_constructE, %"class.std::__1::tuple"* dereferenceable(8) %ref.tmp2, %"class.std::__1::tuple.31"* dereferenceable(1) %ref.tmp6)
-  %2 = bitcast %"struct.std::__1::pair.39"* %ref.tmp to { %"class.std::__1::__tree_end_node"*, i8 }*
+  %call7 = call { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree.5"* %__tree_, %"class.std::__1::basic_string"* dereferenceable(24) %0, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) @_ZNSt3__1L19piecewise_constructE, %"class.std::__1::tuple"* dereferenceable(8) %ref.tmp2, %"class.std::__1::tuple.29"* dereferenceable(1) %ref.tmp6)
+  %2 = bitcast %"struct.std::__1::pair.37"* %ref.tmp to { %"class.std::__1::__tree_end_node"*, i8 }*
   %3 = getelementptr inbounds { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %2, i32 0, i32 0
   %4 = extractvalue { %"class.std::__1::__tree_end_node"*, i8 } %call7, 0
   store %"class.std::__1::__tree_end_node"* %4, %"class.std::__1::__tree_end_node"** %3, align 8
   %5 = getelementptr inbounds { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %2, i32 0, i32 1
   %6 = extractvalue { %"class.std::__1::__tree_end_node"*, i8 } %call7, 1
   store i8 %6, i8* %5, align 8
-  %first = getelementptr inbounds %"struct.std::__1::pair.39", %"struct.std::__1::pair.39"* %ref.tmp, i32 0, i32 0
-  %call8 = call %"struct.std::__1::__value_type.23"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEptEv(%"class.std::__1::__tree_iterator.20"* %first)
-  %call9 = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.23"* %call8)
+  %first = getelementptr inbounds %"struct.std::__1::pair.37", %"struct.std::__1::pair.37"* %ref.tmp, i32 0, i32 0
+  %call8 = call %"struct.std::__1::__value_type.20"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEptEv(%"class.std::__1::__tree_iterator.38"* %first)
+  %call9 = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.20"* %call8)
   %second = getelementptr inbounds %"struct.std::__1::pair.21", %"struct.std::__1::pair.21"* %call9, i32 0, i32 1
   ret double* %second
 }
@@ -3026,10 +3024,10 @@ define linkonce_odr dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3
 entry:
   %this.addr = alloca %"class.std::__1::map"*, align 8
   %__k.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %ref.tmp = alloca %"struct.std::__1::pair.30", align 8
-  %ref.tmp2 = alloca %"class.std::__1::tuple.48", align 8
-  %ref.tmp5 = alloca %"class.std::__1::tuple.31", align 1
-  %undef.agg.tmp = alloca %"class.std::__1::tuple.31", align 1
+  %ref.tmp = alloca %"struct.std::__1::pair.28", align 8
+  %ref.tmp2 = alloca %"class.std::__1::tuple.47", align 8
+  %ref.tmp5 = alloca %"class.std::__1::tuple.29", align 1
+  %undef.agg.tmp = alloca %"class.std::__1::tuple.29", align 1
   store %"class.std::__1::map"* %this, %"class.std::__1::map"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__k, %"class.std::__1::basic_string"** %__k.addr, align 8
   %this1 = load %"class.std::__1::map"*, %"class.std::__1::map"** %this.addr, align 8
@@ -3037,20 +3035,20 @@ entry:
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__k.addr, align 8
   %1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__k.addr, align 8
   %call = call %"class.std::__1::basic_string"* @_ZNSt3__1L16forward_as_tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEENS_5tupleIJDpOT_EEESC_(%"class.std::__1::basic_string"* dereferenceable(24) %1) #2
-  %coerce.dive = getelementptr inbounds %"class.std::__1::tuple.48", %"class.std::__1::tuple.48"* %ref.tmp2, i32 0, i32 0
-  %coerce.dive3 = getelementptr inbounds %"struct.std::__1::__tuple_impl.49", %"struct.std::__1::__tuple_impl.49"* %coerce.dive, i32 0, i32 0
-  %coerce.dive4 = getelementptr inbounds %"class.std::__1::__tuple_leaf.50", %"class.std::__1::__tuple_leaf.50"* %coerce.dive3, i32 0, i32 0
+  %coerce.dive = getelementptr inbounds %"class.std::__1::tuple.47", %"class.std::__1::tuple.47"* %ref.tmp2, i32 0, i32 0
+  %coerce.dive3 = getelementptr inbounds %"struct.std::__1::__tuple_impl.48", %"struct.std::__1::__tuple_impl.48"* %coerce.dive, i32 0, i32 0
+  %coerce.dive4 = getelementptr inbounds %"class.std::__1::__tuple_leaf.49", %"class.std::__1::__tuple_leaf.49"* %coerce.dive3, i32 0, i32 0
   store %"class.std::__1::basic_string"* %call, %"class.std::__1::basic_string"** %coerce.dive4, align 8
   call void @_ZNSt3__1L16forward_as_tupleIJEEENS_5tupleIJDpOT_EEES4_() #2
-  %call6 = call { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJRKS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree"* %__tree_, %"class.std::__1::basic_string"* dereferenceable(24) %0, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) @_ZNSt3__1L19piecewise_constructE, %"class.std::__1::tuple.48"* dereferenceable(8) %ref.tmp2, %"class.std::__1::tuple.31"* dereferenceable(1) %ref.tmp5)
-  %2 = bitcast %"struct.std::__1::pair.30"* %ref.tmp to { %"class.std::__1::__tree_end_node"*, i8 }*
+  %call6 = call { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJRKS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree"* %__tree_, %"class.std::__1::basic_string"* dereferenceable(24) %0, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) @_ZNSt3__1L19piecewise_constructE, %"class.std::__1::tuple.47"* dereferenceable(8) %ref.tmp2, %"class.std::__1::tuple.29"* dereferenceable(1) %ref.tmp5)
+  %2 = bitcast %"struct.std::__1::pair.28"* %ref.tmp to { %"class.std::__1::__tree_end_node"*, i8 }*
   %3 = getelementptr inbounds { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %2, i32 0, i32 0
   %4 = extractvalue { %"class.std::__1::__tree_end_node"*, i8 } %call6, 0
   store %"class.std::__1::__tree_end_node"* %4, %"class.std::__1::__tree_end_node"** %3, align 8
   %5 = getelementptr inbounds { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %2, i32 0, i32 1
   %6 = extractvalue { %"class.std::__1::__tree_end_node"*, i8 } %call6, 1
   store i8 %6, i8* %5, align 8
-  %first = getelementptr inbounds %"struct.std::__1::pair.30", %"struct.std::__1::pair.30"* %ref.tmp, i32 0, i32 0
+  %first = getelementptr inbounds %"struct.std::__1::pair.28", %"struct.std::__1::pair.28"* %ref.tmp, i32 0, i32 0
   %call7 = call %"struct.std::__1::__value_type"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EEPNS_11__tree_nodeIS8_PvEElEptEv(%"class.std::__1::__tree_iterator"* %first)
   %call8 = call dereferenceable(48) %"struct.std::__1::pair"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_E11__get_valueEv(%"struct.std::__1::__value_type"* %call7)
   %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call8, i32 0, i32 1
@@ -3867,6 +3865,482 @@ eh.resume:                                        ; preds = %ehcleanup54
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_load_i1(i8* %addr, i8* %val) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %addr.addr = alloca i8*, align 8
+  %val.addr = alloca i8*, align 8
+  %loadaddress = alloca %"class.std::__1::basic_stringstream", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %key = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp1 = alloca %"class.std::__1::basic_string", align 8
+  %value = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp13 = alloca %"class.std::__1::__map_iterator", align 8
+  %c_value = alloca i32, align 4
+  %ref.tmp23 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp25 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp34 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %addr, i8** %addr.addr, align 8
+  store i8* %val, i8** %val.addr, align 8
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ej(%"class.std::__1::basic_stringstream"* %loadaddress, i32 24)
+  %0 = bitcast %"class.std::__1::basic_stringstream"* %loadaddress to i8*
+  %add.ptr = getelementptr inbounds i8, i8* %0, i64 16
+  %1 = bitcast i8* %add.ptr to %"class.std::__1::basic_ostream"*
+  %2 = load i8*, i8** %addr.addr, align 8
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEPKv(%"class.std::__1::basic_ostream"* %1, i8* %2)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp1, %"class.std::__1::basic_stringstream"* %loadaddress)
+          to label %invoke.cont2 unwind label %lpad
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.17, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp1)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %key, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont6 unwind label %lpad5
+
+invoke.cont6:                                     ; preds = %invoke.cont4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  %3 = load i8*, i8** %val.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value, i8* %3)
+          to label %invoke.cont8 unwind label %lpad7
+
+invoke.cont8:                                     ; preds = %invoke.cont6
+  %call11 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %key)
+          to label %invoke.cont10 unwind label %lpad9
+
+invoke.cont10:                                    ; preds = %invoke.cont8
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive12 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call11, %"class.std::__1::__tree_end_node"** %coerce.dive12, align 8
+  %call14 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive15 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp13, i32 0, i32 0
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive15, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call14, %"class.std::__1::__tree_end_node"** %coerce.dive16, align 8
+  %call18 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp13)
+          to label %invoke.cont17 unwind label %lpad9
+
+invoke.cont17:                                    ; preds = %invoke.cont10
+  br i1 %call18, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont17
+  %call20 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont19 unwind label %lpad9
+
+invoke.cont19:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call20, i32 0, i32 1
+  %call22 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %key, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont21 unwind label %lpad9
+
+invoke.cont21:                                    ; preds = %invoke.cont19
+  br label %if.end
+
+lpad:                                             ; preds = %invoke.cont, %entry
+  %4 = landingpad { i8*, i32 }
+          cleanup
+  %5 = extractvalue { i8*, i32 } %4, 0
+  store i8* %5, i8** %exn.slot, align 8
+  %6 = extractvalue { i8*, i32 } %4, 1
+  store i32 %6, i32* %ehselector.slot, align 4
+  br label %ehcleanup54
+
+lpad3:                                            ; preds = %invoke.cont2
+  %7 = landingpad { i8*, i32 }
+          cleanup
+  %8 = extractvalue { i8*, i32 } %7, 0
+  store i8* %8, i8** %exn.slot, align 8
+  %9 = extractvalue { i8*, i32 } %7, 1
+  store i32 %9, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad5:                                            ; preds = %invoke.cont4
+  %10 = landingpad { i8*, i32 }
+          cleanup
+  %11 = extractvalue { i8*, i32 } %10, 0
+  store i8* %11, i8** %exn.slot, align 8
+  %12 = extractvalue { i8*, i32 } %10, 1
+  store i32 %12, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad5, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  br label %ehcleanup54
+
+lpad7:                                            ; preds = %invoke.cont6
+  %13 = landingpad { i8*, i32 }
+          cleanup
+  %14 = extractvalue { i8*, i32 } %13, 0
+  store i8* %14, i8** %exn.slot, align 8
+  %15 = extractvalue { i8*, i32 } %13, 1
+  store i32 %15, i32* %ehselector.slot, align 4
+  br label %ehcleanup53
+
+lpad9:                                            ; preds = %invoke.cont48, %invoke.cont46, %invoke.cont44, %invoke.cont42, %invoke.cont39, %if.end, %if.else, %invoke.cont19, %if.then, %invoke.cont10, %invoke.cont8
+  %16 = landingpad { i8*, i32 }
+          cleanup
+  %17 = extractvalue { i8*, i32 } %16, 0
+  store i8* %17, i8** %exn.slot, align 8
+  %18 = extractvalue { i8*, i32 } %16, 1
+  store i32 %18, i32* %ehselector.slot, align 4
+  br label %ehcleanup52
+
+if.else:                                          ; preds = %invoke.cont17
+  %19 = load i8*, i8** %addr.addr, align 8
+  %20 = load i8, i8* %19, align 1
+  %tobool = trunc i8 %20 to i1
+  %conv = zext i1 %tobool to i32
+  store i32 %conv, i32* %c_value, align 4
+  %21 = load i32, i32* %c_value, align 4
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp25, i32 %21)
+          to label %invoke.cont26 unwind label %lpad9
+
+invoke.cont26:                                    ; preds = %if.else
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp24, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.50, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25)
+          to label %invoke.cont28 unwind label %lpad27
+
+invoke.cont28:                                    ; preds = %invoke.cont26
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp23, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont30 unwind label %lpad29
+
+invoke.cont30:                                    ; preds = %invoke.cont28
+  %call31 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %key, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp23) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp23) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
+  br label %if.end
+
+lpad27:                                           ; preds = %invoke.cont26
+  %22 = landingpad { i8*, i32 }
+          cleanup
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  br label %ehcleanup33
+
+lpad29:                                           ; preds = %invoke.cont28
+  %25 = landingpad { i8*, i32 }
+          cleanup
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %exn.slot, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  br label %ehcleanup33
+
+ehcleanup33:                                      ; preds = %lpad29, %lpad27
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
+  br label %ehcleanup52
+
+if.end:                                           ; preds = %invoke.cont30, %invoke.cont21
+  %28 = load i8*, i8** %val.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp34, i8* %28)
+          to label %invoke.cont35 unwind label %lpad9
+
+invoke.cont35:                                    ; preds = %if.end
+  %call38 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp34)
+          to label %invoke.cont37 unwind label %lpad36
+
+invoke.cont37:                                    ; preds = %invoke.cont35
+  %call40 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %call38, %"class.std::__1::basic_string"* dereferenceable(24) %key)
+          to label %invoke.cont39 unwind label %lpad36
+
+invoke.cont39:                                    ; preds = %invoke.cont37
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp34) #2
+  %call43 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont42 unwind label %lpad9
+
+invoke.cont42:                                    ; preds = %invoke.cont39
+  %29 = load i8*, i8** %val.addr, align 8
+  %call45 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call43, i8* %29)
+          to label %invoke.cont44 unwind label %lpad9
+
+invoke.cont44:                                    ; preds = %invoke.cont42
+  %call47 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call45, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont46 unwind label %lpad9
+
+invoke.cont46:                                    ; preds = %invoke.cont44
+  %call49 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call47, %"class.std::__1::basic_string"* dereferenceable(24) %key)
+          to label %invoke.cont48 unwind label %lpad9
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call51 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call49, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont50 unwind label %lpad9
+
+invoke.cont50:                                    ; preds = %invoke.cont48
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %key) #2
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %loadaddress) #2
+  ret void
+
+lpad36:                                           ; preds = %invoke.cont37, %invoke.cont35
+  %30 = landingpad { i8*, i32 }
+          cleanup
+  %31 = extractvalue { i8*, i32 } %30, 0
+  store i8* %31, i8** %exn.slot, align 8
+  %32 = extractvalue { i8*, i32 } %30, 1
+  store i32 %32, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp34) #2
+  br label %ehcleanup52
+
+ehcleanup52:                                      ; preds = %lpad36, %ehcleanup33, %lpad9
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value) #2
+  br label %ehcleanup53
+
+ehcleanup53:                                      ; preds = %ehcleanup52, %lpad7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %key) #2
+  br label %ehcleanup54
+
+ehcleanup54:                                      ; preds = %ehcleanup53, %ehcleanup, %lpad
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %loadaddress) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup54
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val55 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val55
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_store_i1(i8* %addr, i8* %val) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %addr.addr = alloca i8*, align 8
+  %val.addr = alloca i8*, align 8
+  %storeaddress = alloca %"class.std::__1::basic_stringstream", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %key = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp1 = alloca %"class.std::__1::basic_string", align 8
+  %value = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp13 = alloca %"class.std::__1::__map_iterator", align 8
+  %c_value = alloca i32, align 4
+  %ref.tmp23 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp25 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %addr, i8** %addr.addr, align 8
+  store i8* %val, i8** %val.addr, align 8
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ej(%"class.std::__1::basic_stringstream"* %storeaddress, i32 24)
+  %0 = bitcast %"class.std::__1::basic_stringstream"* %storeaddress to i8*
+  %add.ptr = getelementptr inbounds i8, i8* %0, i64 16
+  %1 = bitcast i8* %add.ptr to %"class.std::__1::basic_ostream"*
+  %2 = load i8*, i8** %addr.addr, align 8
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEPKv(%"class.std::__1::basic_ostream"* %1, i8* %2)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp1, %"class.std::__1::basic_stringstream"* %storeaddress)
+          to label %invoke.cont2 unwind label %lpad
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.17, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp1)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %key, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont6 unwind label %lpad5
+
+invoke.cont6:                                     ; preds = %invoke.cont4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  %3 = load i8*, i8** %val.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value, i8* %3)
+          to label %invoke.cont8 unwind label %lpad7
+
+invoke.cont8:                                     ; preds = %invoke.cont6
+  %call11 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %value)
+          to label %invoke.cont10 unwind label %lpad9
+
+invoke.cont10:                                    ; preds = %invoke.cont8
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive12 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call11, %"class.std::__1::__tree_end_node"** %coerce.dive12, align 8
+  %call14 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive15 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp13, i32 0, i32 0
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive15, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call14, %"class.std::__1::__tree_end_node"** %coerce.dive16, align 8
+  %call18 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp13)
+          to label %invoke.cont17 unwind label %lpad9
+
+invoke.cont17:                                    ; preds = %invoke.cont10
+  br i1 %call18, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont17
+  %call20 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont19 unwind label %lpad9
+
+invoke.cont19:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call20, i32 0, i32 1
+  %call22 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont21 unwind label %lpad9
+
+invoke.cont21:                                    ; preds = %invoke.cont19
+  br label %if.end
+
+lpad:                                             ; preds = %invoke.cont, %entry
+  %4 = landingpad { i8*, i32 }
+          cleanup
+  %5 = extractvalue { i8*, i32 } %4, 0
+  store i8* %5, i8** %exn.slot, align 8
+  %6 = extractvalue { i8*, i32 } %4, 1
+  store i32 %6, i32* %ehselector.slot, align 4
+  br label %ehcleanup50
+
+lpad3:                                            ; preds = %invoke.cont2
+  %7 = landingpad { i8*, i32 }
+          cleanup
+  %8 = extractvalue { i8*, i32 } %7, 0
+  store i8* %8, i8** %exn.slot, align 8
+  %9 = extractvalue { i8*, i32 } %7, 1
+  store i32 %9, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad5:                                            ; preds = %invoke.cont4
+  %10 = landingpad { i8*, i32 }
+          cleanup
+  %11 = extractvalue { i8*, i32 } %10, 0
+  store i8* %11, i8** %exn.slot, align 8
+  %12 = extractvalue { i8*, i32 } %10, 1
+  store i32 %12, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad5, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  br label %ehcleanup50
+
+lpad7:                                            ; preds = %invoke.cont6
+  %13 = landingpad { i8*, i32 }
+          cleanup
+  %14 = extractvalue { i8*, i32 } %13, 0
+  store i8* %14, i8** %exn.slot, align 8
+  %15 = extractvalue { i8*, i32 } %13, 1
+  store i32 %15, i32* %ehselector.slot, align 4
+  br label %ehcleanup49
+
+lpad9:                                            ; preds = %invoke.cont44, %invoke.cont42, %invoke.cont40, %invoke.cont38, %invoke.cont36, %invoke.cont34, %if.end, %if.else, %invoke.cont19, %if.then, %invoke.cont10, %invoke.cont8
+  %16 = landingpad { i8*, i32 }
+          cleanup
+  %17 = extractvalue { i8*, i32 } %16, 0
+  store i8* %17, i8** %exn.slot, align 8
+  %18 = extractvalue { i8*, i32 } %16, 1
+  store i32 %18, i32* %ehselector.slot, align 4
+  br label %ehcleanup48
+
+if.else:                                          ; preds = %invoke.cont17
+  %19 = load i8*, i8** %addr.addr, align 8
+  %20 = load i8, i8* %19, align 1
+  %tobool = trunc i8 %20 to i1
+  %conv = zext i1 %tobool to i32
+  store i32 %conv, i32* %c_value, align 4
+  %21 = load i32, i32* %c_value, align 4
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp25, i32 %21)
+          to label %invoke.cont26 unwind label %lpad9
+
+invoke.cont26:                                    ; preds = %if.else
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp24, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.50, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25)
+          to label %invoke.cont28 unwind label %lpad27
+
+invoke.cont28:                                    ; preds = %invoke.cont26
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp23, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont30 unwind label %lpad29
+
+invoke.cont30:                                    ; preds = %invoke.cont28
+  %call31 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %value, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp23) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp23) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
+  br label %if.end
+
+lpad27:                                           ; preds = %invoke.cont26
+  %22 = landingpad { i8*, i32 }
+          cleanup
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  br label %ehcleanup33
+
+lpad29:                                           ; preds = %invoke.cont28
+  %25 = landingpad { i8*, i32 }
+          cleanup
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %exn.slot, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  br label %ehcleanup33
+
+ehcleanup33:                                      ; preds = %lpad29, %lpad27
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
+  br label %ehcleanup48
+
+if.end:                                           ; preds = %invoke.cont30, %invoke.cont21
+  %call35 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %key)
+          to label %invoke.cont34 unwind label %lpad9
+
+invoke.cont34:                                    ; preds = %if.end
+  %call37 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %call35, %"class.std::__1::basic_string"* dereferenceable(24) %value)
+          to label %invoke.cont36 unwind label %lpad9
+
+invoke.cont36:                                    ; preds = %invoke.cont34
+  %call39 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont38 unwind label %lpad9
+
+invoke.cont38:                                    ; preds = %invoke.cont36
+  %call41 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call39, %"class.std::__1::basic_string"* dereferenceable(24) %key)
+          to label %invoke.cont40 unwind label %lpad9
+
+invoke.cont40:                                    ; preds = %invoke.cont38
+  %call43 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call41, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont42 unwind label %lpad9
+
+invoke.cont42:                                    ; preds = %invoke.cont40
+  %call45 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call43, %"class.std::__1::basic_string"* dereferenceable(24) %value)
+          to label %invoke.cont44 unwind label %lpad9
+
+invoke.cont44:                                    ; preds = %invoke.cont42
+  %call47 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call45, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont46 unwind label %lpad9
+
+invoke.cont46:                                    ; preds = %invoke.cont44
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %key) #2
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %storeaddress) #2
+  ret void
+
+ehcleanup48:                                      ; preds = %ehcleanup33, %lpad9
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value) #2
+  br label %ehcleanup49
+
+ehcleanup49:                                      ; preds = %ehcleanup48, %lpad7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %key) #2
+  br label %ehcleanup50
+
+ehcleanup50:                                      ; preds = %ehcleanup49, %ehcleanup, %lpad
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %storeaddress) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup50
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val51 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val51
+}
+
+; Function Attrs: noinline optnone ssp uwtable
 define void @stg_update_load_i8(i8* %addr, i8* %val) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %addr.addr = alloca i8*, align 8
@@ -3881,9 +4355,10 @@ entry:
   %itr = alloca %"class.std::__1::__map_iterator", align 8
   %ref.tmp13 = alloca %"class.std::__1::__map_iterator", align 8
   %value_ptr = alloca i8*, align 8
-  %value23 = alloca %"class.std::__1::basic_string", align 8
+  %c_value = alloca i8, align 1
+  %ref.tmp23 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
   %ref.tmp25 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp26 = alloca %"class.std::__1::basic_string", align 8
   %ref.tmp34 = alloca %"class.std::__1::basic_string", align 8
   store i8* %addr, i8** %addr.addr, align 8
   store i8* %val, i8** %val.addr, align 8
@@ -3998,50 +4473,54 @@ if.else:                                          ; preds = %invoke.cont17
   %19 = load i8*, i8** %addr.addr, align 8
   store i8* %19, i8** %value_ptr, align 8
   %20 = load i8*, i8** %value_ptr, align 8
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value23, i8* %20)
-          to label %invoke.cont24 unwind label %lpad9
+  %21 = load i8, i8* %20, align 1
+  store i8 %21, i8* %c_value, align 1
+  %22 = load i8, i8* %c_value, align 1
+  %conv = sext i8 %22 to i32
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp25, i32 %conv)
+          to label %invoke.cont26 unwind label %lpad9
 
-invoke.cont24:                                    ; preds = %if.else
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp26, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.50, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %value23)
+invoke.cont26:                                    ; preds = %if.else
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp24, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.51, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25)
           to label %invoke.cont28 unwind label %lpad27
 
-invoke.cont28:                                    ; preds = %invoke.cont24
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp25, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp26, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+invoke.cont28:                                    ; preds = %invoke.cont26
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp23, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
           to label %invoke.cont30 unwind label %lpad29
 
 invoke.cont30:                                    ; preds = %invoke.cont28
-  %call31 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %key, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25) #2
+  %call31 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %key, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp23) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp23) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp26) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value23) #2
   br label %if.end
 
-lpad27:                                           ; preds = %invoke.cont24
-  %21 = landingpad { i8*, i32 }
+lpad27:                                           ; preds = %invoke.cont26
+  %23 = landingpad { i8*, i32 }
           cleanup
-  %22 = extractvalue { i8*, i32 } %21, 0
-  store i8* %22, i8** %exn.slot, align 8
-  %23 = extractvalue { i8*, i32 } %21, 1
-  store i32 %23, i32* %ehselector.slot, align 4
+  %24 = extractvalue { i8*, i32 } %23, 0
+  store i8* %24, i8** %exn.slot, align 8
+  %25 = extractvalue { i8*, i32 } %23, 1
+  store i32 %25, i32* %ehselector.slot, align 4
   br label %ehcleanup33
 
 lpad29:                                           ; preds = %invoke.cont28
-  %24 = landingpad { i8*, i32 }
+  %26 = landingpad { i8*, i32 }
           cleanup
-  %25 = extractvalue { i8*, i32 } %24, 0
-  store i8* %25, i8** %exn.slot, align 8
-  %26 = extractvalue { i8*, i32 } %24, 1
-  store i32 %26, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp26) #2
+  %27 = extractvalue { i8*, i32 } %26, 0
+  store i8* %27, i8** %exn.slot, align 8
+  %28 = extractvalue { i8*, i32 } %26, 1
+  store i32 %28, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
   br label %ehcleanup33
 
 ehcleanup33:                                      ; preds = %lpad29, %lpad27
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value23) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
   br label %ehcleanup52
 
 if.end:                                           ; preds = %invoke.cont30, %invoke.cont21
-  %27 = load i8*, i8** %val.addr, align 8
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp34, i8* %27)
+  %29 = load i8*, i8** %val.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp34, i8* %29)
           to label %invoke.cont35 unwind label %lpad9
 
 invoke.cont35:                                    ; preds = %if.end
@@ -4058,8 +4537,8 @@ invoke.cont39:                                    ; preds = %invoke.cont37
           to label %invoke.cont42 unwind label %lpad9
 
 invoke.cont42:                                    ; preds = %invoke.cont39
-  %28 = load i8*, i8** %val.addr, align 8
-  %call45 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call43, i8* %28)
+  %30 = load i8*, i8** %val.addr, align 8
+  %call45 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call43, i8* %30)
           to label %invoke.cont44 unwind label %lpad9
 
 invoke.cont44:                                    ; preds = %invoke.cont42
@@ -4081,12 +4560,12 @@ invoke.cont50:                                    ; preds = %invoke.cont48
   ret void
 
 lpad36:                                           ; preds = %invoke.cont37, %invoke.cont35
-  %29 = landingpad { i8*, i32 }
+  %31 = landingpad { i8*, i32 }
           cleanup
-  %30 = extractvalue { i8*, i32 } %29, 0
-  store i8* %30, i8** %exn.slot, align 8
-  %31 = extractvalue { i8*, i32 } %29, 1
-  store i32 %31, i32* %ehselector.slot, align 4
+  %32 = extractvalue { i8*, i32 } %31, 0
+  store i8* %32, i8** %exn.slot, align 8
+  %33 = extractvalue { i8*, i32 } %31, 1
+  store i32 %33, i32* %ehselector.slot, align 4
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp34) #2
   br label %ehcleanup52
 
@@ -4420,7 +4899,7 @@ if.else:                                          ; preds = %invoke.cont17
           to label %invoke.cont26 unwind label %lpad9
 
 invoke.cont26:                                    ; preds = %if.else
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp24, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.51, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25)
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp24, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.52, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25)
           to label %invoke.cont28 unwind label %lpad27
 
 invoke.cont28:                                    ; preds = %invoke.cont26
@@ -4663,7 +5142,7 @@ if.else:                                          ; preds = %invoke.cont17
           to label %invoke.cont26 unwind label %lpad9
 
 invoke.cont26:                                    ; preds = %if.else
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp24, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.52, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25)
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp24, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.53, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25)
           to label %invoke.cont28 unwind label %lpad27
 
 invoke.cont28:                                    ; preds = %invoke.cont26
@@ -5613,250 +6092,269 @@ eh.resume:                                        ; preds = %ehcleanup
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define void @stg_update_cast(i8* %key, i8* %val, i8* %castOp, i8* %typeTocast) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define void @stg_update_cast_i1(i8* %key, i8* %val_name, i8* %castOp, i8* %srcty, i8* %dstty, i1 zeroext %value) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %key.addr = alloca i8*, align 8
-  %val.addr = alloca i8*, align 8
+  %val_name.addr = alloca i8*, align 8
   %castOp.addr = alloca i8*, align 8
-  %typeTocast.addr = alloca i8*, align 8
-  %val_ = alloca %"class.std::__1::basic_string", align 8
+  %srcty.addr = alloca i8*, align 8
+  %dstty.addr = alloca i8*, align 8
+  %value.addr = alloca i8, align 1
+  %value_name = alloca %"class.std::__1::basic_string", align 8
   %castop = alloca %"class.std::__1::basic_string", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %typetocast = alloca %"class.std::__1::basic_string", align 8
-  %value = alloca %"class.std::__1::basic_string", align 8
+  %dst_type = alloca %"class.std::__1::basic_string", align 8
+  %value_ = alloca %"class.std::__1::basic_string", align 8
   %itr = alloca %"class.std::__1::__map_iterator", align 8
-  %ref.tmp = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp8 = alloca %"class.std::__1::__map_iterator", align 8
-  %ref.tmp20 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp21 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp22 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp23 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
   %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp25 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp37 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp55 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp28 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp29 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp30 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp31 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp32 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp44 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp62 = alloca %"class.std::__1::basic_string", align 8
   store i8* %key, i8** %key.addr, align 8
-  store i8* %val, i8** %val.addr, align 8
+  store i8* %val_name, i8** %val_name.addr, align 8
   store i8* %castOp, i8** %castOp.addr, align 8
-  store i8* %typeTocast, i8** %typeTocast.addr, align 8
-  %0 = load i8*, i8** %val.addr, align 8
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %val_, i8* %0)
+  store i8* %srcty, i8** %srcty.addr, align 8
+  store i8* %dstty, i8** %dstty.addr, align 8
+  %frombool = zext i1 %value to i8
+  store i8 %frombool, i8* %value.addr, align 1
+  %0 = load i8*, i8** %val_name.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value_name, i8* %0)
   %1 = load i8*, i8** %castOp.addr, align 8
   invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %castop, i8* %1)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  %2 = load i8*, i8** %typeTocast.addr, align 8
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %typetocast, i8* %2)
+  %2 = load i8*, i8** %dstty.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %dst_type, i8* %2)
           to label %invoke.cont2 unwind label %lpad1
 
 invoke.cont2:                                     ; preds = %invoke.cont
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value) #2
-  %3 = load i8*, i8** %val.addr, align 8
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* %3)
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
           to label %invoke.cont4 unwind label %lpad3
 
 invoke.cont4:                                     ; preds = %invoke.cont2
-  %call = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp)
-          to label %invoke.cont6 unwind label %lpad5
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont5 unwind label %lpad3
 
-invoke.cont6:                                     ; preds = %invoke.cont4
+invoke.cont5:                                     ; preds = %invoke.cont4
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont7 unwind label %lpad3
+
+invoke.cont7:                                     ; preds = %invoke.cont5
+  %call10 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont9 unwind label %lpad3
+
+invoke.cont9:                                     ; preds = %invoke.cont7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value_) #2
+  %call13 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont9
   %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
-  %coerce.dive7 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call, %"class.std::__1::__tree_end_node"** %coerce.dive7, align 8
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
-  %call9 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
-  %coerce.dive10 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp8, i32 0, i32 0
-  %coerce.dive11 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive10, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call9, %"class.std::__1::__tree_end_node"** %coerce.dive11, align 8
-  %call13 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp8)
-          to label %invoke.cont12 unwind label %lpad3
+  %coerce.dive14 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call13, %"class.std::__1::__tree_end_node"** %coerce.dive14, align 8
+  %call15 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive17 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive16, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call15, %"class.std::__1::__tree_end_node"** %coerce.dive17, align 8
+  %call19 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp)
+          to label %invoke.cont18 unwind label %lpad11
 
-invoke.cont12:                                    ; preds = %invoke.cont6
-  br i1 %call13, label %if.then, label %if.else
+invoke.cont18:                                    ; preds = %invoke.cont12
+  br i1 %call19, label %if.then, label %if.else
 
-if.then:                                          ; preds = %invoke.cont12
-  %call15 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
-          to label %invoke.cont14 unwind label %lpad3
+if.then:                                          ; preds = %invoke.cont18
+  %call21 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont20 unwind label %lpad11
 
-invoke.cont14:                                    ; preds = %if.then
-  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call15, i32 0, i32 1
-  %call17 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value, %"class.std::__1::basic_string"* dereferenceable(24) %second)
-          to label %invoke.cont16 unwind label %lpad3
+invoke.cont20:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call21, i32 0, i32 1
+  %call23 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont22 unwind label %lpad11
 
-invoke.cont16:                                    ; preds = %invoke.cont14
+invoke.cont22:                                    ; preds = %invoke.cont20
   br label %if.end
 
 lpad:                                             ; preds = %entry
-  %4 = landingpad { i8*, i32 }
+  %3 = landingpad { i8*, i32 }
           cleanup
-  %5 = extractvalue { i8*, i32 } %4, 0
-  store i8* %5, i8** %exn.slot, align 8
-  %6 = extractvalue { i8*, i32 } %4, 1
-  store i32 %6, i32* %ehselector.slot, align 4
-  br label %ehcleanup68
+  %4 = extractvalue { i8*, i32 } %3, 0
+  store i8* %4, i8** %exn.slot, align 8
+  %5 = extractvalue { i8*, i32 } %3, 1
+  store i32 %5, i32* %ehselector.slot, align 4
+  br label %ehcleanup75
 
 lpad1:                                            ; preds = %invoke.cont
-  %7 = landingpad { i8*, i32 }
+  %6 = landingpad { i8*, i32 }
           cleanup
-  %8 = extractvalue { i8*, i32 } %7, 0
-  store i8* %8, i8** %exn.slot, align 8
-  %9 = extractvalue { i8*, i32 } %7, 1
-  store i32 %9, i32* %ehselector.slot, align 4
-  br label %ehcleanup67
+  %7 = extractvalue { i8*, i32 } %6, 0
+  store i8* %7, i8** %exn.slot, align 8
+  %8 = extractvalue { i8*, i32 } %6, 1
+  store i32 %8, i32* %ehselector.slot, align 4
+  br label %ehcleanup74
 
-lpad3:                                            ; preds = %invoke.cont53, %invoke.cont51, %invoke.cont49, %invoke.cont41, %if.end, %if.else, %invoke.cont14, %if.then, %invoke.cont6, %invoke.cont2
-  %10 = landingpad { i8*, i32 }
+lpad3:                                            ; preds = %invoke.cont7, %invoke.cont5, %invoke.cont4, %invoke.cont2
+  %9 = landingpad { i8*, i32 }
           cleanup
-  %11 = extractvalue { i8*, i32 } %10, 0
-  store i8* %11, i8** %exn.slot, align 8
-  %12 = extractvalue { i8*, i32 } %10, 1
-  store i32 %12, i32* %ehselector.slot, align 4
-  br label %ehcleanup65
+  %10 = extractvalue { i8*, i32 } %9, 0
+  store i8* %10, i8** %exn.slot, align 8
+  %11 = extractvalue { i8*, i32 } %9, 1
+  store i32 %11, i32* %ehselector.slot, align 4
+  br label %ehcleanup73
 
-lpad5:                                            ; preds = %invoke.cont4
-  %13 = landingpad { i8*, i32 }
+lpad11:                                           ; preds = %invoke.cont60, %invoke.cont58, %invoke.cont56, %invoke.cont48, %if.end, %if.else, %invoke.cont20, %if.then, %invoke.cont12, %invoke.cont9
+  %12 = landingpad { i8*, i32 }
           cleanup
-  %14 = extractvalue { i8*, i32 } %13, 0
-  store i8* %14, i8** %exn.slot, align 8
-  %15 = extractvalue { i8*, i32 } %13, 1
-  store i32 %15, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
-  br label %ehcleanup65
+  %13 = extractvalue { i8*, i32 } %12, 0
+  store i8* %13, i8** %exn.slot, align 8
+  %14 = extractvalue { i8*, i32 } %12, 1
+  store i32 %14, i32* %ehselector.slot, align 4
+  br label %ehcleanup72
 
-if.else:                                          ; preds = %invoke.cont12
-  %call19 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value, %"class.std::__1::basic_string"* dereferenceable(24) %val_)
-          to label %invoke.cont18 unwind label %lpad3
+if.else:                                          ; preds = %invoke.cont18
+  %15 = load i8, i8* %value.addr, align 1
+  %tobool = trunc i8 %15 to i1
+  %conv = zext i1 %tobool to i32
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp24, i32 %conv)
+          to label %invoke.cont25 unwind label %lpad11
 
-invoke.cont18:                                    ; preds = %if.else
+invoke.cont25:                                    ; preds = %if.else
+  %call26 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
   br label %if.end
 
-if.end:                                           ; preds = %invoke.cont18, %invoke.cont16
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp25, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %castop)
-          to label %invoke.cont26 unwind label %lpad3
+if.end:                                           ; preds = %invoke.cont25, %invoke.cont22
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont33 unwind label %lpad11
 
-invoke.cont26:                                    ; preds = %if.end
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp24, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
-          to label %invoke.cont28 unwind label %lpad27
+invoke.cont33:                                    ; preds = %if.end
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont35 unwind label %lpad34
 
-invoke.cont28:                                    ; preds = %invoke.cont26
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp23, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24, %"class.std::__1::basic_string"* dereferenceable(24) %typetocast)
-          to label %invoke.cont30 unwind label %lpad29
+invoke.cont35:                                    ; preds = %invoke.cont33
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp30, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %dst_type)
+          to label %invoke.cont37 unwind label %lpad36
 
-invoke.cont30:                                    ; preds = %invoke.cont28
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp22, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp23, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
-          to label %invoke.cont32 unwind label %lpad31
-
-invoke.cont32:                                    ; preds = %invoke.cont30
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp21, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp22, %"class.std::__1::basic_string"* dereferenceable(24) %value)
-          to label %invoke.cont34 unwind label %lpad33
-
-invoke.cont34:                                    ; preds = %invoke.cont32
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp20, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp21, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
-          to label %invoke.cont36 unwind label %lpad35
-
-invoke.cont36:                                    ; preds = %invoke.cont34
-  %16 = load i8*, i8** %key.addr, align 8
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp37, i8* %16)
+invoke.cont37:                                    ; preds = %invoke.cont35
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
           to label %invoke.cont39 unwind label %lpad38
 
-invoke.cont39:                                    ; preds = %invoke.cont36
-  %call42 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp37)
+invoke.cont39:                                    ; preds = %invoke.cont37
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp28, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %value_)
           to label %invoke.cont41 unwind label %lpad40
 
 invoke.cont41:                                    ; preds = %invoke.cont39
-  %call43 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call42, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp20) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp37) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp20) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp21) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp22) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp23) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
-  %call50 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
-          to label %invoke.cont49 unwind label %lpad3
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp27, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp28, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont43 unwind label %lpad42
 
-invoke.cont49:                                    ; preds = %invoke.cont41
+invoke.cont43:                                    ; preds = %invoke.cont41
+  %16 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp44, i8* %16)
+          to label %invoke.cont46 unwind label %lpad45
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call49 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp44)
+          to label %invoke.cont48 unwind label %lpad47
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call50 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call49, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  %call57 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont56 unwind label %lpad11
+
+invoke.cont56:                                    ; preds = %invoke.cont48
   %17 = load i8*, i8** %key.addr, align 8
-  %call52 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call50, i8* %17)
-          to label %invoke.cont51 unwind label %lpad3
-
-invoke.cont51:                                    ; preds = %invoke.cont49
-  %call54 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call52, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
-          to label %invoke.cont53 unwind label %lpad3
-
-invoke.cont53:                                    ; preds = %invoke.cont51
-  %18 = load i8*, i8** %key.addr, align 8
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp55, i8* %18)
-          to label %invoke.cont56 unwind label %lpad3
-
-invoke.cont56:                                    ; preds = %invoke.cont53
-  %call59 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp55)
-          to label %invoke.cont58 unwind label %lpad57
+  %call59 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call57, i8* %17)
+          to label %invoke.cont58 unwind label %lpad11
 
 invoke.cont58:                                    ; preds = %invoke.cont56
-  %call61 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call54, %"class.std::__1::basic_string"* dereferenceable(24) %call59)
-          to label %invoke.cont60 unwind label %lpad57
+  %call61 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call59, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont60 unwind label %lpad11
 
 invoke.cont60:                                    ; preds = %invoke.cont58
-  %call63 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call61, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
-          to label %invoke.cont62 unwind label %lpad57
+  %18 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp62, i8* %18)
+          to label %invoke.cont63 unwind label %lpad11
 
-invoke.cont62:                                    ; preds = %invoke.cont60
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp55) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %typetocast) #2
+invoke.cont63:                                    ; preds = %invoke.cont60
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp62)
+          to label %invoke.cont65 unwind label %lpad64
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  %call68 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call61, %"class.std::__1::basic_string"* dereferenceable(24) %call66)
+          to label %invoke.cont67 unwind label %lpad64
+
+invoke.cont67:                                    ; preds = %invoke.cont65
+  %call70 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call68, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont69 unwind label %lpad64
+
+invoke.cont69:                                    ; preds = %invoke.cont67
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %val_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
   ret void
 
-lpad27:                                           ; preds = %invoke.cont26
+lpad34:                                           ; preds = %invoke.cont33
   %19 = landingpad { i8*, i32 }
           cleanup
   %20 = extractvalue { i8*, i32 } %19, 0
   store i8* %20, i8** %exn.slot, align 8
   %21 = extractvalue { i8*, i32 } %19, 1
   store i32 %21, i32* %ehselector.slot, align 4
-  br label %ehcleanup48
+  br label %ehcleanup55
 
-lpad29:                                           ; preds = %invoke.cont28
+lpad36:                                           ; preds = %invoke.cont35
   %22 = landingpad { i8*, i32 }
           cleanup
   %23 = extractvalue { i8*, i32 } %22, 0
   store i8* %23, i8** %exn.slot, align 8
   %24 = extractvalue { i8*, i32 } %22, 1
   store i32 %24, i32* %ehselector.slot, align 4
-  br label %ehcleanup47
+  br label %ehcleanup54
 
-lpad31:                                           ; preds = %invoke.cont30
+lpad38:                                           ; preds = %invoke.cont37
   %25 = landingpad { i8*, i32 }
           cleanup
   %26 = extractvalue { i8*, i32 } %25, 0
   store i8* %26, i8** %exn.slot, align 8
   %27 = extractvalue { i8*, i32 } %25, 1
   store i32 %27, i32* %ehselector.slot, align 4
-  br label %ehcleanup46
+  br label %ehcleanup53
 
-lpad33:                                           ; preds = %invoke.cont32
+lpad40:                                           ; preds = %invoke.cont39
   %28 = landingpad { i8*, i32 }
           cleanup
   %29 = extractvalue { i8*, i32 } %28, 0
   store i8* %29, i8** %exn.slot, align 8
   %30 = extractvalue { i8*, i32 } %28, 1
   store i32 %30, i32* %ehselector.slot, align 4
-  br label %ehcleanup45
+  br label %ehcleanup52
 
-lpad35:                                           ; preds = %invoke.cont34
+lpad42:                                           ; preds = %invoke.cont41
   %31 = landingpad { i8*, i32 }
           cleanup
   %32 = extractvalue { i8*, i32 } %31, 0
   store i8* %32, i8** %exn.slot, align 8
   %33 = extractvalue { i8*, i32 } %31, 1
   store i32 %33, i32* %ehselector.slot, align 4
-  br label %ehcleanup44
+  br label %ehcleanup51
 
-lpad38:                                           ; preds = %invoke.cont36
+lpad45:                                           ; preds = %invoke.cont43
   %34 = landingpad { i8*, i32 }
           cleanup
   %35 = extractvalue { i8*, i32 } %34, 0
@@ -5865,69 +6363,2849 @@ lpad38:                                           ; preds = %invoke.cont36
   store i32 %36, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad40:                                           ; preds = %invoke.cont39
+lpad47:                                           ; preds = %invoke.cont46
   %37 = landingpad { i8*, i32 }
           cleanup
   %38 = extractvalue { i8*, i32 } %37, 0
   store i8* %38, i8** %exn.slot, align 8
   %39 = extractvalue { i8*, i32 } %37, 1
   store i32 %39, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp37) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad40, %lpad38
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp20) #2
-  br label %ehcleanup44
+ehcleanup:                                        ; preds = %lpad47, %lpad45
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup51
 
-ehcleanup44:                                      ; preds = %ehcleanup, %lpad35
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp21) #2
-  br label %ehcleanup45
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad42
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  br label %ehcleanup52
 
-ehcleanup45:                                      ; preds = %ehcleanup44, %lpad33
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp22) #2
-  br label %ehcleanup46
+ehcleanup52:                                      ; preds = %ehcleanup51, %lpad40
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  br label %ehcleanup53
 
-ehcleanup46:                                      ; preds = %ehcleanup45, %lpad31
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp23) #2
-  br label %ehcleanup47
+ehcleanup53:                                      ; preds = %ehcleanup52, %lpad38
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  br label %ehcleanup54
 
-ehcleanup47:                                      ; preds = %ehcleanup46, %lpad29
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
-  br label %ehcleanup48
+ehcleanup54:                                      ; preds = %ehcleanup53, %lpad36
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  br label %ehcleanup55
 
-ehcleanup48:                                      ; preds = %ehcleanup47, %lpad27
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
-  br label %ehcleanup65
+ehcleanup55:                                      ; preds = %ehcleanup54, %lpad34
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  br label %ehcleanup72
 
-lpad57:                                           ; preds = %invoke.cont60, %invoke.cont58, %invoke.cont56
+lpad64:                                           ; preds = %invoke.cont67, %invoke.cont65, %invoke.cont63
   %40 = landingpad { i8*, i32 }
           cleanup
   %41 = extractvalue { i8*, i32 } %40, 0
   store i8* %41, i8** %exn.slot, align 8
   %42 = extractvalue { i8*, i32 } %40, 1
   store i32 %42, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp55) #2
-  br label %ehcleanup65
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  br label %ehcleanup72
 
-ehcleanup65:                                      ; preds = %lpad57, %ehcleanup48, %lpad5, %lpad3
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %typetocast) #2
-  br label %ehcleanup67
+ehcleanup72:                                      ; preds = %lpad64, %ehcleanup55, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  br label %ehcleanup73
 
-ehcleanup67:                                      ; preds = %ehcleanup65, %lpad1
+ehcleanup73:                                      ; preds = %ehcleanup72, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  br label %ehcleanup74
+
+ehcleanup74:                                      ; preds = %ehcleanup73, %lpad1
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
-  br label %ehcleanup68
+  br label %ehcleanup75
 
-ehcleanup68:                                      ; preds = %ehcleanup67, %lpad
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %val_) #2
+ehcleanup75:                                      ; preds = %ehcleanup74, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup68
+eh.resume:                                        ; preds = %ehcleanup75
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val69 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val69
+  %lpad.val76 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val76
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_cast_i8(i8* %key, i8* %val_name, i8* %castOp, i8* %srcty, i8* %dstty, i8 signext %value) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %key.addr = alloca i8*, align 8
+  %val_name.addr = alloca i8*, align 8
+  %castOp.addr = alloca i8*, align 8
+  %srcty.addr = alloca i8*, align 8
+  %dstty.addr = alloca i8*, align 8
+  %value.addr = alloca i8, align 1
+  %value_name = alloca %"class.std::__1::basic_string", align 8
+  %castop = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %dst_type = alloca %"class.std::__1::basic_string", align 8
+  %value_ = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp28 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp29 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp30 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp31 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp32 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp44 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp62 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %key, i8** %key.addr, align 8
+  store i8* %val_name, i8** %val_name.addr, align 8
+  store i8* %castOp, i8** %castOp.addr, align 8
+  store i8* %srcty, i8** %srcty.addr, align 8
+  store i8* %dstty, i8** %dstty.addr, align 8
+  store i8 %value, i8* %value.addr, align 1
+  %0 = load i8*, i8** %val_name.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value_name, i8* %0)
+  %1 = load i8*, i8** %castOp.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %castop, i8* %1)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %2 = load i8*, i8** %dstty.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %dst_type, i8* %2)
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont5 unwind label %lpad3
+
+invoke.cont5:                                     ; preds = %invoke.cont4
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont7 unwind label %lpad3
+
+invoke.cont7:                                     ; preds = %invoke.cont5
+  %call10 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont9 unwind label %lpad3
+
+invoke.cont9:                                     ; preds = %invoke.cont7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value_) #2
+  %call13 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont9
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive14 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call13, %"class.std::__1::__tree_end_node"** %coerce.dive14, align 8
+  %call15 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive17 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive16, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call15, %"class.std::__1::__tree_end_node"** %coerce.dive17, align 8
+  %call19 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp)
+          to label %invoke.cont18 unwind label %lpad11
+
+invoke.cont18:                                    ; preds = %invoke.cont12
+  br i1 %call19, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont18
+  %call21 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont20 unwind label %lpad11
+
+invoke.cont20:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call21, i32 0, i32 1
+  %call23 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont22 unwind label %lpad11
+
+invoke.cont22:                                    ; preds = %invoke.cont20
+  br label %if.end
+
+lpad:                                             ; preds = %entry
+  %3 = landingpad { i8*, i32 }
+          cleanup
+  %4 = extractvalue { i8*, i32 } %3, 0
+  store i8* %4, i8** %exn.slot, align 8
+  %5 = extractvalue { i8*, i32 } %3, 1
+  store i32 %5, i32* %ehselector.slot, align 4
+  br label %ehcleanup75
+
+lpad1:                                            ; preds = %invoke.cont
+  %6 = landingpad { i8*, i32 }
+          cleanup
+  %7 = extractvalue { i8*, i32 } %6, 0
+  store i8* %7, i8** %exn.slot, align 8
+  %8 = extractvalue { i8*, i32 } %6, 1
+  store i32 %8, i32* %ehselector.slot, align 4
+  br label %ehcleanup74
+
+lpad3:                                            ; preds = %invoke.cont7, %invoke.cont5, %invoke.cont4, %invoke.cont2
+  %9 = landingpad { i8*, i32 }
+          cleanup
+  %10 = extractvalue { i8*, i32 } %9, 0
+  store i8* %10, i8** %exn.slot, align 8
+  %11 = extractvalue { i8*, i32 } %9, 1
+  store i32 %11, i32* %ehselector.slot, align 4
+  br label %ehcleanup73
+
+lpad11:                                           ; preds = %invoke.cont60, %invoke.cont58, %invoke.cont56, %invoke.cont48, %if.end, %if.else, %invoke.cont20, %if.then, %invoke.cont12, %invoke.cont9
+  %12 = landingpad { i8*, i32 }
+          cleanup
+  %13 = extractvalue { i8*, i32 } %12, 0
+  store i8* %13, i8** %exn.slot, align 8
+  %14 = extractvalue { i8*, i32 } %12, 1
+  store i32 %14, i32* %ehselector.slot, align 4
+  br label %ehcleanup72
+
+if.else:                                          ; preds = %invoke.cont18
+  %15 = load i8, i8* %value.addr, align 1
+  %conv = sext i8 %15 to i32
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp24, i32 %conv)
+          to label %invoke.cont25 unwind label %lpad11
+
+invoke.cont25:                                    ; preds = %if.else
+  %call26 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  br label %if.end
+
+if.end:                                           ; preds = %invoke.cont25, %invoke.cont22
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont33 unwind label %lpad11
+
+invoke.cont33:                                    ; preds = %if.end
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont35 unwind label %lpad34
+
+invoke.cont35:                                    ; preds = %invoke.cont33
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp30, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %dst_type)
+          to label %invoke.cont37 unwind label %lpad36
+
+invoke.cont37:                                    ; preds = %invoke.cont35
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont39 unwind label %lpad38
+
+invoke.cont39:                                    ; preds = %invoke.cont37
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp28, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %value_)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp27, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp28, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont43 unwind label %lpad42
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  %16 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp44, i8* %16)
+          to label %invoke.cont46 unwind label %lpad45
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call49 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp44)
+          to label %invoke.cont48 unwind label %lpad47
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call50 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call49, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  %call57 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont56 unwind label %lpad11
+
+invoke.cont56:                                    ; preds = %invoke.cont48
+  %17 = load i8*, i8** %key.addr, align 8
+  %call59 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call57, i8* %17)
+          to label %invoke.cont58 unwind label %lpad11
+
+invoke.cont58:                                    ; preds = %invoke.cont56
+  %call61 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call59, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont60 unwind label %lpad11
+
+invoke.cont60:                                    ; preds = %invoke.cont58
+  %18 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp62, i8* %18)
+          to label %invoke.cont63 unwind label %lpad11
+
+invoke.cont63:                                    ; preds = %invoke.cont60
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp62)
+          to label %invoke.cont65 unwind label %lpad64
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  %call68 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call61, %"class.std::__1::basic_string"* dereferenceable(24) %call66)
+          to label %invoke.cont67 unwind label %lpad64
+
+invoke.cont67:                                    ; preds = %invoke.cont65
+  %call70 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call68, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont69 unwind label %lpad64
+
+invoke.cont69:                                    ; preds = %invoke.cont67
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  ret void
+
+lpad34:                                           ; preds = %invoke.cont33
+  %19 = landingpad { i8*, i32 }
+          cleanup
+  %20 = extractvalue { i8*, i32 } %19, 0
+  store i8* %20, i8** %exn.slot, align 8
+  %21 = extractvalue { i8*, i32 } %19, 1
+  store i32 %21, i32* %ehselector.slot, align 4
+  br label %ehcleanup55
+
+lpad36:                                           ; preds = %invoke.cont35
+  %22 = landingpad { i8*, i32 }
+          cleanup
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  br label %ehcleanup54
+
+lpad38:                                           ; preds = %invoke.cont37
+  %25 = landingpad { i8*, i32 }
+          cleanup
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %exn.slot, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %ehselector.slot, align 4
+  br label %ehcleanup53
+
+lpad40:                                           ; preds = %invoke.cont39
+  %28 = landingpad { i8*, i32 }
+          cleanup
+  %29 = extractvalue { i8*, i32 } %28, 0
+  store i8* %29, i8** %exn.slot, align 8
+  %30 = extractvalue { i8*, i32 } %28, 1
+  store i32 %30, i32* %ehselector.slot, align 4
+  br label %ehcleanup52
+
+lpad42:                                           ; preds = %invoke.cont41
+  %31 = landingpad { i8*, i32 }
+          cleanup
+  %32 = extractvalue { i8*, i32 } %31, 0
+  store i8* %32, i8** %exn.slot, align 8
+  %33 = extractvalue { i8*, i32 } %31, 1
+  store i32 %33, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
+
+lpad45:                                           ; preds = %invoke.cont43
+  %34 = landingpad { i8*, i32 }
+          cleanup
+  %35 = extractvalue { i8*, i32 } %34, 0
+  store i8* %35, i8** %exn.slot, align 8
+  %36 = extractvalue { i8*, i32 } %34, 1
+  store i32 %36, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad47:                                           ; preds = %invoke.cont46
+  %37 = landingpad { i8*, i32 }
+          cleanup
+  %38 = extractvalue { i8*, i32 } %37, 0
+  store i8* %38, i8** %exn.slot, align 8
+  %39 = extractvalue { i8*, i32 } %37, 1
+  store i32 %39, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad47, %lpad45
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup51
+
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad42
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  br label %ehcleanup52
+
+ehcleanup52:                                      ; preds = %ehcleanup51, %lpad40
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  br label %ehcleanup53
+
+ehcleanup53:                                      ; preds = %ehcleanup52, %lpad38
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  br label %ehcleanup54
+
+ehcleanup54:                                      ; preds = %ehcleanup53, %lpad36
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  br label %ehcleanup55
+
+ehcleanup55:                                      ; preds = %ehcleanup54, %lpad34
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  br label %ehcleanup72
+
+lpad64:                                           ; preds = %invoke.cont67, %invoke.cont65, %invoke.cont63
+  %40 = landingpad { i8*, i32 }
+          cleanup
+  %41 = extractvalue { i8*, i32 } %40, 0
+  store i8* %41, i8** %exn.slot, align 8
+  %42 = extractvalue { i8*, i32 } %40, 1
+  store i32 %42, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  br label %ehcleanup72
+
+ehcleanup72:                                      ; preds = %lpad64, %ehcleanup55, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  br label %ehcleanup73
+
+ehcleanup73:                                      ; preds = %ehcleanup72, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  br label %ehcleanup74
+
+ehcleanup74:                                      ; preds = %ehcleanup73, %lpad1
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  br label %ehcleanup75
+
+ehcleanup75:                                      ; preds = %ehcleanup74, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup75
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val76 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val76
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_cast_i16(i8* %key, i8* %val_name, i8* %castOp, i8* %srcty, i8* %dstty, i32 %value) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %key.addr = alloca i8*, align 8
+  %val_name.addr = alloca i8*, align 8
+  %castOp.addr = alloca i8*, align 8
+  %srcty.addr = alloca i8*, align 8
+  %dstty.addr = alloca i8*, align 8
+  %value.addr = alloca i32, align 4
+  %value_name = alloca %"class.std::__1::basic_string", align 8
+  %castop = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %dst_type = alloca %"class.std::__1::basic_string", align 8
+  %value_ = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp28 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp29 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp30 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp31 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp32 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp44 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp62 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %key, i8** %key.addr, align 8
+  store i8* %val_name, i8** %val_name.addr, align 8
+  store i8* %castOp, i8** %castOp.addr, align 8
+  store i8* %srcty, i8** %srcty.addr, align 8
+  store i8* %dstty, i8** %dstty.addr, align 8
+  store i32 %value, i32* %value.addr, align 4
+  %0 = load i8*, i8** %val_name.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value_name, i8* %0)
+  %1 = load i8*, i8** %castOp.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %castop, i8* %1)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %2 = load i8*, i8** %dstty.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %dst_type, i8* %2)
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont5 unwind label %lpad3
+
+invoke.cont5:                                     ; preds = %invoke.cont4
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont7 unwind label %lpad3
+
+invoke.cont7:                                     ; preds = %invoke.cont5
+  %call10 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont9 unwind label %lpad3
+
+invoke.cont9:                                     ; preds = %invoke.cont7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value_) #2
+  %call13 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont9
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive14 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call13, %"class.std::__1::__tree_end_node"** %coerce.dive14, align 8
+  %call15 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive17 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive16, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call15, %"class.std::__1::__tree_end_node"** %coerce.dive17, align 8
+  %call19 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp)
+          to label %invoke.cont18 unwind label %lpad11
+
+invoke.cont18:                                    ; preds = %invoke.cont12
+  br i1 %call19, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont18
+  %call21 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont20 unwind label %lpad11
+
+invoke.cont20:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call21, i32 0, i32 1
+  %call23 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont22 unwind label %lpad11
+
+invoke.cont22:                                    ; preds = %invoke.cont20
+  br label %if.end
+
+lpad:                                             ; preds = %entry
+  %3 = landingpad { i8*, i32 }
+          cleanup
+  %4 = extractvalue { i8*, i32 } %3, 0
+  store i8* %4, i8** %exn.slot, align 8
+  %5 = extractvalue { i8*, i32 } %3, 1
+  store i32 %5, i32* %ehselector.slot, align 4
+  br label %ehcleanup75
+
+lpad1:                                            ; preds = %invoke.cont
+  %6 = landingpad { i8*, i32 }
+          cleanup
+  %7 = extractvalue { i8*, i32 } %6, 0
+  store i8* %7, i8** %exn.slot, align 8
+  %8 = extractvalue { i8*, i32 } %6, 1
+  store i32 %8, i32* %ehselector.slot, align 4
+  br label %ehcleanup74
+
+lpad3:                                            ; preds = %invoke.cont7, %invoke.cont5, %invoke.cont4, %invoke.cont2
+  %9 = landingpad { i8*, i32 }
+          cleanup
+  %10 = extractvalue { i8*, i32 } %9, 0
+  store i8* %10, i8** %exn.slot, align 8
+  %11 = extractvalue { i8*, i32 } %9, 1
+  store i32 %11, i32* %ehselector.slot, align 4
+  br label %ehcleanup73
+
+lpad11:                                           ; preds = %invoke.cont60, %invoke.cont58, %invoke.cont56, %invoke.cont48, %if.end, %if.else, %invoke.cont20, %if.then, %invoke.cont12, %invoke.cont9
+  %12 = landingpad { i8*, i32 }
+          cleanup
+  %13 = extractvalue { i8*, i32 } %12, 0
+  store i8* %13, i8** %exn.slot, align 8
+  %14 = extractvalue { i8*, i32 } %12, 1
+  store i32 %14, i32* %ehselector.slot, align 4
+  br label %ehcleanup72
+
+if.else:                                          ; preds = %invoke.cont18
+  %15 = load i32, i32* %value.addr, align 4
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp24, i32 %15)
+          to label %invoke.cont25 unwind label %lpad11
+
+invoke.cont25:                                    ; preds = %if.else
+  %call26 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  br label %if.end
+
+if.end:                                           ; preds = %invoke.cont25, %invoke.cont22
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont33 unwind label %lpad11
+
+invoke.cont33:                                    ; preds = %if.end
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont35 unwind label %lpad34
+
+invoke.cont35:                                    ; preds = %invoke.cont33
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp30, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %dst_type)
+          to label %invoke.cont37 unwind label %lpad36
+
+invoke.cont37:                                    ; preds = %invoke.cont35
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont39 unwind label %lpad38
+
+invoke.cont39:                                    ; preds = %invoke.cont37
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp28, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %value_)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp27, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp28, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont43 unwind label %lpad42
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  %16 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp44, i8* %16)
+          to label %invoke.cont46 unwind label %lpad45
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call49 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp44)
+          to label %invoke.cont48 unwind label %lpad47
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call50 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call49, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  %call57 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont56 unwind label %lpad11
+
+invoke.cont56:                                    ; preds = %invoke.cont48
+  %17 = load i8*, i8** %key.addr, align 8
+  %call59 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call57, i8* %17)
+          to label %invoke.cont58 unwind label %lpad11
+
+invoke.cont58:                                    ; preds = %invoke.cont56
+  %call61 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call59, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont60 unwind label %lpad11
+
+invoke.cont60:                                    ; preds = %invoke.cont58
+  %18 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp62, i8* %18)
+          to label %invoke.cont63 unwind label %lpad11
+
+invoke.cont63:                                    ; preds = %invoke.cont60
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp62)
+          to label %invoke.cont65 unwind label %lpad64
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  %call68 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call61, %"class.std::__1::basic_string"* dereferenceable(24) %call66)
+          to label %invoke.cont67 unwind label %lpad64
+
+invoke.cont67:                                    ; preds = %invoke.cont65
+  %call70 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call68, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont69 unwind label %lpad64
+
+invoke.cont69:                                    ; preds = %invoke.cont67
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  ret void
+
+lpad34:                                           ; preds = %invoke.cont33
+  %19 = landingpad { i8*, i32 }
+          cleanup
+  %20 = extractvalue { i8*, i32 } %19, 0
+  store i8* %20, i8** %exn.slot, align 8
+  %21 = extractvalue { i8*, i32 } %19, 1
+  store i32 %21, i32* %ehselector.slot, align 4
+  br label %ehcleanup55
+
+lpad36:                                           ; preds = %invoke.cont35
+  %22 = landingpad { i8*, i32 }
+          cleanup
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  br label %ehcleanup54
+
+lpad38:                                           ; preds = %invoke.cont37
+  %25 = landingpad { i8*, i32 }
+          cleanup
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %exn.slot, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %ehselector.slot, align 4
+  br label %ehcleanup53
+
+lpad40:                                           ; preds = %invoke.cont39
+  %28 = landingpad { i8*, i32 }
+          cleanup
+  %29 = extractvalue { i8*, i32 } %28, 0
+  store i8* %29, i8** %exn.slot, align 8
+  %30 = extractvalue { i8*, i32 } %28, 1
+  store i32 %30, i32* %ehselector.slot, align 4
+  br label %ehcleanup52
+
+lpad42:                                           ; preds = %invoke.cont41
+  %31 = landingpad { i8*, i32 }
+          cleanup
+  %32 = extractvalue { i8*, i32 } %31, 0
+  store i8* %32, i8** %exn.slot, align 8
+  %33 = extractvalue { i8*, i32 } %31, 1
+  store i32 %33, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
+
+lpad45:                                           ; preds = %invoke.cont43
+  %34 = landingpad { i8*, i32 }
+          cleanup
+  %35 = extractvalue { i8*, i32 } %34, 0
+  store i8* %35, i8** %exn.slot, align 8
+  %36 = extractvalue { i8*, i32 } %34, 1
+  store i32 %36, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad47:                                           ; preds = %invoke.cont46
+  %37 = landingpad { i8*, i32 }
+          cleanup
+  %38 = extractvalue { i8*, i32 } %37, 0
+  store i8* %38, i8** %exn.slot, align 8
+  %39 = extractvalue { i8*, i32 } %37, 1
+  store i32 %39, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad47, %lpad45
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup51
+
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad42
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  br label %ehcleanup52
+
+ehcleanup52:                                      ; preds = %ehcleanup51, %lpad40
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  br label %ehcleanup53
+
+ehcleanup53:                                      ; preds = %ehcleanup52, %lpad38
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  br label %ehcleanup54
+
+ehcleanup54:                                      ; preds = %ehcleanup53, %lpad36
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  br label %ehcleanup55
+
+ehcleanup55:                                      ; preds = %ehcleanup54, %lpad34
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  br label %ehcleanup72
+
+lpad64:                                           ; preds = %invoke.cont67, %invoke.cont65, %invoke.cont63
+  %40 = landingpad { i8*, i32 }
+          cleanup
+  %41 = extractvalue { i8*, i32 } %40, 0
+  store i8* %41, i8** %exn.slot, align 8
+  %42 = extractvalue { i8*, i32 } %40, 1
+  store i32 %42, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  br label %ehcleanup72
+
+ehcleanup72:                                      ; preds = %lpad64, %ehcleanup55, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  br label %ehcleanup73
+
+ehcleanup73:                                      ; preds = %ehcleanup72, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  br label %ehcleanup74
+
+ehcleanup74:                                      ; preds = %ehcleanup73, %lpad1
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  br label %ehcleanup75
+
+ehcleanup75:                                      ; preds = %ehcleanup74, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup75
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val76 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val76
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_cast_i32(i8* %key, i8* %val_name, i8* %castOp, i8* %srcty, i8* %dstty, i32 %value) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %key.addr = alloca i8*, align 8
+  %val_name.addr = alloca i8*, align 8
+  %castOp.addr = alloca i8*, align 8
+  %srcty.addr = alloca i8*, align 8
+  %dstty.addr = alloca i8*, align 8
+  %value.addr = alloca i32, align 4
+  %value_name = alloca %"class.std::__1::basic_string", align 8
+  %castop = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %dst_type = alloca %"class.std::__1::basic_string", align 8
+  %value_ = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp28 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp29 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp30 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp31 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp32 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp44 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp62 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %key, i8** %key.addr, align 8
+  store i8* %val_name, i8** %val_name.addr, align 8
+  store i8* %castOp, i8** %castOp.addr, align 8
+  store i8* %srcty, i8** %srcty.addr, align 8
+  store i8* %dstty, i8** %dstty.addr, align 8
+  store i32 %value, i32* %value.addr, align 4
+  %0 = load i8*, i8** %val_name.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value_name, i8* %0)
+  %1 = load i8*, i8** %castOp.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %castop, i8* %1)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %2 = load i8*, i8** %dstty.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %dst_type, i8* %2)
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont5 unwind label %lpad3
+
+invoke.cont5:                                     ; preds = %invoke.cont4
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont7 unwind label %lpad3
+
+invoke.cont7:                                     ; preds = %invoke.cont5
+  %call10 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont9 unwind label %lpad3
+
+invoke.cont9:                                     ; preds = %invoke.cont7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value_) #2
+  %call13 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont9
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive14 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call13, %"class.std::__1::__tree_end_node"** %coerce.dive14, align 8
+  %call15 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive17 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive16, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call15, %"class.std::__1::__tree_end_node"** %coerce.dive17, align 8
+  %call19 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp)
+          to label %invoke.cont18 unwind label %lpad11
+
+invoke.cont18:                                    ; preds = %invoke.cont12
+  br i1 %call19, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont18
+  %call21 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont20 unwind label %lpad11
+
+invoke.cont20:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call21, i32 0, i32 1
+  %call23 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont22 unwind label %lpad11
+
+invoke.cont22:                                    ; preds = %invoke.cont20
+  br label %if.end
+
+lpad:                                             ; preds = %entry
+  %3 = landingpad { i8*, i32 }
+          cleanup
+  %4 = extractvalue { i8*, i32 } %3, 0
+  store i8* %4, i8** %exn.slot, align 8
+  %5 = extractvalue { i8*, i32 } %3, 1
+  store i32 %5, i32* %ehselector.slot, align 4
+  br label %ehcleanup75
+
+lpad1:                                            ; preds = %invoke.cont
+  %6 = landingpad { i8*, i32 }
+          cleanup
+  %7 = extractvalue { i8*, i32 } %6, 0
+  store i8* %7, i8** %exn.slot, align 8
+  %8 = extractvalue { i8*, i32 } %6, 1
+  store i32 %8, i32* %ehselector.slot, align 4
+  br label %ehcleanup74
+
+lpad3:                                            ; preds = %invoke.cont7, %invoke.cont5, %invoke.cont4, %invoke.cont2
+  %9 = landingpad { i8*, i32 }
+          cleanup
+  %10 = extractvalue { i8*, i32 } %9, 0
+  store i8* %10, i8** %exn.slot, align 8
+  %11 = extractvalue { i8*, i32 } %9, 1
+  store i32 %11, i32* %ehselector.slot, align 4
+  br label %ehcleanup73
+
+lpad11:                                           ; preds = %invoke.cont60, %invoke.cont58, %invoke.cont56, %invoke.cont48, %if.end, %if.else, %invoke.cont20, %if.then, %invoke.cont12, %invoke.cont9
+  %12 = landingpad { i8*, i32 }
+          cleanup
+  %13 = extractvalue { i8*, i32 } %12, 0
+  store i8* %13, i8** %exn.slot, align 8
+  %14 = extractvalue { i8*, i32 } %12, 1
+  store i32 %14, i32* %ehselector.slot, align 4
+  br label %ehcleanup72
+
+if.else:                                          ; preds = %invoke.cont18
+  %15 = load i32, i32* %value.addr, align 4
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp24, i32 %15)
+          to label %invoke.cont25 unwind label %lpad11
+
+invoke.cont25:                                    ; preds = %if.else
+  %call26 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  br label %if.end
+
+if.end:                                           ; preds = %invoke.cont25, %invoke.cont22
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont33 unwind label %lpad11
+
+invoke.cont33:                                    ; preds = %if.end
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont35 unwind label %lpad34
+
+invoke.cont35:                                    ; preds = %invoke.cont33
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp30, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %dst_type)
+          to label %invoke.cont37 unwind label %lpad36
+
+invoke.cont37:                                    ; preds = %invoke.cont35
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont39 unwind label %lpad38
+
+invoke.cont39:                                    ; preds = %invoke.cont37
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp28, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %value_)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp27, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp28, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont43 unwind label %lpad42
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  %16 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp44, i8* %16)
+          to label %invoke.cont46 unwind label %lpad45
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call49 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp44)
+          to label %invoke.cont48 unwind label %lpad47
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call50 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call49, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  %call57 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont56 unwind label %lpad11
+
+invoke.cont56:                                    ; preds = %invoke.cont48
+  %17 = load i8*, i8** %key.addr, align 8
+  %call59 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call57, i8* %17)
+          to label %invoke.cont58 unwind label %lpad11
+
+invoke.cont58:                                    ; preds = %invoke.cont56
+  %call61 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call59, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont60 unwind label %lpad11
+
+invoke.cont60:                                    ; preds = %invoke.cont58
+  %18 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp62, i8* %18)
+          to label %invoke.cont63 unwind label %lpad11
+
+invoke.cont63:                                    ; preds = %invoke.cont60
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp62)
+          to label %invoke.cont65 unwind label %lpad64
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  %call68 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call61, %"class.std::__1::basic_string"* dereferenceable(24) %call66)
+          to label %invoke.cont67 unwind label %lpad64
+
+invoke.cont67:                                    ; preds = %invoke.cont65
+  %call70 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call68, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont69 unwind label %lpad64
+
+invoke.cont69:                                    ; preds = %invoke.cont67
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  ret void
+
+lpad34:                                           ; preds = %invoke.cont33
+  %19 = landingpad { i8*, i32 }
+          cleanup
+  %20 = extractvalue { i8*, i32 } %19, 0
+  store i8* %20, i8** %exn.slot, align 8
+  %21 = extractvalue { i8*, i32 } %19, 1
+  store i32 %21, i32* %ehselector.slot, align 4
+  br label %ehcleanup55
+
+lpad36:                                           ; preds = %invoke.cont35
+  %22 = landingpad { i8*, i32 }
+          cleanup
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  br label %ehcleanup54
+
+lpad38:                                           ; preds = %invoke.cont37
+  %25 = landingpad { i8*, i32 }
+          cleanup
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %exn.slot, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %ehselector.slot, align 4
+  br label %ehcleanup53
+
+lpad40:                                           ; preds = %invoke.cont39
+  %28 = landingpad { i8*, i32 }
+          cleanup
+  %29 = extractvalue { i8*, i32 } %28, 0
+  store i8* %29, i8** %exn.slot, align 8
+  %30 = extractvalue { i8*, i32 } %28, 1
+  store i32 %30, i32* %ehselector.slot, align 4
+  br label %ehcleanup52
+
+lpad42:                                           ; preds = %invoke.cont41
+  %31 = landingpad { i8*, i32 }
+          cleanup
+  %32 = extractvalue { i8*, i32 } %31, 0
+  store i8* %32, i8** %exn.slot, align 8
+  %33 = extractvalue { i8*, i32 } %31, 1
+  store i32 %33, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
+
+lpad45:                                           ; preds = %invoke.cont43
+  %34 = landingpad { i8*, i32 }
+          cleanup
+  %35 = extractvalue { i8*, i32 } %34, 0
+  store i8* %35, i8** %exn.slot, align 8
+  %36 = extractvalue { i8*, i32 } %34, 1
+  store i32 %36, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad47:                                           ; preds = %invoke.cont46
+  %37 = landingpad { i8*, i32 }
+          cleanup
+  %38 = extractvalue { i8*, i32 } %37, 0
+  store i8* %38, i8** %exn.slot, align 8
+  %39 = extractvalue { i8*, i32 } %37, 1
+  store i32 %39, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad47, %lpad45
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup51
+
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad42
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  br label %ehcleanup52
+
+ehcleanup52:                                      ; preds = %ehcleanup51, %lpad40
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  br label %ehcleanup53
+
+ehcleanup53:                                      ; preds = %ehcleanup52, %lpad38
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  br label %ehcleanup54
+
+ehcleanup54:                                      ; preds = %ehcleanup53, %lpad36
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  br label %ehcleanup55
+
+ehcleanup55:                                      ; preds = %ehcleanup54, %lpad34
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  br label %ehcleanup72
+
+lpad64:                                           ; preds = %invoke.cont67, %invoke.cont65, %invoke.cont63
+  %40 = landingpad { i8*, i32 }
+          cleanup
+  %41 = extractvalue { i8*, i32 } %40, 0
+  store i8* %41, i8** %exn.slot, align 8
+  %42 = extractvalue { i8*, i32 } %40, 1
+  store i32 %42, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  br label %ehcleanup72
+
+ehcleanup72:                                      ; preds = %lpad64, %ehcleanup55, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  br label %ehcleanup73
+
+ehcleanup73:                                      ; preds = %ehcleanup72, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  br label %ehcleanup74
+
+ehcleanup74:                                      ; preds = %ehcleanup73, %lpad1
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  br label %ehcleanup75
+
+ehcleanup75:                                      ; preds = %ehcleanup74, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup75
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val76 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val76
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_cast_i64(i8* %key, i8* %val_name, i8* %castOp, i8* %srcty, i8* %dstty, i32 %value) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %key.addr = alloca i8*, align 8
+  %val_name.addr = alloca i8*, align 8
+  %castOp.addr = alloca i8*, align 8
+  %srcty.addr = alloca i8*, align 8
+  %dstty.addr = alloca i8*, align 8
+  %value.addr = alloca i32, align 4
+  %value_name = alloca %"class.std::__1::basic_string", align 8
+  %castop = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %dst_type = alloca %"class.std::__1::basic_string", align 8
+  %value_ = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp28 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp29 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp30 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp31 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp32 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp44 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp62 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %key, i8** %key.addr, align 8
+  store i8* %val_name, i8** %val_name.addr, align 8
+  store i8* %castOp, i8** %castOp.addr, align 8
+  store i8* %srcty, i8** %srcty.addr, align 8
+  store i8* %dstty, i8** %dstty.addr, align 8
+  store i32 %value, i32* %value.addr, align 4
+  %0 = load i8*, i8** %val_name.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value_name, i8* %0)
+  %1 = load i8*, i8** %castOp.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %castop, i8* %1)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %2 = load i8*, i8** %dstty.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %dst_type, i8* %2)
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont5 unwind label %lpad3
+
+invoke.cont5:                                     ; preds = %invoke.cont4
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont7 unwind label %lpad3
+
+invoke.cont7:                                     ; preds = %invoke.cont5
+  %call10 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont9 unwind label %lpad3
+
+invoke.cont9:                                     ; preds = %invoke.cont7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value_) #2
+  %call13 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont9
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive14 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call13, %"class.std::__1::__tree_end_node"** %coerce.dive14, align 8
+  %call15 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive17 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive16, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call15, %"class.std::__1::__tree_end_node"** %coerce.dive17, align 8
+  %call19 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp)
+          to label %invoke.cont18 unwind label %lpad11
+
+invoke.cont18:                                    ; preds = %invoke.cont12
+  br i1 %call19, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont18
+  %call21 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont20 unwind label %lpad11
+
+invoke.cont20:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call21, i32 0, i32 1
+  %call23 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont22 unwind label %lpad11
+
+invoke.cont22:                                    ; preds = %invoke.cont20
+  br label %if.end
+
+lpad:                                             ; preds = %entry
+  %3 = landingpad { i8*, i32 }
+          cleanup
+  %4 = extractvalue { i8*, i32 } %3, 0
+  store i8* %4, i8** %exn.slot, align 8
+  %5 = extractvalue { i8*, i32 } %3, 1
+  store i32 %5, i32* %ehselector.slot, align 4
+  br label %ehcleanup75
+
+lpad1:                                            ; preds = %invoke.cont
+  %6 = landingpad { i8*, i32 }
+          cleanup
+  %7 = extractvalue { i8*, i32 } %6, 0
+  store i8* %7, i8** %exn.slot, align 8
+  %8 = extractvalue { i8*, i32 } %6, 1
+  store i32 %8, i32* %ehselector.slot, align 4
+  br label %ehcleanup74
+
+lpad3:                                            ; preds = %invoke.cont7, %invoke.cont5, %invoke.cont4, %invoke.cont2
+  %9 = landingpad { i8*, i32 }
+          cleanup
+  %10 = extractvalue { i8*, i32 } %9, 0
+  store i8* %10, i8** %exn.slot, align 8
+  %11 = extractvalue { i8*, i32 } %9, 1
+  store i32 %11, i32* %ehselector.slot, align 4
+  br label %ehcleanup73
+
+lpad11:                                           ; preds = %invoke.cont60, %invoke.cont58, %invoke.cont56, %invoke.cont48, %if.end, %if.else, %invoke.cont20, %if.then, %invoke.cont12, %invoke.cont9
+  %12 = landingpad { i8*, i32 }
+          cleanup
+  %13 = extractvalue { i8*, i32 } %12, 0
+  store i8* %13, i8** %exn.slot, align 8
+  %14 = extractvalue { i8*, i32 } %12, 1
+  store i32 %14, i32* %ehselector.slot, align 4
+  br label %ehcleanup72
+
+if.else:                                          ; preds = %invoke.cont18
+  %15 = load i32, i32* %value.addr, align 4
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp24, i32 %15)
+          to label %invoke.cont25 unwind label %lpad11
+
+invoke.cont25:                                    ; preds = %if.else
+  %call26 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  br label %if.end
+
+if.end:                                           ; preds = %invoke.cont25, %invoke.cont22
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont33 unwind label %lpad11
+
+invoke.cont33:                                    ; preds = %if.end
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont35 unwind label %lpad34
+
+invoke.cont35:                                    ; preds = %invoke.cont33
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp30, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %dst_type)
+          to label %invoke.cont37 unwind label %lpad36
+
+invoke.cont37:                                    ; preds = %invoke.cont35
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont39 unwind label %lpad38
+
+invoke.cont39:                                    ; preds = %invoke.cont37
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp28, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %value_)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp27, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp28, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont43 unwind label %lpad42
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  %16 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp44, i8* %16)
+          to label %invoke.cont46 unwind label %lpad45
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call49 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp44)
+          to label %invoke.cont48 unwind label %lpad47
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call50 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call49, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  %call57 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont56 unwind label %lpad11
+
+invoke.cont56:                                    ; preds = %invoke.cont48
+  %17 = load i8*, i8** %key.addr, align 8
+  %call59 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call57, i8* %17)
+          to label %invoke.cont58 unwind label %lpad11
+
+invoke.cont58:                                    ; preds = %invoke.cont56
+  %call61 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call59, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont60 unwind label %lpad11
+
+invoke.cont60:                                    ; preds = %invoke.cont58
+  %18 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp62, i8* %18)
+          to label %invoke.cont63 unwind label %lpad11
+
+invoke.cont63:                                    ; preds = %invoke.cont60
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp62)
+          to label %invoke.cont65 unwind label %lpad64
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  %call68 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call61, %"class.std::__1::basic_string"* dereferenceable(24) %call66)
+          to label %invoke.cont67 unwind label %lpad64
+
+invoke.cont67:                                    ; preds = %invoke.cont65
+  %call70 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call68, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont69 unwind label %lpad64
+
+invoke.cont69:                                    ; preds = %invoke.cont67
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  ret void
+
+lpad34:                                           ; preds = %invoke.cont33
+  %19 = landingpad { i8*, i32 }
+          cleanup
+  %20 = extractvalue { i8*, i32 } %19, 0
+  store i8* %20, i8** %exn.slot, align 8
+  %21 = extractvalue { i8*, i32 } %19, 1
+  store i32 %21, i32* %ehselector.slot, align 4
+  br label %ehcleanup55
+
+lpad36:                                           ; preds = %invoke.cont35
+  %22 = landingpad { i8*, i32 }
+          cleanup
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  br label %ehcleanup54
+
+lpad38:                                           ; preds = %invoke.cont37
+  %25 = landingpad { i8*, i32 }
+          cleanup
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %exn.slot, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %ehselector.slot, align 4
+  br label %ehcleanup53
+
+lpad40:                                           ; preds = %invoke.cont39
+  %28 = landingpad { i8*, i32 }
+          cleanup
+  %29 = extractvalue { i8*, i32 } %28, 0
+  store i8* %29, i8** %exn.slot, align 8
+  %30 = extractvalue { i8*, i32 } %28, 1
+  store i32 %30, i32* %ehselector.slot, align 4
+  br label %ehcleanup52
+
+lpad42:                                           ; preds = %invoke.cont41
+  %31 = landingpad { i8*, i32 }
+          cleanup
+  %32 = extractvalue { i8*, i32 } %31, 0
+  store i8* %32, i8** %exn.slot, align 8
+  %33 = extractvalue { i8*, i32 } %31, 1
+  store i32 %33, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
+
+lpad45:                                           ; preds = %invoke.cont43
+  %34 = landingpad { i8*, i32 }
+          cleanup
+  %35 = extractvalue { i8*, i32 } %34, 0
+  store i8* %35, i8** %exn.slot, align 8
+  %36 = extractvalue { i8*, i32 } %34, 1
+  store i32 %36, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad47:                                           ; preds = %invoke.cont46
+  %37 = landingpad { i8*, i32 }
+          cleanup
+  %38 = extractvalue { i8*, i32 } %37, 0
+  store i8* %38, i8** %exn.slot, align 8
+  %39 = extractvalue { i8*, i32 } %37, 1
+  store i32 %39, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad47, %lpad45
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup51
+
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad42
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  br label %ehcleanup52
+
+ehcleanup52:                                      ; preds = %ehcleanup51, %lpad40
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  br label %ehcleanup53
+
+ehcleanup53:                                      ; preds = %ehcleanup52, %lpad38
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  br label %ehcleanup54
+
+ehcleanup54:                                      ; preds = %ehcleanup53, %lpad36
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  br label %ehcleanup55
+
+ehcleanup55:                                      ; preds = %ehcleanup54, %lpad34
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  br label %ehcleanup72
+
+lpad64:                                           ; preds = %invoke.cont67, %invoke.cont65, %invoke.cont63
+  %40 = landingpad { i8*, i32 }
+          cleanup
+  %41 = extractvalue { i8*, i32 } %40, 0
+  store i8* %41, i8** %exn.slot, align 8
+  %42 = extractvalue { i8*, i32 } %40, 1
+  store i32 %42, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  br label %ehcleanup72
+
+ehcleanup72:                                      ; preds = %lpad64, %ehcleanup55, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  br label %ehcleanup73
+
+ehcleanup73:                                      ; preds = %ehcleanup72, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  br label %ehcleanup74
+
+ehcleanup74:                                      ; preds = %ehcleanup73, %lpad1
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  br label %ehcleanup75
+
+ehcleanup75:                                      ; preds = %ehcleanup74, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup75
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val76 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val76
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_cast_float(i8* %key, i8* %val_name, i8* %castOp, i8* %srcty, i8* %dstty, float %value) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %key.addr = alloca i8*, align 8
+  %val_name.addr = alloca i8*, align 8
+  %castOp.addr = alloca i8*, align 8
+  %srcty.addr = alloca i8*, align 8
+  %dstty.addr = alloca i8*, align 8
+  %value.addr = alloca float, align 4
+  %value_name = alloca %"class.std::__1::basic_string", align 8
+  %castop = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %dst_type = alloca %"class.std::__1::basic_string", align 8
+  %value_ = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp28 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp29 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp30 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp31 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp32 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp44 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp62 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %key, i8** %key.addr, align 8
+  store i8* %val_name, i8** %val_name.addr, align 8
+  store i8* %castOp, i8** %castOp.addr, align 8
+  store i8* %srcty, i8** %srcty.addr, align 8
+  store i8* %dstty, i8** %dstty.addr, align 8
+  store float %value, float* %value.addr, align 4
+  %0 = load i8*, i8** %val_name.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value_name, i8* %0)
+  %1 = load i8*, i8** %castOp.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %castop, i8* %1)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %2 = load i8*, i8** %dstty.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %dst_type, i8* %2)
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont5 unwind label %lpad3
+
+invoke.cont5:                                     ; preds = %invoke.cont4
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont7 unwind label %lpad3
+
+invoke.cont7:                                     ; preds = %invoke.cont5
+  %call10 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont9 unwind label %lpad3
+
+invoke.cont9:                                     ; preds = %invoke.cont7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value_) #2
+  %call13 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont9
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive14 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call13, %"class.std::__1::__tree_end_node"** %coerce.dive14, align 8
+  %call15 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive17 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive16, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call15, %"class.std::__1::__tree_end_node"** %coerce.dive17, align 8
+  %call19 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp)
+          to label %invoke.cont18 unwind label %lpad11
+
+invoke.cont18:                                    ; preds = %invoke.cont12
+  br i1 %call19, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont18
+  %call21 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont20 unwind label %lpad11
+
+invoke.cont20:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call21, i32 0, i32 1
+  %call23 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont22 unwind label %lpad11
+
+invoke.cont22:                                    ; preds = %invoke.cont20
+  br label %if.end
+
+lpad:                                             ; preds = %entry
+  %3 = landingpad { i8*, i32 }
+          cleanup
+  %4 = extractvalue { i8*, i32 } %3, 0
+  store i8* %4, i8** %exn.slot, align 8
+  %5 = extractvalue { i8*, i32 } %3, 1
+  store i32 %5, i32* %ehselector.slot, align 4
+  br label %ehcleanup75
+
+lpad1:                                            ; preds = %invoke.cont
+  %6 = landingpad { i8*, i32 }
+          cleanup
+  %7 = extractvalue { i8*, i32 } %6, 0
+  store i8* %7, i8** %exn.slot, align 8
+  %8 = extractvalue { i8*, i32 } %6, 1
+  store i32 %8, i32* %ehselector.slot, align 4
+  br label %ehcleanup74
+
+lpad3:                                            ; preds = %invoke.cont7, %invoke.cont5, %invoke.cont4, %invoke.cont2
+  %9 = landingpad { i8*, i32 }
+          cleanup
+  %10 = extractvalue { i8*, i32 } %9, 0
+  store i8* %10, i8** %exn.slot, align 8
+  %11 = extractvalue { i8*, i32 } %9, 1
+  store i32 %11, i32* %ehselector.slot, align 4
+  br label %ehcleanup73
+
+lpad11:                                           ; preds = %invoke.cont60, %invoke.cont58, %invoke.cont56, %invoke.cont48, %if.end, %if.else, %invoke.cont20, %if.then, %invoke.cont12, %invoke.cont9
+  %12 = landingpad { i8*, i32 }
+          cleanup
+  %13 = extractvalue { i8*, i32 } %12, 0
+  store i8* %13, i8** %exn.slot, align 8
+  %14 = extractvalue { i8*, i32 } %12, 1
+  store i32 %14, i32* %ehselector.slot, align 4
+  br label %ehcleanup72
+
+if.else:                                          ; preds = %invoke.cont18
+  %15 = load float, float* %value.addr, align 4
+  invoke void @_ZNSt3__19to_stringEf(%"class.std::__1::basic_string"* sret %ref.tmp24, float %15)
+          to label %invoke.cont25 unwind label %lpad11
+
+invoke.cont25:                                    ; preds = %if.else
+  %call26 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  br label %if.end
+
+if.end:                                           ; preds = %invoke.cont25, %invoke.cont22
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont33 unwind label %lpad11
+
+invoke.cont33:                                    ; preds = %if.end
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont35 unwind label %lpad34
+
+invoke.cont35:                                    ; preds = %invoke.cont33
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp30, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %dst_type)
+          to label %invoke.cont37 unwind label %lpad36
+
+invoke.cont37:                                    ; preds = %invoke.cont35
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont39 unwind label %lpad38
+
+invoke.cont39:                                    ; preds = %invoke.cont37
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp28, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %value_)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp27, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp28, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont43 unwind label %lpad42
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  %16 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp44, i8* %16)
+          to label %invoke.cont46 unwind label %lpad45
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call49 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp44)
+          to label %invoke.cont48 unwind label %lpad47
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call50 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call49, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  %call57 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont56 unwind label %lpad11
+
+invoke.cont56:                                    ; preds = %invoke.cont48
+  %17 = load i8*, i8** %key.addr, align 8
+  %call59 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call57, i8* %17)
+          to label %invoke.cont58 unwind label %lpad11
+
+invoke.cont58:                                    ; preds = %invoke.cont56
+  %call61 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call59, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont60 unwind label %lpad11
+
+invoke.cont60:                                    ; preds = %invoke.cont58
+  %18 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp62, i8* %18)
+          to label %invoke.cont63 unwind label %lpad11
+
+invoke.cont63:                                    ; preds = %invoke.cont60
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp62)
+          to label %invoke.cont65 unwind label %lpad64
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  %call68 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call61, %"class.std::__1::basic_string"* dereferenceable(24) %call66)
+          to label %invoke.cont67 unwind label %lpad64
+
+invoke.cont67:                                    ; preds = %invoke.cont65
+  %call70 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call68, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont69 unwind label %lpad64
+
+invoke.cont69:                                    ; preds = %invoke.cont67
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  ret void
+
+lpad34:                                           ; preds = %invoke.cont33
+  %19 = landingpad { i8*, i32 }
+          cleanup
+  %20 = extractvalue { i8*, i32 } %19, 0
+  store i8* %20, i8** %exn.slot, align 8
+  %21 = extractvalue { i8*, i32 } %19, 1
+  store i32 %21, i32* %ehselector.slot, align 4
+  br label %ehcleanup55
+
+lpad36:                                           ; preds = %invoke.cont35
+  %22 = landingpad { i8*, i32 }
+          cleanup
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  br label %ehcleanup54
+
+lpad38:                                           ; preds = %invoke.cont37
+  %25 = landingpad { i8*, i32 }
+          cleanup
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %exn.slot, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %ehselector.slot, align 4
+  br label %ehcleanup53
+
+lpad40:                                           ; preds = %invoke.cont39
+  %28 = landingpad { i8*, i32 }
+          cleanup
+  %29 = extractvalue { i8*, i32 } %28, 0
+  store i8* %29, i8** %exn.slot, align 8
+  %30 = extractvalue { i8*, i32 } %28, 1
+  store i32 %30, i32* %ehselector.slot, align 4
+  br label %ehcleanup52
+
+lpad42:                                           ; preds = %invoke.cont41
+  %31 = landingpad { i8*, i32 }
+          cleanup
+  %32 = extractvalue { i8*, i32 } %31, 0
+  store i8* %32, i8** %exn.slot, align 8
+  %33 = extractvalue { i8*, i32 } %31, 1
+  store i32 %33, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
+
+lpad45:                                           ; preds = %invoke.cont43
+  %34 = landingpad { i8*, i32 }
+          cleanup
+  %35 = extractvalue { i8*, i32 } %34, 0
+  store i8* %35, i8** %exn.slot, align 8
+  %36 = extractvalue { i8*, i32 } %34, 1
+  store i32 %36, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad47:                                           ; preds = %invoke.cont46
+  %37 = landingpad { i8*, i32 }
+          cleanup
+  %38 = extractvalue { i8*, i32 } %37, 0
+  store i8* %38, i8** %exn.slot, align 8
+  %39 = extractvalue { i8*, i32 } %37, 1
+  store i32 %39, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad47, %lpad45
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup51
+
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad42
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  br label %ehcleanup52
+
+ehcleanup52:                                      ; preds = %ehcleanup51, %lpad40
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  br label %ehcleanup53
+
+ehcleanup53:                                      ; preds = %ehcleanup52, %lpad38
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  br label %ehcleanup54
+
+ehcleanup54:                                      ; preds = %ehcleanup53, %lpad36
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  br label %ehcleanup55
+
+ehcleanup55:                                      ; preds = %ehcleanup54, %lpad34
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  br label %ehcleanup72
+
+lpad64:                                           ; preds = %invoke.cont67, %invoke.cont65, %invoke.cont63
+  %40 = landingpad { i8*, i32 }
+          cleanup
+  %41 = extractvalue { i8*, i32 } %40, 0
+  store i8* %41, i8** %exn.slot, align 8
+  %42 = extractvalue { i8*, i32 } %40, 1
+  store i32 %42, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  br label %ehcleanup72
+
+ehcleanup72:                                      ; preds = %lpad64, %ehcleanup55, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  br label %ehcleanup73
+
+ehcleanup73:                                      ; preds = %ehcleanup72, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  br label %ehcleanup74
+
+ehcleanup74:                                      ; preds = %ehcleanup73, %lpad1
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  br label %ehcleanup75
+
+ehcleanup75:                                      ; preds = %ehcleanup74, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup75
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val76 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val76
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_cast_double(i8* %key, i8* %val_name, i8* %castOp, i8* %srcty, i8* %dstty, double %value) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %key.addr = alloca i8*, align 8
+  %val_name.addr = alloca i8*, align 8
+  %castOp.addr = alloca i8*, align 8
+  %srcty.addr = alloca i8*, align 8
+  %dstty.addr = alloca i8*, align 8
+  %value.addr = alloca double, align 8
+  %value_name = alloca %"class.std::__1::basic_string", align 8
+  %castop = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %dst_type = alloca %"class.std::__1::basic_string", align 8
+  %value_ = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp28 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp29 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp30 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp31 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp32 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp44 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp62 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %key, i8** %key.addr, align 8
+  store i8* %val_name, i8** %val_name.addr, align 8
+  store i8* %castOp, i8** %castOp.addr, align 8
+  store i8* %srcty, i8** %srcty.addr, align 8
+  store i8* %dstty, i8** %dstty.addr, align 8
+  store double %value, double* %value.addr, align 8
+  %0 = load i8*, i8** %val_name.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %value_name, i8* %0)
+  %1 = load i8*, i8** %castOp.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %castop, i8* %1)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %2 = load i8*, i8** %dstty.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %dst_type, i8* %2)
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont5 unwind label %lpad3
+
+invoke.cont5:                                     ; preds = %invoke.cont4
+  %call8 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont7 unwind label %lpad3
+
+invoke.cont7:                                     ; preds = %invoke.cont5
+  %call10 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call8, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont9 unwind label %lpad3
+
+invoke.cont9:                                     ; preds = %invoke.cont7
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value_) #2
+  %call13 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %value_name)
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont9
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive14 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call13, %"class.std::__1::__tree_end_node"** %coerce.dive14, align 8
+  %call15 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive17 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive16, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call15, %"class.std::__1::__tree_end_node"** %coerce.dive17, align 8
+  %call19 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp)
+          to label %invoke.cont18 unwind label %lpad11
+
+invoke.cont18:                                    ; preds = %invoke.cont12
+  br i1 %call19, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont18
+  %call21 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont20 unwind label %lpad11
+
+invoke.cont20:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call21, i32 0, i32 1
+  %call23 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont22 unwind label %lpad11
+
+invoke.cont22:                                    ; preds = %invoke.cont20
+  br label %if.end
+
+lpad:                                             ; preds = %entry
+  %3 = landingpad { i8*, i32 }
+          cleanup
+  %4 = extractvalue { i8*, i32 } %3, 0
+  store i8* %4, i8** %exn.slot, align 8
+  %5 = extractvalue { i8*, i32 } %3, 1
+  store i32 %5, i32* %ehselector.slot, align 4
+  br label %ehcleanup75
+
+lpad1:                                            ; preds = %invoke.cont
+  %6 = landingpad { i8*, i32 }
+          cleanup
+  %7 = extractvalue { i8*, i32 } %6, 0
+  store i8* %7, i8** %exn.slot, align 8
+  %8 = extractvalue { i8*, i32 } %6, 1
+  store i32 %8, i32* %ehselector.slot, align 4
+  br label %ehcleanup74
+
+lpad3:                                            ; preds = %invoke.cont7, %invoke.cont5, %invoke.cont4, %invoke.cont2
+  %9 = landingpad { i8*, i32 }
+          cleanup
+  %10 = extractvalue { i8*, i32 } %9, 0
+  store i8* %10, i8** %exn.slot, align 8
+  %11 = extractvalue { i8*, i32 } %9, 1
+  store i32 %11, i32* %ehselector.slot, align 4
+  br label %ehcleanup73
+
+lpad11:                                           ; preds = %invoke.cont60, %invoke.cont58, %invoke.cont56, %invoke.cont48, %if.end, %if.else, %invoke.cont20, %if.then, %invoke.cont12, %invoke.cont9
+  %12 = landingpad { i8*, i32 }
+          cleanup
+  %13 = extractvalue { i8*, i32 } %12, 0
+  store i8* %13, i8** %exn.slot, align 8
+  %14 = extractvalue { i8*, i32 } %12, 1
+  store i32 %14, i32* %ehselector.slot, align 4
+  br label %ehcleanup72
+
+if.else:                                          ; preds = %invoke.cont18
+  %15 = load double, double* %value.addr, align 8
+  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp24, double %15)
+          to label %invoke.cont25 unwind label %lpad11
+
+invoke.cont25:                                    ; preds = %if.else
+  %call26 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
+  br label %if.end
+
+if.end:                                           ; preds = %invoke.cont25, %invoke.cont22
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %castop)
+          to label %invoke.cont33 unwind label %lpad11
+
+invoke.cont33:                                    ; preds = %if.end
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont35 unwind label %lpad34
+
+invoke.cont35:                                    ; preds = %invoke.cont33
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp30, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp31, %"class.std::__1::basic_string"* dereferenceable(24) %dst_type)
+          to label %invoke.cont37 unwind label %lpad36
+
+invoke.cont37:                                    ; preds = %invoke.cont35
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont39 unwind label %lpad38
+
+invoke.cont39:                                    ; preds = %invoke.cont37
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp28, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp29, %"class.std::__1::basic_string"* dereferenceable(24) %value_)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp27, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp28, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont43 unwind label %lpad42
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  %16 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp44, i8* %16)
+          to label %invoke.cont46 unwind label %lpad45
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call49 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp44)
+          to label %invoke.cont48 unwind label %lpad47
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call50 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call49, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  %call57 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont56 unwind label %lpad11
+
+invoke.cont56:                                    ; preds = %invoke.cont48
+  %17 = load i8*, i8** %key.addr, align 8
+  %call59 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call57, i8* %17)
+          to label %invoke.cont58 unwind label %lpad11
+
+invoke.cont58:                                    ; preds = %invoke.cont56
+  %call61 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call59, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont60 unwind label %lpad11
+
+invoke.cont60:                                    ; preds = %invoke.cont58
+  %18 = load i8*, i8** %key.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp62, i8* %18)
+          to label %invoke.cont63 unwind label %lpad11
+
+invoke.cont63:                                    ; preds = %invoke.cont60
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp62)
+          to label %invoke.cont65 unwind label %lpad64
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  %call68 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call61, %"class.std::__1::basic_string"* dereferenceable(24) %call66)
+          to label %invoke.cont67 unwind label %lpad64
+
+invoke.cont67:                                    ; preds = %invoke.cont65
+  %call70 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call68, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont69 unwind label %lpad64
+
+invoke.cont69:                                    ; preds = %invoke.cont67
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  ret void
+
+lpad34:                                           ; preds = %invoke.cont33
+  %19 = landingpad { i8*, i32 }
+          cleanup
+  %20 = extractvalue { i8*, i32 } %19, 0
+  store i8* %20, i8** %exn.slot, align 8
+  %21 = extractvalue { i8*, i32 } %19, 1
+  store i32 %21, i32* %ehselector.slot, align 4
+  br label %ehcleanup55
+
+lpad36:                                           ; preds = %invoke.cont35
+  %22 = landingpad { i8*, i32 }
+          cleanup
+  %23 = extractvalue { i8*, i32 } %22, 0
+  store i8* %23, i8** %exn.slot, align 8
+  %24 = extractvalue { i8*, i32 } %22, 1
+  store i32 %24, i32* %ehselector.slot, align 4
+  br label %ehcleanup54
+
+lpad38:                                           ; preds = %invoke.cont37
+  %25 = landingpad { i8*, i32 }
+          cleanup
+  %26 = extractvalue { i8*, i32 } %25, 0
+  store i8* %26, i8** %exn.slot, align 8
+  %27 = extractvalue { i8*, i32 } %25, 1
+  store i32 %27, i32* %ehselector.slot, align 4
+  br label %ehcleanup53
+
+lpad40:                                           ; preds = %invoke.cont39
+  %28 = landingpad { i8*, i32 }
+          cleanup
+  %29 = extractvalue { i8*, i32 } %28, 0
+  store i8* %29, i8** %exn.slot, align 8
+  %30 = extractvalue { i8*, i32 } %28, 1
+  store i32 %30, i32* %ehselector.slot, align 4
+  br label %ehcleanup52
+
+lpad42:                                           ; preds = %invoke.cont41
+  %31 = landingpad { i8*, i32 }
+          cleanup
+  %32 = extractvalue { i8*, i32 } %31, 0
+  store i8* %32, i8** %exn.slot, align 8
+  %33 = extractvalue { i8*, i32 } %31, 1
+  store i32 %33, i32* %ehselector.slot, align 4
+  br label %ehcleanup51
+
+lpad45:                                           ; preds = %invoke.cont43
+  %34 = landingpad { i8*, i32 }
+          cleanup
+  %35 = extractvalue { i8*, i32 } %34, 0
+  store i8* %35, i8** %exn.slot, align 8
+  %36 = extractvalue { i8*, i32 } %34, 1
+  store i32 %36, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad47:                                           ; preds = %invoke.cont46
+  %37 = landingpad { i8*, i32 }
+          cleanup
+  %38 = extractvalue { i8*, i32 } %37, 0
+  store i8* %38, i8** %exn.slot, align 8
+  %39 = extractvalue { i8*, i32 } %37, 1
+  store i32 %39, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp44) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad47, %lpad45
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup51
+
+ehcleanup51:                                      ; preds = %ehcleanup, %lpad42
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
+  br label %ehcleanup52
+
+ehcleanup52:                                      ; preds = %ehcleanup51, %lpad40
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp29) #2
+  br label %ehcleanup53
+
+ehcleanup53:                                      ; preds = %ehcleanup52, %lpad38
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp30) #2
+  br label %ehcleanup54
+
+ehcleanup54:                                      ; preds = %ehcleanup53, %lpad36
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp31) #2
+  br label %ehcleanup55
+
+ehcleanup55:                                      ; preds = %ehcleanup54, %lpad34
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp32) #2
+  br label %ehcleanup72
+
+lpad64:                                           ; preds = %invoke.cont67, %invoke.cont65, %invoke.cont63
+  %40 = landingpad { i8*, i32 }
+          cleanup
+  %41 = extractvalue { i8*, i32 } %40, 0
+  store i8* %41, i8** %exn.slot, align 8
+  %42 = extractvalue { i8*, i32 } %40, 1
+  store i32 %42, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp62) #2
+  br label %ehcleanup72
+
+ehcleanup72:                                      ; preds = %lpad64, %ehcleanup55, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  br label %ehcleanup73
+
+ehcleanup73:                                      ; preds = %ehcleanup72, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %dst_type) #2
+  br label %ehcleanup74
+
+ehcleanup74:                                      ; preds = %ehcleanup73, %lpad1
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %castop) #2
+  br label %ehcleanup75
+
+ehcleanup75:                                      ; preds = %ehcleanup74, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_name) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup75
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val76 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val76
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_una_intrinsic(i8* %result, i8* %arg, i8* %fun_name, i8* %ret_type) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %result.addr = alloca i8*, align 8
+  %arg.addr = alloca i8*, align 8
+  %fun_name.addr = alloca i8*, align 8
+  %ret_type.addr = alloca i8*, align 8
+  %arg_name = alloca %"class.std::__1::basic_string", align 8
+  %fun_name_ = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %type = alloca %"class.std::__1::basic_string", align 8
+  %value_ = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp17 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp18 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp19 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp20 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp21 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp22 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp34 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp52 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %result, i8** %result.addr, align 8
+  store i8* %arg, i8** %arg.addr, align 8
+  store i8* %fun_name, i8** %fun_name.addr, align 8
+  store i8* %ret_type, i8** %ret_type.addr, align 8
+  %0 = load i8*, i8** %arg.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %arg_name, i8* %0)
+  %1 = load i8*, i8** %fun_name.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %fun_name_, i8* %1)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %2 = load i8*, i8** %ret_type.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %type, i8* %2)
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %value_) #2
+  %call = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %arg_name)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive5 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call, %"class.std::__1::__tree_end_node"** %coerce.dive5, align 8
+  %call6 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive7 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp, i32 0, i32 0
+  %coerce.dive8 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive7, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call6, %"class.std::__1::__tree_end_node"** %coerce.dive8, align 8
+  %call10 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp)
+          to label %invoke.cont9 unwind label %lpad3
+
+invoke.cont9:                                     ; preds = %invoke.cont4
+  br i1 %call10, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont9
+  %call12 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont11 unwind label %lpad3
+
+invoke.cont11:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call12, i32 0, i32 1
+  %call14 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont13 unwind label %lpad3
+
+invoke.cont13:                                    ; preds = %invoke.cont11
+  br label %if.end
+
+lpad:                                             ; preds = %entry
+  %3 = landingpad { i8*, i32 }
+          cleanup
+  %4 = extractvalue { i8*, i32 } %3, 0
+  store i8* %4, i8** %exn.slot, align 8
+  %5 = extractvalue { i8*, i32 } %3, 1
+  store i32 %5, i32* %ehselector.slot, align 4
+  br label %ehcleanup65
+
+lpad1:                                            ; preds = %invoke.cont
+  %6 = landingpad { i8*, i32 }
+          cleanup
+  %7 = extractvalue { i8*, i32 } %6, 0
+  store i8* %7, i8** %exn.slot, align 8
+  %8 = extractvalue { i8*, i32 } %6, 1
+  store i32 %8, i32* %ehselector.slot, align 4
+  br label %ehcleanup64
+
+lpad3:                                            ; preds = %invoke.cont50, %invoke.cont48, %invoke.cont46, %invoke.cont38, %if.end, %if.else, %invoke.cont11, %if.then, %invoke.cont4, %invoke.cont2
+  %9 = landingpad { i8*, i32 }
+          cleanup
+  %10 = extractvalue { i8*, i32 } %9, 0
+  store i8* %10, i8** %exn.slot, align 8
+  %11 = extractvalue { i8*, i32 } %9, 1
+  store i32 %11, i32* %ehselector.slot, align 4
+  br label %ehcleanup62
+
+if.else:                                          ; preds = %invoke.cont9
+  %call16 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %value_, %"class.std::__1::basic_string"* dereferenceable(24) %arg_name)
+          to label %invoke.cont15 unwind label %lpad3
+
+invoke.cont15:                                    ; preds = %if.else
+  br label %if.end
+
+if.end:                                           ; preds = %invoke.cont15, %invoke.cont13
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp22, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %fun_name_)
+          to label %invoke.cont23 unwind label %lpad3
+
+invoke.cont23:                                    ; preds = %if.end
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp21, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp22, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont25 unwind label %lpad24
+
+invoke.cont25:                                    ; preds = %invoke.cont23
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp20, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp21, %"class.std::__1::basic_string"* dereferenceable(24) %type)
+          to label %invoke.cont27 unwind label %lpad26
+
+invoke.cont27:                                    ; preds = %invoke.cont25
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp19, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp20, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont29 unwind label %lpad28
+
+invoke.cont29:                                    ; preds = %invoke.cont27
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp18, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp19, %"class.std::__1::basic_string"* dereferenceable(24) %value_)
+          to label %invoke.cont31 unwind label %lpad30
+
+invoke.cont31:                                    ; preds = %invoke.cont29
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp17, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp18, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont33 unwind label %lpad32
+
+invoke.cont33:                                    ; preds = %invoke.cont31
+  %12 = load i8*, i8** %result.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp34, i8* %12)
+          to label %invoke.cont36 unwind label %lpad35
+
+invoke.cont36:                                    ; preds = %invoke.cont33
+  %call39 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp34)
+          to label %invoke.cont38 unwind label %lpad37
+
+invoke.cont38:                                    ; preds = %invoke.cont36
+  %call40 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call39, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp17) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp34) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp17) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp18) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp19) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp20) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp21) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp22) #2
+  %call47 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont46 unwind label %lpad3
+
+invoke.cont46:                                    ; preds = %invoke.cont38
+  %13 = load i8*, i8** %result.addr, align 8
+  %call49 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call47, i8* %13)
+          to label %invoke.cont48 unwind label %lpad3
+
+invoke.cont48:                                    ; preds = %invoke.cont46
+  %call51 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call49, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont50 unwind label %lpad3
+
+invoke.cont50:                                    ; preds = %invoke.cont48
+  %14 = load i8*, i8** %result.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp52, i8* %14)
+          to label %invoke.cont53 unwind label %lpad3
+
+invoke.cont53:                                    ; preds = %invoke.cont50
+  %call56 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp52)
+          to label %invoke.cont55 unwind label %lpad54
+
+invoke.cont55:                                    ; preds = %invoke.cont53
+  %call58 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call51, %"class.std::__1::basic_string"* dereferenceable(24) %call56)
+          to label %invoke.cont57 unwind label %lpad54
+
+invoke.cont57:                                    ; preds = %invoke.cont55
+  %call60 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call58, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont59 unwind label %lpad54
+
+invoke.cont59:                                    ; preds = %invoke.cont57
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp52) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %type) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %fun_name_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_name) #2
+  ret void
+
+lpad24:                                           ; preds = %invoke.cont23
+  %15 = landingpad { i8*, i32 }
+          cleanup
+  %16 = extractvalue { i8*, i32 } %15, 0
+  store i8* %16, i8** %exn.slot, align 8
+  %17 = extractvalue { i8*, i32 } %15, 1
+  store i32 %17, i32* %ehselector.slot, align 4
+  br label %ehcleanup45
+
+lpad26:                                           ; preds = %invoke.cont25
+  %18 = landingpad { i8*, i32 }
+          cleanup
+  %19 = extractvalue { i8*, i32 } %18, 0
+  store i8* %19, i8** %exn.slot, align 8
+  %20 = extractvalue { i8*, i32 } %18, 1
+  store i32 %20, i32* %ehselector.slot, align 4
+  br label %ehcleanup44
+
+lpad28:                                           ; preds = %invoke.cont27
+  %21 = landingpad { i8*, i32 }
+          cleanup
+  %22 = extractvalue { i8*, i32 } %21, 0
+  store i8* %22, i8** %exn.slot, align 8
+  %23 = extractvalue { i8*, i32 } %21, 1
+  store i32 %23, i32* %ehselector.slot, align 4
+  br label %ehcleanup43
+
+lpad30:                                           ; preds = %invoke.cont29
+  %24 = landingpad { i8*, i32 }
+          cleanup
+  %25 = extractvalue { i8*, i32 } %24, 0
+  store i8* %25, i8** %exn.slot, align 8
+  %26 = extractvalue { i8*, i32 } %24, 1
+  store i32 %26, i32* %ehselector.slot, align 4
+  br label %ehcleanup42
+
+lpad32:                                           ; preds = %invoke.cont31
+  %27 = landingpad { i8*, i32 }
+          cleanup
+  %28 = extractvalue { i8*, i32 } %27, 0
+  store i8* %28, i8** %exn.slot, align 8
+  %29 = extractvalue { i8*, i32 } %27, 1
+  store i32 %29, i32* %ehselector.slot, align 4
+  br label %ehcleanup41
+
+lpad35:                                           ; preds = %invoke.cont33
+  %30 = landingpad { i8*, i32 }
+          cleanup
+  %31 = extractvalue { i8*, i32 } %30, 0
+  store i8* %31, i8** %exn.slot, align 8
+  %32 = extractvalue { i8*, i32 } %30, 1
+  store i32 %32, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad37:                                           ; preds = %invoke.cont36
+  %33 = landingpad { i8*, i32 }
+          cleanup
+  %34 = extractvalue { i8*, i32 } %33, 0
+  store i8* %34, i8** %exn.slot, align 8
+  %35 = extractvalue { i8*, i32 } %33, 1
+  store i32 %35, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp34) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad37, %lpad35
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp17) #2
+  br label %ehcleanup41
+
+ehcleanup41:                                      ; preds = %ehcleanup, %lpad32
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp18) #2
+  br label %ehcleanup42
+
+ehcleanup42:                                      ; preds = %ehcleanup41, %lpad30
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp19) #2
+  br label %ehcleanup43
+
+ehcleanup43:                                      ; preds = %ehcleanup42, %lpad28
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp20) #2
+  br label %ehcleanup44
+
+ehcleanup44:                                      ; preds = %ehcleanup43, %lpad26
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp21) #2
+  br label %ehcleanup45
+
+ehcleanup45:                                      ; preds = %ehcleanup44, %lpad24
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp22) #2
+  br label %ehcleanup62
+
+lpad54:                                           ; preds = %invoke.cont57, %invoke.cont55, %invoke.cont53
+  %36 = landingpad { i8*, i32 }
+          cleanup
+  %37 = extractvalue { i8*, i32 } %36, 0
+  store i8* %37, i8** %exn.slot, align 8
+  %38 = extractvalue { i8*, i32 } %36, 1
+  store i32 %38, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp52) #2
+  br label %ehcleanup62
+
+ehcleanup62:                                      ; preds = %lpad54, %ehcleanup45, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %type) #2
+  br label %ehcleanup64
+
+ehcleanup64:                                      ; preds = %ehcleanup62, %lpad1
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %fun_name_) #2
+  br label %ehcleanup65
+
+ehcleanup65:                                      ; preds = %ehcleanup64, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_name) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup65
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val66 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val66
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_update_bin_intrinsic(i8* %result, i8* %fun_name, i8* %type, i8* %arg1, i8* %arg2) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %result.addr = alloca i8*, align 8
+  %fun_name.addr = alloca i8*, align 8
+  %type.addr = alloca i8*, align 8
+  %arg1.addr = alloca i8*, align 8
+  %arg2.addr = alloca i8*, align 8
+  %arg_1 = alloca %"class.std::__1::basic_string", align 8
+  %arg_2 = alloca %"class.std::__1::basic_string", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %fun_name_ = alloca %"class.std::__1::basic_string", align 8
+  %rtype = alloca %"class.std::__1::basic_string", align 8
+  %arg_val1 = alloca %"class.std::__1::basic_string", align 8
+  %itr = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp10 = alloca %"class.std::__1::__map_iterator", align 8
+  %arg_val2 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp22 = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp23 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp31 = alloca %"class.std::__1::__map_iterator", align 8
+  %ref.tmp47 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp48 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp49 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp50 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp51 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp52 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp53 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp54 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp70 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp90 = alloca %"class.std::__1::basic_string", align 8
+  store i8* %result, i8** %result.addr, align 8
+  store i8* %fun_name, i8** %fun_name.addr, align 8
+  store i8* %type, i8** %type.addr, align 8
+  store i8* %arg1, i8** %arg1.addr, align 8
+  store i8* %arg2, i8** %arg2.addr, align 8
+  %0 = load i8*, i8** %arg1.addr, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %arg_1, i8* %0)
+  %1 = load i8*, i8** %arg2.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %arg_2, i8* %1)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %2 = load i8*, i8** %fun_name.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %fun_name_, i8* %2)
+          to label %invoke.cont2 unwind label %lpad1
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  %3 = load i8*, i8** %type.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %rtype, i8* %3)
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %arg_val1) #2
+  %4 = load i8*, i8** %arg1.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp, i8* %4)
+          to label %invoke.cont6 unwind label %lpad5
+
+invoke.cont6:                                     ; preds = %invoke.cont4
+  %call = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp)
+          to label %invoke.cont8 unwind label %lpad7
+
+invoke.cont8:                                     ; preds = %invoke.cont6
+  %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %itr, i32 0, i32 0
+  %coerce.dive9 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call, %"class.std::__1::__tree_end_node"** %coerce.dive9, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  %call11 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive12 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp10, i32 0, i32 0
+  %coerce.dive13 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive12, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call11, %"class.std::__1::__tree_end_node"** %coerce.dive13, align 8
+  %call15 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp10)
+          to label %invoke.cont14 unwind label %lpad5
+
+invoke.cont14:                                    ; preds = %invoke.cont8
+  br i1 %call15, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont14
+  %call17 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont16 unwind label %lpad5
+
+invoke.cont16:                                    ; preds = %if.then
+  %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call17, i32 0, i32 1
+  %call19 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %arg_val1, %"class.std::__1::basic_string"* dereferenceable(24) %second)
+          to label %invoke.cont18 unwind label %lpad5
+
+invoke.cont18:                                    ; preds = %invoke.cont16
+  br label %if.end
+
+lpad:                                             ; preds = %entry
+  %5 = landingpad { i8*, i32 }
+          cleanup
+  %6 = extractvalue { i8*, i32 } %5, 0
+  store i8* %6, i8** %exn.slot, align 8
+  %7 = extractvalue { i8*, i32 } %5, 1
+  store i32 %7, i32* %ehselector.slot, align 4
+  br label %ehcleanup105
+
+lpad1:                                            ; preds = %invoke.cont
+  %8 = landingpad { i8*, i32 }
+          cleanup
+  %9 = extractvalue { i8*, i32 } %8, 0
+  store i8* %9, i8** %exn.slot, align 8
+  %10 = extractvalue { i8*, i32 } %8, 1
+  store i32 %10, i32* %ehselector.slot, align 4
+  br label %ehcleanup104
+
+lpad3:                                            ; preds = %invoke.cont2
+  %11 = landingpad { i8*, i32 }
+          cleanup
+  %12 = extractvalue { i8*, i32 } %11, 0
+  store i8* %12, i8** %exn.slot, align 8
+  %13 = extractvalue { i8*, i32 } %11, 1
+  store i32 %13, i32* %ehselector.slot, align 4
+  br label %ehcleanup103
+
+lpad5:                                            ; preds = %if.else, %invoke.cont16, %if.then, %invoke.cont8, %invoke.cont4
+  %14 = landingpad { i8*, i32 }
+          cleanup
+  %15 = extractvalue { i8*, i32 } %14, 0
+  store i8* %15, i8** %exn.slot, align 8
+  %16 = extractvalue { i8*, i32 } %14, 1
+  store i32 %16, i32* %ehselector.slot, align 4
+  br label %ehcleanup101
+
+lpad7:                                            ; preds = %invoke.cont6
+  %17 = landingpad { i8*, i32 }
+          cleanup
+  %18 = extractvalue { i8*, i32 } %17, 0
+  store i8* %18, i8** %exn.slot, align 8
+  %19 = extractvalue { i8*, i32 } %17, 1
+  store i32 %19, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  br label %ehcleanup101
+
+if.else:                                          ; preds = %invoke.cont14
+  %call21 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %arg_val1, %"class.std::__1::basic_string"* dereferenceable(24) %arg_1)
+          to label %invoke.cont20 unwind label %lpad5
+
+invoke.cont20:                                    ; preds = %if.else
+  br label %if.end
+
+if.end:                                           ; preds = %invoke.cont20, %invoke.cont18
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev(%"class.std::__1::basic_string"* %arg_val2) #2
+  %20 = load i8*, i8** %arg2.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp23, i8* %20)
+          to label %invoke.cont25 unwind label %lpad24
+
+invoke.cont25:                                    ; preds = %if.end
+  %call28 = invoke %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE4findERSA_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp23)
+          to label %invoke.cont27 unwind label %lpad26
+
+invoke.cont27:                                    ; preds = %invoke.cont25
+  %coerce.dive29 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp22, i32 0, i32 0
+  %coerce.dive30 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive29, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call28, %"class.std::__1::__tree_end_node"** %coerce.dive30, align 8
+  %21 = bitcast %"class.std::__1::__map_iterator"* %itr to i8*
+  %22 = bitcast %"class.std::__1::__map_iterator"* %ref.tmp22 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %21, i8* align 8 %22, i64 8, i1 false)
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp23) #2
+  %call32 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
+  %coerce.dive33 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %ref.tmp31, i32 0, i32 0
+  %coerce.dive34 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive33, i32 0, i32 0
+  store %"class.std::__1::__tree_end_node"* %call32, %"class.std::__1::__tree_end_node"** %coerce.dive34, align 8
+  %call36 = invoke zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %itr, %"class.std::__1::__map_iterator"* dereferenceable(8) %ref.tmp31)
+          to label %invoke.cont35 unwind label %lpad24
+
+invoke.cont35:                                    ; preds = %invoke.cont27
+  br i1 %call36, label %if.then37, label %if.else43
+
+if.then37:                                        ; preds = %invoke.cont35
+  %call39 = invoke %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEptEv(%"class.std::__1::__map_iterator"* %itr)
+          to label %invoke.cont38 unwind label %lpad24
+
+invoke.cont38:                                    ; preds = %if.then37
+  %second40 = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %call39, i32 0, i32 1
+  %call42 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %arg_val2, %"class.std::__1::basic_string"* dereferenceable(24) %second40)
+          to label %invoke.cont41 unwind label %lpad24
+
+invoke.cont41:                                    ; preds = %invoke.cont38
+  br label %if.end46
+
+lpad24:                                           ; preds = %invoke.cont88, %invoke.cont86, %invoke.cont84, %invoke.cont74, %if.end46, %if.else43, %invoke.cont38, %if.then37, %invoke.cont27, %if.end
+  %23 = landingpad { i8*, i32 }
+          cleanup
+  %24 = extractvalue { i8*, i32 } %23, 0
+  store i8* %24, i8** %exn.slot, align 8
+  %25 = extractvalue { i8*, i32 } %23, 1
+  store i32 %25, i32* %ehselector.slot, align 4
+  br label %ehcleanup100
+
+lpad26:                                           ; preds = %invoke.cont25
+  %26 = landingpad { i8*, i32 }
+          cleanup
+  %27 = extractvalue { i8*, i32 } %26, 0
+  store i8* %27, i8** %exn.slot, align 8
+  %28 = extractvalue { i8*, i32 } %26, 1
+  store i32 %28, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp23) #2
+  br label %ehcleanup100
+
+if.else43:                                        ; preds = %invoke.cont35
+  %call45 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %arg_val2, %"class.std::__1::basic_string"* dereferenceable(24) %arg_2)
+          to label %invoke.cont44 unwind label %lpad24
+
+invoke.cont44:                                    ; preds = %if.else43
+  br label %if.end46
+
+if.end46:                                         ; preds = %invoke.cont44, %invoke.cont41
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp54, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %fun_name_)
+          to label %invoke.cont55 unwind label %lpad24
+
+invoke.cont55:                                    ; preds = %if.end46
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp53, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp54, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont57 unwind label %lpad56
+
+invoke.cont57:                                    ; preds = %invoke.cont55
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp52, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp53, %"class.std::__1::basic_string"* dereferenceable(24) %rtype)
+          to label %invoke.cont59 unwind label %lpad58
+
+invoke.cont59:                                    ; preds = %invoke.cont57
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp51, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp52, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont61 unwind label %lpad60
+
+invoke.cont61:                                    ; preds = %invoke.cont59
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp50, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp51, %"class.std::__1::basic_string"* dereferenceable(24) %arg_val1)
+          to label %invoke.cont63 unwind label %lpad62
+
+invoke.cont63:                                    ; preds = %invoke.cont61
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp49, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp50, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0))
+          to label %invoke.cont65 unwind label %lpad64
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_RKS9_(%"class.std::__1::basic_string"* sret %ref.tmp48, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp49, %"class.std::__1::basic_string"* dereferenceable(24) %arg_val2)
+          to label %invoke.cont67 unwind label %lpad66
+
+invoke.cont67:                                    ; preds = %invoke.cont65
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp47, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp48, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont69 unwind label %lpad68
+
+invoke.cont69:                                    ; preds = %invoke.cont67
+  %29 = load i8*, i8** %result.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp70, i8* %29)
+          to label %invoke.cont72 unwind label %lpad71
+
+invoke.cont72:                                    ; preds = %invoke.cont69
+  %call75 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp70)
+          to label %invoke.cont74 unwind label %lpad73
+
+invoke.cont74:                                    ; preds = %invoke.cont72
+  %call76 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call75, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp47) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp70) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp47) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp48) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp49) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp50) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp51) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp52) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp53) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp54) #2
+  %call85 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont84 unwind label %lpad24
+
+invoke.cont84:                                    ; preds = %invoke.cont74
+  %30 = load i8*, i8** %result.addr, align 8
+  %call87 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call85, i8* %30)
+          to label %invoke.cont86 unwind label %lpad24
+
+invoke.cont86:                                    ; preds = %invoke.cont84
+  %call89 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call87, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont88 unwind label %lpad24
+
+invoke.cont88:                                    ; preds = %invoke.cont86
+  %31 = load i8*, i8** %result.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp90, i8* %31)
+          to label %invoke.cont91 unwind label %lpad24
+
+invoke.cont91:                                    ; preds = %invoke.cont88
+  %call94 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp90)
+          to label %invoke.cont93 unwind label %lpad92
+
+invoke.cont93:                                    ; preds = %invoke.cont91
+  %call96 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call89, %"class.std::__1::basic_string"* dereferenceable(24) %call94)
+          to label %invoke.cont95 unwind label %lpad92
+
+invoke.cont95:                                    ; preds = %invoke.cont93
+  %call98 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call96, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont97 unwind label %lpad92
+
+invoke.cont97:                                    ; preds = %invoke.cont95
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp90) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_val2) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_val1) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %rtype) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %fun_name_) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_2) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_1) #2
+  ret void
+
+lpad56:                                           ; preds = %invoke.cont55
+  %32 = landingpad { i8*, i32 }
+          cleanup
+  %33 = extractvalue { i8*, i32 } %32, 0
+  store i8* %33, i8** %exn.slot, align 8
+  %34 = extractvalue { i8*, i32 } %32, 1
+  store i32 %34, i32* %ehselector.slot, align 4
+  br label %ehcleanup83
+
+lpad58:                                           ; preds = %invoke.cont57
+  %35 = landingpad { i8*, i32 }
+          cleanup
+  %36 = extractvalue { i8*, i32 } %35, 0
+  store i8* %36, i8** %exn.slot, align 8
+  %37 = extractvalue { i8*, i32 } %35, 1
+  store i32 %37, i32* %ehselector.slot, align 4
+  br label %ehcleanup82
+
+lpad60:                                           ; preds = %invoke.cont59
+  %38 = landingpad { i8*, i32 }
+          cleanup
+  %39 = extractvalue { i8*, i32 } %38, 0
+  store i8* %39, i8** %exn.slot, align 8
+  %40 = extractvalue { i8*, i32 } %38, 1
+  store i32 %40, i32* %ehselector.slot, align 4
+  br label %ehcleanup81
+
+lpad62:                                           ; preds = %invoke.cont61
+  %41 = landingpad { i8*, i32 }
+          cleanup
+  %42 = extractvalue { i8*, i32 } %41, 0
+  store i8* %42, i8** %exn.slot, align 8
+  %43 = extractvalue { i8*, i32 } %41, 1
+  store i32 %43, i32* %ehselector.slot, align 4
+  br label %ehcleanup80
+
+lpad64:                                           ; preds = %invoke.cont63
+  %44 = landingpad { i8*, i32 }
+          cleanup
+  %45 = extractvalue { i8*, i32 } %44, 0
+  store i8* %45, i8** %exn.slot, align 8
+  %46 = extractvalue { i8*, i32 } %44, 1
+  store i32 %46, i32* %ehselector.slot, align 4
+  br label %ehcleanup79
+
+lpad66:                                           ; preds = %invoke.cont65
+  %47 = landingpad { i8*, i32 }
+          cleanup
+  %48 = extractvalue { i8*, i32 } %47, 0
+  store i8* %48, i8** %exn.slot, align 8
+  %49 = extractvalue { i8*, i32 } %47, 1
+  store i32 %49, i32* %ehselector.slot, align 4
+  br label %ehcleanup78
+
+lpad68:                                           ; preds = %invoke.cont67
+  %50 = landingpad { i8*, i32 }
+          cleanup
+  %51 = extractvalue { i8*, i32 } %50, 0
+  store i8* %51, i8** %exn.slot, align 8
+  %52 = extractvalue { i8*, i32 } %50, 1
+  store i32 %52, i32* %ehselector.slot, align 4
+  br label %ehcleanup77
+
+lpad71:                                           ; preds = %invoke.cont69
+  %53 = landingpad { i8*, i32 }
+          cleanup
+  %54 = extractvalue { i8*, i32 } %53, 0
+  store i8* %54, i8** %exn.slot, align 8
+  %55 = extractvalue { i8*, i32 } %53, 1
+  store i32 %55, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad73:                                           ; preds = %invoke.cont72
+  %56 = landingpad { i8*, i32 }
+          cleanup
+  %57 = extractvalue { i8*, i32 } %56, 0
+  store i8* %57, i8** %exn.slot, align 8
+  %58 = extractvalue { i8*, i32 } %56, 1
+  store i32 %58, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp70) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad73, %lpad71
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp47) #2
+  br label %ehcleanup77
+
+ehcleanup77:                                      ; preds = %ehcleanup, %lpad68
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp48) #2
+  br label %ehcleanup78
+
+ehcleanup78:                                      ; preds = %ehcleanup77, %lpad66
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp49) #2
+  br label %ehcleanup79
+
+ehcleanup79:                                      ; preds = %ehcleanup78, %lpad64
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp50) #2
+  br label %ehcleanup80
+
+ehcleanup80:                                      ; preds = %ehcleanup79, %lpad62
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp51) #2
+  br label %ehcleanup81
+
+ehcleanup81:                                      ; preds = %ehcleanup80, %lpad60
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp52) #2
+  br label %ehcleanup82
+
+ehcleanup82:                                      ; preds = %ehcleanup81, %lpad58
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp53) #2
+  br label %ehcleanup83
+
+ehcleanup83:                                      ; preds = %ehcleanup82, %lpad56
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp54) #2
+  br label %ehcleanup100
+
+lpad92:                                           ; preds = %invoke.cont95, %invoke.cont93, %invoke.cont91
+  %59 = landingpad { i8*, i32 }
+          cleanup
+  %60 = extractvalue { i8*, i32 } %59, 0
+  store i8* %60, i8** %exn.slot, align 8
+  %61 = extractvalue { i8*, i32 } %59, 1
+  store i32 %61, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp90) #2
+  br label %ehcleanup100
+
+ehcleanup100:                                     ; preds = %lpad92, %ehcleanup83, %lpad26, %lpad24
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_val2) #2
+  br label %ehcleanup101
+
+ehcleanup101:                                     ; preds = %ehcleanup100, %lpad7, %lpad5
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_val1) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %rtype) #2
+  br label %ehcleanup103
+
+ehcleanup103:                                     ; preds = %ehcleanup101, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %fun_name_) #2
+  br label %ehcleanup104
+
+ehcleanup104:                                     ; preds = %ehcleanup103, %lpad1
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_2) #2
+  br label %ehcleanup105
+
+ehcleanup105:                                     ; preds = %ehcleanup104, %lpad
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %arg_1) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup105
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val106 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val106
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
@@ -6496,10 +9774,8 @@ entry:
   %ref.tmp = alloca %"class.std::__1::__map_iterator", align 8
   %ref.tmp14 = alloca %"class.std::__1::basic_string", align 8
   %ref.tmp15 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp21 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp22 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp49 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp50 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp35 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp36 = alloca %"class.std::__1::basic_string", align 8
   %frombool = zext i1 %cnd_value to i8
   store i8 %frombool, i8* %cnd_value.addr, align 1
   store i8* %cnd_name, i8** %cnd_name.addr, align 8
@@ -6545,16 +9821,16 @@ lpad:                                             ; preds = %entry
   store i8* %2, i8** %exn.slot, align 8
   %3 = extractvalue { i8*, i32 } %1, 1
   store i32 %3, i32* %ehselector.slot, align 4
-  br label %ehcleanup63
+  br label %ehcleanup47
 
-lpad1:                                            ; preds = %if.then48, %if.end20, %if.then13, %invoke.cont9, %if.then, %invoke.cont2, %invoke.cont
+lpad1:                                            ; preds = %if.then34, %if.then13, %invoke.cont9, %if.then, %invoke.cont2, %invoke.cont
   %4 = landingpad { i8*, i32 }
           cleanup
   %5 = extractvalue { i8*, i32 } %4, 0
   store i8* %5, i8** %exn.slot, align 8
   %6 = extractvalue { i8*, i32 } %4, 1
   store i32 %6, i32* %ehselector.slot, align 4
-  br label %ehcleanup62
+  br label %ehcleanup46
 
 if.end:                                           ; preds = %invoke.cont11, %invoke.cont7
   %7 = load i8, i8* %cnd_value.addr, align 1
@@ -6585,157 +9861,107 @@ lpad17:                                           ; preds = %invoke.cont16
   %10 = extractvalue { i8*, i32 } %8, 1
   store i32 %10, i32* %ehselector.slot, align 4
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp15) #2
-  br label %ehcleanup62
+  br label %ehcleanup46
 
 if.end20:                                         ; preds = %invoke.cont18, %if.end
-  %11 = load i32, i32* @path_condition_count, align 4
-  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp22, i32 %11)
-          to label %invoke.cont23 unwind label %lpad1
+  %11 = load i8, i8* %cnd_value.addr, align 1
+  %tobool21 = trunc i8 %11 to i1
+  %conv22 = zext i1 %tobool21 to i32
+  %cmp23 = icmp ne i32 %conv22, 0
+  br i1 %cmp23, label %land.lhs.true, label %lor.lhs.false
 
-invoke.cont23:                                    ; preds = %if.end20
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp21, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.16, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp22)
-          to label %invoke.cont25 unwind label %lpad24
+land.lhs.true:                                    ; preds = %if.end20
+  %call24 = call zeroext i1 @_ZNSt3__1eqIcNS_11char_traitsIcEENS_9allocatorIcEEEEbRKNS_12basic_stringIT_T0_T1_EEPKS6_(%"class.std::__1::basic_string"* dereferenceable(24) %value, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.54, i32 0, i32 0)) #2
+  br i1 %call24, label %if.end45, label %lor.lhs.false
 
-invoke.cont25:                                    ; preds = %invoke.cont23
-  %call28 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp21)
-          to label %invoke.cont27 unwind label %lpad26
-
-invoke.cont27:                                    ; preds = %invoke.cont25
-  %call30 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call28, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.53, i32 0, i32 0))
-          to label %invoke.cont29 unwind label %lpad26
-
-invoke.cont29:                                    ; preds = %invoke.cont27
-  %call32 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call30, %"class.std::__1::basic_string"* dereferenceable(24) %value)
-          to label %invoke.cont31 unwind label %lpad26
-
-invoke.cont31:                                    ; preds = %invoke.cont29
-  %call34 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call32, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
-          to label %invoke.cont33 unwind label %lpad26
-
-invoke.cont33:                                    ; preds = %invoke.cont31
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp21) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp22) #2
+lor.lhs.false:                                    ; preds = %land.lhs.true, %if.end20
   %12 = load i8, i8* %cnd_value.addr, align 1
-  %tobool35 = trunc i8 %12 to i1
-  %conv36 = zext i1 %tobool35 to i32
-  %cmp37 = icmp ne i32 %conv36, 0
-  br i1 %cmp37, label %land.lhs.true, label %lor.lhs.false
+  %tobool25 = trunc i8 %12 to i1
+  %conv26 = zext i1 %tobool25 to i32
+  %cmp27 = icmp eq i32 %conv26, 0
+  br i1 %cmp27, label %land.lhs.true28, label %land.lhs.true30
 
-land.lhs.true:                                    ; preds = %invoke.cont33
-  %call38 = call zeroext i1 @_ZNSt3__1eqIcNS_11char_traitsIcEENS_9allocatorIcEEEEbRKNS_12basic_stringIT_T0_T1_EEPKS6_(%"class.std::__1::basic_string"* dereferenceable(24) %value, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.54, i32 0, i32 0)) #2
-  br i1 %call38, label %if.end61, label %lor.lhs.false
+land.lhs.true28:                                  ; preds = %lor.lhs.false
+  %call29 = call zeroext i1 @_ZNSt3__1eqIcNS_11char_traitsIcEENS_9allocatorIcEEEEbRKNS_12basic_stringIT_T0_T1_EEPKS6_(%"class.std::__1::basic_string"* dereferenceable(24) %value, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.55, i32 0, i32 0)) #2
+  br i1 %call29, label %if.end45, label %land.lhs.true30
 
-lor.lhs.false:                                    ; preds = %land.lhs.true, %invoke.cont33
-  %13 = load i8, i8* %cnd_value.addr, align 1
-  %tobool39 = trunc i8 %13 to i1
-  %conv40 = zext i1 %tobool39 to i32
-  %cmp41 = icmp eq i32 %conv40, 0
-  br i1 %cmp41, label %land.lhs.true42, label %land.lhs.true44
+land.lhs.true30:                                  ; preds = %land.lhs.true28, %lor.lhs.false
+  %13 = load i8, i8* @fileCreated, align 1
+  %tobool31 = trunc i8 %13 to i1
+  br i1 %tobool31, label %land.lhs.true32, label %if.end45
 
-land.lhs.true42:                                  ; preds = %lor.lhs.false
-  %call43 = call zeroext i1 @_ZNSt3__1eqIcNS_11char_traitsIcEENS_9allocatorIcEEEEbRKNS_12basic_stringIT_T0_T1_EEPKS6_(%"class.std::__1::basic_string"* dereferenceable(24) %value, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.55, i32 0, i32 0)) #2
-  br i1 %call43, label %if.end61, label %land.lhs.true44
+land.lhs.true32:                                  ; preds = %land.lhs.true30
+  %14 = load i8, i8* @pause_recording, align 1
+  %tobool33 = trunc i8 %14 to i1
+  br i1 %tobool33, label %if.end45, label %if.then34
 
-land.lhs.true44:                                  ; preds = %land.lhs.true42, %lor.lhs.false
-  %14 = load i8, i8* @fileCreated, align 1
-  %tobool45 = trunc i8 %14 to i1
-  br i1 %tobool45, label %land.lhs.true46, label %if.end61
+if.then34:                                        ; preds = %land.lhs.true32
+  %15 = load i32, i32* @path_condition_count, align 4
+  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp36, i32 %15)
+          to label %invoke.cont37 unwind label %lpad1
 
-land.lhs.true46:                                  ; preds = %land.lhs.true44
-  %15 = load i8, i8* @pause_recording, align 1
-  %tobool47 = trunc i8 %15 to i1
-  br i1 %tobool47, label %if.end61, label %if.then48
+invoke.cont37:                                    ; preds = %if.then34
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp35, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.16, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp36)
+          to label %invoke.cont39 unwind label %lpad38
 
-if.then48:                                        ; preds = %land.lhs.true46
+invoke.cont39:                                    ; preds = %invoke.cont37
+  %call42 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @path_conditions, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp35)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  %call44 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %call42, %"class.std::__1::basic_string"* dereferenceable(24) %value)
+          to label %invoke.cont43 unwind label %lpad40
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp35) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp36) #2
   %16 = load i32, i32* @path_condition_count, align 4
-  invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp50, i32 %16)
-          to label %invoke.cont51 unwind label %lpad1
-
-invoke.cont51:                                    ; preds = %if.then48
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp49, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.16, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp50)
-          to label %invoke.cont53 unwind label %lpad52
-
-invoke.cont53:                                    ; preds = %invoke.cont51
-  %call56 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @path_conditions, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp49)
-          to label %invoke.cont55 unwind label %lpad54
-
-invoke.cont55:                                    ; preds = %invoke.cont53
-  %call58 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSERKS5_(%"class.std::__1::basic_string"* %call56, %"class.std::__1::basic_string"* dereferenceable(24) %value)
-          to label %invoke.cont57 unwind label %lpad54
-
-invoke.cont57:                                    ; preds = %invoke.cont55
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp49) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp50) #2
-  %17 = load i32, i32* @path_condition_count, align 4
-  %inc = add nsw i32 %17, 1
+  %inc = add nsw i32 %16, 1
   store i32 %inc, i32* @path_condition_count, align 4
-  br label %if.end61
+  br label %if.end45
 
-lpad24:                                           ; preds = %invoke.cont23
-  %18 = landingpad { i8*, i32 }
+lpad38:                                           ; preds = %invoke.cont37
+  %17 = landingpad { i8*, i32 }
           cleanup
-  %19 = extractvalue { i8*, i32 } %18, 0
-  store i8* %19, i8** %exn.slot, align 8
-  %20 = extractvalue { i8*, i32 } %18, 1
-  store i32 %20, i32* %ehselector.slot, align 4
+  %18 = extractvalue { i8*, i32 } %17, 0
+  store i8* %18, i8** %exn.slot, align 8
+  %19 = extractvalue { i8*, i32 } %17, 1
+  store i32 %19, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad26:                                           ; preds = %invoke.cont31, %invoke.cont29, %invoke.cont27, %invoke.cont25
-  %21 = landingpad { i8*, i32 }
+lpad40:                                           ; preds = %invoke.cont41, %invoke.cont39
+  %20 = landingpad { i8*, i32 }
           cleanup
-  %22 = extractvalue { i8*, i32 } %21, 0
-  store i8* %22, i8** %exn.slot, align 8
-  %23 = extractvalue { i8*, i32 } %21, 1
-  store i32 %23, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp21) #2
+  %21 = extractvalue { i8*, i32 } %20, 0
+  store i8* %21, i8** %exn.slot, align 8
+  %22 = extractvalue { i8*, i32 } %20, 1
+  store i32 %22, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp35) #2
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad26, %lpad24
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp22) #2
-  br label %ehcleanup62
+ehcleanup:                                        ; preds = %lpad40, %lpad38
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp36) #2
+  br label %ehcleanup46
 
-lpad52:                                           ; preds = %invoke.cont51
-  %24 = landingpad { i8*, i32 }
-          cleanup
-  %25 = extractvalue { i8*, i32 } %24, 0
-  store i8* %25, i8** %exn.slot, align 8
-  %26 = extractvalue { i8*, i32 } %24, 1
-  store i32 %26, i32* %ehselector.slot, align 4
-  br label %ehcleanup60
-
-lpad54:                                           ; preds = %invoke.cont55, %invoke.cont53
-  %27 = landingpad { i8*, i32 }
-          cleanup
-  %28 = extractvalue { i8*, i32 } %27, 0
-  store i8* %28, i8** %exn.slot, align 8
-  %29 = extractvalue { i8*, i32 } %27, 1
-  store i32 %29, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp49) #2
-  br label %ehcleanup60
-
-ehcleanup60:                                      ; preds = %lpad54, %lpad52
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp50) #2
-  br label %ehcleanup62
-
-if.end61:                                         ; preds = %invoke.cont57, %land.lhs.true46, %land.lhs.true44, %land.lhs.true42, %land.lhs.true
+if.end45:                                         ; preds = %invoke.cont43, %land.lhs.true32, %land.lhs.true30, %land.lhs.true28, %land.lhs.true
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %key) #2
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value) #2
   ret void
 
-ehcleanup62:                                      ; preds = %ehcleanup60, %ehcleanup, %lpad17, %lpad1
+ehcleanup46:                                      ; preds = %ehcleanup, %lpad17, %lpad1
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %key) #2
-  br label %ehcleanup63
+  br label %ehcleanup47
 
-ehcleanup63:                                      ; preds = %ehcleanup62, %lpad
+ehcleanup47:                                      ; preds = %ehcleanup46, %lpad
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %value) #2
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup63
+eh.resume:                                        ; preds = %ehcleanup47
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val64 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val64
+  %lpad.val48 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val48
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
@@ -7021,9 +10247,9 @@ entry:
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define void @stg_symbolic_variable(i8* %addr, i8* %name, double %range_min, double %range_max, i8* %dis_id, double %parm_1, double %param_2) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define void @stg_symbolic_variable_int(i32* %addr, i8* %name, double %range_min, double %range_max, i8* %dis_id, double %parm_1, double %param_2) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %addr.addr = alloca i8*, align 8
+  %addr.addr = alloca i32*, align 8
   %name.addr = alloca i8*, align 8
   %range_min.addr = alloca double, align 8
   %range_max.addr = alloca double, align 8
@@ -7034,425 +10260,589 @@ entry:
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   %ref.tmp = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp7 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp14 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp15 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp1 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp8 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp9 = alloca %"class.std::__1::basic_string", align 8
   %add = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp24 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp25 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp33 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp43 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp63 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp64 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp75 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp77 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp78 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp90 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp92 = alloca %"class.std::__1::basic_string", align 8
-  %ref.tmp93 = alloca %"class.std::__1::basic_string", align 8
-  store i8* %addr, i8** %addr.addr, align 8
+  %ref.tmp18 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp19 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp37 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp57 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp58 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp69 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp71 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp72 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp84 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp86 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp87 = alloca %"class.std::__1::basic_string", align 8
+  %value = alloca i32, align 4
+  %ref.tmp109 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp110 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp121 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp122 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp133 = alloca %"class.std::__1::basic_string", align 8
+  %agg.tmp = alloca %"class.std::__1::basic_string", align 8
+  store i32* %addr, i32** %addr.addr, align 8
   store i8* %name, i8** %name.addr, align 8
   store double %range_min, double* %range_min.addr, align 8
   store double %range_max, double* %range_max.addr, align 8
   store i8* %dis_id, i8** %dis_id.addr, align 8
   store double %parm_1, double* %parm_1.addr, align 8
   store double %param_2, double* %param_2.addr, align 8
-  %call = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.56, i32 0, i32 0))
-  %0 = load double, double* %range_min.addr, align 8
-  %call1 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call, double %0)
-  %call2 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call1, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
-  %call3 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.57, i32 0, i32 0))
-  %1 = load double, double* %range_max.addr, align 8
-  %call4 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call3, double %1)
-  %call5 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call4, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
   call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ej(%"class.std::__1::basic_stringstream"* %address_, i32 24)
-  %2 = bitcast %"class.std::__1::basic_stringstream"* %address_ to i8*
-  %add.ptr = getelementptr inbounds i8, i8* %2, i64 16
-  %3 = bitcast i8* %add.ptr to %"class.std::__1::basic_ostream"*
-  %4 = load i8*, i8** %addr.addr, align 8
-  %call6 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEPKv(%"class.std::__1::basic_ostream"* %3, i8* %4)
+  %0 = bitcast %"class.std::__1::basic_stringstream"* %address_ to i8*
+  %add.ptr = getelementptr inbounds i8, i8* %0, i64 16
+  %1 = bitcast i8* %add.ptr to %"class.std::__1::basic_ostream"*
+  %2 = load i32*, i32** %addr.addr, align 8
+  %3 = bitcast i32* %2 to i8*
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEPKv(%"class.std::__1::basic_ostream"* %1, i8* %3)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
-  %5 = load double, double* %range_min.addr, align 8
-  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp7, %"class.std::__1::basic_stringstream"* %address_)
-          to label %invoke.cont8 unwind label %lpad
+  %4 = load double, double* %range_min.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp1, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont2 unwind label %lpad
 
-invoke.cont8:                                     ; preds = %invoke.cont
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp7, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.41, i32 0, i32 0))
-          to label %invoke.cont10 unwind label %lpad9
+invoke.cont2:                                     ; preds = %invoke.cont
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp1, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.41, i32 0, i32 0))
+          to label %invoke.cont4 unwind label %lpad3
 
-invoke.cont10:                                    ; preds = %invoke.cont8
-  %call13 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp)
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call7 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp)
+          to label %invoke.cont6 unwind label %lpad5
+
+invoke.cont6:                                     ; preds = %invoke.cont4
+  store double %4, double* %call7, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  %5 = load double, double* %range_max.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp9, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont10 unwind label %lpad
+
+invoke.cont10:                                    ; preds = %invoke.cont6
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp8, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.42, i32 0, i32 0))
           to label %invoke.cont12 unwind label %lpad11
 
 invoke.cont12:                                    ; preds = %invoke.cont10
-  store double %5, double* %call13, align 8
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp7) #2
-  %6 = load double, double* %range_max.addr, align 8
-  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp15, %"class.std::__1::basic_stringstream"* %address_)
-          to label %invoke.cont16 unwind label %lpad
+  %call15 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp8)
+          to label %invoke.cont14 unwind label %lpad13
 
-invoke.cont16:                                    ; preds = %invoke.cont12
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp14, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp15, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.42, i32 0, i32 0))
-          to label %invoke.cont18 unwind label %lpad17
+invoke.cont14:                                    ; preds = %invoke.cont12
+  store double %5, double* %call15, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp8) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp9) #2
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp19, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont20 unwind label %lpad
 
-invoke.cont18:                                    ; preds = %invoke.cont16
-  %call21 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp14)
-          to label %invoke.cont20 unwind label %lpad19
+invoke.cont20:                                    ; preds = %invoke.cont14
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp18, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.17, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp19)
+          to label %invoke.cont22 unwind label %lpad21
 
-invoke.cont20:                                    ; preds = %invoke.cont18
-  store double %6, double* %call21, align 8
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp14) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp15) #2
-  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp25, %"class.std::__1::basic_stringstream"* %address_)
-          to label %invoke.cont26 unwind label %lpad
+invoke.cont22:                                    ; preds = %invoke.cont20
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %add, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp18, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont24 unwind label %lpad23
 
-invoke.cont26:                                    ; preds = %invoke.cont20
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp24, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.17, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25)
-          to label %invoke.cont28 unwind label %lpad27
-
-invoke.cont28:                                    ; preds = %invoke.cont26
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %add, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp24, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+invoke.cont24:                                    ; preds = %invoke.cont22
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp18) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp19) #2
+  %6 = load i8*, i8** %name.addr, align 8
+  %call28 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp27, i8* %call28)
           to label %invoke.cont30 unwind label %lpad29
 
-invoke.cont30:                                    ; preds = %invoke.cont28
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
+invoke.cont30:                                    ; preds = %invoke.cont24
+  %call33 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_var_map, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27)
+          to label %invoke.cont32 unwind label %lpad31
+
+invoke.cont32:                                    ; preds = %invoke.cont30
+  %call35 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call33, i8* %6)
+          to label %invoke.cont34 unwind label %lpad31
+
+invoke.cont34:                                    ; preds = %invoke.cont32
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
   %7 = load i8*, i8** %name.addr, align 8
-  %call34 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp33, i8* %call34)
-          to label %invoke.cont36 unwind label %lpad35
+  %call38 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp37, i8* %call38)
+          to label %invoke.cont39 unwind label %lpad29
 
-invoke.cont36:                                    ; preds = %invoke.cont30
-  %call39 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_var_map, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp33)
-          to label %invoke.cont38 unwind label %lpad37
+invoke.cont39:                                    ; preds = %invoke.cont34
+  %call42 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp37)
+          to label %invoke.cont41 unwind label %lpad40
 
-invoke.cont38:                                    ; preds = %invoke.cont36
-  %call41 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call39, i8* %7)
-          to label %invoke.cont40 unwind label %lpad37
+invoke.cont41:                                    ; preds = %invoke.cont39
+  %call44 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call42, i8* %7)
+          to label %invoke.cont43 unwind label %lpad40
 
-invoke.cont40:                                    ; preds = %invoke.cont38
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp33) #2
+invoke.cont43:                                    ; preds = %invoke.cont41
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp37) #2
+  %call47 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont46 unwind label %lpad29
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call48 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  %call50 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call47, i8* %call48)
+          to label %invoke.cont49 unwind label %lpad29
+
+invoke.cont49:                                    ; preds = %invoke.cont46
+  %call52 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call50, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont51 unwind label %lpad29
+
+invoke.cont51:                                    ; preds = %invoke.cont49
   %8 = load i8*, i8** %name.addr, align 8
-  %call44 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp43, i8* %call44)
-          to label %invoke.cont45 unwind label %lpad35
+  %call54 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call52, i8* %8)
+          to label %invoke.cont53 unwind label %lpad29
 
-invoke.cont45:                                    ; preds = %invoke.cont40
-  %call48 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp43)
-          to label %invoke.cont47 unwind label %lpad46
+invoke.cont53:                                    ; preds = %invoke.cont51
+  %call56 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call54, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont55 unwind label %lpad29
 
-invoke.cont47:                                    ; preds = %invoke.cont45
-  %call50 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call48, i8* %8)
-          to label %invoke.cont49 unwind label %lpad46
+invoke.cont55:                                    ; preds = %invoke.cont53
+  %9 = load i8*, i8** %dis_id.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp58, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont59 unwind label %lpad29
 
-invoke.cont49:                                    ; preds = %invoke.cont47
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp43) #2
-  %call53 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
-          to label %invoke.cont52 unwind label %lpad35
-
-invoke.cont52:                                    ; preds = %invoke.cont49
-  %call54 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
-  %call56 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call53, i8* %call54)
-          to label %invoke.cont55 unwind label %lpad35
-
-invoke.cont55:                                    ; preds = %invoke.cont52
-  %call58 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call56, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
-          to label %invoke.cont57 unwind label %lpad35
-
-invoke.cont57:                                    ; preds = %invoke.cont55
-  %9 = load i8*, i8** %name.addr, align 8
-  %call60 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call58, i8* %9)
-          to label %invoke.cont59 unwind label %lpad35
-
-invoke.cont59:                                    ; preds = %invoke.cont57
-  %call62 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call60, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
-          to label %invoke.cont61 unwind label %lpad35
+invoke.cont59:                                    ; preds = %invoke.cont55
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp57, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp58, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.19, i32 0, i32 0))
+          to label %invoke.cont61 unwind label %lpad60
 
 invoke.cont61:                                    ; preds = %invoke.cont59
-  %10 = load i8*, i8** %dis_id.addr, align 8
-  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp64, %"class.std::__1::basic_stringstream"* %address_)
-          to label %invoke.cont65 unwind label %lpad35
+  %call64 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp57)
+          to label %invoke.cont63 unwind label %lpad62
 
-invoke.cont65:                                    ; preds = %invoke.cont61
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp63, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp64, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.19, i32 0, i32 0))
-          to label %invoke.cont67 unwind label %lpad66
+invoke.cont63:                                    ; preds = %invoke.cont61
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call64, i8* %9)
+          to label %invoke.cont65 unwind label %lpad62
 
-invoke.cont67:                                    ; preds = %invoke.cont65
-  %call70 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp63)
-          to label %invoke.cont69 unwind label %lpad68
+invoke.cont65:                                    ; preds = %invoke.cont63
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp57) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp58) #2
+  %10 = load double, double* %parm_1.addr, align 8
+  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp69, double %10)
+          to label %invoke.cont70 unwind label %lpad29
 
-invoke.cont69:                                    ; preds = %invoke.cont67
-  %call72 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call70, i8* %10)
-          to label %invoke.cont71 unwind label %lpad68
+invoke.cont70:                                    ; preds = %invoke.cont65
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp72, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont74 unwind label %lpad73
 
-invoke.cont71:                                    ; preds = %invoke.cont69
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp63) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp64) #2
-  %11 = load double, double* %parm_1.addr, align 8
-  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp75, double %11)
-          to label %invoke.cont76 unwind label %lpad35
+invoke.cont74:                                    ; preds = %invoke.cont70
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp71, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp72, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.25, i32 0, i32 0))
+          to label %invoke.cont76 unwind label %lpad75
 
-invoke.cont76:                                    ; preds = %invoke.cont71
-  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp78, %"class.std::__1::basic_stringstream"* %address_)
-          to label %invoke.cont80 unwind label %lpad79
+invoke.cont76:                                    ; preds = %invoke.cont74
+  %call79 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp71)
+          to label %invoke.cont78 unwind label %lpad77
 
-invoke.cont80:                                    ; preds = %invoke.cont76
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp77, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp78, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.25, i32 0, i32 0))
-          to label %invoke.cont82 unwind label %lpad81
+invoke.cont78:                                    ; preds = %invoke.cont76
+  %call80 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call79, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp69) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp71) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp72) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp69) #2
+  %11 = load double, double* %param_2.addr, align 8
+  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp84, double %11)
+          to label %invoke.cont85 unwind label %lpad29
 
-invoke.cont82:                                    ; preds = %invoke.cont80
-  %call85 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp77)
-          to label %invoke.cont84 unwind label %lpad83
+invoke.cont85:                                    ; preds = %invoke.cont78
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp87, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont89 unwind label %lpad88
 
-invoke.cont84:                                    ; preds = %invoke.cont82
-  %call86 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call85, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp75) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp77) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp78) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp75) #2
-  %12 = load double, double* %param_2.addr, align 8
-  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp90, double %12)
-          to label %invoke.cont91 unwind label %lpad35
+invoke.cont89:                                    ; preds = %invoke.cont85
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp86, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp87, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.31, i32 0, i32 0))
+          to label %invoke.cont91 unwind label %lpad90
 
-invoke.cont91:                                    ; preds = %invoke.cont84
-  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp93, %"class.std::__1::basic_stringstream"* %address_)
-          to label %invoke.cont95 unwind label %lpad94
+invoke.cont91:                                    ; preds = %invoke.cont89
+  %call94 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp86)
+          to label %invoke.cont93 unwind label %lpad92
 
-invoke.cont95:                                    ; preds = %invoke.cont91
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp92, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp93, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.31, i32 0, i32 0))
-          to label %invoke.cont97 unwind label %lpad96
+invoke.cont93:                                    ; preds = %invoke.cont91
+  %call95 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call94, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp84) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp86) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp87) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp84) #2
+  %12 = load i32*, i32** %addr.addr, align 8
+  %13 = load i32, i32* %12, align 4
+  store i32 %13, i32* %value, align 4
+  %14 = load i8*, i8** %name.addr, align 8
+  %call100 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* %14)
+          to label %invoke.cont99 unwind label %lpad29
 
-invoke.cont97:                                    ; preds = %invoke.cont95
-  %call100 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp92)
-          to label %invoke.cont99 unwind label %lpad98
+invoke.cont99:                                    ; preds = %invoke.cont93
+  %call102 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call100, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.56, i32 0, i32 0))
+          to label %invoke.cont101 unwind label %lpad29
 
-invoke.cont99:                                    ; preds = %invoke.cont97
-  %call101 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call100, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp90) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp92) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp93) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp90) #2
+invoke.cont101:                                   ; preds = %invoke.cont99
+  %call104 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call102, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.39, i32 0, i32 0))
+          to label %invoke.cont103 unwind label %lpad29
+
+invoke.cont103:                                   ; preds = %invoke.cont101
+  %15 = load i32, i32* %value, align 4
+  %call106 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEi(%"class.std::__1::basic_ostream"* %call104, i32 %15)
+          to label %invoke.cont105 unwind label %lpad29
+
+invoke.cont105:                                   ; preds = %invoke.cont103
+  %call108 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call106, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.57, i32 0, i32 0))
+          to label %invoke.cont107 unwind label %lpad29
+
+invoke.cont107:                                   ; preds = %invoke.cont105
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp110, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont111 unwind label %lpad29
+
+invoke.cont111:                                   ; preds = %invoke.cont107
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp109, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp110, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.41, i32 0, i32 0))
+          to label %invoke.cont113 unwind label %lpad112
+
+invoke.cont113:                                   ; preds = %invoke.cont111
+  %call116 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp109)
+          to label %invoke.cont115 unwind label %lpad114
+
+invoke.cont115:                                   ; preds = %invoke.cont113
+  %16 = load double, double* %call116, align 8
+  %call118 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call108, double %16)
+          to label %invoke.cont117 unwind label %lpad114
+
+invoke.cont117:                                   ; preds = %invoke.cont115
+  %call120 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call118, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.30, i32 0, i32 0))
+          to label %invoke.cont119 unwind label %lpad114
+
+invoke.cont119:                                   ; preds = %invoke.cont117
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp122, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont123 unwind label %lpad114
+
+invoke.cont123:                                   ; preds = %invoke.cont119
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp121, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp122, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.42, i32 0, i32 0))
+          to label %invoke.cont125 unwind label %lpad124
+
+invoke.cont125:                                   ; preds = %invoke.cont123
+  %call128 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp121)
+          to label %invoke.cont127 unwind label %lpad126
+
+invoke.cont127:                                   ; preds = %invoke.cont125
+  %17 = load double, double* %call128, align 8
+  %call130 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call120, double %17)
+          to label %invoke.cont129 unwind label %lpad126
+
+invoke.cont129:                                   ; preds = %invoke.cont127
+  %call132 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call130, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.43, i32 0, i32 0))
+          to label %invoke.cont131 unwind label %lpad126
+
+invoke.cont131:                                   ; preds = %invoke.cont129
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %agg.tmp, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont134 unwind label %lpad126
+
+invoke.cont134:                                   ; preds = %invoke.cont131
+  invoke void @_Z19getDistributionSpecNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE(%"class.std::__1::basic_string"* sret %ref.tmp133, %"class.std::__1::basic_string"* %agg.tmp)
+          to label %invoke.cont136 unwind label %lpad135
+
+invoke.cont136:                                   ; preds = %invoke.cont134
+  %call139 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call132, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp133)
+          to label %invoke.cont138 unwind label %lpad137
+
+invoke.cont138:                                   ; preds = %invoke.cont136
+  %call141 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call139, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont140 unwind label %lpad137
+
+invoke.cont140:                                   ; preds = %invoke.cont138
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp133) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %agg.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp121) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp122) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp109) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp110) #2
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %add) #2
   call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %address_) #2
   ret void
 
-lpad:                                             ; preds = %invoke.cont20, %invoke.cont12, %invoke.cont, %entry
-  %13 = landingpad { i8*, i32 }
+lpad:                                             ; preds = %invoke.cont14, %invoke.cont6, %invoke.cont, %entry
+  %18 = landingpad { i8*, i32 }
           cleanup
-  %14 = extractvalue { i8*, i32 } %13, 0
-  store i8* %14, i8** %exn.slot, align 8
-  %15 = extractvalue { i8*, i32 } %13, 1
-  store i32 %15, i32* %ehselector.slot, align 4
-  br label %ehcleanup106
+  %19 = extractvalue { i8*, i32 } %18, 0
+  store i8* %19, i8** %exn.slot, align 8
+  %20 = extractvalue { i8*, i32 } %18, 1
+  store i32 %20, i32* %ehselector.slot, align 4
+  br label %ehcleanup149
 
-lpad9:                                            ; preds = %invoke.cont8
-  %16 = landingpad { i8*, i32 }
+lpad3:                                            ; preds = %invoke.cont2
+  %21 = landingpad { i8*, i32 }
           cleanup
-  %17 = extractvalue { i8*, i32 } %16, 0
-  store i8* %17, i8** %exn.slot, align 8
-  %18 = extractvalue { i8*, i32 } %16, 1
-  store i32 %18, i32* %ehselector.slot, align 4
+  %22 = extractvalue { i8*, i32 } %21, 0
+  store i8* %22, i8** %exn.slot, align 8
+  %23 = extractvalue { i8*, i32 } %21, 1
+  store i32 %23, i32* %ehselector.slot, align 4
   br label %ehcleanup
 
-lpad11:                                           ; preds = %invoke.cont10
-  %19 = landingpad { i8*, i32 }
+lpad5:                                            ; preds = %invoke.cont4
+  %24 = landingpad { i8*, i32 }
           cleanup
-  %20 = extractvalue { i8*, i32 } %19, 0
-  store i8* %20, i8** %exn.slot, align 8
-  %21 = extractvalue { i8*, i32 } %19, 1
-  store i32 %21, i32* %ehselector.slot, align 4
+  %25 = extractvalue { i8*, i32 } %24, 0
+  store i8* %25, i8** %exn.slot, align 8
+  %26 = extractvalue { i8*, i32 } %24, 1
+  store i32 %26, i32* %ehselector.slot, align 4
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
   br label %ehcleanup
 
-ehcleanup:                                        ; preds = %lpad11, %lpad9
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp7) #2
-  br label %ehcleanup106
+ehcleanup:                                        ; preds = %lpad5, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  br label %ehcleanup149
 
-lpad17:                                           ; preds = %invoke.cont16
-  %22 = landingpad { i8*, i32 }
+lpad11:                                           ; preds = %invoke.cont10
+  %27 = landingpad { i8*, i32 }
           cleanup
-  %23 = extractvalue { i8*, i32 } %22, 0
-  store i8* %23, i8** %exn.slot, align 8
-  %24 = extractvalue { i8*, i32 } %22, 1
-  store i32 %24, i32* %ehselector.slot, align 4
-  br label %ehcleanup23
+  %28 = extractvalue { i8*, i32 } %27, 0
+  store i8* %28, i8** %exn.slot, align 8
+  %29 = extractvalue { i8*, i32 } %27, 1
+  store i32 %29, i32* %ehselector.slot, align 4
+  br label %ehcleanup17
 
-lpad19:                                           ; preds = %invoke.cont18
-  %25 = landingpad { i8*, i32 }
+lpad13:                                           ; preds = %invoke.cont12
+  %30 = landingpad { i8*, i32 }
           cleanup
-  %26 = extractvalue { i8*, i32 } %25, 0
-  store i8* %26, i8** %exn.slot, align 8
-  %27 = extractvalue { i8*, i32 } %25, 1
-  store i32 %27, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp14) #2
-  br label %ehcleanup23
+  %31 = extractvalue { i8*, i32 } %30, 0
+  store i8* %31, i8** %exn.slot, align 8
+  %32 = extractvalue { i8*, i32 } %30, 1
+  store i32 %32, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp8) #2
+  br label %ehcleanup17
 
-ehcleanup23:                                      ; preds = %lpad19, %lpad17
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp15) #2
-  br label %ehcleanup106
+ehcleanup17:                                      ; preds = %lpad13, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp9) #2
+  br label %ehcleanup149
 
-lpad27:                                           ; preds = %invoke.cont26
-  %28 = landingpad { i8*, i32 }
+lpad21:                                           ; preds = %invoke.cont20
+  %33 = landingpad { i8*, i32 }
           cleanup
-  %29 = extractvalue { i8*, i32 } %28, 0
-  store i8* %29, i8** %exn.slot, align 8
-  %30 = extractvalue { i8*, i32 } %28, 1
-  store i32 %30, i32* %ehselector.slot, align 4
-  br label %ehcleanup32
+  %34 = extractvalue { i8*, i32 } %33, 0
+  store i8* %34, i8** %exn.slot, align 8
+  %35 = extractvalue { i8*, i32 } %33, 1
+  store i32 %35, i32* %ehselector.slot, align 4
+  br label %ehcleanup26
 
-lpad29:                                           ; preds = %invoke.cont28
-  %31 = landingpad { i8*, i32 }
+lpad23:                                           ; preds = %invoke.cont22
+  %36 = landingpad { i8*, i32 }
           cleanup
-  %32 = extractvalue { i8*, i32 } %31, 0
-  store i8* %32, i8** %exn.slot, align 8
-  %33 = extractvalue { i8*, i32 } %31, 1
-  store i32 %33, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
-  br label %ehcleanup32
+  %37 = extractvalue { i8*, i32 } %36, 0
+  store i8* %37, i8** %exn.slot, align 8
+  %38 = extractvalue { i8*, i32 } %36, 1
+  store i32 %38, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp18) #2
+  br label %ehcleanup26
 
-ehcleanup32:                                      ; preds = %lpad29, %lpad27
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
-  br label %ehcleanup106
+ehcleanup26:                                      ; preds = %lpad23, %lpad21
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp19) #2
+  br label %ehcleanup149
 
-lpad35:                                           ; preds = %invoke.cont84, %invoke.cont71, %invoke.cont61, %invoke.cont59, %invoke.cont57, %invoke.cont55, %invoke.cont52, %invoke.cont49, %invoke.cont40, %invoke.cont30
-  %34 = landingpad { i8*, i32 }
+lpad29:                                           ; preds = %invoke.cont107, %invoke.cont105, %invoke.cont103, %invoke.cont101, %invoke.cont99, %invoke.cont93, %invoke.cont78, %invoke.cont65, %invoke.cont55, %invoke.cont53, %invoke.cont51, %invoke.cont49, %invoke.cont46, %invoke.cont43, %invoke.cont34, %invoke.cont24
+  %39 = landingpad { i8*, i32 }
           cleanup
-  %35 = extractvalue { i8*, i32 } %34, 0
-  store i8* %35, i8** %exn.slot, align 8
-  %36 = extractvalue { i8*, i32 } %34, 1
-  store i32 %36, i32* %ehselector.slot, align 4
-  br label %ehcleanup105
+  %40 = extractvalue { i8*, i32 } %39, 0
+  store i8* %40, i8** %exn.slot, align 8
+  %41 = extractvalue { i8*, i32 } %39, 1
+  store i32 %41, i32* %ehselector.slot, align 4
+  br label %ehcleanup148
 
-lpad37:                                           ; preds = %invoke.cont38, %invoke.cont36
-  %37 = landingpad { i8*, i32 }
+lpad31:                                           ; preds = %invoke.cont32, %invoke.cont30
+  %42 = landingpad { i8*, i32 }
           cleanup
-  %38 = extractvalue { i8*, i32 } %37, 0
-  store i8* %38, i8** %exn.slot, align 8
-  %39 = extractvalue { i8*, i32 } %37, 1
-  store i32 %39, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp33) #2
-  br label %ehcleanup105
+  %43 = extractvalue { i8*, i32 } %42, 0
+  store i8* %43, i8** %exn.slot, align 8
+  %44 = extractvalue { i8*, i32 } %42, 1
+  store i32 %44, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup148
 
-lpad46:                                           ; preds = %invoke.cont47, %invoke.cont45
-  %40 = landingpad { i8*, i32 }
+lpad40:                                           ; preds = %invoke.cont41, %invoke.cont39
+  %45 = landingpad { i8*, i32 }
           cleanup
-  %41 = extractvalue { i8*, i32 } %40, 0
-  store i8* %41, i8** %exn.slot, align 8
-  %42 = extractvalue { i8*, i32 } %40, 1
-  store i32 %42, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp43) #2
-  br label %ehcleanup105
+  %46 = extractvalue { i8*, i32 } %45, 0
+  store i8* %46, i8** %exn.slot, align 8
+  %47 = extractvalue { i8*, i32 } %45, 1
+  store i32 %47, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp37) #2
+  br label %ehcleanup148
 
-lpad66:                                           ; preds = %invoke.cont65
-  %43 = landingpad { i8*, i32 }
+lpad60:                                           ; preds = %invoke.cont59
+  %48 = landingpad { i8*, i32 }
           cleanup
-  %44 = extractvalue { i8*, i32 } %43, 0
-  store i8* %44, i8** %exn.slot, align 8
-  %45 = extractvalue { i8*, i32 } %43, 1
-  store i32 %45, i32* %ehselector.slot, align 4
-  br label %ehcleanup74
+  %49 = extractvalue { i8*, i32 } %48, 0
+  store i8* %49, i8** %exn.slot, align 8
+  %50 = extractvalue { i8*, i32 } %48, 1
+  store i32 %50, i32* %ehselector.slot, align 4
+  br label %ehcleanup68
 
-lpad68:                                           ; preds = %invoke.cont69, %invoke.cont67
-  %46 = landingpad { i8*, i32 }
+lpad62:                                           ; preds = %invoke.cont63, %invoke.cont61
+  %51 = landingpad { i8*, i32 }
           cleanup
-  %47 = extractvalue { i8*, i32 } %46, 0
-  store i8* %47, i8** %exn.slot, align 8
-  %48 = extractvalue { i8*, i32 } %46, 1
-  store i32 %48, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp63) #2
-  br label %ehcleanup74
+  %52 = extractvalue { i8*, i32 } %51, 0
+  store i8* %52, i8** %exn.slot, align 8
+  %53 = extractvalue { i8*, i32 } %51, 1
+  store i32 %53, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp57) #2
+  br label %ehcleanup68
 
-ehcleanup74:                                      ; preds = %lpad68, %lpad66
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp64) #2
-  br label %ehcleanup105
+ehcleanup68:                                      ; preds = %lpad62, %lpad60
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp58) #2
+  br label %ehcleanup148
 
-lpad79:                                           ; preds = %invoke.cont76
-  %49 = landingpad { i8*, i32 }
+lpad73:                                           ; preds = %invoke.cont70
+  %54 = landingpad { i8*, i32 }
           cleanup
-  %50 = extractvalue { i8*, i32 } %49, 0
-  store i8* %50, i8** %exn.slot, align 8
-  %51 = extractvalue { i8*, i32 } %49, 1
-  store i32 %51, i32* %ehselector.slot, align 4
-  br label %ehcleanup89
+  %55 = extractvalue { i8*, i32 } %54, 0
+  store i8* %55, i8** %exn.slot, align 8
+  %56 = extractvalue { i8*, i32 } %54, 1
+  store i32 %56, i32* %ehselector.slot, align 4
+  br label %ehcleanup83
 
-lpad81:                                           ; preds = %invoke.cont80
-  %52 = landingpad { i8*, i32 }
+lpad75:                                           ; preds = %invoke.cont74
+  %57 = landingpad { i8*, i32 }
           cleanup
-  %53 = extractvalue { i8*, i32 } %52, 0
-  store i8* %53, i8** %exn.slot, align 8
-  %54 = extractvalue { i8*, i32 } %52, 1
-  store i32 %54, i32* %ehselector.slot, align 4
-  br label %ehcleanup88
+  %58 = extractvalue { i8*, i32 } %57, 0
+  store i8* %58, i8** %exn.slot, align 8
+  %59 = extractvalue { i8*, i32 } %57, 1
+  store i32 %59, i32* %ehselector.slot, align 4
+  br label %ehcleanup82
 
-lpad83:                                           ; preds = %invoke.cont82
-  %55 = landingpad { i8*, i32 }
+lpad77:                                           ; preds = %invoke.cont76
+  %60 = landingpad { i8*, i32 }
           cleanup
-  %56 = extractvalue { i8*, i32 } %55, 0
-  store i8* %56, i8** %exn.slot, align 8
-  %57 = extractvalue { i8*, i32 } %55, 1
-  store i32 %57, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp77) #2
-  br label %ehcleanup88
+  %61 = extractvalue { i8*, i32 } %60, 0
+  store i8* %61, i8** %exn.slot, align 8
+  %62 = extractvalue { i8*, i32 } %60, 1
+  store i32 %62, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp71) #2
+  br label %ehcleanup82
 
-ehcleanup88:                                      ; preds = %lpad83, %lpad81
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp78) #2
-  br label %ehcleanup89
+ehcleanup82:                                      ; preds = %lpad77, %lpad75
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp72) #2
+  br label %ehcleanup83
 
-ehcleanup89:                                      ; preds = %ehcleanup88, %lpad79
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp75) #2
-  br label %ehcleanup105
+ehcleanup83:                                      ; preds = %ehcleanup82, %lpad73
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp69) #2
+  br label %ehcleanup148
 
-lpad94:                                           ; preds = %invoke.cont91
-  %58 = landingpad { i8*, i32 }
+lpad88:                                           ; preds = %invoke.cont85
+  %63 = landingpad { i8*, i32 }
           cleanup
-  %59 = extractvalue { i8*, i32 } %58, 0
-  store i8* %59, i8** %exn.slot, align 8
-  %60 = extractvalue { i8*, i32 } %58, 1
-  store i32 %60, i32* %ehselector.slot, align 4
-  br label %ehcleanup104
+  %64 = extractvalue { i8*, i32 } %63, 0
+  store i8* %64, i8** %exn.slot, align 8
+  %65 = extractvalue { i8*, i32 } %63, 1
+  store i32 %65, i32* %ehselector.slot, align 4
+  br label %ehcleanup98
 
-lpad96:                                           ; preds = %invoke.cont95
-  %61 = landingpad { i8*, i32 }
+lpad90:                                           ; preds = %invoke.cont89
+  %66 = landingpad { i8*, i32 }
           cleanup
-  %62 = extractvalue { i8*, i32 } %61, 0
-  store i8* %62, i8** %exn.slot, align 8
-  %63 = extractvalue { i8*, i32 } %61, 1
-  store i32 %63, i32* %ehselector.slot, align 4
-  br label %ehcleanup103
+  %67 = extractvalue { i8*, i32 } %66, 0
+  store i8* %67, i8** %exn.slot, align 8
+  %68 = extractvalue { i8*, i32 } %66, 1
+  store i32 %68, i32* %ehselector.slot, align 4
+  br label %ehcleanup97
 
-lpad98:                                           ; preds = %invoke.cont97
-  %64 = landingpad { i8*, i32 }
+lpad92:                                           ; preds = %invoke.cont91
+  %69 = landingpad { i8*, i32 }
           cleanup
-  %65 = extractvalue { i8*, i32 } %64, 0
-  store i8* %65, i8** %exn.slot, align 8
-  %66 = extractvalue { i8*, i32 } %64, 1
-  store i32 %66, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp92) #2
-  br label %ehcleanup103
+  %70 = extractvalue { i8*, i32 } %69, 0
+  store i8* %70, i8** %exn.slot, align 8
+  %71 = extractvalue { i8*, i32 } %69, 1
+  store i32 %71, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp86) #2
+  br label %ehcleanup97
 
-ehcleanup103:                                     ; preds = %lpad98, %lpad96
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp93) #2
-  br label %ehcleanup104
+ehcleanup97:                                      ; preds = %lpad92, %lpad90
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp87) #2
+  br label %ehcleanup98
 
-ehcleanup104:                                     ; preds = %ehcleanup103, %lpad94
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp90) #2
-  br label %ehcleanup105
+ehcleanup98:                                      ; preds = %ehcleanup97, %lpad88
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp84) #2
+  br label %ehcleanup148
 
-ehcleanup105:                                     ; preds = %ehcleanup104, %ehcleanup89, %ehcleanup74, %lpad46, %lpad37, %lpad35
+lpad112:                                          ; preds = %invoke.cont111
+  %72 = landingpad { i8*, i32 }
+          cleanup
+  %73 = extractvalue { i8*, i32 } %72, 0
+  store i8* %73, i8** %exn.slot, align 8
+  %74 = extractvalue { i8*, i32 } %72, 1
+  store i32 %74, i32* %ehselector.slot, align 4
+  br label %ehcleanup147
+
+lpad114:                                          ; preds = %invoke.cont119, %invoke.cont117, %invoke.cont115, %invoke.cont113
+  %75 = landingpad { i8*, i32 }
+          cleanup
+  %76 = extractvalue { i8*, i32 } %75, 0
+  store i8* %76, i8** %exn.slot, align 8
+  %77 = extractvalue { i8*, i32 } %75, 1
+  store i32 %77, i32* %ehselector.slot, align 4
+  br label %ehcleanup146
+
+lpad124:                                          ; preds = %invoke.cont123
+  %78 = landingpad { i8*, i32 }
+          cleanup
+  %79 = extractvalue { i8*, i32 } %78, 0
+  store i8* %79, i8** %exn.slot, align 8
+  %80 = extractvalue { i8*, i32 } %78, 1
+  store i32 %80, i32* %ehselector.slot, align 4
+  br label %ehcleanup145
+
+lpad126:                                          ; preds = %invoke.cont131, %invoke.cont129, %invoke.cont127, %invoke.cont125
+  %81 = landingpad { i8*, i32 }
+          cleanup
+  %82 = extractvalue { i8*, i32 } %81, 0
+  store i8* %82, i8** %exn.slot, align 8
+  %83 = extractvalue { i8*, i32 } %81, 1
+  store i32 %83, i32* %ehselector.slot, align 4
+  br label %ehcleanup144
+
+lpad135:                                          ; preds = %invoke.cont134
+  %84 = landingpad { i8*, i32 }
+          cleanup
+  %85 = extractvalue { i8*, i32 } %84, 0
+  store i8* %85, i8** %exn.slot, align 8
+  %86 = extractvalue { i8*, i32 } %84, 1
+  store i32 %86, i32* %ehselector.slot, align 4
+  br label %ehcleanup143
+
+lpad137:                                          ; preds = %invoke.cont138, %invoke.cont136
+  %87 = landingpad { i8*, i32 }
+          cleanup
+  %88 = extractvalue { i8*, i32 } %87, 0
+  store i8* %88, i8** %exn.slot, align 8
+  %89 = extractvalue { i8*, i32 } %87, 1
+  store i32 %89, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp133) #2
+  br label %ehcleanup143
+
+ehcleanup143:                                     ; preds = %lpad137, %lpad135
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %agg.tmp) #2
+  br label %ehcleanup144
+
+ehcleanup144:                                     ; preds = %ehcleanup143, %lpad126
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp121) #2
+  br label %ehcleanup145
+
+ehcleanup145:                                     ; preds = %ehcleanup144, %lpad124
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp122) #2
+  br label %ehcleanup146
+
+ehcleanup146:                                     ; preds = %ehcleanup145, %lpad114
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp109) #2
+  br label %ehcleanup147
+
+ehcleanup147:                                     ; preds = %ehcleanup146, %lpad112
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp110) #2
+  br label %ehcleanup148
+
+ehcleanup148:                                     ; preds = %ehcleanup147, %ehcleanup98, %ehcleanup83, %ehcleanup68, %lpad40, %lpad31, %lpad29
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %add) #2
-  br label %ehcleanup106
+  br label %ehcleanup149
 
-ehcleanup106:                                     ; preds = %ehcleanup105, %ehcleanup32, %ehcleanup23, %ehcleanup, %lpad
+ehcleanup149:                                     ; preds = %ehcleanup148, %ehcleanup26, %ehcleanup17, %ehcleanup, %lpad
   call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %address_) #2
   br label %eh.resume
 
-eh.resume:                                        ; preds = %ehcleanup106
+eh.resume:                                        ; preds = %ehcleanup149
   %exn = load i8*, i8** %exn.slot, align 8
   %sel = load i32, i32* %ehselector.slot, align 4
   %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
-  %lpad.val107 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
-  resume { i8*, i32 } %lpad.val107
+  %lpad.val150 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val150
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
@@ -7476,6 +10866,1204 @@ entry:
   %0 = load i8*, i8** %__s.addr, align 8
   %call = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc(%"class.std::__1::basic_string"* %this1, i8* %0)
   ret %"class.std::__1::basic_string"* %call
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_symbolic_variable_float(float* %addr, i8* %name, double %range_min, double %range_max, i8* %dis_id, double %parm_1, double %param_2) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %addr.addr = alloca float*, align 8
+  %name.addr = alloca i8*, align 8
+  %range_min.addr = alloca double, align 8
+  %range_max.addr = alloca double, align 8
+  %dis_id.addr = alloca i8*, align 8
+  %parm_1.addr = alloca double, align 8
+  %param_2.addr = alloca double, align 8
+  %address_ = alloca %"class.std::__1::basic_stringstream", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %ref.tmp = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp1 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp8 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp9 = alloca %"class.std::__1::basic_string", align 8
+  %add = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp18 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp19 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp37 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp57 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp58 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp69 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp71 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp72 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp84 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp86 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp87 = alloca %"class.std::__1::basic_string", align 8
+  %value = alloca float, align 4
+  %ref.tmp109 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp110 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp121 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp122 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp133 = alloca %"class.std::__1::basic_string", align 8
+  %agg.tmp = alloca %"class.std::__1::basic_string", align 8
+  store float* %addr, float** %addr.addr, align 8
+  store i8* %name, i8** %name.addr, align 8
+  store double %range_min, double* %range_min.addr, align 8
+  store double %range_max, double* %range_max.addr, align 8
+  store i8* %dis_id, i8** %dis_id.addr, align 8
+  store double %parm_1, double* %parm_1.addr, align 8
+  store double %param_2, double* %param_2.addr, align 8
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ej(%"class.std::__1::basic_stringstream"* %address_, i32 24)
+  %0 = bitcast %"class.std::__1::basic_stringstream"* %address_ to i8*
+  %add.ptr = getelementptr inbounds i8, i8* %0, i64 16
+  %1 = bitcast i8* %add.ptr to %"class.std::__1::basic_ostream"*
+  %2 = load float*, float** %addr.addr, align 8
+  %3 = bitcast float* %2 to i8*
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEPKv(%"class.std::__1::basic_ostream"* %1, i8* %3)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %4 = load double, double* %range_min.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp1, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont2 unwind label %lpad
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp1, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.41, i32 0, i32 0))
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call7 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp)
+          to label %invoke.cont6 unwind label %lpad5
+
+invoke.cont6:                                     ; preds = %invoke.cont4
+  store double %4, double* %call7, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  %5 = load double, double* %range_max.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp9, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont10 unwind label %lpad
+
+invoke.cont10:                                    ; preds = %invoke.cont6
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp8, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.42, i32 0, i32 0))
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont10
+  %call15 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp8)
+          to label %invoke.cont14 unwind label %lpad13
+
+invoke.cont14:                                    ; preds = %invoke.cont12
+  store double %5, double* %call15, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp8) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp9) #2
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp19, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont20 unwind label %lpad
+
+invoke.cont20:                                    ; preds = %invoke.cont14
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp18, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.17, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp19)
+          to label %invoke.cont22 unwind label %lpad21
+
+invoke.cont22:                                    ; preds = %invoke.cont20
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %add, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp18, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont24 unwind label %lpad23
+
+invoke.cont24:                                    ; preds = %invoke.cont22
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp18) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp19) #2
+  %6 = load i8*, i8** %name.addr, align 8
+  %call28 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp27, i8* %call28)
+          to label %invoke.cont30 unwind label %lpad29
+
+invoke.cont30:                                    ; preds = %invoke.cont24
+  %call33 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_var_map, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27)
+          to label %invoke.cont32 unwind label %lpad31
+
+invoke.cont32:                                    ; preds = %invoke.cont30
+  %call35 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call33, i8* %6)
+          to label %invoke.cont34 unwind label %lpad31
+
+invoke.cont34:                                    ; preds = %invoke.cont32
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  %7 = load i8*, i8** %name.addr, align 8
+  %call38 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp37, i8* %call38)
+          to label %invoke.cont39 unwind label %lpad29
+
+invoke.cont39:                                    ; preds = %invoke.cont34
+  %call42 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp37)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  %call44 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call42, i8* %7)
+          to label %invoke.cont43 unwind label %lpad40
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp37) #2
+  %call47 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont46 unwind label %lpad29
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call48 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  %call50 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call47, i8* %call48)
+          to label %invoke.cont49 unwind label %lpad29
+
+invoke.cont49:                                    ; preds = %invoke.cont46
+  %call52 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call50, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont51 unwind label %lpad29
+
+invoke.cont51:                                    ; preds = %invoke.cont49
+  %8 = load i8*, i8** %name.addr, align 8
+  %call54 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call52, i8* %8)
+          to label %invoke.cont53 unwind label %lpad29
+
+invoke.cont53:                                    ; preds = %invoke.cont51
+  %call56 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call54, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont55 unwind label %lpad29
+
+invoke.cont55:                                    ; preds = %invoke.cont53
+  %9 = load i8*, i8** %dis_id.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp58, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont59 unwind label %lpad29
+
+invoke.cont59:                                    ; preds = %invoke.cont55
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp57, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp58, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.19, i32 0, i32 0))
+          to label %invoke.cont61 unwind label %lpad60
+
+invoke.cont61:                                    ; preds = %invoke.cont59
+  %call64 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp57)
+          to label %invoke.cont63 unwind label %lpad62
+
+invoke.cont63:                                    ; preds = %invoke.cont61
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call64, i8* %9)
+          to label %invoke.cont65 unwind label %lpad62
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp57) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp58) #2
+  %10 = load double, double* %parm_1.addr, align 8
+  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp69, double %10)
+          to label %invoke.cont70 unwind label %lpad29
+
+invoke.cont70:                                    ; preds = %invoke.cont65
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp72, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont74 unwind label %lpad73
+
+invoke.cont74:                                    ; preds = %invoke.cont70
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp71, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp72, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.25, i32 0, i32 0))
+          to label %invoke.cont76 unwind label %lpad75
+
+invoke.cont76:                                    ; preds = %invoke.cont74
+  %call79 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp71)
+          to label %invoke.cont78 unwind label %lpad77
+
+invoke.cont78:                                    ; preds = %invoke.cont76
+  %call80 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call79, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp69) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp71) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp72) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp69) #2
+  %11 = load double, double* %param_2.addr, align 8
+  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp84, double %11)
+          to label %invoke.cont85 unwind label %lpad29
+
+invoke.cont85:                                    ; preds = %invoke.cont78
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp87, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont89 unwind label %lpad88
+
+invoke.cont89:                                    ; preds = %invoke.cont85
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp86, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp87, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.31, i32 0, i32 0))
+          to label %invoke.cont91 unwind label %lpad90
+
+invoke.cont91:                                    ; preds = %invoke.cont89
+  %call94 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp86)
+          to label %invoke.cont93 unwind label %lpad92
+
+invoke.cont93:                                    ; preds = %invoke.cont91
+  %call95 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call94, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp84) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp86) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp87) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp84) #2
+  %12 = load float*, float** %addr.addr, align 8
+  %13 = load float, float* %12, align 4
+  store float %13, float* %value, align 4
+  %14 = load i8*, i8** %name.addr, align 8
+  %call100 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* %14)
+          to label %invoke.cont99 unwind label %lpad29
+
+invoke.cont99:                                    ; preds = %invoke.cont93
+  %call102 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call100, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.58, i32 0, i32 0))
+          to label %invoke.cont101 unwind label %lpad29
+
+invoke.cont101:                                   ; preds = %invoke.cont99
+  %call104 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call102, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.39, i32 0, i32 0))
+          to label %invoke.cont103 unwind label %lpad29
+
+invoke.cont103:                                   ; preds = %invoke.cont101
+  %15 = load float, float* %value, align 4
+  %call106 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEf(%"class.std::__1::basic_ostream"* %call104, float %15)
+          to label %invoke.cont105 unwind label %lpad29
+
+invoke.cont105:                                   ; preds = %invoke.cont103
+  %call108 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call106, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.57, i32 0, i32 0))
+          to label %invoke.cont107 unwind label %lpad29
+
+invoke.cont107:                                   ; preds = %invoke.cont105
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp110, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont111 unwind label %lpad29
+
+invoke.cont111:                                   ; preds = %invoke.cont107
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp109, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp110, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.41, i32 0, i32 0))
+          to label %invoke.cont113 unwind label %lpad112
+
+invoke.cont113:                                   ; preds = %invoke.cont111
+  %call116 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp109)
+          to label %invoke.cont115 unwind label %lpad114
+
+invoke.cont115:                                   ; preds = %invoke.cont113
+  %16 = load double, double* %call116, align 8
+  %call118 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call108, double %16)
+          to label %invoke.cont117 unwind label %lpad114
+
+invoke.cont117:                                   ; preds = %invoke.cont115
+  %call120 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call118, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.30, i32 0, i32 0))
+          to label %invoke.cont119 unwind label %lpad114
+
+invoke.cont119:                                   ; preds = %invoke.cont117
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp122, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont123 unwind label %lpad114
+
+invoke.cont123:                                   ; preds = %invoke.cont119
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp121, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp122, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.42, i32 0, i32 0))
+          to label %invoke.cont125 unwind label %lpad124
+
+invoke.cont125:                                   ; preds = %invoke.cont123
+  %call128 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp121)
+          to label %invoke.cont127 unwind label %lpad126
+
+invoke.cont127:                                   ; preds = %invoke.cont125
+  %17 = load double, double* %call128, align 8
+  %call130 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call120, double %17)
+          to label %invoke.cont129 unwind label %lpad126
+
+invoke.cont129:                                   ; preds = %invoke.cont127
+  %call132 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call130, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.43, i32 0, i32 0))
+          to label %invoke.cont131 unwind label %lpad126
+
+invoke.cont131:                                   ; preds = %invoke.cont129
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %agg.tmp, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont134 unwind label %lpad126
+
+invoke.cont134:                                   ; preds = %invoke.cont131
+  invoke void @_Z19getDistributionSpecNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE(%"class.std::__1::basic_string"* sret %ref.tmp133, %"class.std::__1::basic_string"* %agg.tmp)
+          to label %invoke.cont136 unwind label %lpad135
+
+invoke.cont136:                                   ; preds = %invoke.cont134
+  %call139 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call132, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp133)
+          to label %invoke.cont138 unwind label %lpad137
+
+invoke.cont138:                                   ; preds = %invoke.cont136
+  %call141 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call139, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont140 unwind label %lpad137
+
+invoke.cont140:                                   ; preds = %invoke.cont138
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp133) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %agg.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp121) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp122) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp109) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp110) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %add) #2
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %address_) #2
+  ret void
+
+lpad:                                             ; preds = %invoke.cont14, %invoke.cont6, %invoke.cont, %entry
+  %18 = landingpad { i8*, i32 }
+          cleanup
+  %19 = extractvalue { i8*, i32 } %18, 0
+  store i8* %19, i8** %exn.slot, align 8
+  %20 = extractvalue { i8*, i32 } %18, 1
+  store i32 %20, i32* %ehselector.slot, align 4
+  br label %ehcleanup149
+
+lpad3:                                            ; preds = %invoke.cont2
+  %21 = landingpad { i8*, i32 }
+          cleanup
+  %22 = extractvalue { i8*, i32 } %21, 0
+  store i8* %22, i8** %exn.slot, align 8
+  %23 = extractvalue { i8*, i32 } %21, 1
+  store i32 %23, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad5:                                            ; preds = %invoke.cont4
+  %24 = landingpad { i8*, i32 }
+          cleanup
+  %25 = extractvalue { i8*, i32 } %24, 0
+  store i8* %25, i8** %exn.slot, align 8
+  %26 = extractvalue { i8*, i32 } %24, 1
+  store i32 %26, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad5, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  br label %ehcleanup149
+
+lpad11:                                           ; preds = %invoke.cont10
+  %27 = landingpad { i8*, i32 }
+          cleanup
+  %28 = extractvalue { i8*, i32 } %27, 0
+  store i8* %28, i8** %exn.slot, align 8
+  %29 = extractvalue { i8*, i32 } %27, 1
+  store i32 %29, i32* %ehselector.slot, align 4
+  br label %ehcleanup17
+
+lpad13:                                           ; preds = %invoke.cont12
+  %30 = landingpad { i8*, i32 }
+          cleanup
+  %31 = extractvalue { i8*, i32 } %30, 0
+  store i8* %31, i8** %exn.slot, align 8
+  %32 = extractvalue { i8*, i32 } %30, 1
+  store i32 %32, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp8) #2
+  br label %ehcleanup17
+
+ehcleanup17:                                      ; preds = %lpad13, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp9) #2
+  br label %ehcleanup149
+
+lpad21:                                           ; preds = %invoke.cont20
+  %33 = landingpad { i8*, i32 }
+          cleanup
+  %34 = extractvalue { i8*, i32 } %33, 0
+  store i8* %34, i8** %exn.slot, align 8
+  %35 = extractvalue { i8*, i32 } %33, 1
+  store i32 %35, i32* %ehselector.slot, align 4
+  br label %ehcleanup26
+
+lpad23:                                           ; preds = %invoke.cont22
+  %36 = landingpad { i8*, i32 }
+          cleanup
+  %37 = extractvalue { i8*, i32 } %36, 0
+  store i8* %37, i8** %exn.slot, align 8
+  %38 = extractvalue { i8*, i32 } %36, 1
+  store i32 %38, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp18) #2
+  br label %ehcleanup26
+
+ehcleanup26:                                      ; preds = %lpad23, %lpad21
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp19) #2
+  br label %ehcleanup149
+
+lpad29:                                           ; preds = %invoke.cont107, %invoke.cont105, %invoke.cont103, %invoke.cont101, %invoke.cont99, %invoke.cont93, %invoke.cont78, %invoke.cont65, %invoke.cont55, %invoke.cont53, %invoke.cont51, %invoke.cont49, %invoke.cont46, %invoke.cont43, %invoke.cont34, %invoke.cont24
+  %39 = landingpad { i8*, i32 }
+          cleanup
+  %40 = extractvalue { i8*, i32 } %39, 0
+  store i8* %40, i8** %exn.slot, align 8
+  %41 = extractvalue { i8*, i32 } %39, 1
+  store i32 %41, i32* %ehselector.slot, align 4
+  br label %ehcleanup148
+
+lpad31:                                           ; preds = %invoke.cont32, %invoke.cont30
+  %42 = landingpad { i8*, i32 }
+          cleanup
+  %43 = extractvalue { i8*, i32 } %42, 0
+  store i8* %43, i8** %exn.slot, align 8
+  %44 = extractvalue { i8*, i32 } %42, 1
+  store i32 %44, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup148
+
+lpad40:                                           ; preds = %invoke.cont41, %invoke.cont39
+  %45 = landingpad { i8*, i32 }
+          cleanup
+  %46 = extractvalue { i8*, i32 } %45, 0
+  store i8* %46, i8** %exn.slot, align 8
+  %47 = extractvalue { i8*, i32 } %45, 1
+  store i32 %47, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp37) #2
+  br label %ehcleanup148
+
+lpad60:                                           ; preds = %invoke.cont59
+  %48 = landingpad { i8*, i32 }
+          cleanup
+  %49 = extractvalue { i8*, i32 } %48, 0
+  store i8* %49, i8** %exn.slot, align 8
+  %50 = extractvalue { i8*, i32 } %48, 1
+  store i32 %50, i32* %ehselector.slot, align 4
+  br label %ehcleanup68
+
+lpad62:                                           ; preds = %invoke.cont63, %invoke.cont61
+  %51 = landingpad { i8*, i32 }
+          cleanup
+  %52 = extractvalue { i8*, i32 } %51, 0
+  store i8* %52, i8** %exn.slot, align 8
+  %53 = extractvalue { i8*, i32 } %51, 1
+  store i32 %53, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp57) #2
+  br label %ehcleanup68
+
+ehcleanup68:                                      ; preds = %lpad62, %lpad60
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp58) #2
+  br label %ehcleanup148
+
+lpad73:                                           ; preds = %invoke.cont70
+  %54 = landingpad { i8*, i32 }
+          cleanup
+  %55 = extractvalue { i8*, i32 } %54, 0
+  store i8* %55, i8** %exn.slot, align 8
+  %56 = extractvalue { i8*, i32 } %54, 1
+  store i32 %56, i32* %ehselector.slot, align 4
+  br label %ehcleanup83
+
+lpad75:                                           ; preds = %invoke.cont74
+  %57 = landingpad { i8*, i32 }
+          cleanup
+  %58 = extractvalue { i8*, i32 } %57, 0
+  store i8* %58, i8** %exn.slot, align 8
+  %59 = extractvalue { i8*, i32 } %57, 1
+  store i32 %59, i32* %ehselector.slot, align 4
+  br label %ehcleanup82
+
+lpad77:                                           ; preds = %invoke.cont76
+  %60 = landingpad { i8*, i32 }
+          cleanup
+  %61 = extractvalue { i8*, i32 } %60, 0
+  store i8* %61, i8** %exn.slot, align 8
+  %62 = extractvalue { i8*, i32 } %60, 1
+  store i32 %62, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp71) #2
+  br label %ehcleanup82
+
+ehcleanup82:                                      ; preds = %lpad77, %lpad75
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp72) #2
+  br label %ehcleanup83
+
+ehcleanup83:                                      ; preds = %ehcleanup82, %lpad73
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp69) #2
+  br label %ehcleanup148
+
+lpad88:                                           ; preds = %invoke.cont85
+  %63 = landingpad { i8*, i32 }
+          cleanup
+  %64 = extractvalue { i8*, i32 } %63, 0
+  store i8* %64, i8** %exn.slot, align 8
+  %65 = extractvalue { i8*, i32 } %63, 1
+  store i32 %65, i32* %ehselector.slot, align 4
+  br label %ehcleanup98
+
+lpad90:                                           ; preds = %invoke.cont89
+  %66 = landingpad { i8*, i32 }
+          cleanup
+  %67 = extractvalue { i8*, i32 } %66, 0
+  store i8* %67, i8** %exn.slot, align 8
+  %68 = extractvalue { i8*, i32 } %66, 1
+  store i32 %68, i32* %ehselector.slot, align 4
+  br label %ehcleanup97
+
+lpad92:                                           ; preds = %invoke.cont91
+  %69 = landingpad { i8*, i32 }
+          cleanup
+  %70 = extractvalue { i8*, i32 } %69, 0
+  store i8* %70, i8** %exn.slot, align 8
+  %71 = extractvalue { i8*, i32 } %69, 1
+  store i32 %71, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp86) #2
+  br label %ehcleanup97
+
+ehcleanup97:                                      ; preds = %lpad92, %lpad90
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp87) #2
+  br label %ehcleanup98
+
+ehcleanup98:                                      ; preds = %ehcleanup97, %lpad88
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp84) #2
+  br label %ehcleanup148
+
+lpad112:                                          ; preds = %invoke.cont111
+  %72 = landingpad { i8*, i32 }
+          cleanup
+  %73 = extractvalue { i8*, i32 } %72, 0
+  store i8* %73, i8** %exn.slot, align 8
+  %74 = extractvalue { i8*, i32 } %72, 1
+  store i32 %74, i32* %ehselector.slot, align 4
+  br label %ehcleanup147
+
+lpad114:                                          ; preds = %invoke.cont119, %invoke.cont117, %invoke.cont115, %invoke.cont113
+  %75 = landingpad { i8*, i32 }
+          cleanup
+  %76 = extractvalue { i8*, i32 } %75, 0
+  store i8* %76, i8** %exn.slot, align 8
+  %77 = extractvalue { i8*, i32 } %75, 1
+  store i32 %77, i32* %ehselector.slot, align 4
+  br label %ehcleanup146
+
+lpad124:                                          ; preds = %invoke.cont123
+  %78 = landingpad { i8*, i32 }
+          cleanup
+  %79 = extractvalue { i8*, i32 } %78, 0
+  store i8* %79, i8** %exn.slot, align 8
+  %80 = extractvalue { i8*, i32 } %78, 1
+  store i32 %80, i32* %ehselector.slot, align 4
+  br label %ehcleanup145
+
+lpad126:                                          ; preds = %invoke.cont131, %invoke.cont129, %invoke.cont127, %invoke.cont125
+  %81 = landingpad { i8*, i32 }
+          cleanup
+  %82 = extractvalue { i8*, i32 } %81, 0
+  store i8* %82, i8** %exn.slot, align 8
+  %83 = extractvalue { i8*, i32 } %81, 1
+  store i32 %83, i32* %ehselector.slot, align 4
+  br label %ehcleanup144
+
+lpad135:                                          ; preds = %invoke.cont134
+  %84 = landingpad { i8*, i32 }
+          cleanup
+  %85 = extractvalue { i8*, i32 } %84, 0
+  store i8* %85, i8** %exn.slot, align 8
+  %86 = extractvalue { i8*, i32 } %84, 1
+  store i32 %86, i32* %ehselector.slot, align 4
+  br label %ehcleanup143
+
+lpad137:                                          ; preds = %invoke.cont138, %invoke.cont136
+  %87 = landingpad { i8*, i32 }
+          cleanup
+  %88 = extractvalue { i8*, i32 } %87, 0
+  store i8* %88, i8** %exn.slot, align 8
+  %89 = extractvalue { i8*, i32 } %87, 1
+  store i32 %89, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp133) #2
+  br label %ehcleanup143
+
+ehcleanup143:                                     ; preds = %lpad137, %lpad135
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %agg.tmp) #2
+  br label %ehcleanup144
+
+ehcleanup144:                                     ; preds = %ehcleanup143, %lpad126
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp121) #2
+  br label %ehcleanup145
+
+ehcleanup145:                                     ; preds = %ehcleanup144, %lpad124
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp122) #2
+  br label %ehcleanup146
+
+ehcleanup146:                                     ; preds = %ehcleanup145, %lpad114
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp109) #2
+  br label %ehcleanup147
+
+ehcleanup147:                                     ; preds = %ehcleanup146, %lpad112
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp110) #2
+  br label %ehcleanup148
+
+ehcleanup148:                                     ; preds = %ehcleanup147, %ehcleanup98, %ehcleanup83, %ehcleanup68, %lpad40, %lpad31, %lpad29
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %add) #2
+  br label %ehcleanup149
+
+ehcleanup149:                                     ; preds = %ehcleanup148, %ehcleanup26, %ehcleanup17, %ehcleanup, %lpad
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %address_) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup149
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val150 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val150
+}
+
+; Function Attrs: noinline optnone ssp uwtable
+define void @stg_symbolic_variable_double(double* %addr, i8* %name, double %range_min, double %range_max, i8* %dis_id, double %parm_1, double %param_2) #4 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %addr.addr = alloca double*, align 8
+  %name.addr = alloca i8*, align 8
+  %range_min.addr = alloca double, align 8
+  %range_max.addr = alloca double, align 8
+  %dis_id.addr = alloca i8*, align 8
+  %parm_1.addr = alloca double, align 8
+  %param_2.addr = alloca double, align 8
+  %address_ = alloca %"class.std::__1::basic_stringstream", align 8
+  %exn.slot = alloca i8*
+  %ehselector.slot = alloca i32
+  %ref.tmp = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp1 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp8 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp9 = alloca %"class.std::__1::basic_string", align 8
+  %add = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp18 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp19 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp27 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp37 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp57 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp58 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp69 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp71 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp72 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp84 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp86 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp87 = alloca %"class.std::__1::basic_string", align 8
+  %value = alloca double, align 8
+  %ref.tmp109 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp110 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp121 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp122 = alloca %"class.std::__1::basic_string", align 8
+  %ref.tmp133 = alloca %"class.std::__1::basic_string", align 8
+  %agg.tmp = alloca %"class.std::__1::basic_string", align 8
+  store double* %addr, double** %addr.addr, align 8
+  store i8* %name, i8** %name.addr, align 8
+  store double %range_min, double* %range_min.addr, align 8
+  store double %range_max, double* %range_max.addr, align 8
+  store i8* %dis_id, i8** %dis_id.addr, align 8
+  store double %parm_1, double* %parm_1.addr, align 8
+  store double %param_2, double* %param_2.addr, align 8
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ej(%"class.std::__1::basic_stringstream"* %address_, i32 24)
+  %0 = bitcast %"class.std::__1::basic_stringstream"* %address_ to i8*
+  %add.ptr = getelementptr inbounds i8, i8* %0, i64 16
+  %1 = bitcast i8* %add.ptr to %"class.std::__1::basic_ostream"*
+  %2 = load double*, double** %addr.addr, align 8
+  %3 = bitcast double* %2 to i8*
+  %call = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEPKv(%"class.std::__1::basic_ostream"* %1, i8* %3)
+          to label %invoke.cont unwind label %lpad
+
+invoke.cont:                                      ; preds = %entry
+  %4 = load double, double* %range_min.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp1, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont2 unwind label %lpad
+
+invoke.cont2:                                     ; preds = %invoke.cont
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp1, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.41, i32 0, i32 0))
+          to label %invoke.cont4 unwind label %lpad3
+
+invoke.cont4:                                     ; preds = %invoke.cont2
+  %call7 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp)
+          to label %invoke.cont6 unwind label %lpad5
+
+invoke.cont6:                                     ; preds = %invoke.cont4
+  store double %4, double* %call7, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  %5 = load double, double* %range_max.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp9, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont10 unwind label %lpad
+
+invoke.cont10:                                    ; preds = %invoke.cont6
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp8, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.42, i32 0, i32 0))
+          to label %invoke.cont12 unwind label %lpad11
+
+invoke.cont12:                                    ; preds = %invoke.cont10
+  %call15 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp8)
+          to label %invoke.cont14 unwind label %lpad13
+
+invoke.cont14:                                    ; preds = %invoke.cont12
+  store double %5, double* %call15, align 8
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp8) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp9) #2
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp19, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont20 unwind label %lpad
+
+invoke.cont20:                                    ; preds = %invoke.cont14
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_OS9_(%"class.std::__1::basic_string"* sret %ref.tmp18, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.17, i32 0, i32 0), %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp19)
+          to label %invoke.cont22 unwind label %lpad21
+
+invoke.cont22:                                    ; preds = %invoke.cont20
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %add, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp18, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.11, i32 0, i32 0))
+          to label %invoke.cont24 unwind label %lpad23
+
+invoke.cont24:                                    ; preds = %invoke.cont22
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp18) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp19) #2
+  %6 = load i8*, i8** %name.addr, align 8
+  %call28 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp27, i8* %call28)
+          to label %invoke.cont30 unwind label %lpad29
+
+invoke.cont30:                                    ; preds = %invoke.cont24
+  %call33 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_var_map, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp27)
+          to label %invoke.cont32 unwind label %lpad31
+
+invoke.cont32:                                    ; preds = %invoke.cont30
+  %call35 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call33, i8* %6)
+          to label %invoke.cont34 unwind label %lpad31
+
+invoke.cont34:                                    ; preds = %invoke.cont32
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  %7 = load i8*, i8** %name.addr, align 8
+  %call38 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %ref.tmp37, i8* %call38)
+          to label %invoke.cont39 unwind label %lpad29
+
+invoke.cont39:                                    ; preds = %invoke.cont34
+  %call42 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_state, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp37)
+          to label %invoke.cont41 unwind label %lpad40
+
+invoke.cont41:                                    ; preds = %invoke.cont39
+  %call44 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call42, i8* %7)
+          to label %invoke.cont43 unwind label %lpad40
+
+invoke.cont43:                                    ; preds = %invoke.cont41
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp37) #2
+  %call47 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_state to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.12, i32 0, i32 0))
+          to label %invoke.cont46 unwind label %lpad29
+
+invoke.cont46:                                    ; preds = %invoke.cont43
+  %call48 = call i8* @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5c_strEv(%"class.std::__1::basic_string"* %add) #2
+  %call50 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call47, i8* %call48)
+          to label %invoke.cont49 unwind label %lpad29
+
+invoke.cont49:                                    ; preds = %invoke.cont46
+  %call52 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call50, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.13, i32 0, i32 0))
+          to label %invoke.cont51 unwind label %lpad29
+
+invoke.cont51:                                    ; preds = %invoke.cont49
+  %8 = load i8*, i8** %name.addr, align 8
+  %call54 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call52, i8* %8)
+          to label %invoke.cont53 unwind label %lpad29
+
+invoke.cont53:                                    ; preds = %invoke.cont51
+  %call56 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call54, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.14, i32 0, i32 0))
+          to label %invoke.cont55 unwind label %lpad29
+
+invoke.cont55:                                    ; preds = %invoke.cont53
+  %9 = load i8*, i8** %dis_id.addr, align 8
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp58, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont59 unwind label %lpad29
+
+invoke.cont59:                                    ; preds = %invoke.cont55
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp57, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp58, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.19, i32 0, i32 0))
+          to label %invoke.cont61 unwind label %lpad60
+
+invoke.cont61:                                    ; preds = %invoke.cont59
+  %call64 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp57)
+          to label %invoke.cont63 unwind label %lpad62
+
+invoke.cont63:                                    ; preds = %invoke.cont61
+  %call66 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* %call64, i8* %9)
+          to label %invoke.cont65 unwind label %lpad62
+
+invoke.cont65:                                    ; preds = %invoke.cont63
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp57) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp58) #2
+  %10 = load double, double* %parm_1.addr, align 8
+  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp69, double %10)
+          to label %invoke.cont70 unwind label %lpad29
+
+invoke.cont70:                                    ; preds = %invoke.cont65
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp72, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont74 unwind label %lpad73
+
+invoke.cont74:                                    ; preds = %invoke.cont70
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp71, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp72, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.25, i32 0, i32 0))
+          to label %invoke.cont76 unwind label %lpad75
+
+invoke.cont76:                                    ; preds = %invoke.cont74
+  %call79 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp71)
+          to label %invoke.cont78 unwind label %lpad77
+
+invoke.cont78:                                    ; preds = %invoke.cont76
+  %call80 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call79, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp69) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp71) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp72) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp69) #2
+  %11 = load double, double* %param_2.addr, align 8
+  invoke void @_ZNSt3__19to_stringEd(%"class.std::__1::basic_string"* sret %ref.tmp84, double %11)
+          to label %invoke.cont85 unwind label %lpad29
+
+invoke.cont85:                                    ; preds = %invoke.cont78
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp87, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont89 unwind label %lpad88
+
+invoke.cont89:                                    ; preds = %invoke.cont85
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp86, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp87, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.31, i32 0, i32 0))
+          to label %invoke.cont91 unwind label %lpad90
+
+invoke.cont91:                                    ; preds = %invoke.cont89
+  %call94 = invoke dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEEixEOS6_(%"class.std::__1::map"* @sym_distribution, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp86)
+          to label %invoke.cont93 unwind label %lpad92
+
+invoke.cont93:                                    ; preds = %invoke.cont91
+  %call95 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEOS5_(%"class.std::__1::basic_string"* %call94, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp84) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp86) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp87) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp84) #2
+  %12 = load double*, double** %addr.addr, align 8
+  %13 = load double, double* %12, align 8
+  store double %13, double* %value, align 8
+  %14 = load i8*, i8** %name.addr, align 8
+  %call100 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* %14)
+          to label %invoke.cont99 unwind label %lpad29
+
+invoke.cont99:                                    ; preds = %invoke.cont93
+  %call102 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call100, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.59, i32 0, i32 0))
+          to label %invoke.cont101 unwind label %lpad29
+
+invoke.cont101:                                   ; preds = %invoke.cont99
+  %call104 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call102, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.39, i32 0, i32 0))
+          to label %invoke.cont103 unwind label %lpad29
+
+invoke.cont103:                                   ; preds = %invoke.cont101
+  %15 = load double, double* %value, align 8
+  %call106 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call104, double %15)
+          to label %invoke.cont105 unwind label %lpad29
+
+invoke.cont105:                                   ; preds = %invoke.cont103
+  %call108 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call106, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.57, i32 0, i32 0))
+          to label %invoke.cont107 unwind label %lpad29
+
+invoke.cont107:                                   ; preds = %invoke.cont105
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp110, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont111 unwind label %lpad29
+
+invoke.cont111:                                   ; preds = %invoke.cont107
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp109, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp110, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.41, i32 0, i32 0))
+          to label %invoke.cont113 unwind label %lpad112
+
+invoke.cont113:                                   ; preds = %invoke.cont111
+  %call116 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp109)
+          to label %invoke.cont115 unwind label %lpad114
+
+invoke.cont115:                                   ; preds = %invoke.cont113
+  %16 = load double, double* %call116, align 8
+  %call118 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call108, double %16)
+          to label %invoke.cont117 unwind label %lpad114
+
+invoke.cont117:                                   ; preds = %invoke.cont115
+  %call120 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call118, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.30, i32 0, i32 0))
+          to label %invoke.cont119 unwind label %lpad114
+
+invoke.cont119:                                   ; preds = %invoke.cont117
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %ref.tmp122, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont123 unwind label %lpad114
+
+invoke.cont123:                                   ; preds = %invoke.cont119
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp121, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp122, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.42, i32 0, i32 0))
+          to label %invoke.cont125 unwind label %lpad124
+
+invoke.cont125:                                   ; preds = %invoke.cont123
+  %call128 = invoke dereferenceable(8) double* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEEixEOS6_(%"class.std::__1::map.4"* @sym_range, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp121)
+          to label %invoke.cont127 unwind label %lpad126
+
+invoke.cont127:                                   ; preds = %invoke.cont125
+  %17 = load double, double* %call128, align 8
+  %call130 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call120, double %17)
+          to label %invoke.cont129 unwind label %lpad126
+
+invoke.cont129:                                   ; preds = %invoke.cont127
+  %call132 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call130, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.43, i32 0, i32 0))
+          to label %invoke.cont131 unwind label %lpad126
+
+invoke.cont131:                                   ; preds = %invoke.cont129
+  invoke void @_ZNKSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEE3strEv(%"class.std::__1::basic_string"* sret %agg.tmp, %"class.std::__1::basic_stringstream"* %address_)
+          to label %invoke.cont134 unwind label %lpad126
+
+invoke.cont134:                                   ; preds = %invoke.cont131
+  invoke void @_Z19getDistributionSpecNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE(%"class.std::__1::basic_string"* sret %ref.tmp133, %"class.std::__1::basic_string"* %agg.tmp)
+          to label %invoke.cont136 unwind label %lpad135
+
+invoke.cont136:                                   ; preds = %invoke.cont134
+  %call139 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call132, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp133)
+          to label %invoke.cont138 unwind label %lpad137
+
+invoke.cont138:                                   ; preds = %invoke.cont136
+  %call141 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call139, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
+          to label %invoke.cont140 unwind label %lpad137
+
+invoke.cont140:                                   ; preds = %invoke.cont138
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp133) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %agg.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp121) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp122) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp109) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp110) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %add) #2
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %address_) #2
+  ret void
+
+lpad:                                             ; preds = %invoke.cont14, %invoke.cont6, %invoke.cont, %entry
+  %18 = landingpad { i8*, i32 }
+          cleanup
+  %19 = extractvalue { i8*, i32 } %18, 0
+  store i8* %19, i8** %exn.slot, align 8
+  %20 = extractvalue { i8*, i32 } %18, 1
+  store i32 %20, i32* %ehselector.slot, align 4
+  br label %ehcleanup149
+
+lpad3:                                            ; preds = %invoke.cont2
+  %21 = landingpad { i8*, i32 }
+          cleanup
+  %22 = extractvalue { i8*, i32 } %21, 0
+  store i8* %22, i8** %exn.slot, align 8
+  %23 = extractvalue { i8*, i32 } %21, 1
+  store i32 %23, i32* %ehselector.slot, align 4
+  br label %ehcleanup
+
+lpad5:                                            ; preds = %invoke.cont4
+  %24 = landingpad { i8*, i32 }
+          cleanup
+  %25 = extractvalue { i8*, i32 } %24, 0
+  store i8* %25, i8** %exn.slot, align 8
+  %26 = extractvalue { i8*, i32 } %24, 1
+  store i32 %26, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp) #2
+  br label %ehcleanup
+
+ehcleanup:                                        ; preds = %lpad5, %lpad3
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp1) #2
+  br label %ehcleanup149
+
+lpad11:                                           ; preds = %invoke.cont10
+  %27 = landingpad { i8*, i32 }
+          cleanup
+  %28 = extractvalue { i8*, i32 } %27, 0
+  store i8* %28, i8** %exn.slot, align 8
+  %29 = extractvalue { i8*, i32 } %27, 1
+  store i32 %29, i32* %ehselector.slot, align 4
+  br label %ehcleanup17
+
+lpad13:                                           ; preds = %invoke.cont12
+  %30 = landingpad { i8*, i32 }
+          cleanup
+  %31 = extractvalue { i8*, i32 } %30, 0
+  store i8* %31, i8** %exn.slot, align 8
+  %32 = extractvalue { i8*, i32 } %30, 1
+  store i32 %32, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp8) #2
+  br label %ehcleanup17
+
+ehcleanup17:                                      ; preds = %lpad13, %lpad11
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp9) #2
+  br label %ehcleanup149
+
+lpad21:                                           ; preds = %invoke.cont20
+  %33 = landingpad { i8*, i32 }
+          cleanup
+  %34 = extractvalue { i8*, i32 } %33, 0
+  store i8* %34, i8** %exn.slot, align 8
+  %35 = extractvalue { i8*, i32 } %33, 1
+  store i32 %35, i32* %ehselector.slot, align 4
+  br label %ehcleanup26
+
+lpad23:                                           ; preds = %invoke.cont22
+  %36 = landingpad { i8*, i32 }
+          cleanup
+  %37 = extractvalue { i8*, i32 } %36, 0
+  store i8* %37, i8** %exn.slot, align 8
+  %38 = extractvalue { i8*, i32 } %36, 1
+  store i32 %38, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp18) #2
+  br label %ehcleanup26
+
+ehcleanup26:                                      ; preds = %lpad23, %lpad21
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp19) #2
+  br label %ehcleanup149
+
+lpad29:                                           ; preds = %invoke.cont107, %invoke.cont105, %invoke.cont103, %invoke.cont101, %invoke.cont99, %invoke.cont93, %invoke.cont78, %invoke.cont65, %invoke.cont55, %invoke.cont53, %invoke.cont51, %invoke.cont49, %invoke.cont46, %invoke.cont43, %invoke.cont34, %invoke.cont24
+  %39 = landingpad { i8*, i32 }
+          cleanup
+  %40 = extractvalue { i8*, i32 } %39, 0
+  store i8* %40, i8** %exn.slot, align 8
+  %41 = extractvalue { i8*, i32 } %39, 1
+  store i32 %41, i32* %ehselector.slot, align 4
+  br label %ehcleanup148
+
+lpad31:                                           ; preds = %invoke.cont32, %invoke.cont30
+  %42 = landingpad { i8*, i32 }
+          cleanup
+  %43 = extractvalue { i8*, i32 } %42, 0
+  store i8* %43, i8** %exn.slot, align 8
+  %44 = extractvalue { i8*, i32 } %42, 1
+  store i32 %44, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp27) #2
+  br label %ehcleanup148
+
+lpad40:                                           ; preds = %invoke.cont41, %invoke.cont39
+  %45 = landingpad { i8*, i32 }
+          cleanup
+  %46 = extractvalue { i8*, i32 } %45, 0
+  store i8* %46, i8** %exn.slot, align 8
+  %47 = extractvalue { i8*, i32 } %45, 1
+  store i32 %47, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp37) #2
+  br label %ehcleanup148
+
+lpad60:                                           ; preds = %invoke.cont59
+  %48 = landingpad { i8*, i32 }
+          cleanup
+  %49 = extractvalue { i8*, i32 } %48, 0
+  store i8* %49, i8** %exn.slot, align 8
+  %50 = extractvalue { i8*, i32 } %48, 1
+  store i32 %50, i32* %ehselector.slot, align 4
+  br label %ehcleanup68
+
+lpad62:                                           ; preds = %invoke.cont63, %invoke.cont61
+  %51 = landingpad { i8*, i32 }
+          cleanup
+  %52 = extractvalue { i8*, i32 } %51, 0
+  store i8* %52, i8** %exn.slot, align 8
+  %53 = extractvalue { i8*, i32 } %51, 1
+  store i32 %53, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp57) #2
+  br label %ehcleanup68
+
+ehcleanup68:                                      ; preds = %lpad62, %lpad60
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp58) #2
+  br label %ehcleanup148
+
+lpad73:                                           ; preds = %invoke.cont70
+  %54 = landingpad { i8*, i32 }
+          cleanup
+  %55 = extractvalue { i8*, i32 } %54, 0
+  store i8* %55, i8** %exn.slot, align 8
+  %56 = extractvalue { i8*, i32 } %54, 1
+  store i32 %56, i32* %ehselector.slot, align 4
+  br label %ehcleanup83
+
+lpad75:                                           ; preds = %invoke.cont74
+  %57 = landingpad { i8*, i32 }
+          cleanup
+  %58 = extractvalue { i8*, i32 } %57, 0
+  store i8* %58, i8** %exn.slot, align 8
+  %59 = extractvalue { i8*, i32 } %57, 1
+  store i32 %59, i32* %ehselector.slot, align 4
+  br label %ehcleanup82
+
+lpad77:                                           ; preds = %invoke.cont76
+  %60 = landingpad { i8*, i32 }
+          cleanup
+  %61 = extractvalue { i8*, i32 } %60, 0
+  store i8* %61, i8** %exn.slot, align 8
+  %62 = extractvalue { i8*, i32 } %60, 1
+  store i32 %62, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp71) #2
+  br label %ehcleanup82
+
+ehcleanup82:                                      ; preds = %lpad77, %lpad75
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp72) #2
+  br label %ehcleanup83
+
+ehcleanup83:                                      ; preds = %ehcleanup82, %lpad73
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp69) #2
+  br label %ehcleanup148
+
+lpad88:                                           ; preds = %invoke.cont85
+  %63 = landingpad { i8*, i32 }
+          cleanup
+  %64 = extractvalue { i8*, i32 } %63, 0
+  store i8* %64, i8** %exn.slot, align 8
+  %65 = extractvalue { i8*, i32 } %63, 1
+  store i32 %65, i32* %ehselector.slot, align 4
+  br label %ehcleanup98
+
+lpad90:                                           ; preds = %invoke.cont89
+  %66 = landingpad { i8*, i32 }
+          cleanup
+  %67 = extractvalue { i8*, i32 } %66, 0
+  store i8* %67, i8** %exn.slot, align 8
+  %68 = extractvalue { i8*, i32 } %66, 1
+  store i32 %68, i32* %ehselector.slot, align 4
+  br label %ehcleanup97
+
+lpad92:                                           ; preds = %invoke.cont91
+  %69 = landingpad { i8*, i32 }
+          cleanup
+  %70 = extractvalue { i8*, i32 } %69, 0
+  store i8* %70, i8** %exn.slot, align 8
+  %71 = extractvalue { i8*, i32 } %69, 1
+  store i32 %71, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp86) #2
+  br label %ehcleanup97
+
+ehcleanup97:                                      ; preds = %lpad92, %lpad90
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp87) #2
+  br label %ehcleanup98
+
+ehcleanup98:                                      ; preds = %ehcleanup97, %lpad88
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp84) #2
+  br label %ehcleanup148
+
+lpad112:                                          ; preds = %invoke.cont111
+  %72 = landingpad { i8*, i32 }
+          cleanup
+  %73 = extractvalue { i8*, i32 } %72, 0
+  store i8* %73, i8** %exn.slot, align 8
+  %74 = extractvalue { i8*, i32 } %72, 1
+  store i32 %74, i32* %ehselector.slot, align 4
+  br label %ehcleanup147
+
+lpad114:                                          ; preds = %invoke.cont119, %invoke.cont117, %invoke.cont115, %invoke.cont113
+  %75 = landingpad { i8*, i32 }
+          cleanup
+  %76 = extractvalue { i8*, i32 } %75, 0
+  store i8* %76, i8** %exn.slot, align 8
+  %77 = extractvalue { i8*, i32 } %75, 1
+  store i32 %77, i32* %ehselector.slot, align 4
+  br label %ehcleanup146
+
+lpad124:                                          ; preds = %invoke.cont123
+  %78 = landingpad { i8*, i32 }
+          cleanup
+  %79 = extractvalue { i8*, i32 } %78, 0
+  store i8* %79, i8** %exn.slot, align 8
+  %80 = extractvalue { i8*, i32 } %78, 1
+  store i32 %80, i32* %ehselector.slot, align 4
+  br label %ehcleanup145
+
+lpad126:                                          ; preds = %invoke.cont131, %invoke.cont129, %invoke.cont127, %invoke.cont125
+  %81 = landingpad { i8*, i32 }
+          cleanup
+  %82 = extractvalue { i8*, i32 } %81, 0
+  store i8* %82, i8** %exn.slot, align 8
+  %83 = extractvalue { i8*, i32 } %81, 1
+  store i32 %83, i32* %ehselector.slot, align 4
+  br label %ehcleanup144
+
+lpad135:                                          ; preds = %invoke.cont134
+  %84 = landingpad { i8*, i32 }
+          cleanup
+  %85 = extractvalue { i8*, i32 } %84, 0
+  store i8* %85, i8** %exn.slot, align 8
+  %86 = extractvalue { i8*, i32 } %84, 1
+  store i32 %86, i32* %ehselector.slot, align 4
+  br label %ehcleanup143
+
+lpad137:                                          ; preds = %invoke.cont138, %invoke.cont136
+  %87 = landingpad { i8*, i32 }
+          cleanup
+  %88 = extractvalue { i8*, i32 } %87, 0
+  store i8* %88, i8** %exn.slot, align 8
+  %89 = extractvalue { i8*, i32 } %87, 1
+  store i32 %89, i32* %ehselector.slot, align 4
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp133) #2
+  br label %ehcleanup143
+
+ehcleanup143:                                     ; preds = %lpad137, %lpad135
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %agg.tmp) #2
+  br label %ehcleanup144
+
+ehcleanup144:                                     ; preds = %ehcleanup143, %lpad126
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp121) #2
+  br label %ehcleanup145
+
+ehcleanup145:                                     ; preds = %ehcleanup144, %lpad124
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp122) #2
+  br label %ehcleanup146
+
+ehcleanup146:                                     ; preds = %ehcleanup145, %lpad114
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp109) #2
+  br label %ehcleanup147
+
+ehcleanup147:                                     ; preds = %ehcleanup146, %lpad112
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp110) #2
+  br label %ehcleanup148
+
+ehcleanup148:                                     ; preds = %ehcleanup147, %ehcleanup98, %ehcleanup83, %ehcleanup68, %lpad40, %lpad31, %lpad29
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %add) #2
+  br label %ehcleanup149
+
+ehcleanup149:                                     ; preds = %ehcleanup148, %ehcleanup26, %ehcleanup17, %ehcleanup, %lpad
+  call void @_ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_stringstream"* %address_) #2
+  br label %eh.resume
+
+eh.resume:                                        ; preds = %ehcleanup149
+  %exn = load i8*, i8** %exn.slot, align 8
+  %sel = load i32, i32* %ehselector.slot, align 4
+  %lpad.val = insertvalue { i8*, i32 } undef, i8* %exn, 0
+  %lpad.val150 = insertvalue { i8*, i32 } %lpad.val, i32 %sel, 1
+  resume { i8*, i32 } %lpad.val150
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
@@ -7594,7 +12182,7 @@ ehcleanup:                                        ; preds = %lpad7, %lpad5
   br label %ehcleanup66
 
 if.else:                                          ; preds = %invoke.cont15
-  invoke void @__assert_rtn(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @__func__.stg_input_int, i32 0, i32 0), i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.33, i32 0, i32 0), i32 699, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.34, i32 0, i32 0)) #16
+  invoke void @__assert_rtn(i8* getelementptr inbounds ([14 x i8], [14 x i8]* @__func__.stg_input_int, i32 0, i32 0), i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.33, i32 0, i32 0), i32 1065, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.34, i32 0, i32 0)) #16
           to label %invoke.cont21 unwind label %lpad3
 
 invoke.cont21:                                    ; preds = %if.else
@@ -7627,7 +12215,7 @@ if.end26:                                         ; preds = %if.else25, %invoke.
           to label %invoke.cont27 unwind label %lpad3
 
 invoke.cont27:                                    ; preds = %if.end26
-  %call30 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call28, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.58, i32 0, i32 0))
+  %call30 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call28, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.56, i32 0, i32 0))
           to label %invoke.cont29 unwind label %lpad3
 
 invoke.cont29:                                    ; preds = %invoke.cont27
@@ -7640,7 +12228,7 @@ invoke.cont31:                                    ; preds = %invoke.cont29
           to label %invoke.cont33 unwind label %lpad3
 
 invoke.cont33:                                    ; preds = %invoke.cont31
-  %call36 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call34, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.59, i32 0, i32 0))
+  %call36 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call34, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.57, i32 0, i32 0))
           to label %invoke.cont35 unwind label %lpad3
 
 invoke.cont35:                                    ; preds = %invoke.cont33
@@ -7881,7 +12469,7 @@ ehcleanup:                                        ; preds = %lpad7, %lpad5
   br label %ehcleanup66
 
 if.else:                                          ; preds = %invoke.cont15
-  invoke void @__assert_rtn(i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__func__.stg_input_float, i32 0, i32 0), i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.33, i32 0, i32 0), i32 729, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.34, i32 0, i32 0)) #16
+  invoke void @__assert_rtn(i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__func__.stg_input_float, i32 0, i32 0), i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.33, i32 0, i32 0), i32 1095, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.34, i32 0, i32 0)) #16
           to label %invoke.cont21 unwind label %lpad3
 
 invoke.cont21:                                    ; preds = %if.else
@@ -7914,7 +12502,7 @@ if.end26:                                         ; preds = %if.else25, %invoke.
           to label %invoke.cont27 unwind label %lpad3
 
 invoke.cont27:                                    ; preds = %if.end26
-  %call30 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call28, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.60, i32 0, i32 0))
+  %call30 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call28, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.58, i32 0, i32 0))
           to label %invoke.cont29 unwind label %lpad3
 
 invoke.cont29:                                    ; preds = %invoke.cont27
@@ -8168,7 +12756,7 @@ ehcleanup:                                        ; preds = %lpad7, %lpad5
   br label %ehcleanup66
 
 if.else:                                          ; preds = %invoke.cont15
-  invoke void @__assert_rtn(i8* getelementptr inbounds ([17 x i8], [17 x i8]* @__func__.stg_input_double, i32 0, i32 0), i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.33, i32 0, i32 0), i32 763, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.34, i32 0, i32 0)) #16
+  invoke void @__assert_rtn(i8* getelementptr inbounds ([17 x i8], [17 x i8]* @__func__.stg_input_double, i32 0, i32 0), i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.33, i32 0, i32 0), i32 1129, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.34, i32 0, i32 0)) #16
           to label %invoke.cont21 unwind label %lpad3
 
 invoke.cont21:                                    ; preds = %if.else
@@ -8201,7 +12789,7 @@ if.end26:                                         ; preds = %if.else25, %invoke.
           to label %invoke.cont27 unwind label %lpad3
 
 invoke.cont27:                                    ; preds = %if.end26
-  %call30 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call28, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.61, i32 0, i32 0))
+  %call30 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call28, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.59, i32 0, i32 0))
           to label %invoke.cont29 unwind label %lpad3
 
 invoke.cont29:                                    ; preds = %invoke.cont27
@@ -8214,7 +12802,7 @@ invoke.cont31:                                    ; preds = %invoke.cont29
           to label %invoke.cont33 unwind label %lpad3
 
 invoke.cont33:                                    ; preds = %invoke.cont31
-  %call36 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call34, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.59, i32 0, i32 0))
+  %call36 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call34, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.57, i32 0, i32 0))
           to label %invoke.cont35 unwind label %lpad3
 
 invoke.cont35:                                    ; preds = %invoke.cont33
@@ -8373,7 +12961,7 @@ for.cond:                                         ; preds = %for.inc, %if.then
   br i1 %cmp, label %for.body, label %for.end
 
 for.body:                                         ; preds = %for.cond
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %d, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.62, i32 0, i32 0))
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc(%"class.std::__1::basic_string"* %d, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.60, i32 0, i32 0))
   %2 = load i32, i32* %i, align 4
   invoke void @_ZNSt3__19to_stringEi(%"class.std::__1::basic_string"* sret %ref.tmp1, i32 %2)
           to label %invoke.cont unwind label %lpad
@@ -8399,7 +12987,7 @@ if.then8:                                         ; preds = %invoke.cont5
           to label %invoke.cont9 unwind label %lpad
 
 invoke.cont9:                                     ; preds = %if.then8
-  %call12 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.63, i32 0, i32 0))
+  %call12 = invoke dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.61, i32 0, i32 0))
           to label %invoke.cont11 unwind label %lpad
 
 invoke.cont11:                                    ; preds = %invoke.cont9
@@ -8469,7 +13057,7 @@ if.end17:                                         ; preds = %for.end, %entry
   br i1 %lnot, label %cond.true, label %cond.false
 
 cond.true:                                        ; preds = %if.end17
-  call void @__assert_rtn(i8* getelementptr inbounds ([15 x i8], [15 x i8]* @__func__.stg_begin_test, i32 0, i32 0), i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.33, i32 0, i32 0), i32 800, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.64, i32 0, i32 0)) #16
+  call void @__assert_rtn(i8* getelementptr inbounds ([15 x i8], [15 x i8]* @__func__.stg_begin_test, i32 0, i32 0), i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.33, i32 0, i32 0), i32 1166, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.62, i32 0, i32 0)) #16
   unreachable
                                                   ; No predecessors!
   br label %cond.end
@@ -8488,8 +13076,8 @@ land.lhs.true:                                    ; preds = %cond.end
   br i1 %tobool20, label %if.then21, label %if.end63
 
 if.then21:                                        ; preds = %land.lhs.true
-  call void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EERKS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp25, %"class.std::__1::basic_string"* dereferenceable(24) @output_dir, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.65, i32 0, i32 0))
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp24, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.66, i32 0, i32 0))
+  call void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EERKS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp25, %"class.std::__1::basic_string"* dereferenceable(24) @output_dir, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.63, i32 0, i32 0))
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp24, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp25, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.64, i32 0, i32 0))
           to label %invoke.cont27 unwind label %lpad26
 
 invoke.cont27:                                    ; preds = %if.then21
@@ -8502,7 +13090,7 @@ invoke.cont30:                                    ; preds = %invoke.cont27
           to label %invoke.cont32 unwind label %lpad31
 
 invoke.cont32:                                    ; preds = %invoke.cont30
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp22, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp23, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.67, i32 0, i32 0))
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp22, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp23, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.65, i32 0, i32 0))
           to label %invoke.cont34 unwind label %lpad33
 
 invoke.cont34:                                    ; preds = %invoke.cont32
@@ -8515,8 +13103,8 @@ invoke.cont36:                                    ; preds = %invoke.cont34
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp28) #2
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp24) #2
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED1Ev(%"class.std::__1::basic_string"* %ref.tmp25) #2
-  call void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EERKS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp45, %"class.std::__1::basic_string"* dereferenceable(24) @output_dir, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.65, i32 0, i32 0))
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp44, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp45, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.68, i32 0, i32 0))
+  call void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EERKS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp45, %"class.std::__1::basic_string"* dereferenceable(24) @output_dir, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.63, i32 0, i32 0))
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp44, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp45, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.66, i32 0, i32 0))
           to label %invoke.cont47 unwind label %lpad46
 
 invoke.cont47:                                    ; preds = %invoke.cont36
@@ -8529,7 +13117,7 @@ invoke.cont50:                                    ; preds = %invoke.cont47
           to label %invoke.cont52 unwind label %lpad51
 
 invoke.cont52:                                    ; preds = %invoke.cont50
-  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp42, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp43, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.69, i32 0, i32 0))
+  invoke void @_ZNSt3__1plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEOS9_PKS6_(%"class.std::__1::basic_string"* sret %ref.tmp42, %"class.std::__1::basic_string"* dereferenceable(24) %ref.tmp43, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.67, i32 0, i32 0))
           to label %invoke.cont54 unwind label %lpad53
 
 invoke.cont54:                                    ; preds = %invoke.cont52
@@ -8673,7 +13261,7 @@ ehcleanup61:                                      ; preds = %ehcleanup60, %lpad4
   br label %eh.resume
 
 if.end63:                                         ; preds = %invoke.cont56, %land.lhs.true, %cond.end
-  %call64 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.70, i32 0, i32 0))
+  %call64 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.68, i32 0, i32 0))
   ret void
 
 eh.resume:                                        ; preds = %ehcleanup61, %ehcleanup41, %ehcleanup
@@ -8852,7 +13440,7 @@ for.cond12:                                       ; preds = %for.inc, %if.then11
   br i1 %cmp13, label %for.body14, label %for.end
 
 for.body14:                                       ; preds = %for.cond12
-  %call15 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.71, i32 0, i32 0))
+  %call15 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.69, i32 0, i32 0))
   br label %for.inc
 
 for.inc:                                          ; preds = %for.body14
@@ -8862,7 +13450,7 @@ for.inc:                                          ; preds = %for.body14
   br label %for.cond12
 
 for.end:                                          ; preds = %for.cond12
-  %call16 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.72, i32 0, i32 0))
+  %call16 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.70, i32 0, i32 0))
   store i32 0, i32* %j17, align 4
   br label %for.cond18
 
@@ -8873,7 +13461,7 @@ for.cond18:                                       ; preds = %for.inc22, %for.end
   br i1 %cmp19, label %for.body20, label %for.end24
 
 for.body20:                                       ; preds = %for.cond18
-  %call21 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.71, i32 0, i32 0))
+  %call21 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.69, i32 0, i32 0))
   br label %for.inc22
 
 for.inc22:                                        ; preds = %for.body20
@@ -8914,7 +13502,7 @@ for.cond41:                                       ; preds = %for.inc45, %invoke.
   br i1 %cmp42, label %for.body43, label %for.end47
 
 for.body43:                                       ; preds = %for.cond41
-  %call44 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.71, i32 0, i32 0))
+  %call44 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.69, i32 0, i32 0))
   br label %for.inc45
 
 for.inc45:                                        ; preds = %for.body43
@@ -9031,7 +13619,7 @@ for.cond64:                                       ; preds = %for.inc68, %if.else
   br i1 %cmp65, label %for.body66, label %for.end70
 
 for.body66:                                       ; preds = %for.cond64
-  %call67 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.71, i32 0, i32 0))
+  %call67 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.69, i32 0, i32 0))
   br label %for.inc68
 
 for.inc68:                                        ; preds = %for.body66
@@ -9041,7 +13629,7 @@ for.inc68:                                        ; preds = %for.body66
   br label %for.cond64
 
 for.end70:                                        ; preds = %for.cond64
-  %call71 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.72, i32 0, i32 0))
+  %call71 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.70, i32 0, i32 0))
   store i32 0, i32* %j72, align 4
   br label %for.cond73
 
@@ -9052,7 +13640,7 @@ for.cond73:                                       ; preds = %for.inc77, %for.end
   br i1 %cmp74, label %for.body75, label %for.end79
 
 for.body75:                                       ; preds = %for.cond73
-  %call76 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.71, i32 0, i32 0))
+  %call76 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.69, i32 0, i32 0))
   br label %for.inc77
 
 for.inc77:                                        ; preds = %for.body75
@@ -9153,7 +13741,7 @@ for.cond105:                                      ; preds = %for.inc110, %for.bo
   br i1 %cmp107, label %for.body108, label %for.end112
 
 for.body108:                                      ; preds = %for.cond105
-  %call109 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.71, i32 0, i32 0))
+  %call109 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.69, i32 0, i32 0))
   br label %for.inc110
 
 for.inc110:                                       ; preds = %for.body108
@@ -9163,7 +13751,7 @@ for.inc110:                                       ; preds = %for.body108
   br label %for.cond105
 
 for.end112:                                       ; preds = %for.cond105
-  %call113 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.73, i32 0, i32 0))
+  %call113 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEpLEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.71, i32 0, i32 0))
   br label %for.inc114
 
 for.inc114:                                       ; preds = %for.end112
@@ -9173,7 +13761,7 @@ for.inc114:                                       ; preds = %for.end112
   br label %for.cond101
 
 for.end115:                                       ; preds = %for.cond101
-  %call116 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.74, i32 0, i32 0))
+  %call116 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.72, i32 0, i32 0))
   ret void
 
 eh.resume:                                        ; preds = %ehcleanup94, %ehcleanup62, %ehcleanup39, %ehcleanup
@@ -9216,7 +13804,7 @@ entry:
   %pred.addr = alloca i8, align 1
   %frombool = zext i1 %pred to i8
   store i8 %frombool, i8* %pred.addr, align 1
-  %call = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.75, i32 0, i32 0))
+  %call = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) bitcast (%"class.std::__1::basic_ofstream"* @stg_pc to %"class.std::__1::basic_ostream"*), i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.73, i32 0, i32 0))
   %0 = load i8, i8* %pred.addr, align 1
   %tobool = trunc i8 %0 to i1
   br i1 %tobool, label %cond.true, label %cond.false
@@ -9228,7 +13816,7 @@ cond.false:                                       ; preds = %entry
   br label %cond.end
 
 cond.end:                                         ; preds = %cond.false, %cond.true
-  %cond-lvalue = phi [7 x i8]* [ @.str.76, %cond.true ], [ @.str.77, %cond.false ]
+  %cond-lvalue = phi [7 x i8]* [ @.str.74, %cond.true ], [ @.str.75, %cond.false ]
   %arraydecay = getelementptr inbounds [7 x i8], [7 x i8]* %cond-lvalue, i32 0, i32 0
   %call1 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call, i8* %arraydecay)
   %call2 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call1, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
@@ -9238,64 +13826,22 @@ cond.end:                                         ; preds = %cond.false, %cond.t
   store i8 0, i8* @needComma, align 1
   store i32 0, i32* @path_condition_count, align 4
   store i8 0, i8* @fileCreated, align 1
-  call void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5clearEv(%"class.std::__1::map"* @sym_state) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5clearEv(%"class.std::__1::basic_string"* @path_condition) #2
-  call void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5clearEv(%"class.std::__1::map"* @sym_var_map) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5clearEv(%"class.std::__1::basic_string"* @path_condition) #2
+  %call6 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEaSEPKc(%"class.std::__1::basic_string"* @path_condition, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.20, i32 0, i32 0))
+  call void @clear_maps()
   call void @_ZNSt3__114basic_ofstreamIcNS_11char_traitsIcEEE5closeEv(%"class.std::__1::basic_ofstream"* @stg_state)
   call void @_ZNSt3__114basic_ofstreamIcNS_11char_traitsIcEEE5closeEv(%"class.std::__1::basic_ofstream"* @stg_pc)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5clearEv(%"class.std::__1::map"* %this) #1 align 2 {
+define void @clear_maps() #1 {
 entry:
-  %this.addr = alloca %"class.std::__1::map"*, align 8
-  store %"class.std::__1::map"* %this, %"class.std::__1::map"** %this.addr, align 8
-  %this1 = load %"class.std::__1::map"*, %"class.std::__1::map"** %this.addr, align 8
-  %__tree_ = getelementptr inbounds %"class.std::__1::map", %"class.std::__1::map"* %this1, i32 0, i32 0
-  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE5clearEv(%"class.std::__1::__tree"* %__tree_) #2
+  call void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5clearEv(%"class.std::__1::map"* @sym_state) #2
+  call void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5clearEv(%"class.std::__1::map"* @sym_var_map) #2
+  call void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEE5clearEv(%"class.std::__1::map.4"* @sym_range) #2
+  call void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5clearEv(%"class.std::__1::map"* @sym_distribution) #2
+  call void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5clearEv(%"class.std::__1::map"* @path_conditions) #2
   ret void
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5clearEv(%"class.std::__1::basic_string"* %this) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
-entry:
-  %this.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %ref.tmp = alloca i8, align 1
-  %ref.tmp4 = alloca i8, align 1
-  store %"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"** %this.addr, align 8
-  %this1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %this.addr, align 8
-  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE26__invalidate_all_iteratorsEv(%"class.std::__1::basic_string"* %this1)
-          to label %invoke.cont unwind label %terminate.lpad
-
-invoke.cont:                                      ; preds = %entry
-  %call = call zeroext i1 @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE9__is_longEv(%"class.std::__1::basic_string"* %this1) #2
-  br i1 %call, label %if.then, label %if.else
-
-if.then:                                          ; preds = %invoke.cont
-  %call2 = call i8* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE18__get_long_pointerEv(%"class.std::__1::basic_string"* %this1) #2
-  store i8 0, i8* %ref.tmp, align 1
-  call void @_ZNSt3__111char_traitsIcE6assignERcRKc(i8* dereferenceable(1) %call2, i8* dereferenceable(1) %ref.tmp) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE15__set_long_sizeEm(%"class.std::__1::basic_string"* %this1, i64 0) #2
-  br label %if.end
-
-if.else:                                          ; preds = %invoke.cont
-  %call3 = call i8* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE19__get_short_pointerEv(%"class.std::__1::basic_string"* %this1) #2
-  store i8 0, i8* %ref.tmp4, align 1
-  call void @_ZNSt3__111char_traitsIcE6assignERcRKc(i8* dereferenceable(1) %call3, i8* dereferenceable(1) %ref.tmp4) #2
-  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE16__set_short_sizeEm(%"class.std::__1::basic_string"* %this1, i64 0) #2
-  br label %if.end
-
-if.end:                                           ; preds = %if.else, %if.then
-  ret void
-
-terminate.lpad:                                   ; preds = %entry
-  %0 = landingpad { i8*, i32 }
-          catch i8* null
-  %1 = extractvalue { i8*, i32 } %0, 0
-  call void @__clang_call_terminate(i8* %1) #17
-  unreachable
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
@@ -9358,7 +13904,7 @@ entry:
   store double %param_1, double* %param_1.addr, align 8
   store double %param_2, double* %param_2.addr, align 8
   %0 = load i8*, i8** %type.addr, align 8
-  %call = call i32 @strcmp(i8* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.78, i32 0, i32 0))
+  %call = call i32 @strcmp(i8* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.76, i32 0, i32 0))
   %tobool = icmp ne i32 %call, 0
   br i1 %tobool, label %cond.true, label %cond.false
 
@@ -9378,7 +13924,7 @@ cond.end:                                         ; preds = %cond.false, %cond.t
   %conv = trunc i64 %cond3 to i32
   store i32 %conv, i32* %s, align 4
   %3 = load i32, i32* %s, align 4
-  %call4 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.79, i32 0, i32 0), i32 %3)
+  %call4 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.77, i32 0, i32 0), i32 %3)
   %4 = load i32, i32* %num.addr, align 4
   %call5 = call i32 @abs(i32 %4) #18
   %call6 = call double @_ZL5log10IiENSt3__19enable_ifIXsr3std11is_integralIT_EE5valueEdE4typeES2_(i32 %call5) #2
@@ -9387,7 +13933,7 @@ cond.end:                                         ; preds = %cond.false, %cond.t
   %conv7 = fptosi double %add to i32
   store i32 %conv7, i32* %d, align 4
   %6 = load i8*, i8** %type.addr, align 8
-  %call8 = call i32 @strcmp(i8* %6, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.78, i32 0, i32 0))
+  %call8 = call i32 @strcmp(i8* %6, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.76, i32 0, i32 0))
   %cmp = icmp eq i32 %call8, 0
   br i1 %cmp, label %if.then, label %if.else
 
@@ -9413,7 +13959,7 @@ for.body:                                         ; preds = %for.cond
   %11 = load i8*, i8** %name, align 8
   %12 = load i8*, i8** %prefix.addr, align 8
   %13 = load i32, i32* %i, align 4
-  %call15 = call i32 (i8*, i8*, ...) @sprintf(i8* %11, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.80, i32 0, i32 0), i8* %12, i32 %13)
+  %call15 = call i32 (i8*, i8*, ...) @sprintf(i8* %11, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.78, i32 0, i32 0), i8* %12, i32 %13)
   %14 = load i8*, i8** %array.addr, align 8
   %15 = bitcast i8* %14 to i32*
   store i32* %15, i32** %array_addr, align 8
@@ -9421,19 +13967,18 @@ for.body:                                         ; preds = %for.cond
   %17 = load i32, i32* %i, align 4
   %idx.ext = sext i32 %17 to i64
   %add.ptr = getelementptr inbounds i32, i32* %16, i64 %idx.ext
-  %18 = bitcast i32* %add.ptr to i8*
-  %19 = load i8*, i8** %name, align 8
-  %20 = load double, double* %range_min.addr, align 8
-  %21 = load double, double* %range_max.addr, align 8
-  %22 = load i8*, i8** %dis_id.addr, align 8
-  %23 = load double, double* %param_1.addr, align 8
-  %24 = load double, double* %param_2.addr, align 8
-  call void @stg_symbolic_variable(i8* %18, i8* %19, double %20, double %21, i8* %22, double %23, double %24)
+  %18 = load i8*, i8** %name, align 8
+  %19 = load double, double* %range_min.addr, align 8
+  %20 = load double, double* %range_max.addr, align 8
+  %21 = load i8*, i8** %dis_id.addr, align 8
+  %22 = load double, double* %param_1.addr, align 8
+  %23 = load double, double* %param_2.addr, align 8
+  call void @stg_symbolic_variable_int(i32* %add.ptr, i8* %18, double %19, double %20, i8* %21, double %22, double %23)
   br label %for.inc
 
 for.inc:                                          ; preds = %for.body
-  %25 = load i32, i32* %i, align 4
-  %inc = add nsw i32 %25, 1
+  %24 = load i32, i32* %i, align 4
+  %inc = add nsw i32 %24, 1
   store i32 %inc, i32* %i, align 4
   br label %for.cond
 
@@ -9441,8 +13986,8 @@ for.end:                                          ; preds = %for.cond
   br label %if.end58
 
 if.else:                                          ; preds = %cond.end
-  %26 = load i8*, i8** %type.addr, align 8
-  %call16 = call i32 @strcmp(i8* %26, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.45, i32 0, i32 0))
+  %25 = load i8*, i8** %type.addr, align 8
+  %call16 = call i32 @strcmp(i8* %25, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.45, i32 0, i32 0))
   %cmp17 = icmp eq i32 %call16, 0
   br i1 %cmp17, label %if.then18, label %if.else36
 
@@ -9451,44 +13996,43 @@ if.then18:                                        ; preds = %if.else
   br label %for.cond20
 
 for.cond20:                                       ; preds = %for.inc33, %if.then18
-  %27 = load i32, i32* %i19, align 4
-  %28 = load i32, i32* %num.addr, align 4
-  %cmp21 = icmp slt i32 %27, %28
+  %26 = load i32, i32* %i19, align 4
+  %27 = load i32, i32* %num.addr, align 4
+  %cmp21 = icmp slt i32 %26, %27
   br i1 %cmp21, label %for.body22, label %for.end35
 
 for.body22:                                       ; preds = %for.cond20
-  %29 = load i8*, i8** %prefix.addr, align 8
-  %call24 = call i64 @strlen(i8* %29)
-  %30 = load i32, i32* %d, align 4
-  %conv25 = sext i32 %30 to i64
+  %28 = load i8*, i8** %prefix.addr, align 8
+  %call24 = call i64 @strlen(i8* %28)
+  %29 = load i32, i32* %d, align 4
+  %conv25 = sext i32 %29 to i64
   %add26 = add i64 %call24, %conv25
   %add27 = add i64 %add26, 1
   %call28 = call i8* @malloc(i64 %add27) #19
   store i8* %call28, i8** %name23, align 8
-  %31 = load i8*, i8** %name23, align 8
-  %32 = load i8*, i8** %prefix.addr, align 8
-  %33 = load i32, i32* %i19, align 4
-  %call29 = call i32 (i8*, i8*, ...) @sprintf(i8* %31, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.80, i32 0, i32 0), i8* %32, i32 %33)
-  %34 = load i8*, i8** %array.addr, align 8
-  %35 = bitcast i8* %34 to float*
-  store float* %35, float** %array_addr30, align 8
-  %36 = load float*, float** %array_addr30, align 8
-  %37 = load i32, i32* %i19, align 4
-  %idx.ext31 = sext i32 %37 to i64
-  %add.ptr32 = getelementptr inbounds float, float* %36, i64 %idx.ext31
-  %38 = bitcast float* %add.ptr32 to i8*
-  %39 = load i8*, i8** %name23, align 8
-  %40 = load double, double* %range_min.addr, align 8
-  %41 = load double, double* %range_max.addr, align 8
-  %42 = load i8*, i8** %dis_id.addr, align 8
-  %43 = load double, double* %param_1.addr, align 8
-  %44 = load double, double* %param_2.addr, align 8
-  call void @stg_symbolic_variable(i8* %38, i8* %39, double %40, double %41, i8* %42, double %43, double %44)
+  %30 = load i8*, i8** %name23, align 8
+  %31 = load i8*, i8** %prefix.addr, align 8
+  %32 = load i32, i32* %i19, align 4
+  %call29 = call i32 (i8*, i8*, ...) @sprintf(i8* %30, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.78, i32 0, i32 0), i8* %31, i32 %32)
+  %33 = load i8*, i8** %array.addr, align 8
+  %34 = bitcast i8* %33 to float*
+  store float* %34, float** %array_addr30, align 8
+  %35 = load float*, float** %array_addr30, align 8
+  %36 = load i32, i32* %i19, align 4
+  %idx.ext31 = sext i32 %36 to i64
+  %add.ptr32 = getelementptr inbounds float, float* %35, i64 %idx.ext31
+  %37 = load i8*, i8** %name23, align 8
+  %38 = load double, double* %range_min.addr, align 8
+  %39 = load double, double* %range_max.addr, align 8
+  %40 = load i8*, i8** %dis_id.addr, align 8
+  %41 = load double, double* %param_1.addr, align 8
+  %42 = load double, double* %param_2.addr, align 8
+  call void @stg_symbolic_variable_float(float* %add.ptr32, i8* %37, double %38, double %39, i8* %40, double %41, double %42)
   br label %for.inc33
 
 for.inc33:                                        ; preds = %for.body22
-  %45 = load i32, i32* %i19, align 4
-  %inc34 = add nsw i32 %45, 1
+  %43 = load i32, i32* %i19, align 4
+  %inc34 = add nsw i32 %43, 1
   store i32 %inc34, i32* %i19, align 4
   br label %for.cond20
 
@@ -9496,8 +14040,8 @@ for.end35:                                        ; preds = %for.cond20
   br label %if.end57
 
 if.else36:                                        ; preds = %if.else
-  %46 = load i8*, i8** %type.addr, align 8
-  %call37 = call i32 @strcmp(i8* %46, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.47, i32 0, i32 0))
+  %44 = load i8*, i8** %type.addr, align 8
+  %call37 = call i32 @strcmp(i8* %44, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.47, i32 0, i32 0))
   %cmp38 = icmp eq i32 %call37, 0
   br i1 %cmp38, label %if.then39, label %if.end
 
@@ -9506,46 +14050,45 @@ if.then39:                                        ; preds = %if.else36
   br label %for.cond41
 
 for.cond41:                                       ; preds = %for.inc54, %if.then39
-  %47 = load i32, i32* %i40, align 4
-  %48 = load i32, i32* %num.addr, align 4
-  %cmp42 = icmp slt i32 %47, %48
+  %45 = load i32, i32* %i40, align 4
+  %46 = load i32, i32* %num.addr, align 4
+  %cmp42 = icmp slt i32 %45, %46
   br i1 %cmp42, label %for.body43, label %for.end56
 
 for.body43:                                       ; preds = %for.cond41
-  %49 = load i8*, i8** %prefix.addr, align 8
-  %call45 = call i64 @strlen(i8* %49)
-  %50 = load i32, i32* %d, align 4
-  %conv46 = sext i32 %50 to i64
+  %47 = load i8*, i8** %prefix.addr, align 8
+  %call45 = call i64 @strlen(i8* %47)
+  %48 = load i32, i32* %d, align 4
+  %conv46 = sext i32 %48 to i64
   %add47 = add i64 %call45, %conv46
   %add48 = add i64 %add47, 1
   %call49 = call i8* @malloc(i64 %add48) #19
   store i8* %call49, i8** %name44, align 8
-  %51 = load i8*, i8** %name44, align 8
-  %52 = load i8*, i8** %prefix.addr, align 8
-  %53 = load i32, i32* %i40, align 4
-  %call50 = call i32 (i8*, i8*, ...) @sprintf(i8* %51, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.80, i32 0, i32 0), i8* %52, i32 %53)
-  %54 = load i8*, i8** %array.addr, align 8
-  %55 = bitcast i8* %54 to double*
-  store double* %55, double** %array_addr51, align 8
-  %56 = load double*, double** %array_addr51, align 8
-  %57 = load i32, i32* %s, align 4
-  %58 = load i32, i32* %i40, align 4
-  %mul = mul nsw i32 %57, %58
+  %49 = load i8*, i8** %name44, align 8
+  %50 = load i8*, i8** %prefix.addr, align 8
+  %51 = load i32, i32* %i40, align 4
+  %call50 = call i32 (i8*, i8*, ...) @sprintf(i8* %49, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.78, i32 0, i32 0), i8* %50, i32 %51)
+  %52 = load i8*, i8** %array.addr, align 8
+  %53 = bitcast i8* %52 to double*
+  store double* %53, double** %array_addr51, align 8
+  %54 = load double*, double** %array_addr51, align 8
+  %55 = load i32, i32* %s, align 4
+  %56 = load i32, i32* %i40, align 4
+  %mul = mul nsw i32 %55, %56
   %idx.ext52 = sext i32 %mul to i64
-  %add.ptr53 = getelementptr inbounds double, double* %56, i64 %idx.ext52
-  %59 = bitcast double* %add.ptr53 to i8*
-  %60 = load i8*, i8** %name44, align 8
-  %61 = load double, double* %range_min.addr, align 8
-  %62 = load double, double* %range_max.addr, align 8
-  %63 = load i8*, i8** %dis_id.addr, align 8
-  %64 = load double, double* %param_1.addr, align 8
-  %65 = load double, double* %param_2.addr, align 8
-  call void @stg_symbolic_variable(i8* %59, i8* %60, double %61, double %62, i8* %63, double %64, double %65)
+  %add.ptr53 = getelementptr inbounds double, double* %54, i64 %idx.ext52
+  %57 = load i8*, i8** %name44, align 8
+  %58 = load double, double* %range_min.addr, align 8
+  %59 = load double, double* %range_max.addr, align 8
+  %60 = load i8*, i8** %dis_id.addr, align 8
+  %61 = load double, double* %param_1.addr, align 8
+  %62 = load double, double* %param_2.addr, align 8
+  call void @stg_symbolic_variable_double(double* %add.ptr53, i8* %57, double %58, double %59, i8* %60, double %61, double %62)
   br label %for.inc54
 
 for.inc54:                                        ; preds = %for.body43
-  %66 = load i32, i32* %i40, align 4
-  %inc55 = add nsw i32 %66, 1
+  %63 = load i32, i32* %i40, align 4
+  %inc55 = add nsw i32 %63, 1
   store i32 %inc55, i32* %i40, align 4
   br label %for.cond41
 
@@ -9611,7 +14154,7 @@ entry:
   store i32 %num, i32* %num.addr, align 4
   store i8* %values, i8** %values.addr, align 8
   %0 = load i8*, i8** %type.addr, align 8
-  %call = call i32 @strcmp(i8* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.78, i32 0, i32 0))
+  %call = call i32 @strcmp(i8* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.76, i32 0, i32 0))
   %cmp = icmp eq i32 %call, 0
   br i1 %cmp, label %if.then, label %if.else
 
@@ -9637,7 +14180,7 @@ for.body:                                         ; preds = %for.cond
   %idx.ext = sext i32 %8 to i64
   %add.ptr = getelementptr inbounds i32, i32* %7, i64 %idx.ext
   %9 = load i32, i32* %add.ptr, align 4
-  %call2 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.81, i32 0, i32 0), i32 %9)
+  %call2 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.79, i32 0, i32 0), i32 %9)
   %10 = load i32*, i32** %array_addr, align 8
   %11 = load i32, i32* %i, align 4
   %idx.ext3 = sext i32 %11 to i64
@@ -9689,7 +14232,7 @@ for.body15:                                       ; preds = %for.cond13
   %add.ptr17 = getelementptr inbounds float, float* %24, i64 %idx.ext16
   %26 = load float, float* %add.ptr17, align 4
   %conv = fpext float %26 to double
-  %call18 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.82, i32 0, i32 0), double %conv)
+  %call18 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.80, i32 0, i32 0), double %conv)
   %27 = load float*, float** %array_addr10, align 8
   %28 = load i32, i32* %i12, align 4
   %idx.ext19 = sext i32 %28 to i64
@@ -9796,6 +14339,28 @@ entry:
   ret void
 }
 
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5clearEv(%"class.std::__1::map"* %this) #1 align 2 {
+entry:
+  %this.addr = alloca %"class.std::__1::map"*, align 8
+  store %"class.std::__1::map"* %this, %"class.std::__1::map"** %this.addr, align 8
+  %this1 = load %"class.std::__1::map"*, %"class.std::__1::map"** %this.addr, align 8
+  %__tree_ = getelementptr inbounds %"class.std::__1::map", %"class.std::__1::map"* %this1, i32 0, i32 0
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE5clearEv(%"class.std::__1::__tree"* %__tree_) #2
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal void @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEE5clearEv(%"class.std::__1::map.4"* %this) #1 align 2 {
+entry:
+  %this.addr = alloca %"class.std::__1::map.4"*, align 8
+  store %"class.std::__1::map.4"* %this, %"class.std::__1::map.4"** %this.addr, align 8
+  %this1 = load %"class.std::__1::map.4"*, %"class.std::__1::map.4"** %this.addr, align 8
+  %__tree_ = getelementptr inbounds %"class.std::__1::map.4", %"class.std::__1::map.4"* %this1, i32 0, i32 0
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE5clearEv(%"class.std::__1::__tree.5"* %__tree_) #2
+  ret void
+}
+
 ; Function Attrs: noinline optnone ssp uwtable
 define void @print_maps() #4 {
 entry:
@@ -9803,24 +14368,12 @@ entry:
   %__begin1 = alloca %"class.std::__1::__map_iterator", align 8
   %__end1 = alloca %"class.std::__1::__map_iterator", align 8
   %x = alloca %"struct.std::__1::pair"*, align 8
-  %__range112 = alloca %"class.std::__1::map.4"*, align 8
-  %__begin113 = alloca %"class.std::__1::__map_iterator.19", align 8
-  %__end117 = alloca %"class.std::__1::__map_iterator.19", align 8
-  %x24 = alloca %"struct.std::__1::pair.21"*, align 8
-  %__range135 = alloca %"class.std::__1::map"*, align 8
-  %__begin136 = alloca %"class.std::__1::__map_iterator", align 8
-  %__end140 = alloca %"class.std::__1::__map_iterator", align 8
-  %x47 = alloca %"struct.std::__1::pair"*, align 8
-  %__range158 = alloca %"class.std::__1::map"*, align 8
-  %__begin159 = alloca %"class.std::__1::__map_iterator", align 8
-  %__end163 = alloca %"class.std::__1::__map_iterator", align 8
-  %x70 = alloca %"struct.std::__1::pair"*, align 8
-  store %"class.std::__1::map"* @sym_var_map, %"class.std::__1::map"** %__range1, align 8
-  %call = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5beginEv(%"class.std::__1::map"* @sym_var_map) #2
+  store %"class.std::__1::map"* @sym_state, %"class.std::__1::map"** %__range1, align 8
+  %call = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5beginEv(%"class.std::__1::map"* @sym_state) #2
   %coerce.dive = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %__begin1, i32 0, i32 0
   %coerce.dive1 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive, i32 0, i32 0
   store %"class.std::__1::__tree_end_node"* %call, %"class.std::__1::__tree_end_node"** %coerce.dive1, align 8
-  %call2 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_var_map) #2
+  %call2 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
   %coerce.dive3 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %__end1, i32 0, i32 0
   %coerce.dive4 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive3, i32 0, i32 0
   store %"class.std::__1::__tree_end_node"* %call2, %"class.std::__1::__tree_end_node"** %coerce.dive4, align 8
@@ -9836,7 +14389,7 @@ for.body:                                         ; preds = %for.cond
   %0 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %x, align 8
   %first = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %0, i32 0, i32 0
   %call7 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %first)
-  %call8 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call7, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.53, i32 0, i32 0))
+  %call8 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call7, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.81, i32 0, i32 0))
   %1 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %x, align 8
   %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %1, i32 0, i32 1
   %call9 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call8, %"class.std::__1::basic_string"* dereferenceable(24) %second)
@@ -9848,106 +14401,6 @@ for.inc:                                          ; preds = %for.body
   br label %for.cond
 
 for.end:                                          ; preds = %for.cond
-  store %"class.std::__1::map.4"* @sym_range, %"class.std::__1::map.4"** %__range112, align 8
-  %call14 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEE5beginEv(%"class.std::__1::map.4"* @sym_range) #2
-  %coerce.dive15 = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %__begin113, i32 0, i32 0
-  %coerce.dive16 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %coerce.dive15, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call14, %"class.std::__1::__tree_end_node"** %coerce.dive16, align 8
-  %call18 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEE3endEv(%"class.std::__1::map.4"* @sym_range) #2
-  %coerce.dive19 = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %__end117, i32 0, i32 0
-  %coerce.dive20 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %coerce.dive19, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call18, %"class.std::__1::__tree_end_node"** %coerce.dive20, align 8
-  br label %for.cond21
-
-for.cond21:                                       ; preds = %for.inc32, %for.end
-  %call22 = call zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator.19"* dereferenceable(8) %__begin113, %"class.std::__1::__map_iterator.19"* dereferenceable(8) %__end117)
-  br i1 %call22, label %for.body23, label %for.end34
-
-for.body23:                                       ; preds = %for.cond21
-  %call25 = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEdeEv(%"class.std::__1::__map_iterator.19"* %__begin113)
-  store %"struct.std::__1::pair.21"* %call25, %"struct.std::__1::pair.21"** %x24, align 8
-  %2 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %x24, align 8
-  %first26 = getelementptr inbounds %"struct.std::__1::pair.21", %"struct.std::__1::pair.21"* %2, i32 0, i32 0
-  %call27 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %first26)
-  %call28 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call27, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.53, i32 0, i32 0))
-  %3 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %x24, align 8
-  %second29 = getelementptr inbounds %"struct.std::__1::pair.21", %"struct.std::__1::pair.21"* %3, i32 0, i32 1
-  %4 = load double, double* %second29, align 8
-  %call30 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEd(%"class.std::__1::basic_ostream"* %call28, double %4)
-  %call31 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call30, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
-  br label %for.inc32
-
-for.inc32:                                        ; preds = %for.body23
-  %call33 = call dereferenceable(8) %"class.std::__1::__map_iterator.19"* @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEppEv(%"class.std::__1::__map_iterator.19"* %__begin113)
-  br label %for.cond21
-
-for.end34:                                        ; preds = %for.cond21
-  store %"class.std::__1::map"* @sym_distribution, %"class.std::__1::map"** %__range135, align 8
-  %call37 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5beginEv(%"class.std::__1::map"* @sym_distribution) #2
-  %coerce.dive38 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %__begin136, i32 0, i32 0
-  %coerce.dive39 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive38, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call37, %"class.std::__1::__tree_end_node"** %coerce.dive39, align 8
-  %call41 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_distribution) #2
-  %coerce.dive42 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %__end140, i32 0, i32 0
-  %coerce.dive43 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive42, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call41, %"class.std::__1::__tree_end_node"** %coerce.dive43, align 8
-  br label %for.cond44
-
-for.cond44:                                       ; preds = %for.inc55, %for.end34
-  %call45 = call zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %__begin136, %"class.std::__1::__map_iterator"* dereferenceable(8) %__end140)
-  br i1 %call45, label %for.body46, label %for.end57
-
-for.body46:                                       ; preds = %for.cond44
-  %call48 = call dereferenceable(48) %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEdeEv(%"class.std::__1::__map_iterator"* %__begin136)
-  store %"struct.std::__1::pair"* %call48, %"struct.std::__1::pair"** %x47, align 8
-  %5 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %x47, align 8
-  %first49 = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %5, i32 0, i32 0
-  %call50 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %first49)
-  %call51 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call50, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.53, i32 0, i32 0))
-  %6 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %x47, align 8
-  %second52 = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %6, i32 0, i32 1
-  %call53 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call51, %"class.std::__1::basic_string"* dereferenceable(24) %second52)
-  %call54 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call53, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
-  br label %for.inc55
-
-for.inc55:                                        ; preds = %for.body46
-  %call56 = call dereferenceable(8) %"class.std::__1::__map_iterator"* @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEppEv(%"class.std::__1::__map_iterator"* %__begin136)
-  br label %for.cond44
-
-for.end57:                                        ; preds = %for.cond44
-  store %"class.std::__1::map"* @sym_state, %"class.std::__1::map"** %__range158, align 8
-  %call60 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE5beginEv(%"class.std::__1::map"* @sym_state) #2
-  %coerce.dive61 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %__begin159, i32 0, i32 0
-  %coerce.dive62 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive61, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call60, %"class.std::__1::__tree_end_node"** %coerce.dive62, align 8
-  %call64 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_NS_4lessIS6_EENS4_INS_4pairIKS6_S6_EEEEE3endEv(%"class.std::__1::map"* @sym_state) #2
-  %coerce.dive65 = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %__end163, i32 0, i32 0
-  %coerce.dive66 = getelementptr inbounds %"class.std::__1::__tree_iterator", %"class.std::__1::__tree_iterator"* %coerce.dive65, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call64, %"class.std::__1::__tree_end_node"** %coerce.dive66, align 8
-  br label %for.cond67
-
-for.cond67:                                       ; preds = %for.inc78, %for.end57
-  %call68 = call zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator"* dereferenceable(8) %__begin159, %"class.std::__1::__map_iterator"* dereferenceable(8) %__end163)
-  br i1 %call68, label %for.body69, label %for.end80
-
-for.body69:                                       ; preds = %for.cond67
-  %call71 = call dereferenceable(48) %"struct.std::__1::pair"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEdeEv(%"class.std::__1::__map_iterator"* %__begin159)
-  store %"struct.std::__1::pair"* %call71, %"struct.std::__1::pair"** %x70, align 8
-  %7 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %x70, align 8
-  %first72 = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %7, i32 0, i32 0
-  %call73 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) @_ZNSt3__14coutE, %"class.std::__1::basic_string"* dereferenceable(24) %first72)
-  %call74 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call73, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.53, i32 0, i32 0))
-  %8 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %x70, align 8
-  %second75 = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %8, i32 0, i32 1
-  %call76 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsIcNS_11char_traitsIcEENS_9allocatorIcEEEERNS_13basic_ostreamIT_T0_EES9_RKNS_12basic_stringIS6_S7_T1_EE(%"class.std::__1::basic_ostream"* dereferenceable(160) %call74, %"class.std::__1::basic_string"* dereferenceable(24) %second75)
-  %call77 = call dereferenceable(160) %"class.std::__1::basic_ostream"* @_ZNSt3__1lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(%"class.std::__1::basic_ostream"* dereferenceable(160) %call76, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.36, i32 0, i32 0))
-  br label %for.inc78
-
-for.inc78:                                        ; preds = %for.body69
-  %call79 = call dereferenceable(8) %"class.std::__1::__map_iterator"* @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEppEv(%"class.std::__1::__map_iterator"* %__begin159)
-  br label %for.cond67
-
-for.end80:                                        ; preds = %for.cond67
   ret void
 }
 
@@ -9993,86 +14446,6 @@ entry:
   %__i_ = getelementptr inbounds %"class.std::__1::__map_iterator", %"class.std::__1::__map_iterator"* %this1, i32 0, i32 0
   %call = call dereferenceable(8) %"class.std::__1::__tree_iterator"* @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EEPNS_11__tree_nodeIS8_PvEElEppEv(%"class.std::__1::__tree_iterator"* %__i_)
   ret %"class.std::__1::__map_iterator"* %this1
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEE5beginEv(%"class.std::__1::map.4"* %this) #1 align 2 {
-entry:
-  %retval = alloca %"class.std::__1::__map_iterator.19", align 8
-  %this.addr = alloca %"class.std::__1::map.4"*, align 8
-  %agg.tmp = alloca %"class.std::__1::__tree_iterator.20", align 8
-  store %"class.std::__1::map.4"* %this, %"class.std::__1::map.4"** %this.addr, align 8
-  %this1 = load %"class.std::__1::map.4"*, %"class.std::__1::map.4"** %this.addr, align 8
-  %__tree_ = getelementptr inbounds %"class.std::__1::map.4", %"class.std::__1::map.4"* %this1, i32 0, i32 0
-  %call = call %"class.std::__1::__tree_end_node"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE5beginEv(%"class.std::__1::__tree.5"* %__tree_) #2
-  %coerce.dive = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %agg.tmp, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call, %"class.std::__1::__tree_end_node"** %coerce.dive, align 8
-  %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %agg.tmp, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %coerce.dive2, align 8
-  call void @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEC1ESE_(%"class.std::__1::__map_iterator.19"* %retval, %"class.std::__1::__tree_end_node"* %0) #2
-  %coerce.dive3 = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %retval, i32 0, i32 0
-  %coerce.dive4 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %coerce.dive3, i32 0, i32 0
-  %1 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %coerce.dive4, align 8
-  ret %"class.std::__1::__tree_end_node"* %1
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_end_node"* @_ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdNS_4lessIS6_EENS4_INS_4pairIKS6_dEEEEE3endEv(%"class.std::__1::map.4"* %this) #1 align 2 {
-entry:
-  %retval = alloca %"class.std::__1::__map_iterator.19", align 8
-  %this.addr = alloca %"class.std::__1::map.4"*, align 8
-  %agg.tmp = alloca %"class.std::__1::__tree_iterator.20", align 8
-  store %"class.std::__1::map.4"* %this, %"class.std::__1::map.4"** %this.addr, align 8
-  %this1 = load %"class.std::__1::map.4"*, %"class.std::__1::map.4"** %this.addr, align 8
-  %__tree_ = getelementptr inbounds %"class.std::__1::map.4", %"class.std::__1::map.4"* %this1, i32 0, i32 0
-  %call = call %"class.std::__1::__tree_end_node"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE3endEv(%"class.std::__1::__tree.5"* %__tree_) #2
-  %coerce.dive = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %agg.tmp, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call, %"class.std::__1::__tree_end_node"** %coerce.dive, align 8
-  %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %agg.tmp, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %coerce.dive2, align 8
-  call void @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEC1ESE_(%"class.std::__1::__map_iterator.19"* %retval, %"class.std::__1::__tree_end_node"* %0) #2
-  %coerce.dive3 = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %retval, i32 0, i32 0
-  %coerce.dive4 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %coerce.dive3, i32 0, i32 0
-  %1 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %coerce.dive4, align 8
-  ret %"class.std::__1::__tree_end_node"* %1
-}
-
-; Function Attrs: noinline optnone ssp uwtable
-define internal zeroext i1 @_ZNSt3__1neERKNS_14__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEESH_(%"class.std::__1::__map_iterator.19"* dereferenceable(8) %__x, %"class.std::__1::__map_iterator.19"* dereferenceable(8) %__y) #4 {
-entry:
-  %__x.addr = alloca %"class.std::__1::__map_iterator.19"*, align 8
-  %__y.addr = alloca %"class.std::__1::__map_iterator.19"*, align 8
-  store %"class.std::__1::__map_iterator.19"* %__x, %"class.std::__1::__map_iterator.19"** %__x.addr, align 8
-  store %"class.std::__1::__map_iterator.19"* %__y, %"class.std::__1::__map_iterator.19"** %__y.addr, align 8
-  %0 = load %"class.std::__1::__map_iterator.19"*, %"class.std::__1::__map_iterator.19"** %__x.addr, align 8
-  %__i_ = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %0, i32 0, i32 0
-  %1 = load %"class.std::__1::__map_iterator.19"*, %"class.std::__1::__map_iterator.19"** %__y.addr, align 8
-  %__i_1 = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %1, i32 0, i32 0
-  %call = call zeroext i1 @_ZNSt3__1neERKNS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEESF_(%"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__i_, %"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__i_1)
-  ret i1 %call
-}
-
-; Function Attrs: noinline optnone ssp uwtable
-define internal dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNKSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEdeEv(%"class.std::__1::__map_iterator.19"* %this) #4 align 2 {
-entry:
-  %this.addr = alloca %"class.std::__1::__map_iterator.19"*, align 8
-  store %"class.std::__1::__map_iterator.19"* %this, %"class.std::__1::__map_iterator.19"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__map_iterator.19"*, %"class.std::__1::__map_iterator.19"** %this.addr, align 8
-  %__i_ = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %this1, i32 0, i32 0
-  %call = call %"struct.std::__1::__value_type.23"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEptEv(%"class.std::__1::__tree_iterator.20"* %__i_)
-  %call2 = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.23"* %call)
-  ret %"struct.std::__1::pair.21"* %call2
-}
-
-; Function Attrs: noinline optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__map_iterator.19"* @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEppEv(%"class.std::__1::__map_iterator.19"* %this) #4 align 2 {
-entry:
-  %this.addr = alloca %"class.std::__1::__map_iterator.19"*, align 8
-  store %"class.std::__1::__map_iterator.19"* %this, %"class.std::__1::__map_iterator.19"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__map_iterator.19"*, %"class.std::__1::__map_iterator.19"** %this.addr, align 8
-  %__i_ = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_iterator.20"* @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEppEv(%"class.std::__1::__tree_iterator.20"* %__i_)
-  ret %"class.std::__1::__map_iterator.19"* %this1
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
@@ -10436,43 +14809,43 @@ entry:
   %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
   store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
   %this1 = load %"class.std::__1::__tree.5"*, %"class.std::__1::__tree.5"** %this.addr, align 8
-  %call = call %"class.std::__1::__tree_node.22"* @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE6__rootEv(%"class.std::__1::__tree.5"* %this1) #2
-  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this1, %"class.std::__1::__tree_node.22"* %call) #2
+  %call = call %"class.std::__1::__tree_node.19"* @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE6__rootEv(%"class.std::__1::__tree.5"* %this1) #2
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this1, %"class.std::__1::__tree_node.19"* %call) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree_node.22"* %__nd) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree_node.19"* %__nd) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
-  %__nd.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
+  %__nd.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
   %__na = alloca %"class.std::__1::allocator.8"*, align 8
   store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__nd, %"class.std::__1::__tree_node.22"** %__nd.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__nd, %"class.std::__1::__tree_node.19"** %__nd.addr, align 8
   %this1 = load %"class.std::__1::__tree.5"*, %"class.std::__1::__tree.5"** %this.addr, align 8
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd.addr, align 8
-  %cmp = icmp ne %"class.std::__1::__tree_node.22"* %0, null
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd.addr, align 8
+  %cmp = icmp ne %"class.std::__1::__tree_node.19"* %0, null
   br i1 %cmp, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  %1 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd.addr, align 8
-  %2 = bitcast %"class.std::__1::__tree_node.22"* %1 to %"class.std::__1::__tree_end_node"*
+  %1 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd.addr, align 8
+  %2 = bitcast %"class.std::__1::__tree_node.19"* %1 to %"class.std::__1::__tree_end_node"*
   %__left_ = getelementptr inbounds %"class.std::__1::__tree_end_node", %"class.std::__1::__tree_end_node"* %2, i32 0, i32 0
   %3 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %__left_, align 8
-  %4 = bitcast %"class.std::__1::__tree_node_base"* %3 to %"class.std::__1::__tree_node.22"*
-  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this1, %"class.std::__1::__tree_node.22"* %4) #2
-  %5 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd.addr, align 8
-  %6 = bitcast %"class.std::__1::__tree_node.22"* %5 to %"class.std::__1::__tree_node_base"*
+  %4 = bitcast %"class.std::__1::__tree_node_base"* %3 to %"class.std::__1::__tree_node.19"*
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this1, %"class.std::__1::__tree_node.19"* %4) #2
+  %5 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd.addr, align 8
+  %6 = bitcast %"class.std::__1::__tree_node.19"* %5 to %"class.std::__1::__tree_node_base"*
   %__right_ = getelementptr inbounds %"class.std::__1::__tree_node_base", %"class.std::__1::__tree_node_base"* %6, i32 0, i32 1
   %7 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %__right_, align 8
-  %8 = bitcast %"class.std::__1::__tree_node_base"* %7 to %"class.std::__1::__tree_node.22"*
-  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this1, %"class.std::__1::__tree_node.22"* %8) #2
+  %8 = bitcast %"class.std::__1::__tree_node_base"* %7 to %"class.std::__1::__tree_node.19"*
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this1, %"class.std::__1::__tree_node.19"* %8) #2
   %call = call dereferenceable(1) %"class.std::__1::allocator.8"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__node_allocEv(%"class.std::__1::__tree.5"* %this1) #2
   store %"class.std::__1::allocator.8"* %call, %"class.std::__1::allocator.8"** %__na, align 8
   %9 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na, align 8
-  %10 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd.addr, align 8
-  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.22", %"class.std::__1::__tree_node.22"* %10, i32 0, i32 1
-  %call2 = invoke %"struct.std::__1::pair.21"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE9__get_ptrERS8_(%"struct.std::__1::__value_type.23"* dereferenceable(32) %__value_)
+  %10 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd.addr, align 8
+  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.19", %"class.std::__1::__tree_node.19"* %10, i32 0, i32 1
+  %call2 = invoke %"struct.std::__1::pair.21"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE9__get_ptrERS8_(%"struct.std::__1::__value_type.20"* dereferenceable(32) %__value_)
           to label %invoke.cont unwind label %terminate.lpad
 
 invoke.cont:                                      ; preds = %if.then
@@ -10481,8 +14854,8 @@ invoke.cont:                                      ; preds = %if.then
 
 invoke.cont3:                                     ; preds = %invoke.cont
   %11 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na, align 8
-  %12 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd.addr, align 8
-  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE10deallocateERSC_PSB_m(%"class.std::__1::allocator.8"* dereferenceable(1) %11, %"class.std::__1::__tree_node.22"* %12, i64 1) #2
+  %12 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd.addr, align 8
+  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE10deallocateERSC_PSB_m(%"class.std::__1::allocator.8"* dereferenceable(1) %11, %"class.std::__1::__tree_node.19"* %12, i64 1) #2
   br label %if.end
 
 if.end:                                           ; preds = %invoke.cont3, %entry
@@ -10497,7 +14870,7 @@ terminate.lpad:                                   ; preds = %invoke.cont, %if.th
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_node.22"* @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE6__rootEv(%"class.std::__1::__tree.5"* %this) #1 align 2 {
+define internal %"class.std::__1::__tree_node.19"* @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE6__rootEv(%"class.std::__1::__tree.5"* %this) #1 align 2 {
 entry:
   %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
   store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
@@ -10505,8 +14878,8 @@ entry:
   %call = call %"class.std::__1::__tree_end_node"* @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE10__end_nodeEv(%"class.std::__1::__tree.5"* %this1) #2
   %__left_ = getelementptr inbounds %"class.std::__1::__tree_end_node", %"class.std::__1::__tree_end_node"* %call, i32 0, i32 0
   %0 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %__left_, align 8
-  %1 = bitcast %"class.std::__1::__tree_node_base"* %0 to %"class.std::__1::__tree_node.22"*
-  ret %"class.std::__1::__tree_node.22"* %1
+  %1 = bitcast %"class.std::__1::__tree_node_base"* %0 to %"class.std::__1::__tree_node.19"*
+  ret %"class.std::__1::__tree_node.19"* %1
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
@@ -10526,10 +14899,10 @@ entry:
   %__a.addr = alloca %"class.std::__1::allocator.8"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair.21"*, align 8
   %agg.tmp = alloca %"struct.std::__1::integral_constant", align 1
-  %ref.tmp = alloca %"struct.std::__1::__has_destroy.24", align 1
+  %ref.tmp = alloca %"struct.std::__1::__has_destroy.22", align 1
   store %"class.std::__1::allocator.8"* %__a, %"class.std::__1::allocator.8"** %__a.addr, align 8
   store %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::pair.21"** %__p.addr, align 8
-  %0 = bitcast %"struct.std::__1::__has_destroy.24"* %ref.tmp to %"struct.std::__1::integral_constant"*
+  %0 = bitcast %"struct.std::__1::__has_destroy.22"* %ref.tmp to %"struct.std::__1::integral_constant"*
   %1 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__a.addr, align 8
   %2 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %__p.addr, align 8
   call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE9__destroyINS_4pairIKS8_dEEEEvNS_17integral_constantIbLb0EEERSC_PT_(%"class.std::__1::allocator.8"* dereferenceable(1) %1, %"struct.std::__1::pair.21"* %2)
@@ -10537,29 +14910,29 @@ entry:
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal %"struct.std::__1::pair.21"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE9__get_ptrERS8_(%"struct.std::__1::__value_type.23"* dereferenceable(32) %__n) #4 align 2 {
+define internal %"struct.std::__1::pair.21"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE9__get_ptrERS8_(%"struct.std::__1::__value_type.20"* dereferenceable(32) %__n) #4 align 2 {
 entry:
-  %__n.addr = alloca %"struct.std::__1::__value_type.23"*, align 8
-  store %"struct.std::__1::__value_type.23"* %__n, %"struct.std::__1::__value_type.23"** %__n.addr, align 8
-  %0 = load %"struct.std::__1::__value_type.23"*, %"struct.std::__1::__value_type.23"** %__n.addr, align 8
-  %call = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.23"* %0)
+  %__n.addr = alloca %"struct.std::__1::__value_type.20"*, align 8
+  store %"struct.std::__1::__value_type.20"* %__n, %"struct.std::__1::__value_type.20"** %__n.addr, align 8
+  %0 = load %"struct.std::__1::__value_type.20"*, %"struct.std::__1::__value_type.20"** %__n.addr, align 8
+  %call = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.20"* %0)
   %call1 = call %"struct.std::__1::pair.21"* @_ZNSt3__1L9addressofINS_4pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEEEPT_RSA_(%"struct.std::__1::pair.21"* dereferenceable(32) %call) #2
   ret %"struct.std::__1::pair.21"* %call1
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE10deallocateERSC_PSB_m(%"class.std::__1::allocator.8"* dereferenceable(1) %__a, %"class.std::__1::__tree_node.22"* %__p, i64 %__n) #1 align 2 {
+define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE10deallocateERSC_PSB_m(%"class.std::__1::allocator.8"* dereferenceable(1) %__a, %"class.std::__1::__tree_node.19"* %__p, i64 %__n) #1 align 2 {
 entry:
   %__a.addr = alloca %"class.std::__1::allocator.8"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
+  %__p.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
   %__n.addr = alloca i64, align 8
   store %"class.std::__1::allocator.8"* %__a, %"class.std::__1::allocator.8"** %__a.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
   store i64 %__n, i64* %__n.addr, align 8
   %0 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__a.addr, align 8
-  %1 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
+  %1 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
   %2 = load i64, i64* %__n.addr, align 8
-  call void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE10deallocateEPSA_m(%"class.std::__1::allocator.8"* %0, %"class.std::__1::__tree_node.22"* %1, i64 %2) #2
+  call void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE10deallocateEPSA_m(%"class.std::__1::allocator.8"* %0, %"class.std::__1::__tree_node.19"* %1, i64 %2) #2
   ret void
 }
 
@@ -10628,27 +15001,27 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.23"* %this) #1 align 2 {
+define internal dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.20"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__value_type.23"*, align 8
-  store %"struct.std::__1::__value_type.23"* %this, %"struct.std::__1::__value_type.23"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__value_type.23"*, %"struct.std::__1::__value_type.23"** %this.addr, align 8
-  %__cc = getelementptr inbounds %"struct.std::__1::__value_type.23", %"struct.std::__1::__value_type.23"* %this1, i32 0, i32 0
+  %this.addr = alloca %"struct.std::__1::__value_type.20"*, align 8
+  store %"struct.std::__1::__value_type.20"* %this, %"struct.std::__1::__value_type.20"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__value_type.20"*, %"struct.std::__1::__value_type.20"** %this.addr, align 8
+  %__cc = getelementptr inbounds %"struct.std::__1::__value_type.20", %"struct.std::__1::__value_type.20"* %this1, i32 0, i32 0
   ret %"struct.std::__1::pair.21"* %__cc
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE10deallocateEPSA_m(%"class.std::__1::allocator.8"* %this, %"class.std::__1::__tree_node.22"* %__p, i64) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE10deallocateEPSA_m(%"class.std::__1::allocator.8"* %this, %"class.std::__1::__tree_node.19"* %__p, i64) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %"class.std::__1::allocator.8"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
+  %__p.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
   %.addr = alloca i64, align 8
   store %"class.std::__1::allocator.8"* %this, %"class.std::__1::allocator.8"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
   store i64 %0, i64* %.addr, align 8
   %this1 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %this.addr, align 8
-  %1 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %2 = bitcast %"class.std::__1::__tree_node.22"* %1 to i8*
+  %1 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %2 = bitcast %"class.std::__1::__tree_node.19"* %1 to i8*
   invoke void @_ZNSt3__1L19__libcpp_deallocateEPvm(i8* %2, i64 8)
           to label %invoke.cont unwind label %terminate.lpad
 
@@ -12523,11 +16896,11 @@ entry:
   store %"class.std::__1::unique_ptr"* %this, %"class.std::__1::unique_ptr"** %this.addr, align 8
   %this1 = load %"class.std::__1::unique_ptr"*, %"class.std::__1::unique_ptr"** %this.addr, align 8
   %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr", %"class.std::__1::unique_ptr"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.25"* %__ptr_) #2
+  %call = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.23"* %__ptr_) #2
   %0 = load %struct.__sFILE*, %struct.__sFILE** %call, align 8
   store %struct.__sFILE* %0, %struct.__sFILE** %__t, align 8
   %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr", %"class.std::__1::unique_ptr"* %this1, i32 0, i32 0
-  %call3 = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.25"* %__ptr_2) #2
+  %call3 = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.23"* %__ptr_2) #2
   store %struct.__sFILE* null, %struct.__sFILE** %call3, align 8
   %1 = load %struct.__sFILE*, %struct.__sFILE** %__t, align 8
   ret %struct.__sFILE* %1
@@ -12556,7 +16929,7 @@ entry:
   %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr", %"class.std::__1::unique_ptr"* %this1, i32 0, i32 0
   %0 = load i32 (%struct.__sFILE*)**, i32 (%struct.__sFILE*)*** %__d.addr, align 8
   %call = call dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__1L4moveIRPFiP7__sFILEEEEONS_16remove_referenceIT_E4typeEOS7_(i32 (%struct.__sFILE*)** dereferenceable(8) %0) #2
-  invoke void @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EEC1IRS2_S4_EEOT_OT0_(%"class.std::__1::__compressed_pair.25"* %__ptr_, %struct.__sFILE** dereferenceable(8) %__p.addr, i32 (%struct.__sFILE*)** dereferenceable(8) %call)
+  invoke void @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EEC1IRS2_S4_EEOT_OT0_(%"class.std::__1::__compressed_pair.23"* %__ptr_, %struct.__sFILE** dereferenceable(8) %__p.addr, i32 (%struct.__sFILE*)** dereferenceable(8) %call)
           to label %invoke.cont unwind label %terminate.lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -12580,41 +16953,41 @@ entry:
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EEC1IRS2_S4_EEOT_OT0_(%"class.std::__1::__compressed_pair.25"* %this, %struct.__sFILE** dereferenceable(8) %__t1, i32 (%struct.__sFILE*)** dereferenceable(8) %__t2) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EEC1IRS2_S4_EEOT_OT0_(%"class.std::__1::__compressed_pair.23"* %this, %struct.__sFILE** dereferenceable(8) %__t1, i32 (%struct.__sFILE*)** dereferenceable(8) %__t2) unnamed_addr #4 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.25"*, align 8
+  %this.addr = alloca %"class.std::__1::__compressed_pair.23"*, align 8
   %__t1.addr = alloca %struct.__sFILE**, align 8
   %__t2.addr = alloca i32 (%struct.__sFILE*)**, align 8
-  store %"class.std::__1::__compressed_pair.25"* %this, %"class.std::__1::__compressed_pair.25"** %this.addr, align 8
+  store %"class.std::__1::__compressed_pair.23"* %this, %"class.std::__1::__compressed_pair.23"** %this.addr, align 8
   store %struct.__sFILE** %__t1, %struct.__sFILE*** %__t1.addr, align 8
   store i32 (%struct.__sFILE*)** %__t2, i32 (%struct.__sFILE*)*** %__t2.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.25"*, %"class.std::__1::__compressed_pair.25"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.23"*, %"class.std::__1::__compressed_pair.23"** %this.addr, align 8
   %0 = load %struct.__sFILE**, %struct.__sFILE*** %__t1.addr, align 8
   %1 = load i32 (%struct.__sFILE*)**, i32 (%struct.__sFILE*)*** %__t2.addr, align 8
-  call void @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EEC2IRS2_S4_EEOT_OT0_(%"class.std::__1::__compressed_pair.25"* %this1, %struct.__sFILE** dereferenceable(8) %0, i32 (%struct.__sFILE*)** dereferenceable(8) %1)
+  call void @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EEC2IRS2_S4_EEOT_OT0_(%"class.std::__1::__compressed_pair.23"* %this1, %struct.__sFILE** dereferenceable(8) %0, i32 (%struct.__sFILE*)** dereferenceable(8) %1)
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EEC2IRS2_S4_EEOT_OT0_(%"class.std::__1::__compressed_pair.25"* %this, %struct.__sFILE** dereferenceable(8) %__t1, i32 (%struct.__sFILE*)** dereferenceable(8) %__t2) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EEC2IRS2_S4_EEOT_OT0_(%"class.std::__1::__compressed_pair.23"* %this, %struct.__sFILE** dereferenceable(8) %__t1, i32 (%struct.__sFILE*)** dereferenceable(8) %__t2) unnamed_addr #4 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.25"*, align 8
+  %this.addr = alloca %"class.std::__1::__compressed_pair.23"*, align 8
   %__t1.addr = alloca %struct.__sFILE**, align 8
   %__t2.addr = alloca i32 (%struct.__sFILE*)**, align 8
-  store %"class.std::__1::__compressed_pair.25"* %this, %"class.std::__1::__compressed_pair.25"** %this.addr, align 8
+  store %"class.std::__1::__compressed_pair.23"* %this, %"class.std::__1::__compressed_pair.23"** %this.addr, align 8
   store %struct.__sFILE** %__t1, %struct.__sFILE*** %__t1.addr, align 8
   store i32 (%struct.__sFILE*)** %__t2, i32 (%struct.__sFILE*)*** %__t2.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.25"*, %"class.std::__1::__compressed_pair.25"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.25"* %this1 to %"struct.std::__1::__compressed_pair_elem.26"*
+  %this1 = load %"class.std::__1::__compressed_pair.23"*, %"class.std::__1::__compressed_pair.23"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.23"* %this1 to %"struct.std::__1::__compressed_pair_elem.24"*
   %1 = load %struct.__sFILE**, %struct.__sFILE*** %__t1.addr, align 8
   %call = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__1L7forwardIRP7__sFILEEEOT_RNS_16remove_referenceIS4_E4typeE(%struct.__sFILE** dereferenceable(8) %1) #2
-  call void @_ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EEC2IRS2_vEEOT_(%"struct.std::__1::__compressed_pair_elem.26"* %0, %struct.__sFILE** dereferenceable(8) %call)
-  %2 = bitcast %"class.std::__1::__compressed_pair.25"* %this1 to i8*
+  call void @_ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EEC2IRS2_vEEOT_(%"struct.std::__1::__compressed_pair_elem.24"* %0, %struct.__sFILE** dereferenceable(8) %call)
+  %2 = bitcast %"class.std::__1::__compressed_pair.23"* %this1 to i8*
   %3 = getelementptr inbounds i8, i8* %2, i64 8
-  %4 = bitcast i8* %3 to %"struct.std::__1::__compressed_pair_elem.27"*
+  %4 = bitcast i8* %3 to %"struct.std::__1::__compressed_pair_elem.25"*
   %5 = load i32 (%struct.__sFILE*)**, i32 (%struct.__sFILE*)*** %__t2.addr, align 8
   %call2 = call dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__1L7forwardIPFiP7__sFILEEEEOT_RNS_16remove_referenceIS5_E4typeE(i32 (%struct.__sFILE*)** dereferenceable(8) %5) #2
-  call void @_ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EEC2IS4_vEEOT_(%"struct.std::__1::__compressed_pair_elem.27"* %4, i32 (%struct.__sFILE*)** dereferenceable(8) %call2)
+  call void @_ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EEC2IS4_vEEOT_(%"struct.std::__1::__compressed_pair_elem.25"* %4, i32 (%struct.__sFILE*)** dereferenceable(8) %call2)
   ret void
 }
 
@@ -12628,14 +17001,14 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EEC2IRS2_vEEOT_(%"struct.std::__1::__compressed_pair_elem.26"* %this, %struct.__sFILE** dereferenceable(8) %__u) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EEC2IRS2_vEEOT_(%"struct.std::__1::__compressed_pair_elem.24"* %this, %struct.__sFILE** dereferenceable(8) %__u) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.26"*, align 8
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.24"*, align 8
   %__u.addr = alloca %struct.__sFILE**, align 8
-  store %"struct.std::__1::__compressed_pair_elem.26"* %this, %"struct.std::__1::__compressed_pair_elem.26"** %this.addr, align 8
+  store %"struct.std::__1::__compressed_pair_elem.24"* %this, %"struct.std::__1::__compressed_pair_elem.24"** %this.addr, align 8
   store %struct.__sFILE** %__u, %struct.__sFILE*** %__u.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.26"*, %"struct.std::__1::__compressed_pair_elem.26"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.26", %"struct.std::__1::__compressed_pair_elem.26"* %this1, i32 0, i32 0
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.24"*, %"struct.std::__1::__compressed_pair_elem.24"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.24", %"struct.std::__1::__compressed_pair_elem.24"* %this1, i32 0, i32 0
   %0 = load %struct.__sFILE**, %struct.__sFILE*** %__u.addr, align 8
   %call = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__1L7forwardIRP7__sFILEEEOT_RNS_16remove_referenceIS4_E4typeE(%struct.__sFILE** dereferenceable(8) %0) #2
   %1 = load %struct.__sFILE*, %struct.__sFILE** %call, align 8
@@ -12653,14 +17026,14 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EEC2IS4_vEEOT_(%"struct.std::__1::__compressed_pair_elem.27"* %this, i32 (%struct.__sFILE*)** dereferenceable(8) %__u) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EEC2IS4_vEEOT_(%"struct.std::__1::__compressed_pair_elem.25"* %this, i32 (%struct.__sFILE*)** dereferenceable(8) %__u) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.27"*, align 8
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.25"*, align 8
   %__u.addr = alloca i32 (%struct.__sFILE*)**, align 8
-  store %"struct.std::__1::__compressed_pair_elem.27"* %this, %"struct.std::__1::__compressed_pair_elem.27"** %this.addr, align 8
+  store %"struct.std::__1::__compressed_pair_elem.25"* %this, %"struct.std::__1::__compressed_pair_elem.25"** %this.addr, align 8
   store i32 (%struct.__sFILE*)** %__u, i32 (%struct.__sFILE*)*** %__u.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.27"*, %"struct.std::__1::__compressed_pair_elem.27"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.27", %"struct.std::__1::__compressed_pair_elem.27"* %this1, i32 0, i32 0
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.25"*, %"struct.std::__1::__compressed_pair_elem.25"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.25", %"struct.std::__1::__compressed_pair_elem.25"* %this1, i32 0, i32 0
   %0 = load i32 (%struct.__sFILE*)**, i32 (%struct.__sFILE*)*** %__u.addr, align 8
   %call = call dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__1L7forwardIPFiP7__sFILEEEEOT_RNS_16remove_referenceIS5_E4typeE(i32 (%struct.__sFILE*)** dereferenceable(8) %0) #2
   %1 = load i32 (%struct.__sFILE*)*, i32 (%struct.__sFILE*)** %call, align 8
@@ -12669,23 +17042,23 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.25"* %this) #1 align 2 {
+define internal dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.23"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.25"*, align 8
-  store %"class.std::__1::__compressed_pair.25"* %this, %"class.std::__1::__compressed_pair.25"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.25"*, %"class.std::__1::__compressed_pair.25"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.25"* %this1 to %"struct.std::__1::__compressed_pair_elem.26"*
-  %call = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.26"* %0) #2
+  %this.addr = alloca %"class.std::__1::__compressed_pair.23"*, align 8
+  store %"class.std::__1::__compressed_pair.23"* %this, %"class.std::__1::__compressed_pair.23"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.23"*, %"class.std::__1::__compressed_pair.23"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.23"* %this1 to %"struct.std::__1::__compressed_pair_elem.24"*
+  %call = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.24"* %0) #2
   ret %struct.__sFILE** %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %struct.__sFILE** @_ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.26"* %this) #1 align 2 {
+define internal dereferenceable(8) %struct.__sFILE** @_ZNSt3__122__compressed_pair_elemIP7__sFILELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.24"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.26"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.26"* %this, %"struct.std::__1::__compressed_pair_elem.26"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.26"*, %"struct.std::__1::__compressed_pair_elem.26"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.26", %"struct.std::__1::__compressed_pair_elem.26"* %this1, i32 0, i32 0
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.24"*, align 8
+  store %"struct.std::__1::__compressed_pair_elem.24"* %this, %"struct.std::__1::__compressed_pair_elem.24"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.24"*, %"struct.std::__1::__compressed_pair_elem.24"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.24", %"struct.std::__1::__compressed_pair_elem.24"* %this1, i32 0, i32 0
   ret %struct.__sFILE** %__value_
 }
 
@@ -12709,12 +17082,12 @@ entry:
   store %struct.__sFILE* %__p, %struct.__sFILE** %__p.addr, align 8
   %this1 = load %"class.std::__1::unique_ptr"*, %"class.std::__1::unique_ptr"** %this.addr, align 8
   %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr", %"class.std::__1::unique_ptr"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.25"* %__ptr_) #2
+  %call = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.23"* %__ptr_) #2
   %0 = load %struct.__sFILE*, %struct.__sFILE** %call, align 8
   store %struct.__sFILE* %0, %struct.__sFILE** %__tmp, align 8
   %1 = load %struct.__sFILE*, %struct.__sFILE** %__p.addr, align 8
   %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr", %"class.std::__1::unique_ptr"* %this1, i32 0, i32 0
-  %call3 = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.25"* %__ptr_2) #2
+  %call3 = call dereferenceable(8) %struct.__sFILE** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE5firstEv(%"class.std::__1::__compressed_pair.23"* %__ptr_2) #2
   store %struct.__sFILE* %1, %struct.__sFILE** %call3, align 8
   %2 = load %struct.__sFILE*, %struct.__sFILE** %__tmp, align 8
   %tobool = icmp ne %struct.__sFILE* %2, null
@@ -12722,7 +17095,7 @@ entry:
 
 if.then:                                          ; preds = %entry
   %__ptr_4 = getelementptr inbounds %"class.std::__1::unique_ptr", %"class.std::__1::unique_ptr"* %this1, i32 0, i32 0
-  %call5 = call dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE6secondEv(%"class.std::__1::__compressed_pair.25"* %__ptr_4) #2
+  %call5 = call dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE6secondEv(%"class.std::__1::__compressed_pair.23"* %__ptr_4) #2
   %3 = load i32 (%struct.__sFILE*)*, i32 (%struct.__sFILE*)** %call5, align 8
   %4 = load %struct.__sFILE*, %struct.__sFILE** %__tmp, align 8
   %call6 = invoke i32 %3(%struct.__sFILE* %4)
@@ -12743,25 +17116,25 @@ terminate.lpad:                                   ; preds = %if.then
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE6secondEv(%"class.std::__1::__compressed_pair.25"* %this) #1 align 2 {
+define internal dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__117__compressed_pairIP7__sFILEPFiS2_EE6secondEv(%"class.std::__1::__compressed_pair.23"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.25"*, align 8
-  store %"class.std::__1::__compressed_pair.25"* %this, %"class.std::__1::__compressed_pair.25"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.25"*, %"class.std::__1::__compressed_pair.25"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.25"* %this1 to i8*
+  %this.addr = alloca %"class.std::__1::__compressed_pair.23"*, align 8
+  store %"class.std::__1::__compressed_pair.23"* %this, %"class.std::__1::__compressed_pair.23"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.23"*, %"class.std::__1::__compressed_pair.23"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.23"* %this1 to i8*
   %add.ptr = getelementptr inbounds i8, i8* %0, i64 8
-  %1 = bitcast i8* %add.ptr to %"struct.std::__1::__compressed_pair_elem.27"*
-  %call = call dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.27"* %1) #2
+  %1 = bitcast i8* %add.ptr to %"struct.std::__1::__compressed_pair_elem.25"*
+  %call = call dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.25"* %1) #2
   ret i32 (%struct.__sFILE*)** %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.27"* %this) #1 align 2 {
+define internal dereferenceable(8) i32 (%struct.__sFILE*)** @_ZNSt3__122__compressed_pair_elemIPFiP7__sFILEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.25"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.27"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.27"* %this, %"struct.std::__1::__compressed_pair_elem.27"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.27"*, %"struct.std::__1::__compressed_pair_elem.27"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.27", %"struct.std::__1::__compressed_pair_elem.27"* %this1, i32 0, i32 0
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.25"*, align 8
+  store %"struct.std::__1::__compressed_pair_elem.25"* %this, %"struct.std::__1::__compressed_pair_elem.25"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.25"*, %"struct.std::__1::__compressed_pair_elem.25"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.25", %"struct.std::__1::__compressed_pair_elem.25"* %this1, i32 0, i32 0
   ret i32 (%struct.__sFILE*)** %__value_
 }
 
@@ -13201,7 +17574,7 @@ define internal dereferenceable(8) i64* @_ZNSt3__1L3minImEERKT_S3_S3_(i64* deref
 entry:
   %__a.addr = alloca i64*, align 8
   %__b.addr = alloca i64*, align 8
-  %agg.tmp = alloca %"struct.std::__1::__less.28", align 1
+  %agg.tmp = alloca %"struct.std::__1::__less.26", align 1
   store i64* %__a, i64** %__a.addr, align 8
   store i64* %__b, i64** %__b.addr, align 8
   %0 = load i64*, i64** %__a.addr, align 8
@@ -13263,14 +17636,14 @@ entry:
 ; Function Attrs: noinline optnone ssp uwtable
 define internal dereferenceable(8) i64* @_ZNSt3__1L3minImNS_6__lessImmEEEERKT_S5_S5_T0_(i64* dereferenceable(8) %__a, i64* dereferenceable(8) %__b) #4 {
 entry:
-  %__comp = alloca %"struct.std::__1::__less.28", align 1
+  %__comp = alloca %"struct.std::__1::__less.26", align 1
   %__a.addr = alloca i64*, align 8
   %__b.addr = alloca i64*, align 8
   store i64* %__a, i64** %__a.addr, align 8
   store i64* %__b, i64** %__b.addr, align 8
   %0 = load i64*, i64** %__b.addr, align 8
   %1 = load i64*, i64** %__a.addr, align 8
-  %call = call zeroext i1 @_ZNKSt3__16__lessImmEclERKmS3_(%"struct.std::__1::__less.28"* %__comp, i64* dereferenceable(8) %0, i64* dereferenceable(8) %1)
+  %call = call zeroext i1 @_ZNKSt3__16__lessImmEclERKmS3_(%"struct.std::__1::__less.26"* %__comp, i64* dereferenceable(8) %0, i64* dereferenceable(8) %1)
   br i1 %call, label %cond.true, label %cond.false
 
 cond.true:                                        ; preds = %entry
@@ -13287,15 +17660,15 @@ cond.end:                                         ; preds = %cond.false, %cond.t
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal zeroext i1 @_ZNKSt3__16__lessImmEclERKmS3_(%"struct.std::__1::__less.28"* %this, i64* dereferenceable(8) %__x, i64* dereferenceable(8) %__y) #1 align 2 {
+define internal zeroext i1 @_ZNKSt3__16__lessImmEclERKmS3_(%"struct.std::__1::__less.26"* %this, i64* dereferenceable(8) %__x, i64* dereferenceable(8) %__y) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__less.28"*, align 8
+  %this.addr = alloca %"struct.std::__1::__less.26"*, align 8
   %__x.addr = alloca i64*, align 8
   %__y.addr = alloca i64*, align 8
-  store %"struct.std::__1::__less.28"* %this, %"struct.std::__1::__less.28"** %this.addr, align 8
+  store %"struct.std::__1::__less.26"* %this, %"struct.std::__1::__less.26"** %this.addr, align 8
   store i64* %__x, i64** %__x.addr, align 8
   store i64* %__y, i64** %__y.addr, align 8
-  %this1 = load %"struct.std::__1::__less.28"*, %"struct.std::__1::__less.28"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__less.26"*, %"struct.std::__1::__less.26"** %this.addr, align 8
   %0 = load i64*, i64** %__x.addr, align 8
   %1 = load i64, i64* %0, align 8
   %2 = load i64*, i64** %__y.addr, align 8
@@ -14531,7 +18904,7 @@ define internal dereferenceable(8) i8** @_ZNSt3__1L3maxIPcEERKT_S4_S4_(i8** dere
 entry:
   %__a.addr = alloca i8**, align 8
   %__b.addr = alloca i8**, align 8
-  %agg.tmp = alloca %"struct.std::__1::__less.29", align 1
+  %agg.tmp = alloca %"struct.std::__1::__less.27", align 1
   store i8** %__a, i8*** %__a.addr, align 8
   store i8** %__b, i8*** %__b.addr, align 8
   %0 = load i8**, i8*** %__a.addr, align 8
@@ -14639,14 +19012,14 @@ entry:
 ; Function Attrs: noinline optnone ssp uwtable
 define internal dereferenceable(8) i8** @_ZNSt3__1L3maxIPcNS_6__lessIS1_S1_EEEERKT_S6_S6_T0_(i8** dereferenceable(8) %__a, i8** dereferenceable(8) %__b) #4 {
 entry:
-  %__comp = alloca %"struct.std::__1::__less.29", align 1
+  %__comp = alloca %"struct.std::__1::__less.27", align 1
   %__a.addr = alloca i8**, align 8
   %__b.addr = alloca i8**, align 8
   store i8** %__a, i8*** %__a.addr, align 8
   store i8** %__b, i8*** %__b.addr, align 8
   %0 = load i8**, i8*** %__a.addr, align 8
   %1 = load i8**, i8*** %__b.addr, align 8
-  %call = call zeroext i1 @_ZNKSt3__16__lessIPcS1_EclERKS1_S4_(%"struct.std::__1::__less.29"* %__comp, i8** dereferenceable(8) %0, i8** dereferenceable(8) %1)
+  %call = call zeroext i1 @_ZNKSt3__16__lessIPcS1_EclERKS1_S4_(%"struct.std::__1::__less.27"* %__comp, i8** dereferenceable(8) %0, i8** dereferenceable(8) %1)
   br i1 %call, label %cond.true, label %cond.false
 
 cond.true:                                        ; preds = %entry
@@ -14663,15 +19036,15 @@ cond.end:                                         ; preds = %cond.false, %cond.t
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal zeroext i1 @_ZNKSt3__16__lessIPcS1_EclERKS1_S4_(%"struct.std::__1::__less.29"* %this, i8** dereferenceable(8) %__x, i8** dereferenceable(8) %__y) #1 align 2 {
+define internal zeroext i1 @_ZNKSt3__16__lessIPcS1_EclERKS1_S4_(%"struct.std::__1::__less.27"* %this, i8** dereferenceable(8) %__x, i8** dereferenceable(8) %__y) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__less.29"*, align 8
+  %this.addr = alloca %"struct.std::__1::__less.27"*, align 8
   %__x.addr = alloca i8**, align 8
   %__y.addr = alloca i8**, align 8
-  store %"struct.std::__1::__less.29"* %this, %"struct.std::__1::__less.29"** %this.addr, align 8
+  store %"struct.std::__1::__less.27"* %this, %"struct.std::__1::__less.27"** %this.addr, align 8
   store i8** %__x, i8*** %__x.addr, align 8
   store i8** %__y, i8*** %__y.addr, align 8
-  %this1 = load %"struct.std::__1::__less.29"*, %"struct.std::__1::__less.29"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__less.27"*, %"struct.std::__1::__less.27"** %this.addr, align 8
   %0 = load i8**, i8*** %__x.addr, align 8
   %1 = load i8*, i8** %0, align 8
   %2 = load i8**, i8*** %__y.addr, align 8
@@ -16205,19 +20578,19 @@ entry:
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__k, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__k, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %retval = alloca %"struct.std::__1::pair.30", align 8
+  %retval = alloca %"struct.std::__1::pair.28", align 8
   %this.addr = alloca %"class.std::__1::__tree"*, align 8
   %__k.addr = alloca %"class.std::__1::basic_string"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %__parent = alloca %"class.std::__1::__tree_end_node"*, align 8
   %__child = alloca %"class.std::__1::__tree_node_base"**, align 8
   %__r = alloca %"class.std::__1::__tree_node"*, align 8
   %__inserted = alloca i8, align 1
-  %__h = alloca %"class.std::__1::unique_ptr.32", align 8
+  %__h = alloca %"class.std::__1::unique_ptr.30", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   %ref.tmp = alloca %"class.std::__1::__tree_iterator", align 8
@@ -16225,7 +20598,7 @@ entry:
   store %"class.std::__1::basic_string"* %__k, %"class.std::__1::basic_string"** %__k.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::__tree"*, %"class.std::__1::__tree"** %this.addr, align 8
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__k.addr, align 8
   %call = call dereferenceable(8) %"class.std::__1::__tree_node_base"** @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__find_equalIS7_EERPNS_16__tree_node_baseIPvEERPNS_15__tree_end_nodeISJ_EERKT_(%"class.std::__1::__tree"* %this5, %"class.std::__1::__tree_end_node"** dereferenceable(8) %__parent, %"class.std::__1::basic_string"* dereferenceable(24) %0)
@@ -16245,21 +20618,21 @@ if.then:                                          ; preds = %entry
   %call6 = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %6) #2
   %7 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__args.addr2, align 8
   %call7 = call dereferenceable(8) %"class.std::__1::tuple"* @_ZNSt3__1L7forwardINS_5tupleIJONS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISA_E4typeE(%"class.std::__1::tuple"* dereferenceable(8) %7) #2
-  %8 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call8 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %8) #2
-  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISQ_EEEEEEDpOT_(%"class.std::__1::unique_ptr.32"* sret %__h, %"class.std::__1::__tree"* %this5, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call6, %"class.std::__1::tuple"* dereferenceable(8) %call7, %"class.std::__1::tuple.31"* dereferenceable(1) %call8)
+  %8 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call8 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %8) #2
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISQ_EEEEEEDpOT_(%"class.std::__1::unique_ptr.30"* sret %__h, %"class.std::__1::__tree"* %this5, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call6, %"class.std::__1::tuple"* dereferenceable(8) %call7, %"class.std::__1::tuple.29"* dereferenceable(1) %call8)
   %9 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__parent, align 8
   %10 = load %"class.std::__1::__tree_node_base"**, %"class.std::__1::__tree_node_base"*** %__child, align 8
-  %call9 = call %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.32"* %__h) #2
+  %call9 = call %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.30"* %__h) #2
   %11 = bitcast %"class.std::__1::__tree_node"* %call9 to %"class.std::__1::__tree_node_base"*
   invoke void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__insert_node_atEPNS_15__tree_end_nodeIPNS_16__tree_node_baseIPvEEEERSJ_SJ_(%"class.std::__1::__tree"* %this5, %"class.std::__1::__tree_end_node"* %9, %"class.std::__1::__tree_node_base"** dereferenceable(8) %10, %"class.std::__1::__tree_node_base"* %11)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %if.then
-  %call10 = call %"class.std::__1::__tree_node"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.32"* %__h) #2
+  %call10 = call %"class.std::__1::__tree_node"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.30"* %__h) #2
   store %"class.std::__1::__tree_node"* %call10, %"class.std::__1::__tree_node"** %__r, align 8
   store i8 1, i8* %__inserted, align 1
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %__h) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %__h) #2
   br label %if.end
 
 lpad:                                             ; preds = %if.then
@@ -16269,14 +20642,14 @@ lpad:                                             ; preds = %if.then
   store i8* %13, i8** %exn.slot, align 8
   %14 = extractvalue { i8*, i32 } %12, 1
   store i32 %14, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %__h) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %__h) #2
   br label %eh.resume
 
 if.end:                                           ; preds = %invoke.cont, %entry
   %15 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %__r, align 8
   call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EEPNS_11__tree_nodeIS8_PvEElEC1ESC_(%"class.std::__1::__tree_iterator"* %ref.tmp, %"class.std::__1::__tree_node"* %15) #2
-  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.30"* %retval, %"class.std::__1::__tree_iterator"* dereferenceable(8) %ref.tmp, i8* dereferenceable(1) %__inserted) #2
-  %16 = bitcast %"struct.std::__1::pair.30"* %retval to { %"class.std::__1::__tree_end_node"*, i8 }*
+  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.28"* %retval, %"class.std::__1::__tree_iterator"* dereferenceable(8) %ref.tmp, i8* dereferenceable(1) %__inserted) #2
+  %16 = bitcast %"struct.std::__1::pair.28"* %retval to { %"class.std::__1::__tree_end_node"*, i8 }*
   %17 = load { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %16, align 8
   ret { %"class.std::__1::__tree_end_node"*, i8 } %17
 
@@ -16316,8 +20689,8 @@ entry:
 ; Function Attrs: noinline nounwind optnone ssp uwtable
 define internal void @_ZNSt3__1L16forward_as_tupleIJEEENS_5tupleIJDpOT_EEES4_() #1 {
 entry:
-  %retval = alloca %"class.std::__1::tuple.31", align 1
-  call void @_ZNSt3__15tupleIJEEC1Ev(%"class.std::__1::tuple.31"* %retval) #2
+  %retval = alloca %"class.std::__1::tuple.29", align 1
+  call void @_ZNSt3__15tupleIJEEC1Ev(%"class.std::__1::tuple.29"* %retval) #2
   ret void
 }
 
@@ -16464,12 +20837,12 @@ return:                                           ; preds = %if.end28, %if.else2
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISQ_EEEEEEDpOT_(%"class.std::__1::unique_ptr.32"* noalias sret %agg.result, %"class.std::__1::__tree"* %this, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISQ_EEEEEEDpOT_(%"class.std::__1::unique_ptr.30"* noalias sret %agg.result, %"class.std::__1::__tree"* %this, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %"class.std::__1::__tree"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %__na = alloca %"class.std::__1::allocator"*, align 8
   %nrvo = alloca i1, align 1
   %ref.tmp = alloca %"class.std::__1::__tree_node_destructor", align 8
@@ -16478,7 +20851,7 @@ entry:
   store %"class.std::__1::__tree"* %this, %"class.std::__1::__tree"** %this.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::__tree"*, %"class.std::__1::__tree"** %this.addr, align 8
   %call = call dereferenceable(1) %"class.std::__1::allocator"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__node_allocEv(%"class.std::__1::__tree"* %this5) #2
   store %"class.std::__1::allocator"* %call, %"class.std::__1::allocator"** %__na, align 8
@@ -16487,9 +20860,9 @@ entry:
   %call6 = call %"class.std::__1::__tree_node"* @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE8allocateERSC_m(%"class.std::__1::allocator"* dereferenceable(1) %0, i64 1)
   %1 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %__na, align 8
   call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEEC1ERSC_b(%"class.std::__1::__tree_node_destructor"* %ref.tmp, %"class.std::__1::allocator"* dereferenceable(1) %1, i1 zeroext false) #2
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.32"* %agg.result, %"class.std::__1::__tree_node"* %call6, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %ref.tmp) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.30"* %agg.result, %"class.std::__1::__tree_node"* %call6, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %ref.tmp) #2
   %2 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %__na, align 8
-  %call7 = call %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.32"* %agg.result) #2
+  %call7 = call %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.30"* %agg.result) #2
   %__value_ = getelementptr inbounds %"class.std::__1::__tree_node", %"class.std::__1::__tree_node"* %call7, i32 0, i32 1
   %call8 = invoke %"struct.std::__1::pair"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EEE9__get_ptrERS8_(%"struct.std::__1::__value_type"* dereferenceable(48) %__value_)
           to label %invoke.cont unwind label %lpad
@@ -16499,13 +20872,13 @@ invoke.cont:                                      ; preds = %entry
   %call9 = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
   %4 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__args.addr2, align 8
   %call10 = call dereferenceable(8) %"class.std::__1::tuple"* @_ZNSt3__1L7forwardINS_5tupleIJONS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISA_E4typeE(%"class.std::__1::tuple"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call11 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  invoke void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE9constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %2, %"struct.std::__1::pair"* %call8, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call9, %"class.std::__1::tuple"* dereferenceable(8) %call10, %"class.std::__1::tuple.31"* dereferenceable(1) %call11)
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call11 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  invoke void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE9constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %2, %"struct.std::__1::pair"* %call8, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call9, %"class.std::__1::tuple"* dereferenceable(8) %call10, %"class.std::__1::tuple.29"* dereferenceable(1) %call11)
           to label %invoke.cont12 unwind label %lpad
 
 invoke.cont12:                                    ; preds = %invoke.cont
-  %call13 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.32"* %agg.result) #2
+  %call13 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.30"* %agg.result) #2
   %__value_constructed = getelementptr inbounds %"class.std::__1::__tree_node_destructor", %"class.std::__1::__tree_node_destructor"* %call13, i32 0, i32 1
   store i8 1, i8* %__value_constructed, align 8
   store i1 true, i1* %nrvo, align 1
@@ -16519,11 +20892,11 @@ lpad:                                             ; preds = %invoke.cont, %entry
   store i8* %7, i8** %exn.slot, align 8
   %8 = extractvalue { i8*, i32 } %6, 1
   store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %agg.result) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %agg.result) #2
   br label %eh.resume
 
 nrvo.unused:                                      ; preds = %invoke.cont12
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %agg.result) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %agg.result) #2
   br label %nrvo.skipdtor
 
 nrvo.skipdtor:                                    ; preds = %nrvo.unused, %invoke.cont12
@@ -16556,12 +20929,12 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %__t) #1 {
+define internal dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %__t) #1 {
 entry:
-  %__t.addr = alloca %"class.std::__1::tuple.31"*, align 8
-  store %"class.std::__1::tuple.31"* %__t, %"class.std::__1::tuple.31"** %__t.addr, align 8
-  %0 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__t.addr, align 8
-  ret %"class.std::__1::tuple.31"* %0
+  %__t.addr = alloca %"class.std::__1::tuple.29"*, align 8
+  store %"class.std::__1::tuple.29"* %__t, %"class.std::__1::tuple.29"** %__t.addr, align 8
+  %0 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__t.addr, align 8
+  ret %"class.std::__1::tuple.29"* %0
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
@@ -16622,42 +20995,42 @@ if.end:                                           ; preds = %if.then, %entry
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.32"* %this) #1 align 2 {
+define internal %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.30"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.33"* %__ptr_) #2
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.31"* %__ptr_) #2
   %0 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %call, align 8
   ret %"class.std::__1::__tree_node"* %0
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_node"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.32"* %this) #1 align 2 {
+define internal %"class.std::__1::__tree_node"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.30"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
   %__t = alloca %"class.std::__1::__tree_node"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.33"* %__ptr_) #2
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.31"* %__ptr_) #2
   %0 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %call, align 8
   store %"class.std::__1::__tree_node"* %0, %"class.std::__1::__tree_node"** %__t, align 8
-  %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
-  %call3 = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.33"* %__ptr_2) #2
+  %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
+  %call3 = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.31"* %__ptr_2) #2
   store %"class.std::__1::__tree_node"* null, %"class.std::__1::__tree_node"** %call3, align 8
   %1 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %__t, align 8
   ret %"class.std::__1::__tree_node"* %1
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %this) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %this) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED2Ev(%"class.std::__1::unique_ptr.32"* %this1) #2
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED2Ev(%"class.std::__1::unique_ptr.30"* %this1) #2
   ret void
 }
 
@@ -16675,18 +21048,18 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.30"* %this, %"class.std::__1::__tree_iterator"* dereferenceable(8) %__u1, i8* dereferenceable(1) %__u2) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.28"* %this, %"class.std::__1::__tree_iterator"* dereferenceable(8) %__u1, i8* dereferenceable(1) %__u2) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::pair.30"*, align 8
+  %this.addr = alloca %"struct.std::__1::pair.28"*, align 8
   %__u1.addr = alloca %"class.std::__1::__tree_iterator"*, align 8
   %__u2.addr = alloca i8*, align 8
-  store %"struct.std::__1::pair.30"* %this, %"struct.std::__1::pair.30"** %this.addr, align 8
+  store %"struct.std::__1::pair.28"* %this, %"struct.std::__1::pair.28"** %this.addr, align 8
   store %"class.std::__1::__tree_iterator"* %__u1, %"class.std::__1::__tree_iterator"** %__u1.addr, align 8
   store i8* %__u2, i8** %__u2.addr, align 8
-  %this1 = load %"struct.std::__1::pair.30"*, %"struct.std::__1::pair.30"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::pair.28"*, %"struct.std::__1::pair.28"** %this.addr, align 8
   %0 = load %"class.std::__1::__tree_iterator"*, %"class.std::__1::__tree_iterator"** %__u1.addr, align 8
   %1 = load i8*, i8** %__u2.addr, align 8
-  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC2ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.30"* %this1, %"class.std::__1::__tree_iterator"* dereferenceable(8) %0, i8* dereferenceable(1) %1) #2
+  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC2ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.28"* %this1, %"class.std::__1::__tree_iterator"* dereferenceable(8) %0, i8* dereferenceable(1) %1) #2
   ret void
 }
 
@@ -16743,69 +21116,69 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::__tree_node"* %__p, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__d) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::__tree_node"* %__p, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__d) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
   %__p.addr = alloca %"class.std::__1::__tree_node"*, align 8
   %__d.addr = alloca %"class.std::__1::__tree_node_destructor"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
   store %"class.std::__1::__tree_node"* %__p, %"class.std::__1::__tree_node"** %__p.addr, align 8
   store %"class.std::__1::__tree_node_destructor"* %__d, %"class.std::__1::__tree_node_destructor"** %__d.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
   %0 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %__p.addr, align 8
   %1 = load %"class.std::__1::__tree_node_destructor"*, %"class.std::__1::__tree_node_destructor"** %__d.addr, align 8
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.32"* %this1, %"class.std::__1::__tree_node"* %0, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %1) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.30"* %this1, %"class.std::__1::__tree_node"* %0, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %1) #2
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE9constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %__a, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 {
+define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE9constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %__a, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 {
 entry:
   %__a.addr = alloca %"class.std::__1::allocator"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
-  %agg.tmp = alloca %"struct.std::__1::integral_constant.36", align 1
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
+  %agg.tmp = alloca %"struct.std::__1::integral_constant.34", align 1
   %ref.tmp = alloca %"struct.std::__1::__has_construct", align 1
   store %"class.std::__1::allocator"* %__a, %"class.std::__1::allocator"** %__a.addr, align 8
   store %"struct.std::__1::pair"* %__p, %"struct.std::__1::pair"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %0 = bitcast %"struct.std::__1::__has_construct"* %ref.tmp to %"struct.std::__1::integral_constant.36"*
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %0 = bitcast %"struct.std::__1::__has_construct"* %ref.tmp to %"struct.std::__1::integral_constant.34"*
   %1 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %__a.addr, align 8
   %2 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %__p.addr, align 8
   %3 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
   %4 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__args.addr2, align 8
   %call5 = call dereferenceable(8) %"class.std::__1::tuple"* @_ZNSt3__1L7forwardINS_5tupleIJONS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISA_E4typeE(%"class.std::__1::tuple"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call6 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE11__constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %1, %"struct.std::__1::pair"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple"* dereferenceable(8) %call5, %"class.std::__1::tuple.31"* dereferenceable(1) %call6)
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call6 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE11__constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %1, %"struct.std::__1::pair"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple"* dereferenceable(8) %call5, %"class.std::__1::tuple.29"* dereferenceable(1) %call6)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.32"* %this) #1 align 2 {
+define internal %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.30"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.33"* %__ptr_) #2
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.31"* %__ptr_) #2
   %0 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %call, align 8
   ret %"class.std::__1::__tree_node"* %0
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.32"* %this) #1 align 2 {
+define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.30"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
-  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.33"* %__ptr_) #2
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
+  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.31"* %__ptr_) #2
   ret %"class.std::__1::__tree_node_destructor"* %call
 }
 
@@ -16825,7 +21198,7 @@ entry:
   br i1 %cmp, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  call void @_ZNSt3__1L20__throw_length_errorEPKc(i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.83, i32 0, i32 0)) #16
+  call void @_ZNSt3__1L20__throw_length_errorEPKc(i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.82, i32 0, i32 0)) #16
   unreachable
 
 if.end:                                           ; preds = %entry
@@ -16957,19 +21330,19 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::__tree_node"* %__p, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__d) unnamed_addr #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::__tree_node"* %__p, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__d) unnamed_addr #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
   %__p.addr = alloca %"class.std::__1::__tree_node"*, align 8
   %__d.addr = alloca %"class.std::__1::__tree_node_destructor"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
   store %"class.std::__1::__tree_node"* %__p, %"class.std::__1::__tree_node"** %__p.addr, align 8
   store %"class.std::__1::__tree_node_destructor"* %__d, %"class.std::__1::__tree_node_destructor"** %__d.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::__tree_node_destructor"*, %"class.std::__1::__tree_node_destructor"** %__d.addr, align 8
   %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__1L4moveIRNS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEEEEONS_16remove_referenceIT_E4typeEOSH_(%"class.std::__1::__tree_node_destructor"* dereferenceable(16) %0) #2
-  invoke void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.33"* %__ptr_, %"class.std::__1::__tree_node"** dereferenceable(8) %__p.addr, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %call)
+  invoke void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.31"* %__ptr_, %"class.std::__1::__tree_node"** dereferenceable(8) %__p.addr, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %call)
           to label %invoke.cont unwind label %terminate.lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -16993,41 +21366,41 @@ entry:
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.33"* %this, %"class.std::__1::__tree_node"** dereferenceable(8) %__t1, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__t2) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.31"* %this, %"class.std::__1::__tree_node"** dereferenceable(8) %__t1, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__t2) unnamed_addr #4 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.33"*, align 8
+  %this.addr = alloca %"class.std::__1::__compressed_pair.31"*, align 8
   %__t1.addr = alloca %"class.std::__1::__tree_node"**, align 8
   %__t2.addr = alloca %"class.std::__1::__tree_node_destructor"*, align 8
-  store %"class.std::__1::__compressed_pair.33"* %this, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
+  store %"class.std::__1::__compressed_pair.31"* %this, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
   store %"class.std::__1::__tree_node"** %__t1, %"class.std::__1::__tree_node"*** %__t1.addr, align 8
   store %"class.std::__1::__tree_node_destructor"* %__t2, %"class.std::__1::__tree_node_destructor"** %__t2.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.33"*, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.31"*, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
   %0 = load %"class.std::__1::__tree_node"**, %"class.std::__1::__tree_node"*** %__t1.addr, align 8
   %1 = load %"class.std::__1::__tree_node_destructor"*, %"class.std::__1::__tree_node_destructor"** %__t2.addr, align 8
-  call void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.33"* %this1, %"class.std::__1::__tree_node"** dereferenceable(8) %0, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %1)
+  call void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.31"* %this1, %"class.std::__1::__tree_node"** dereferenceable(8) %0, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %1)
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.33"* %this, %"class.std::__1::__tree_node"** dereferenceable(8) %__t1, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__t2) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.31"* %this, %"class.std::__1::__tree_node"** dereferenceable(8) %__t1, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__t2) unnamed_addr #4 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.33"*, align 8
+  %this.addr = alloca %"class.std::__1::__compressed_pair.31"*, align 8
   %__t1.addr = alloca %"class.std::__1::__tree_node"**, align 8
   %__t2.addr = alloca %"class.std::__1::__tree_node_destructor"*, align 8
-  store %"class.std::__1::__compressed_pair.33"* %this, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
+  store %"class.std::__1::__compressed_pair.31"* %this, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
   store %"class.std::__1::__tree_node"** %__t1, %"class.std::__1::__tree_node"*** %__t1.addr, align 8
   store %"class.std::__1::__tree_node_destructor"* %__t2, %"class.std::__1::__tree_node_destructor"** %__t2.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.33"*, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.33"* %this1 to %"struct.std::__1::__compressed_pair_elem.34"*
+  %this1 = load %"class.std::__1::__compressed_pair.31"*, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.31"* %this1 to %"struct.std::__1::__compressed_pair_elem.32"*
   %1 = load %"class.std::__1::__tree_node"**, %"class.std::__1::__tree_node"*** %__t1.addr, align 8
   %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__1L7forwardIRPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEEEEOT_RNS_16remove_referenceISE_E4typeE(%"class.std::__1::__tree_node"** dereferenceable(8) %1) #2
-  call void @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EEC2IRSC_vEEOT_(%"struct.std::__1::__compressed_pair_elem.34"* %0, %"class.std::__1::__tree_node"** dereferenceable(8) %call)
-  %2 = bitcast %"class.std::__1::__compressed_pair.33"* %this1 to i8*
+  call void @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EEC2IRSC_vEEOT_(%"struct.std::__1::__compressed_pair_elem.32"* %0, %"class.std::__1::__tree_node"** dereferenceable(8) %call)
+  %2 = bitcast %"class.std::__1::__compressed_pair.31"* %this1 to i8*
   %3 = getelementptr inbounds i8, i8* %2, i64 8
-  %4 = bitcast i8* %3 to %"struct.std::__1::__compressed_pair_elem.35"*
+  %4 = bitcast i8* %3 to %"struct.std::__1::__compressed_pair_elem.33"*
   %5 = load %"class.std::__1::__tree_node_destructor"*, %"class.std::__1::__tree_node_destructor"** %__t2.addr, align 8
   %call2 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__1L7forwardINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_node_destructor"* dereferenceable(16) %5) #2
-  call void @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEELi1ELb0EEC2ISE_vEEOT_(%"struct.std::__1::__compressed_pair_elem.35"* %4, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %call2)
+  call void @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEELi1ELb0EEC2ISE_vEEOT_(%"struct.std::__1::__compressed_pair_elem.33"* %4, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %call2)
   ret void
 }
 
@@ -17041,14 +21414,14 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EEC2IRSC_vEEOT_(%"struct.std::__1::__compressed_pair_elem.34"* %this, %"class.std::__1::__tree_node"** dereferenceable(8) %__u) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EEC2IRSC_vEEOT_(%"struct.std::__1::__compressed_pair_elem.32"* %this, %"class.std::__1::__tree_node"** dereferenceable(8) %__u) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.34"*, align 8
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.32"*, align 8
   %__u.addr = alloca %"class.std::__1::__tree_node"**, align 8
-  store %"struct.std::__1::__compressed_pair_elem.34"* %this, %"struct.std::__1::__compressed_pair_elem.34"** %this.addr, align 8
+  store %"struct.std::__1::__compressed_pair_elem.32"* %this, %"struct.std::__1::__compressed_pair_elem.32"** %this.addr, align 8
   store %"class.std::__1::__tree_node"** %__u, %"class.std::__1::__tree_node"*** %__u.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.34"*, %"struct.std::__1::__compressed_pair_elem.34"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.34", %"struct.std::__1::__compressed_pair_elem.34"* %this1, i32 0, i32 0
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.32"*, %"struct.std::__1::__compressed_pair_elem.32"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.32", %"struct.std::__1::__compressed_pair_elem.32"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::__tree_node"**, %"class.std::__1::__tree_node"*** %__u.addr, align 8
   %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__1L7forwardIRPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEEEEOT_RNS_16remove_referenceISE_E4typeE(%"class.std::__1::__tree_node"** dereferenceable(8) %0) #2
   %1 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %call, align 8
@@ -17066,14 +21439,14 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEELi1ELb0EEC2ISE_vEEOT_(%"struct.std::__1::__compressed_pair_elem.35"* %this, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__u) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEELi1ELb0EEC2ISE_vEEOT_(%"struct.std::__1::__compressed_pair_elem.33"* %this, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %__u) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.35"*, align 8
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.33"*, align 8
   %__u.addr = alloca %"class.std::__1::__tree_node_destructor"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.35"* %this, %"struct.std::__1::__compressed_pair_elem.35"** %this.addr, align 8
+  store %"struct.std::__1::__compressed_pair_elem.33"* %this, %"struct.std::__1::__compressed_pair_elem.33"** %this.addr, align 8
   store %"class.std::__1::__tree_node_destructor"* %__u, %"class.std::__1::__tree_node_destructor"** %__u.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.35"*, %"struct.std::__1::__compressed_pair_elem.35"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.35", %"struct.std::__1::__compressed_pair_elem.35"* %this1, i32 0, i32 0
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.33"*, %"struct.std::__1::__compressed_pair_elem.33"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.33", %"struct.std::__1::__compressed_pair_elem.33"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::__tree_node_destructor"*, %"class.std::__1::__tree_node_destructor"** %__u.addr, align 8
   %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__1L7forwardINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_node_destructor"* dereferenceable(16) %0) #2
   %1 = bitcast %"class.std::__1::__tree_node_destructor"* %__value_ to i8*
@@ -17083,47 +21456,47 @@ entry:
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE11__constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %__a, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 {
+define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE11__constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %__a, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 {
 entry:
-  %0 = alloca %"struct.std::__1::integral_constant.36", align 1
+  %0 = alloca %"struct.std::__1::integral_constant.34", align 1
   %__a.addr = alloca %"class.std::__1::allocator"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   store %"class.std::__1::allocator"* %__a, %"class.std::__1::allocator"** %__a.addr, align 8
   store %"struct.std::__1::pair"* %__p, %"struct.std::__1::pair"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %1 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %__a.addr, align 8
   %2 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %__p.addr, align 8
   %3 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
   %4 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__args.addr2, align 8
   %call5 = call dereferenceable(8) %"class.std::__1::tuple"* @_ZNSt3__1L7forwardINS_5tupleIJONS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISA_E4typeE(%"class.std::__1::tuple"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call6 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  call void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEES7_EEPvEEE9constructINS_4pairIKS7_S7_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator"* %1, %"struct.std::__1::pair"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple"* dereferenceable(8) %call5, %"class.std::__1::tuple.31"* dereferenceable(1) %call6)
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call6 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  call void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEES7_EEPvEEE9constructINS_4pairIKS7_S7_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator"* %1, %"struct.std::__1::pair"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple"* dereferenceable(8) %call5, %"class.std::__1::tuple.29"* dereferenceable(1) %call6)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEES7_EEPvEEE9constructINS_4pairIKS7_S7_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator"* %this, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #1 align 2 {
+define internal void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEES7_EEPvEEE9constructINS_4pairIKS7_S7_EEJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator"* %this, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #1 align 2 {
 entry:
   %this.addr = alloca %"class.std::__1::allocator"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %agg.tmp = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %agg.tmp6 = alloca %"class.std::__1::tuple", align 8
-  %agg.tmp8 = alloca %"class.std::__1::tuple.31", align 1
+  %agg.tmp8 = alloca %"class.std::__1::tuple.29", align 1
   store %"class.std::__1::allocator"* %this, %"class.std::__1::allocator"** %this.addr, align 8
   store %"struct.std::__1::pair"* %__p, %"struct.std::__1::pair"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %this.addr, align 8
   %0 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %__p.addr, align 8
   %1 = bitcast %"struct.std::__1::pair"* %0 to i8*
@@ -17135,8 +21508,8 @@ entry:
   %5 = bitcast %"class.std::__1::tuple"* %agg.tmp6 to i8*
   %6 = bitcast %"class.std::__1::tuple"* %call7 to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %5, i8* align 8 %6, i64 8, i1 false)
-  %7 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call9 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %7) #2
+  %7 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call9 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %7) #2
   %coerce.dive = getelementptr inbounds %"class.std::__1::tuple", %"class.std::__1::tuple"* %agg.tmp6, i32 0, i32 0
   %coerce.dive10 = getelementptr inbounds %"struct.std::__1::__tuple_impl", %"struct.std::__1::__tuple_impl"* %coerce.dive, i32 0, i32 0
   %coerce.dive11 = getelementptr inbounds %"class.std::__1::__tuple_leaf", %"class.std::__1::__tuple_leaf"* %coerce.dive10, i32 0, i32 0
@@ -17150,18 +21523,18 @@ define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_
 entry:
   %__pc = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %__first_args = alloca %"class.std::__1::tuple", align 8
-  %__second_args = alloca %"class.std::__1::tuple.31", align 1
+  %__second_args = alloca %"class.std::__1::tuple.29", align 1
   %this.addr = alloca %"struct.std::__1::pair"*, align 8
   %agg.tmp = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %agg.tmp5 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %agg.tmp6 = alloca %"struct.std::__1::__tuple_indices.37", align 1
+  %agg.tmp6 = alloca %"struct.std::__1::__tuple_indices.35", align 1
   %coerce.dive = getelementptr inbounds %"class.std::__1::tuple", %"class.std::__1::tuple"* %__first_args, i32 0, i32 0
   %coerce.dive1 = getelementptr inbounds %"struct.std::__1::__tuple_impl", %"struct.std::__1::__tuple_impl"* %coerce.dive, i32 0, i32 0
   %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tuple_leaf", %"class.std::__1::__tuple_leaf"* %coerce.dive1, i32 0, i32 0
   store %"class.std::__1::basic_string"* %__first_args.coerce, %"class.std::__1::basic_string"** %coerce.dive2, align 8
   store %"struct.std::__1::pair"* %this, %"struct.std::__1::pair"** %this.addr, align 8
   %this4 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %this.addr, align 8
-  invoke void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this4, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args)
+  invoke void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this4, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args)
           to label %invoke.cont unwind label %terminate.lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -17176,36 +21549,36 @@ terminate.lpad:                                   ; preds = %entry
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args) unnamed_addr #4 align 2 {
 entry:
   %0 = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %1 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
   %this.addr = alloca %"struct.std::__1::pair"*, align 8
   %__first_args.addr = alloca %"class.std::__1::tuple"*, align 8
-  %__second_args.addr = alloca %"class.std::__1::tuple.31"*, align 8
+  %__second_args.addr = alloca %"class.std::__1::tuple.29"*, align 8
   store %"struct.std::__1::pair"* %this, %"struct.std::__1::pair"** %this.addr, align 8
   store %"class.std::__1::tuple"* %__first_args, %"class.std::__1::tuple"** %__first_args.addr, align 8
-  store %"class.std::__1::tuple.31"* %__second_args, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
+  store %"class.std::__1::tuple.29"* %__second_args, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
   %this3 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %this.addr, align 8
   %3 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__first_args.addr, align 8
-  %4 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
-  call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this3, %"class.std::__1::tuple"* dereferenceable(8) %3, %"class.std::__1::tuple.31"* dereferenceable(1) %4)
+  %4 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
+  call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this3, %"class.std::__1::tuple"* dereferenceable(8) %3, %"class.std::__1::tuple.29"* dereferenceable(1) %4)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args) unnamed_addr #1 align 2 {
 entry:
   %0 = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %1 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
   %this.addr = alloca %"struct.std::__1::pair"*, align 8
   %__first_args.addr = alloca %"class.std::__1::tuple"*, align 8
-  %__second_args.addr = alloca %"class.std::__1::tuple.31"*, align 8
+  %__second_args.addr = alloca %"class.std::__1::tuple.29"*, align 8
   store %"struct.std::__1::pair"* %this, %"struct.std::__1::pair"** %this.addr, align 8
   store %"class.std::__1::tuple"* %__first_args, %"class.std::__1::tuple"** %__first_args.addr, align 8
-  store %"class.std::__1::tuple.31"* %__second_args, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
+  store %"class.std::__1::tuple.29"* %__second_args, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
   %this3 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %this.addr, align 8
   %first = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %this3, i32 0, i32 0
   %3 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__first_args.addr, align 8
@@ -17293,46 +21666,46 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.33"* %this) #1 align 2 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.31"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.33"*, align 8
-  store %"class.std::__1::__compressed_pair.33"* %this, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.33"*, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.33"* %this1 to %"struct.std::__1::__compressed_pair_elem.34"*
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.34"* %0) #2
+  %this.addr = alloca %"class.std::__1::__compressed_pair.31"*, align 8
+  store %"class.std::__1::__compressed_pair.31"* %this, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.31"*, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.31"* %this1 to %"struct.std::__1::__compressed_pair_elem.32"*
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.32"* %0) #2
   ret %"class.std::__1::__tree_node"** %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.34"* %this) #1 align 2 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNKSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.32"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.34"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.34"* %this, %"struct.std::__1::__compressed_pair_elem.34"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.34"*, %"struct.std::__1::__compressed_pair_elem.34"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.34", %"struct.std::__1::__compressed_pair_elem.34"* %this1, i32 0, i32 0
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.32"*, align 8
+  store %"struct.std::__1::__compressed_pair_elem.32"* %this, %"struct.std::__1::__compressed_pair_elem.32"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.32"*, %"struct.std::__1::__compressed_pair_elem.32"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.32", %"struct.std::__1::__compressed_pair_elem.32"* %this1, i32 0, i32 0
   ret %"class.std::__1::__tree_node"** %__value_
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.33"* %this) #1 align 2 {
+define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.31"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.33"*, align 8
-  store %"class.std::__1::__compressed_pair.33"* %this, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.33"*, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.33"* %this1 to i8*
+  %this.addr = alloca %"class.std::__1::__compressed_pair.31"*, align 8
+  store %"class.std::__1::__compressed_pair.31"* %this, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.31"*, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.31"* %this1 to i8*
   %add.ptr = getelementptr inbounds i8, i8* %0, i64 8
-  %1 = bitcast i8* %add.ptr to %"struct.std::__1::__compressed_pair_elem.35"*
-  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.35"* %1) #2
+  %1 = bitcast i8* %add.ptr to %"struct.std::__1::__compressed_pair_elem.33"*
+  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.33"* %1) #2
   ret %"class.std::__1::__tree_node_destructor"* %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.35"* %this) #1 align 2 {
+define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEES9_EEPvEEEEEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.33"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.35"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.35"* %this, %"struct.std::__1::__compressed_pair_elem.35"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.35"*, %"struct.std::__1::__compressed_pair_elem.35"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.35", %"struct.std::__1::__compressed_pair_elem.35"* %this1, i32 0, i32 0
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.33"*, align 8
+  store %"struct.std::__1::__compressed_pair_elem.33"* %this, %"struct.std::__1::__compressed_pair_elem.33"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.33"*, %"struct.std::__1::__compressed_pair_elem.33"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.33", %"struct.std::__1::__compressed_pair_elem.33"* %this1, i32 0, i32 0
   ret %"class.std::__1::__tree_node_destructor"* %__value_
 }
 
@@ -17836,60 +22209,60 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.33"* %this) #1 align 2 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.31"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.33"*, align 8
-  store %"class.std::__1::__compressed_pair.33"* %this, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.33"*, %"class.std::__1::__compressed_pair.33"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.33"* %this1 to %"struct.std::__1::__compressed_pair_elem.34"*
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.34"* %0) #2
+  %this.addr = alloca %"class.std::__1::__compressed_pair.31"*, align 8
+  store %"class.std::__1::__compressed_pair.31"* %this, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.31"*, %"class.std::__1::__compressed_pair.31"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.31"* %this1 to %"struct.std::__1::__compressed_pair_elem.32"*
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.32"* %0) #2
   ret %"class.std::__1::__tree_node"** %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.34"* %this) #1 align 2 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.32"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.34"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.34"* %this, %"struct.std::__1::__compressed_pair_elem.34"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.34"*, %"struct.std::__1::__compressed_pair_elem.34"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.34", %"struct.std::__1::__compressed_pair_elem.34"* %this1, i32 0, i32 0
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.32"*, align 8
+  store %"struct.std::__1::__compressed_pair_elem.32"* %this, %"struct.std::__1::__compressed_pair_elem.32"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.32"*, %"struct.std::__1::__compressed_pair_elem.32"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.32", %"struct.std::__1::__compressed_pair_elem.32"* %this1, i32 0, i32 0
   ret %"class.std::__1::__tree_node"** %__value_
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED2Ev(%"class.std::__1::unique_ptr.32"* %this) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED2Ev(%"class.std::__1::unique_ptr.30"* %this) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetEPSB_(%"class.std::__1::unique_ptr.32"* %this1, %"class.std::__1::__tree_node"* null) #2
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetEPSB_(%"class.std::__1::unique_ptr.30"* %this1, %"class.std::__1::__tree_node"* null) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetEPSB_(%"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::__tree_node"* %__p) #1 align 2 {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetEPSB_(%"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::__tree_node"* %__p) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.32"*, align 8
+  %this.addr = alloca %"class.std::__1::unique_ptr.30"*, align 8
   %__p.addr = alloca %"class.std::__1::__tree_node"*, align 8
   %__tmp = alloca %"class.std::__1::__tree_node"*, align 8
-  store %"class.std::__1::unique_ptr.32"* %this, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
+  store %"class.std::__1::unique_ptr.30"* %this, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
   store %"class.std::__1::__tree_node"* %__p, %"class.std::__1::__tree_node"** %__p.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.32"*, %"class.std::__1::unique_ptr.32"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.33"* %__ptr_) #2
+  %this1 = load %"class.std::__1::unique_ptr.30"*, %"class.std::__1::unique_ptr.30"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.31"* %__ptr_) #2
   %0 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %call, align 8
   store %"class.std::__1::__tree_node"* %0, %"class.std::__1::__tree_node"** %__tmp, align 8
   %1 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %__p.addr, align 8
-  %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
-  %call3 = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.33"* %__ptr_2) #2
+  %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
+  %call3 = call dereferenceable(8) %"class.std::__1::__tree_node"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.31"* %__ptr_2) #2
   store %"class.std::__1::__tree_node"* %1, %"class.std::__1::__tree_node"** %call3, align 8
   %2 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %__tmp, align 8
   %tobool = icmp ne %"class.std::__1::__tree_node"* %2, null
   br i1 %tobool, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  %__ptr_4 = getelementptr inbounds %"class.std::__1::unique_ptr.32", %"class.std::__1::unique_ptr.32"* %this1, i32 0, i32 0
-  %call5 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.33"* %__ptr_4) #2
+  %__ptr_4 = getelementptr inbounds %"class.std::__1::unique_ptr.30", %"class.std::__1::unique_ptr.30"* %this1, i32 0, i32 0
+  %call5 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.31"* %__ptr_4) #2
   %3 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %__tmp, align 8
   call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEEclEPSB_(%"class.std::__1::__tree_node_destructor"* %call5, %"class.std::__1::__tree_node"* %3) #2
   br label %if.end
@@ -17965,22 +22338,22 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC2ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.30"* %this, %"class.std::__1::__tree_iterator"* dereferenceable(8) %__u1, i8* dereferenceable(1) %__u2) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC2ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.28"* %this, %"class.std::__1::__tree_iterator"* dereferenceable(8) %__u1, i8* dereferenceable(1) %__u2) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::pair.30"*, align 8
+  %this.addr = alloca %"struct.std::__1::pair.28"*, align 8
   %__u1.addr = alloca %"class.std::__1::__tree_iterator"*, align 8
   %__u2.addr = alloca i8*, align 8
-  store %"struct.std::__1::pair.30"* %this, %"struct.std::__1::pair.30"** %this.addr, align 8
+  store %"struct.std::__1::pair.28"* %this, %"struct.std::__1::pair.28"** %this.addr, align 8
   store %"class.std::__1::__tree_iterator"* %__u1, %"class.std::__1::__tree_iterator"** %__u1.addr, align 8
   store i8* %__u2, i8** %__u2.addr, align 8
-  %this1 = load %"struct.std::__1::pair.30"*, %"struct.std::__1::pair.30"** %this.addr, align 8
-  %first = getelementptr inbounds %"struct.std::__1::pair.30", %"struct.std::__1::pair.30"* %this1, i32 0, i32 0
+  %this1 = load %"struct.std::__1::pair.28"*, %"struct.std::__1::pair.28"** %this.addr, align 8
+  %first = getelementptr inbounds %"struct.std::__1::pair.28", %"struct.std::__1::pair.28"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::__tree_iterator"*, %"class.std::__1::__tree_iterator"** %__u1.addr, align 8
   %call = call dereferenceable(8) %"class.std::__1::__tree_iterator"* @_ZNSt3__1L7forwardINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_iterator"* dereferenceable(8) %0) #2
   %1 = bitcast %"class.std::__1::__tree_iterator"* %first to i8*
   %2 = bitcast %"class.std::__1::__tree_iterator"* %call to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %1, i8* align 8 %2, i64 8, i1 false)
-  %second = getelementptr inbounds %"struct.std::__1::pair.30", %"struct.std::__1::pair.30"* %this1, i32 0, i32 1
+  %second = getelementptr inbounds %"struct.std::__1::pair.28", %"struct.std::__1::pair.28"* %this1, i32 0, i32 1
   %3 = load i8*, i8** %__u2.addr, align 8
   %call2 = call dereferenceable(1) i8* @_ZNSt3__1L7forwardIRbEEOT_RNS_16remove_referenceIS2_E4typeE(i8* dereferenceable(1) %3) #2
   %4 = load i8, i8* %call2, align 1
@@ -18037,8 +22410,8 @@ entry:
   %__u.addr = alloca %"class.std::__1::basic_string"*, align 8
   %agg.tmp = alloca %"struct.std::__1::__tuple_indices", align 1
   %agg.tmp2 = alloca %"struct.std::__1::__tuple_types", align 1
-  %agg.tmp3 = alloca %"struct.std::__1::__tuple_indices.37", align 1
-  %agg.tmp4 = alloca %"struct.std::__1::__tuple_types.38", align 1
+  %agg.tmp3 = alloca %"struct.std::__1::__tuple_indices.35", align 1
+  %agg.tmp4 = alloca %"struct.std::__1::__tuple_types.36", align 1
   store %"class.std::__1::tuple"* %this, %"class.std::__1::tuple"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__u, %"class.std::__1::basic_string"** %__u.addr, align 8
   %this1 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %this.addr, align 8
@@ -18054,8 +22427,8 @@ define internal void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJONS_
 entry:
   %0 = alloca %"struct.std::__1::__tuple_indices", align 1
   %1 = alloca %"struct.std::__1::__tuple_types", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
-  %3 = alloca %"struct.std::__1::__tuple_types.38", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
+  %3 = alloca %"struct.std::__1::__tuple_types.36", align 1
   %this.addr = alloca %"struct.std::__1::__tuple_impl"*, align 8
   %__u.addr = alloca %"class.std::__1::basic_string"*, align 8
   store %"struct.std::__1::__tuple_impl"* %this, %"struct.std::__1::__tuple_impl"** %this.addr, align 8
@@ -18071,8 +22444,8 @@ define internal void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJONS_
 entry:
   %0 = alloca %"struct.std::__1::__tuple_indices", align 1
   %1 = alloca %"struct.std::__1::__tuple_types", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
-  %3 = alloca %"struct.std::__1::__tuple_types.38", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
+  %3 = alloca %"struct.std::__1::__tuple_types.36", align 1
   %this.addr = alloca %"struct.std::__1::__tuple_impl"*, align 8
   %__u.addr = alloca %"class.std::__1::basic_string"*, align 8
   store %"struct.std::__1::__tuple_impl"* %this, %"struct.std::__1::__tuple_impl"** %this.addr, align 8
@@ -18101,21 +22474,21 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__15tupleIJEEC1Ev(%"class.std::__1::tuple.31"* %this) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__15tupleIJEEC1Ev(%"class.std::__1::tuple.29"* %this) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::tuple.31"*, align 8
-  store %"class.std::__1::tuple.31"* %this, %"class.std::__1::tuple.31"** %this.addr, align 8
-  %this1 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %this.addr, align 8
-  call void @_ZNSt3__15tupleIJEEC2Ev(%"class.std::__1::tuple.31"* %this1) #2
+  %this.addr = alloca %"class.std::__1::tuple.29"*, align 8
+  store %"class.std::__1::tuple.29"* %this, %"class.std::__1::tuple.29"** %this.addr, align 8
+  %this1 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %this.addr, align 8
+  call void @_ZNSt3__15tupleIJEEC2Ev(%"class.std::__1::tuple.29"* %this1) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__15tupleIJEEC2Ev(%"class.std::__1::tuple.31"* %this) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__15tupleIJEEC2Ev(%"class.std::__1::tuple.29"* %this) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::tuple.31"*, align 8
-  store %"class.std::__1::tuple.31"* %this, %"class.std::__1::tuple.31"** %this.addr, align 8
-  %this1 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %this.addr, align 8
+  %this.addr = alloca %"class.std::__1::tuple.29"*, align 8
+  store %"class.std::__1::tuple.29"* %this, %"class.std::__1::tuple.29"** %this.addr, align 8
+  %this1 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %this.addr, align 8
   ret void
 }
 
@@ -18142,7 +22515,7 @@ declare dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112basic_s
 ; Function Attrs: noinline nounwind optnone ssp uwtable
 define internal void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE13__move_assignERS5_NS_17integral_constantIbLb1EEE(%"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__str) #1 align 2 {
 entry:
-  %0 = alloca %"struct.std::__1::integral_constant.36", align 1
+  %0 = alloca %"struct.std::__1::integral_constant.34", align 1
   %this.addr = alloca %"class.std::__1::basic_string"*, align 8
   %__str.addr = alloca %"class.std::__1::basic_string"*, align 8
   store %"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"** %this.addr, align 8
@@ -18193,13 +22566,53 @@ define internal void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocator
 entry:
   %this.addr = alloca %"class.std::__1::basic_string"*, align 8
   %__str.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %agg.tmp = alloca %"struct.std::__1::integral_constant.36", align 1
+  %agg.tmp = alloca %"struct.std::__1::integral_constant.34", align 1
   store %"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__str, %"class.std::__1::basic_string"** %__str.addr, align 8
   %this1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %this.addr, align 8
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__str.addr, align 8
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE19__move_assign_allocERS5_NS_17integral_constantIbLb1EEE(%"class.std::__1::basic_string"* %this1, %"class.std::__1::basic_string"* dereferenceable(24) %0) #2
   ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5clearEv(%"class.std::__1::basic_string"* %this) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %this.addr = alloca %"class.std::__1::basic_string"*, align 8
+  %ref.tmp = alloca i8, align 1
+  %ref.tmp4 = alloca i8, align 1
+  store %"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"** %this.addr, align 8
+  %this1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %this.addr, align 8
+  invoke void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE26__invalidate_all_iteratorsEv(%"class.std::__1::basic_string"* %this1)
+          to label %invoke.cont unwind label %terminate.lpad
+
+invoke.cont:                                      ; preds = %entry
+  %call = call zeroext i1 @_ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE9__is_longEv(%"class.std::__1::basic_string"* %this1) #2
+  br i1 %call, label %if.then, label %if.else
+
+if.then:                                          ; preds = %invoke.cont
+  %call2 = call i8* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE18__get_long_pointerEv(%"class.std::__1::basic_string"* %this1) #2
+  store i8 0, i8* %ref.tmp, align 1
+  call void @_ZNSt3__111char_traitsIcE6assignERcRKc(i8* dereferenceable(1) %call2, i8* dereferenceable(1) %ref.tmp) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE15__set_long_sizeEm(%"class.std::__1::basic_string"* %this1, i64 0) #2
+  br label %if.end
+
+if.else:                                          ; preds = %invoke.cont
+  %call3 = call i8* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE19__get_short_pointerEv(%"class.std::__1::basic_string"* %this1) #2
+  store i8 0, i8* %ref.tmp4, align 1
+  call void @_ZNSt3__111char_traitsIcE6assignERcRKc(i8* dereferenceable(1) %call3, i8* dereferenceable(1) %ref.tmp4) #2
+  call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE16__set_short_sizeEm(%"class.std::__1::basic_string"* %this1, i64 0) #2
+  br label %if.end
+
+if.end:                                           ; preds = %if.else, %if.then
+  ret void
+
+terminate.lpad:                                   ; preds = %entry
+  %0 = landingpad { i8*, i32 }
+          catch i8* null
+  %1 = extractvalue { i8*, i32 } %0, 0
+  call void @__clang_call_terminate(i8* %1) #17
+  unreachable
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
@@ -18285,77 +22698,6 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__19allocatorIcE10deallocateEPcm(%"class.std::__1::allocator.17"* %this, i8* %__p, i64) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
-entry:
-  %this.addr = alloca %"class.std::__1::allocator.17"*, align 8
-  %__p.addr = alloca i8*, align 8
-  %.addr = alloca i64, align 8
-  store %"class.std::__1::allocator.17"* %this, %"class.std::__1::allocator.17"** %this.addr, align 8
-  store i8* %__p, i8** %__p.addr, align 8
-  store i64 %0, i64* %.addr, align 8
-  %this1 = load %"class.std::__1::allocator.17"*, %"class.std::__1::allocator.17"** %this.addr, align 8
-  %1 = load i8*, i8** %__p.addr, align 8
-  invoke void @_ZNSt3__1L19__libcpp_deallocateEPvm(i8* %1, i64 1)
-          to label %invoke.cont unwind label %terminate.lpad
-
-invoke.cont:                                      ; preds = %entry
-  ret void
-
-terminate.lpad:                                   ; preds = %entry
-  %2 = landingpad { i8*, i32 }
-          catch i8* null
-  %3 = extractvalue { i8*, i32 } %2, 0
-  call void @__clang_call_terminate(i8* %3) #17
-  unreachable
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E6secondEv(%"class.std::__1::__compressed_pair.13"* %this) #1 align 2 {
-entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.13"*, align 8
-  store %"class.std::__1::__compressed_pair.13"* %this, %"class.std::__1::__compressed_pair.13"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.13"*, %"class.std::__1::__compressed_pair.13"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.13"* %this1 to %"struct.std::__1::__compressed_pair_elem.16"*
-  %call = call dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EE5__getEv(%"struct.std::__1::__compressed_pair_elem.16"* %0) #2
-  ret %"class.std::__1::allocator.17"* %call
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EE5__getEv(%"struct.std::__1::__compressed_pair_elem.16"* %this) #1 align 2 {
-entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.16"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.16"* %this, %"struct.std::__1::__compressed_pair_elem.16"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.16"*, %"struct.std::__1::__compressed_pair_elem.16"** %this.addr, align 8
-  %0 = bitcast %"struct.std::__1::__compressed_pair_elem.16"* %this1 to %"class.std::__1::allocator.17"*
-  ret %"class.std::__1::allocator.17"* %0
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE19__move_assign_allocERS5_NS_17integral_constantIbLb1EEE(%"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__c) #1 align 2 {
-entry:
-  %0 = alloca %"struct.std::__1::integral_constant.36", align 1
-  %this.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %__c.addr = alloca %"class.std::__1::basic_string"*, align 8
-  store %"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"** %this.addr, align 8
-  store %"class.std::__1::basic_string"* %__c, %"class.std::__1::basic_string"** %__c.addr, align 8
-  %this1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %this.addr, align 8
-  %1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__c.addr, align 8
-  %call = call dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7__allocEv(%"class.std::__1::basic_string"* %1) #2
-  %call2 = call dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__1L4moveIRNS_9allocatorIcEEEEONS_16remove_referenceIT_E4typeEOS5_(%"class.std::__1::allocator.17"* dereferenceable(1) %call) #2
-  %call3 = call dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7__allocEv(%"class.std::__1::basic_string"* %this1) #2
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__1L4moveIRNS_9allocatorIcEEEEONS_16remove_referenceIT_E4typeEOS5_(%"class.std::__1::allocator.17"* dereferenceable(1) %__t) #1 {
-entry:
-  %__t.addr = alloca %"class.std::__1::allocator.17"*, align 8
-  store %"class.std::__1::allocator.17"* %__t, %"class.std::__1::allocator.17"** %__t.addr, align 8
-  %0 = load %"class.std::__1::allocator.17"*, %"class.std::__1::allocator.17"** %__t.addr, align 8
-  ret %"class.std::__1::allocator.17"* %0
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
 define internal void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE26__invalidate_all_iteratorsEv(%"class.std::__1::basic_string"* %this) #1 align 2 {
 entry:
   %this.addr = alloca %"class.std::__1::basic_string"*, align 8
@@ -18429,6 +22771,77 @@ entry:
   store i8* %__x, i8** %__x.addr, align 8
   %0 = load i8*, i8** %__x.addr, align 8
   ret i8* %0
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal void @_ZNSt3__19allocatorIcE10deallocateEPcm(%"class.std::__1::allocator.17"* %this, i8* %__p, i64) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+entry:
+  %this.addr = alloca %"class.std::__1::allocator.17"*, align 8
+  %__p.addr = alloca i8*, align 8
+  %.addr = alloca i64, align 8
+  store %"class.std::__1::allocator.17"* %this, %"class.std::__1::allocator.17"** %this.addr, align 8
+  store i8* %__p, i8** %__p.addr, align 8
+  store i64 %0, i64* %.addr, align 8
+  %this1 = load %"class.std::__1::allocator.17"*, %"class.std::__1::allocator.17"** %this.addr, align 8
+  %1 = load i8*, i8** %__p.addr, align 8
+  invoke void @_ZNSt3__1L19__libcpp_deallocateEPvm(i8* %1, i64 1)
+          to label %invoke.cont unwind label %terminate.lpad
+
+invoke.cont:                                      ; preds = %entry
+  ret void
+
+terminate.lpad:                                   ; preds = %entry
+  %2 = landingpad { i8*, i32 }
+          catch i8* null
+  %3 = extractvalue { i8*, i32 } %2, 0
+  call void @__clang_call_terminate(i8* %3) #17
+  unreachable
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__117__compressed_pairINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE5__repES5_E6secondEv(%"class.std::__1::__compressed_pair.13"* %this) #1 align 2 {
+entry:
+  %this.addr = alloca %"class.std::__1::__compressed_pair.13"*, align 8
+  store %"class.std::__1::__compressed_pair.13"* %this, %"class.std::__1::__compressed_pair.13"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.13"*, %"class.std::__1::__compressed_pair.13"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.13"* %this1 to %"struct.std::__1::__compressed_pair_elem.16"*
+  %call = call dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EE5__getEv(%"struct.std::__1::__compressed_pair_elem.16"* %0) #2
+  ret %"class.std::__1::allocator.17"* %call
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__122__compressed_pair_elemINS_9allocatorIcEELi1ELb1EE5__getEv(%"struct.std::__1::__compressed_pair_elem.16"* %this) #1 align 2 {
+entry:
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.16"*, align 8
+  store %"struct.std::__1::__compressed_pair_elem.16"* %this, %"struct.std::__1::__compressed_pair_elem.16"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.16"*, %"struct.std::__1::__compressed_pair_elem.16"** %this.addr, align 8
+  %0 = bitcast %"struct.std::__1::__compressed_pair_elem.16"* %this1 to %"class.std::__1::allocator.17"*
+  ret %"class.std::__1::allocator.17"* %0
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE19__move_assign_allocERS5_NS_17integral_constantIbLb1EEE(%"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__c) #1 align 2 {
+entry:
+  %0 = alloca %"struct.std::__1::integral_constant.34", align 1
+  %this.addr = alloca %"class.std::__1::basic_string"*, align 8
+  %__c.addr = alloca %"class.std::__1::basic_string"*, align 8
+  store %"class.std::__1::basic_string"* %this, %"class.std::__1::basic_string"** %this.addr, align 8
+  store %"class.std::__1::basic_string"* %__c, %"class.std::__1::basic_string"** %__c.addr, align 8
+  %this1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %this.addr, align 8
+  %1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__c.addr, align 8
+  %call = call dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7__allocEv(%"class.std::__1::basic_string"* %1) #2
+  %call2 = call dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__1L4moveIRNS_9allocatorIcEEEEONS_16remove_referenceIT_E4typeEOS5_(%"class.std::__1::allocator.17"* dereferenceable(1) %call) #2
+  %call3 = call dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7__allocEv(%"class.std::__1::basic_string"* %this1) #2
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal dereferenceable(1) %"class.std::__1::allocator.17"* @_ZNSt3__1L4moveIRNS_9allocatorIcEEEEONS_16remove_referenceIT_E4typeEOS5_(%"class.std::__1::allocator.17"* dereferenceable(1) %__t) #1 {
+entry:
+  %__t.addr = alloca %"class.std::__1::allocator.17"*, align 8
+  store %"class.std::__1::allocator.17"* %__t, %"class.std::__1::allocator.17"** %__t.addr, align 8
+  %0 = load %"class.std::__1::allocator.17"*, %"class.std::__1::allocator.17"** %__t.addr, align 8
+  ret %"class.std::__1::allocator.17"* %0
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
@@ -19771,10 +24184,10 @@ entry:
 define internal i64 @_ZNSt3__116allocator_traitsINS_9allocatorIcEEE8max_sizeERKS2_(%"class.std::__1::allocator.17"* dereferenceable(1) %__a) #1 align 2 {
 entry:
   %__a.addr = alloca %"class.std::__1::allocator.17"*, align 8
-  %agg.tmp = alloca %"struct.std::__1::integral_constant.36", align 1
+  %agg.tmp = alloca %"struct.std::__1::integral_constant.34", align 1
   %ref.tmp = alloca %"struct.std::__1::__has_max_size", align 1
   store %"class.std::__1::allocator.17"* %__a, %"class.std::__1::allocator.17"** %__a.addr, align 8
-  %0 = bitcast %"struct.std::__1::__has_max_size"* %ref.tmp to %"struct.std::__1::integral_constant.36"*
+  %0 = bitcast %"struct.std::__1::__has_max_size"* %ref.tmp to %"struct.std::__1::integral_constant.34"*
   %1 = load %"class.std::__1::allocator.17"*, %"class.std::__1::allocator.17"** %__a.addr, align 8
   %call = call i64 @_ZNSt3__116allocator_traitsINS_9allocatorIcEEE10__max_sizeENS_17integral_constantIbLb1EEERKS2_(%"class.std::__1::allocator.17"* dereferenceable(1) %1) #2
   ret i64 %call
@@ -19783,7 +24196,7 @@ entry:
 ; Function Attrs: noinline nounwind optnone ssp uwtable
 define internal i64 @_ZNSt3__116allocator_traitsINS_9allocatorIcEEE10__max_sizeENS_17integral_constantIbLb1EEERKS2_(%"class.std::__1::allocator.17"* dereferenceable(1) %__a) #1 align 2 {
 entry:
-  %0 = alloca %"struct.std::__1::integral_constant.36", align 1
+  %0 = alloca %"struct.std::__1::integral_constant.34", align 1
   %__a.addr = alloca %"class.std::__1::allocator.17"*, align 8
   store %"class.std::__1::allocator.17"* %__a, %"class.std::__1::allocator.17"** %__a.addr, align 8
   %1 = load %"class.std::__1::allocator.17"*, %"class.std::__1::allocator.17"** %__a.addr, align 8
@@ -19827,7 +24240,7 @@ entry:
   br i1 %cmp, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  call void @_ZNSt3__1L20__throw_length_errorEPKc(i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.83, i32 0, i32 0)) #16
+  call void @_ZNSt3__1L20__throw_length_errorEPKc(i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.82, i32 0, i32 0)) #16
   unreachable
 
 if.end:                                           ; preds = %entry
@@ -19867,35 +24280,35 @@ terminate.lpad:                                   ; preds = %entry
 declare void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcmm(%"class.std::__1::basic_string"*, i8*, i64, i64) #5
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree.5"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__k, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree.5"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__k, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %retval = alloca %"struct.std::__1::pair.39", align 8
+  %retval = alloca %"struct.std::__1::pair.37", align 8
   %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
   %__k.addr = alloca %"class.std::__1::basic_string"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %__parent = alloca %"class.std::__1::__tree_end_node"*, align 8
   %__child = alloca %"class.std::__1::__tree_node_base"**, align 8
-  %__r = alloca %"class.std::__1::__tree_node.22"*, align 8
+  %__r = alloca %"class.std::__1::__tree_node.19"*, align 8
   %__inserted = alloca i8, align 1
-  %__h = alloca %"class.std::__1::unique_ptr.41", align 8
+  %__h = alloca %"class.std::__1::unique_ptr.40", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
-  %ref.tmp = alloca %"class.std::__1::__tree_iterator.20", align 8
+  %ref.tmp = alloca %"class.std::__1::__tree_iterator.38", align 8
   store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__k, %"class.std::__1::basic_string"** %__k.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::__tree.5"*, %"class.std::__1::__tree.5"** %this.addr, align 8
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__k.addr, align 8
   %call = call dereferenceable(8) %"class.std::__1::__tree_node_base"** @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__find_equalIS7_EERPNS_16__tree_node_baseIPvEERPNS_15__tree_end_nodeISJ_EERKT_(%"class.std::__1::__tree.5"* %this5, %"class.std::__1::__tree_end_node"** dereferenceable(8) %__parent, %"class.std::__1::basic_string"* dereferenceable(24) %0)
   store %"class.std::__1::__tree_node_base"** %call, %"class.std::__1::__tree_node_base"*** %__child, align 8
   %1 = load %"class.std::__1::__tree_node_base"**, %"class.std::__1::__tree_node_base"*** %__child, align 8
   %2 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %1, align 8
-  %3 = bitcast %"class.std::__1::__tree_node_base"* %2 to %"class.std::__1::__tree_node.22"*
-  store %"class.std::__1::__tree_node.22"* %3, %"class.std::__1::__tree_node.22"** %__r, align 8
+  %3 = bitcast %"class.std::__1::__tree_node_base"* %2 to %"class.std::__1::__tree_node.19"*
+  store %"class.std::__1::__tree_node.19"* %3, %"class.std::__1::__tree_node.19"** %__r, align 8
   store i8 0, i8* %__inserted, align 1
   %4 = load %"class.std::__1::__tree_node_base"**, %"class.std::__1::__tree_node_base"*** %__child, align 8
   %5 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %4, align 8
@@ -19907,21 +24320,21 @@ if.then:                                          ; preds = %entry
   %call6 = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %6) #2
   %7 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__args.addr2, align 8
   %call7 = call dereferenceable(8) %"class.std::__1::tuple"* @_ZNSt3__1L7forwardINS_5tupleIJONS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISA_E4typeE(%"class.std::__1::tuple"* dereferenceable(8) %7) #2
-  %8 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call8 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %8) #2
-  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISQ_EEEEEEDpOT_(%"class.std::__1::unique_ptr.41"* sret %__h, %"class.std::__1::__tree.5"* %this5, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call6, %"class.std::__1::tuple"* dereferenceable(8) %call7, %"class.std::__1::tuple.31"* dereferenceable(1) %call8)
+  %8 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call8 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %8) #2
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISQ_EEEEEEDpOT_(%"class.std::__1::unique_ptr.40"* sret %__h, %"class.std::__1::__tree.5"* %this5, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call6, %"class.std::__1::tuple"* dereferenceable(8) %call7, %"class.std::__1::tuple.29"* dereferenceable(1) %call8)
   %9 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__parent, align 8
   %10 = load %"class.std::__1::__tree_node_base"**, %"class.std::__1::__tree_node_base"*** %__child, align 8
-  %call9 = call %"class.std::__1::__tree_node.22"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.41"* %__h) #2
-  %11 = bitcast %"class.std::__1::__tree_node.22"* %call9 to %"class.std::__1::__tree_node_base"*
+  %call9 = call %"class.std::__1::__tree_node.19"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.40"* %__h) #2
+  %11 = bitcast %"class.std::__1::__tree_node.19"* %call9 to %"class.std::__1::__tree_node_base"*
   invoke void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__insert_node_atEPNS_15__tree_end_nodeIPNS_16__tree_node_baseIPvEEEERSJ_SJ_(%"class.std::__1::__tree.5"* %this5, %"class.std::__1::__tree_end_node"* %9, %"class.std::__1::__tree_node_base"** dereferenceable(8) %10, %"class.std::__1::__tree_node_base"* %11)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %if.then
-  %call10 = call %"class.std::__1::__tree_node.22"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.41"* %__h) #2
-  store %"class.std::__1::__tree_node.22"* %call10, %"class.std::__1::__tree_node.22"** %__r, align 8
+  %call10 = call %"class.std::__1::__tree_node.19"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.40"* %__h) #2
+  store %"class.std::__1::__tree_node.19"* %call10, %"class.std::__1::__tree_node.19"** %__r, align 8
   store i8 1, i8* %__inserted, align 1
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.41"* %__h) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.40"* %__h) #2
   br label %if.end
 
 lpad:                                             ; preds = %if.then
@@ -19931,14 +24344,14 @@ lpad:                                             ; preds = %if.then
   store i8* %13, i8** %exn.slot, align 8
   %14 = extractvalue { i8*, i32 } %12, 1
   store i32 %14, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.41"* %__h) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.40"* %__h) #2
   br label %eh.resume
 
 if.end:                                           ; preds = %invoke.cont, %entry
-  %15 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__r, align 8
-  call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC1ESC_(%"class.std::__1::__tree_iterator.20"* %ref.tmp, %"class.std::__1::__tree_node.22"* %15) #2
-  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.39"* %retval, %"class.std::__1::__tree_iterator.20"* dereferenceable(8) %ref.tmp, i8* dereferenceable(1) %__inserted) #2
-  %16 = bitcast %"struct.std::__1::pair.39"* %retval to { %"class.std::__1::__tree_end_node"*, i8 }*
+  %15 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__r, align 8
+  call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC1ESC_(%"class.std::__1::__tree_iterator.38"* %ref.tmp, %"class.std::__1::__tree_node.19"* %15) #2
+  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.37"* %retval, %"class.std::__1::__tree_iterator.38"* dereferenceable(8) %ref.tmp, i8* dereferenceable(1) %__inserted) #2
+  %16 = bitcast %"struct.std::__1::pair.37"* %retval to { %"class.std::__1::__tree_end_node"*, i8 }*
   %17 = load { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %16, align 8
   ret { %"class.std::__1::__tree_end_node"*, i8 } %17
 
@@ -19951,15 +24364,15 @@ eh.resume:                                        ; preds = %lpad
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal %"struct.std::__1::__value_type.23"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEptEv(%"class.std::__1::__tree_iterator.20"* %this) #4 align 2 {
+define internal %"struct.std::__1::__value_type.20"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEptEv(%"class.std::__1::__tree_iterator.38"* %this) #4 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %call = call %"class.std::__1::__tree_node.22"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElE8__get_npEv(%"class.std::__1::__tree_iterator.20"* %this1)
-  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.22", %"class.std::__1::__tree_node.22"* %call, i32 0, i32 1
-  %call2 = call %"struct.std::__1::__value_type.23"* @_ZNSt3__114pointer_traitsIPNS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE10pointer_toERS8_(%"struct.std::__1::__value_type.23"* dereferenceable(32) %__value_) #2
-  ret %"struct.std::__1::__value_type.23"* %call2
+  %this.addr = alloca %"class.std::__1::__tree_iterator.38"*, align 8
+  store %"class.std::__1::__tree_iterator.38"* %this, %"class.std::__1::__tree_iterator.38"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__tree_iterator.38"*, %"class.std::__1::__tree_iterator.38"** %this.addr, align 8
+  %call = call %"class.std::__1::__tree_node.19"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElE8__get_npEv(%"class.std::__1::__tree_iterator.38"* %this1)
+  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.19", %"class.std::__1::__tree_node.19"* %call, i32 0, i32 1
+  %call2 = call %"struct.std::__1::__value_type.20"* @_ZNSt3__114pointer_traitsIPNS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE10pointer_toERS8_(%"struct.std::__1::__value_type.20"* dereferenceable(32) %__value_) #2
+  ret %"struct.std::__1::__value_type.20"* %call2
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
@@ -19969,18 +24382,18 @@ entry:
   %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
   %__parent.addr = alloca %"class.std::__1::__tree_end_node"**, align 8
   %__v.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %__nd = alloca %"class.std::__1::__tree_node.22"*, align 8
+  %__nd = alloca %"class.std::__1::__tree_node.19"*, align 8
   %__nd_ptr = alloca %"class.std::__1::__tree_node_base"**, align 8
   store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
   store %"class.std::__1::__tree_end_node"** %__parent, %"class.std::__1::__tree_end_node"*** %__parent.addr, align 8
   store %"class.std::__1::basic_string"* %__v, %"class.std::__1::basic_string"** %__v.addr, align 8
   %this1 = load %"class.std::__1::__tree.5"*, %"class.std::__1::__tree.5"** %this.addr, align 8
-  %call = call %"class.std::__1::__tree_node.22"* @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE6__rootEv(%"class.std::__1::__tree.5"* %this1) #2
-  store %"class.std::__1::__tree_node.22"* %call, %"class.std::__1::__tree_node.22"** %__nd, align 8
+  %call = call %"class.std::__1::__tree_node.19"* @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE6__rootEv(%"class.std::__1::__tree.5"* %this1) #2
+  store %"class.std::__1::__tree_node.19"* %call, %"class.std::__1::__tree_node.19"** %__nd, align 8
   %call2 = call %"class.std::__1::__tree_node_base"** @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE10__root_ptrEv(%"class.std::__1::__tree.5"* %this1) #2
   store %"class.std::__1::__tree_node_base"** %call2, %"class.std::__1::__tree_node_base"*** %__nd_ptr, align 8
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %cmp = icmp ne %"class.std::__1::__tree_node.22"* %0, null
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %cmp = icmp ne %"class.std::__1::__tree_node.19"* %0, null
   br i1 %cmp, label %if.then, label %if.end28
 
 if.then:                                          ; preds = %entry
@@ -19989,36 +24402,36 @@ if.then:                                          ; preds = %entry
 while.body:                                       ; preds = %if.then, %if.end27
   %call3 = call dereferenceable(1) %"class.std::__1::__map_value_compare.12"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE10value_compEv(%"class.std::__1::__tree.5"* %this1) #2
   %1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__v.addr, align 8
-  %2 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.22", %"class.std::__1::__tree_node.22"* %2, i32 0, i32 1
-  %call4 = call zeroext i1 @_ZNKSt3__119__map_value_compareINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12__value_typeIS6_dEENS_4lessIS6_EELb1EEclERKS6_RKS8_(%"class.std::__1::__map_value_compare.12"* %call3, %"class.std::__1::basic_string"* dereferenceable(24) %1, %"struct.std::__1::__value_type.23"* dereferenceable(32) %__value_)
+  %2 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.19", %"class.std::__1::__tree_node.19"* %2, i32 0, i32 1
+  %call4 = call zeroext i1 @_ZNKSt3__119__map_value_compareINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12__value_typeIS6_dEENS_4lessIS6_EELb1EEclERKS6_RKS8_(%"class.std::__1::__map_value_compare.12"* %call3, %"class.std::__1::basic_string"* dereferenceable(24) %1, %"struct.std::__1::__value_type.20"* dereferenceable(32) %__value_)
   br i1 %call4, label %if.then5, label %if.else12
 
 if.then5:                                         ; preds = %while.body
-  %3 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %4 = bitcast %"class.std::__1::__tree_node.22"* %3 to %"class.std::__1::__tree_end_node"*
+  %3 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %4 = bitcast %"class.std::__1::__tree_node.19"* %3 to %"class.std::__1::__tree_end_node"*
   %__left_ = getelementptr inbounds %"class.std::__1::__tree_end_node", %"class.std::__1::__tree_end_node"* %4, i32 0, i32 0
   %5 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %__left_, align 8
   %cmp6 = icmp ne %"class.std::__1::__tree_node_base"* %5, null
   br i1 %cmp6, label %if.then7, label %if.else
 
 if.then7:                                         ; preds = %if.then5
-  %6 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %7 = bitcast %"class.std::__1::__tree_node.22"* %6 to %"class.std::__1::__tree_end_node"*
+  %6 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %7 = bitcast %"class.std::__1::__tree_node.19"* %6 to %"class.std::__1::__tree_end_node"*
   %__left_8 = getelementptr inbounds %"class.std::__1::__tree_end_node", %"class.std::__1::__tree_end_node"* %7, i32 0, i32 0
   %call9 = call %"class.std::__1::__tree_node_base"** @_ZNSt3__1L9addressofIPNS_16__tree_node_baseIPvEEEEPT_RS5_(%"class.std::__1::__tree_node_base"** dereferenceable(8) %__left_8) #2
   store %"class.std::__1::__tree_node_base"** %call9, %"class.std::__1::__tree_node_base"*** %__nd_ptr, align 8
-  %8 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %9 = bitcast %"class.std::__1::__tree_node.22"* %8 to %"class.std::__1::__tree_end_node"*
+  %8 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %9 = bitcast %"class.std::__1::__tree_node.19"* %8 to %"class.std::__1::__tree_end_node"*
   %__left_10 = getelementptr inbounds %"class.std::__1::__tree_end_node", %"class.std::__1::__tree_end_node"* %9, i32 0, i32 0
   %10 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %__left_10, align 8
-  %11 = bitcast %"class.std::__1::__tree_node_base"* %10 to %"class.std::__1::__tree_node.22"*
-  store %"class.std::__1::__tree_node.22"* %11, %"class.std::__1::__tree_node.22"** %__nd, align 8
+  %11 = bitcast %"class.std::__1::__tree_node_base"* %10 to %"class.std::__1::__tree_node.19"*
+  store %"class.std::__1::__tree_node.19"* %11, %"class.std::__1::__tree_node.19"** %__nd, align 8
   br label %if.end
 
 if.else:                                          ; preds = %if.then5
-  %12 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %13 = bitcast %"class.std::__1::__tree_node.22"* %12 to %"class.std::__1::__tree_end_node"*
+  %12 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %13 = bitcast %"class.std::__1::__tree_node.19"* %12 to %"class.std::__1::__tree_end_node"*
   %14 = load %"class.std::__1::__tree_end_node"**, %"class.std::__1::__tree_end_node"*** %__parent.addr, align 8
   store %"class.std::__1::__tree_end_node"* %13, %"class.std::__1::__tree_end_node"** %14, align 8
   %15 = load %"class.std::__1::__tree_end_node"**, %"class.std::__1::__tree_end_node"*** %__parent.addr, align 8
@@ -20032,41 +24445,41 @@ if.end:                                           ; preds = %if.then7
 
 if.else12:                                        ; preds = %while.body
   %call13 = call dereferenceable(1) %"class.std::__1::__map_value_compare.12"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE10value_compEv(%"class.std::__1::__tree.5"* %this1) #2
-  %17 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %__value_14 = getelementptr inbounds %"class.std::__1::__tree_node.22", %"class.std::__1::__tree_node.22"* %17, i32 0, i32 1
+  %17 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %__value_14 = getelementptr inbounds %"class.std::__1::__tree_node.19", %"class.std::__1::__tree_node.19"* %17, i32 0, i32 1
   %18 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__v.addr, align 8
-  %call15 = call zeroext i1 @_ZNKSt3__119__map_value_compareINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12__value_typeIS6_dEENS_4lessIS6_EELb1EEclERKS8_RKS6_(%"class.std::__1::__map_value_compare.12"* %call13, %"struct.std::__1::__value_type.23"* dereferenceable(32) %__value_14, %"class.std::__1::basic_string"* dereferenceable(24) %18)
+  %call15 = call zeroext i1 @_ZNKSt3__119__map_value_compareINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12__value_typeIS6_dEENS_4lessIS6_EELb1EEclERKS8_RKS6_(%"class.std::__1::__map_value_compare.12"* %call13, %"struct.std::__1::__value_type.20"* dereferenceable(32) %__value_14, %"class.std::__1::basic_string"* dereferenceable(24) %18)
   br i1 %call15, label %if.then16, label %if.else25
 
 if.then16:                                        ; preds = %if.else12
-  %19 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %20 = bitcast %"class.std::__1::__tree_node.22"* %19 to %"class.std::__1::__tree_node_base"*
+  %19 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %20 = bitcast %"class.std::__1::__tree_node.19"* %19 to %"class.std::__1::__tree_node_base"*
   %__right_ = getelementptr inbounds %"class.std::__1::__tree_node_base", %"class.std::__1::__tree_node_base"* %20, i32 0, i32 1
   %21 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %__right_, align 8
   %cmp17 = icmp ne %"class.std::__1::__tree_node_base"* %21, null
   br i1 %cmp17, label %if.then18, label %if.else22
 
 if.then18:                                        ; preds = %if.then16
-  %22 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %23 = bitcast %"class.std::__1::__tree_node.22"* %22 to %"class.std::__1::__tree_node_base"*
+  %22 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %23 = bitcast %"class.std::__1::__tree_node.19"* %22 to %"class.std::__1::__tree_node_base"*
   %__right_19 = getelementptr inbounds %"class.std::__1::__tree_node_base", %"class.std::__1::__tree_node_base"* %23, i32 0, i32 1
   %call20 = call %"class.std::__1::__tree_node_base"** @_ZNSt3__1L9addressofIPNS_16__tree_node_baseIPvEEEEPT_RS5_(%"class.std::__1::__tree_node_base"** dereferenceable(8) %__right_19) #2
   store %"class.std::__1::__tree_node_base"** %call20, %"class.std::__1::__tree_node_base"*** %__nd_ptr, align 8
-  %24 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %25 = bitcast %"class.std::__1::__tree_node.22"* %24 to %"class.std::__1::__tree_node_base"*
+  %24 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %25 = bitcast %"class.std::__1::__tree_node.19"* %24 to %"class.std::__1::__tree_node_base"*
   %__right_21 = getelementptr inbounds %"class.std::__1::__tree_node_base", %"class.std::__1::__tree_node_base"* %25, i32 0, i32 1
   %26 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %__right_21, align 8
-  %27 = bitcast %"class.std::__1::__tree_node_base"* %26 to %"class.std::__1::__tree_node.22"*
-  store %"class.std::__1::__tree_node.22"* %27, %"class.std::__1::__tree_node.22"** %__nd, align 8
+  %27 = bitcast %"class.std::__1::__tree_node_base"* %26 to %"class.std::__1::__tree_node.19"*
+  store %"class.std::__1::__tree_node.19"* %27, %"class.std::__1::__tree_node.19"** %__nd, align 8
   br label %if.end24
 
 if.else22:                                        ; preds = %if.then16
-  %28 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %29 = bitcast %"class.std::__1::__tree_node.22"* %28 to %"class.std::__1::__tree_end_node"*
+  %28 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %29 = bitcast %"class.std::__1::__tree_node.19"* %28 to %"class.std::__1::__tree_end_node"*
   %30 = load %"class.std::__1::__tree_end_node"**, %"class.std::__1::__tree_end_node"*** %__parent.addr, align 8
   store %"class.std::__1::__tree_end_node"* %29, %"class.std::__1::__tree_end_node"** %30, align 8
-  %31 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %32 = bitcast %"class.std::__1::__tree_node.22"* %31 to %"class.std::__1::__tree_node_base"*
+  %31 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %32 = bitcast %"class.std::__1::__tree_node.19"* %31 to %"class.std::__1::__tree_node_base"*
   %__right_23 = getelementptr inbounds %"class.std::__1::__tree_node_base", %"class.std::__1::__tree_node_base"* %32, i32 0, i32 1
   store %"class.std::__1::__tree_node_base"** %__right_23, %"class.std::__1::__tree_node_base"*** %retval, align 8
   br label %return
@@ -20075,8 +24488,8 @@ if.end24:                                         ; preds = %if.then18
   br label %if.end26
 
 if.else25:                                        ; preds = %if.else12
-  %33 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__nd, align 8
-  %34 = bitcast %"class.std::__1::__tree_node.22"* %33 to %"class.std::__1::__tree_end_node"*
+  %33 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__nd, align 8
+  %34 = bitcast %"class.std::__1::__tree_node.19"* %33 to %"class.std::__1::__tree_end_node"*
   %35 = load %"class.std::__1::__tree_end_node"**, %"class.std::__1::__tree_end_node"*** %__parent.addr, align 8
   store %"class.std::__1::__tree_end_node"* %34, %"class.std::__1::__tree_end_node"** %35, align 8
   %36 = load %"class.std::__1::__tree_node_base"**, %"class.std::__1::__tree_node_base"*** %__nd_ptr, align 8
@@ -20105,34 +24518,34 @@ return:                                           ; preds = %if.end28, %if.else2
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISQ_EEEEEEDpOT_(%"class.std::__1::unique_ptr.41"* noalias sret %agg.result, %"class.std::__1::__tree.5"* %this, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISQ_EEEEEEDpOT_(%"class.std::__1::unique_ptr.40"* noalias sret %agg.result, %"class.std::__1::__tree.5"* %this, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %__na = alloca %"class.std::__1::allocator.8"*, align 8
   %nrvo = alloca i1, align 1
-  %ref.tmp = alloca %"class.std::__1::__tree_node_destructor.45", align 8
+  %ref.tmp = alloca %"class.std::__1::__tree_node_destructor.44", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::__tree.5"*, %"class.std::__1::__tree.5"** %this.addr, align 8
   %call = call dereferenceable(1) %"class.std::__1::allocator.8"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__node_allocEv(%"class.std::__1::__tree.5"* %this5) #2
   store %"class.std::__1::allocator.8"* %call, %"class.std::__1::allocator.8"** %__na, align 8
   store i1 false, i1* %nrvo, align 1
   %0 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na, align 8
-  %call6 = call %"class.std::__1::__tree_node.22"* @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE8allocateERSC_m(%"class.std::__1::allocator.8"* dereferenceable(1) %0, i64 1)
+  %call6 = call %"class.std::__1::__tree_node.19"* @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE8allocateERSC_m(%"class.std::__1::allocator.8"* dereferenceable(1) %0, i64 1)
   %1 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na, align 8
-  call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEC1ERSC_b(%"class.std::__1::__tree_node_destructor.45"* %ref.tmp, %"class.std::__1::allocator.8"* dereferenceable(1) %1, i1 zeroext false) #2
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.41"* %agg.result, %"class.std::__1::__tree_node.22"* %call6, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %ref.tmp) #2
+  call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEC1ERSC_b(%"class.std::__1::__tree_node_destructor.44"* %ref.tmp, %"class.std::__1::allocator.8"* dereferenceable(1) %1, i1 zeroext false) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.40"* %agg.result, %"class.std::__1::__tree_node.19"* %call6, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %ref.tmp) #2
   %2 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na, align 8
-  %call7 = call %"class.std::__1::__tree_node.22"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.41"* %agg.result) #2
-  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.22", %"class.std::__1::__tree_node.22"* %call7, i32 0, i32 1
-  %call8 = invoke %"struct.std::__1::pair.21"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE9__get_ptrERS8_(%"struct.std::__1::__value_type.23"* dereferenceable(32) %__value_)
+  %call7 = call %"class.std::__1::__tree_node.19"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.40"* %agg.result) #2
+  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.19", %"class.std::__1::__tree_node.19"* %call7, i32 0, i32 1
+  %call8 = invoke %"struct.std::__1::pair.21"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE9__get_ptrERS8_(%"struct.std::__1::__value_type.20"* dereferenceable(32) %__value_)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -20140,14 +24553,14 @@ invoke.cont:                                      ; preds = %entry
   %call9 = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
   %4 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__args.addr2, align 8
   %call10 = call dereferenceable(8) %"class.std::__1::tuple"* @_ZNSt3__1L7forwardINS_5tupleIJONS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISA_E4typeE(%"class.std::__1::tuple"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call11 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  invoke void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE9constructINS_4pairIKS8_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator.8"* dereferenceable(1) %2, %"struct.std::__1::pair.21"* %call8, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call9, %"class.std::__1::tuple"* dereferenceable(8) %call10, %"class.std::__1::tuple.31"* dereferenceable(1) %call11)
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call11 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  invoke void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE9constructINS_4pairIKS8_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator.8"* dereferenceable(1) %2, %"struct.std::__1::pair.21"* %call8, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call9, %"class.std::__1::tuple"* dereferenceable(8) %call10, %"class.std::__1::tuple.29"* dereferenceable(1) %call11)
           to label %invoke.cont12 unwind label %lpad
 
 invoke.cont12:                                    ; preds = %invoke.cont
-  %call13 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.41"* %agg.result) #2
-  %__value_constructed = getelementptr inbounds %"class.std::__1::__tree_node_destructor.45", %"class.std::__1::__tree_node_destructor.45"* %call13, i32 0, i32 1
+  %call13 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.40"* %agg.result) #2
+  %__value_constructed = getelementptr inbounds %"class.std::__1::__tree_node_destructor.44", %"class.std::__1::__tree_node_destructor.44"* %call13, i32 0, i32 1
   store i8 1, i8* %__value_constructed, align 8
   store i1 true, i1* %nrvo, align 1
   %nrvo.val = load i1, i1* %nrvo, align 1
@@ -20160,11 +24573,11 @@ lpad:                                             ; preds = %invoke.cont, %entry
   store i8* %7, i8** %exn.slot, align 8
   %8 = extractvalue { i8*, i32 } %6, 1
   store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.41"* %agg.result) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.40"* %agg.result) #2
   br label %eh.resume
 
 nrvo.unused:                                      ; preds = %invoke.cont12
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.41"* %agg.result) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.40"* %agg.result) #2
   br label %nrvo.skipdtor
 
 nrvo.skipdtor:                                    ; preds = %nrvo.unused, %invoke.cont12
@@ -20236,71 +24649,71 @@ if.end:                                           ; preds = %if.then, %entry
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_node.22"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.41"* %this) #1 align 2 {
+define internal %"class.std::__1::__tree_node.19"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.40"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.42"* %__ptr_) #2
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %call, align 8
-  ret %"class.std::__1::__tree_node.22"* %0
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.41"* %__ptr_) #2
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %call, align 8
+  ret %"class.std::__1::__tree_node.19"* %0
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_node.22"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.41"* %this) #1 align 2 {
+define internal %"class.std::__1::__tree_node.19"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.40"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  %__t = alloca %"class.std::__1::__tree_node.22"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.42"* %__ptr_) #2
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %call, align 8
-  store %"class.std::__1::__tree_node.22"* %0, %"class.std::__1::__tree_node.22"** %__t, align 8
-  %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %call3 = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.42"* %__ptr_2) #2
-  store %"class.std::__1::__tree_node.22"* null, %"class.std::__1::__tree_node.22"** %call3, align 8
-  %1 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__t, align 8
-  ret %"class.std::__1::__tree_node.22"* %1
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  %__t = alloca %"class.std::__1::__tree_node.19"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.41"* %__ptr_) #2
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %call, align 8
+  store %"class.std::__1::__tree_node.19"* %0, %"class.std::__1::__tree_node.19"** %__t, align 8
+  %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %call3 = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.41"* %__ptr_2) #2
+  store %"class.std::__1::__tree_node.19"* null, %"class.std::__1::__tree_node.19"** %call3, align 8
+  %1 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__t, align 8
+  ret %"class.std::__1::__tree_node.19"* %1
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.41"* %this) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.40"* %this) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED2Ev(%"class.std::__1::unique_ptr.41"* %this1) #2
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED2Ev(%"class.std::__1::unique_ptr.40"* %this1) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC1ESC_(%"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_node.22"* %__p) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC1ESC_(%"class.std::__1::__tree_iterator.38"* %this, %"class.std::__1::__tree_node.19"* %__p) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %this1 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC2ESC_(%"class.std::__1::__tree_iterator.20"* %this1, %"class.std::__1::__tree_node.22"* %0) #2
+  %this.addr = alloca %"class.std::__1::__tree_iterator.38"*, align 8
+  %__p.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
+  store %"class.std::__1::__tree_iterator.38"* %this, %"class.std::__1::__tree_iterator.38"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %this1 = load %"class.std::__1::__tree_iterator.38"*, %"class.std::__1::__tree_iterator.38"** %this.addr, align 8
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC2ESC_(%"class.std::__1::__tree_iterator.38"* %this1, %"class.std::__1::__tree_node.19"* %0) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.39"* %this, %"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__u1, i8* dereferenceable(1) %__u2) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.37"* %this, %"class.std::__1::__tree_iterator.38"* dereferenceable(8) %__u1, i8* dereferenceable(1) %__u2) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::pair.39"*, align 8
-  %__u1.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
+  %this.addr = alloca %"struct.std::__1::pair.37"*, align 8
+  %__u1.addr = alloca %"class.std::__1::__tree_iterator.38"*, align 8
   %__u2.addr = alloca i8*, align 8
-  store %"struct.std::__1::pair.39"* %this, %"struct.std::__1::pair.39"** %this.addr, align 8
-  store %"class.std::__1::__tree_iterator.20"* %__u1, %"class.std::__1::__tree_iterator.20"** %__u1.addr, align 8
+  store %"struct.std::__1::pair.37"* %this, %"struct.std::__1::pair.37"** %this.addr, align 8
+  store %"class.std::__1::__tree_iterator.38"* %__u1, %"class.std::__1::__tree_iterator.38"** %__u1.addr, align 8
   store i8* %__u2, i8** %__u2.addr, align 8
-  %this1 = load %"struct.std::__1::pair.39"*, %"struct.std::__1::pair.39"** %this.addr, align 8
-  %0 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %__u1.addr, align 8
+  %this1 = load %"struct.std::__1::pair.37"*, %"struct.std::__1::pair.37"** %this.addr, align 8
+  %0 = load %"class.std::__1::__tree_iterator.38"*, %"class.std::__1::__tree_iterator.38"** %__u1.addr, align 8
   %1 = load i8*, i8** %__u2.addr, align 8
-  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEbEC2ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.39"* %this1, %"class.std::__1::__tree_iterator.20"* dereferenceable(8) %0, i8* dereferenceable(1) %1) #2
+  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEbEC2ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.37"* %this1, %"class.std::__1::__tree_iterator.38"* dereferenceable(8) %0, i8* dereferenceable(1) %1) #2
   ret void
 }
 
@@ -20328,37 +24741,37 @@ entry:
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal zeroext i1 @_ZNKSt3__119__map_value_compareINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12__value_typeIS6_dEENS_4lessIS6_EELb1EEclERKS6_RKS8_(%"class.std::__1::__map_value_compare.12"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__x, %"struct.std::__1::__value_type.23"* dereferenceable(32) %__y) #4 align 2 {
+define internal zeroext i1 @_ZNKSt3__119__map_value_compareINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12__value_typeIS6_dEENS_4lessIS6_EELb1EEclERKS6_RKS8_(%"class.std::__1::__map_value_compare.12"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__x, %"struct.std::__1::__value_type.20"* dereferenceable(32) %__y) #4 align 2 {
 entry:
   %this.addr = alloca %"class.std::__1::__map_value_compare.12"*, align 8
   %__x.addr = alloca %"class.std::__1::basic_string"*, align 8
-  %__y.addr = alloca %"struct.std::__1::__value_type.23"*, align 8
+  %__y.addr = alloca %"struct.std::__1::__value_type.20"*, align 8
   store %"class.std::__1::__map_value_compare.12"* %this, %"class.std::__1::__map_value_compare.12"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__x, %"class.std::__1::basic_string"** %__x.addr, align 8
-  store %"struct.std::__1::__value_type.23"* %__y, %"struct.std::__1::__value_type.23"** %__y.addr, align 8
+  store %"struct.std::__1::__value_type.20"* %__y, %"struct.std::__1::__value_type.20"** %__y.addr, align 8
   %this1 = load %"class.std::__1::__map_value_compare.12"*, %"class.std::__1::__map_value_compare.12"** %this.addr, align 8
   %0 = bitcast %"class.std::__1::__map_value_compare.12"* %this1 to %"struct.std::__1::less"*
   %1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__x.addr, align 8
-  %2 = load %"struct.std::__1::__value_type.23"*, %"struct.std::__1::__value_type.23"** %__y.addr, align 8
-  %call = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNKSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.23"* %2)
+  %2 = load %"struct.std::__1::__value_type.20"*, %"struct.std::__1::__value_type.20"** %__y.addr, align 8
+  %call = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNKSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.20"* %2)
   %first = getelementptr inbounds %"struct.std::__1::pair.21", %"struct.std::__1::pair.21"* %call, i32 0, i32 0
   %call2 = call zeroext i1 @_ZNKSt3__14lessINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEclERKS6_S9_(%"struct.std::__1::less"* %0, %"class.std::__1::basic_string"* dereferenceable(24) %1, %"class.std::__1::basic_string"* dereferenceable(24) %first)
   ret i1 %call2
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal zeroext i1 @_ZNKSt3__119__map_value_compareINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12__value_typeIS6_dEENS_4lessIS6_EELb1EEclERKS8_RKS6_(%"class.std::__1::__map_value_compare.12"* %this, %"struct.std::__1::__value_type.23"* dereferenceable(32) %__x, %"class.std::__1::basic_string"* dereferenceable(24) %__y) #1 align 2 {
+define internal zeroext i1 @_ZNKSt3__119__map_value_compareINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12__value_typeIS6_dEENS_4lessIS6_EELb1EEclERKS8_RKS6_(%"class.std::__1::__map_value_compare.12"* %this, %"struct.std::__1::__value_type.20"* dereferenceable(32) %__x, %"class.std::__1::basic_string"* dereferenceable(24) %__y) #1 align 2 {
 entry:
   %this.addr = alloca %"class.std::__1::__map_value_compare.12"*, align 8
-  %__x.addr = alloca %"struct.std::__1::__value_type.23"*, align 8
+  %__x.addr = alloca %"struct.std::__1::__value_type.20"*, align 8
   %__y.addr = alloca %"class.std::__1::basic_string"*, align 8
   store %"class.std::__1::__map_value_compare.12"* %this, %"class.std::__1::__map_value_compare.12"** %this.addr, align 8
-  store %"struct.std::__1::__value_type.23"* %__x, %"struct.std::__1::__value_type.23"** %__x.addr, align 8
+  store %"struct.std::__1::__value_type.20"* %__x, %"struct.std::__1::__value_type.20"** %__x.addr, align 8
   store %"class.std::__1::basic_string"* %__y, %"class.std::__1::basic_string"** %__y.addr, align 8
   %this1 = load %"class.std::__1::__map_value_compare.12"*, %"class.std::__1::__map_value_compare.12"** %this.addr, align 8
   %0 = bitcast %"class.std::__1::__map_value_compare.12"* %this1 to %"struct.std::__1::less"*
-  %1 = load %"struct.std::__1::__value_type.23"*, %"struct.std::__1::__value_type.23"** %__x.addr, align 8
-  %call = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNKSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.23"* %1)
+  %1 = load %"struct.std::__1::__value_type.20"*, %"struct.std::__1::__value_type.20"** %__x.addr, align 8
+  %call = call dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNKSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.20"* %1)
   %first = getelementptr inbounds %"struct.std::__1::pair.21", %"struct.std::__1::pair.21"* %call, i32 0, i32 0
   %2 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__y.addr, align 8
   %call2 = call zeroext i1 @_ZNKSt3__14lessINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEclERKS6_S9_(%"struct.std::__1::less"* %0, %"class.std::__1::basic_string"* dereferenceable(24) %first, %"class.std::__1::basic_string"* dereferenceable(24) %2)
@@ -20387,17 +24800,17 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNKSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.23"* %this) #1 align 2 {
+define internal dereferenceable(32) %"struct.std::__1::pair.21"* @_ZNKSt3__112__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdE11__get_valueEv(%"struct.std::__1::__value_type.20"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__value_type.23"*, align 8
-  store %"struct.std::__1::__value_type.23"* %this, %"struct.std::__1::__value_type.23"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__value_type.23"*, %"struct.std::__1::__value_type.23"** %this.addr, align 8
-  %__cc = getelementptr inbounds %"struct.std::__1::__value_type.23", %"struct.std::__1::__value_type.23"* %this1, i32 0, i32 0
+  %this.addr = alloca %"struct.std::__1::__value_type.20"*, align 8
+  store %"struct.std::__1::__value_type.20"* %this, %"struct.std::__1::__value_type.20"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__value_type.20"*, %"struct.std::__1::__value_type.20"** %this.addr, align 8
+  %__cc = getelementptr inbounds %"struct.std::__1::__value_type.20", %"struct.std::__1::__value_type.20"* %this1, i32 0, i32 0
   ret %"struct.std::__1::pair.21"* %__cc
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal %"class.std::__1::__tree_node.22"* @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE8allocateERSC_m(%"class.std::__1::allocator.8"* dereferenceable(1) %__a, i64 %__n) #4 align 2 {
+define internal %"class.std::__1::__tree_node.19"* @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE8allocateERSC_m(%"class.std::__1::allocator.8"* dereferenceable(1) %__a, i64 %__n) #4 align 2 {
 entry:
   %__a.addr = alloca %"class.std::__1::allocator.8"*, align 8
   %__n.addr = alloca i64, align 8
@@ -20405,97 +24818,97 @@ entry:
   store i64 %__n, i64* %__n.addr, align 8
   %0 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__a.addr, align 8
   %1 = load i64, i64* %__n.addr, align 8
-  %call = call %"class.std::__1::__tree_node.22"* @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE8allocateEmPKv(%"class.std::__1::allocator.8"* %0, i64 %1, i8* null)
-  ret %"class.std::__1::__tree_node.22"* %call
+  %call = call %"class.std::__1::__tree_node.19"* @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE8allocateEmPKv(%"class.std::__1::allocator.8"* %0, i64 %1, i8* null)
+  ret %"class.std::__1::__tree_node.19"* %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEC1ERSC_b(%"class.std::__1::__tree_node_destructor.45"* %this, %"class.std::__1::allocator.8"* dereferenceable(1) %__na, i1 zeroext %__val) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEC1ERSC_b(%"class.std::__1::__tree_node_destructor.44"* %this, %"class.std::__1::allocator.8"* dereferenceable(1) %__na, i1 zeroext %__val) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
+  %this.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
   %__na.addr = alloca %"class.std::__1::allocator.8"*, align 8
   %__val.addr = alloca i8, align 1
-  store %"class.std::__1::__tree_node_destructor.45"* %this, %"class.std::__1::__tree_node_destructor.45"** %this.addr, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %this, %"class.std::__1::__tree_node_destructor.44"** %this.addr, align 8
   store %"class.std::__1::allocator.8"* %__na, %"class.std::__1::allocator.8"** %__na.addr, align 8
   %frombool = zext i1 %__val to i8
   store i8 %frombool, i8* %__val.addr, align 1
-  %this1 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %this.addr, align 8
   %0 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na.addr, align 8
   %1 = load i8, i8* %__val.addr, align 1
   %tobool = trunc i8 %1 to i1
-  call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEC2ERSC_b(%"class.std::__1::__tree_node_destructor.45"* %this1, %"class.std::__1::allocator.8"* dereferenceable(1) %0, i1 zeroext %tobool) #2
+  call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEC2ERSC_b(%"class.std::__1::__tree_node_destructor.44"* %this1, %"class.std::__1::allocator.8"* dereferenceable(1) %0, i1 zeroext %tobool) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %__d) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %__d) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
-  %__d.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  store %"class.std::__1::__tree_node_destructor.45"* %__d, %"class.std::__1::__tree_node_destructor.45"** %__d.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %1 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %__d.addr, align 8
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.41"* %this1, %"class.std::__1::__tree_node.22"* %0, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %1) #2
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  %__p.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
+  %__d.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %__d, %"class.std::__1::__tree_node_destructor.44"** %__d.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %1 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %__d.addr, align 8
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.40"* %this1, %"class.std::__1::__tree_node.19"* %0, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %1) #2
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE9constructINS_4pairIKS8_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator.8"* dereferenceable(1) %__a, %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 {
+define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE9constructINS_4pairIKS8_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator.8"* dereferenceable(1) %__a, %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 {
 entry:
   %__a.addr = alloca %"class.std::__1::allocator.8"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair.21"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
-  %agg.tmp = alloca %"struct.std::__1::integral_constant.36", align 1
-  %ref.tmp = alloca %"struct.std::__1::__has_construct.47", align 1
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
+  %agg.tmp = alloca %"struct.std::__1::integral_constant.34", align 1
+  %ref.tmp = alloca %"struct.std::__1::__has_construct.46", align 1
   store %"class.std::__1::allocator.8"* %__a, %"class.std::__1::allocator.8"** %__a.addr, align 8
   store %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::pair.21"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %0 = bitcast %"struct.std::__1::__has_construct.47"* %ref.tmp to %"struct.std::__1::integral_constant.36"*
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %0 = bitcast %"struct.std::__1::__has_construct.46"* %ref.tmp to %"struct.std::__1::integral_constant.34"*
   %1 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__a.addr, align 8
   %2 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %__p.addr, align 8
   %3 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
   %4 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__args.addr2, align 8
   %call5 = call dereferenceable(8) %"class.std::__1::tuple"* @_ZNSt3__1L7forwardINS_5tupleIJONS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISA_E4typeE(%"class.std::__1::tuple"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call6 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE11__constructINS_4pairIKS8_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator.8"* dereferenceable(1) %1, %"struct.std::__1::pair.21"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple"* dereferenceable(8) %call5, %"class.std::__1::tuple.31"* dereferenceable(1) %call6)
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call6 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE11__constructINS_4pairIKS8_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator.8"* dereferenceable(1) %1, %"struct.std::__1::pair.21"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple"* dereferenceable(8) %call5, %"class.std::__1::tuple.29"* dereferenceable(1) %call6)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_node.22"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.41"* %this) #1 align 2 {
+define internal %"class.std::__1::__tree_node.19"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.40"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.42"* %__ptr_) #2
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %call, align 8
-  ret %"class.std::__1::__tree_node.22"* %0
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.41"* %__ptr_) #2
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %call, align 8
+  ret %"class.std::__1::__tree_node.19"* %0
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.41"* %this) #1 align 2 {
+define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.40"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.42"* %__ptr_) #2
-  ret %"class.std::__1::__tree_node_destructor.45"* %call
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.41"* %__ptr_) #2
+  ret %"class.std::__1::__tree_node_destructor.44"* %call
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal %"class.std::__1::__tree_node.22"* @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE8allocateEmPKv(%"class.std::__1::allocator.8"* %this, i64 %__n, i8*) #4 align 2 {
+define internal %"class.std::__1::__tree_node.19"* @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE8allocateEmPKv(%"class.std::__1::allocator.8"* %this, i64 %__n, i8*) #4 align 2 {
 entry:
   %this.addr = alloca %"class.std::__1::allocator.8"*, align 8
   %__n.addr = alloca i64, align 8
@@ -20510,15 +24923,15 @@ entry:
   br i1 %cmp, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  call void @_ZNSt3__1L20__throw_length_errorEPKc(i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.83, i32 0, i32 0)) #16
+  call void @_ZNSt3__1L20__throw_length_errorEPKc(i8* getelementptr inbounds ([68 x i8], [68 x i8]* @.str.82, i32 0, i32 0)) #16
   unreachable
 
 if.end:                                           ; preds = %entry
   %2 = load i64, i64* %__n.addr, align 8
   %mul = mul i64 %2, 64
   %call2 = call i8* @_ZNSt3__1L17__libcpp_allocateEmm(i64 %mul, i64 8)
-  %3 = bitcast i8* %call2 to %"class.std::__1::__tree_node.22"*
-  ret %"class.std::__1::__tree_node.22"* %3
+  %3 = bitcast i8* %call2 to %"class.std::__1::__tree_node.19"*
+  ret %"class.std::__1::__tree_node.19"* %3
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
@@ -20531,20 +24944,20 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEC2ERSC_b(%"class.std::__1::__tree_node_destructor.45"* %this, %"class.std::__1::allocator.8"* dereferenceable(1) %__na, i1 zeroext %__val) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEC2ERSC_b(%"class.std::__1::__tree_node_destructor.44"* %this, %"class.std::__1::allocator.8"* dereferenceable(1) %__na, i1 zeroext %__val) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
+  %this.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
   %__na.addr = alloca %"class.std::__1::allocator.8"*, align 8
   %__val.addr = alloca i8, align 1
-  store %"class.std::__1::__tree_node_destructor.45"* %this, %"class.std::__1::__tree_node_destructor.45"** %this.addr, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %this, %"class.std::__1::__tree_node_destructor.44"** %this.addr, align 8
   store %"class.std::__1::allocator.8"* %__na, %"class.std::__1::allocator.8"** %__na.addr, align 8
   %frombool = zext i1 %__val to i8
   store i8 %frombool, i8* %__val.addr, align 1
-  %this1 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %this.addr, align 8
-  %__na_ = getelementptr inbounds %"class.std::__1::__tree_node_destructor.45", %"class.std::__1::__tree_node_destructor.45"* %this1, i32 0, i32 0
+  %this1 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %this.addr, align 8
+  %__na_ = getelementptr inbounds %"class.std::__1::__tree_node_destructor.44", %"class.std::__1::__tree_node_destructor.44"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na.addr, align 8
   store %"class.std::__1::allocator.8"* %0, %"class.std::__1::allocator.8"** %__na_, align 8
-  %__value_constructed = getelementptr inbounds %"class.std::__1::__tree_node_destructor.45", %"class.std::__1::__tree_node_destructor.45"* %this1, i32 0, i32 1
+  %__value_constructed = getelementptr inbounds %"class.std::__1::__tree_node_destructor.44", %"class.std::__1::__tree_node_destructor.44"* %this1, i32 0, i32 1
   %1 = load i8, i8* %__val.addr, align 1
   %tobool = trunc i8 %1 to i1
   %frombool2 = zext i1 %tobool to i8
@@ -20553,19 +24966,19 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %__d) unnamed_addr #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %__d) unnamed_addr #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
-  %__d.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  store %"class.std::__1::__tree_node_destructor.45"* %__d, %"class.std::__1::__tree_node_destructor.45"** %__d.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %__d.addr, align 8
-  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__1L4moveIRNS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEONS_16remove_referenceIT_E4typeEOSH_(%"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %0) #2
-  invoke void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.42"* %__ptr_, %"class.std::__1::__tree_node.22"** dereferenceable(8) %__p.addr, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %call)
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  %__p.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
+  %__d.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %__d, %"class.std::__1::__tree_node_destructor.44"** %__d.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %0 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %__d.addr, align 8
+  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__1L4moveIRNS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEONS_16remove_referenceIT_E4typeEOSH_(%"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %0) #2
+  invoke void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.41"* %__ptr_, %"class.std::__1::__tree_node.19"** dereferenceable(8) %__p.addr, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %call)
           to label %invoke.cont unwind label %terminate.lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -20580,146 +24993,146 @@ terminate.lpad:                                   ; preds = %entry
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__1L4moveIRNS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEONS_16remove_referenceIT_E4typeEOSH_(%"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %__t) #1 {
+define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__1L4moveIRNS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEONS_16remove_referenceIT_E4typeEOSH_(%"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %__t) #1 {
 entry:
-  %__t.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
-  store %"class.std::__1::__tree_node_destructor.45"* %__t, %"class.std::__1::__tree_node_destructor.45"** %__t.addr, align 8
-  %0 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %__t.addr, align 8
-  ret %"class.std::__1::__tree_node_destructor.45"* %0
+  %__t.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %__t, %"class.std::__1::__tree_node_destructor.44"** %__t.addr, align 8
+  %0 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %__t.addr, align 8
+  ret %"class.std::__1::__tree_node_destructor.44"* %0
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.42"* %this, %"class.std::__1::__tree_node.22"** dereferenceable(8) %__t1, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %__t2) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.41"* %this, %"class.std::__1::__tree_node.19"** dereferenceable(8) %__t1, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %__t2) unnamed_addr #4 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.42"*, align 8
-  %__t1.addr = alloca %"class.std::__1::__tree_node.22"**, align 8
-  %__t2.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
-  store %"class.std::__1::__compressed_pair.42"* %this, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"** %__t1, %"class.std::__1::__tree_node.22"*** %__t1.addr, align 8
-  store %"class.std::__1::__tree_node_destructor.45"* %__t2, %"class.std::__1::__tree_node_destructor.45"** %__t2.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.42"*, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  %0 = load %"class.std::__1::__tree_node.22"**, %"class.std::__1::__tree_node.22"*** %__t1.addr, align 8
-  %1 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %__t2.addr, align 8
-  call void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.42"* %this1, %"class.std::__1::__tree_node.22"** dereferenceable(8) %0, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %1)
+  %this.addr = alloca %"class.std::__1::__compressed_pair.41"*, align 8
+  %__t1.addr = alloca %"class.std::__1::__tree_node.19"**, align 8
+  %__t2.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
+  store %"class.std::__1::__compressed_pair.41"* %this, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"** %__t1, %"class.std::__1::__tree_node.19"*** %__t1.addr, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %__t2, %"class.std::__1::__tree_node_destructor.44"** %__t2.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.41"*, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  %0 = load %"class.std::__1::__tree_node.19"**, %"class.std::__1::__tree_node.19"*** %__t1.addr, align 8
+  %1 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %__t2.addr, align 8
+  call void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.41"* %this1, %"class.std::__1::__tree_node.19"** dereferenceable(8) %0, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %1)
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.42"* %this, %"class.std::__1::__tree_node.22"** dereferenceable(8) %__t1, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %__t2) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC2IRSC_SF_EEOT_OT0_(%"class.std::__1::__compressed_pair.41"* %this, %"class.std::__1::__tree_node.19"** dereferenceable(8) %__t1, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %__t2) unnamed_addr #4 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.42"*, align 8
-  %__t1.addr = alloca %"class.std::__1::__tree_node.22"**, align 8
-  %__t2.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
-  store %"class.std::__1::__compressed_pair.42"* %this, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"** %__t1, %"class.std::__1::__tree_node.22"*** %__t1.addr, align 8
-  store %"class.std::__1::__tree_node_destructor.45"* %__t2, %"class.std::__1::__tree_node_destructor.45"** %__t2.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.42"*, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.42"* %this1 to %"struct.std::__1::__compressed_pair_elem.43"*
-  %1 = load %"class.std::__1::__tree_node.22"**, %"class.std::__1::__tree_node.22"*** %__t1.addr, align 8
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__1L7forwardIRPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEEEEOT_RNS_16remove_referenceISE_E4typeE(%"class.std::__1::__tree_node.22"** dereferenceable(8) %1) #2
-  call void @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EEC2IRSC_vEEOT_(%"struct.std::__1::__compressed_pair_elem.43"* %0, %"class.std::__1::__tree_node.22"** dereferenceable(8) %call)
-  %2 = bitcast %"class.std::__1::__compressed_pair.42"* %this1 to i8*
+  %this.addr = alloca %"class.std::__1::__compressed_pair.41"*, align 8
+  %__t1.addr = alloca %"class.std::__1::__tree_node.19"**, align 8
+  %__t2.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
+  store %"class.std::__1::__compressed_pair.41"* %this, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"** %__t1, %"class.std::__1::__tree_node.19"*** %__t1.addr, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %__t2, %"class.std::__1::__tree_node_destructor.44"** %__t2.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.41"*, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.41"* %this1 to %"struct.std::__1::__compressed_pair_elem.42"*
+  %1 = load %"class.std::__1::__tree_node.19"**, %"class.std::__1::__tree_node.19"*** %__t1.addr, align 8
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__1L7forwardIRPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEEEEOT_RNS_16remove_referenceISE_E4typeE(%"class.std::__1::__tree_node.19"** dereferenceable(8) %1) #2
+  call void @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EEC2IRSC_vEEOT_(%"struct.std::__1::__compressed_pair_elem.42"* %0, %"class.std::__1::__tree_node.19"** dereferenceable(8) %call)
+  %2 = bitcast %"class.std::__1::__compressed_pair.41"* %this1 to i8*
   %3 = getelementptr inbounds i8, i8* %2, i64 8
-  %4 = bitcast i8* %3 to %"struct.std::__1::__compressed_pair_elem.44"*
-  %5 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %__t2.addr, align 8
-  %call2 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__1L7forwardINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %5) #2
-  call void @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEELi1ELb0EEC2ISE_vEEOT_(%"struct.std::__1::__compressed_pair_elem.44"* %4, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %call2)
+  %4 = bitcast i8* %3 to %"struct.std::__1::__compressed_pair_elem.43"*
+  %5 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %__t2.addr, align 8
+  %call2 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__1L7forwardINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %5) #2
+  call void @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEELi1ELb0EEC2ISE_vEEOT_(%"struct.std::__1::__compressed_pair_elem.43"* %4, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %call2)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__1L7forwardIRPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEEEEOT_RNS_16remove_referenceISE_E4typeE(%"class.std::__1::__tree_node.22"** dereferenceable(8) %__t) #1 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__1L7forwardIRPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEEEEOT_RNS_16remove_referenceISE_E4typeE(%"class.std::__1::__tree_node.19"** dereferenceable(8) %__t) #1 {
 entry:
-  %__t.addr = alloca %"class.std::__1::__tree_node.22"**, align 8
-  store %"class.std::__1::__tree_node.22"** %__t, %"class.std::__1::__tree_node.22"*** %__t.addr, align 8
-  %0 = load %"class.std::__1::__tree_node.22"**, %"class.std::__1::__tree_node.22"*** %__t.addr, align 8
-  ret %"class.std::__1::__tree_node.22"** %0
+  %__t.addr = alloca %"class.std::__1::__tree_node.19"**, align 8
+  store %"class.std::__1::__tree_node.19"** %__t, %"class.std::__1::__tree_node.19"*** %__t.addr, align 8
+  %0 = load %"class.std::__1::__tree_node.19"**, %"class.std::__1::__tree_node.19"*** %__t.addr, align 8
+  ret %"class.std::__1::__tree_node.19"** %0
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EEC2IRSC_vEEOT_(%"struct.std::__1::__compressed_pair_elem.43"* %this, %"class.std::__1::__tree_node.22"** dereferenceable(8) %__u) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EEC2IRSC_vEEOT_(%"struct.std::__1::__compressed_pair_elem.42"* %this, %"class.std::__1::__tree_node.19"** dereferenceable(8) %__u) unnamed_addr #1 align 2 {
+entry:
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.42"*, align 8
+  %__u.addr = alloca %"class.std::__1::__tree_node.19"**, align 8
+  store %"struct.std::__1::__compressed_pair_elem.42"* %this, %"struct.std::__1::__compressed_pair_elem.42"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"** %__u, %"class.std::__1::__tree_node.19"*** %__u.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.42"*, %"struct.std::__1::__compressed_pair_elem.42"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.42", %"struct.std::__1::__compressed_pair_elem.42"* %this1, i32 0, i32 0
+  %0 = load %"class.std::__1::__tree_node.19"**, %"class.std::__1::__tree_node.19"*** %__u.addr, align 8
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__1L7forwardIRPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEEEEOT_RNS_16remove_referenceISE_E4typeE(%"class.std::__1::__tree_node.19"** dereferenceable(8) %0) #2
+  %1 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %call, align 8
+  store %"class.std::__1::__tree_node.19"* %1, %"class.std::__1::__tree_node.19"** %__value_, align 8
+  ret void
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__1L7forwardINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %__t) #1 {
+entry:
+  %__t.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %__t, %"class.std::__1::__tree_node_destructor.44"** %__t.addr, align 8
+  %0 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %__t.addr, align 8
+  ret %"class.std::__1::__tree_node_destructor.44"* %0
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal void @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEELi1ELb0EEC2ISE_vEEOT_(%"struct.std::__1::__compressed_pair_elem.43"* %this, %"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %__u) unnamed_addr #1 align 2 {
 entry:
   %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.43"*, align 8
-  %__u.addr = alloca %"class.std::__1::__tree_node.22"**, align 8
+  %__u.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
   store %"struct.std::__1::__compressed_pair_elem.43"* %this, %"struct.std::__1::__compressed_pair_elem.43"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"** %__u, %"class.std::__1::__tree_node.22"*** %__u.addr, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %__u, %"class.std::__1::__tree_node_destructor.44"** %__u.addr, align 8
   %this1 = load %"struct.std::__1::__compressed_pair_elem.43"*, %"struct.std::__1::__compressed_pair_elem.43"** %this.addr, align 8
   %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.43", %"struct.std::__1::__compressed_pair_elem.43"* %this1, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_node.22"**, %"class.std::__1::__tree_node.22"*** %__u.addr, align 8
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__1L7forwardIRPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEEEEOT_RNS_16remove_referenceISE_E4typeE(%"class.std::__1::__tree_node.22"** dereferenceable(8) %0) #2
-  %1 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %call, align 8
-  store %"class.std::__1::__tree_node.22"* %1, %"class.std::__1::__tree_node.22"** %__value_, align 8
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__1L7forwardINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %__t) #1 {
-entry:
-  %__t.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
-  store %"class.std::__1::__tree_node_destructor.45"* %__t, %"class.std::__1::__tree_node_destructor.45"** %__t.addr, align 8
-  %0 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %__t.addr, align 8
-  ret %"class.std::__1::__tree_node_destructor.45"* %0
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEELi1ELb0EEC2ISE_vEEOT_(%"struct.std::__1::__compressed_pair_elem.44"* %this, %"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %__u) unnamed_addr #1 align 2 {
-entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.44"*, align 8
-  %__u.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.44"* %this, %"struct.std::__1::__compressed_pair_elem.44"** %this.addr, align 8
-  store %"class.std::__1::__tree_node_destructor.45"* %__u, %"class.std::__1::__tree_node_destructor.45"** %__u.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.44"*, %"struct.std::__1::__compressed_pair_elem.44"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.44", %"struct.std::__1::__compressed_pair_elem.44"* %this1, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %__u.addr, align 8
-  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__1L7forwardINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_node_destructor.45"* dereferenceable(16) %0) #2
-  %1 = bitcast %"class.std::__1::__tree_node_destructor.45"* %__value_ to i8*
-  %2 = bitcast %"class.std::__1::__tree_node_destructor.45"* %call to i8*
+  %0 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %__u.addr, align 8
+  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__1L7forwardINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_node_destructor.44"* dereferenceable(16) %0) #2
+  %1 = bitcast %"class.std::__1::__tree_node_destructor.44"* %__value_ to i8*
+  %2 = bitcast %"class.std::__1::__tree_node_destructor.44"* %call to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %1, i8* align 8 %2, i64 16, i1 false)
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE11__constructINS_4pairIKS8_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator.8"* dereferenceable(1) %__a, %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 {
+define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE11__constructINS_4pairIKS8_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS8_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator.8"* dereferenceable(1) %__a, %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 {
 entry:
-  %0 = alloca %"struct.std::__1::integral_constant.36", align 1
+  %0 = alloca %"struct.std::__1::integral_constant.34", align 1
   %__a.addr = alloca %"class.std::__1::allocator.8"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair.21"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   store %"class.std::__1::allocator.8"* %__a, %"class.std::__1::allocator.8"** %__a.addr, align 8
   store %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::pair.21"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %1 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__a.addr, align 8
   %2 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %__p.addr, align 8
   %3 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
   %4 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__args.addr2, align 8
   %call5 = call dereferenceable(8) %"class.std::__1::tuple"* @_ZNSt3__1L7forwardINS_5tupleIJONS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISA_E4typeE(%"class.std::__1::tuple"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call6 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  call void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE9constructINS_4pairIKS7_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator.8"* %1, %"struct.std::__1::pair.21"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple"* dereferenceable(8) %call5, %"class.std::__1::tuple.31"* dereferenceable(1) %call6)
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call6 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  call void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE9constructINS_4pairIKS7_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator.8"* %1, %"struct.std::__1::pair.21"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple"* dereferenceable(8) %call5, %"class.std::__1::tuple.29"* dereferenceable(1) %call6)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE9constructINS_4pairIKS7_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator.8"* %this, %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #1 align 2 {
+define internal void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEEdEEPvEEE9constructINS_4pairIKS7_dEEJRKNS_21piecewise_construct_tENS_5tupleIJOS7_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator.8"* %this, %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #1 align 2 {
 entry:
   %this.addr = alloca %"class.std::__1::allocator.8"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair.21"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
   %__args.addr2 = alloca %"class.std::__1::tuple"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %agg.tmp = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %agg.tmp6 = alloca %"class.std::__1::tuple", align 8
-  %agg.tmp8 = alloca %"class.std::__1::tuple.31", align 1
+  %agg.tmp8 = alloca %"class.std::__1::tuple.29", align 1
   store %"class.std::__1::allocator.8"* %this, %"class.std::__1::allocator.8"** %this.addr, align 8
   store %"struct.std::__1::pair.21"* %__p, %"struct.std::__1::pair.21"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   store %"class.std::__1::tuple"* %__args1, %"class.std::__1::tuple"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %this.addr, align 8
   %0 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %__p.addr, align 8
   %1 = bitcast %"struct.std::__1::pair.21"* %0 to i8*
@@ -20731,8 +25144,8 @@ entry:
   %5 = bitcast %"class.std::__1::tuple"* %agg.tmp6 to i8*
   %6 = bitcast %"class.std::__1::tuple"* %call7 to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %5, i8* align 8 %6, i64 8, i1 false)
-  %7 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call9 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %7) #2
+  %7 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call9 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %7) #2
   %coerce.dive = getelementptr inbounds %"class.std::__1::tuple", %"class.std::__1::tuple"* %agg.tmp6, i32 0, i32 0
   %coerce.dive10 = getelementptr inbounds %"struct.std::__1::__tuple_impl", %"struct.std::__1::__tuple_impl"* %coerce.dive, i32 0, i32 0
   %coerce.dive11 = getelementptr inbounds %"class.std::__1::__tuple_leaf", %"class.std::__1::__tuple_leaf"* %coerce.dive10, i32 0, i32 0
@@ -20746,18 +25159,18 @@ define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_
 entry:
   %__pc = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %__first_args = alloca %"class.std::__1::tuple", align 8
-  %__second_args = alloca %"class.std::__1::tuple.31", align 1
+  %__second_args = alloca %"class.std::__1::tuple.29", align 1
   %this.addr = alloca %"struct.std::__1::pair.21"*, align 8
   %agg.tmp = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %agg.tmp5 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %agg.tmp6 = alloca %"struct.std::__1::__tuple_indices.37", align 1
+  %agg.tmp6 = alloca %"struct.std::__1::__tuple_indices.35", align 1
   %coerce.dive = getelementptr inbounds %"class.std::__1::tuple", %"class.std::__1::tuple"* %__first_args, i32 0, i32 0
   %coerce.dive1 = getelementptr inbounds %"struct.std::__1::__tuple_impl", %"struct.std::__1::__tuple_impl"* %coerce.dive, i32 0, i32 0
   %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tuple_leaf", %"class.std::__1::__tuple_leaf"* %coerce.dive1, i32 0, i32 0
   store %"class.std::__1::basic_string"* %__first_args.coerce, %"class.std::__1::basic_string"** %coerce.dive2, align 8
   store %"struct.std::__1::pair.21"* %this, %"struct.std::__1::pair.21"** %this.addr, align 8
   %this4 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %this.addr, align 8
-  invoke void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEC1IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair.21"* %this4, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args)
+  invoke void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEC1IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair.21"* %this4, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args)
           to label %invoke.cont unwind label %terminate.lpad
 
 invoke.cont:                                      ; preds = %entry
@@ -20772,36 +25185,36 @@ terminate.lpad:                                   ; preds = %entry
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEC1IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair.21"* %this, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEC1IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair.21"* %this, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args) unnamed_addr #4 align 2 {
 entry:
   %0 = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %1 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
   %this.addr = alloca %"struct.std::__1::pair.21"*, align 8
   %__first_args.addr = alloca %"class.std::__1::tuple"*, align 8
-  %__second_args.addr = alloca %"class.std::__1::tuple.31"*, align 8
+  %__second_args.addr = alloca %"class.std::__1::tuple.29"*, align 8
   store %"struct.std::__1::pair.21"* %this, %"struct.std::__1::pair.21"** %this.addr, align 8
   store %"class.std::__1::tuple"* %__first_args, %"class.std::__1::tuple"** %__first_args.addr, align 8
-  store %"class.std::__1::tuple.31"* %__second_args, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
+  store %"class.std::__1::tuple.29"* %__second_args, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
   %this3 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %this.addr, align 8
   %3 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__first_args.addr, align 8
-  %4 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
-  call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEC2IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair.21"* %this3, %"class.std::__1::tuple"* dereferenceable(8) %3, %"class.std::__1::tuple.31"* dereferenceable(1) %4)
+  %4 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
+  call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEC2IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair.21"* %this3, %"class.std::__1::tuple"* dereferenceable(8) %3, %"class.std::__1::tuple.29"* dereferenceable(1) %4)
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEC2IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair.21"* %this, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEC2IJOS6_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair.21"* %this, %"class.std::__1::tuple"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args) unnamed_addr #1 align 2 {
 entry:
   %0 = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %1 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
   %this.addr = alloca %"struct.std::__1::pair.21"*, align 8
   %__first_args.addr = alloca %"class.std::__1::tuple"*, align 8
-  %__second_args.addr = alloca %"class.std::__1::tuple.31"*, align 8
+  %__second_args.addr = alloca %"class.std::__1::tuple.29"*, align 8
   store %"struct.std::__1::pair.21"* %this, %"struct.std::__1::pair.21"** %this.addr, align 8
   store %"class.std::__1::tuple"* %__first_args, %"class.std::__1::tuple"** %__first_args.addr, align 8
-  store %"class.std::__1::tuple.31"* %__second_args, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
+  store %"class.std::__1::tuple.29"* %__second_args, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
   %this3 = load %"struct.std::__1::pair.21"*, %"struct.std::__1::pair.21"** %this.addr, align 8
   %first = getelementptr inbounds %"struct.std::__1::pair.21", %"struct.std::__1::pair.21"* %this3, i32 0, i32 0
   %3 = load %"class.std::__1::tuple"*, %"class.std::__1::tuple"** %__first_args.addr, align 8
@@ -20814,47 +25227,47 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.42"* %this) #1 align 2 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNKSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.41"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.42"*, align 8
-  store %"class.std::__1::__compressed_pair.42"* %this, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.42"*, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.42"* %this1 to %"struct.std::__1::__compressed_pair_elem.43"*
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNKSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.43"* %0) #2
-  ret %"class.std::__1::__tree_node.22"** %call
+  %this.addr = alloca %"class.std::__1::__compressed_pair.41"*, align 8
+  store %"class.std::__1::__compressed_pair.41"* %this, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.41"*, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.41"* %this1 to %"struct.std::__1::__compressed_pair_elem.42"*
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNKSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.42"* %0) #2
+  ret %"class.std::__1::__tree_node.19"** %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNKSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.43"* %this) #1 align 2 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNKSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.42"* %this) #1 align 2 {
+entry:
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.42"*, align 8
+  store %"struct.std::__1::__compressed_pair_elem.42"* %this, %"struct.std::__1::__compressed_pair_elem.42"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.42"*, %"struct.std::__1::__compressed_pair_elem.42"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.42", %"struct.std::__1::__compressed_pair_elem.42"* %this1, i32 0, i32 0
+  ret %"class.std::__1::__tree_node.19"** %__value_
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.41"* %this) #1 align 2 {
+entry:
+  %this.addr = alloca %"class.std::__1::__compressed_pair.41"*, align 8
+  store %"class.std::__1::__compressed_pair.41"* %this, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.41"*, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.41"* %this1 to i8*
+  %add.ptr = getelementptr inbounds i8, i8* %0, i64 8
+  %1 = bitcast i8* %add.ptr to %"struct.std::__1::__compressed_pair_elem.43"*
+  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.43"* %1) #2
+  ret %"class.std::__1::__tree_node_destructor.44"* %call
+}
+
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.43"* %this) #1 align 2 {
 entry:
   %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.43"*, align 8
   store %"struct.std::__1::__compressed_pair_elem.43"* %this, %"struct.std::__1::__compressed_pair_elem.43"** %this.addr, align 8
   %this1 = load %"struct.std::__1::__compressed_pair_elem.43"*, %"struct.std::__1::__compressed_pair_elem.43"** %this.addr, align 8
   %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.43", %"struct.std::__1::__compressed_pair_elem.43"* %this1, i32 0, i32 0
-  ret %"class.std::__1::__tree_node.22"** %__value_
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.42"* %this) #1 align 2 {
-entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.42"*, align 8
-  store %"class.std::__1::__compressed_pair.42"* %this, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.42"*, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.42"* %this1 to i8*
-  %add.ptr = getelementptr inbounds i8, i8* %0, i64 8
-  %1 = bitcast i8* %add.ptr to %"struct.std::__1::__compressed_pair_elem.44"*
-  %call = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.44"* %1) #2
-  ret %"class.std::__1::__tree_node_destructor.45"* %call
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__122__compressed_pair_elemINS_22__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS2_IcEEEEdEEPvEEEEEELi1ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.44"* %this) #1 align 2 {
-entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.44"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.44"* %this, %"struct.std::__1::__compressed_pair_elem.44"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.44"*, %"struct.std::__1::__compressed_pair_elem.44"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.44", %"struct.std::__1::__compressed_pair_elem.44"* %this1, i32 0, i32 0
-  ret %"class.std::__1::__tree_node_destructor.45"* %__value_
+  ret %"class.std::__1::__tree_node_destructor.44"* %__value_
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
@@ -20880,62 +25293,62 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.42"* %this) #1 align 2 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.41"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__compressed_pair.42"*, align 8
-  store %"class.std::__1::__compressed_pair.42"* %this, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__compressed_pair.42"*, %"class.std::__1::__compressed_pair.42"** %this.addr, align 8
-  %0 = bitcast %"class.std::__1::__compressed_pair.42"* %this1 to %"struct.std::__1::__compressed_pair_elem.43"*
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.43"* %0) #2
-  ret %"class.std::__1::__tree_node.22"** %call
+  %this.addr = alloca %"class.std::__1::__compressed_pair.41"*, align 8
+  store %"class.std::__1::__compressed_pair.41"* %this, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__compressed_pair.41"*, %"class.std::__1::__compressed_pair.41"** %this.addr, align 8
+  %0 = bitcast %"class.std::__1::__compressed_pair.41"* %this1 to %"struct.std::__1::__compressed_pair_elem.42"*
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.42"* %0) #2
+  ret %"class.std::__1::__tree_node.19"** %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.43"* %this) #1 align 2 {
+define internal dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__122__compressed_pair_elemIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEELi0ELb0EE5__getEv(%"struct.std::__1::__compressed_pair_elem.42"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.43"*, align 8
-  store %"struct.std::__1::__compressed_pair_elem.43"* %this, %"struct.std::__1::__compressed_pair_elem.43"** %this.addr, align 8
-  %this1 = load %"struct.std::__1::__compressed_pair_elem.43"*, %"struct.std::__1::__compressed_pair_elem.43"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.43", %"struct.std::__1::__compressed_pair_elem.43"* %this1, i32 0, i32 0
-  ret %"class.std::__1::__tree_node.22"** %__value_
+  %this.addr = alloca %"struct.std::__1::__compressed_pair_elem.42"*, align 8
+  store %"struct.std::__1::__compressed_pair_elem.42"* %this, %"struct.std::__1::__compressed_pair_elem.42"** %this.addr, align 8
+  %this1 = load %"struct.std::__1::__compressed_pair_elem.42"*, %"struct.std::__1::__compressed_pair_elem.42"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"struct.std::__1::__compressed_pair_elem.42", %"struct.std::__1::__compressed_pair_elem.42"* %this1, i32 0, i32 0
+  ret %"class.std::__1::__tree_node.19"** %__value_
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED2Ev(%"class.std::__1::unique_ptr.41"* %this) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED2Ev(%"class.std::__1::unique_ptr.40"* %this) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetEPSB_(%"class.std::__1::unique_ptr.41"* %this1, %"class.std::__1::__tree_node.22"* null) #2
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetEPSB_(%"class.std::__1::unique_ptr.40"* %this1, %"class.std::__1::__tree_node.19"* null) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetEPSB_(%"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::__tree_node.22"* %__p) #1 align 2 {
+define internal void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5resetEPSB_(%"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::__tree_node.19"* %__p) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::unique_ptr.41"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
-  %__tmp = alloca %"class.std::__1::__tree_node.22"*, align 8
-  store %"class.std::__1::unique_ptr.41"* %this, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %this1 = load %"class.std::__1::unique_ptr.41"*, %"class.std::__1::unique_ptr.41"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %call = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.42"* %__ptr_) #2
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %call, align 8
-  store %"class.std::__1::__tree_node.22"* %0, %"class.std::__1::__tree_node.22"** %__tmp, align 8
-  %1 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %call3 = call dereferenceable(8) %"class.std::__1::__tree_node.22"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.42"* %__ptr_2) #2
-  store %"class.std::__1::__tree_node.22"* %1, %"class.std::__1::__tree_node.22"** %call3, align 8
-  %2 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__tmp, align 8
-  %tobool = icmp ne %"class.std::__1::__tree_node.22"* %2, null
+  %this.addr = alloca %"class.std::__1::unique_ptr.40"*, align 8
+  %__p.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
+  %__tmp = alloca %"class.std::__1::__tree_node.19"*, align 8
+  store %"class.std::__1::unique_ptr.40"* %this, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %this1 = load %"class.std::__1::unique_ptr.40"*, %"class.std::__1::unique_ptr.40"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %call = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.41"* %__ptr_) #2
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %call, align 8
+  store %"class.std::__1::__tree_node.19"* %0, %"class.std::__1::__tree_node.19"** %__tmp, align 8
+  %1 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %__ptr_2 = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %call3 = call dereferenceable(8) %"class.std::__1::__tree_node.19"** @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE5firstEv(%"class.std::__1::__compressed_pair.41"* %__ptr_2) #2
+  store %"class.std::__1::__tree_node.19"* %1, %"class.std::__1::__tree_node.19"** %call3, align 8
+  %2 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__tmp, align 8
+  %tobool = icmp ne %"class.std::__1::__tree_node.19"* %2, null
   br i1 %tobool, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  %__ptr_4 = getelementptr inbounds %"class.std::__1::unique_ptr.41", %"class.std::__1::unique_ptr.41"* %this1, i32 0, i32 0
-  %call5 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.45"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.42"* %__ptr_4) #2
-  %3 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__tmp, align 8
-  call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEclEPSB_(%"class.std::__1::__tree_node_destructor.45"* %call5, %"class.std::__1::__tree_node.22"* %3) #2
+  %__ptr_4 = getelementptr inbounds %"class.std::__1::unique_ptr.40", %"class.std::__1::unique_ptr.40"* %this1, i32 0, i32 0
+  %call5 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor.44"* @_ZNSt3__117__compressed_pairIPNS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE6secondEv(%"class.std::__1::__compressed_pair.41"* %__ptr_4) #2
+  %3 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__tmp, align 8
+  call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEclEPSB_(%"class.std::__1::__tree_node_destructor.44"* %call5, %"class.std::__1::__tree_node.19"* %3) #2
   br label %if.end
 
 if.end:                                           ; preds = %if.then, %entry
@@ -20943,24 +25356,24 @@ if.end:                                           ; preds = %if.then, %entry
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEclEPSB_(%"class.std::__1::__tree_node_destructor.45"* %this, %"class.std::__1::__tree_node.22"* %__p) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define internal void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEEclEPSB_(%"class.std::__1::__tree_node_destructor.44"* %this, %"class.std::__1::__tree_node.19"* %__p) #1 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %this.addr = alloca %"class.std::__1::__tree_node_destructor.45"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
-  store %"class.std::__1::__tree_node_destructor.45"* %this, %"class.std::__1::__tree_node_destructor.45"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %this1 = load %"class.std::__1::__tree_node_destructor.45"*, %"class.std::__1::__tree_node_destructor.45"** %this.addr, align 8
-  %__value_constructed = getelementptr inbounds %"class.std::__1::__tree_node_destructor.45", %"class.std::__1::__tree_node_destructor.45"* %this1, i32 0, i32 1
+  %this.addr = alloca %"class.std::__1::__tree_node_destructor.44"*, align 8
+  %__p.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
+  store %"class.std::__1::__tree_node_destructor.44"* %this, %"class.std::__1::__tree_node_destructor.44"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %this1 = load %"class.std::__1::__tree_node_destructor.44"*, %"class.std::__1::__tree_node_destructor.44"** %this.addr, align 8
+  %__value_constructed = getelementptr inbounds %"class.std::__1::__tree_node_destructor.44", %"class.std::__1::__tree_node_destructor.44"* %this1, i32 0, i32 1
   %0 = load i8, i8* %__value_constructed, align 8
   %tobool = trunc i8 %0 to i1
   br i1 %tobool, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  %__na_ = getelementptr inbounds %"class.std::__1::__tree_node_destructor.45", %"class.std::__1::__tree_node_destructor.45"* %this1, i32 0, i32 0
+  %__na_ = getelementptr inbounds %"class.std::__1::__tree_node_destructor.44", %"class.std::__1::__tree_node_destructor.44"* %this1, i32 0, i32 0
   %1 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na_, align 8
-  %2 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.22", %"class.std::__1::__tree_node.22"* %2, i32 0, i32 1
-  %call = invoke %"struct.std::__1::pair.21"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE9__get_ptrERS8_(%"struct.std::__1::__value_type.23"* dereferenceable(32) %__value_)
+  %2 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %__value_ = getelementptr inbounds %"class.std::__1::__tree_node.19", %"class.std::__1::__tree_node.19"* %2, i32 0, i32 1
+  %call = invoke %"struct.std::__1::pair.21"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE9__get_ptrERS8_(%"struct.std::__1::__value_type.20"* dereferenceable(32) %__value_)
           to label %invoke.cont unwind label %terminate.lpad
 
 invoke.cont:                                      ; preds = %if.then
@@ -20971,15 +25384,15 @@ invoke.cont2:                                     ; preds = %invoke.cont
   br label %if.end
 
 if.end:                                           ; preds = %invoke.cont2, %entry
-  %3 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %tobool3 = icmp ne %"class.std::__1::__tree_node.22"* %3, null
+  %3 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %tobool3 = icmp ne %"class.std::__1::__tree_node.19"* %3, null
   br i1 %tobool3, label %if.then4, label %if.end6
 
 if.then4:                                         ; preds = %if.end
-  %__na_5 = getelementptr inbounds %"class.std::__1::__tree_node_destructor.45", %"class.std::__1::__tree_node_destructor.45"* %this1, i32 0, i32 0
+  %__na_5 = getelementptr inbounds %"class.std::__1::__tree_node_destructor.44", %"class.std::__1::__tree_node_destructor.44"* %this1, i32 0, i32 0
   %4 = load %"class.std::__1::allocator.8"*, %"class.std::__1::allocator.8"** %__na_5, align 8
-  %5 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE10deallocateERSC_PSB_m(%"class.std::__1::allocator.8"* dereferenceable(1) %4, %"class.std::__1::__tree_node.22"* %5, i64 1) #2
+  %5 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEEdEEPvEEEEE10deallocateERSC_PSB_m(%"class.std::__1::allocator.8"* dereferenceable(1) %4, %"class.std::__1::__tree_node.19"* %5, i64 1) #2
   br label %if.end6
 
 if.end6:                                          ; preds = %if.then4, %if.end
@@ -20994,37 +25407,37 @@ terminate.lpad:                                   ; preds = %invoke.cont, %if.th
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC2ESC_(%"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_node.22"* %__p) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC2ESC_(%"class.std::__1::__tree_iterator.38"* %this, %"class.std::__1::__tree_node.19"* %__p) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_node.22"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  store %"class.std::__1::__tree_node.22"* %__p, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %this1 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %this1, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_node.22"*, %"class.std::__1::__tree_node.22"** %__p.addr, align 8
-  %1 = bitcast %"class.std::__1::__tree_node.22"* %0 to %"class.std::__1::__tree_end_node"*
+  %this.addr = alloca %"class.std::__1::__tree_iterator.38"*, align 8
+  %__p.addr = alloca %"class.std::__1::__tree_node.19"*, align 8
+  store %"class.std::__1::__tree_iterator.38"* %this, %"class.std::__1::__tree_iterator.38"** %this.addr, align 8
+  store %"class.std::__1::__tree_node.19"* %__p, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %this1 = load %"class.std::__1::__tree_iterator.38"*, %"class.std::__1::__tree_iterator.38"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::__tree_iterator.38", %"class.std::__1::__tree_iterator.38"* %this1, i32 0, i32 0
+  %0 = load %"class.std::__1::__tree_node.19"*, %"class.std::__1::__tree_node.19"** %__p.addr, align 8
+  %1 = bitcast %"class.std::__1::__tree_node.19"* %0 to %"class.std::__1::__tree_end_node"*
   store %"class.std::__1::__tree_end_node"* %1, %"class.std::__1::__tree_end_node"** %__ptr_, align 8
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEbEC2ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.39"* %this, %"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__u1, i8* dereferenceable(1) %__u2) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEbEC2ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.37"* %this, %"class.std::__1::__tree_iterator.38"* dereferenceable(8) %__u1, i8* dereferenceable(1) %__u2) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"struct.std::__1::pair.39"*, align 8
-  %__u1.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
+  %this.addr = alloca %"struct.std::__1::pair.37"*, align 8
+  %__u1.addr = alloca %"class.std::__1::__tree_iterator.38"*, align 8
   %__u2.addr = alloca i8*, align 8
-  store %"struct.std::__1::pair.39"* %this, %"struct.std::__1::pair.39"** %this.addr, align 8
-  store %"class.std::__1::__tree_iterator.20"* %__u1, %"class.std::__1::__tree_iterator.20"** %__u1.addr, align 8
+  store %"struct.std::__1::pair.37"* %this, %"struct.std::__1::pair.37"** %this.addr, align 8
+  store %"class.std::__1::__tree_iterator.38"* %__u1, %"class.std::__1::__tree_iterator.38"** %__u1.addr, align 8
   store i8* %__u2, i8** %__u2.addr, align 8
-  %this1 = load %"struct.std::__1::pair.39"*, %"struct.std::__1::pair.39"** %this.addr, align 8
-  %first = getelementptr inbounds %"struct.std::__1::pair.39", %"struct.std::__1::pair.39"* %this1, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %__u1.addr, align 8
-  %call = call dereferenceable(8) %"class.std::__1::__tree_iterator.20"* @_ZNSt3__1L7forwardINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_iterator.20"* dereferenceable(8) %0) #2
-  %1 = bitcast %"class.std::__1::__tree_iterator.20"* %first to i8*
-  %2 = bitcast %"class.std::__1::__tree_iterator.20"* %call to i8*
+  %this1 = load %"struct.std::__1::pair.37"*, %"struct.std::__1::pair.37"** %this.addr, align 8
+  %first = getelementptr inbounds %"struct.std::__1::pair.37", %"struct.std::__1::pair.37"* %this1, i32 0, i32 0
+  %0 = load %"class.std::__1::__tree_iterator.38"*, %"class.std::__1::__tree_iterator.38"** %__u1.addr, align 8
+  %call = call dereferenceable(8) %"class.std::__1::__tree_iterator.38"* @_ZNSt3__1L7forwardINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_iterator.38"* dereferenceable(8) %0) #2
+  %1 = bitcast %"class.std::__1::__tree_iterator.38"* %first to i8*
+  %2 = bitcast %"class.std::__1::__tree_iterator.38"* %call to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %1, i8* align 8 %2, i64 8, i1 false)
-  %second = getelementptr inbounds %"struct.std::__1::pair.39", %"struct.std::__1::pair.39"* %this1, i32 0, i32 1
+  %second = getelementptr inbounds %"struct.std::__1::pair.37", %"struct.std::__1::pair.37"* %this1, i32 0, i32 1
   %3 = load i8*, i8** %__u2.addr, align 8
   %call2 = call dereferenceable(1) i8* @_ZNSt3__1L7forwardIRbEEOT_RNS_16remove_referenceIS2_E4typeE(i8* dereferenceable(1) %3) #2
   %4 = load i8, i8* %call2, align 1
@@ -21035,67 +25448,67 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_iterator.20"* @_ZNSt3__1L7forwardINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__t) #1 {
+define internal dereferenceable(8) %"class.std::__1::__tree_iterator.38"* @_ZNSt3__1L7forwardINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEEOT_RNS_16remove_referenceISF_E4typeE(%"class.std::__1::__tree_iterator.38"* dereferenceable(8) %__t) #1 {
 entry:
-  %__t.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %__t, %"class.std::__1::__tree_iterator.20"** %__t.addr, align 8
-  %0 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %__t.addr, align 8
-  ret %"class.std::__1::__tree_iterator.20"* %0
+  %__t.addr = alloca %"class.std::__1::__tree_iterator.38"*, align 8
+  store %"class.std::__1::__tree_iterator.38"* %__t, %"class.std::__1::__tree_iterator.38"** %__t.addr, align 8
+  %0 = load %"class.std::__1::__tree_iterator.38"*, %"class.std::__1::__tree_iterator.38"** %__t.addr, align 8
+  ret %"class.std::__1::__tree_iterator.38"* %0
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"struct.std::__1::__value_type.23"* @_ZNSt3__114pointer_traitsIPNS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE10pointer_toERS8_(%"struct.std::__1::__value_type.23"* dereferenceable(32) %__r) #1 align 2 {
+define internal %"struct.std::__1::__value_type.20"* @_ZNSt3__114pointer_traitsIPNS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEE10pointer_toERS8_(%"struct.std::__1::__value_type.20"* dereferenceable(32) %__r) #1 align 2 {
 entry:
-  %__r.addr = alloca %"struct.std::__1::__value_type.23"*, align 8
-  store %"struct.std::__1::__value_type.23"* %__r, %"struct.std::__1::__value_type.23"** %__r.addr, align 8
-  %0 = load %"struct.std::__1::__value_type.23"*, %"struct.std::__1::__value_type.23"** %__r.addr, align 8
-  %call = call %"struct.std::__1::__value_type.23"* @_ZNSt3__1L9addressofINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEEEPT_RS9_(%"struct.std::__1::__value_type.23"* dereferenceable(32) %0) #2
-  ret %"struct.std::__1::__value_type.23"* %call
+  %__r.addr = alloca %"struct.std::__1::__value_type.20"*, align 8
+  store %"struct.std::__1::__value_type.20"* %__r, %"struct.std::__1::__value_type.20"** %__r.addr, align 8
+  %0 = load %"struct.std::__1::__value_type.20"*, %"struct.std::__1::__value_type.20"** %__r.addr, align 8
+  %call = call %"struct.std::__1::__value_type.20"* @_ZNSt3__1L9addressofINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEEEPT_RS9_(%"struct.std::__1::__value_type.20"* dereferenceable(32) %0) #2
+  ret %"struct.std::__1::__value_type.20"* %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_node.22"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElE8__get_npEv(%"class.std::__1::__tree_iterator.20"* %this) #1 align 2 {
+define internal %"class.std::__1::__tree_node.19"* @_ZNKSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElE8__get_npEv(%"class.std::__1::__tree_iterator.38"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %this1, i32 0, i32 0
+  %this.addr = alloca %"class.std::__1::__tree_iterator.38"*, align 8
+  store %"class.std::__1::__tree_iterator.38"* %this, %"class.std::__1::__tree_iterator.38"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__tree_iterator.38"*, %"class.std::__1::__tree_iterator.38"** %this.addr, align 8
+  %__ptr_ = getelementptr inbounds %"class.std::__1::__tree_iterator.38", %"class.std::__1::__tree_iterator.38"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__ptr_, align 8
-  %1 = bitcast %"class.std::__1::__tree_end_node"* %0 to %"class.std::__1::__tree_node.22"*
-  ret %"class.std::__1::__tree_node.22"* %1
+  %1 = bitcast %"class.std::__1::__tree_end_node"* %0 to %"class.std::__1::__tree_node.19"*
+  ret %"class.std::__1::__tree_node.19"* %1
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"struct.std::__1::__value_type.23"* @_ZNSt3__1L9addressofINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEEEPT_RS9_(%"struct.std::__1::__value_type.23"* dereferenceable(32) %__x) #1 {
+define internal %"struct.std::__1::__value_type.20"* @_ZNSt3__1L9addressofINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEEEPT_RS9_(%"struct.std::__1::__value_type.20"* dereferenceable(32) %__x) #1 {
 entry:
-  %__x.addr = alloca %"struct.std::__1::__value_type.23"*, align 8
-  store %"struct.std::__1::__value_type.23"* %__x, %"struct.std::__1::__value_type.23"** %__x.addr, align 8
-  %0 = load %"struct.std::__1::__value_type.23"*, %"struct.std::__1::__value_type.23"** %__x.addr, align 8
-  ret %"struct.std::__1::__value_type.23"* %0
+  %__x.addr = alloca %"struct.std::__1::__value_type.20"*, align 8
+  store %"struct.std::__1::__value_type.20"* %__x, %"struct.std::__1::__value_type.20"** %__x.addr, align 8
+  %0 = load %"struct.std::__1::__value_type.20"*, %"struct.std::__1::__value_type.20"** %__x.addr, align 8
+  ret %"struct.std::__1::__value_type.20"* %0
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJRKS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__k, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.48"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr { %"class.std::__1::__tree_end_node"*, i8 } @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE25__emplace_unique_key_argsIS7_JRKNS_21piecewise_construct_tENS_5tupleIJRKS7_EEENSJ_IJEEEEEENS_4pairINS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEERKT_DpOT0_(%"class.std::__1::__tree"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__k, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.47"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
-  %retval = alloca %"struct.std::__1::pair.30", align 8
+  %retval = alloca %"struct.std::__1::pair.28", align 8
   %this.addr = alloca %"class.std::__1::__tree"*, align 8
   %__k.addr = alloca %"class.std::__1::basic_string"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
-  %__args.addr2 = alloca %"class.std::__1::tuple.48"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr2 = alloca %"class.std::__1::tuple.47"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %__parent = alloca %"class.std::__1::__tree_end_node"*, align 8
   %__child = alloca %"class.std::__1::__tree_node_base"**, align 8
   %__r = alloca %"class.std::__1::__tree_node"*, align 8
   %__inserted = alloca i8, align 1
-  %__h = alloca %"class.std::__1::unique_ptr.32", align 8
+  %__h = alloca %"class.std::__1::unique_ptr.30", align 8
   %exn.slot = alloca i8*
   %ehselector.slot = alloca i32
   %ref.tmp = alloca %"class.std::__1::__tree_iterator", align 8
   store %"class.std::__1::__tree"* %this, %"class.std::__1::__tree"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__k, %"class.std::__1::basic_string"** %__k.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
-  store %"class.std::__1::tuple.48"* %__args1, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.47"* %__args1, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::__tree"*, %"class.std::__1::__tree"** %this.addr, align 8
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__k.addr, align 8
   %call = call dereferenceable(8) %"class.std::__1::__tree_node_base"** @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__find_equalIS7_EERPNS_16__tree_node_baseIPvEERPNS_15__tree_end_nodeISJ_EERKT_(%"class.std::__1::__tree"* %this5, %"class.std::__1::__tree_end_node"** dereferenceable(8) %__parent, %"class.std::__1::basic_string"* dereferenceable(24) %0)
@@ -21113,23 +25526,23 @@ entry:
 if.then:                                          ; preds = %entry
   %6 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call6 = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %6) #2
-  %7 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  %call7 = call dereferenceable(8) %"class.std::__1::tuple.48"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.48"* dereferenceable(8) %7) #2
-  %8 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call8 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %8) #2
-  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJRKS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISR_EEEEEEDpOT_(%"class.std::__1::unique_ptr.32"* sret %__h, %"class.std::__1::__tree"* %this5, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call6, %"class.std::__1::tuple.48"* dereferenceable(8) %call7, %"class.std::__1::tuple.31"* dereferenceable(1) %call8)
+  %7 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  %call7 = call dereferenceable(8) %"class.std::__1::tuple.47"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.47"* dereferenceable(8) %7) #2
+  %8 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call8 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %8) #2
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJRKS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISR_EEEEEEDpOT_(%"class.std::__1::unique_ptr.30"* sret %__h, %"class.std::__1::__tree"* %this5, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call6, %"class.std::__1::tuple.47"* dereferenceable(8) %call7, %"class.std::__1::tuple.29"* dereferenceable(1) %call8)
   %9 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__parent, align 8
   %10 = load %"class.std::__1::__tree_node_base"**, %"class.std::__1::__tree_node_base"*** %__child, align 8
-  %call9 = call %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.32"* %__h) #2
+  %call9 = call %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE3getEv(%"class.std::__1::unique_ptr.30"* %__h) #2
   %11 = bitcast %"class.std::__1::__tree_node"* %call9 to %"class.std::__1::__tree_node_base"*
   invoke void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__insert_node_atEPNS_15__tree_end_nodeIPNS_16__tree_node_baseIPvEEEERSJ_SJ_(%"class.std::__1::__tree"* %this5, %"class.std::__1::__tree_end_node"* %9, %"class.std::__1::__tree_node_base"** dereferenceable(8) %10, %"class.std::__1::__tree_node_base"* %11)
           to label %invoke.cont unwind label %lpad
 
 invoke.cont:                                      ; preds = %if.then
-  %call10 = call %"class.std::__1::__tree_node"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.32"* %__h) #2
+  %call10 = call %"class.std::__1::__tree_node"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE7releaseEv(%"class.std::__1::unique_ptr.30"* %__h) #2
   store %"class.std::__1::__tree_node"* %call10, %"class.std::__1::__tree_node"** %__r, align 8
   store i8 1, i8* %__inserted, align 1
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %__h) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %__h) #2
   br label %if.end
 
 lpad:                                             ; preds = %if.then
@@ -21139,14 +25552,14 @@ lpad:                                             ; preds = %if.then
   store i8* %13, i8** %exn.slot, align 8
   %14 = extractvalue { i8*, i32 } %12, 1
   store i32 %14, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %__h) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %__h) #2
   br label %eh.resume
 
 if.end:                                           ; preds = %invoke.cont, %entry
   %15 = load %"class.std::__1::__tree_node"*, %"class.std::__1::__tree_node"** %__r, align 8
   call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EEPNS_11__tree_nodeIS8_PvEElEC1ESC_(%"class.std::__1::__tree_iterator"* %ref.tmp, %"class.std::__1::__tree_node"* %15) #2
-  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.30"* %retval, %"class.std::__1::__tree_iterator"* dereferenceable(8) %ref.tmp, i8* dereferenceable(1) %__inserted) #2
-  %16 = bitcast %"struct.std::__1::pair.30"* %retval to { %"class.std::__1::__tree_end_node"*, i8 }*
+  call void @_ZNSt3__14pairINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPNS_11__tree_nodeIS9_PvEElEEbEC1ISE_RbLb0EEEOT_OT0_(%"struct.std::__1::pair.28"* %retval, %"class.std::__1::__tree_iterator"* dereferenceable(8) %ref.tmp, i8* dereferenceable(1) %__inserted) #2
+  %16 = bitcast %"struct.std::__1::pair.28"* %retval to { %"class.std::__1::__tree_end_node"*, i8 }*
   %17 = load { %"class.std::__1::__tree_end_node"*, i8 }, { %"class.std::__1::__tree_end_node"*, i8 }* %16, align 8
   ret { %"class.std::__1::__tree_end_node"*, i8 } %17
 
@@ -21161,26 +25574,26 @@ eh.resume:                                        ; preds = %lpad
 ; Function Attrs: noinline nounwind optnone ssp uwtable
 define internal %"class.std::__1::basic_string"* @_ZNSt3__1L16forward_as_tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEENS_5tupleIJDpOT_EEESC_(%"class.std::__1::basic_string"* dereferenceable(24) %__t) #1 {
 entry:
-  %retval = alloca %"class.std::__1::tuple.48", align 8
+  %retval = alloca %"class.std::__1::tuple.47", align 8
   %__t.addr = alloca %"class.std::__1::basic_string"*, align 8
   store %"class.std::__1::basic_string"* %__t, %"class.std::__1::basic_string"** %__t.addr, align 8
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__t.addr, align 8
   %call = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__1L7forwardIRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEOT_RNS_16remove_referenceIS9_E4typeE(%"class.std::__1::basic_string"* dereferenceable(24) %0) #2
-  call void @_ZNSt3__15tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC1ILb1ELb0EEES8_(%"class.std::__1::tuple.48"* %retval, %"class.std::__1::basic_string"* dereferenceable(24) %call) #2
-  %coerce.dive = getelementptr inbounds %"class.std::__1::tuple.48", %"class.std::__1::tuple.48"* %retval, i32 0, i32 0
-  %coerce.dive1 = getelementptr inbounds %"struct.std::__1::__tuple_impl.49", %"struct.std::__1::__tuple_impl.49"* %coerce.dive, i32 0, i32 0
-  %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tuple_leaf.50", %"class.std::__1::__tuple_leaf.50"* %coerce.dive1, i32 0, i32 0
+  call void @_ZNSt3__15tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC1ILb1ELb0EEES8_(%"class.std::__1::tuple.47"* %retval, %"class.std::__1::basic_string"* dereferenceable(24) %call) #2
+  %coerce.dive = getelementptr inbounds %"class.std::__1::tuple.47", %"class.std::__1::tuple.47"* %retval, i32 0, i32 0
+  %coerce.dive1 = getelementptr inbounds %"struct.std::__1::__tuple_impl.48", %"struct.std::__1::__tuple_impl.48"* %coerce.dive, i32 0, i32 0
+  %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tuple_leaf.49", %"class.std::__1::__tuple_leaf.49"* %coerce.dive1, i32 0, i32 0
   %1 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %coerce.dive2, align 8
   ret %"class.std::__1::basic_string"* %1
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJRKS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISR_EEEEEEDpOT_(%"class.std::__1::unique_ptr.32"* noalias sret %agg.result, %"class.std::__1::__tree"* %this, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.48"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
+define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__construct_nodeIJRKNS_21piecewise_construct_tENS_5tupleIJRKS7_EEENSJ_IJEEEEEENS_10unique_ptrINS_11__tree_nodeIS8_PvEENS_22__tree_node_destructorINS5_ISR_EEEEEEDpOT_(%"class.std::__1::unique_ptr.30"* noalias sret %agg.result, %"class.std::__1::__tree"* %this, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.47"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 personality i8* bitcast (i32 (...)* @__gxx_personality_v0 to i8*) {
 entry:
   %this.addr = alloca %"class.std::__1::__tree"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
-  %__args.addr2 = alloca %"class.std::__1::tuple.48"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr2 = alloca %"class.std::__1::tuple.47"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %__na = alloca %"class.std::__1::allocator"*, align 8
   %nrvo = alloca i1, align 1
   %ref.tmp = alloca %"class.std::__1::__tree_node_destructor", align 8
@@ -21188,8 +25601,8 @@ entry:
   %ehselector.slot = alloca i32
   store %"class.std::__1::__tree"* %this, %"class.std::__1::__tree"** %this.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
-  store %"class.std::__1::tuple.48"* %__args1, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.47"* %__args1, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::__tree"*, %"class.std::__1::__tree"** %this.addr, align 8
   %call = call dereferenceable(1) %"class.std::__1::allocator"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__node_allocEv(%"class.std::__1::__tree"* %this5) #2
   store %"class.std::__1::allocator"* %call, %"class.std::__1::allocator"** %__na, align 8
@@ -21198,9 +25611,9 @@ entry:
   %call6 = call %"class.std::__1::__tree_node"* @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE8allocateERSC_m(%"class.std::__1::allocator"* dereferenceable(1) %0, i64 1)
   %1 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %__na, align 8
   call void @_ZNSt3__122__tree_node_destructorINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEEC1ERSC_b(%"class.std::__1::__tree_node_destructor"* %ref.tmp, %"class.std::__1::allocator"* dereferenceable(1) %1, i1 zeroext false) #2
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.32"* %agg.result, %"class.std::__1::__tree_node"* %call6, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %ref.tmp) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEC1ILb1EvEEPSB_NS_16__dependent_typeINS_27__unique_ptr_deleter_sfinaeISE_EEXT_EE20__good_rval_ref_typeE(%"class.std::__1::unique_ptr.30"* %agg.result, %"class.std::__1::__tree_node"* %call6, %"class.std::__1::__tree_node_destructor"* dereferenceable(16) %ref.tmp) #2
   %2 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %__na, align 8
-  %call7 = call %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.32"* %agg.result) #2
+  %call7 = call %"class.std::__1::__tree_node"* @_ZNKSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEEptEv(%"class.std::__1::unique_ptr.30"* %agg.result) #2
   %__value_ = getelementptr inbounds %"class.std::__1::__tree_node", %"class.std::__1::__tree_node"* %call7, i32 0, i32 1
   %call8 = invoke %"struct.std::__1::pair"* @_ZNSt3__122__tree_key_value_typesINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EEE9__get_ptrERS8_(%"struct.std::__1::__value_type"* dereferenceable(48) %__value_)
           to label %invoke.cont unwind label %lpad
@@ -21208,15 +25621,15 @@ entry:
 invoke.cont:                                      ; preds = %entry
   %3 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call9 = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
-  %4 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  %call10 = call dereferenceable(8) %"class.std::__1::tuple.48"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.48"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call11 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  invoke void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE9constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSG_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %2, %"struct.std::__1::pair"* %call8, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call9, %"class.std::__1::tuple.48"* dereferenceable(8) %call10, %"class.std::__1::tuple.31"* dereferenceable(1) %call11)
+  %4 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  %call10 = call dereferenceable(8) %"class.std::__1::tuple.47"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.47"* dereferenceable(8) %4) #2
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call11 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  invoke void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE9constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSG_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %2, %"struct.std::__1::pair"* %call8, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call9, %"class.std::__1::tuple.47"* dereferenceable(8) %call10, %"class.std::__1::tuple.29"* dereferenceable(1) %call11)
           to label %invoke.cont12 unwind label %lpad
 
 invoke.cont12:                                    ; preds = %invoke.cont
-  %call13 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.32"* %agg.result) #2
+  %call13 = call dereferenceable(16) %"class.std::__1::__tree_node_destructor"* @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEE11get_deleterEv(%"class.std::__1::unique_ptr.30"* %agg.result) #2
   %__value_constructed = getelementptr inbounds %"class.std::__1::__tree_node_destructor", %"class.std::__1::__tree_node_destructor"* %call13, i32 0, i32 1
   store i8 1, i8* %__value_constructed, align 8
   store i1 true, i1* %nrvo, align 1
@@ -21230,11 +25643,11 @@ lpad:                                             ; preds = %invoke.cont, %entry
   store i8* %7, i8** %exn.slot, align 8
   %8 = extractvalue { i8*, i32 } %6, 1
   store i32 %8, i32* %ehselector.slot, align 4
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %agg.result) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %agg.result) #2
   br label %eh.resume
 
 nrvo.unused:                                      ; preds = %invoke.cont12
-  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.32"* %agg.result) #2
+  call void @_ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES8_EEPvEENS_22__tree_node_destructorINS6_ISB_EEEEED1Ev(%"class.std::__1::unique_ptr.30"* %agg.result) #2
   br label %nrvo.skipdtor
 
 nrvo.skipdtor:                                    ; preds = %nrvo.unused, %invoke.cont12
@@ -21249,100 +25662,100 @@ eh.resume:                                        ; preds = %lpad
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::tuple.48"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.48"* dereferenceable(8) %__t) #1 {
+define internal dereferenceable(8) %"class.std::__1::tuple.47"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.47"* dereferenceable(8) %__t) #1 {
 entry:
-  %__t.addr = alloca %"class.std::__1::tuple.48"*, align 8
-  store %"class.std::__1::tuple.48"* %__t, %"class.std::__1::tuple.48"** %__t.addr, align 8
-  %0 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__t.addr, align 8
-  ret %"class.std::__1::tuple.48"* %0
+  %__t.addr = alloca %"class.std::__1::tuple.47"*, align 8
+  store %"class.std::__1::tuple.47"* %__t, %"class.std::__1::tuple.47"** %__t.addr, align 8
+  %0 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__t.addr, align 8
+  ret %"class.std::__1::tuple.47"* %0
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE9constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSG_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %__a, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.48"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 {
+define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE9constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSG_EEENSL_IJEEEEEEvRSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %__a, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.47"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 {
 entry:
   %__a.addr = alloca %"class.std::__1::allocator"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
-  %__args.addr2 = alloca %"class.std::__1::tuple.48"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
-  %agg.tmp = alloca %"struct.std::__1::integral_constant.36", align 1
-  %ref.tmp = alloca %"struct.std::__1::__has_construct.51", align 1
+  %__args.addr2 = alloca %"class.std::__1::tuple.47"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
+  %agg.tmp = alloca %"struct.std::__1::integral_constant.34", align 1
+  %ref.tmp = alloca %"struct.std::__1::__has_construct.50", align 1
   store %"class.std::__1::allocator"* %__a, %"class.std::__1::allocator"** %__a.addr, align 8
   store %"struct.std::__1::pair"* %__p, %"struct.std::__1::pair"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
-  store %"class.std::__1::tuple.48"* %__args1, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %0 = bitcast %"struct.std::__1::__has_construct.51"* %ref.tmp to %"struct.std::__1::integral_constant.36"*
+  store %"class.std::__1::tuple.47"* %__args1, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %0 = bitcast %"struct.std::__1::__has_construct.50"* %ref.tmp to %"struct.std::__1::integral_constant.34"*
   %1 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %__a.addr, align 8
   %2 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %__p.addr, align 8
   %3 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
-  %4 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  %call5 = call dereferenceable(8) %"class.std::__1::tuple.48"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.48"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call6 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE11__constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSG_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %1, %"struct.std::__1::pair"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple.48"* dereferenceable(8) %call5, %"class.std::__1::tuple.31"* dereferenceable(1) %call6)
+  %4 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  %call5 = call dereferenceable(8) %"class.std::__1::tuple.47"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.47"* dereferenceable(8) %4) #2
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call6 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  call void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE11__constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSG_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %1, %"struct.std::__1::pair"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple.47"* dereferenceable(8) %call5, %"class.std::__1::tuple.29"* dereferenceable(1) %call6)
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE11__constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSG_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %__a, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.48"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 {
+define internal void @_ZNSt3__116allocator_traitsINS_9allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS1_IcEEEES8_EEPvEEEEE11__constructINS_4pairIKS8_S8_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSG_EEENSL_IJEEEEEEvNS_17integral_constantIbLb1EEERSC_PT_DpOT0_(%"class.std::__1::allocator"* dereferenceable(1) %__a, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.47"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 {
 entry:
-  %0 = alloca %"struct.std::__1::integral_constant.36", align 1
+  %0 = alloca %"struct.std::__1::integral_constant.34", align 1
   %__a.addr = alloca %"class.std::__1::allocator"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
-  %__args.addr2 = alloca %"class.std::__1::tuple.48"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr2 = alloca %"class.std::__1::tuple.47"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   store %"class.std::__1::allocator"* %__a, %"class.std::__1::allocator"** %__a.addr, align 8
   store %"struct.std::__1::pair"* %__p, %"struct.std::__1::pair"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
-  store %"class.std::__1::tuple.48"* %__args1, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.47"* %__args1, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %1 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %__a.addr, align 8
   %2 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %__p.addr, align 8
   %3 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
-  %4 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  %call5 = call dereferenceable(8) %"class.std::__1::tuple.48"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.48"* dereferenceable(8) %4) #2
-  %5 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call6 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %5) #2
-  call void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEES7_EEPvEEE9constructINS_4pairIKS7_S7_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSE_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator"* %1, %"struct.std::__1::pair"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple.48"* dereferenceable(8) %call5, %"class.std::__1::tuple.31"* dereferenceable(1) %call6)
+  %4 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  %call5 = call dereferenceable(8) %"class.std::__1::tuple.47"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.47"* dereferenceable(8) %4) #2
+  %5 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call6 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %5) #2
+  call void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEES7_EEPvEEE9constructINS_4pairIKS7_S7_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSE_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator"* %1, %"struct.std::__1::pair"* %2, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %call, %"class.std::__1::tuple.47"* dereferenceable(8) %call5, %"class.std::__1::tuple.29"* dereferenceable(1) %call6)
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEES7_EEPvEEE9constructINS_4pairIKS7_S7_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSE_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator"* %this, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.48"* dereferenceable(8) %__args1, %"class.std::__1::tuple.31"* dereferenceable(1) %__args3) #4 align 2 {
+define internal void @_ZNSt3__19allocatorINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS0_IcEEEES7_EEPvEEE9constructINS_4pairIKS7_S7_EEJRKNS_21piecewise_construct_tENS_5tupleIJRSE_EEENSJ_IJEEEEEEvPT_DpOT0_(%"class.std::__1::allocator"* %this, %"struct.std::__1::pair"* %__p, %"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %__args, %"class.std::__1::tuple.47"* dereferenceable(8) %__args1, %"class.std::__1::tuple.29"* dereferenceable(1) %__args3) #4 align 2 {
 entry:
   %this.addr = alloca %"class.std::__1::allocator"*, align 8
   %__p.addr = alloca %"struct.std::__1::pair"*, align 8
   %__args.addr = alloca %"struct.std::__1::piecewise_construct_t"*, align 8
-  %__args.addr2 = alloca %"class.std::__1::tuple.48"*, align 8
-  %__args.addr4 = alloca %"class.std::__1::tuple.31"*, align 8
+  %__args.addr2 = alloca %"class.std::__1::tuple.47"*, align 8
+  %__args.addr4 = alloca %"class.std::__1::tuple.29"*, align 8
   %agg.tmp = alloca %"struct.std::__1::piecewise_construct_t", align 1
-  %agg.tmp6 = alloca %"class.std::__1::tuple.48", align 8
-  %agg.tmp8 = alloca %"class.std::__1::tuple.31", align 1
+  %agg.tmp6 = alloca %"class.std::__1::tuple.47", align 8
+  %agg.tmp8 = alloca %"class.std::__1::tuple.29", align 1
   store %"class.std::__1::allocator"* %this, %"class.std::__1::allocator"** %this.addr, align 8
   store %"struct.std::__1::pair"* %__p, %"struct.std::__1::pair"** %__p.addr, align 8
   store %"struct.std::__1::piecewise_construct_t"* %__args, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
-  store %"class.std::__1::tuple.48"* %__args1, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  store %"class.std::__1::tuple.31"* %__args3, %"class.std::__1::tuple.31"** %__args.addr4, align 8
+  store %"class.std::__1::tuple.47"* %__args1, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  store %"class.std::__1::tuple.29"* %__args3, %"class.std::__1::tuple.29"** %__args.addr4, align 8
   %this5 = load %"class.std::__1::allocator"*, %"class.std::__1::allocator"** %this.addr, align 8
   %0 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %__p.addr, align 8
   %1 = bitcast %"struct.std::__1::pair"* %0 to i8*
   %2 = bitcast i8* %1 to %"struct.std::__1::pair"*
   %3 = load %"struct.std::__1::piecewise_construct_t"*, %"struct.std::__1::piecewise_construct_t"** %__args.addr, align 8
   %call = call dereferenceable(1) %"struct.std::__1::piecewise_construct_t"* @_ZNSt3__1L7forwardIRKNS_21piecewise_construct_tEEEOT_RNS_16remove_referenceIS4_E4typeE(%"struct.std::__1::piecewise_construct_t"* dereferenceable(1) %3) #2
-  %4 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__args.addr2, align 8
-  %call7 = call dereferenceable(8) %"class.std::__1::tuple.48"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.48"* dereferenceable(8) %4) #2
-  %5 = bitcast %"class.std::__1::tuple.48"* %agg.tmp6 to i8*
-  %6 = bitcast %"class.std::__1::tuple.48"* %call7 to i8*
+  %4 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__args.addr2, align 8
+  %call7 = call dereferenceable(8) %"class.std::__1::tuple.47"* @_ZNSt3__1L7forwardINS_5tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEOT_RNS_16remove_referenceISB_E4typeE(%"class.std::__1::tuple.47"* dereferenceable(8) %4) #2
+  %5 = bitcast %"class.std::__1::tuple.47"* %agg.tmp6 to i8*
+  %6 = bitcast %"class.std::__1::tuple.47"* %call7 to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %5, i8* align 8 %6, i64 8, i1 false)
-  %7 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__args.addr4, align 8
-  %call9 = call dereferenceable(1) %"class.std::__1::tuple.31"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.31"* dereferenceable(1) %7) #2
-  %coerce.dive = getelementptr inbounds %"class.std::__1::tuple.48", %"class.std::__1::tuple.48"* %agg.tmp6, i32 0, i32 0
-  %coerce.dive10 = getelementptr inbounds %"struct.std::__1::__tuple_impl.49", %"struct.std::__1::__tuple_impl.49"* %coerce.dive, i32 0, i32 0
-  %coerce.dive11 = getelementptr inbounds %"class.std::__1::__tuple_leaf.50", %"class.std::__1::__tuple_leaf.50"* %coerce.dive10, i32 0, i32 0
+  %7 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__args.addr4, align 8
+  %call9 = call dereferenceable(1) %"class.std::__1::tuple.29"* @_ZNSt3__1L7forwardINS_5tupleIJEEEEEOT_RNS_16remove_referenceIS3_E4typeE(%"class.std::__1::tuple.29"* dereferenceable(1) %7) #2
+  %coerce.dive = getelementptr inbounds %"class.std::__1::tuple.47", %"class.std::__1::tuple.47"* %agg.tmp6, i32 0, i32 0
+  %coerce.dive10 = getelementptr inbounds %"struct.std::__1::__tuple_impl.48", %"struct.std::__1::__tuple_impl.48"* %coerce.dive, i32 0, i32 0
+  %coerce.dive11 = getelementptr inbounds %"class.std::__1::__tuple_leaf.49", %"class.std::__1::__tuple_leaf.49"* %coerce.dive10, i32 0, i32 0
   %8 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %coerce.dive11, align 8
   call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJRS7_EJEEENS_21piecewise_construct_tENS_5tupleIJDpT_EEENSC_IJDpT0_EEE(%"struct.std::__1::pair"* %2, %"class.std::__1::basic_string"* %8)
   ret void
@@ -21352,57 +25765,57 @@ entry:
 define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJRS7_EJEEENS_21piecewise_construct_tENS_5tupleIJDpT_EEENSC_IJDpT0_EEE(%"struct.std::__1::pair"* %this, %"class.std::__1::basic_string"* %__first_args.coerce) unnamed_addr #4 align 2 {
 entry:
   %__pc = alloca %"struct.std::__1::piecewise_construct_t", align 1
-  %__first_args = alloca %"class.std::__1::tuple.48", align 8
-  %__second_args = alloca %"class.std::__1::tuple.31", align 1
+  %__first_args = alloca %"class.std::__1::tuple.47", align 8
+  %__second_args = alloca %"class.std::__1::tuple.29", align 1
   %this.addr = alloca %"struct.std::__1::pair"*, align 8
   %agg.tmp = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %agg.tmp5 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %agg.tmp6 = alloca %"struct.std::__1::__tuple_indices.37", align 1
-  %coerce.dive = getelementptr inbounds %"class.std::__1::tuple.48", %"class.std::__1::tuple.48"* %__first_args, i32 0, i32 0
-  %coerce.dive1 = getelementptr inbounds %"struct.std::__1::__tuple_impl.49", %"struct.std::__1::__tuple_impl.49"* %coerce.dive, i32 0, i32 0
-  %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tuple_leaf.50", %"class.std::__1::__tuple_leaf.50"* %coerce.dive1, i32 0, i32 0
+  %agg.tmp6 = alloca %"struct.std::__1::__tuple_indices.35", align 1
+  %coerce.dive = getelementptr inbounds %"class.std::__1::tuple.47", %"class.std::__1::tuple.47"* %__first_args, i32 0, i32 0
+  %coerce.dive1 = getelementptr inbounds %"struct.std::__1::__tuple_impl.48", %"struct.std::__1::__tuple_impl.48"* %coerce.dive, i32 0, i32 0
+  %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tuple_leaf.49", %"class.std::__1::__tuple_leaf.49"* %coerce.dive1, i32 0, i32 0
   store %"class.std::__1::basic_string"* %__first_args.coerce, %"class.std::__1::basic_string"** %coerce.dive2, align 8
   store %"struct.std::__1::pair"* %this, %"struct.std::__1::pair"** %this.addr, align 8
   %this4 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %this.addr, align 8
-  call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJRS7_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this4, %"class.std::__1::tuple.48"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args)
+  call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJRS7_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this4, %"class.std::__1::tuple.47"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args)
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJRS7_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this, %"class.std::__1::tuple.48"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC1IJRS7_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this, %"class.std::__1::tuple.47"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args) unnamed_addr #4 align 2 {
 entry:
   %0 = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %1 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
   %this.addr = alloca %"struct.std::__1::pair"*, align 8
-  %__first_args.addr = alloca %"class.std::__1::tuple.48"*, align 8
-  %__second_args.addr = alloca %"class.std::__1::tuple.31"*, align 8
+  %__first_args.addr = alloca %"class.std::__1::tuple.47"*, align 8
+  %__second_args.addr = alloca %"class.std::__1::tuple.29"*, align 8
   store %"struct.std::__1::pair"* %this, %"struct.std::__1::pair"** %this.addr, align 8
-  store %"class.std::__1::tuple.48"* %__first_args, %"class.std::__1::tuple.48"** %__first_args.addr, align 8
-  store %"class.std::__1::tuple.31"* %__second_args, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
+  store %"class.std::__1::tuple.47"* %__first_args, %"class.std::__1::tuple.47"** %__first_args.addr, align 8
+  store %"class.std::__1::tuple.29"* %__second_args, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
   %this3 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %this.addr, align 8
-  %3 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__first_args.addr, align 8
-  %4 = load %"class.std::__1::tuple.31"*, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
-  call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2IJRS7_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this3, %"class.std::__1::tuple.48"* dereferenceable(8) %3, %"class.std::__1::tuple.31"* dereferenceable(1) %4)
+  %3 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__first_args.addr, align 8
+  %4 = load %"class.std::__1::tuple.29"*, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
+  call void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2IJRS7_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this3, %"class.std::__1::tuple.47"* dereferenceable(8) %3, %"class.std::__1::tuple.29"* dereferenceable(1) %4)
   ret void
 }
 
 ; Function Attrs: noinline optnone ssp uwtable
-define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2IJRS7_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this, %"class.std::__1::tuple.48"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.31"* dereferenceable(1) %__second_args) unnamed_addr #4 align 2 {
+define internal void @_ZNSt3__14pairIKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES6_EC2IJRS7_EJEJLm0EEJEEENS_21piecewise_construct_tERNS_5tupleIJDpT_EEERNSC_IJDpT0_EEENS_15__tuple_indicesIJXspT1_EEEENSL_IJXspT2_EEEE(%"struct.std::__1::pair"* %this, %"class.std::__1::tuple.47"* dereferenceable(8) %__first_args, %"class.std::__1::tuple.29"* dereferenceable(1) %__second_args) unnamed_addr #4 align 2 {
 entry:
   %0 = alloca %"struct.std::__1::piecewise_construct_t", align 1
   %1 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
   %this.addr = alloca %"struct.std::__1::pair"*, align 8
-  %__first_args.addr = alloca %"class.std::__1::tuple.48"*, align 8
-  %__second_args.addr = alloca %"class.std::__1::tuple.31"*, align 8
+  %__first_args.addr = alloca %"class.std::__1::tuple.47"*, align 8
+  %__second_args.addr = alloca %"class.std::__1::tuple.29"*, align 8
   store %"struct.std::__1::pair"* %this, %"struct.std::__1::pair"** %this.addr, align 8
-  store %"class.std::__1::tuple.48"* %__first_args, %"class.std::__1::tuple.48"** %__first_args.addr, align 8
-  store %"class.std::__1::tuple.31"* %__second_args, %"class.std::__1::tuple.31"** %__second_args.addr, align 8
+  store %"class.std::__1::tuple.47"* %__first_args, %"class.std::__1::tuple.47"** %__first_args.addr, align 8
+  store %"class.std::__1::tuple.29"* %__second_args, %"class.std::__1::tuple.29"** %__second_args.addr, align 8
   %this3 = load %"struct.std::__1::pair"*, %"struct.std::__1::pair"** %this.addr, align 8
   %first = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %this3, i32 0, i32 0
-  %3 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__first_args.addr, align 8
-  %call = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__1L3getILm0EJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEERNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERSD_(%"class.std::__1::tuple.48"* dereferenceable(8) %3) #2
+  %3 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__first_args.addr, align 8
+  %call = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__1L3getILm0EJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEERNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERSD_(%"class.std::__1::tuple.47"* dereferenceable(8) %3) #2
   %call4 = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__1L7forwardIRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEOT_RNS_16remove_referenceIS9_E4typeE(%"class.std::__1::basic_string"* dereferenceable(24) %call) #2
   call void @_ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_(%"class.std::__1::basic_string"* %first, %"class.std::__1::basic_string"* dereferenceable(24) %call4)
   %second = getelementptr inbounds %"struct.std::__1::pair", %"struct.std::__1::pair"* %this3, i32 0, i32 1
@@ -21420,104 +25833,104 @@ entry:
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__1L3getILm0EJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEERNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERSD_(%"class.std::__1::tuple.48"* dereferenceable(8) %__t) #1 {
+define internal dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__1L3getILm0EJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEERNS_13tuple_elementIXT_ENS_5tupleIJDpT0_EEEE4typeERSD_(%"class.std::__1::tuple.47"* dereferenceable(8) %__t) #1 {
 entry:
-  %__t.addr = alloca %"class.std::__1::tuple.48"*, align 8
-  store %"class.std::__1::tuple.48"* %__t, %"class.std::__1::tuple.48"** %__t.addr, align 8
-  %0 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %__t.addr, align 8
-  %__base_ = getelementptr inbounds %"class.std::__1::tuple.48", %"class.std::__1::tuple.48"* %0, i32 0, i32 0
-  %1 = bitcast %"struct.std::__1::__tuple_impl.49"* %__base_ to %"class.std::__1::__tuple_leaf.50"*
-  %call = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112__tuple_leafILm0ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEELb0EE3getEv(%"class.std::__1::__tuple_leaf.50"* %1) #2
+  %__t.addr = alloca %"class.std::__1::tuple.47"*, align 8
+  store %"class.std::__1::tuple.47"* %__t, %"class.std::__1::tuple.47"** %__t.addr, align 8
+  %0 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %__t.addr, align 8
+  %__base_ = getelementptr inbounds %"class.std::__1::tuple.47", %"class.std::__1::tuple.47"* %0, i32 0, i32 0
+  %1 = bitcast %"struct.std::__1::__tuple_impl.48"* %__base_ to %"class.std::__1::__tuple_leaf.49"*
+  %call = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112__tuple_leafILm0ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEELb0EE3getEv(%"class.std::__1::__tuple_leaf.49"* %1) #2
   ret %"class.std::__1::basic_string"* %call
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112__tuple_leafILm0ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEELb0EE3getEv(%"class.std::__1::__tuple_leaf.50"* %this) #1 align 2 {
+define internal dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__112__tuple_leafILm0ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEELb0EE3getEv(%"class.std::__1::__tuple_leaf.49"* %this) #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__tuple_leaf.50"*, align 8
-  store %"class.std::__1::__tuple_leaf.50"* %this, %"class.std::__1::__tuple_leaf.50"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__tuple_leaf.50"*, %"class.std::__1::__tuple_leaf.50"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"class.std::__1::__tuple_leaf.50", %"class.std::__1::__tuple_leaf.50"* %this1, i32 0, i32 0
+  %this.addr = alloca %"class.std::__1::__tuple_leaf.49"*, align 8
+  store %"class.std::__1::__tuple_leaf.49"* %this, %"class.std::__1::__tuple_leaf.49"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__tuple_leaf.49"*, %"class.std::__1::__tuple_leaf.49"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"class.std::__1::__tuple_leaf.49", %"class.std::__1::__tuple_leaf.49"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__value_, align 8
   ret %"class.std::__1::basic_string"* %0
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__15tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC1ILb1ELb0EEES8_(%"class.std::__1::tuple.48"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__t) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__15tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC1ILb1ELb0EEES8_(%"class.std::__1::tuple.47"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__t) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::tuple.48"*, align 8
+  %this.addr = alloca %"class.std::__1::tuple.47"*, align 8
   %__t.addr = alloca %"class.std::__1::basic_string"*, align 8
-  store %"class.std::__1::tuple.48"* %this, %"class.std::__1::tuple.48"** %this.addr, align 8
+  store %"class.std::__1::tuple.47"* %this, %"class.std::__1::tuple.47"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__t, %"class.std::__1::basic_string"** %__t.addr, align 8
-  %this1 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %this.addr, align 8
+  %this1 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %this.addr, align 8
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__t.addr, align 8
-  call void @_ZNSt3__15tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC2ILb1ELb0EEES8_(%"class.std::__1::tuple.48"* %this1, %"class.std::__1::basic_string"* dereferenceable(24) %0) #2
+  call void @_ZNSt3__15tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC2ILb1ELb0EEES8_(%"class.std::__1::tuple.47"* %this1, %"class.std::__1::basic_string"* dereferenceable(24) %0) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__15tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC2ILb1ELb0EEES8_(%"class.std::__1::tuple.48"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__t) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__15tupleIJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC2ILb1ELb0EEES8_(%"class.std::__1::tuple.47"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__t) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::tuple.48"*, align 8
+  %this.addr = alloca %"class.std::__1::tuple.47"*, align 8
   %__t.addr = alloca %"class.std::__1::basic_string"*, align 8
   %agg.tmp = alloca %"struct.std::__1::__tuple_indices", align 1
-  %agg.tmp2 = alloca %"struct.std::__1::__tuple_types.52", align 1
-  %agg.tmp3 = alloca %"struct.std::__1::__tuple_indices.37", align 1
-  %agg.tmp4 = alloca %"struct.std::__1::__tuple_types.38", align 1
-  store %"class.std::__1::tuple.48"* %this, %"class.std::__1::tuple.48"** %this.addr, align 8
+  %agg.tmp2 = alloca %"struct.std::__1::__tuple_types.51", align 1
+  %agg.tmp3 = alloca %"struct.std::__1::__tuple_indices.35", align 1
+  %agg.tmp4 = alloca %"struct.std::__1::__tuple_types.36", align 1
+  store %"class.std::__1::tuple.47"* %this, %"class.std::__1::tuple.47"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__t, %"class.std::__1::basic_string"** %__t.addr, align 8
-  %this1 = load %"class.std::__1::tuple.48"*, %"class.std::__1::tuple.48"** %this.addr, align 8
-  %__base_ = getelementptr inbounds %"class.std::__1::tuple.48", %"class.std::__1::tuple.48"* %this1, i32 0, i32 0
+  %this1 = load %"class.std::__1::tuple.47"*, %"class.std::__1::tuple.47"** %this.addr, align 8
+  %__base_ = getelementptr inbounds %"class.std::__1::tuple.47", %"class.std::__1::tuple.47"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__t.addr, align 8
-  call void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC1IJLm0EEJSA_EJEJEJSA_EEENS1_IJXspT_EEEENS_13__tuple_typesIJDpT0_EEENS1_IJXspT1_EEEENSE_IJDpT2_EEEDpOT3_(%"struct.std::__1::__tuple_impl.49"* %__base_, %"class.std::__1::basic_string"* dereferenceable(24) %0) #2
+  call void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC1IJLm0EEJSA_EJEJEJSA_EEENS1_IJXspT_EEEENS_13__tuple_typesIJDpT0_EEENS1_IJXspT1_EEEENSE_IJDpT2_EEEDpOT3_(%"struct.std::__1::__tuple_impl.48"* %__base_, %"class.std::__1::basic_string"* dereferenceable(24) %0) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC1IJLm0EEJSA_EJEJEJSA_EEENS1_IJXspT_EEEENS_13__tuple_typesIJDpT0_EEENS1_IJXspT1_EEEENSE_IJDpT2_EEEDpOT3_(%"struct.std::__1::__tuple_impl.49"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__u) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC1IJLm0EEJSA_EJEJEJSA_EEENS1_IJXspT_EEEENS_13__tuple_typesIJDpT0_EEENS1_IJXspT1_EEEENSE_IJDpT2_EEEDpOT3_(%"struct.std::__1::__tuple_impl.48"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__u) unnamed_addr #1 align 2 {
 entry:
   %0 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %1 = alloca %"struct.std::__1::__tuple_types.52", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
-  %3 = alloca %"struct.std::__1::__tuple_types.38", align 1
-  %this.addr = alloca %"struct.std::__1::__tuple_impl.49"*, align 8
+  %1 = alloca %"struct.std::__1::__tuple_types.51", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
+  %3 = alloca %"struct.std::__1::__tuple_types.36", align 1
+  %this.addr = alloca %"struct.std::__1::__tuple_impl.48"*, align 8
   %__u.addr = alloca %"class.std::__1::basic_string"*, align 8
-  store %"struct.std::__1::__tuple_impl.49"* %this, %"struct.std::__1::__tuple_impl.49"** %this.addr, align 8
+  store %"struct.std::__1::__tuple_impl.48"* %this, %"struct.std::__1::__tuple_impl.48"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__u, %"class.std::__1::basic_string"** %__u.addr, align 8
-  %this4 = load %"struct.std::__1::__tuple_impl.49"*, %"struct.std::__1::__tuple_impl.49"** %this.addr, align 8
+  %this4 = load %"struct.std::__1::__tuple_impl.48"*, %"struct.std::__1::__tuple_impl.48"** %this.addr, align 8
   %4 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__u.addr, align 8
-  call void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC2IJLm0EEJSA_EJEJEJSA_EEENS1_IJXspT_EEEENS_13__tuple_typesIJDpT0_EEENS1_IJXspT1_EEEENSE_IJDpT2_EEEDpOT3_(%"struct.std::__1::__tuple_impl.49"* %this4, %"class.std::__1::basic_string"* dereferenceable(24) %4) #2
+  call void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC2IJLm0EEJSA_EJEJEJSA_EEENS1_IJXspT_EEEENS_13__tuple_typesIJDpT0_EEENS1_IJXspT1_EEEENSE_IJDpT2_EEEDpOT3_(%"struct.std::__1::__tuple_impl.48"* %this4, %"class.std::__1::basic_string"* dereferenceable(24) %4) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC2IJLm0EEJSA_EJEJEJSA_EEENS1_IJXspT_EEEENS_13__tuple_typesIJDpT0_EEENS1_IJXspT1_EEEENSE_IJDpT2_EEEDpOT3_(%"struct.std::__1::__tuple_impl.49"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__u) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__112__tuple_implINS_15__tuple_indicesIJLm0EEEEJRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEC2IJLm0EEJSA_EJEJEJSA_EEENS1_IJXspT_EEEENS_13__tuple_typesIJDpT0_EEENS1_IJXspT1_EEEENSE_IJDpT2_EEEDpOT3_(%"struct.std::__1::__tuple_impl.48"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__u) unnamed_addr #1 align 2 {
 entry:
   %0 = alloca %"struct.std::__1::__tuple_indices", align 1
-  %1 = alloca %"struct.std::__1::__tuple_types.52", align 1
-  %2 = alloca %"struct.std::__1::__tuple_indices.37", align 1
-  %3 = alloca %"struct.std::__1::__tuple_types.38", align 1
-  %this.addr = alloca %"struct.std::__1::__tuple_impl.49"*, align 8
+  %1 = alloca %"struct.std::__1::__tuple_types.51", align 1
+  %2 = alloca %"struct.std::__1::__tuple_indices.35", align 1
+  %3 = alloca %"struct.std::__1::__tuple_types.36", align 1
+  %this.addr = alloca %"struct.std::__1::__tuple_impl.48"*, align 8
   %__u.addr = alloca %"class.std::__1::basic_string"*, align 8
-  store %"struct.std::__1::__tuple_impl.49"* %this, %"struct.std::__1::__tuple_impl.49"** %this.addr, align 8
+  store %"struct.std::__1::__tuple_impl.48"* %this, %"struct.std::__1::__tuple_impl.48"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__u, %"class.std::__1::basic_string"** %__u.addr, align 8
-  %this4 = load %"struct.std::__1::__tuple_impl.49"*, %"struct.std::__1::__tuple_impl.49"** %this.addr, align 8
-  %4 = bitcast %"struct.std::__1::__tuple_impl.49"* %this4 to %"class.std::__1::__tuple_leaf.50"*
+  %this4 = load %"struct.std::__1::__tuple_impl.48"*, %"struct.std::__1::__tuple_impl.48"** %this.addr, align 8
+  %4 = bitcast %"struct.std::__1::__tuple_impl.48"* %this4 to %"class.std::__1::__tuple_leaf.49"*
   %5 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__u.addr, align 8
   %call = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__1L7forwardIRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEOT_RNS_16remove_referenceIS9_E4typeE(%"class.std::__1::basic_string"* dereferenceable(24) %5) #2
-  call void @_ZNSt3__112__tuple_leafILm0ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEELb0EEC2IS8_vEEOT_(%"class.std::__1::__tuple_leaf.50"* %4, %"class.std::__1::basic_string"* dereferenceable(24) %call) #2
+  call void @_ZNSt3__112__tuple_leafILm0ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEELb0EEC2IS8_vEEOT_(%"class.std::__1::__tuple_leaf.49"* %4, %"class.std::__1::basic_string"* dereferenceable(24) %call) #2
   ret void
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__112__tuple_leafILm0ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEELb0EEC2IS8_vEEOT_(%"class.std::__1::__tuple_leaf.50"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__t) unnamed_addr #1 align 2 {
+define internal void @_ZNSt3__112__tuple_leafILm0ERKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEELb0EEC2IS8_vEEOT_(%"class.std::__1::__tuple_leaf.49"* %this, %"class.std::__1::basic_string"* dereferenceable(24) %__t) unnamed_addr #1 align 2 {
 entry:
-  %this.addr = alloca %"class.std::__1::__tuple_leaf.50"*, align 8
+  %this.addr = alloca %"class.std::__1::__tuple_leaf.49"*, align 8
   %__t.addr = alloca %"class.std::__1::basic_string"*, align 8
-  store %"class.std::__1::__tuple_leaf.50"* %this, %"class.std::__1::__tuple_leaf.50"** %this.addr, align 8
+  store %"class.std::__1::__tuple_leaf.49"* %this, %"class.std::__1::__tuple_leaf.49"** %this.addr, align 8
   store %"class.std::__1::basic_string"* %__t, %"class.std::__1::basic_string"** %__t.addr, align 8
-  %this1 = load %"class.std::__1::__tuple_leaf.50"*, %"class.std::__1::__tuple_leaf.50"** %this.addr, align 8
-  %__value_ = getelementptr inbounds %"class.std::__1::__tuple_leaf.50", %"class.std::__1::__tuple_leaf.50"* %this1, i32 0, i32 0
+  %this1 = load %"class.std::__1::__tuple_leaf.49"*, %"class.std::__1::__tuple_leaf.49"** %this.addr, align 8
+  %__value_ = getelementptr inbounds %"class.std::__1::__tuple_leaf.49", %"class.std::__1::__tuple_leaf.49"* %this1, i32 0, i32 0
   %0 = load %"class.std::__1::basic_string"*, %"class.std::__1::basic_string"** %__t.addr, align 8
   %call = call dereferenceable(24) %"class.std::__1::basic_string"* @_ZNSt3__1L7forwardIRKNS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEOT_RNS_16remove_referenceIS9_E4typeE(%"class.std::__1::basic_string"* dereferenceable(24) %0) #2
   store %"class.std::__1::basic_string"* %call, %"class.std::__1::basic_string"** %__value_, align 8
@@ -21925,51 +26338,51 @@ entry:
   ]
 
 sw.bb:                                            ; preds = %entry, %entry
-  store i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.84, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.83, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb1:                                           ; preds = %entry, %entry
-  store i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.85, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.84, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb2:                                           ; preds = %entry
-  store i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.86, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.85, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb3:                                           ; preds = %entry
-  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.87, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.86, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb4:                                           ; preds = %entry
-  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.88, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.87, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb5:                                           ; preds = %entry, %entry
-  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.89, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.88, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb6:                                           ; preds = %entry, %entry
-  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.90, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.89, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb7:                                           ; preds = %entry, %entry
-  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.91, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.90, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb8:                                           ; preds = %entry
-  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.92, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.91, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb9:                                           ; preds = %entry
-  store i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.93, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.92, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb10:                                          ; preds = %entry
-  store i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.94, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.93, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.bb11:                                          ; preds = %entry, %entry
-  store i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.95, i32 0, i32 0), i8** %retval, align 8
+  store i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.94, i32 0, i32 0), i8** %retval, align 8
   br label %return
 
 sw.default:                                       ; preds = %entry
@@ -21984,6 +26397,9 @@ return:                                           ; preds = %sw.default, %sw.bb1
 declare %struct.__sFILE* @"\01_fopen"(i8*, i8*) #5
 
 declare i32 @fseek(%struct.__sFILE*, i64, i32) #5
+
+; Function Attrs: nounwind readnone speculatable
+declare double @llvm.log10.f64(double) #9
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
 define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE5clearEv(%"class.std::__1::__tree"* %this) #1 align 2 {
@@ -22004,8 +26420,24 @@ entry:
   ret void
 }
 
-; Function Attrs: nounwind readnone speculatable
-declare double @llvm.log10.f64(double) #9
+; Function Attrs: noinline nounwind optnone ssp uwtable
+define linkonce_odr void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE5clearEv(%"class.std::__1::__tree.5"* %this) #1 align 2 {
+entry:
+  %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
+  store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
+  %this1 = load %"class.std::__1::__tree.5"*, %"class.std::__1::__tree.5"** %this.addr, align 8
+  %call = call %"class.std::__1::__tree_node.19"* @_ZNKSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE6__rootEv(%"class.std::__1::__tree.5"* %this1) #2
+  call void @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE7destroyEPNS_11__tree_nodeIS8_PvEE(%"class.std::__1::__tree.5"* %this1, %"class.std::__1::__tree_node.19"* %call) #2
+  %call2 = call dereferenceable(8) i64* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE4sizeEv(%"class.std::__1::__tree.5"* %this1) #2
+  store i64 0, i64* %call2, align 8
+  %call3 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE10__end_nodeEv(%"class.std::__1::__tree.5"* %this1) #2
+  %call4 = call dereferenceable(8) %"class.std::__1::__tree_end_node"** @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__begin_nodeEv(%"class.std::__1::__tree.5"* %this1) #2
+  store %"class.std::__1::__tree_end_node"* %call3, %"class.std::__1::__tree_end_node"** %call4, align 8
+  %call5 = call %"class.std::__1::__tree_end_node"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE10__end_nodeEv(%"class.std::__1::__tree.5"* %this1) #2
+  %__left_ = getelementptr inbounds %"class.std::__1::__tree_end_node", %"class.std::__1::__tree_end_node"* %call5, i32 0, i32 0
+  store %"class.std::__1::__tree_node_base"* null, %"class.std::__1::__tree_node_base"** %__left_, align 8
+  ret void
+}
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
 define internal %"class.std::__1::__tree_end_node"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE5beginEv(%"class.std::__1::__tree"* %this) #1 align 2 {
@@ -22121,139 +26553,6 @@ while.body:                                       ; preds = %while.cond
 while.end:                                        ; preds = %while.cond
   %6 = load %"class.std::__1::__tree_node_base"*, %"class.std::__1::__tree_node_base"** %__x.addr, align 8
   ret %"class.std::__1::__tree_node_base"* %6
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_end_node"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE5beginEv(%"class.std::__1::__tree.5"* %this) #1 align 2 {
-entry:
-  %retval = alloca %"class.std::__1::__tree_iterator.20", align 8
-  %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
-  store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__tree.5"*, %"class.std::__1::__tree.5"** %this.addr, align 8
-  %call = call dereferenceable(8) %"class.std::__1::__tree_end_node"** @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE12__begin_nodeEv(%"class.std::__1::__tree.5"* %this1) #2
-  %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %call, align 8
-  call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC1EPNS_15__tree_end_nodeIPNS_16__tree_node_baseISA_EEEE(%"class.std::__1::__tree_iterator.20"* %retval, %"class.std::__1::__tree_end_node"* %0) #2
-  %coerce.dive = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %retval, i32 0, i32 0
-  %1 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %coerce.dive, align 8
-  ret %"class.std::__1::__tree_end_node"* %1
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEC1ESE_(%"class.std::__1::__map_iterator.19"* %this, %"class.std::__1::__tree_end_node"* %__i.coerce) unnamed_addr #1 align 2 {
-entry:
-  %__i = alloca %"class.std::__1::__tree_iterator.20", align 8
-  %this.addr = alloca %"class.std::__1::__map_iterator.19"*, align 8
-  %coerce.dive = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %__i, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %__i.coerce, %"class.std::__1::__tree_end_node"** %coerce.dive, align 8
-  store %"class.std::__1::__map_iterator.19"* %this, %"class.std::__1::__map_iterator.19"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__map_iterator.19"*, %"class.std::__1::__map_iterator.19"** %this.addr, align 8
-  %coerce.dive2 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %__i, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %coerce.dive2, align 8
-  call void @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEC2ESE_(%"class.std::__1::__map_iterator.19"* %this1, %"class.std::__1::__tree_end_node"* %0) #2
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC1EPNS_15__tree_end_nodeIPNS_16__tree_node_baseISA_EEEE(%"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_end_node"* %__p) unnamed_addr #1 align 2 {
-entry:
-  %this.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_end_node"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  store %"class.std::__1::__tree_end_node"* %__p, %"class.std::__1::__tree_end_node"** %__p.addr, align 8
-  %this1 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__p.addr, align 8
-  call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC2EPNS_15__tree_end_nodeIPNS_16__tree_node_baseISA_EEEE(%"class.std::__1::__tree_iterator.20"* %this1, %"class.std::__1::__tree_end_node"* %0) #2
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC2EPNS_15__tree_end_nodeIPNS_16__tree_node_baseISA_EEEE(%"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_end_node"* %__p) unnamed_addr #1 align 2 {
-entry:
-  %this.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  %__p.addr = alloca %"class.std::__1::__tree_end_node"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  store %"class.std::__1::__tree_end_node"* %__p, %"class.std::__1::__tree_end_node"** %__p.addr, align 8
-  %this1 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %this1, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__p.addr, align 8
-  store %"class.std::__1::__tree_end_node"* %0, %"class.std::__1::__tree_end_node"** %__ptr_, align 8
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal void @_ZNSt3__114__map_iteratorINS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS9_PvEElEEEC2ESE_(%"class.std::__1::__map_iterator.19"* %this, %"class.std::__1::__tree_end_node"* %__i.coerce) unnamed_addr #1 align 2 {
-entry:
-  %__i = alloca %"class.std::__1::__tree_iterator.20", align 8
-  %this.addr = alloca %"class.std::__1::__map_iterator.19"*, align 8
-  %coerce.dive = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %__i, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %__i.coerce, %"class.std::__1::__tree_end_node"** %coerce.dive, align 8
-  store %"class.std::__1::__map_iterator.19"* %this, %"class.std::__1::__map_iterator.19"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__map_iterator.19"*, %"class.std::__1::__map_iterator.19"** %this.addr, align 8
-  %__i_ = getelementptr inbounds %"class.std::__1::__map_iterator.19", %"class.std::__1::__map_iterator.19"* %this1, i32 0, i32 0
-  %0 = bitcast %"class.std::__1::__tree_iterator.20"* %__i_ to i8*
-  %1 = bitcast %"class.std::__1::__tree_iterator.20"* %__i to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %0, i8* align 8 %1, i64 8, i1 false)
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal %"class.std::__1::__tree_end_node"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE3endEv(%"class.std::__1::__tree.5"* %this) #1 align 2 {
-entry:
-  %retval = alloca %"class.std::__1::__tree_iterator.20", align 8
-  %this.addr = alloca %"class.std::__1::__tree.5"*, align 8
-  store %"class.std::__1::__tree.5"* %this, %"class.std::__1::__tree.5"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__tree.5"*, %"class.std::__1::__tree.5"** %this.addr, align 8
-  %call = call %"class.std::__1::__tree_end_node"* @_ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE10__end_nodeEv(%"class.std::__1::__tree.5"* %this1) #2
-  call void @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEC1EPNS_15__tree_end_nodeIPNS_16__tree_node_baseISA_EEEE(%"class.std::__1::__tree_iterator.20"* %retval, %"class.std::__1::__tree_end_node"* %call) #2
-  %coerce.dive = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %retval, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %coerce.dive, align 8
-  ret %"class.std::__1::__tree_end_node"* %0
-}
-
-; Function Attrs: noinline optnone ssp uwtable
-define internal zeroext i1 @_ZNSt3__1neERKNS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEESF_(%"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__x, %"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__y) #4 {
-entry:
-  %__x.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  %__y.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %__x, %"class.std::__1::__tree_iterator.20"** %__x.addr, align 8
-  store %"class.std::__1::__tree_iterator.20"* %__y, %"class.std::__1::__tree_iterator.20"** %__y.addr, align 8
-  %0 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %__x.addr, align 8
-  %1 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %__y.addr, align 8
-  %call = call zeroext i1 @_ZNSt3__1eqERKNS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEESF_(%"class.std::__1::__tree_iterator.20"* dereferenceable(8) %0, %"class.std::__1::__tree_iterator.20"* dereferenceable(8) %1)
-  %lnot = xor i1 %call, true
-  ret i1 %lnot
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal zeroext i1 @_ZNSt3__1eqERKNS_15__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEESF_(%"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__x, %"class.std::__1::__tree_iterator.20"* dereferenceable(8) %__y) #1 {
-entry:
-  %__x.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  %__y.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %__x, %"class.std::__1::__tree_iterator.20"** %__x.addr, align 8
-  store %"class.std::__1::__tree_iterator.20"* %__y, %"class.std::__1::__tree_iterator.20"** %__y.addr, align 8
-  %0 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %__x.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %0, i32 0, i32 0
-  %1 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__ptr_, align 8
-  %2 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %__y.addr, align 8
-  %__ptr_1 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %2, i32 0, i32 0
-  %3 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__ptr_1, align 8
-  %cmp = icmp eq %"class.std::__1::__tree_end_node"* %1, %3
-  ret i1 %cmp
-}
-
-; Function Attrs: noinline nounwind optnone ssp uwtable
-define internal dereferenceable(8) %"class.std::__1::__tree_iterator.20"* @_ZNSt3__115__tree_iteratorINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEdEEPNS_11__tree_nodeIS8_PvEElEppEv(%"class.std::__1::__tree_iterator.20"* %this) #1 align 2 {
-entry:
-  %this.addr = alloca %"class.std::__1::__tree_iterator.20"*, align 8
-  store %"class.std::__1::__tree_iterator.20"* %this, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %this1 = load %"class.std::__1::__tree_iterator.20"*, %"class.std::__1::__tree_iterator.20"** %this.addr, align 8
-  %__ptr_ = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %this1, i32 0, i32 0
-  %0 = load %"class.std::__1::__tree_end_node"*, %"class.std::__1::__tree_end_node"** %__ptr_, align 8
-  %1 = bitcast %"class.std::__1::__tree_end_node"* %0 to %"class.std::__1::__tree_node_base"*
-  %call = call %"class.std::__1::__tree_end_node"* @_ZNSt3__1L16__tree_next_iterIPNS_15__tree_end_nodeIPNS_16__tree_node_baseIPvEEEES5_EET_T0_(%"class.std::__1::__tree_node_base"* %1) #2
-  %__ptr_2 = getelementptr inbounds %"class.std::__1::__tree_iterator.20", %"class.std::__1::__tree_iterator.20"* %this1, i32 0, i32 0
-  store %"class.std::__1::__tree_end_node"* %call, %"class.std::__1::__tree_end_node"** %__ptr_2, align 8
-  ret %"class.std::__1::__tree_iterator.20"* %this1
 }
 
 ; Function Attrs: noinline ssp uwtable
