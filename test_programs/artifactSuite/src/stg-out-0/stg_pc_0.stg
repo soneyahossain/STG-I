@@ -1,5 +1,4 @@
 [
-
 LAT0 : double = 50,range:[-20,20],uniform
 LON0 : double = 50,range:[-20,20],uniform
 ALT0 : float = 500,range:[-20,20],uniform
@@ -23,7 +22,7 @@ HOME_LAT : float = 10,range:[-20,20],uniform
 (land
   (lnot(sle (i32 3) (i32 0)))
   (land
-    (trunc i1 (zext i8 1))
+    (trunc i1 (zext i8 ( i1 1)))
     (land
       (lnot(trunc i1 (i8 0)))
       (land

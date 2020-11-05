@@ -1,5 +1,4 @@
 [
-
 MAX_DIS : float = 400,range:[-20,20],uniform
 LAT0 : double = 50,range:[-20,20],uniform
 LON0 : double = 50,range:[-20,20],uniform
