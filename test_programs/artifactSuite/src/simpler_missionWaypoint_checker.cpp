@@ -33,7 +33,7 @@ float get_distance_to_next_waypoint(double lat_now, double lon_now, double lat_n
 }
 
 
-bool checkDistancesBetweenWaypoints(const  mission_s &mission, float &max_distance)
+bool checkDistancesBetweenWaypoints(const  mission_s &mission, float max_distance)
 {
 	if (max_distance <= 0.0f) {
 		/* param not set, check is ok */
@@ -48,18 +48,21 @@ bool checkDistancesBetweenWaypoints(const  mission_s &mission, float &max_distan
 	for (int i = 0; i < mission.count; i++) 
 	{
 		/* check distance from current position to item */
+		if(i>0){
+
 		const float dist_between_waypoints = get_distance_to_next_waypoint(mission.items[i].lat, mission.items[i].lon, last_lat, last_lon);
 
-		if (dist_between_waypoints > max_distance) 
+		if (dist_between_waypoints > max_distance)
 				return false;
 
 		/* do not allow waypoints that are literally on top of each other */
-		else 
+		else
 			if (dist_between_waypoints < 0.05f && fabsf(last_alt - mission.items[i].altitude) < 0.05f)
 				/* waypoints are at the exact same position,
 				 * which indicates an invalid mission and makes calculating
 				 * the direction from one waypoint to another impossible. */
 				return false;
+		}
 			
 		last_lat = mission.items[i].lat;
 		last_lon = mission.items[i].lon;

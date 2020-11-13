@@ -5,10 +5,15 @@
 #include "../../../lib/distribution.hpp"
 #include <stdio.h>
 
+
 TEST(MissionCheck, CheckCombined)
 {
 
-    //step1: decalre all the variables and assign values
+    //step1: call stg_start_intrmnt
+
+    stg_start_intrmnt();
+
+    //step2: decalre all the variables and assign values
 
     int high_lat = 79, low_lat = 35, high_lon = 85, low_lon = 35;
     float max_dis = 400;
@@ -29,11 +34,11 @@ TEST(MissionCheck, CheckCombined)
     mission.items[2].altitude = 520;
     mission.items[2].altitude_is_relative = false;
 
-    //step 2: call stg_begin_test()
+    //step 3: call stg_begin_test()
 
     stg_begin_test();
 
-    //step 3: decalre all symbolic variables
+    //step 4: decalre all symbolic variables
 
     stg_symbolic_variable_double(&mission.items[0].lat, "LAT0", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_double(&mission.items[0].lon, "LON0", -20, 20, uniform, 0, 0);
@@ -51,20 +56,24 @@ TEST(MissionCheck, CheckCombined)
     stg_symbolic_variable_float(&max_dis, "MAX_DIS", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_float(&home_lat, "HOME_LAT", -20, 20, uniform, 0, 0);
 
+
+    //please note that all the stg_input_  calls are removed to simply src code annotations
+
     //step 4: call function and store the result in a boolean var
 
     bool isFeasibleMission = checkMissionFeasible(mission, max_dis, true, home_lat, true, high_lat, low_lat, high_lon, low_lon);
 
-    //step 5: end test
+    //step 5: call stg_stop_intrmnt
+    stg_stop_intrmnt();
+    //step 6: end test
     stg_end_test();
 
-    //step 6: record test
+    //step 7: record test
     stg_record_test(isFeasibleMission == true);
 
     // test oracles
     ASSERT_EQ(true, isFeasibleMission);
 
-    // note that all the stg_input_  calls are removed to simply src code annotations
 }
 
 TEST(MissionCommandCheck, ValidCommand)
@@ -178,6 +187,8 @@ TEST(CheckGeofence, InsideTooHigh_)
 TEST(CheckGeofence, InsideTooHigh)
 {
 
+    stg_start_intrmnt();
+
     int high_lat = 79, low_lat = 35, high_lon = 85, low_lon = 35;
 
     struct mission_s mission;
@@ -197,7 +208,10 @@ TEST(CheckGeofence, InsideTooHigh)
     stg_symbolic_variable_int(&high_lon, "HLON", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_int(&low_lon, "LLON", -20, 20, uniform, 0, 0);
 
+
     bool isGeofenced = checkGeofence(mission, true, high_lat, low_lat, high_lon, low_lon);
+    stg_stop_intrmnt();
+
     stg_end_test();
     stg_record_test(isGeofenced);
     ASSERT_EQ(false, isGeofenced);
@@ -207,7 +221,7 @@ TEST(CheckGeofence, InsideTooHigh)
 
 TEST(CheckWayPoints, CloseWaypoints)
 {
-
+    stg_start_intrmnt();
     float max_dis = 400;
     struct mission_s mission;
     mission.count = 3;
@@ -235,7 +249,10 @@ TEST(CheckWayPoints, CloseWaypoints)
     stg_symbolic_variable_double(&mission.items[2].lon, "LON2", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform, 0, 0);
 
+
     bool isValid = checkDistancesBetweenWaypoints(mission, max_dis);
+    stg_stop_intrmnt();
+
     stg_end_test();
     stg_record_test(isValid == true);
     ASSERT_EQ(true, isValid);
@@ -247,11 +264,11 @@ TEST(CheckWayPoints, CloseWaypoints)
 TEST(CheckWayPoints, TooCloseWaypoints)
 {
     // Sample test with a mission of 2 waypoints that are too close
-
+    stg_start_intrmnt();
     float max_dis = 400;
 
     struct mission_s mission;
-    mission.count = 3;
+    mission.count = 2;
     mission.items[0].lat = 50;
     mission.items[0].lon = 50;
     mission.items[0].altitude = 500;
@@ -269,7 +286,10 @@ TEST(CheckWayPoints, TooCloseWaypoints)
     stg_symbolic_variable_double(&mission.items[1].lon, "LON1", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform, 0, 0);
 
+
     bool isValid = checkDistancesBetweenWaypoints(mission, max_dis);
+    stg_stop_intrmnt();
+
     stg_end_test();
     stg_record_test(isValid == false);
     ASSERT_EQ(false, isValid);
@@ -281,9 +301,12 @@ TEST(CheckWayPoints, TooCloseWaypoints)
 TEST(CheckWayPoints, AltituteBreaker)
 {
     // Sample test with a mission of 3 waypoints that break altitude barrier
+
+    stg_start_intrmnt();
+
     float max_dis = 400;
     struct mission_s mission;
-    mission.count = 3;
+    mission.count = 2;
     mission.items[0].lat = 50;
     mission.items[0].lon = 50;
     mission.items[0].altitude = 500;
@@ -300,7 +323,10 @@ TEST(CheckWayPoints, AltituteBreaker)
     stg_symbolic_variable_double(&mission.items[1].lon, "LON1", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform, 0, 0);
 
+
     bool isValid = checkDistancesBetweenWaypoints(mission, max_dis);
+    stg_stop_intrmnt();
+
     stg_end_test();
     stg_record_test(isValid == false);
     ASSERT_EQ(false, isValid);
@@ -313,6 +339,8 @@ TEST(CheckAltitute, ValidMission)
 {
 
     // Sample test with a mission of 3 valid altitude waypoints
+
+    stg_start_intrmnt();
     float home_lat = 20;
     struct mission_s mission;
 
@@ -337,7 +365,10 @@ TEST(CheckAltitute, ValidMission)
     stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform, 0, 0);
 
+
     bool isValid = checkHomePositionAltitude(mission, home_lat, true);
+    stg_stop_intrmnt();
+
     stg_end_test();
     stg_record_test(isValid == true);
     ASSERT_EQ(true, isValid);
@@ -350,6 +381,7 @@ TEST(CheckAltitute, InvalidMission)
 {
 
     // Sample test with a mission of 1 invalid altitude setup waypoint
+    stg_start_intrmnt();
     float home_lat = 20;
     struct mission_s mission;
 
@@ -374,7 +406,10 @@ TEST(CheckAltitute, InvalidMission)
     stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform, 0, 0);
 
+
     bool isValid = checkHomePositionAltitude(mission, home_lat, false);
+    stg_stop_intrmnt();
+
     stg_end_test();
     stg_record_test(isValid == false);
     ASSERT_EQ(false, isValid);
@@ -383,9 +418,14 @@ TEST(CheckAltitute, InvalidMission)
     //printf("Check 3 waypoints: %s (invalid mission, last point is relative but home is not set)\n", checkHomePositionAltitude(mission, 20, false)?"valid":"invalid");
 }
 
+
+
 TEST(CheckAltitute, InvalidMission2pointbelowhome)
 {
+
     // Sample test with a mission with second wapoint invalid altitude below home
+    stg_start_intrmnt();
+
     float home_lat = 20;
     struct mission_s mission;
 
@@ -410,12 +450,16 @@ TEST(CheckAltitute, InvalidMission2pointbelowhome)
     stg_symbolic_variable_float(&mission.items[1].altitude, "ALT1", -20, 20, uniform, 0, 0);
     stg_symbolic_variable_float(&mission.items[2].altitude, "ALT2", -20, 20, uniform, 0, 0);
 
+
     bool isValid = checkHomePositionAltitude(mission, home_lat, true);
+    stg_stop_intrmnt();
+
     stg_end_test();
     stg_record_test(isValid == false);
     ASSERT_EQ(false, isValid);
     //printf("Check 3 waypoints: %s (invalid mission, 2nd point below home)\n", checkHomePositionAltitude(mission, 20, true)?"valid":"invalid");
 }
+
 
 int main(int argc, char** argv)
 {
