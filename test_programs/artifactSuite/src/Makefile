@@ -18,6 +18,10 @@ TARGET = missionChecker.out
 
 default: $(TARGET)
 
+
+test: missionChecker.out
+	./missionChecker.out
+
 missionChecker.out: missionChecker.o
 	$(CC) -o missionChecker.out  missionChecker.o $(LD_FLAGS)
 
@@ -28,7 +32,9 @@ missionChecker.ll:  $(BITCODES)
 	$(LLVM_DIR)/llvm-link  -o missionChecker.ll $(BITCODES)
 
 mission_feasibility_test.ll: $(TEST_DIR)/mission_feasibility_test.cpp simpler_mission.h $(LIB_DIR)/stg.h $(LIB_DIR)/distribution.hpp #do not instrument test drive
-	$(CC) $(CFLAGS) $(LLVM_FLAGS) $(TEST_DIR)/mission_feasibility_test.cpp
+	$(CC) $(CFLAGS) $(LLVM_FLAGS) $(TEST_DIR)/mission_feasibility_test.cpp -o mission_feasibility_test.bc
+	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter -ignore-instrmnt-flag=false mission_feasibility_test.bc -o mission_feasibility_test.ll
+
 
 stg.ll: $(LIB_DIR)/stg.cpp $(LIB_DIR)/stg.h $(LIB_DIR)/stg.hpp #do not instrument libs
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) $(LIB_DIR)/stg.cpp
@@ -54,4 +60,4 @@ simpler_missionGeofence_checker.ll:  simpler_missionGeofence_checker.cpp simpler
 	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter simpler_missionGeofence_checker.bc -o simpler_missionGeofence_checker.ll
 
 clean: #cleaning all object files and the combined file
-	$(RM) *.ll missionChecker.out
+	$(RM) *.ll *.bc  *.out *.o

@@ -21,7 +21,7 @@
 *  home_alt is the altitude at the home waypoint
 *  home_alt_valid is a boolean that is false if the home altitude is not set
 */
-bool checkHomePositionAltitude(const mission_s &mission, float &home_alt, bool home_alt_valid)
+bool checkHomePositionAltitude(const mission_s &mission, float home_alt, bool home_alt_valid)
 {
 
 
