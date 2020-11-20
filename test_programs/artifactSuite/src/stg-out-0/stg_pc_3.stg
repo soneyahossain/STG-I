@@ -1,0 +1,36 @@
+[
+MAX_DIS : float = 400,range:[-20,20],uniform
+LAT0 : double = 50,range:[-20,20],uniform
+LON0 : double = 50,range:[-20,20],uniform
+ALT0 : float = 500,range:[-20,20],uniform
+LAT1 : double = 50,range:[-20,20],uniform
+LON1 : double = 50,range:[-20,20],uniform
+ALT1 : float = 500,range:[-20,20],uniform
+
+]
+
+//Test: passed
+
+(land
+  (lnot(ole MAX_DIS (float 0.000000)))
+  (land
+    (slt (i32 0) (i32 2))
+    (land
+      (lnot(sgt (i32 0) (i32 0)))
+      (land
+        (slt (add (i32 0) (i32 1)) (i32 2))
+        (land
+          (sgt (add (i32 0) (i32 1)) (i32 0))
+          (land
+            (lnot(ogt (fptrunc float (fmul (double 12700.000000) (atan2 double (llvm.sqrt.f64 double (fadd (fmul (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (llvm.cos.f64 double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (llvm.cos.f64 double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))) (llvm.sqrt.f64 double (fsub (double 1.000000) (fadd (fmul (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (llvm.cos.f64 double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (llvm.cos.f64 double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))))))) MAX_DIS))
+            (land
+              (olt (fptrunc float (fmul (double 12700.000000) (atan2 double (llvm.sqrt.f64 double (fadd (fmul (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (llvm.cos.f64 double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (llvm.cos.f64 double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))) (llvm.sqrt.f64 double (fsub (double 1.000000) (fadd (fmul (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (llvm.sin.f64 double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (llvm.cos.f64 double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (llvm.cos.f64 double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))))))) (float 0.050000))
+              (olt (llvm.fabs.f32 float (fsub ALT0 ALT1)) (float 0.050000))
+            )
+          )
+        )
+      )
+    )
+  )
+)
+
