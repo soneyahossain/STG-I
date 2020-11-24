@@ -1,11 +1,11 @@
 [
-LAT : double = 38,range:[-20,20],uniform
-LON : double = 78,range:[-20,20],uniform
-ALT : float = 1000,range:[-20,20],uniform
-HLAT : i32 = 79,range:[-20,20],uniform
-LLAT : i32 = 35,range:[-20,20],uniform
-HLON : i32 = 85,range:[-20,20],uniform
-LLON : i32 = 35,range:[-20,20],uniform
+LAT : double
+LON : double
+ALT : float
+HLAT : i32
+LLAT : i32
+HLON : i32
+LLON : i32
 
 ]
 

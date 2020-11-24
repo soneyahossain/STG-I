@@ -1,8 +1,8 @@
 [
-HOME_LAT : float = 20,range:[-20,20],uniform
-ALT0 : float = 500,range:[-20,20],uniform
-ALT1 : float = 510,range:[-20,20],uniform
-ALT2 : float = 520,range:[-20,20],uniform
+HOME_LAT : float
+ALT0 : float
+ALT1 : float
+ALT2 : float
 
 ]
 
