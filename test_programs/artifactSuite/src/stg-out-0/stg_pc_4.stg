@@ -1,11 +1,11 @@
 [
-MAX_DIS : float = 400,range:[-20,20],uniform
-LAT0 : double = 50,range:[-20,20],uniform
-LON0 : double = 50,range:[-20,20],uniform
-ALT0 : float = 500,range:[-20,20],uniform
-LAT1 : double = 51,range:[-20,20],uniform
-LON1 : double = 51,range:[-20,20],uniform
-ALT1 : float = 10000,range:[-20,20],uniform
+MAX_DIS : float
+LAT0 : double
+LON0 : double
+ALT0 : float
+LAT1 : double
+LON1 : double
+ALT1 : float
 
 ]
 
