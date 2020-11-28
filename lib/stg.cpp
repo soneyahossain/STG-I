@@ -167,25 +167,7 @@ void stg_update_load_i32(int* addr, char* val)
 }
 //------------ testing scanf---------
 
-std::string getDistributionSpec(std::string address)
-{
-    std::string dis_name = sym_distribution[address + "_disID"];
-    std::string disSpec = "";
 
-    if (dis_name.compare("uniform") == 0) {
-        disSpec = dis_name;
-    }
-    else if (dis_name.compare("exponential") == 0 || dis_name.compare("geometric") == 0) {
-        disSpec = dis_name + " (" + sym_distribution[address + "_param1"] + ")";
-    }
-    else if (dis_name.compare("binomial") == 0 || dis_name.compare("poisson") == 0 || dis_name.compare("normal") == 0) {
-        disSpec = dis_name + " ( " + sym_distribution[address + "_param1"] + "," + sym_distribution[address + "_param2"] + " )";
-    }
-    else
-        assert(false); // distribution name error
-
-    return disSpec;
-}
 
 void stg_update_user_input(std::string address, std::string value, std::string type)
 {
@@ -203,7 +185,10 @@ void stg_update_user_input(std::string address, std::string value, std::string t
         else
             needComma = true;
 
-        stg_pc << sym_name << " : " << type << " = " << value << ", range:[" << sym_range[address + "_min"] << "," << sym_range[address + "_max"] << "]," << getDistributionSpec(address);
+        stg_pc << sym_name << " : " << type << "\n";
+
+
+        //" = " << value << ", range:[" << sym_range[address + "_min"] << "," << sym_range[address + "_max"] << "]," << getDistributionSpec(address);
 
         //D:["<<sym_distribution[address+"_disID"] <<","<<sym_distribution[address+"_param1"] <<","<<sym_distribution[address+"_param2"]<<"]";
         //std::cout << sym_name <<" : "<<type<< " = " << value << ", range:["<<sym_range[address+"_min"] <<","<<sym_range[address+"_max"]<<"]";
@@ -805,8 +790,8 @@ void stg_symbolic_variable_int(int* addr, const char* name, double range_min, do
 
     int value = (*addr);
 
-    stg_pc << name << " : i32"
-           << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
+    stg_pc << name << " : i32"<< "\n";
+          // << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
 }
 
 void stg_symbolic_variable_float(float* addr, const char* name, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
@@ -833,8 +818,8 @@ void stg_symbolic_variable_float(float* addr, const char* name, double range_min
 
     float value = (*addr);
 
-    stg_pc << name << " : float"
-           << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
+    stg_pc << name << " : float"<< "\n";
+         //  << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
 }
 
 void stg_symbolic_variable_double(double* addr, const char* name, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
@@ -861,106 +846,8 @@ void stg_symbolic_variable_double(double* addr, const char* name, double range_m
 
     double value = (*addr);
 
-    stg_pc << name << " : double"
-           << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
-}
-
-void stg_input_int(void* addr, int value)
-{
-    std::stringstream address_;
-    address_ << addr;
-    std::string add = address_.str();
-    // std::cout << "address:" << add << "\n";
-    std::string sym_name;
-
-    //find the symbolic name and tag the concrete value with it
-
-    auto itr = sym_var_map.find("v(" + add + ")");
-    if (itr != sym_var_map.end()) {
-        sym_name = itr->second;
-    }
-    else {
-        assert(false);
-    }
-
-    int* addr_c = (int*)addr;
-    *addr_c = value;
-    //std::cout << *addr_c << "\n";
-
-    if (needComma)
-        stg_pc << ",\n";
-    else
-        needComma = true;
-    stg_pc << sym_name << " : i32"
-           << " = " << value << ",range:[" << sym_range[add + "_min"] << "," << sym_range[add + "_max"] << "]," << getDistributionSpec(add);
-
-    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
-}
-
-void stg_input_float(void* addr, float value)
-{
-    std::stringstream address_;
-    address_ << addr;
-    std::string add = address_.str();
-    std::string sym_name;
-
-    //find the symbolic name and tag the concrete value with it
-
-    auto itr = sym_var_map.find("v(" + add + ")");
-    if (itr != sym_var_map.end()) {
-        sym_name = itr->second;
-    }
-    else {
-        assert(false);
-    }
-
-    float* addr_c = (float*)addr;
-    *addr_c = value;
-    //std::cout << *addr_c << "\n";
-    if (needComma)
-        stg_pc << ",\n";
-    else
-        needComma = true;
-
-    stg_pc << sym_name << " : float"
-           << " = " << value << ", range:[" << sym_range[add + "_min"] << "," << sym_range[add + "_max"] << "]," << getDistributionSpec(add);
-
-    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
-
-    //stg_pc << sym_name <<" : float"<< " = " <<value;
-}
-
-void stg_input_double(void* addr, double value)
-{
-    std::stringstream address_;
-    address_ << addr;
-    std::string add = address_.str();
-    std::string sym_name;
-
-    //find the symbolic name and tag the concrete value with it
-
-    auto itr = sym_var_map.find("v(" + add + ")");
-    if (itr != sym_var_map.end()) {
-        sym_name = itr->second;
-    }
-    else {
-        assert(false);
-    }
-
-    double* addr_c = (double*)addr;
-    *addr_c = value;
-    //std::cout << *addr_c << "\n";
-    if (needComma)
-        stg_pc << ",\n";
-    else
-        needComma = true;
-
-    stg_pc << sym_name << " : double"
-           << " = " << value << ",range:[" << sym_range[add + "_min"] << "," << sym_range[add + "_max"] << "]," << getDistributionSpec(add);
-
-    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
-
-    //stg_pc << sym_name <<" : double"<< " = " <<  value;
+    stg_pc << name << " : double"<< "\n";
+           //<< " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
 }
 
 void stg_begin_test()
@@ -1105,48 +992,6 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
     }
 }
 
-void stg_input_array(void* array, const char* type, int num, void* values)
-{
-
-    if (strcmp(type, "int") == 0) {
-
-        int* array_addr = (int*)array; // casting void * to required type
-        int* array_values = (int*)values; // casting void * to required type
-
-        for (int i = 0; i < num; i++) {
-
-            printf("value : %d\n", *(array_values + i));
-
-            stg_input_int(array_addr + i, *(array_values + i));
-        }
-    }
-    else if (strcmp(type, "float") == 0) {
-
-        float* array_addr = (float*)array;
-        float* array_values = (float*)values;
-
-        for (int i = 0; i < num; i++) {
-
-            printf("value : %f\n", *(array_values + i));
-
-            stg_input_float((array_addr + i), *(array_values + i));
-        }
-    }
-    else if (strcmp(type, "double") == 0) {
-
-        double* array_addr = (double*)array;
-        double* array_values = (double*)values;
-
-        for (int i = 0; i < num; i++) {
-
-            stg_input_double(array_addr + (sizeof(double) * i), *(double*)(array_values + (sizeof(double) * i)));
-        }
-    }
-    else {
-        // log an error message here
-    }
-}
-
 void stg_update_prev_bb(char* bbname)
 {
     prev_bb = bbname;
@@ -1194,41 +1039,151 @@ void stg_stop_intrmnt(){}
 
 
 
+/* FUNCTION NO LONGER BEING USED
 
 
 
+void stg_input_array(void* array, const char* type, int num, void* values)
+{
+
+    if (strcmp(type, "int") == 0) {
+
+        int* array_addr = (int*)array; // casting void * to required type
+        int* array_values = (int*)values; // casting void * to required type
+
+        for (int i = 0; i < num; i++) {
+
+            printf("value : %d\n", *(array_values + i));
+
+            stg_input_int(array_addr + i, *(array_values + i));
+        }
+    }
+    else if (strcmp(type, "float") == 0) {
+
+        float* array_addr = (float*)array;
+        float* array_values = (float*)values;
+
+        for (int i = 0; i < num; i++) {
+
+            printf("value : %f\n", *(array_values + i));
+
+            stg_input_float((array_addr + i), *(array_values + i));
+        }
+    }
+    else if (strcmp(type, "double") == 0) {
+
+        double* array_addr = (double*)array;
+        double* array_values = (double*)values;
+
+        for (int i = 0; i < num; i++) {
+
+            stg_input_double(array_addr + (sizeof(double) * i), *(double*)(array_values + (sizeof(double) * i)));
+        }
+    }
+    else {
+        // log an error message here
+    }
+}
 
 
+void stg_input_int(void* addr, int value)
+{
+    std::stringstream address_;
+    address_ << addr;
+    std::string add = address_.str();
+    // std::cout << "address:" << add << "\n";
+    std::string sym_name;
 
+    //find the symbolic name and tag the concrete value with it
 
+    auto itr = sym_var_map.find("v(" + add + ")");
+    if (itr != sym_var_map.end()) {
+        sym_name = itr->second;
+    }
+    else {
+        assert(false);
+    }
 
+    int* addr_c = (int*)addr;
+    *addr_c = value;
+    //std::cout << *addr_c << "\n";
 
+    if (needComma)
+        stg_pc << ",\n";
+    else
+        needComma = true;
+    stg_pc << sym_name << " : i32"
+           << " = " << value << ",range:[" << sym_range[add + "_min"] << "," << sym_range[add + "_max"] << "]," << getDistributionSpec(add);
 
+    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
+}
 
+void stg_input_float(void* addr, float value)
+{
+    std::stringstream address_;
+    address_ << addr;
+    std::string add = address_.str();
+    std::string sym_name;
 
+    //find the symbolic name and tag the concrete value with it
 
+    auto itr = sym_var_map.find("v(" + add + ")");
+    if (itr != sym_var_map.end()) {
+        sym_name = itr->second;
+    }
+    else {
+        assert(false);
+    }
 
+    float* addr_c = (float*)addr;
+    *addr_c = value;
+    //std::cout << *addr_c << "\n";
+    if (needComma)
+        stg_pc << ",\n";
+    else
+        needComma = true;
 
+    stg_pc << sym_name << " : float"
+           << " = " << value << ", range:[" << sym_range[add + "_min"] << "," << sym_range[add + "_max"] << "]," << getDistributionSpec(add);
 
+    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
 
+    //stg_pc << sym_name <<" : float"<< " = " <<value;
+}
 
+void stg_input_double(void* addr, double value)
+{
+    std::stringstream address_;
+    address_ << addr;
+    std::string add = address_.str();
+    std::string sym_name;
 
+    //find the symbolic name and tag the concrete value with it
 
+    auto itr = sym_var_map.find("v(" + add + ")");
+    if (itr != sym_var_map.end()) {
+        sym_name = itr->second;
+    }
+    else {
+        assert(false);
+    }
 
+    double* addr_c = (double*)addr;
+    *addr_c = value;
+    //std::cout << *addr_c << "\n";
+    if (needComma)
+        stg_pc << ",\n";
+    else
+        needComma = true;
 
+    stg_pc << sym_name << " : double"
+           << " = " << value << ",range:[" << sym_range[add + "_min"] << "," << sym_range[add + "_max"] << "]," << getDistributionSpec(add);
 
+    //<<"], D:["<<sym_distribution[add+"_disID"] <<","<<sym_distribution[add+"_param1"] <<","<<sym_distribution[add+"_param2"]<<"]";
 
+    //stg_pc << sym_name <<" : double"<< " = " <<  value;
+}
 
-
-
-
-
-
-
-
-
-
-/*
 
 
 bool is_number(const std::string s)
@@ -1277,6 +1232,27 @@ void stg_test_separator(int test_id)
    testsequence="";
 
 
+}
+
+
+std::string getDistributionSpec(std::string address)
+{
+    std::string dis_name = sym_distribution[address + "_disID"];
+    std::string disSpec = "";
+
+    if (dis_name.compare("uniform") == 0) {
+        disSpec = dis_name;
+    }
+    else if (dis_name.compare("exponential") == 0 || dis_name.compare("geometric") == 0) {
+        disSpec = dis_name + " (" + sym_distribution[address + "_param1"] + ")";
+    }
+    else if (dis_name.compare("binomial") == 0 || dis_name.compare("poisson") == 0 || dis_name.compare("normal") == 0) {
+        disSpec = dis_name + " ( " + sym_distribution[address + "_param1"] + "," + sym_distribution[address + "_param2"] + " )";
+    }
+    else
+        assert(false); // distribution name error
+
+    return disSpec;
 }
 
 */
