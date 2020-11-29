@@ -298,7 +298,7 @@ void stg_update_store_i1(bool* addr, char* val)
         value = itr->second;
 
     else {
-        int c_value = *(addr); //reading the value
+        int c_value = *(addr); //reading the valueƒstg_sy
         value = "(i1 " + std::to_string(c_value) + ")";
     }
 
@@ -766,7 +766,7 @@ void stg_update_phi(char* lhs, char* valBBpairs)
     stg_state << "state[" << key << " --> " << token << "]\n";
 }
 
-void stg_symbolic_variable_int(int* addr, const char* name, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
+void stg_symbolic_variable_int(int* addr, const char* name)//, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
 {
 
     std::stringstream address_;
@@ -774,8 +774,8 @@ void stg_symbolic_variable_int(int* addr, const char* name, double range_min, do
 
     //auto ret = sym_range.insert(std::make_pair<std::string, double[2]>(address_.str(), {min, max}));
 
-    sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
-    sym_range[address_.str() + "_max"] = range_max;
+    //sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
+    //sym_range[address_.str() + "_max"] = range_max;
 
     std::string add = "v(" + address_.str() + ")";
 
@@ -784,9 +784,9 @@ void stg_symbolic_variable_int(int* addr, const char* name, double range_min, do
 
     stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
 
-    sym_distribution[address_.str() + "_disID"] = dis_id;
-    sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
-    sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
+   // sym_distribution[address_.str() + "_disID"] = dis_id;
+   // sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
+   // sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
 
     int value = (*addr);
 
@@ -794,7 +794,7 @@ void stg_symbolic_variable_int(int* addr, const char* name, double range_min, do
           // << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
 }
 
-void stg_symbolic_variable_float(float* addr, const char* name, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
+void stg_symbolic_variable_float(float* addr, const char* name)//, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
 {
 
     std::stringstream address_;
@@ -802,8 +802,8 @@ void stg_symbolic_variable_float(float* addr, const char* name, double range_min
 
     //auto ret = sym_range.insert(std::make_pair<std::string, double[2]>(address_.str(), {min, max}));
 
-    sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
-    sym_range[address_.str() + "_max"] = range_max;
+    //sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
+    //sym_range[address_.str() + "_max"] = range_max;
 
     std::string add = "v(" + address_.str() + ")";
 
@@ -812,9 +812,9 @@ void stg_symbolic_variable_float(float* addr, const char* name, double range_min
 
     stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
 
-    sym_distribution[address_.str() + "_disID"] = dis_id;
-    sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
-    sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
+    //sym_distribution[address_.str() + "_disID"] = dis_id;
+    // sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
+    // sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
 
     float value = (*addr);
 
@@ -822,7 +822,7 @@ void stg_symbolic_variable_float(float* addr, const char* name, double range_min
          //  << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
 }
 
-void stg_symbolic_variable_double(double* addr, const char* name, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
+void stg_symbolic_variable_double(double* addr, const char* name)//, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
 {
 
     std::stringstream address_;
@@ -830,8 +830,8 @@ void stg_symbolic_variable_double(double* addr, const char* name, double range_m
 
     //auto ret = sym_range.insert(std::make_pair<std::string, double[2]>(address_.str(), {min, max}));
 
-    sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
-    sym_range[address_.str() + "_max"] = range_max;
+    //sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
+    //sym_range[address_.str() + "_max"] = range_max;
 
     std::string add = "v(" + address_.str() + ")";
 
@@ -840,9 +840,9 @@ void stg_symbolic_variable_double(double* addr, const char* name, double range_m
 
     stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
 
-    sym_distribution[address_.str() + "_disID"] = dis_id;
-    sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
-    sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
+    //sym_distribution[address_.str() + "_disID"] = dis_id;
+    //sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
+    //sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
 
     double value = (*addr);
 
@@ -949,7 +949,7 @@ void stg_record_test(bool pred)
     stg_pc.close(); //file close
 }
 
-void stg_symbolic_array(void* array, const char* type, int num, const char* prefix, double range_min, double range_max, char* dis_id, double param_1, double param_2)
+void stg_symbolic_array(void* array, const char* type, int num, const char* prefix)//, double range_min, double range_max, char* dis_id, double param_1, double param_2)
 {
     // extend this if you want to support more types
 
@@ -967,7 +967,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             int* array_addr = (int*)array;
-            stg_symbolic_variable_int(array_addr + i, name, range_min, range_max, dis_id, param_1, param_2);
+            stg_symbolic_variable_int(array_addr + i, name);//, range_min, range_max, dis_id, param_1, param_2);
         }
     }
     else if (strcmp(type, "float") == 0) {
@@ -977,7 +977,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             float* array_addr = (float*)array;
-            stg_symbolic_variable_float((array_addr + i), name, range_min, range_max, dis_id, param_1, param_2);
+            stg_symbolic_variable_float((array_addr + i), name);//, range_min, range_max, dis_id, param_1, param_2);
         }
     }
     else if (strcmp(type, "double") == 0) {
@@ -987,7 +987,7 @@ void stg_symbolic_array(void* array, const char* type, int num, const char* pref
             char* name = (char*)malloc(strlen(prefix) + d + 1);
             sprintf(name, "%s%d", prefix, i);
             double* array_addr = (double*)array;
-            stg_symbolic_variable_double((array_addr + (s * i)), name, range_min, range_max, dis_id, param_1, param_2);
+            stg_symbolic_variable_double((array_addr + (s * i)), name);//, range_min, range_max, dis_id, param_1, param_2);
         }
     }
 }
