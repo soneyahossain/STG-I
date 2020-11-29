@@ -27,16 +27,16 @@ These are the parameters for the distribution:
  */
 
 
-void stg_symbolic_variable_int(int* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
-void stg_symbolic_variable_float(float* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
-void stg_symbolic_variable_double(double* addr, const char *name, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
+void stg_symbolic_variable_int(int* addr, const char *name); //, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
+void stg_symbolic_variable_float(float* addr, const char *name); //, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
+void stg_symbolic_variable_double(double* addr, const char *name); //, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
 
 
 /*
  * This version creates a name for each of num elements of the array,
  * whose stride is given, using the prefix as a base of the name.
  */
-void stg_symbolic_array(void* array, const char* type, int num, const char *prefix, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
+void stg_symbolic_array(void* array, const char* type, int num, const char *prefix);//, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
 
 /*
  * These calls setup and wrap the execution of a test case.
