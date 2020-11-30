@@ -1,6 +1,5 @@
 GOOGLE_TEST_LIB = gtest
-GOOGLE_TEST_INCLUDE = /usr/local/include
-TEST_DIR=../test
+GOOGLE_TEST_INCLUDE = /usr/src/gtest/include    
 LIB_DIR=stgi
 
 CC = clang++ -std=c++14
@@ -24,14 +23,14 @@ classify.out: classifier.o
 	$(CC) -o classify.out  classifier.o $(LD_FLAGS)
 
 classifier.o: classifier.ll
-	$(LLVM_DIR)/llc -filetype=obj classifier.ll
+	llc -filetype=obj classifier.ll
 
 classifier.ll:  $(BITCODES)
-	$(LLVM_DIR)/llvm-link  -o classifier.ll $(BITCODES)
+	llvm-link  -o classifier.ll $(BITCODES)
 
 classify_test.ll: classify_test.cpp classify.hpp $(LIB_DIR)/stg.h #do not instrument test drive
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) classify_test.cpp -o classify_test.bc
-	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter -ignore-instrmnt-flag=false classify_test.bc -o classify_test.ll
+	opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter -ignore-instrmnt-flag=false classify_test.bc -o classify_test.ll
 
 stg.ll: $(LIB_DIR)/stg.cpp $(LIB_DIR)/stg.h $(LIB_DIR)/stg.hpp #do not instrument libs
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) $(LIB_DIR)/stg.cpp
@@ -39,7 +38,7 @@ stg.ll: $(LIB_DIR)/stg.cpp $(LIB_DIR)/stg.h $(LIB_DIR)/stg.hpp #do not instrumen
 
 classify.ll:  classify.cpp classify.hpp
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) classify.cpp -o classify.bc
-	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter classify.bc -o classify.ll
+	opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter classify.bc -o classify.ll
 
 clean: #cleaning all object files and the combined file
 	$(RM) *.ll *.bc  *.out *.o
