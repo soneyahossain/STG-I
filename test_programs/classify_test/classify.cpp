@@ -1,9 +1,13 @@
 #include <stdio.h>
-#include "../stg_lib/stg.h"
+#include "classify.hpp"
+
+#define SCALENE         1
+#define ISOSCELES       2
+#define EQUILATERAL     3
+#define NOT_A_TRIANGLE  4
 
 int classify(int a, int b, int c)
 {
-
     if (a <= 0 || b <= 0 || c <= 0)
         return 4;
 
@@ -17,7 +21,7 @@ int classify(int a, int b, int c)
         type += 3;
 
     if (type == 0) {
-        if (a + b <= c || b + c <= a || a + c >= b)
+        if (a + b <= c || b + c <= a || a + c <= b)
             type = 4;
         else
             type = 1;
@@ -38,35 +42,21 @@ int classify(int a, int b, int c)
     return type;
 }
 
-int main()
+void print_triangle_type(int a, int b, int c, int ttype)
 {
-    int a, b, c;
-    stg_begin_test();
-    stg_symbolic_variable(&a, "A");
-    stg_symbolic_variable(&b, "B");
-    stg_symbolic_variable(&c, "C");
-    stg_input_int(&a, 38);
-    stg_input_int(&b, 78);
-    stg_input_int(&c, 78);
-    classify(a, b, c);
-    stg_assert(true);
-    stg_end_test();
-
-    stg_begin_test();
-    stg_input_int(&a, 1);
-    stg_input_int(&b, 4);
-    stg_input_int(&c, 3);
-    classify(a, b, c);
-    stg_assert(true);
-    stg_end_test();
-
-    stg_begin_test();
-    stg_input_int(&a, 1);
-    stg_input_int(&b, 1);
-    stg_input_int(&c, 1);
-    classify(a, b, c);
-    stg_assert(true);
-    stg_end_test();
-
-    return 0;
+ switch (ttype) {
+ case SCALENE:
+ printf("type(%d) triangle (%d,%d,%d) is scalene\n", ttype, a, b, c);
+ break;
+ case ISOSCELES:
+ printf("type(%d) triangle (%d,%d,%d) is isosceles\n", ttype, a, b, c);
+ break;
+ case EQUILATERAL:
+ printf("type(%d) triangle (%d,%d,%d) is equilateral\n", ttype, a, b, c);
+ break;
+ case NOT_A_TRIANGLE:
+ default:
+ printf("type(%d) triangle (%d,%d,%d) is not a valid triangle\n", ttype, a, b, c);
+ break;
+ }
 }
