@@ -1,29 +1,23 @@
 #include <stdio.h>
-#include "../stg_lib/stg.h"
+#include "stgi/stg.h"
+
+//#include "../../lib/stg.h"
 
 int main()
 {
-    int x, y;
-    stg_begin_test();
-    stg_symbolic_variable(&x, "X");
-    stg_symbolic_variable(&y, "Y");
-    stg_input_int(&x, 0);
-    //stg_input_int(&a, 38);
+        int x=0, y=5;
 
-    x = x + 5;
+        stg_begin_test();
 
-    if (x > 0){
-        scanf("%d", &y);
-        stg_input_int(&y, y);
-    }
-    else
-        y = 10;
+        stg_symbolic_variable_int(&x, "X");
+        stg_symbolic_variable_int(&y, "Y");
 
-    if (x > 2)
-        stg_assert(y != 2789);
-    else
-        stg_assert(true);
+        bool testPassed=false;
 
-    stg_end_test();
-    return 0;
+        if (x +y > 0)
+            testPassed = true;
+
+        stg_end_test();
+        stg_record_test(testPassed);
+        return 0;
 }

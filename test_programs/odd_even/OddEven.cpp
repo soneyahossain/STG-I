@@ -20,10 +20,11 @@ bool OddEven::isOdd() {
 int main()
 {
 	OddEven oe;
+	oe._number=5;
 
-	stg_symbolic_variable(&oe._number, "NUM", 50, 60, (char*)"normal", 0,0);  //some random min, max
-	stg_begin_test();
-	stg_input_int(&oe._number, 5);
+    stg_begin_test();
+	stg_symbolic_variable_int(&oe._number, "NUM");//, 50, 60, (char*)"normal", 0,0);  //some random min, max
+	//stg_input_int(&oe._number, 5);
 
 	if (oe.isEven())
 		printf("%d is even\n", oe._number);

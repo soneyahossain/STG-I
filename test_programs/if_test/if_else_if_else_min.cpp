@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../stg_lib/stg.h"
+#include "stgi/stg.h"
 
 int find_min(int num1, int num2, int num3)
 {
@@ -24,34 +24,42 @@ int find_min(int num1, int num2, int num3)
 
 int main()
 {
-   int a,b,c;
+   int a=38,b=78,c=78;
    stg_begin_test();
-   stg_symbolic_variable(&a, "A");
-   stg_symbolic_variable(&b, "B");
-   stg_symbolic_variable(&c, "C");
-   stg_input_int(&a, 38);
-   stg_input_int(&b, 78);
-   stg_input_int(&c, 78);
-   find_min(a,b,c);
-   stg_assert(true);
+   stg_symbolic_variable_int(&a, "A");
+   stg_symbolic_variable_int(&b, "B");
+   stg_symbolic_variable_int(&c, "C");
+   //stg_input_int(&a, 38);
+   //stg_input_int(&b, 78);
+   //stg_input_int(&c, 78);
+   bool testpassed = find_min(a,b,c);
    stg_end_test();
+   stg_record_test(testpassed);
 
-   stg_begin_test();
-   stg_input_int(&a, 1);
-   stg_input_int(&b, 4);
-   stg_input_int(&c, 3);
-   find_min(a,b,c);
-   stg_assert(true);
-   stg_end_test();
 
+   a=1,b=4,c=3;
    stg_begin_test();
-   stg_input_int(&a, 1);
-   stg_input_int(&b, 1);
-   stg_input_int(&c, 1);
-   find_min(a,b,c);
-   stg_assert(true);
+   stg_symbolic_variable_int(&a, "A");
+   stg_symbolic_variable_int(&b, "B");
+   stg_symbolic_variable_int(&c, "C");
+   //stg_input_int(&a, 38);
+   //stg_input_int(&b, 78);
+   //stg_input_int(&c, 78);
+   testpassed = find_min(a,b,c);
    stg_end_test();
+   stg_record_test(testpassed);
+
+   a=1,b=1,c=1;
+   stg_begin_test();
+   stg_symbolic_variable_int(&a, "A");
+   stg_symbolic_variable_int(&b, "B");
+   stg_symbolic_variable_int(&c, "C");
+   //stg_input_int(&a, 38);
+   //stg_input_int(&b, 78);
+   //stg_input_int(&c, 78);
+   testpassed = find_min(a,b,c);
+   stg_end_test();
+   stg_record_test(testpassed);
 
    return 0;
 }
-

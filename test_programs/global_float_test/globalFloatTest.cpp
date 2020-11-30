@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "../stg_lib/stg.h"
+ #include "stgi/stg.h"
+ #include <stdlib.h>
 
 bool isTall(float height);
 
@@ -12,14 +13,16 @@ float giant= 6.5; //6’5 - 6’10 giant
 
 int main()
 {
-    float height;
+    float height=6.6;
     stg_begin_test();
-    stg_symbolic_variable(&height, "H");
-    stg_input_float(&height, 6.6);
-    stg_assert(isTall(height));
+    stg_symbolic_variable_float(&height, "H");
+    //stg_input_float(&height, 6.6);
+    //stg_assert(isTall(height));
+    bool istall = isTall(height);
     stg_end_test();
+    stg_record_test(istall);
     return 0;
- 
+
 }
 bool isTall(float height)
 {
@@ -32,6 +35,4 @@ bool isTall(float height)
    else if (6.9 > height && height >= giant ) return true;
    else return false;
 
-
- 
 }
