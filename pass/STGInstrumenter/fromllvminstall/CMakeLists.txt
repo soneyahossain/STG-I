@@ -22,12 +22,12 @@ if(NOT LLVM_ENABLE_RTTI)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti")
 endif()
 
-add_library( STGInstrumenter SHARED ../STGInstrumenter.cpp )
+add_library( LLVMSTGInstrumenter SHARED ../STGInstrumenter.cpp )
 
 # Allow undefined symbols in shared objects on Darwin (this is the default
 # behaviour on Linux)
-target_link_libraries(STGInstrumenter
+target_link_libraries(LLVMSTGInstrumenter
   "$<$<PLATFORM_ID:Darwin>:-undefined dynamic_lookup>")
 
 # For Unix 
-install (TARGETS STGInstrumenter DESTINATION lib/stgi)
+install (TARGETS LLVMSTGInstrumenter DESTINATION lib/stgi)
