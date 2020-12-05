@@ -14,13 +14,18 @@
 // trivial initialization of map
 std::map<std::string, std::string> sym_state; // <var , symbolic state>
 std::map<std::string, std::string> sym_var_map; // <address of symbolic var,  symbolic name>
-std::map<std::string, double> sym_range; // <sym_var, min> <sym_var, max>
+std::map<std::string, std::string> path_conditions; //<path_condition_count, path_condition>
 
+
+//no longer required *******
+
+//std::map<std::string, double> sym_range; // <sym_var, min> <sym_var, max>
 // <adress_disID, value> will store distribution id
 // <adress_dis_param1, value> will store distribution paramter 1
 // <adress_dis_param2, value> will store distribution paramter 2 [this is only required for normal distributiuon as it has min and std ]
-std::map<std::string, std::string> sym_distribution;
-std::map<std::string, std::string> path_conditions; //<path_condition_count, path_condition>
+// std::map<std::string, std::string> sym_distribution;
+
+
 
 //global varibales
 int testcount = 0; //holds no of the test to create stg file
@@ -34,6 +39,232 @@ std::ofstream stg_state;
 std::ofstream stg_pc;
 std::string prev_bb;
 bool pause_recording = false;
+
+
+
+
+//START: Routines for defining addresses as symbolic for constraint recording.
+
+void stg_symbolic_variable_int(int* addr, const char* name)//, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
+{
+
+    std::stringstream address;
+    address << addr;
+
+    std::string key = "v(" + address.str() + ")";
+    sym_var_map[key] = name; //updating symbolic map
+    sym_state[key] = name; // updating the main main also
+    stg_state << "state[" << key << " --> " << name << "]\n";
+
+    if (needComma)
+            stg_pc << ",\n";
+     else
+            needComma = true;
+
+    stg_pc << name << " : i32";
+}
+
+void stg_symbolic_variable_float(float* addr, const char* name)
+{
+
+    std::stringstream address;
+    address << addr;
+
+    std::string key = "v(" + address.str() + ")";
+    sym_var_map[key] = name; //updating symbolic map
+    sym_state[key] = name; // updating the main main also
+    stg_state << "state[" << key << " --> " << name << "]\n";
+
+    if (needComma)
+         stg_pc << ",\n";
+    else
+         needComma = true;
+
+    stg_pc << name << " : float";
+
+}
+
+void stg_symbolic_variable_double(double* addr, const char* name)//, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
+{
+
+    std::stringstream address;
+    address << addr;
+
+    std::string key = "v(" + address.str() + ")";
+
+    sym_var_map[key] = name; //updating symbolic map
+    sym_state[key] = name; // updating the main main also
+    stg_state << "state[" << key << " --> " << name << "]\n";
+
+    if (needComma)
+          stg_pc << ",\n";
+    else
+          needComma = true;
+
+    stg_pc << name << " : double";
+
+}
+
+
+void stg_symbolic_array(void* array, const char* type, int num, const char* prefix)//, double range_min, double range_max, char* dis_id, double param_1, double param_2)
+{
+    // extend this if you want to support more types
+
+    //get the size according to type
+    int s = strcmp(type, "int") ? sizeof(int) : (strcmp(type, "float") ? sizeof(float) : sizeof(double));
+    printf("s= %d\n", s);
+
+    int d = floor(log10(abs(num))) + 1; // number of digits in num
+    //printf("d= %d\n", d);
+
+    if (strcmp(type, "int") == 0) {
+
+        for (int i = 0; i < num; i++) {
+
+            char* name = (char*)malloc(strlen(prefix) + d + 1);
+            sprintf(name, "%s%d", prefix, i);
+            int* array_addr = (int*)array;
+            stg_symbolic_variable_int(array_addr + i, name);//, range_min, range_max, dis_id, param_1, param_2);
+        }
+    }
+    else if (strcmp(type, "float") == 0) {
+
+        for (int i = 0; i < num; i++) {
+
+            char* name = (char*)malloc(strlen(prefix) + d + 1);
+            sprintf(name, "%s%d", prefix, i);
+            float* array_addr = (float*)array;
+            stg_symbolic_variable_float((array_addr + i), name);//, range_min, range_max, dis_id, param_1, param_2);
+        }
+    }
+    else if (strcmp(type, "double") == 0) {
+
+        for (int i = 0; i < num; i++) {
+
+            char* name = (char*)malloc(strlen(prefix) + d + 1);
+            sprintf(name, "%s%d", prefix, i);
+            double* array_addr = (double*)array;
+            stg_symbolic_variable_double((array_addr + (s * i)), name);//, range_min, range_max, dis_id, param_1, param_2);
+        }
+    }
+}
+
+//END: Routines for defining addresses as symbolic for constraint recording.
+
+
+
+void stg_begin_test()
+{
+    //create output directory and files
+    if (!outputDirCreated) {
+        //"stg-out-<i>"
+        int i = 0;
+        for (; i <= 50; ++i) {
+            std::string d("stg-out-");
+            d = d + std::to_string(i);
+            if (mkdir(d.c_str(), 0775) == 0) {
+                output_dir = d;
+                std::cout << "output folder :" << output_dir << "\n";
+                outputDirCreated = true;
+                break;
+            }
+        }
+    }
+
+    assert(outputDirCreated);
+
+    if (!fileCreated && outputDirCreated) {
+        stg_state.open(output_dir + "/" + "stg_state_" + std::to_string(testcount) + ".txt");
+        stg_pc.open(output_dir + "/" + "stg_pc_" + std::to_string(testcount) + ".stg");
+        fileCreated = true;
+        testcount++;
+    }
+    stg_pc << "[\n";
+}
+
+void stg_end_test()
+{
+    //reset state map , concrete map,
+    stg_pc << "\n";
+
+    if (path_condition_count == 1) {
+        path_condition = path_conditions["PC" + std::to_string(0)] + "\n";
+    }
+
+    //start:  code to construct path condition according to constraint grammar
+
+    for (int i = 0; i < path_condition_count - 1; i++) {
+        if (i == path_condition_count - 2) {
+            for (int j = 0; j < i; j++)
+                path_condition += "  ";
+
+            path_condition += "(land\n";
+
+            for (int j = 0; j <= i; j++)
+                path_condition += "  ";
+            //path_condition+= "\t";   // add a tab
+            path_condition += path_conditions["PC" + std::to_string(i)] + "\n";
+            for (int j = 0; j <= i; j++)
+                path_condition += "  ";
+            path_condition += path_conditions["PC" + std::to_string(i + 1)] + "\n";
+        }
+        else {
+
+            for (int j = 0; j < i; j++)
+                path_condition += "  ";
+
+            path_condition += "(land\n";
+
+            for (int j = 0; j <= i; j++)
+                path_condition += "  ";
+
+            //path_condition+= "\t";   // add a tab
+            path_condition += path_conditions["PC" + std::to_string(i)] + "\n";
+        }
+    }
+
+    for (int i = path_condition_count - 1; i > 0; i--) {
+        for (int j = 0; j < i - 1; j++)
+            path_condition += "  ";
+        path_condition += ")\n";
+    }
+    //std::cout << "path_condition:\n" << path_condition <<"\n";
+    //end:  code to construct path condition according to constraint grammar
+    stg_pc << "]\n\n";
+
+    ///////////////////////////
+}
+
+void stg_record_test(bool pred)
+{
+
+    stg_pc << "//Test: " << (pred ? "passed" : "failed") << "\n";
+    stg_pc << "\n" << path_condition << "\n";
+
+    needComma = false;
+    path_condition_count = 0;
+    fileCreated = false;
+    path_condition = "";
+
+    clear_maps();
+    stg_state.close(); //file close
+    stg_pc.close(); //file close
+}
+
+
+void stg_pause_recording()
+{
+    pause_recording = true;
+}
+void stg_resume_recording()
+{
+    pause_recording = false;
+}
+
+
+
+
+
 
 void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* type_)
 {
@@ -185,7 +416,7 @@ void stg_update_user_input(std::string address, std::string value, std::string t
         else
             needComma = true;
 
-        stg_pc << sym_name << " : " << type << "\n";
+        stg_pc << sym_name << " : " << type ; //<< "\n";
 
 
         //" = " << value << ", range:[" << sym_range[address + "_min"] << "," << sym_range[address + "_max"] << "]," << getDistributionSpec(address);
@@ -766,251 +997,18 @@ void stg_update_phi(char* lhs, char* valBBpairs)
     stg_state << "state[" << key << " --> " << token << "]\n";
 }
 
-void stg_symbolic_variable_int(int* addr, const char* name)//, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
-{
-
-    std::stringstream address_;
-    address_ << addr;
-
-    //auto ret = sym_range.insert(std::make_pair<std::string, double[2]>(address_.str(), {min, max}));
-
-    //sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
-    //sym_range[address_.str() + "_max"] = range_max;
-
-    std::string add = "v(" + address_.str() + ")";
-
-    sym_var_map[add.c_str()] = name; //updating symbolic map
-    sym_state[add.c_str()] = name; // updating the main main also
-
-    stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
-
-   // sym_distribution[address_.str() + "_disID"] = dis_id;
-   // sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
-   // sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
-
-    int value = (*addr);
-
-    stg_pc << name << " : i32"<< "\n";
-          // << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
-}
-
-void stg_symbolic_variable_float(float* addr, const char* name)//, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
-{
-
-    std::stringstream address_;
-    address_ << addr;
-
-    //auto ret = sym_range.insert(std::make_pair<std::string, double[2]>(address_.str(), {min, max}));
-
-    //sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
-    //sym_range[address_.str() + "_max"] = range_max;
-
-    std::string add = "v(" + address_.str() + ")";
-
-    sym_var_map[add.c_str()] = name; //updating symbolic map
-    sym_state[add.c_str()] = name; // updating the main main also
-
-    stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
-
-    //sym_distribution[address_.str() + "_disID"] = dis_id;
-    // sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
-    // sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
-
-    float value = (*addr);
-
-    stg_pc << name << " : float"<< "\n";
-         //  << " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
-}
-
-void stg_symbolic_variable_double(double* addr, const char* name)//, double range_min, double range_max, char* dis_id, double parm_1, double param_2)
-{
-
-    std::stringstream address_;
-    address_ << addr;
-
-    //auto ret = sym_range.insert(std::make_pair<std::string, double[2]>(address_.str(), {min, max}));
-
-    //sym_range[address_.str() + "_min"] = range_min; //"range:["+std::to_string(min)+","+std::to_string(max)+"]";   //address:R:[min, max]
-    //sym_range[address_.str() + "_max"] = range_max;
-
-    std::string add = "v(" + address_.str() + ")";
-
-    sym_var_map[add.c_str()] = name; //updating symbolic map
-    sym_state[add.c_str()] = name; // updating the main main also
-
-    stg_state << "state[" << add.c_str() << " --> " << name << "]\n";
-
-    //sym_distribution[address_.str() + "_disID"] = dis_id;
-    //sym_distribution[address_.str() + "_param1"] = std::to_string(parm_1);
-    //sym_distribution[address_.str() + "_param2"] = std::to_string(param_2);
-
-    double value = (*addr);
-
-    stg_pc << name << " : double"<< "\n";
-           //<< " = " << value << ",range:[" << sym_range[address_.str() + "_min"] << "," << sym_range[address_.str() + "_max"] << "]," << getDistributionSpec(address_.str()) << "\n";
-}
-
-void stg_begin_test()
-{
-    //create output directory and files
-    if (!outputDirCreated) {
-        //"stg-out-<i>"
-        int i = 0;
-        for (; i <= 50; ++i) {
-            std::string d("stg-out-");
-            d = d + std::to_string(i);
-            if (mkdir(d.c_str(), 0775) == 0) {
-                output_dir = d;
-                std::cout << "output folder :" << output_dir << "\n";
-                outputDirCreated = true;
-                break;
-            }
-        }
-    }
-
-    assert(outputDirCreated);
-
-    if (!fileCreated && outputDirCreated) {
-        stg_state.open(output_dir + "/" + "stg_state_" + std::to_string(testcount) + ".txt");
-        stg_pc.open(output_dir + "/" + "stg_pc_" + std::to_string(testcount) + ".stg");
-        fileCreated = true;
-        testcount++;
-    }
-
-    stg_pc << "[\n";
-}
-
-void stg_end_test()
-{
-    //reset state map , concrete map,
-    stg_pc << "\n";
-
-    if (path_condition_count == 1) {
-        path_condition = path_conditions["PC" + std::to_string(0)] + "\n";
-    }
-
-    //start:  code to construct path condition according to constraint grammar
-
-    for (int i = 0; i < path_condition_count - 1; i++) {
-        if (i == path_condition_count - 2) {
-            for (int j = 0; j < i; j++)
-                path_condition += "  ";
-
-            path_condition += "(land\n";
-
-            for (int j = 0; j <= i; j++)
-                path_condition += "  ";
-            //path_condition+= "\t";   // add a tab
-            path_condition += path_conditions["PC" + std::to_string(i)] + "\n";
-            for (int j = 0; j <= i; j++)
-                path_condition += "  ";
-            path_condition += path_conditions["PC" + std::to_string(i + 1)] + "\n";
-        }
-        else {
-
-            for (int j = 0; j < i; j++)
-                path_condition += "  ";
-
-            path_condition += "(land\n";
-
-            for (int j = 0; j <= i; j++)
-                path_condition += "  ";
-
-            //path_condition+= "\t";   // add a tab
-            path_condition += path_conditions["PC" + std::to_string(i)] + "\n";
-        }
-    }
-
-    for (int i = path_condition_count - 1; i > 0; i--) {
-        for (int j = 0; j < i - 1; j++)
-            path_condition += "  ";
-        path_condition += ")\n";
-    }
-    //std::cout << "path_condition:\n" << path_condition <<"\n";
-    //end:  code to construct path condition according to constraint grammar
-    stg_pc << "]\n\n";
-
-    ///////////////////////////
-}
-void stg_record_test(bool pred)
-{
-
-    stg_pc << "//Test: " << (pred ? "passed" : "failed") << "\n";
-    stg_pc << "\n" << path_condition << "\n";
-
-    needComma = false;
-    path_condition_count = 0;
-    fileCreated = false;
-    path_condition = "";
-
-    clear_maps();
-
-    stg_state.close(); //file close
-    stg_pc.close(); //file close
-}
-
-void stg_symbolic_array(void* array, const char* type, int num, const char* prefix)//, double range_min, double range_max, char* dis_id, double param_1, double param_2)
-{
-    // extend this if you want to support more types
-
-    //get the size according to type
-    int s = strcmp(type, "int") ? sizeof(int) : (strcmp(type, "float") ? sizeof(float) : sizeof(double));
-    printf("s= %d\n", s);
-
-    int d = floor(log10(abs(num))) + 1; // number of digits in num
-    //printf("d= %d\n", d);
-
-    if (strcmp(type, "int") == 0) {
-
-        for (int i = 0; i < num; i++) {
-
-            char* name = (char*)malloc(strlen(prefix) + d + 1);
-            sprintf(name, "%s%d", prefix, i);
-            int* array_addr = (int*)array;
-            stg_symbolic_variable_int(array_addr + i, name);//, range_min, range_max, dis_id, param_1, param_2);
-        }
-    }
-    else if (strcmp(type, "float") == 0) {
-
-        for (int i = 0; i < num; i++) {
-
-            char* name = (char*)malloc(strlen(prefix) + d + 1);
-            sprintf(name, "%s%d", prefix, i);
-            float* array_addr = (float*)array;
-            stg_symbolic_variable_float((array_addr + i), name);//, range_min, range_max, dis_id, param_1, param_2);
-        }
-    }
-    else if (strcmp(type, "double") == 0) {
-
-        for (int i = 0; i < num; i++) {
-
-            char* name = (char*)malloc(strlen(prefix) + d + 1);
-            sprintf(name, "%s%d", prefix, i);
-            double* array_addr = (double*)array;
-            stg_symbolic_variable_double((array_addr + (s * i)), name);//, range_min, range_max, dis_id, param_1, param_2);
-        }
-    }
-}
-
 void stg_update_prev_bb(char* bbname)
 {
     prev_bb = bbname;
 }
 
-void stg_pause_recording()
-{
-    pause_recording = true;
-}
-void stg_resume_recording()
-{
-    pause_recording = false;
-}
+
 void clear_maps()
 {
     sym_state.clear();
     sym_var_map.clear();
-    sym_range.clear();
-    sym_distribution.clear();
+    //sym_range.clear();
+    //sym_distribution.clear();
     path_conditions.clear();
 }
 
@@ -1021,13 +1019,13 @@ void print_maps()
         std::cout << x.first << ": " << x.second << "\n";
     }
 
-    for (const auto& x : sym_range) {
-        std::cout << x.first << ": " << x.second << "\n";
-    }
+    //for (const auto& x : sym_range) {
+        //std::cout << x.first << ": " << x.second << "\n";
+    // }
 
-    for (const auto& x : sym_distribution) {
-        std::cout << x.first << ": " << x.second << "\n";
-    }
+    //for (const auto& x : sym_distribution) {
+       // std::cout << x.first << ": " << x.second << "\n";
+   // }
 
     for (const auto& x : sym_state) {
         std::cout << x.first << ": " << x.second << "\n";
@@ -1035,6 +1033,11 @@ void print_maps()
 }
 void stg_start_intrmnt(){}
 void stg_stop_intrmnt(){}
+
+
+
+
+
 
 
 
