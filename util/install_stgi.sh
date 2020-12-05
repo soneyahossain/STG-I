@@ -1,3 +1,5 @@
+#!/bin/bash
+
 usage()
 {
 	echo "Make sure to define the following environment variables:"
@@ -21,21 +23,18 @@ install_stg_lib()
 {
 	echo "Installing STGI support library"
 	pushd $STGI_HOME/lib
+	make
 	sudo -E make install
 }
 
 install_stg_llvm_pass()
 {
 	echo "Installing STGI LLVM pass"
-	TEMPDIR=/tmp/tmp.stgi.$$
-
-	mkdir $TEMPDIR
-	pushd $TEMPDIR
-	cmake $STGI_HOME/pass/STGInstrumenter/fromllvminstall
-	sudo -E make
+	TEMPDIR=/tmp/tmp.build.stgi.$$
+	cd $STGI_HOME/pass/STGInstrumenter/fromllvminstall
+	cmake .
+	make
        	sudo -E make install
-	popd
-	rm -fr $TEMPDIR
 
 	#
 	# Verify installation

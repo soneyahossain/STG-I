@@ -120,7 +120,6 @@ float VelocitySmoothing::computeT1(float a0, float v3, float j_max, float a_max)
 
 	if (T1_plus >= 0.f && T3_plus >= 0.f) {
 		T1 = T1_plus;
-
 	} else if (T1_minus >= 0.f && T3_minus >= 0.f) {
 		T1 = T1_minus;
 	}

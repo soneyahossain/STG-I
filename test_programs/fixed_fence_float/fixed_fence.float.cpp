@@ -10,7 +10,7 @@
 	#define stg_begin_test() {}
 	#define stg_end_test() {}
 	#define stg_record_test(x) x 
-	void stg_symbolic_variable(void *, const char*) {}
+	void stg_symbolic_variable(void *, const char*, float, float, char*, float, float) {}
 	void stg_input_float(float*, float) {}
 #else
 	#include "stg.h"
