@@ -49,9 +49,6 @@ int main(int argc, char **argv)
 		}
 	}
 
-	// lat/lon position of drone is symbolic
-	stg_symbolic_variable(&lat, "LAT", -90.0, 90.0, (char*)"normal", 0.0, 0.0);
-	stg_symbolic_variable(&lon, "LON", -180.0, 180.0, (char*)"normal", 0.0, 0.0);
 
 	// everything else is fixed
 	
@@ -71,17 +68,16 @@ int main(int argc, char **argv)
 	{
 		int expected;
 		if (buf[0] == '#') continue; // # is a comment line
-
-		stg_begin_test();
-
 		sscanf(buf, "%f %f %d", &lat, &lon, &expected);
 
-	    	printf("lat=%f lon=%f alt=%f lalt=%f halt=%f llat=%f hlat=%f llon=%f hlon=%f expected=%d\n", lat, lon, altitude, low_alt, high_alt, low_lat, high_lat, low_lon, high_lon, expected);
+	    //printf("lat=%f lon=%f alt=%f lalt=%f halt=%f llat=%f hlat=%f llon=%f hlon=%f expected=%d\n", lat, lon, altitude, low_alt, high_alt, low_lat, high_lat, low_lon, high_lon, expected);
+	    stg_begin_test();
+        // lat/lon position of drone is symbolic
+        stg_symbolic_variable_float(&lat, "LAT");//, -90.0, 90.0, (char*)"normal", 0.0, 0.0);
+        stg_symbolic_variable_float(&lon, "LON");//, -180.0, 180.0, (char*)"normal", 0.0, 0.0);
 
 		bool isGeofenced = checkGeofence(lat, lon, 200, 0, 400, 70, 80, 150, 170);
-		
 		stg_end_test();
-
 		bool testPassed = expected ? isGeofenced : !isGeofenced;
 		stg_record_test(testPassed);
 	}
