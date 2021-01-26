@@ -872,7 +872,7 @@ void stg_update_cast_double(char* key, char* val_name, char* castOp, char* srcty
     stg_state << "state[" << key << " --> " << sym_state[key] << "]\n";
 }
 
-void stg_update_una_intrinsic(char* result, char* arg, char* fun_name, char* ret_type)
+void stg_update_una_intrinsic(char* result, char* fun_name, char* ret_type, char* arg) //changed orders
 {
 
     std::string arg_name(arg);
@@ -893,7 +893,9 @@ void stg_update_una_intrinsic(char* result, char* arg, char* fun_name, char* ret
     stg_state << "state[" << result << " --> " << sym_state[result] << "]\n";
 }
 
-void stg_update_bin_intrinsic(char* result, char* fun_name, char* type, char* arg1, char* arg2)
+
+//got issue with llvm binary intrinsic, alreted paramter orders, might cause problem to other function
+void stg_update_bin_intrinsic(char* result, char* fun_name, char* type, char* arg1, char* arg2 )
 {
 
     std::string arg_1(arg1);

@@ -141,7 +141,7 @@ void  stg_update_input_double(double* addr);
 
 
 //handle llvm intrinsic
-void stg_update_una_intrinsic(char* result, char* arg, char* fun_name, char* ret_type);
+void stg_update_una_intrinsic(char* result, char* fun_name, char* ret_type, char* arg);
 void stg_update_bin_intrinsic(char* result, char* fun_name, char* type, char* arg1, char* arg2 );
 
 //handle symbolic maps
