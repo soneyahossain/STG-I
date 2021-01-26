@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <float.h>
-#include "stg_lib/stg.h"
+#include "stgi/stg.h"
 
 
 bool isGreaterThan(double x, double y)
@@ -10,7 +10,7 @@ bool isGreaterThan(double x, double y)
     if( pow(x,y)>pow(x,2))
         result=pow(x,y);
     else result=pow(x,2);
-    
+
     if(pow(x,y)>0.5 ) return true;
     else return false;
 }
@@ -19,16 +19,16 @@ bool isGreaterThan(double x, double y)
 
 int main()
 {
-    double base; double power;
+    double base, power;
 
     scanf("%lf",&base);
-        scanf("%lf",&power);
-
-
-    stg_symbolic_variable_double(&base, "S0");
-    stg_symbolic_variable_double(&power, "S1");
+    scanf("%lf",&power);
 
     stg_begin_test();
+
+    stg_symbolic_variable_double(&base, "B");
+    stg_symbolic_variable_double(&power, "P");
+
 
     bool result=isGreaterThan(base,power);
     stg_end_test();
