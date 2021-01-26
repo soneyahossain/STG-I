@@ -1,6 +1,6 @@
 [
-T : double = 45.000000, R:[2.22507e-308,1.79769e+308],
-H : double = 2.000000, R:[2.22507e-308,1.79769e+308]
+T : double,
+H : double
 ]
 
 //Test: passed

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <float.h>
-#include "stg_lib/stg.h"
+#include "stgi/stg.h"
 
 
 bool isIsoscelesRightTriangle(double theta, double hypotenuse)
@@ -22,17 +22,19 @@ bool isIsoscelesRightTriangle(double theta, double hypotenuse)
 int main()
 {
     double theta, hyp_sqr; // theta in degree // hyp_sqr =  square of hypotenuse
-    stg_symbolic_variable(&theta, "T", DBL_MIN, DBL_MAX);
-    stg_symbolic_variable(&hyp_sqr, "H", DBL_MIN, DBL_MAX);
+    scanf("%lf",&theta);
+    scanf("%lf",&hyp_sqr);
+
 
     stg_begin_test();
-    scanf("%lf",&theta);
+    stg_symbolic_variable_double(&theta, "T");//, DBL_MIN, DBL_MAX);
+    stg_symbolic_variable_double(&hyp_sqr, "H");//, DBL_MIN, DBL_MAX);
+
     theta = theta* M_PI/180; // converting from degree to radian
-    scanf("%lf",&hyp_sqr);
     bool is_isosceles = isIsoscelesRightTriangle(theta,hyp_sqr);
     stg_end_test();
 
     stg_record_test(is_isosceles);
-    print_maps();
+    //print_maps();
     return 0;
 }
