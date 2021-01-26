@@ -233,11 +233,17 @@ struct STGInstrumenter : public ModulePass {
                         llvm::Value* arg_dest = builder.CreateGlobalStringPtr(dest);
 
                         std::vector<Value*> args;
-                        args.push_back(arg_dest);
+                        args.push_back(arg_dest);  // arg 1
 
                         std::string type_;
                         llvm::raw_string_ostream ret_type(type_);
                         intrinsicInst->getType()->print(ret_type);
+
+
+                        llvm::Value* fun_name = builder.CreateGlobalStringPtr(functionName); //arg 2
+                        llvm::Value* rettype = builder.CreateGlobalStringPtr(ret_type.str());  //arg 3
+                        args.push_back(fun_name);
+                        args.push_back(rettype);
 
                         int i = 0;
                         std::string argument;
@@ -263,10 +269,10 @@ struct STGInstrumenter : public ModulePass {
                             args.push_back(builder.CreateGlobalStringPtr(argument));
                         }
 
-                        llvm::Value* fun_name = builder.CreateGlobalStringPtr(functionName);
-                        llvm::Value* rettype = builder.CreateGlobalStringPtr(ret_type.str());
-                        args.push_back(fun_name);
-                        args.push_back(rettype);
+                        //llvm::Value* fun_name = builder.CreateGlobalStringPtr(functionName);
+                        //llvm::Value* rettype = builder.CreateGlobalStringPtr(ret_type.str());
+                        //args.push_back(fun_name);
+                        //args.push_back(rettype);
 
                         if (i == 1) {
 
@@ -275,8 +281,9 @@ struct STGInstrumenter : public ModulePass {
                             CallInst::Create(stg_update_una_intrinsic, args)->insertBefore(I);
                         }
                         else if (i == 2) {
+
                             //errs() << "got binary Intrinsic call" << functionName << "\n";
-                            //CallInst::Create(stg_update_bin_intrinsic, args)->insertBefore(I);
+                            CallInst::Create(stg_update_bin_intrinsic, args)->insertBefore(I);
                         }
                     }
                     else if (functionName.compare("sscanf") == 0 || functionName.compare("__isoc99_sscanf") == 0) //handle file reading
