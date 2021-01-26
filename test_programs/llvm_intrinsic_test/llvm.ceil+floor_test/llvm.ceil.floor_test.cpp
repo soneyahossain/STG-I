@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <float.h>
-#include "stg_lib/stg.h"
+#include "stgi/stg.h"
 
 
 bool isGreaterThan(double x, float y)

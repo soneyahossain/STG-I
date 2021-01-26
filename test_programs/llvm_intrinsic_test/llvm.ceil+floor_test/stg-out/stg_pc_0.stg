@@ -1,9 +1,0 @@
-[
-X : double = 7.888000, R:[2.22507e-308,1.79769e+308],
-Y : float = 8.010000, R:[1.17549e-38,3.40282e+38]
-]
-
-//Test: passed
-
-(ogt (fadd (llvm.ceil.f64 double X) (fpext double Y)) (fadd (fpext double (llvm.floor.f32 float Y)) X))
-
