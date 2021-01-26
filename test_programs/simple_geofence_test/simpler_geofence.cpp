@@ -10,18 +10,22 @@
 **
 ** Sebastian: 5/7/20
 */
-
+#include <stdlib.h>
 #include <stdio.h>
-#include "stg.h"
+#include "stg_lib/stg.h"
+#include "stg_lib/distribution.hpp"
 
 bool insideFence(int lat, int lon, bool inclusion, int high_lat, int low_lat, int high_lon, int low_lon)
 {
     bool inside = false;
+    //bool inside_=  ((lon > low_lon) && (lon < high_lon) && (lat < high_lat) && (lat > low_lat)) xor (!inclusion);
+
 
     // Very limited check
-    if (lon > low_lon && lon < high_lon)
+    if (lon > low_lon && lon < high_lon){
         if (lat < high_lat && lat > low_lat)
             inside = true;
+    }
 
     if (!inclusion) // exclusion geofence area - must remain outside
     {
@@ -32,73 +36,79 @@ bool insideFence(int lat, int lon, bool inclusion, int high_lat, int low_lat, in
             inside = true;
         }
     }
+
     return inside;
 }
 
 // Takes a point, a fence type, and 2 points defining a rectangular fence, and it returns if the point is  acceptable given that fence
-bool checkGeofence(int lat, int lon, int altitude, bool inclusion,
-    int high_lat, int low_lat, int high_lon, int low_lon)
+bool checkGeofence(int lat, int lon, int altitude, bool inclusion,int high_lat, int low_lat, int high_lon, int low_lon)
 {
     bool acceptable = true;
     int max_vertical_altitude = 400;
 
     // quick vertical ceiling check
-    if (altitude > max_vertical_altitude) {
-        acceptable = false;
+    if (altitude > max_vertical_altitude) {    //
+    	acceptable = false;
     }
+    //else acceptable = insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);
 
     acceptable = acceptable && insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);
-
     return acceptable;
 }
 
-int main()
+int main(int argc, char **argv)
 {
 
-    // the following could be transformed into test cases
-    // or the variables to call checkGeofence made symbolic as per ...  stg_sym()
-    int a, b, c, d, e, f, g;
-    int test_array[10];
+    int lat, lon, altitude, high_lat, low_lat, high_lon, low_lon;
+    	int inclusion;
+    	FILE *params;
+    	char buf[1001];
 
-    stg_symbolic_variable(&a, "S0");
-    stg_symbolic_variable(&b, "S1");
-    stg_symbolic_variable(&c, "S2");
-    stg_symbolic_variable(&d, "S3");
-    stg_symbolic_variable(&e, "S4");
-    stg_symbolic_variable(&f, "S5");
-    stg_symbolic_variable(&g, "S6");
+    	if (argc != 2) {
+    		fprintf(stderr, "Missing test parameter file\n");
+    		exit(1);
+    	}
+    	else {
+    		params = fopen(argv[1], "r");
+    		if (!params) {
+    			fprintf(stderr, "Invalid file specified\n");
+    			exit(1);
+    		}
+    	}
 
-    //stg_symbolic_array(&test_array, "int", 2, "S_arr");
+    	stg_symbolic_variable(&lat, "LAT", -20, 20,uniform,0,0);
+    	stg_symbolic_variable(&lon, "LON", -20, 20,uniform,0,0);
+    	stg_symbolic_variable(&altitude, "ALT", -20, 20,uniform,0,0);
+    	stg_symbolic_variable(&inclusion, "INC", -20, 20,uniform,0,0);
+    	stg_symbolic_variable(&high_lat, "HLAT", -20, 20,uniform,0,0);
+    	stg_symbolic_variable(&low_lat, "LLAT", -20, 20,uniform,0,0);
+    	stg_symbolic_variable(&high_lon, "HLON", -20, 20,uniform,0,0);
+    	stg_symbolic_variable(&low_lon, "LLON", -20, 20,uniform,0,0);
 
-    // associates concrete values for test with symbolic addresses of
-    // the indicated type, and initializes recording of symbolic states
+    	// each line of the input file contains test parameters and expected checkGeofence result
+    	while (fgets(buf, 1000, params))
+    	{
+    		int expected;
+    		if (buf[0] == '#') continue; // # is a comment line
 
-    stg_begin_test();
+    		stg_begin_test();
 
-    stg_input_int(&a, 38);
-    stg_input_int(&b, 78);
-    stg_input_int(&c, 100);
-    stg_input_int(&d, 79);
-    stg_input_int(&e, 35);
-    stg_input_int(&f, 85);
-    stg_input_int(&g, 35);
+    		//sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
 
-    stg_assert(checkGeofence(a, b, c, true, d, e, f, g));
-    // emits the PC to a file for counting, and resets for another test
-    stg_end_test();
+    		sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lon, &lat, &altitude, &inclusion, &high_lon, &low_lon, &high_lat, &low_lat, &expected);
 
-    stg_begin_test();
-    stg_input_int(&a, 38);
-    stg_input_int(&b, 100);
-    stg_input_int(&c, 100);
-    stg_input_int(&d, 79);
-    stg_input_int(&e, 35);
-    stg_input_int(&f, 85);
-    stg_input_int(&g, 35);
 
-    // now start with a second test, this time one expected to fail
-    //checkGeofence(a, b, c, true, d, e, f, g);
+    	    printf("lat=%d lon=%d alt=%d inc=%d hlat=%d llat=%d hlon=%d llon=%d expected=%d\n", lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected);
 
-    stg_assert(checkGeofence(a, b, c, true, d, e, f, g));
-    stg_end_test();
+    		bool isGeofenced = checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
+    		stg_end_test();
+
+    		bool testPassed = expected ? isGeofenced : !isGeofenced;
+    		stg_record_test(testPassed);
+    	}
+
+    	fclose(params);
+
+
+
 }

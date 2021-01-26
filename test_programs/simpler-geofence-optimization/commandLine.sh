@@ -4,8 +4,9 @@
 # generate bicode for the the system under test; if there are multimple files emit llvm bitcode first and then link all of them together before running STG-I instrumentation Pass
 # if program under test is a C file run ( clang -emit-llvm -fno-discard-value-names put.c -S -o PUT_.bc ) command, and rest of the steps should be same
 
+# if use -O0 , use -Xclang -disable-O0-optnone flag so that IR can be optimized later if required
 
-clang++ -std=c++14 -O0 -emit-llvm -fno-discard-value-names simpler_geofence.cpp -c -o PUT.bc
+clang++ -std=c++14 -O0 -emit-llvm -fno-discard-value-names  simpler_geofence.cpp -c -o PUT.bc
 #clang++ -std=c++14 -O1 -emit-llvm -fno-discard-value-names simpler_geofence.cpp -c -o PUT1.bc
 clang++ -std=c++14 -O2 -emit-llvm -fno-discard-value-names simpler_geofence.cpp -c -o PUT2.bc
 #clang++ -std=c++14 -O3 -emit-llvm -fno-discard-value-names simpler_geofence.cpp -c -o PUT3.bc

@@ -65,9 +65,9 @@ enum NAV_CMD {
 	NAV_CMD_INVALID = UINT16_MAX /* ensure that casting a large number results in a specific error */
 };
 
-bool checkHomePositionAltitude(const mission_s &, float&, bool);
-bool checkDistancesBetweenWaypoints(const mission_s &, float&);
+bool checkHomePositionAltitude(const mission_s &, float, bool);
+bool checkDistancesBetweenWaypoints(const mission_s &, float);
 bool checkMissionItemValidity(const mission_s &); 
-bool checkGeofence(const mission_s &, bool, int&, int&, int&, int&);
-bool checkMissionFeasible(const mission_s &mission, float&, bool, float&, bool,  int&, int&, int&, int&);
+bool checkGeofence(const mission_s &, bool, int, int, int, int);
+bool checkMissionFeasible(const mission_s &mission, float, bool, float, bool,  int, int, int, int);
 

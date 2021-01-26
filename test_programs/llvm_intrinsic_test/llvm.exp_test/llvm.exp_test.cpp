@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <float.h>
-#include "stg_lib/stg.h"
+#include "stg_lib/stg.cpp"
 
 
 bool isGreaterThan(double x, float y)
@@ -15,13 +15,15 @@ bool isGreaterThan(double x, float y)
 
 int main()
 {
-    double x; float y;
-    stg_symbolic_variable(&x, "S0", DBL_MIN, DBL_MAX);
-    stg_symbolic_variable(&y, "S1", FLT_MIN, FLT_MAX); 
+    double x=3.4; float y=3.3;
+    //scanf("enter number: %lf",&x);
+    //scanf("%f",&y);
 
     stg_begin_test();
-    scanf("%lf",&x);
-    scanf("%f",&y);
+    stg_symbolic_variable_double(&x, "S0");//, DBL_MIN, DBL_MAX);
+    stg_symbolic_variable_float(&y, "S1");//, FLT_MIN, FLT_MAX);
+
+
     bool result=isGreaterThan(x,y);
     stg_end_test();
 

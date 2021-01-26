@@ -20,7 +20,7 @@ clang++ -std=c++14 -emit-llvm -fno-discard-value-names OddEven.cpp -c -o PUT.bc
 
 # Step 3:
 # generate llvm bitcode for stg library ( notice here that we dont instrument these libraries, we only instrument system under test )
-clang++ -std=c++14 -emit-llvm stg_lib/stg.cpp -c -o symbolicstate.bc
+clang++ -std=c++14 -emit-llvm ../../lib/stg.cpp -c -o symbolicstate.bc
 
 
 # Step 4:

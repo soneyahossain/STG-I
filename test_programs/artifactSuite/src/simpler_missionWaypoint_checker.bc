@@ -91,21 +91,20 @@ declare double @atan2(double, double) #2
 declare double @llvm.sqrt.f64(double) #1
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sRf(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %max_distance) #0 {
+define zeroext i1 @_Z30checkDistancesBetweenWaypointsRK9mission_sf(%struct.mission_s* dereferenceable(648) %mission, float %max_distance) #0 {
 entry:
   %retval = alloca i1, align 1
   %mission.addr = alloca %struct.mission_s*, align 8
-  %max_distance.addr = alloca float*, align 8
+  %max_distance.addr = alloca float, align 4
   %last_lat = alloca double, align 8
   %last_lon = alloca double, align 8
   %last_alt = alloca float, align 4
   %i = alloca i32, align 4
   %dist_between_waypoints = alloca float, align 4
   store %struct.mission_s* %mission, %struct.mission_s** %mission.addr, align 8
-  store float* %max_distance, float** %max_distance.addr, align 8
-  %0 = load float*, float** %max_distance.addr, align 8
-  %1 = load float, float* %0, align 4
-  %cmp = fcmp ole float %1, 0.000000e+00
+  store float %max_distance, float* %max_distance.addr, align 4
+  %0 = load float, float* %max_distance.addr, align 4
+  %cmp = fcmp ole float %0, 0.000000e+00
   br i1 %cmp, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
@@ -120,14 +119,19 @@ if.end:                                           ; preds = %entry
   br label %for.cond
 
 for.cond:                                         ; preds = %for.inc, %if.end
-  %2 = load i32, i32* %i, align 4
-  %3 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %3, i32 0, i32 1
-  %4 = load i32, i32* %count, align 8
-  %cmp1 = icmp slt i32 %2, %4
+  %1 = load i32, i32* %i, align 4
+  %2 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %count = getelementptr inbounds %struct.mission_s, %struct.mission_s* %2, i32 0, i32 1
+  %3 = load i32, i32* %count, align 8
+  %cmp1 = icmp slt i32 %1, %3
   br i1 %cmp1, label %for.body, label %for.end
 
 for.body:                                         ; preds = %for.cond
+  %4 = load i32, i32* %i, align 4
+  %cmp2 = icmp sgt i32 %4, 0
+  br i1 %cmp2, label %if.then3, label %if.end17
+
+if.then3:                                         ; preds = %for.body
   %5 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
   %items = getelementptr inbounds %struct.mission_s, %struct.mission_s* %5, i32 0, i32 0
   %6 = load i32, i32* %i, align 4
@@ -136,82 +140,84 @@ for.body:                                         ; preds = %for.cond
   %lat = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx, i32 0, i32 0
   %7 = load double, double* %lat, align 8
   %8 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items2 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %8, i32 0, i32 0
+  %items4 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %8, i32 0, i32 0
   %9 = load i32, i32* %i, align 4
-  %idxprom3 = sext i32 %9 to i64
-  %arrayidx4 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items2, i64 0, i64 %idxprom3
-  %lon = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx4, i32 0, i32 1
+  %idxprom5 = sext i32 %9 to i64
+  %arrayidx6 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items4, i64 0, i64 %idxprom5
+  %lon = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx6, i32 0, i32 1
   %10 = load double, double* %lon, align 8
   %11 = load double, double* %last_lat, align 8
   %12 = load double, double* %last_lon, align 8
   %call = call float @_Z29get_distance_to_next_waypointdddd(double %7, double %10, double %11, double %12)
   store float %call, float* %dist_between_waypoints, align 4
   %13 = load float, float* %dist_between_waypoints, align 4
-  %14 = load float*, float** %max_distance.addr, align 8
-  %15 = load float, float* %14, align 4
-  %cmp5 = fcmp ogt float %13, %15
-  br i1 %cmp5, label %if.then6, label %if.else
+  %14 = load float, float* %max_distance.addr, align 4
+  %cmp7 = fcmp ogt float %13, %14
+  br i1 %cmp7, label %if.then8, label %if.else
 
-if.then6:                                         ; preds = %for.body
+if.then8:                                         ; preds = %if.then3
   store i1 false, i1* %retval, align 1
   br label %return
 
-if.else:                                          ; preds = %for.body
-  %16 = load float, float* %dist_between_waypoints, align 4
-  %cmp7 = fcmp olt float %16, 0x3FA99999A0000000
-  br i1 %cmp7, label %land.lhs.true, label %if.end13
+if.else:                                          ; preds = %if.then3
+  %15 = load float, float* %dist_between_waypoints, align 4
+  %cmp9 = fcmp olt float %15, 0x3FA99999A0000000
+  br i1 %cmp9, label %land.lhs.true, label %if.end15
 
 land.lhs.true:                                    ; preds = %if.else
-  %17 = load float, float* %last_alt, align 4
-  %18 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items8 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %18, i32 0, i32 0
-  %19 = load i32, i32* %i, align 4
-  %idxprom9 = sext i32 %19 to i64
-  %arrayidx10 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items8, i64 0, i64 %idxprom9
-  %altitude = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx10, i32 0, i32 2
-  %20 = load float, float* %altitude, align 8
-  %sub = fsub float %17, %20
-  %21 = call float @llvm.fabs.f32(float %sub)
-  %cmp11 = fcmp olt float %21, 0x3FA99999A0000000
-  br i1 %cmp11, label %if.then12, label %if.end13
+  %16 = load float, float* %last_alt, align 4
+  %17 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items10 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %17, i32 0, i32 0
+  %18 = load i32, i32* %i, align 4
+  %idxprom11 = sext i32 %18 to i64
+  %arrayidx12 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items10, i64 0, i64 %idxprom11
+  %altitude = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx12, i32 0, i32 2
+  %19 = load float, float* %altitude, align 8
+  %sub = fsub float %16, %19
+  %20 = call float @llvm.fabs.f32(float %sub)
+  %cmp13 = fcmp olt float %20, 0x3FA99999A0000000
+  br i1 %cmp13, label %if.then14, label %if.end15
 
-if.then12:                                        ; preds = %land.lhs.true
+if.then14:                                        ; preds = %land.lhs.true
   store i1 false, i1* %retval, align 1
   br label %return
 
-if.end13:                                         ; preds = %land.lhs.true, %if.else
-  br label %if.end14
+if.end15:                                         ; preds = %land.lhs.true, %if.else
+  br label %if.end16
 
-if.end14:                                         ; preds = %if.end13
-  %22 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items15 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %22, i32 0, i32 0
-  %23 = load i32, i32* %i, align 4
-  %idxprom16 = sext i32 %23 to i64
-  %arrayidx17 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items15, i64 0, i64 %idxprom16
-  %lat18 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx17, i32 0, i32 0
-  %24 = load double, double* %lat18, align 8
-  store double %24, double* %last_lat, align 8
-  %25 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items19 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %25, i32 0, i32 0
-  %26 = load i32, i32* %i, align 4
-  %idxprom20 = sext i32 %26 to i64
-  %arrayidx21 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items19, i64 0, i64 %idxprom20
-  %lon22 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx21, i32 0, i32 1
-  %27 = load double, double* %lon22, align 8
-  store double %27, double* %last_lon, align 8
-  %28 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items23 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %28, i32 0, i32 0
-  %29 = load i32, i32* %i, align 4
-  %idxprom24 = sext i32 %29 to i64
-  %arrayidx25 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items23, i64 0, i64 %idxprom24
-  %altitude26 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx25, i32 0, i32 2
-  %30 = load float, float* %altitude26, align 8
-  store float %30, float* %last_alt, align 4
+if.end16:                                         ; preds = %if.end15
+  br label %if.end17
+
+if.end17:                                         ; preds = %if.end16, %for.body
+  %21 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items18 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %21, i32 0, i32 0
+  %22 = load i32, i32* %i, align 4
+  %idxprom19 = sext i32 %22 to i64
+  %arrayidx20 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items18, i64 0, i64 %idxprom19
+  %lat21 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx20, i32 0, i32 0
+  %23 = load double, double* %lat21, align 8
+  store double %23, double* %last_lat, align 8
+  %24 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items22 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %24, i32 0, i32 0
+  %25 = load i32, i32* %i, align 4
+  %idxprom23 = sext i32 %25 to i64
+  %arrayidx24 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items22, i64 0, i64 %idxprom23
+  %lon25 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx24, i32 0, i32 1
+  %26 = load double, double* %lon25, align 8
+  store double %26, double* %last_lon, align 8
+  %27 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items26 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %27, i32 0, i32 0
+  %28 = load i32, i32* %i, align 4
+  %idxprom27 = sext i32 %28 to i64
+  %arrayidx28 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items26, i64 0, i64 %idxprom27
+  %altitude29 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx28, i32 0, i32 2
+  %29 = load float, float* %altitude29, align 8
+  store float %29, float* %last_alt, align 4
   br label %for.inc
 
-for.inc:                                          ; preds = %if.end14
-  %31 = load i32, i32* %i, align 4
-  %inc = add nsw i32 %31, 1
+for.inc:                                          ; preds = %if.end17
+  %30 = load i32, i32* %i, align 4
+  %inc = add nsw i32 %30, 1
   store i32 %inc, i32* %i, align 4
   br label %for.cond
 
@@ -219,9 +225,9 @@ for.end:                                          ; preds = %for.cond
   store i1 true, i1* %retval, align 1
   br label %return
 
-return:                                           ; preds = %for.end, %if.then12, %if.then6, %if.then
-  %32 = load i1, i1* %retval, align 1
-  ret i1 %32
+return:                                           ; preds = %for.end, %if.then14, %if.then8, %if.then
+  %31 = load i1, i1* %retval, align 1
+  ret i1 %31
 }
 
 ; Function Attrs: nounwind readnone speculatable

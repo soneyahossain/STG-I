@@ -9,11 +9,32 @@ They will be present in the dictionary, but because they are never accessed alon
 This will serve to normalize the denominator across tests of differing length.   Let me know if this makes sense.
 
 */
-#include <iostream>
-#include "stg_lib/stg.h"
-#include "stg_lib/distribution.hpp"
 
-void getAverageOfAllEvenNUmber(int arr[], int size);
+#include "stdio.h"
+#include "stgi/stg.h"   // for umbrella
+
+void getAverageOfAllEvenNUmber(int arr[], int size) {
+
+
+   stg_begin_test();
+
+   stg_symbolic_array(arr, "int", 10 , "a_");   //, 0, 100, uniform, 0,0);
+   stg_symbolic_variable_int(&size, "S");           //, 0, 4, uniform, 0,0);
+
+   int i, count=0, sum = 0;
+   double avg;
+
+   for (i = 0; i < size; ++i) {
+      if(arr[i]%2==0){
+        sum += arr[i];
+        count++;
+      }
+   }
+   avg = double(sum) / count;
+   stg_end_test();
+   stg_record_test(true);
+
+}
 
 int main () {
 
@@ -22,11 +43,17 @@ int main () {
    int arr_2_1[2] = {2,4};  //e, e
    int arr_2_2[2] = {1,4};  //o, e
    int arr_2_3[2] = {1,1};  //o, o
+   int size = 2;
+
+
+
+
    getAverageOfAllEvenNUmber(arr_2_0,2);
+
+
    getAverageOfAllEvenNUmber(arr_2_1,2);
    getAverageOfAllEvenNUmber(arr_2_2,2);
    getAverageOfAllEvenNUmber(arr_2_3,2);
-
 
    //int array with 3 elements.
    int arr_3_0[3] = {1,1,1};  //o, o, o
@@ -37,7 +64,6 @@ int main () {
    getAverageOfAllEvenNUmber(arr_3_1,3);
    getAverageOfAllEvenNUmber(arr_3_2,3);
    getAverageOfAllEvenNUmber(arr_3_3,3);
-
 
    //int array with 4 elements.
    int arr_4_0[4] = {1,1,1,1};  //o, o, o, o
@@ -58,32 +84,5 @@ int main () {
    getAverageOfAllEvenNUmber(arr_4_6,4);
    getAverageOfAllEvenNUmber(arr_4_7,4);
 
-
    return 0;
-}
-
-
-void getAverageOfAllEvenNUmber(int arr[], int size) {
-
-   stg_symbolic_array(arr, "int", 10 , "a_", 0, 100, uniform, 0,0);
-   stg_symbolic_variable(&size, "S", 0, 4, uniform, 0,0);
-
-   stg_begin_test();
-   stg_input_array(arr, "int", 10 , arr);
-   stg_input_int(&size, size);
-
-   int i, count=0, sum = 0;
-   double avg;
-
-   for (i = 0; i < size; ++i) {
-      if(arr[i]%2==0){
-        sum += arr[i];
-        count++;
-      }
-   }
-   //avg = double(sum) / count;
-   stg_end_test();
-   stg_record_test(true);
-   //return 0;
-
 }

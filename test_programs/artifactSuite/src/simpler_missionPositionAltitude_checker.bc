@@ -9,16 +9,16 @@ target triple = "x86_64-apple-macosx10.14.0"
 @.str = private unnamed_addr constant [18 x i8] c"from function %p\0A\00", align 1
 
 ; Function Attrs: noinline optnone ssp uwtable
-define zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sRfb(%struct.mission_s* dereferenceable(648) %mission, float* dereferenceable(4) %home_alt, i1 zeroext %home_alt_valid) #0 {
+define zeroext i1 @_Z25checkHomePositionAltitudeRK9mission_sfb(%struct.mission_s* dereferenceable(648) %mission, float %home_alt, i1 zeroext %home_alt_valid) #0 {
 entry:
   %retval = alloca i1, align 1
   %mission.addr = alloca %struct.mission_s*, align 8
-  %home_alt.addr = alloca float*, align 8
+  %home_alt.addr = alloca float, align 4
   %home_alt_valid.addr = alloca i8, align 1
   %i = alloca i64, align 8
   %wp_alt = alloca float, align 4
   store %struct.mission_s* %mission, %struct.mission_s** %mission.addr, align 8
-  store float* %home_alt, float** %home_alt.addr, align 8
+  store float %home_alt, float* %home_alt.addr, align 4
   %frombool = zext i1 %home_alt_valid to i8
   store i8 %frombool, i8* %home_alt_valid.addr, align 1
   store i64 0, i64* %i, align 8
@@ -75,27 +75,25 @@ cond.true:                                        ; preds = %if.end
   %arrayidx9 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items8, i64 0, i64 %13
   %altitude10 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx9, i32 0, i32 2
   %14 = load float, float* %altitude10, align 8
-  %15 = load float*, float** %home_alt.addr, align 8
-  %16 = load float, float* %15, align 4
-  %add = fadd float %14, %16
+  %15 = load float, float* %home_alt.addr, align 4
+  %add = fadd float %14, %15
   br label %cond.end
 
 cond.false:                                       ; preds = %if.end
-  %17 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
-  %items11 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %17, i32 0, i32 0
-  %18 = load i64, i64* %i, align 8
-  %arrayidx12 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items11, i64 0, i64 %18
+  %16 = load %struct.mission_s*, %struct.mission_s** %mission.addr, align 8
+  %items11 = getelementptr inbounds %struct.mission_s, %struct.mission_s* %16, i32 0, i32 0
+  %17 = load i64, i64* %i, align 8
+  %arrayidx12 = getelementptr inbounds [20 x %struct.mission_item_s], [20 x %struct.mission_item_s]* %items11, i64 0, i64 %17
   %altitude13 = getelementptr inbounds %struct.mission_item_s, %struct.mission_item_s* %arrayidx12, i32 0, i32 2
-  %19 = load float, float* %altitude13, align 8
+  %18 = load float, float* %altitude13, align 8
   br label %cond.end
 
 cond.end:                                         ; preds = %cond.false, %cond.true
-  %cond = phi float [ %add, %cond.true ], [ %19, %cond.false ]
+  %cond = phi float [ %add, %cond.true ], [ %18, %cond.false ]
   store float %cond, float* %wp_alt, align 4
-  %20 = load float*, float** %home_alt.addr, align 8
-  %21 = load float, float* %20, align 4
-  %22 = load float, float* %wp_alt, align 4
-  %cmp14 = fcmp ogt float %21, %22
+  %19 = load float, float* %home_alt.addr, align 4
+  %20 = load float, float* %wp_alt, align 4
+  %cmp14 = fcmp ogt float %19, %20
   br i1 %cmp14, label %if.then15, label %if.end16
 
 if.then15:                                        ; preds = %cond.end
@@ -106,8 +104,8 @@ if.end16:                                         ; preds = %cond.end
   br label %for.inc
 
 for.inc:                                          ; preds = %if.end16
-  %23 = load i64, i64* %i, align 8
-  %inc = add i64 %23, 1
+  %21 = load i64, i64* %i, align 8
+  %inc = add i64 %21, 1
   store i64 %inc, i64* %i, align 8
   br label %for.cond
 
@@ -116,8 +114,8 @@ for.end:                                          ; preds = %for.cond
   br label %return
 
 return:                                           ; preds = %for.end, %if.then15, %if.then
-  %24 = load i1, i1* %retval, align 1
-  ret i1 %24
+  %22 = load i1, i1* %retval, align 1
+  ret i1 %22
 }
 
 declare i32 @printf(i8*, ...) #1

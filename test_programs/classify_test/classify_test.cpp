@@ -7,9 +7,10 @@ TEST(ClassifyTest, InvalidTriangle)
 {
 
     stg_start_intrmnt();
-    int a=0, b=9, c=10;
-    stg_begin_test();
 
+    int a=0, b=9, c=10;
+
+    stg_begin_test();
     stg_symbolic_variable_int(&a, "A");
     stg_symbolic_variable_int(&b, "B");
     stg_symbolic_variable_int(&c, "C");
@@ -21,7 +22,6 @@ TEST(ClassifyTest, InvalidTriangle)
     print_triangle_type(a, b, c, triangle_type);
 
     stg_record_test(true);
-
     stg_stop_intrmnt();
 
 }

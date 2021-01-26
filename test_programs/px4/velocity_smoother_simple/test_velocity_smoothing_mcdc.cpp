@@ -53,7 +53,7 @@
 #define protected public
 
 #ifdef STG
-#include "stg_lib/stg.h"
+#include "lib/stg.h"
 #else
 #define stg_begin_test() {}
 #define stg_end_test() {}

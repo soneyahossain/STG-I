@@ -5,7 +5,6 @@ target triple = "x86_64-apple-macosx10.14.0"
 
 @.str = private unnamed_addr constant [2 x i8] c"X\00", align 1
 @.str.1 = private unnamed_addr constant [2 x i8] c"Y\00", align 1
-@.str.2 = private unnamed_addr constant [3 x i8] c"%d\00", align 1
 
 ; Function Attrs: noinline norecurse optnone ssp uwtable
 define i32 @main() #0 {
@@ -13,60 +12,56 @@ entry:
   %retval = alloca i32, align 4
   %x = alloca i32, align 4
   %y = alloca i32, align 4
+  %testPassed = alloca i8, align 1
   store i32 0, i32* %retval, align 4
+  store i32 0, i32* %x, align 4
+  store i32 -5, i32* %y, align 4
+  store i8 0, i8* %testPassed, align 1
   call void @stg_begin_test()
-  %0 = bitcast i32* %x to i8*
-  call void @stg_symbolic_variable(i8* %0, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0))
-  %1 = bitcast i32* %y to i8*
-  call void @stg_symbolic_variable(i8* %1, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i32 0, i32 0))
-  %2 = bitcast i32* %x to i8*
-  call void @stg_input_int(i8* %2, i32 0)
-  %3 = load i32, i32* %x, align 4
-  %add = add nsw i32 %3, 5
-  store i32 %add, i32* %x, align 4
-  %4 = load i32, i32* %x, align 4
-  %cmp = icmp sgt i32 %4, 0
-  br i1 %cmp, label %if.then, label %if.else
+  call void @stg_symbolic_variable_int(i32* %x, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0))
+  call void @stg_symbolic_variable_int(i32* %y, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i32 0, i32 0))
+  call void @stg_pause_recording()
+  %0 = load i32, i32* %x, align 4
+  %1 = load i32, i32* %y, align 4
+  %add = add nsw i32 %0, %1
+  %cmp = icmp sgt i32 %add, 0
+  br i1 %cmp, label %if.then, label %if.end
 
 if.then:                                          ; preds = %entry
-  %call = call i32 (i8*, ...) @scanf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.2, i32 0, i32 0), i32* %y)
+  store i8 1, i8* %testPassed, align 1
   br label %if.end
 
-if.else:                                          ; preds = %entry
-  store i32 10, i32* %y, align 4
-  br label %if.end
+if.end:                                           ; preds = %if.then, %entry
+  call void @stg_resume_recording()
+  %2 = load i32, i32* %x, align 4
+  %3 = load i32, i32* %y, align 4
+  %add1 = add nsw i32 %2, %3
+  %cmp2 = icmp sgt i32 %add1, -10
+  br i1 %cmp2, label %if.then3, label %if.end4
 
-if.end:                                           ; preds = %if.else, %if.then
-  %5 = load i32, i32* %x, align 4
-  %cmp1 = icmp sgt i32 %5, 2
-  br i1 %cmp1, label %if.then2, label %if.else4
+if.then3:                                         ; preds = %if.end
+  store i8 1, i8* %testPassed, align 1
+  br label %if.end4
 
-if.then2:                                         ; preds = %if.end
-  %6 = load i32, i32* %y, align 4
-  %cmp3 = icmp ne i32 %6, 2789
-  call void @stg_assert(i1 zeroext %cmp3)
-  br label %if.end5
-
-if.else4:                                         ; preds = %if.end
-  call void @stg_assert(i1 zeroext true)
-  br label %if.end5
-
-if.end5:                                          ; preds = %if.else4, %if.then2
+if.end4:                                          ; preds = %if.then3, %if.end
   call void @stg_end_test()
+  %4 = load i8, i8* %testPassed, align 1
+  %tobool = trunc i8 %4 to i1
+  call void @stg_record_test(i1 zeroext %tobool)
   ret i32 0
 }
 
 declare void @stg_begin_test() #1
 
-declare void @stg_symbolic_variable(i8*, i8*) #1
+declare void @stg_symbolic_variable_int(i32*, i8*) #1
 
-declare void @stg_input_int(i8*, i32) #1
+declare void @stg_pause_recording() #1
 
-declare i32 @scanf(i8*, ...) #1
-
-declare void @stg_assert(i1 zeroext) #1
+declare void @stg_resume_recording() #1
 
 declare void @stg_end_test() #1
+
+declare void @stg_record_test(i1 zeroext) #1
 
 attributes #0 = { noinline norecurse optnone ssp uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="all" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="penryn" "target-features"="+cx16,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
 attributes #1 = { "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "frame-pointer"="all" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="penryn" "target-features"="+cx16,+fxsr,+mmx,+sahf,+sse,+sse2,+sse3,+sse4.1,+ssse3,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }

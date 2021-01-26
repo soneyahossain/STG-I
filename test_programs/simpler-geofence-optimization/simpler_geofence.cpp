@@ -43,6 +43,8 @@ bool insideFence(int lat, int lon, bool inclusion, int high_lat, int low_lat, in
 // Takes a point, a fence type, and 2 points defining a rectangular fence, and it returns if the point is  acceptable given that fence
 bool checkGeofence(int lat, int lon, int altitude, bool inclusion,int high_lat, int low_lat, int high_lon, int low_lon)
 {
+
+ /*
     bool acceptable = true;
     int max_vertical_altitude = 400;
 
@@ -52,63 +54,45 @@ bool checkGeofence(int lat, int lon, int altitude, bool inclusion,int high_lat, 
     }
     //else acceptable = insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);
 
-    acceptable = acceptable && insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);
-    return acceptable;
+    acceptable = acceptable &&
+
+    */
+
+    //insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);
+    return insideFence(lat, lon, inclusion, high_lat, low_lat, high_lon, low_lon);
 }
 
 int main(int argc, char **argv)
 {
 
-    int lat, lon, altitude, high_lat, low_lat, high_lon, low_lon;
-    	int inclusion;
-    	FILE *params;
-    	char buf[1001];
-
-    	if (argc != 2) {
-    		fprintf(stderr, "Missing test parameter file\n");
-    		exit(1);
-    	}
-    	else {
-    		params = fopen(argv[1], "r");
-    		if (!params) {
-    			fprintf(stderr, "Invalid file specified\n");
-    			exit(1);
-    		}
-    	}
-
-    	stg_symbolic_variable(&lat, "LAT", -20, 20,uniform,0,0);
-    	stg_symbolic_variable(&lon, "LON", -20, 20,uniform,0,0);
-    	stg_symbolic_variable(&altitude, "ALT", -20, 20,uniform,0,0);
-    	stg_symbolic_variable(&inclusion, "INC", -20, 20,uniform,0,0);
-    	stg_symbolic_variable(&high_lat, "HLAT", -20, 20,uniform,0,0);
-    	stg_symbolic_variable(&low_lat, "LLAT", -20, 20,uniform,0,0);
-    	stg_symbolic_variable(&high_lon, "HLON", -20, 20,uniform,0,0);
-    	stg_symbolic_variable(&low_lon, "LLON", -20, 20,uniform,0,0);
-
-    	// each line of the input file contains test parameters and expected checkGeofence result
-    	while (fgets(buf, 1000, params))
-    	{
-    		int expected;
-    		if (buf[0] == '#') continue; // # is a comment line
-
-    		stg_begin_test();
-
-    		//sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lat, &lon, &altitude, &inclusion, &high_lat, &low_lat, &high_lon, &low_lon, &expected);
-
-    		sscanf(buf, "%d %d %d %d %d %d %d %d %d", &lon, &lat, &altitude, &inclusion, &high_lon, &low_lon, &high_lat, &low_lat, &expected);
+        int lat, lon, altitude,inclusion, high_lat, low_lat, high_lon, low_lon;
 
 
-    	    printf("lat=%d lon=%d alt=%d inc=%d hlat=%d llat=%d hlon=%d llon=%d expected=%d\n", lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon, expected);
+    	stg_symbolic_variable(&lat, "LAT", -100, 100,uniform,0,0);
+    	stg_symbolic_variable(&lon, "LON", -100, 100,uniform,0,0);
+    	stg_symbolic_variable(&altitude, "ALT", 0, 500,uniform,0,0);
+    	stg_symbolic_variable(&inclusion, "INC", 0, 1,uniform,0,0);
+    	stg_symbolic_variable(&high_lat, "HLAT", -100, 100,uniform,0,0);
+    	stg_symbolic_variable(&low_lat, "LLAT", -100, 100,uniform,0,0);
+    	stg_symbolic_variable(&high_lon, "HLON", -100, 100,uniform,0,0);
+    	stg_symbolic_variable(&low_lon, "LLON", -100, 100,uniform,0,0);
 
-    		bool isGeofenced = checkGeofence(lat, lon, altitude, inclusion, high_lat, low_lat, high_lon, low_lon);
-    		stg_end_test();
+        stg_begin_test();
 
-    		bool testPassed = expected ? isGeofenced : !isGeofenced;
-    		stg_record_test(testPassed);
-    	}
+        stg_input_int(&lat, 10);
+        stg_input_int(&lon,30);
+        stg_input_int(&altitude, 200);
+        stg_input_int(&inclusion,0 );
+        stg_input_int(&high_lat, 20);
+        stg_input_int(&low_lat, 5);
+        stg_input_int(&high_lon, 40);
+        stg_input_int(&low_lon, 20);
 
-    	fclose(params);
 
+        bool isGeofenced = checkGeofence(lat, lon, altitude, false, high_lat, low_lat, high_lon, low_lon);
+    	stg_end_test();
+    	stg_record_test(isGeofenced);
 
+        return 0;
 
 }

@@ -20,12 +20,16 @@ bool isGreaterThan(double x, double y)
 int main()
 {
     double base; double power;
-    stg_symbolic_variable(&base, "B", DBL_MIN, DBL_MAX);
-    stg_symbolic_variable(&power, "P", FLT_MIN, FLT_MAX); 
+
+    scanf("%lf",&base);
+        scanf("%lf",&power);
+
+
+    stg_symbolic_variable_double(&base, "S0");
+    stg_symbolic_variable_double(&power, "S1");
 
     stg_begin_test();
-    scanf("%lf",&base);
-    scanf("%lf",&power);
+
     bool result=isGreaterThan(base,power);
     stg_end_test();
 

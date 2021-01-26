@@ -39,6 +39,7 @@ if (a<=0 || b<=0 || c<=0)
 }
 
 int main() {
+
    int a,b,c;
    stg_begin_test();
    stg_symbolic_variable(&a, "A");
@@ -67,5 +68,6 @@ int main() {
    stg_assert(true);
    stg_end_test();
 
-  return 0;
+   return 0;
+
 }

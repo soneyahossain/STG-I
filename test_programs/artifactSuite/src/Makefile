@@ -31,7 +31,7 @@ missionChecker.o: missionChecker.ll
 missionChecker.ll:  $(BITCODES)
 	$(LLVM_DIR)/llvm-link  -o missionChecker.ll $(BITCODES)
 
-mission_feasibility_test.ll: $(TEST_DIR)/mission_feasibility_test.cpp simpler_mission.h $(LIB_DIR)/stg.h $(LIB_DIR)/distribution.hpp #do not instrument test drive
+mission_feasibility_test.ll: $(TEST_DIR)/mission_feasibility_test.cpp simpler_mission.h $(LIB_DIR)/stg.h #do not instrument test drive
 	$(CC) $(CFLAGS) $(LLVM_FLAGS) $(TEST_DIR)/mission_feasibility_test.cpp -o mission_feasibility_test.bc
 	$(LLVM_DIR)/opt $(LLVM_INSTRMNT_FLAGS) -S -STGInstrumenter -ignore-instrmnt-flag=false mission_feasibility_test.bc -o mission_feasibility_test.ll
 

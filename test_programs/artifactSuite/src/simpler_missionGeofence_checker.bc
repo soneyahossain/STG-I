@@ -84,23 +84,23 @@ if.end11:                                         ; preds = %if.end10, %if.end6
 }
 
 ; Function Attrs: noinline nounwind optnone ssp uwtable
-define zeroext i1 @_Z13checkGeofenceRK9mission_sbRiS2_S2_S2_(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext %inclusion, i32* dereferenceable(4) %high_lat, i32* dereferenceable(4) %low_lat, i32* dereferenceable(4) %high_lon, i32* dereferenceable(4) %low_lon) #0 {
+define zeroext i1 @_Z13checkGeofenceRK9mission_sbiiii(%struct.mission_s* dereferenceable(648) %mission, i1 zeroext %inclusion, i32 %high_lat, i32 %low_lat, i32 %high_lon, i32 %low_lon) #0 {
 entry:
   %mission.addr = alloca %struct.mission_s*, align 8
   %inclusion.addr = alloca i8, align 1
-  %high_lat.addr = alloca i32*, align 8
-  %low_lat.addr = alloca i32*, align 8
-  %high_lon.addr = alloca i32*, align 8
-  %low_lon.addr = alloca i32*, align 8
+  %high_lat.addr = alloca i32, align 4
+  %low_lat.addr = alloca i32, align 4
+  %high_lon.addr = alloca i32, align 4
+  %low_lon.addr = alloca i32, align 4
   %acceptable = alloca i8, align 1
   %i = alloca i32, align 4
   store %struct.mission_s* %mission, %struct.mission_s** %mission.addr, align 8
   %frombool = zext i1 %inclusion to i8
   store i8 %frombool, i8* %inclusion.addr, align 1
-  store i32* %high_lat, i32** %high_lat.addr, align 8
-  store i32* %low_lat, i32** %low_lat.addr, align 8
-  store i32* %high_lon, i32** %high_lon.addr, align 8
-  store i32* %low_lon, i32** %low_lon.addr, align 8
+  store i32 %high_lat, i32* %high_lat.addr, align 4
+  store i32 %low_lat, i32* %low_lat.addr, align 4
+  store i32 %high_lon, i32* %high_lon.addr, align 4
+  store i32 %low_lon, i32* %low_lon.addr, align 4
   store i8 1, i8* %acceptable, align 1
   store i32 0, i32* %i, align 4
   br label %for.cond
@@ -152,32 +152,28 @@ land.rhs:                                         ; preds = %if.end
   %conv8 = fptosi double %12 to i32
   %13 = load i8, i8* %inclusion.addr, align 1
   %tobool9 = trunc i8 %13 to i1
-  %14 = load i32*, i32** %high_lat.addr, align 8
-  %15 = load i32, i32* %14, align 4
-  %16 = load i32*, i32** %low_lat.addr, align 8
-  %17 = load i32, i32* %16, align 4
-  %18 = load i32*, i32** %high_lon.addr, align 8
-  %19 = load i32, i32* %18, align 4
-  %20 = load i32*, i32** %low_lon.addr, align 8
-  %21 = load i32, i32* %20, align 4
-  %call = call zeroext i1 @_Z11insideFenceiibiiii(i32 %conv, i32 %conv8, i1 zeroext %tobool9, i32 %15, i32 %17, i32 %19, i32 %21)
+  %14 = load i32, i32* %high_lat.addr, align 4
+  %15 = load i32, i32* %low_lat.addr, align 4
+  %16 = load i32, i32* %high_lon.addr, align 4
+  %17 = load i32, i32* %low_lon.addr, align 4
+  %call = call zeroext i1 @_Z11insideFenceiibiiii(i32 %conv, i32 %conv8, i1 zeroext %tobool9, i32 %14, i32 %15, i32 %16, i32 %17)
   br label %land.end
 
 land.end:                                         ; preds = %land.rhs, %if.end
-  %22 = phi i1 [ false, %if.end ], [ %call, %land.rhs ]
-  %frombool10 = zext i1 %22 to i8
+  %18 = phi i1 [ false, %if.end ], [ %call, %land.rhs ]
+  %frombool10 = zext i1 %18 to i8
   store i8 %frombool10, i8* %acceptable, align 1
   br label %for.inc
 
 for.inc:                                          ; preds = %land.end
-  %23 = load i32, i32* %i, align 4
-  %inc = add nsw i32 %23, 1
+  %19 = load i32, i32* %i, align 4
+  %inc = add nsw i32 %19, 1
   store i32 %inc, i32* %i, align 4
   br label %for.cond
 
 for.end:                                          ; preds = %for.cond
-  %24 = load i8, i8* %acceptable, align 1
-  %tobool11 = trunc i8 %24 to i1
+  %20 = load i8, i8* %acceptable, align 1
+  %tobool11 = trunc i8 %20 to i1
   ret i1 %tobool11
 }
 

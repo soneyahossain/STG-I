@@ -12,8 +12,6 @@
 #include "simpler_mission.h"
 
 
-
-
 bool checkMissionFeasible(const mission_s &mission, float max_distance_between_waypoints, bool home_alt_valid, float home_alt, bool inclusion,  int high_lat, int  low_lat, int high_lon, int low_lon)
 {
 

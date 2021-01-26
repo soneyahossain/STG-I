@@ -1,30 +1,27 @@
 [
-LLAT : i32 = 20, range:[-20,20],uniform,
-HLAT : i32 = 40, range:[-20,20],uniform,
-LLON : i32 = 5, range:[-20,20],uniform,
-HLON : i32 = 20, range:[-20,20],uniform,
-INC : i32 = 1, range:[-20,20],uniform,
-ALT : i32 = 200, range:[-20,20],uniform,
-LAT : i32 = 30, range:[-20,20],uniform,
-LON : i32 = 10, range:[-20,20],uniform
+LAT : i32 = 10,range:[-100,100],uniform,
+LON : i32 = 30,range:[-100,100],uniform,
+ALT : i32 = 200,range:[0,500],uniform,
+INC : i32 = 0,range:[0,1],uniform,
+HLAT : i32 = 20,range:[-100,100],uniform,
+LLAT : i32 = 5,range:[-100,100],uniform,
+HLON : i32 = 40,range:[-100,100],uniform,
+LLON : i32 = 20,range:[-100,100],uniform
 ]
 
-//Test: passed
+//Test: failed
 
 (land
-  (lnot(sgt ALT (i32 400)))
+  (sgt LON LLON)
   (land
-    (trunc i1 (i8 1))
+    (slt LON HLON)
     (land
-      (sgt LON LLON)
+      (slt LAT HLAT)
       (land
-        (slt LON HLON)
+        (sgt LAT LLAT)
         (land
-          (slt LAT HLAT)
-          (land
-            (sgt LAT LLAT)
-            (trunc i1 (zext i8 (trunc i1 (zext i8 (ne INC (i32 0))))))
-          )
+          (lnot(trunc i1 (zext i8 (trunc i1 (zext i8 (i1 0))))))
+          (trunc i1 (i8 1))
         )
       )
     )
