@@ -1,9 +1,0 @@
-[
-log_x : double = 36.000000, R:[2.22507e-308,1.79769e+308],
-log_y : float = 1000.000000, R:[1.17549e-38,3.40282e+38]
-]
-
-//Test: passed
-
-(ogt (fadd (llvm.log.f64 double log_x) (fpext double log_y)) (fadd (fpext double (llvm.log10.f32 float log_y)) log_x))
-
