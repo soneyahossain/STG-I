@@ -918,6 +918,17 @@ struct STGInstrumenter : public ModulePass {
                     else
                         l_operand = l_op->getName().str();
 
+
+
+
+                        //comapare instruction for
+
+
+
+
+
+
+
                     /*
                      ICMP_EQ    = 32,   ///< equal
                      ICMP_NE    = 33,   ///< not equal
