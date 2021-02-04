@@ -1,4 +1,0 @@
-type(4) triangle (0,9,10) is not a valid triangle
-type(1) triangle (8,9,10) is scalene
-type(2) triangle (38,78,78) is isosceles
-type(3) triangle (1,1,1) is equilateral
