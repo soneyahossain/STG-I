@@ -14,6 +14,9 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "llvm/Analysis/TargetLibraryInfo.h"
+#include "llvm/PassAnalysisSupport.h"
+
 
 //#include <llvm/IR/DebugLoc.h>
 //#include <llvm/IR/DebugInfoMetadata.h>
@@ -74,6 +77,8 @@ struct STGInstrumenter : public ModulePass {
     Function* stg_update_bin_intrinsic;
     Function* stg_update_prev_bb;
     Function* stg_update_select;
+
+
 
     // GlobalVariable* prevBB; // global variable pointer to store basic block
 
@@ -152,6 +157,9 @@ struct STGInstrumenter : public ModulePass {
     bool instrumentFunction(Function& F, Module& M, llvm::LLVMContext& context)
     {
 
+
+        const TargetLibraryInfo *TLI;
+
         std::string function_name = F.getName().str();
         //outs() << "Instrumenting function :  " << function_name << "\n";
         bool insertOnce=true;
@@ -204,6 +212,12 @@ struct STGInstrumenter : public ModulePass {
 
                 if (CallInst* callInst = dyn_cast<CallInst>(I)) {
 
+
+
+
+
+
+
                     // handle memcpy and scanf call
 
                     //errs() << "inside call instruction \n";
@@ -214,6 +228,34 @@ struct STGInstrumenter : public ModulePass {
                         continue;
 
                     std::string functionName = F->getName().str();
+
+
+                         if (auto *CB = dyn_cast<CallBase>(I)) {
+                          LibFunc LF;
+                            if (TLI->getLibFunc(functionName, LF)) {
+
+
+                            errs() << "inside target lib info \n";
+
+                            errs() << functionName <<"\n";
+
+
+                            }
+
+
+                       }
+
+
+
+
+
+
+
+
+
+
+
+
 
                     if (functionName.empty())
                         continue;
@@ -276,13 +318,13 @@ struct STGInstrumenter : public ModulePass {
 
                         if (i == 1) {
 
-                            //errs() << "got unary Intrinsic call" << functionName << "\n";
+                            errs() << "got unary Intrinsic call" << functionName << "\n";
 
                             CallInst::Create(stg_update_una_intrinsic, args)->insertBefore(I);
                         }
                         else if (i == 2) {
 
-                            //errs() << "got binary Intrinsic call" << functionName << "\n";
+                            errs() << "got binary Intrinsic call" << functionName << "\n";
                             CallInst::Create(stg_update_bin_intrinsic, args)->insertBefore(I);
                         }
                     }
@@ -351,6 +393,16 @@ struct STGInstrumenter : public ModulePass {
                         }
                     }
                     else if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), functionName) == function_doNotInstrument.end()) {
+
+
+
+
+
+
+
+
+
+
 
                         if (std::find(non_intrinsic.begin(), non_intrinsic.end(), functionName) == non_intrinsic.end()) {
 
