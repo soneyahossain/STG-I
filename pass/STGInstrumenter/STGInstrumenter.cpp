@@ -14,9 +14,6 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include "llvm/Analysis/TargetLibraryInfo.h"
-#include "llvm/PassAnalysisSupport.h"
-
 
 //#include <llvm/IR/DebugLoc.h>
 //#include <llvm/IR/DebugInfoMetadata.h>
@@ -78,8 +75,6 @@ struct STGInstrumenter : public ModulePass {
     Function* stg_update_prev_bb;
     Function* stg_update_select;
 
-
-
     // GlobalVariable* prevBB; // global variable pointer to store basic block
 
     std::vector<std::string> function_doNotInstrument = {
@@ -122,7 +117,7 @@ struct STGInstrumenter : public ModulePass {
     };
 
     std::vector<std::string> non_intrinsic = {
-        "atan2"
+        "atan2", "expf", "exp","log10f","log","pow","sin","cos","sqrt"
     };
 
     STGInstrumenter(): ModulePass(ID){}
@@ -157,9 +152,7 @@ struct STGInstrumenter : public ModulePass {
     bool instrumentFunction(Function& F, Module& M, llvm::LLVMContext& context)
     {
 
-
         const TargetLibraryInfo *TLI;
-
         std::string function_name = F.getName().str();
         //outs() << "Instrumenting function :  " << function_name << "\n";
         bool insertOnce=true;
@@ -212,12 +205,6 @@ struct STGInstrumenter : public ModulePass {
 
                 if (CallInst* callInst = dyn_cast<CallInst>(I)) {
 
-
-
-
-
-
-
                     // handle memcpy and scanf call
 
                     //errs() << "inside call instruction \n";
@@ -229,36 +216,21 @@ struct STGInstrumenter : public ModulePass {
 
                     std::string functionName = F->getName().str();
 
-
-                         if (auto *CB = dyn_cast<CallBase>(I)) {
-                          LibFunc LF;
-                            if (TLI->getLibFunc(functionName, LF)) {
-
-
-                            errs() << "inside target lib info \n";
-
-                            errs() << functionName <<"\n";
-
-
-                            }
-
-
-                       }
-
-
-
-
-
-
-
-
-
-
-
-
-
                     if (functionName.empty())
                         continue;
+
+
+
+
+                     if (auto *CB = dyn_cast<CallBase>(I)) {
+                         LibFunc LF;
+                            if (TLI->getLibFunc(functionName, LF)) {
+                            errs() << "inside target lib info \n";
+                            errs() << functionName <<"\n";
+
+                            }
+                       }
+
 
                     std::string dest = I->getName().str();
 
@@ -270,7 +242,21 @@ struct STGInstrumenter : public ModulePass {
                     if (!instrument)
                         continue;
 
+
+                       // errs() << "before intrinsicInst instruction    "<<functionName<<" \n";
+
+
+
                     if (IntrinsicInst* intrinsicInst = dyn_cast<IntrinsicInst>(I)) {
+
+
+
+                     //errs() << "inside intrinsicInst instruction"<<functionName<<" \n";
+
+
+
+
+
 
                         llvm::Value* arg_dest = builder.CreateGlobalStringPtr(dest);
 
@@ -318,13 +304,13 @@ struct STGInstrumenter : public ModulePass {
 
                         if (i == 1) {
 
-                            errs() << "got unary Intrinsic call" << functionName << "\n";
+                            //errs() << "got unary Intrinsic call" << functionName << "\n";
 
                             CallInst::Create(stg_update_una_intrinsic, args)->insertBefore(I);
                         }
                         else if (i == 2) {
 
-                            errs() << "got binary Intrinsic call" << functionName << "\n";
+                            //errs() << "got binary Intrinsic call" << functionName << "\n";
                             CallInst::Create(stg_update_bin_intrinsic, args)->insertBefore(I);
                         }
                     }
@@ -332,7 +318,7 @@ struct STGInstrumenter : public ModulePass {
                     {
 
                         unsigned no_of_params = callInst->getNumArgOperands();
-                       // errs() << "in sscanf no_of_params===========" << no_of_params << "\n";
+                      // errs() << "in sscanf no_of_params===========" << no_of_params << "\n";
 
                         for (unsigned i = 2; i < no_of_params; i++) {
 
@@ -373,7 +359,7 @@ struct STGInstrumenter : public ModulePass {
                         llvm::raw_string_ostream type(type_str);
                         T->print(type);
 
-                       // errs() << "Type in the scanf ===========" << type.str() << "\n"; //got the type, now add instruction to get the value from this address
+                      // errs() << "Type in the scanf ===========" << type.str() << "\n"; //got the type, now add instruction to get the value from this address
                        // errs() << "name ===========" << arg_operand->getName().str() << "\n";
 
                         std::vector<Value*> args;
@@ -392,19 +378,19 @@ struct STGInstrumenter : public ModulePass {
                             CallInst::Create(stg_update_input_double, args)->insertAfter(I);
                         }
                     }
-                    else if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), functionName) == function_doNotInstrument.end()) {
+                    else if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), functionName) == function_doNotInstrument.end()) { // if not in the
+
+
+                    //errs() << "herreeee: function name:  "<<functionName<<"\n";
 
 
 
 
 
+                        if (std::find(non_intrinsic.begin(), non_intrinsic.end(), functionName) == non_intrinsic.end()) {  // if not in the non-intrinsic list
 
+                           //  errs() << "inside non intrinsic: " << functionName << "\n";
 
-
-
-
-
-                        if (std::find(non_intrinsic.begin(), non_intrinsic.end(), functionName) == non_intrinsic.end()) {
 
                             //--------int add(int x, int y)--->> here x and y are parameter;  add(1,2) -->> here 1 and 2 are argument
 
@@ -478,6 +464,7 @@ struct STGInstrumenter : public ModulePass {
                         else {
 
                             //not instrinsic , model as intrinsic
+                           // errs() << "not intrinsic but model as intrinsic\n";
                             std::vector<Value*> args;
                             std::string argument;
 
@@ -485,7 +472,7 @@ struct STGInstrumenter : public ModulePass {
                             llvm::raw_string_ostream function_rtype(function_ret_type);
                             F->getReturnType()->print(function_rtype);
 
-                           // errs() << "function rtype : " << function_rtype.str() << "\n";
+                          // errs() << "function rtype : " << function_rtype.str() << "\n";
 
                             llvm::Value* instName = builder.CreateGlobalStringPtr(callInst->getName().str());
                             llvm::Value* funName = builder.CreateGlobalStringPtr(functionName);
@@ -514,10 +501,31 @@ struct STGInstrumenter : public ModulePass {
 
                                 llvm::Value* arg_ = builder.CreateGlobalStringPtr(argument);
                                 args.push_back(arg_);
+
                             }
 
-                            CallInst::Create(stg_update_bin_intrinsic, args)->insertAfter(I);
+
+                            if(i==2 )
+
+                                CallInst::Create(stg_update_bin_intrinsic, args)->insertAfter(I);
+                            else if (i == 1) {
+
+		                   //  errs() << "got unary Intrinsic call" << functionName << "\n";
+
+		                    CallInst::Create(stg_update_una_intrinsic, args)->insertAfter(I);
+		                }
+
                         }
+
+
+
+
+
+
+
+
+
+
                     }
                 }
 
@@ -969,17 +977,6 @@ struct STGInstrumenter : public ModulePass {
                     }
                     else
                         l_operand = l_op->getName().str();
-
-
-
-
-                        //comapare instruction for
-
-
-
-
-
-
 
                     /*
                      ICMP_EQ    = 32,   ///< equal
