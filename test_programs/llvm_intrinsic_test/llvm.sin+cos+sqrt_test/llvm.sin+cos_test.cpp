@@ -9,8 +9,6 @@ bool isIsoscelesRightTriangle(double theta, double hypotenuse)
 	double height = sin(theta)* sqrt(hypotenuse);
     double base = cos(theta)* sqrt(hypotenuse);
 
-    
-
 	if((height - base) < 0.001){     //	if(fabs(height - base) < 0.001)
         //printf("%lf\n",height );
         //printf("%lf\n",base );

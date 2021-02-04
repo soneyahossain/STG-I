@@ -16,7 +16,6 @@ bool isGreaterThan(double x, double y)
 }
 
 
-
 int main()
 {
     double base, power;
