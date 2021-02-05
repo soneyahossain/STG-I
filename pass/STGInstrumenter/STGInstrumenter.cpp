@@ -15,7 +15,6 @@
 #include <vector>
 #include "llvm/Analysis/TargetLibraryInfo.h"
 
-
 //#include <llvm/IR/DebugLoc.h>
 //#include <llvm/IR/DebugInfoMetadata.h>
 //#include "llvm/ADT/Statistic.h"
@@ -118,10 +117,13 @@ struct STGInstrumenter : public ModulePass {
     };
 
     std::vector<std::string> non_intrinsic = {
-        "atan2", "expf", "exp", "log10f", "log", "pow", "sin", "cos", "sqrt" //might not need them
+        "atan2", "expf", "exp", "log10f", "log", "pow", "sin", "cos", "sqrt"
     };
 
-    STGInstrumenter(): ModulePass(ID){}
+    STGInstrumenter()
+        : ModulePass(ID)
+    {
+    }
 
     bool runOnModule(Module& M) override
     {
@@ -200,6 +202,7 @@ struct STGInstrumenter : public ModulePass {
 
                 if (CallInst* callInst = dyn_cast<CallInst>(I)) {
 
+                    // handle memcpy and scanf call
 
                     //errs() << "inside call instruction \n";
 
@@ -213,13 +216,11 @@ struct STGInstrumenter : public ModulePass {
                     if (functionName.empty())
                         continue;
 
-                    //check if the function is a lib for the target machine
-
                     if (auto* CB = dyn_cast<CallBase>(I)) {
                         LibFunc LF;
                         if (TLI->getLibFunc(functionName, LF)) {
                             //errs() << "inside target lib info \n";
-                            //errs() << functionName << "\n";
+                            //errs() << functionName <<"\n";
                         }
                     }
 
@@ -283,10 +284,13 @@ struct STGInstrumenter : public ModulePass {
                         //args.push_back(rettype);
 
                         if (i == 1) {
+
                             //errs() << "got unary Intrinsic call" << functionName << "\n";
+
                             CallInst::Create(stg_update_una_intrinsic, args)->insertBefore(I);
                         }
                         else if (i == 2) {
+
                             //errs() << "got binary Intrinsic call" << functionName << "\n";
                             CallInst::Create(stg_update_bin_intrinsic, args)->insertBefore(I);
                         }
@@ -359,8 +363,6 @@ struct STGInstrumenter : public ModulePass {
 
                         //errs() << "herreeee: function name:  "<<functionName<<"\n";
 
-                        //Clang —target=unknown-apple-darwin-unknown
-
                         if (std::find(non_intrinsic.begin(), non_intrinsic.end(), functionName) == non_intrinsic.end()) { // if not in the non-intrinsic list
 
                             //  errs() << "inside non intrinsic: " << functionName << "\n";
@@ -381,6 +383,7 @@ struct STGInstrumenter : public ModulePass {
                                     param = ""; // arg->getName().str();
 
                                     if (param.empty()) {
+
                                         param = "arg_" + std::to_string(i + 1);
                                     }
                                 }
@@ -469,13 +472,15 @@ struct STGInstrumenter : public ModulePass {
                                 args.push_back(arg_);
                             }
 
-                            if (i == 1){
-                                CallInst::Create(stg_update_una_intrinsic, args)->insertAfter(I);
-                            }else if ( i==2){
-                                CallInst::Create(stg_update_bin_intrinsic, args)->insertAfter(I);
-                            }else
-                              //do nothing
+                            if (i == 2)
 
+                                CallInst::Create(stg_update_bin_intrinsic, args)->insertAfter(I);
+                            else if (i == 1) {
+
+                                //  errs() << "got unary Intrinsic call" << functionName << "\n";
+
+                                CallInst::Create(stg_update_una_intrinsic, args)->insertAfter(I);
+                            }
                         }
                     }
                 }
@@ -766,7 +771,7 @@ struct STGInstrumenter : public ModulePass {
                         }
                         else if (srs_type == Type::getInt64Ty(context)) {
 
-                            //errs() << "here6\n";
+                            //  errs() << "here6\n";
                             CallInst::Create(stg_update_cast_i64, args)->insertAfter(I);
                         }
                         else if (srs_type == Type::getFloatTy(context)) {
