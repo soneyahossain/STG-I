@@ -1,1 +1,0 @@
-char* uniform = (char*) "uniform";
