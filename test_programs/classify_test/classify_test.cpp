@@ -25,6 +25,7 @@ TEST(ClassifyTest, InvalidTriangle)
     stg_stop_intrmnt();
 
 }
+
 TEST(ClassifyTest, Scalene)
 {
 

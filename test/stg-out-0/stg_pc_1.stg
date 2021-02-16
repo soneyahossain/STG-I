@@ -1,7 +1,8 @@
 [
-A : i32 = 1,
-B : i32 = 4,
-C : i32 = 3
+A : i32
+B : i32
+C : i32
+
 ]
 
 //Test: passed
@@ -24,7 +25,7 @@ C : i32 = 3
                 (lnot(sle (add A B) C))
                 (land
                   (lnot(sle (add B C) A))
-                  (sge (add A C) B)
+                  (lnot(sle (add A C) B))
                 )
               )
             )
