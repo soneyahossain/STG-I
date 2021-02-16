@@ -1,7 +1,5 @@
 #include <stdio.h>
-//#include "stgi/stg.h"
-
-#include "../../lib/stg.h"
+#include "stg.h"
 
 int main()
 {
