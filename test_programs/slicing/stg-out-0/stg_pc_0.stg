@@ -1,0 +1,16 @@
+[
+A : i32 = 1,range:[-2.14748e+09,2.14748e+09],uniform,
+B : i32 = 0,range:[-2.14748e+09,2.14748e+09],uniform,
+C : i32 = 1,range:[-2.14748e+09,2.14748e+09],uniform
+]
+
+//Test: passed
+
+(land
+  (sgt A B)
+  (land
+    (trunc i1 (i8 1))
+    (eq C (i32 1))
+  )
+)
+

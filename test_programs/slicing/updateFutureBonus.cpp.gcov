@@ -1,0 +1,53 @@
+        -:    0:Source:updateFutureBonus.cpp
+        -:    0:Graph:updateFutureBonus.gcno
+        -:    0:Data:updateFutureBonus.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../../lib/stg.h"
+        -:    2:#include "../../lib/distribution.hpp"
+        -:    3:
+        -:    4:
+function _Z17updateFutureBonusii called 2 returned 100% blocks executed 100%
+        -:    5:int updateFutureBonus(int m_score, int p_score) {
+        -:    6:
+        2:    7: int score=0;
+        2:    8: int bonus=0;
+        2:    9: if( m_score>80) score+=2;
+branch  0 taken 50%
+branch  1 taken 50%
+        1:   10: else  score+=1;
+        -:   11:
+        2:   12: if(p_score>80) score+=3;
+branch  0 taken 50%
+branch  1 taken 50%
+        1:   13: else score+=2;
+        -:   14:
+        -:   15:
+        -:   16://update futureBonus
+        2:   17: if( score>=4)
+branch  0 taken 50%
+branch  1 taken 50%
+        1:   18:   bonus=100;
+        -:   19: else{
+        1:   20:   bonus=50;
+        -:   21: }
+        -:   22:
+        -:   23:
+        2:   24: return score;
+        -:   25:
+        -:   26:}
+function main called 1 returned 100% blocks executed 60%
+        -:   27:int main() {
+        -:   28:
+        -:   29:
+        1:   30:   assert(updateFutureBonus(85,82)==5);
+branch  0 taken 0%
+branch  1 taken 100%
+        -:   31:   //assert(updateFutureBonus(65,87)==4);
+        1:   32:   assert(updateFutureBonus(65,67)==3);
+branch  0 taken 0%
+branch  1 taken 100%
+        -:   33:   //assert(updateFutureBonus(55,67)==1);
+        1:   34:   return 0;
+        -:   35:
+        -:   36:}

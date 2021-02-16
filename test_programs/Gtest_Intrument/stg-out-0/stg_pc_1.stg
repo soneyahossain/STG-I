@@ -1,0 +1,10 @@
+[
+M : i32 = 90,range:[-20,20],uniform
+P : i32 = 20,range:[-20,20],uniform
+
+]
+
+//Test: passed
+
+(lnot(sgt (add m p) (i32 160)))
+

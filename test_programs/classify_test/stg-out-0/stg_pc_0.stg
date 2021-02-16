@@ -1,0 +1,11 @@
+[
+A : i32
+B : i32
+C : i32
+
+]
+
+//Test: passed
+
+(sle A (i32 0))
+

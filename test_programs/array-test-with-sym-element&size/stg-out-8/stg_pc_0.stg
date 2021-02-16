@@ -1,0 +1,31 @@
+[
+a_0 : i32
+a_1 : i32
+a_2 : i32
+a_3 : i32
+a_4 : i32
+a_5 : i32
+a_6 : i32
+a_7 : i32
+a_8 : i32
+a_9 : i32
+S : i32
+
+]
+
+//Test: passed
+
+(land
+  (slt (i32 0) S)
+  (land
+    (eq (srem a_0 (i32 2)) (i32 0))
+    (land
+      (slt (add (i32 0) (i32 1)) S)
+      (land
+        (lnot(eq (srem a_1 (i32 2)) (i32 0)))
+        (lnot(slt (add (add (i32 0) (i32 1)) (i32 1)) S))
+      )
+    )
+  )
+)
+

@@ -1,0 +1,12 @@
+[
+X : i32,
+Y : i32
+]
+
+//Test: passed
+
+(land
+  (lnot(sgt (add X Y) (i32 0)))
+  (sgt (add X Y) (i32 -10))
+)
+

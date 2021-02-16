@@ -1,0 +1,9 @@
+[
+S0 : double,
+S1 : float
+]
+
+//Test: passed
+
+(ogt (llvm.exp.f64 double S0) (fpext double (llvm.exp.f32 float S1)))
+

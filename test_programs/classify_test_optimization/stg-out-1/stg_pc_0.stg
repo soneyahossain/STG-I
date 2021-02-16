@@ -1,0 +1,19 @@
+[
+A : i32 = 38,range:[-20,20],uniform,
+B : i32 = 38,range:[-20,20],uniform,
+C : i32 = 38,range:[-20,20],uniform
+]
+
+//Test: failed
+
+(land
+  (lnot(sle A (i32 0)))
+  (land
+    (lnot(sle B (i32 0)))
+    (land
+      (lnot(sle C (i32 0)))
+      (eq A B)
+    )
+  )
+)
+

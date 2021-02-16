@@ -16,8 +16,8 @@ bool isGreaterThan(double x, float y)
 int main()
 {
     double x=3.4; float y=3.3;
-    scanf("%lf",&x);
-    scanf("%f",&y);
+    //scanf("%lf",&x);
+    //scanf("%f",&y);
 
     stg_begin_test();
     stg_symbolic_variable_double(&x, "S0");//, DBL_MIN, DBL_MAX);

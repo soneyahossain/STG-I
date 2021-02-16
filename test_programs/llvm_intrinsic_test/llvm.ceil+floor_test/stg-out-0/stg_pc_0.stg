@@ -1,0 +1,9 @@
+[
+X : double,
+Y : float
+]
+
+//Test: failed
+
+(lnot(ogt (fadd (llvm.ceil.f64 double X) (fpext double Y)) (fadd (fpext double (llvm.floor.f32 float Y)) X)))
+

@@ -1,0 +1,1 @@
+int foo(int m, int p) ;

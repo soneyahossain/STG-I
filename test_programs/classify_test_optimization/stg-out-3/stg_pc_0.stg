@@ -1,0 +1,10 @@
+[
+A : i32 = 38,range:[-20,20],uniform,
+B : i32 = 38,range:[-20,20],uniform,
+C : i32 = 38,range:[-20,20],uniform
+]
+
+//Test: passed
+
+(lnot(or (or (slt A (i32 1)) (slt B (i32 1))) (slt C (i32 1))))
+

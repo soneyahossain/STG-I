@@ -1,0 +1,9 @@
+[
+A : i32 = 38,range:[-20,20],uniform,
+B : i32 = 38,range:[-20,20],uniform,
+C : i32 = 38,range:[-20,20],uniform
+]
+
+//Test: failed
+
+

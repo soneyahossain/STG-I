@@ -1,0 +1,23 @@
+[
+LAT : double,
+LON : double,
+ALT : float,
+HLAT : i32,
+LLAT : i32,
+HLON : i32,
+LLON : i32
+]
+
+//Test: failed
+
+(land
+  (slt (i32 0) (i32 1))
+  (land
+    (ogt ALT (float 400.000000))
+    (land
+      (lnot(trunc i1 (i8 0)))
+      (lnot(slt (add (i32 0) (i32 1)) (i32 1)))
+    )
+  )
+)
+
