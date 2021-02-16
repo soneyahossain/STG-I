@@ -1,9 +1,0 @@
-[
-X : i32,
-Y : i32
-]
-
-//Test: passed
-
-(sgt (add X Y) (i32 -10))
-
