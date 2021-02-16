@@ -1,2 +1,0 @@
-state[v(0x7ffee26c7988) --> A]
-state[v(0x7ffee26c798c) --> B]
