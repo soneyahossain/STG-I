@@ -11,3 +11,5 @@
 /test/
 /test_programs/DuplicateTestCheck/
 /test_programs/slicing/
+/test_programs/Gtest_Intrument/
+/test_programs/GtestDemo/
