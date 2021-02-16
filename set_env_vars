@@ -1,4 +1,4 @@
-export STGI_HOME=$(dirname $(readlink -f $0))
+export STGI_HOME=$(pwd)
 export LLVM_DIR=/usr/lib/llvm-10
 export STGI_INC=/usr/local/include/stgi
 export STGI_LIB=/usr/local/lib/stgi

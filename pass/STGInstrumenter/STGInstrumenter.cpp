@@ -709,6 +709,7 @@ struct STGInstrumenter : public ModulePass {
                     std::string dst_type_;
                     llvm::raw_string_ostream dtype(dst_type_);
                     dst_type->print(dtype);
+		    
                     //  errs() << "dst_typ Type===========" << dtype.str() << "\n";
 
                     if (I->getType()->isPointerTy()) {
@@ -756,7 +757,6 @@ struct STGInstrumenter : public ModulePass {
                         args.push_back(src_value_);
 
                         if (srs_type == Type::getInt1Ty(context)) {
-
                             //   errs() << "here3\n";
                             CallInst::Create(stg_update_cast_i1, args)->insertBefore(I);
                         }

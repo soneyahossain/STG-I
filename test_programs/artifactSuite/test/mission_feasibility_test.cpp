@@ -2,9 +2,16 @@
 #include <gtest/gtest.h>
 #include "../src/simpler_mission.h"
 #include "../../../lib/stg.h"
+<<<<<<< HEAD
 #include <stdio.h>
 
 /*
+=======
+#include "../../../lib/distribution.hpp"
+#include <stdio.h>
+
+
+>>>>>>> master
 TEST(MissionCheck, CheckCombined)
 {
 
@@ -56,7 +63,11 @@ TEST(MissionCheck, CheckCombined)
     stg_symbolic_variable_float(&home_lat, "HOME_LAT", -20, 20, uniform, 0, 0);
 
 
+<<<<<<< HEAD
     //please note that all the stg_input_  calls are removed to simplify src code annotations
+=======
+    //please note that all the stg_input_  calls are removed to simply src code annotations
+>>>>>>> master
 
     //step 4: call function and store the result in a boolean var
 
@@ -110,8 +121,11 @@ TEST(MissionCommandCheck, InValidWaypoint)
     //printf("Check a waypoint with initial invalid command: %s\n", checkMissionItemValidity(mission)?"valid":"invalid");
 }
 
+<<<<<<< HEAD
 */
 
+=======
+>>>>>>> master
 TEST(CheckGeofence, InsideInclu)
 {
     int high_lat = 79, low_lat = 35, high_lon = 85, low_lon = 35;
@@ -200,6 +214,7 @@ TEST(CheckGeofence, InsideTooHigh)
     mission.items[0].altitude_is_relative = false;
 
     stg_begin_test();
+<<<<<<< HEAD
     stg_symbolic_variable_double(&mission.items[0].lat, "LAT");//, -20, 20, uniform, 0, 0);
     stg_symbolic_variable_double(&mission.items[0].lon, "LON");//, -20, 20, uniform, 0, 0);
     stg_symbolic_variable_float(&mission.items[0].altitude, "ALT");//, -20, 20, uniform, 0, 0);
@@ -208,6 +223,16 @@ TEST(CheckGeofence, InsideTooHigh)
     stg_symbolic_variable_int(&low_lat, "LLAT");//, -20, 20, uniform, 0, 0);
     stg_symbolic_variable_int(&high_lon, "HLON");//, -20, 20, uniform, 0, 0);
     stg_symbolic_variable_int(&low_lon, "LLON");//, -20, 20, uniform, 0, 0);
+=======
+    stg_symbolic_variable_double(&mission.items[0].lat, "LAT", -20, 20, uniform, 0, 0);
+    stg_symbolic_variable_double(&mission.items[0].lon, "LON", -20, 20, uniform, 0, 0);
+    stg_symbolic_variable_float(&mission.items[0].altitude, "ALT", -20, 20, uniform, 0, 0);
+    //stg_symbolic_variable(&inclusion, "INC", -20, 20,uniform,0,0);
+    stg_symbolic_variable_int(&high_lat, "HLAT", -20, 20, uniform, 0, 0);
+    stg_symbolic_variable_int(&low_lat, "LLAT", -20, 20, uniform, 0, 0);
+    stg_symbolic_variable_int(&high_lon, "HLON", -20, 20, uniform, 0, 0);
+    stg_symbolic_variable_int(&low_lon, "LLON", -20, 20, uniform, 0, 0);
+>>>>>>> master
 
 
     bool isGeofenced = checkGeofence(mission, true, high_lat, low_lat, high_lon, low_lon);
@@ -464,7 +489,6 @@ TEST(CheckAltitute, InvalidMission2pointbelowhome)
 }
 
 */
-
 
 int main(int argc, char** argv)
 {
