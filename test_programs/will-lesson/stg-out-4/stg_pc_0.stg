@@ -1,0 +1,8 @@
+[
+X : double
+]
+
+//Test: failed
+
+(ne (i64 0x7ffeea203944) (i64 0))
+

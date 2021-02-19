@@ -1,0 +1,8 @@
+[
+X : double
+]
+
+//Test: failed
+
+(ne 0x7ffee31f7944 0)
+
