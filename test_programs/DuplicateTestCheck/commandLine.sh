@@ -7,7 +7,7 @@
 #clang++ -std=c++14 -emit-llvm -fno-discard-value-names VelocitySmoothing.cpp -c -o PUT_.bc
 #clang++ -std=c++14 -emit-llvm -fno-discard-value-names test_velocity_smoothing_mcdc_symbolic.cpp  -c -o test_PUT.bc
 
-clang++ -std=c++14 -DSTG -emit-llvm -fno-discard-value-names llvm.sin+cos_test.cpp -c -o PUT.bc
+clang++ -std=c++14 -DSTG -emit-llvm -fno-discard-value-names max.cpp -c -o PUT.bc
 
 
 # below command is not really necessary, but it generates a readable version of the bitcode for debugging purspose
@@ -15,14 +15,14 @@ clang++ -std=c++14 -DSTG -emit-llvm -fno-discard-value-names llvm.sin+cos_test.c
 
 # Step 2:
 # instrument linked symtem under test by running STG-I pass
-/Users/soneyabintahossain/llvm_project/llvm-project/build/bin/opt -load=/Users/soneyabintahossain/llvm_project/llvm-project/build/lib/LLVMSTGInstrumenter.dylib -STGInstrumenter PUT.bc -o IPUT.bc
+/Users/soneyabintahossain/llvm_project/llvm-project/build/bin/opt -load=/Users/soneyabintahossain/llvm_project/llvm-project/build/lib/DupTestDetector.dylib -DupTestDetector PUT.bc -o IPUT.bc
 
 # below command is not really necessary, but it generates a readable version of the bitcode for debugging purspose
 /Users/soneyabintahossain/llvm_project/llvm-project/build/bin/llvm-dis IPUT.bc -o IPUT.ll
 
 # Step 3:
 # generate llvm bitcode for stg library ( notice here that we dont instrument these libraries, we only instrument system under test )
-clang++ -std=c++14 -emit-llvm stgi/stg.cpp -c -o symbolicstate.bc
+clang++ -std=c++14 -emit-llvm ../../lib/stg.cpp -c -o symbolicstate.bc
 
 
 # Step 4:
