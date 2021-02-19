@@ -1,8 +1,0 @@
-[
-X : double
-]
-
-//Test: failed
-
-(ne 0x7ffeef697944 0)
-
