@@ -1,0 +1,38 @@
+[
+H : float
+]
+
+//Test: passed
+
+(land
+  (lnot(olt H (float 5.800000)))
+  (land
+    (ole (double 5.800000) (fpext double H))
+    (land
+      (lnot(ole H (float 5.900000)))
+      (land
+        (ole (double 5.100000) (fpext double H))
+        (land
+          (lnot(ole H (float 5.110000)))
+          (land
+            (ole (float 6.000000) H)
+            (land
+              (lnot(ole (fpext double H) (double 6.100000)))
+              (land
+                (ole (float 6.200000) H)
+                (land
+                  (lnot(olt H (float 6.500000)))
+                  (land
+                    (ogt (double 6.900000) (fpext double H))
+                    (oge H (float 6.500000))
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

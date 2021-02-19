@@ -1,0 +1,9 @@
+[
+S0 : double,
+S1 : float
+]
+
+//Test: passed
+
+(ogt (fadd (llvm.log.f64 double S0) (fpext double S1)) (fadd (fpext double (llvm.log10.f32 float S1)) S0))
+

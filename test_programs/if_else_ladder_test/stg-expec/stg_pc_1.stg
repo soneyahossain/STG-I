@@ -1,0 +1,12 @@
+[
+X : i32,
+Y : i32
+]
+
+//Test: passed
+
+(land
+  (lnot(eq X Y))
+  (sgt X Y)
+)
+
