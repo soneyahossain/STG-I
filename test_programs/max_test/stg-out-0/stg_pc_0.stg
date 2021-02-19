@@ -1,9 +1,0 @@
-[
-A : i32 = 0,range:[-2.14748e+09,2.14748e+09],uniform,
-B : i32 = 1,range:[-2.14748e+09,2.14748e+09],uniform
-]
-
-//Test: passed
-
-(lnot(sgt A B))
-

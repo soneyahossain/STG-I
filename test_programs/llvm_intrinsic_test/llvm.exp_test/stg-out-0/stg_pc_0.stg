@@ -1,9 +1,0 @@
-[
-S0 : double,
-S1 : float
-]
-
-//Test: passed
-
-(ogt exp_RET exp_RET)
-

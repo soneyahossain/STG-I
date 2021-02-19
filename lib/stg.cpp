@@ -307,7 +307,7 @@ void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* 
 
     //check if anyone the
 
-    std::cout << key << "--> " << lvalue << " " << predicate << " " << rvalue << ", hasleftsym: "<<hasLeftSymbolicVar << ", hasRightsym: "<<hasRightSymbolicVar<< "\n";
+    //std::cout << key << "--> " << lvalue << " " << predicate << " " << rvalue << ", hasleftsym: "<<hasLeftSymbolicVar << ", hasRightsym: "<<hasRightSymbolicVar<< "\n";
 
     if (hasLeftSymbolicVar||hasRightSymbolicVar) sym_state[key] = "(" + predicate + " " + lvalue + " " + rvalue + ")";
 
@@ -419,7 +419,7 @@ void stg_update_load_i32(int* addr, char* val)
 void stg_update_user_input(std::string address, std::string value, std::string type)
 {
     //check if this variable is symbolic, if then do update dictionary , else update symbolic map with value
-    std::cout << address << "--> " << value << " " << type << "\n";
+    //std::cout << address << "--> " << value << " " << type << "\n";
 
     auto itr = sym_var_map.find("v(" + address + ")");
     if (itr != sym_var_map.end()) {
@@ -593,8 +593,8 @@ void stg_update_store_double(double* addr, char* val)
 //for pointer store op
 void stg_update_store_pointer(void* val, void** addr)
 {
-    std::cout << " value:" << val <<"\n";
-    std::cout << " store address:" << addr <<"\n";
+    //std::cout << " value:" << val <<"\n";
+    //std::cout << " store address:" << addr <<"\n";
 
     std::stringstream storeaddress;
     storeaddress << addr;
@@ -609,10 +609,10 @@ void stg_update_store_pointer(void* val, void** addr)
 }
 
 
-void stg_update_load_pointer(char* val, void** addr)
+void stg_update_load_pointer(void* val, void** addr)
 {
-    std::cout << " value:" << val <<"\n";
-    std::cout << " load address:" << addr <<"\n";
+   // std::cout << " value:" << val <<"\n";
+   // std::cout << " load address:" << addr <<"\n";
 
     std::stringstream storeaddress;
     storeaddress << addr;
@@ -758,8 +758,8 @@ void stg_update_cast_i1(char* key, char* val_name, char* castOp, char* srcty, ch
     std::string castop(castOp);
     std::string dst_type(dstty);
     std::string src_type(srcty);
-    std::cout << value_name << "\n";
-    std::cout << castop << "\n";
+    //std::cout << value_name << "\n";
+    //std::cout << castop << "\n";
     //std::cout<<n_value << "\n";
 
     std::string value_;
@@ -785,8 +785,8 @@ void stg_update_cast_i8(char* key, char* val_name, char* castOp, char* srcty, ch
     std::string dst_type(dstty);
     std::string src_type(srcty);
 
-    std::cout << value_name << "\n";
-    std::cout << castop << "\n";
+    //std::cout << value_name << "\n";
+    //std::cout << castop << "\n";
     //std::cout<<n_value << "\n";
 
     std::string value_;
@@ -810,8 +810,8 @@ void stg_update_cast_i16(char* key, char* val_name, char* castOp, char* srcty, c
     std::string dst_type(dstty);
     //std::string n_value(value);
 
-    std::cout << value_name << "\n";
-    std::cout << castop << "\n";
+    //std::cout << value_name << "\n";
+    //std::cout << castop << "\n";
     std::string src_type(srcty);
 
     std::string value_;
@@ -835,8 +835,8 @@ void stg_update_cast_i32(char* key, char* val_name, char* castOp, char* srcty, c
     std::string dst_type(dstty);
     std::string src_type(srcty);
 
-    std::cout << value_name << "\n";
-    std::cout << castop << "\n";
+    //std::cout << value_name << "\n";
+    //std::cout << castop << "\n";
     //std::cout<<n_value << "\n";
 
     std::string value_;
@@ -860,8 +860,8 @@ void stg_update_cast_i64(char* key, char* val_name, char* castOp, char* srcty, c
     std::string dst_type(dstty);
     std::string src_type(srcty);
 
-    std::cout << value_name << "\n";
-    std::cout << castop << "\n";
+    //std::cout << value_name << "\n";
+    //std::cout << castop << "\n";
     //std::cout<<n_value << "\n";
 
     std::string value_;
@@ -886,8 +886,8 @@ void stg_update_cast_float(char* key, char* val_name, char* castOp, char* srcty,
     std::string dst_type(dstty);
     std::string src_type(srcty);
 
-    std::cout << value_name << "\n";
-    std::cout << castop << "\n";
+    //std::cout << value_name << "\n";
+   // std::cout << castop << "\n";
     //std::cout<<n_value << "\n";
 
     std::string value_;
@@ -912,8 +912,8 @@ void stg_update_cast_double(char* key, char* val_name, char* castOp, char* srcty
     std::string dst_type(dstty);
     std::string src_type(srcty);
 
-    std::cout << value_name << "\n";
-    std::cout << castop << "\n";
+    //std::cout << value_name << "\n";
+    //std::cout << castop << "\n";
     //std::cout<<n_value << "\n";
 
     std::string value_;
@@ -1075,9 +1075,9 @@ void clear_maps()
 void print_maps()
 {
 
-    for (const auto& x : sym_var_map) {
-        std::cout << x.first << ": " << x.second << "\n";
-    }
+    //for (const auto& x : sym_var_map) {
+        //std::cout << x.first << ": " << x.second << "\n";
+    //}
 
     //for (const auto& x : sym_range) {
         //std::cout << x.first << ": " << x.second << "\n";
@@ -1087,9 +1087,9 @@ void print_maps()
        // std::cout << x.first << ": " << x.second << "\n";
    // }
 
-    for (const auto& x : sym_state) {
-        std::cout << x.first << ": " << x.second << "\n";
-    }
+    //for (const auto& x : sym_state) {
+       // std::cout << x.first << ": " << x.second << "\n";
+    //}
 }
 void stg_start_intrmnt(){}
 void stg_stop_intrmnt(){}

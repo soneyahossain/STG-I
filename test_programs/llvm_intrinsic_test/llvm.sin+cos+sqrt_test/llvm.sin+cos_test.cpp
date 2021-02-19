@@ -19,9 +19,9 @@ bool isIsoscelesRightTriangle(double theta, double hypotenuse)
 
 int main()
 {
-    double theta, hyp_sqr; // theta in degree // hyp_sqr =  square of hypotenuse
-    scanf("%lf",&theta);
-    scanf("%lf",&hyp_sqr);
+    double theta=90, hyp_sqr=4; // theta in degree // hyp_sqr =  square of hypotenuse
+    //scanf("%lf",&theta);
+    //scanf("%lf",&hyp_sqr);
 
 
     stg_begin_test();

@@ -1,6 +1,5 @@
-//#include "../stg_lib/stg.h"
 #include <stdio.h>
-#include "stgi/stg.h"
+#include "/usr/local/include/stgi/stg.h"
 
 int main()
 {

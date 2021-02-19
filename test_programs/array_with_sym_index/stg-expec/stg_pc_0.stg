@@ -1,0 +1,12 @@
+[
+A : i32,
+B : i32
+]
+
+//Test: failed
+
+(land
+  (lnot(sgt A (i32 2)))
+  (lnot(sgt B (i32 2)))
+)
+

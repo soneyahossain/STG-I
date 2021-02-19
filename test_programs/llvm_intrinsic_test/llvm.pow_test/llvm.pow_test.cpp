@@ -18,10 +18,10 @@ bool isGreaterThan(double x, double y)
 
 int main()
 {
-    double base, power;
+    double base=3.0, power=4.0;
 
-    scanf("%lf",&base);
-    scanf("%lf",&power);
+    //scanf("%lf",&base);
+    //scanf("%lf",&power);
 
     stg_begin_test();
 
