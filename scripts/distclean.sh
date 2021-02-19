@@ -58,5 +58,3 @@ for f in $stgi_files
 do
 	remove_if_exists $f
 done
-
-verify_uninstall
