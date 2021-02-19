@@ -65,8 +65,8 @@ assert_env_var_defined LLVM_DIR
 assert_env_var_defined STGI_LIB
 assert_env_var_defined STGI_INC
 
-cd $STGI_HOME/util
-./uninstall_stgi.sh
+cd $STGI_HOME/scripts
+./distclean.sh
 
 install_stg_lib
 install_stg_llvm_pass

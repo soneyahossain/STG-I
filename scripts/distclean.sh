@@ -5,8 +5,7 @@ remove_if_exists()
 	to_remove=$1
 	if [ -f $to_remove ]; then
 		echo "Removing $to_remove"
-#		sudo rm $to_remove
-		rm $to_remove
+		sudo rm $to_remove
 	fi
 }
 
