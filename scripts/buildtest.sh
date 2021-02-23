@@ -16,10 +16,10 @@ $LLVM_PATH/llvm-dis PUT.bc -o PUT.ll
 
 # Step 2:
 # instrument linked symtem under test by running STG-I pass
-$LLVM_PATH/opt -load=$LLVM_LIB_PATH/LLVMSTGInstrumenter.dylib -STGInstrumenter PUT.bc -o IPUT.bc
+"$LLVM_PATH"/opt -load="$LLVM_LIB_PATH"/LLVMSTGInstrumenter.dylib -STGInstrumenter PUT.bc -o IPUT.bc
 
 # below command is not really necessary, but it generates a readable version of the bitcode for debugging purspose
-$LLVM_PATH/llvm-dis IPUT.bc -o IPUT.ll
+"$LLVM_PATH"/llvm-dis IPUT.bc -o IPUT.ll
 
 # Step 3:
 # generate llvm bitcode for stg library ( notice here that we dont instrument these libraries, we only instrument system under test )
@@ -28,7 +28,7 @@ $LLVM_PATH/llvm-dis IPUT.bc -o IPUT.ll
 
 # Step 4:
 # link symtem under test and stg library together
-$LLVM_PATH/llvm-link IPUT.bc $STGI_LIB/stg.bc -o linked.bc
+"$LLVM_PATH"/llvm-link IPUT.bc "$STGI_LIB"/stg.bc -o linked.bc
 
 # below command is not really necessary, but it generates a readable version of the bitcode for debugging purspose
 #$LLVM_PATH/llvm-dis linked.bc -o linked.ll
@@ -37,7 +37,7 @@ $LLVM_PATH/llvm-link IPUT.bc $STGI_LIB/stg.bc -o linked.bc
 # The llc command compiles LLVM source inputs into assembly language for a specified architecture.
 # The assembly language output can then be passed through a native assembler and linker to generate a native executable.
 # -filetype=obj flag is used for native object files ('.o')
-$LLVM_PATH/llc -filetype=obj linked.bc
+"$LLVM_PATH"/llc -filetype=obj linked.bc
 
 # Step 6:
 # generate executable file using clang command
