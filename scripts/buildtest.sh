@@ -12,14 +12,14 @@ clang++ -std=c++14 -emit-llvm -fno-discard-value-names "$file" -c -o PUT.bc
 #/Users/soneyabintahossain/llvm_project/llvm-project/build/bin/llvm-link PUT_.bc test_PUT.bc -o PUT.bc
 
 # below command is not really necessary, but it generates a readable version of the bitcode for debugging purspose
-llvm-dis PUT.bc -o PUT.ll
+#llvm-dis PUT.bc -o PUT.ll
 
 # Step 2:
 # instrument linked symtem under test by running STG-I pass
 opt -load="$STGI_LIB"/LLVMSTGInstrumenter.so -STGInstrumenter PUT.bc -o IPUT.bc
 
 # below command is not really necessary, but it generates a readable version of the bitcode for debugging purspose
-llvm-dis IPUT.bc -o IPUT.ll
+#llvm-dis IPUT.bc -o IPUT.ll
 
 # Step 3:
 # generate llvm bitcode for stg library ( notice here that we dont instrument these libraries, we only instrument system under test )

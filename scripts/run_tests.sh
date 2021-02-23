@@ -3,15 +3,46 @@
 testPassed=true
 
 #making sure the environments are set properly
-echo "STGI_HOME is set to: $STGI_HOME"
-echo "STGI_EXAMPLE_DIR is set to: $STGI_EXAMPLE_DIR"
-echo "STGI_SCRIPT_DIR is set to: $STGI_SCRIPT_DIR"
+if [ -z "$STGI_HOME" ]
+then
+     echo "STGI_HOME is not set"
+     exit 1
+else
+  echo "STGI_HOME is set to: $STGI_HOME"
+fi
+
+if [ -z "$STGI_EXAMPLE_DIR" ]
+then
+     echo "STGI_EXAMPLE_DIR is not set"
+     exit 1
+else
+  echo "STGI_EXAMPLE_DIR is set to: $STGI_HOME"
+fi
+
+if [ -z "$STGI_SCRIPT_DIR" ]
+then
+     echo "STGI_SCRIPT_DIR is not set"
+     exit 1
+else
+  echo "STGI_SCRIPT_DIR is set to: $STGI_HOME"
+fi
 
 # cd into the script directory
 cd "$STGI_SCRIPT_DIR"
 
 #remove all existing sub directories
-rm -R -- */
+#rm -R -- */
+
+mkdir -p "$STGI_HOME"/out/temp
+
+
+if [ ! -d "$STGI_HOME"/out/temp ]
+then
+     echo "../out/temp creation failed"
+     exit 1
+else
+    cd "$STGI_HOME"/out/temp
+fi
 
 #create text file to store test summary
 if [ ! -f test_result.txt ]
@@ -31,13 +62,14 @@ do
     dir_name=$(basename $(dirname "$file_path"))
     filename=$(basename "$file_path")
 
-    echo "$dir_name"
-    echo "$filename"
+    #echo "$dir_name"
+    #echo "$filename"
+  
 
-   ./buildtest.sh "$file_path"
+   sh "$STGI_SCRIPT_DIR"/buildtest_macOS.sh "$file_path"
 
-    mv stg-out-0 stg-out-"$dir_name"
-    DIFF=$(diff -x '*.txt' -r -N stg-out-"$dir_name"  "$STGI_EXAMPLE_DIR"/"$dir_name"/stg-expec)   # -x means exclude .txt file, -r check recursively , - N show if as full file if other absent
+    mv stg-out-0   "$dir_name"
+    DIFF=$(diff -x '*.txt' -r -N "$dir_name"  "$STGI_EXAMPLE_DIR"/"$dir_name"/stg-expec)   # -x means exclude .txt file, -r check recursively , - N show if as full file if other absent
     #echo "$DIFF"
 
     if [ "$DIFF" != "" ]
@@ -46,24 +78,32 @@ do
       testPassed=false
     else
       echo "Test Passed for $filename" >> test_result.txt
+      echo "$DIFF"
+
     fi
 done
 
-echo $testPassed
+echo -n "Test Summary"
+cat test_result.txt
+cp test_result.txt  "$STGI_HOME"/out
 
 if [ "$testPassed" ]
 then
-  #remove all existing sub directories
-  rm -R -- */
-  rm -rf *.ll
-  rm -rf *.bc
-  rm -rf *.o
-  rm -rf *.out
+
+  cd "$STGI_HOME"/out
+  rm -r temp
+  #remove temp
+  #rm -R -- */
+  #rm -rf *.ll
+  #rm -rf *.bc
+  #rm -rf *.o
+  #rm -rf *.out
+
+else
+  echo "A few tests failed, for details see out/test_result.txt"
+  exit 1
 fi
 
-echo "Test Summary"
-cat test_result.txt
-rm -rf test_result.txt
 
 #end of script
 
