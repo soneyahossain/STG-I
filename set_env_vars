@@ -1,6 +1,17 @@
-export STGI_HOME=$(pwd)
+if [ -z "$STGI_HOME" ]; then
+	export STGI_HOME=$PWD
+fi
+
+# Do we really need this one now that we don't build from source?
+export LLVM_DIR=/usr/lib/llvm-10
+
+if [ -z "$STGI_INC" ]; then
+	export STGI_INC=/usr/local/include/stgi
+fi
+
+if [ -z "$STGI_LIB" ]; then
+	export STGI_LIB=/usr/local/lib/stgi
+fi
+
 export STGI_EXAMPLE_DIR=$STGI_HOME/examples
 export STGI_SCRIPT_DIR=$STGI_HOME/scripts
-export LLVM_DIR=/usr/lib/llvm-10
-export STGI_INC=/usr/local/include/stgi
-export STGI_LIB=/usr/local/lib/stgi

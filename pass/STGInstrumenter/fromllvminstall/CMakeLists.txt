@@ -23,6 +23,7 @@ if(NOT LLVM_ENABLE_RTTI)
 endif()
 
 add_library( LLVMSTGInstrumenter SHARED ../STGInstrumenter.cpp )
+set_target_properties(LLVMSTGInstrumenter PROPERTIES PREFIX "")
 
 # Allow undefined symbols in shared objects on Darwin (this is the default
 # behaviour on Linux)
