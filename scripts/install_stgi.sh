@@ -65,6 +65,14 @@ assert_env_var_defined LLVM_DIR
 assert_env_var_defined STGI_LIB
 assert_env_var_defined STGI_INC
 
+if [ ! -d $STGI_INC ]; then
+	sudo mkdir /usr/local/include/stgi
+fi
+
+if [ ! -d $STGI_LIB ]; then
+	sudo mkdir /usr/local/lib/stgi
+fi
+
 cd $STGI_HOME/scripts
 ./distclean.sh
 
