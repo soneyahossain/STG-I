@@ -1,6 +1,7 @@
 #!/bin/bash
 #start:
-testPassed=true
+testPassed=$false
+
 
 #making sure the environments are set properly
 if [ -z "$STGI_HOME" ]
@@ -27,20 +28,24 @@ else
   echo "STGI_SCRIPT_DIR is set to: $STGI_HOME"
 fi
 
-# cd into the script directory
-cd "$STGI_SCRIPT_DIR"
 
-#remove all existing sub directories
-#rm -R -- */
-
-mkdir -p "$STGI_HOME"/out/temp
+#creating out dir inside out
+mkdir -p "$STGI_HOME"/out
 
 
-if [ ! -d "$STGI_HOME"/out/temp ]
+if [ ! -d "$STGI_HOME"/out ]
 then
-     echo "../out/temp creation failed"
+     echo "out dir creation failed"
      exit 1
 else
+
+    echo "out directory exists, creating temp directory if not exists"
+    if [ -d "$STGI_HOME"/out/temp ]
+    then
+      rm -rf  "$STGI_HOME"/out/temp
+    fi
+
+    mkdir "$STGI_HOME"/out/temp
     cd "$STGI_HOME"/out/temp
 fi
 
@@ -57,32 +62,45 @@ for dir in "$STGI_EXAMPLE_DIR"/*      # list directories"
 do
     #echo "$dir"
     file_path=$(find "$dir" -type f -name "*.cpp")
-    echo "$file_path"
+
+
+    if [ -z "$file_path" ]
+    then
+      echo "No file in $dir" >> test_result.txt
+      testPassed=$false
+      break
+    else
+       echo "$file_path"
+    fi
 
     dir_name=$(basename $(dirname "$file_path"))
     filename=$(basename "$file_path")
 
-    #echo "$dir_name"
-    #echo "$filename"
-  
+    echo "$dir_name"
+    echo "$filename"
 
-   sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path"
 
-    mv stg-out-0   "$dir_name"
+    sh "$STGI_SCRIPT_DIR"/buildtest_macOS.sh "$file_path"
+
+    mv stg-out-0 "$dir_name"
+
+
     DIFF=$(diff -x '*.txt' -r -N "$dir_name"  "$STGI_EXAMPLE_DIR"/"$dir_name"/stg-expec)   # -x means exclude .txt file, -r check recursively , - N show if as full file if other absent
     #echo "$DIFF"
 
     if [ "$DIFF" != "" ]
     then
       echo "Test Failed for $filename" >> test_result.txt
-      testPassed=false
+      testPassed=$false
+      break
     else
       echo "Test Passed for $filename" >> test_result.txt
-      echo "$DIFF"
+      echo "$DIFF" >> test_result.txt
     fi
 done
 
-echo -n "Test Summary"
+echo -e "----------------Test Summary--------------------\n"
+
 cat test_result.txt
 cp test_result.txt  "$STGI_HOME"/out
 
@@ -94,12 +112,8 @@ then
   rm -r temp
 
 else
-  echo "A few tests failed, for details see out/test_result.txt"
+  echo "A few tests failed, for details see out/temp and out/test_result.txt"
   exit 1
 fi
 
-
 #end of script
-
-<< 'MULTILINE-COMMENT'
-MULTILINE-COMMENT
