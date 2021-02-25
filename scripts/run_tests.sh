@@ -4,48 +4,40 @@ testPassed=true
 
 
 #making sure the environments are set properly
-if [ -z "$STGI_HOME" ]
-then
-     echo "STGI_HOME is not set"
-      testPassed=false
-     exit 1
+if [ -z "$STGI_HOME" ];then
+  echo "STGI_HOME is not set"
+  testPassed=false
+  exit 1
 else
   echo "STGI_HOME is set to: $STGI_HOME"
 fi
 
-if [ -z "$STGI_EXAMPLE_DIR" ]
-then
-     echo "STGI_EXAMPLE_DIR is not set"
-      testPassed=false
-     exit 1
+if [ -z "$STGI_EXAMPLE_DIR" ];then
+  echo "STGI_EXAMPLE_DIR is not set"
+  testPassed=false
+  exit 1
 else
   echo "STGI_EXAMPLE_DIR is set to: $STGI_HOME"
 fi
 
-if [ -z "$STGI_SCRIPT_DIR" ]
-then
-     echo "STGI_SCRIPT_DIR is not set"
-      testPassed=false
-     exit 1
+if [ -z "$STGI_SCRIPT_DIR" ];then
+  echo "STGI_SCRIPT_DIR is not set"
+  testPassed=false
+  exit 1
 else
   echo "STGI_SCRIPT_DIR is set to: $STGI_HOME"
 fi
 
-
 #creating out dir inside out
 mkdir -p "$STGI_HOME"/out
 
-
-if [ ! -d "$STGI_HOME"/out ]
-then
-     echo "out dir creation failed"
-      testPassed=false
-     exit 1
+if [ ! -d "$STGI_HOME"/out ];then
+  echo "out dir creation failed"
+  testPassed=false
+  exit 1
 else
-
     echo "out directory exists, creating temp directory if not exists"
-    if [ -d "$STGI_HOME"/out/temp ]
-    then
+    if [ -d "$STGI_HOME"/out/temp ];then
       rm -rf  "$STGI_HOME"/out/temp
     fi
 
@@ -54,11 +46,10 @@ else
 fi
 
 #create text file to store test summary
-if [ ! -f test_result.txt ]
-then
-    touch test_result.txt
+if [ ! -f test_result.txt ];then
+  touch test_result.txt
 else
-    : > test_result.txt
+  : > test_result.txt
 fi
 
 
@@ -67,11 +58,9 @@ do
     #echo "$dir"
     file_path=$(find "$dir" -type f -name "*.cpp")
 
-
-    if [ -z "$file_path" ]
-    then
+    if [ -z "$file_path" ];then
       echo "No file in $dir" >> test_result.txt
-       testPassed=false
+      testPassed=false
       break
     else
        echo "$file_path"
@@ -80,8 +69,8 @@ do
     dir_name=$(basename $(dirname "$file_path"))
     filename=$(basename "$file_path")
 
-    echo "$dir_name"
-    echo "$filename"
+    #echo "$dir_name"
+    #echo "$filename"
 
     sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path" #calling build script
     mv stg-out-0 "$dir_name"
@@ -89,8 +78,7 @@ do
     DIFF=$(diff -x '*.txt' -r -N "$dir_name"  "$STGI_EXAMPLE_DIR"/"$dir_name"/stg-expec)   # -x means exclude .txt file, -r check recursively , - N show if as full file if other absent
     #echo "$DIFF"
 
-    if [ "$DIFF" != "" ]
-    then
+    if [ "$DIFF" != "" ];then
       echo "Test Failed for $filename" >> test_result.txt
       testPassed=false
       break
@@ -102,15 +90,13 @@ done
 
 echo -e "----------------Test Summary--------------------\n"
 
-echo $testPassed
+#echo $testPassed
 cat test_result.txt
 cp test_result.txt  "$STGI_HOME"/out
 
-if [ "$testPassed" ]
-then
+if [ "$testPassed" ];then
   cd "$STGI_HOME"/out
-  #remove temp
-  rm -r temp
+  rm -r temp  #remove temp
 else
   echo "A few tests failed, for details see out/temp and out/test_result.txt"
   exit 1
