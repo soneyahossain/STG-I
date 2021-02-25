@@ -1,12 +1,13 @@
 #!/bin/bash
 #start:
-testPassed=$false
+testPassed=true
 
 
 #making sure the environments are set properly
 if [ -z "$STGI_HOME" ]
 then
      echo "STGI_HOME is not set"
+      testPassed=false
      exit 1
 else
   echo "STGI_HOME is set to: $STGI_HOME"
@@ -15,6 +16,7 @@ fi
 if [ -z "$STGI_EXAMPLE_DIR" ]
 then
      echo "STGI_EXAMPLE_DIR is not set"
+      testPassed=false
      exit 1
 else
   echo "STGI_EXAMPLE_DIR is set to: $STGI_HOME"
@@ -23,6 +25,7 @@ fi
 if [ -z "$STGI_SCRIPT_DIR" ]
 then
      echo "STGI_SCRIPT_DIR is not set"
+      testPassed=false
      exit 1
 else
   echo "STGI_SCRIPT_DIR is set to: $STGI_HOME"
@@ -36,6 +39,7 @@ mkdir -p "$STGI_HOME"/out
 if [ ! -d "$STGI_HOME"/out ]
 then
      echo "out dir creation failed"
+      testPassed=false
      exit 1
 else
 
@@ -67,7 +71,7 @@ do
     if [ -z "$file_path" ]
     then
       echo "No file in $dir" >> test_result.txt
-      testPassed=$false
+       testPassed=false
       break
     else
        echo "$file_path"
@@ -79,11 +83,8 @@ do
     echo "$dir_name"
     echo "$filename"
 
-
-    sh "$STGI_SCRIPT_DIR"/buildtest_macOS.sh "$file_path"
-
+    sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path" #calling build script
     mv stg-out-0 "$dir_name"
-
 
     DIFF=$(diff -x '*.txt' -r -N "$dir_name"  "$STGI_EXAMPLE_DIR"/"$dir_name"/stg-expec)   # -x means exclude .txt file, -r check recursively , - N show if as full file if other absent
     #echo "$DIFF"
@@ -91,7 +92,7 @@ do
     if [ "$DIFF" != "" ]
     then
       echo "Test Failed for $filename" >> test_result.txt
-      testPassed=$false
+      testPassed=false
       break
     else
       echo "Test Passed for $filename" >> test_result.txt
@@ -101,16 +102,15 @@ done
 
 echo -e "----------------Test Summary--------------------\n"
 
+echo $testPassed
 cat test_result.txt
 cp test_result.txt  "$STGI_HOME"/out
 
 if [ "$testPassed" ]
 then
-
   cd "$STGI_HOME"/out
   #remove temp
   rm -r temp
-
 else
   echo "A few tests failed, for details see out/temp and out/test_result.txt"
   exit 1
