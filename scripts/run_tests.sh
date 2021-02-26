@@ -94,11 +94,11 @@ echo -e "----------------Test Summary--------------------\n"
 cat test_result.txt
 cp test_result.txt  "$STGI_HOME"/out
 
-if [ "$testPassed" ];then
+if [ "$testPassed" = true ];then
   cd "$STGI_HOME"/out
   rm -r temp  #remove temp
 else
-  echo "A few tests failed, for details see out/temp and out/test_result.txt"
+  echo "A few tests failed, for details see $STGI_HOME/out/temp and $STGI_HOME/out/test_result.txt"
   exit 1
 fi
 

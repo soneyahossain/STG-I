@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "/usr/local/include/stgi/stg.h"
+#include "stgi/stg.h"
 
 int main()
 {

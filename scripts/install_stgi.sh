@@ -24,7 +24,10 @@ install_stg_lib()
 	echo "Installing STGI support library"
 	pushd $STGI_HOME/lib
 	make
-	sudo -E make install
+	make install
+	if [ ! $? -eq 0 ]; then
+		sudo -E make install
+	fi
 }
 
 install_stg_llvm_pass()
@@ -39,17 +42,17 @@ install_stg_llvm_pass()
 	#
 	# Verify installation
 	#
-	if [ ! -f /usr/local/lib/stgi/stg.bc ]; then
+	if [ ! -f $STGI_LIB/stg.bc ]; then
 		echo "STGi instrumentation bitcode failed to install"
 		exit 1
 	fi
 
-	if [ ! /usr/local/lib/stgi/libSTGInstrumenter.so ]; then
+	if [ ! $STGI_LIB/libSTGInstrumenter.so ]; then
 		echo "STG LLVM pass failed to install"
 		exit 1
 	fi
 
-	if [ ! -f /usr/local/include/stgi/stg.h ]; then
+	if [ ! -f $STGI_INC/stg.h ]; then
 		echo "STGi header definitions failed to install" 
 		exit 1
 	fi
@@ -66,11 +69,17 @@ assert_env_var_defined STGI_LIB
 assert_env_var_defined STGI_INC
 
 if [ ! -d $STGI_INC ]; then
-	sudo mkdir /usr/local/include/stgi
+	mkdir -p $STGI_INC
+	if [ ! -d $STGI_INC ]; then
+		sudo mkdir -p $STGI_INC
+	fi
 fi
 
 if [ ! -d $STGI_LIB ]; then
-	sudo mkdir /usr/local/lib/stgi
+	mkdir -p $STGI_LIB
+	if [ ! -d $STGI_LIB ]; then
+		sudo mkdir -p $STGI_LIB
+	fi
 fi
 
 cd $STGI_HOME/scripts
