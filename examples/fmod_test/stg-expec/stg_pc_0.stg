@@ -1,9 +1,0 @@
-[
-S0 : double,
-A : double
-]
-
-//Test: passed
-
-(ogt (frem S0 (double 5.600000)) (frem A (double 9.000000)))
-
