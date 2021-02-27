@@ -31,4 +31,4 @@ target_link_libraries(LLVMSTGInstrumenter
   "$<$<PLATFORM_ID:Darwin>:-undefined dynamic_lookup>")
 
 # For Unix 
-install (TARGETS LLVMSTGInstrumenter DESTINATION lib/stgi)
+install (TARGETS LLVMSTGInstrumenter DESTINATION $ENV{STGI_LIB} )
