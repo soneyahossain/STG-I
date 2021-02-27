@@ -1,9 +1,0 @@
-[
-T : double,
-H : double
-]
-
-//Test: failed
-
-(lnot(olt (fsub (fmul (llvm.sin.f64 double (fdiv (fmul T (double 3.141593)) (double 180.000000))) (llvm.sqrt.f64 double H)) (fmul (llvm.cos.f64 double (fdiv (fmul T (double 3.141593)) (double 180.000000))) (llvm.sqrt.f64 double H))) (double 0.001000)))
-

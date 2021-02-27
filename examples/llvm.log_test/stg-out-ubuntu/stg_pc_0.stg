@@ -1,9 +1,0 @@
-[
-S0 : double
-S1 : float
-
-]
-
-//Test: passed
-
-(ogt (fadd (log double S0) (fpext double S1)) (fadd (fpext double (log10f float S1)) S0))
