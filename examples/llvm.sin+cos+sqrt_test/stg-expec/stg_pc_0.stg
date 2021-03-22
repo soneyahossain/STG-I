@@ -1,0 +1,9 @@
+[
+T : double,
+H : double
+]
+
+//Test: failed
+
+(lnot(olt (fsub (fmul (sin double (fdiv (fmul T (double 3.141593)) (double 180.000000))) (sqrt double H)) (fmul (cos double (fdiv (fmul T (double 3.141593)) (double 180.000000))) (sqrt double H))) (double 0.001000)))
+
