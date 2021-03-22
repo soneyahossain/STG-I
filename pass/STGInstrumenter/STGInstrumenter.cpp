@@ -117,7 +117,7 @@ struct STGInstrumenter : public ModulePass {
     };
 
     std::vector<std::string> non_intrinsic = {
-        "atan2", "expf", "exp", "log10f", "log", "pow", "sin", "cos", "sqrt"
+        "atan2", "expf", "exp", "log10f", "log", "pow", "sin", "cos", "sqrt", "fmod"
     };
 
     STGInstrumenter()

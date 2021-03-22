@@ -1,0 +1,9 @@
+[
+S0 : double,
+A : double
+]
+
+//Test: passed
+
+(ogt (fmod double S0 (double 5.600000)) (fmod double A (double 9.000000)))
+
