@@ -42,7 +42,7 @@ else
     fi
 
     mkdir "$STGI_HOME"/out/temp
-    cd "$STGI_HOME"/out/temp
+    cd "$STGI_HOME"/out/temp || exit
 fi
 
 #create text file to store test summary
@@ -66,13 +66,22 @@ do
        echo "$file_path"
     fi
 
+    # shellcheck disable=SC2046
     dir_name=$(basename $(dirname "$file_path"))
     filename=$(basename "$file_path")
 
-    #echo "$dir_name"
+    echo "$dir_name"
     #echo "$filename"
 
-    sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path" #calling build script
+    #if dir name is simple_geofence then pass input file ( mcdc.txt)
+
+    if [ "$dir_name" = "simple_geofence" ]; then
+         sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path"  "$STGI_EXAMPLE_DIR"/"$dir_name"/"mcdc.txt"            #calling build script
+    else
+          sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path" #calling build script
+    fi
+
+
     mv stg-out-0 "$dir_name"
 
     DIFF=$(diff -x '*.txt' -r -N "$dir_name"  "$STGI_EXAMPLE_DIR"/"$dir_name"/stg-expec)   # -x means exclude .txt file, -r check recursively , - N show if as full file if other absent
@@ -95,7 +104,7 @@ cat test_result.txt
 cp test_result.txt  "$STGI_HOME"/out
 
 if [ "$testPassed" = true ];then
-  cd "$STGI_HOME"/out
+  cd "$STGI_HOME"/out || exit
   rm -r temp  #remove temp
 else
   echo "A few tests failed, for details see $STGI_HOME/out/temp and $STGI_HOME/out/test_result.txt"
