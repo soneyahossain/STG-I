@@ -1,0 +1,39 @@
+[
+LAT : i32,
+LON : i32,
+ALT : i32,
+INC : i32,
+HLAT : i32,
+LLAT : i32,
+HLON : i32,
+LLON : i32
+]
+
+//Test: passed
+
+(land
+  (lnot(slt HLON LLON))
+  (land
+    (lnot(slt HLAT LLAT))
+    (land
+      (lnot(sgt ALT (i32 400)))
+      (land
+        (sgt LON LLON)
+        (land
+          (lnot(slt LON HLON))
+          (land
+            (sge LON LLON)
+            (land
+              (lnot(sle LON HLON))
+              (land
+                (ne INC (i32 0))
+                (eq (zext i32 (trunc i1 (i8 0))) (zext i32 (trunc i1 (zext i8 (ne (xor (zext i32 ) (zext i32 (xor (ne INC (i32 0)) (i1 1)))) (i32 0))))))
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

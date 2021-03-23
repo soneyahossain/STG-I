@@ -295,6 +295,8 @@ struct STGInstrumenter : public ModulePass {
                             CallInst::Create(stg_update_bin_intrinsic, args)->insertBefore(I);
                         }
                     }
+
+                    /*  we dont need instrumenting scanf and sscanf anymore
                     else if (functionName.compare("sscanf") == 0 || functionName.compare("__isoc99_sscanf") == 0) //handle file reading
                     {
 
@@ -359,6 +361,8 @@ struct STGInstrumenter : public ModulePass {
                             CallInst::Create(stg_update_input_double, args)->insertAfter(I);
                         }
                     }
+
+                    */
                     else if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), functionName) == function_doNotInstrument.end()) { // if not in the
 
                         //errs() << "herreeee: function name:  "<<functionName<<"\n";
