@@ -63,8 +63,8 @@ void stg_pause_recording();  // to pause constraints record
 void stg_resume_recording(); // to resume constraints record
 
 // these calls wrap tests written using gtest, instruments only the necessary portion while ignoring all the gtest related cdde
-void stg_start_intrmnt();
-void stg_stop_intrmnt();
+void stg_start_instrument();
+void stg_stop_instrument();
 
 
 /*

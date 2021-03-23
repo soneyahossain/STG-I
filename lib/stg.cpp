@@ -1091,8 +1091,8 @@ void print_maps()
        // std::cout << x.first << ": " << x.second << "\n";
     //}
 }
-void stg_start_intrmnt(){}
-void stg_stop_intrmnt(){}
+void stg_start_instrument(){}
+void stg_stop_instrument(){}
 
 
 

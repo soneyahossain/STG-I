@@ -26,7 +26,7 @@ using namespace llvm;
 
 #define DEBUG_TYPE "stginstrument"
 
-cl::opt<bool> IgnoreInstrmntFlag("ignore-instrmnt-flag", cl::init(true),
+cl::opt<bool> DoPartialInstrument("partial-instrument", cl::init(false),
     cl::Hidden,
     cl::desc("Ignore stg_instrmnt_start() and stg_instrmnt_stop() calls when the flag is true, default value is true, make it false when partial insstrumentation is desired"));
 
@@ -85,7 +85,7 @@ struct STGInstrumenter : public ModulePass {
         // assign value api, not used anymore
         "stg_input_int", "stg_input_double", "stg_input_float", "stg_input_array",
         //instrument flag calls
-        "stg_start_intrmnt", "stg_stop_intrmnt",
+        "stg_start_instrument", "stg_stop_instrument",
         //stg call
         "stg_begin_test", "stg_end_test", "stg_record_test",
         //load api
@@ -129,7 +129,7 @@ struct STGInstrumenter : public ModulePass {
     {
         llvm::LLVMContext& context = M.getContext(); // getting the LLVM module context
         static IRBuilder<> Builder(context);
-        instrument = IgnoreInstrmntFlag;
+        instrument = !DoPartialInstrument;  //true by default
         StringRef module_name = M.getName();
 
         outs() << "Module Name :  " << module_name << "\n";
@@ -226,9 +226,9 @@ struct STGInstrumenter : public ModulePass {
 
                     std::string dest = I->getName().str();
 
-                    if ((functionName.compare("stg_stop_intrmnt") == 0) && !IgnoreInstrmntFlag)
+                    if ((functionName.compare("stg_stop_instrument") == 0) && DoPartialInstrument)
                         instrument = false;
-                    if ((functionName.compare("stg_start_intrmnt") == 0) && !IgnoreInstrmntFlag)
+                    if ((functionName.compare("stg_start_instrument") == 0) && DoPartialInstrument)
                         instrument = true;
 
                     if (!instrument)

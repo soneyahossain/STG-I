@@ -1,0 +1,43 @@
+[
+A : i32,
+B : i32,
+C : i32
+]
+
+//Test: passed
+
+(land
+  (lnot(sle A (i32 0)))
+  (land
+    (lnot(sle B (i32 0)))
+    (land
+      (lnot(sle C (i32 0)))
+      (land
+        (lnot(eq A B))
+        (land
+          (lnot(eq A C))
+          (land
+            (eq B C)
+            (land
+              (lnot(eq (add (i32 0) (i32 3)) (i32 0)))
+              (land
+                (lnot(sgt (add (i32 0) (i32 3)) (i32 3)))
+                (land
+                  (lnot(eq (add (i32 0) (i32 3)) (i32 1)))
+                  (land
+                    (lnot(eq (add (i32 0) (i32 3)) (i32 2)))
+                    (land
+                      (eq (add (i32 0) (i32 3)) (i32 3))
+                      (sgt (add B C) A)
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+
