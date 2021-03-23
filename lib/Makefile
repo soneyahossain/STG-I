@@ -9,8 +9,8 @@ distclean: clean
 	-rm $(STGI_INC)/stg.hpp
 
 stg.bc: stg.cpp stg.h
-	clang++ -std=c++11 -emit-llvm $< -c -o $@
+	clang++ -std=c++14 -emit-llvm $< -c -o $@
 
 install: all
-	cp stg.bc $(STGI_LIB)
-	cp stg.h stg.hpp $(STGI_INC)
+	sudo cp stg.bc $(STGI_LIB)
+	sudo cp stg.h stg.hpp $(STGI_INC)
