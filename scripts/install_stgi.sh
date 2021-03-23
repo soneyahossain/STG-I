@@ -47,7 +47,7 @@ install_stg_llvm_pass()
 		exit 1
 	fi
 
-	if [ ! $STGI_LIB/libSTGInstrumenter.so ]; then
+	if [ ! $STGI_LIB/LLVMSTGInstrumenter.so ]; then
 		echo "STG LLVM pass failed to install"
 		exit 1
 	fi
