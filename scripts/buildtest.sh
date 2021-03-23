@@ -1,13 +1,14 @@
 #!/bin/bash
 
 file=$1
+tests=$2
 
 echo "testing file: $file"
 # Step 1:
 # generate bicode for the the system under test; if there are multimple files emit llvm bitcode first and then link all of them together before running STG-I instrumentation Pass
 # if program under test is a C file run ( clang -emit-llvm -fno-discard-value-names put.c -S -o PUT_.bc ) command, and rest of the steps should be same
 
-clang++ -std=c++14 -I$STGI_INC/.. -emit-llvm -fno-discard-value-names "$file" -c -o PUT.bc
+clang++ -std=c++14 -DSTG -I$STGI_INC/.. -emit-llvm -fno-discard-value-names "$file" -c -o PUT.bc
 #clang++ -std=c++14 -emit-llvm -fno-discard-value-names test_velocity_smoothing_mcdc_symbolic.cpp  -c -o test_PUT.bc
 #/Users/soneyabintahossain/llvm_project/llvm-project/build/bin/llvm-link PUT_.bc test_PUT.bc -o PUT.bc
 
@@ -45,7 +46,7 @@ clang++ -o a.out  linked.o
 
 # Step 7:
 #run executable , (one can run this executable multiple time without the need to instrument it every time, instrumenantion is required to perform only once )
-./a.out
+./a.out "$tests"
 
 rm -rf *.bc
 rm -rf *.o
