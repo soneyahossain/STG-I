@@ -1,0 +1,63 @@
+[
+S0 : float,
+S1 : float,
+S2 : float,
+S3 : float,
+S4 : float
+]
+
+//Test: failed
+
+(land
+  (lnot(olt (fpext double (float 1.000000)) (double 0.100000)))
+  (land
+    (slt (i32 0) (i32 5))
+    (land
+      (lnot(ogt (fpext double S0) (double 50.000000)))
+      (land
+        (lnot(olt (fpext double S0) (double 0.000000)))
+        (land
+          (slt (add (i32 0) (i32 1)) (i32 5))
+          (land
+            (lnot(ogt (fpext double S1) (double 50.000000)))
+            (land
+              (lnot(olt (fpext double S1) (double 0.000000)))
+              (land
+                (slt (add (add (i32 0) (i32 1)) (i32 1)) (i32 5))
+                (land
+                  (lnot(ogt (fpext double S2) (double 50.000000)))
+                  (land
+                    (lnot(olt (fpext double S2) (double 0.000000)))
+                    (land
+                      (slt (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 5))
+                      (land
+                        (lnot(ogt (fpext double S3) (double 50.000000)))
+                        (land
+                          (lnot(olt (fpext double S3) (double 0.000000)))
+                          (land
+                            (slt (add (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 1)) (i32 5))
+                            (land
+                              (lnot(ogt (fpext double S4) (double 50.000000)))
+                              (land
+                                (lnot(olt (fpext double S4) (double 0.000000)))
+                                (land
+                                  (lnot(slt (add (add (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 1)) (i32 1)) (i32 5)))
+                                  (eq (add (add (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 1)) (i32 1)) (i32 5))
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+
