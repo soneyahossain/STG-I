@@ -33,7 +33,6 @@ install_stg_lib()
 install_stg_llvm_pass()
 {
 	echo "Installing STGI LLVM pass"
-	TEMPDIR=/tmp/tmp.build.stgi.$$
 	cd $STGI_HOME/pass/STGInstrumenter/fromllvminstall
 	cmake .
 	make
