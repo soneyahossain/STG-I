@@ -3,7 +3,7 @@ if [ -z "$STGI_HOME" ]; then
 fi
 
 # Do we really need this one now that we don't build from source?
-export LLVM_DIR=/usr/lib/llvm-10
+export LLVM_DIR=/usr/lib/llvm-11
 
 if [ -z "$STGI_INC" ]; then
 	export STGI_INC=/usr/local/include/stgi

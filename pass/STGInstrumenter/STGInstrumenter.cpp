@@ -117,7 +117,7 @@ struct STGInstrumenter : public ModulePass {
     };
 
     std::vector<std::string> non_intrinsic = {
-        "atan2", "expf", "exp", "log10f", "log", "pow", "sin", "cos", "sqrt", "fmod"
+        "atan2", "expf", "exp", "log10f", "log", "pow", "sin", "cos", "sqrt", "fmod","remainder"
     };
 
     STGInstrumenter()
@@ -156,7 +156,7 @@ struct STGInstrumenter : public ModulePass {
 
         const TargetLibraryInfo* TLI;
         std::string function_name = F.getName().str();
-        //outs() << "Instrumenting function :  " << function_name << "\n";
+        outs() << "Instrumenting function :  " << function_name << "\n";
         bool insertOnce = true;
 
         for (BasicBlock& BB : F) // iterating all the basic block
@@ -445,7 +445,7 @@ struct STGInstrumenter : public ModulePass {
                             llvm::raw_string_ostream function_rtype(function_ret_type);
                             F->getReturnType()->print(function_rtype);
 
-                            // errs() << "function rtype : " << function_rtype.str() << "\n";
+                            errs() << "function name : " << functionName << "\n";
 
                             llvm::Value* instName = builder.CreateGlobalStringPtr(callInst->getName().str());
                             llvm::Value* funName = builder.CreateGlobalStringPtr(functionName);
