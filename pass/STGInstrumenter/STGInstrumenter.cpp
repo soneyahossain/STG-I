@@ -14,7 +14,9 @@
 #include <string>
 #include <vector>
 #include "llvm/Analysis/TargetLibraryInfo.h"
-
+#include "llvm/Demangle/Demangle.h"
+#include <cxxabi.h>
+#include "llvm/Demangle/ItaniumDemangle.h"
 //#include <llvm/IR/DebugLoc.h>
 //#include <llvm/IR/DebugInfoMetadata.h>
 //#include "llvm/ADT/Statistic.h"
@@ -28,7 +30,7 @@ using namespace llvm;
 
 cl::opt<bool> DoPartialInstrument("partial-instrument", cl::init(false),
     cl::Hidden,
-    cl::desc("Ignore stg_instrmnt_start() and stg_instrmnt_stop() calls when the flag is true, default value is true, make it false when partial insstrumentation is desired"));
+    cl::desc("Ignore stg_instrument_start() and stg_instrument_stop() calls when the flag is true, default value is true, make it false when partial instrumentation is desired"));
 
 namespace {
 
@@ -104,7 +106,7 @@ struct STGInstrumenter : public ModulePass {
         "stg_update_phi", "stg_update_prev_bb",
         //branch inst handle api
         "stg_update_pc",
-        // golbal variable handle api
+        // global variable handle api
         "stg_update_int", "stg_update_float", "stg_update_double",
         // binary operation handle api , such as a+c, a-c, a>b, a<z
         "stg_update_op",
@@ -117,7 +119,7 @@ struct STGInstrumenter : public ModulePass {
     };
 
     std::vector<std::string> non_intrinsic = {
-        "atan2", "expf", "exp", "log10f", "log", "pow", "sin", "cos", "sqrt", "fmod","remainder"
+        "atan2", "expf", "exp", "log10f", "log", "pow", "sin", "cos", "sqrt", "fmod","remainder","min", "max"
     };
 
     STGInstrumenter()
@@ -140,9 +142,30 @@ struct STGInstrumenter : public ModulePass {
 
         bool isSuccess = createFunc(Builder, &M); //creating function declarations for runtime symbolic handling, these functions definitions are declared inside lib/stg.hpp file
         for (Module::iterator F = M.begin(), y = M.end(); F != y; ++F) {
+
+            //ItaniumPartialDemangler ipd = new ItaniumPartialDemangler();
+            //bool success = llvm::ItaniumPartialDemangler().partialDemangle(F->getName().str().c_str());
+            //outs()<< success;
+            //size_t Len = std::strlen(F->getName().str().c_str());
+            //auto buff = reinterpret_cast<char*>(std::malloc(Len));
+            //outs() <<F->getName().str()<<"\n";
+            //std::string demangled_name = demangle(F->getName().str());
+            //outs() <<demangled_name<<"\n";
+
+            //char *pStr = &demangled_name[0];
+            //size_t i = (demangled_name);
+            //size_t *p_i  = &i;
+            //outs() <<ItaniumPartialDemangler().getFunctionBaseName(pStr,p_i)<<"\n";
+            //auto *Name = llvm::ItaniumPartialDemangler().getFunctionBaseName(buff,&Len);
+            //outs() <<Name;
+
+
             // do not instrument stg api calls
-            if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), F->getName().str()) == function_doNotInstrument.end())
-                instrumentFunction(*F, M, context);
+            if (std::find(function_doNotInstrument.begin(), function_doNotInstrument.end(), F->getName().str()) == function_doNotInstrument.end()){
+                 //if (std::find(non_intrinsic.begin(), non_intrinsic.end(), F->getName().str()) == non_intrinsic.end()){
+                        instrumentFunction(*F, M, context);
+                 //}
+             }
         }
 
         outs() << "Instrumentation Successful for module " << module_name << "\n";
@@ -211,7 +234,7 @@ struct STGInstrumenter : public ModulePass {
                     if (F == nullptr)
                         continue;
 
-                    std::string functionName = F->getName().str();
+                    std::string functionName = F->getName().str() ; ///demangle(F->getName().str());
 
                     if (functionName.empty())
                         continue;
@@ -219,8 +242,13 @@ struct STGInstrumenter : public ModulePass {
                     if (auto* CB = dyn_cast<CallBase>(I)) {
                         LibFunc LF;
                         if (TLI->getLibFunc(functionName, LF)) {
-                            //errs() << "inside target lib info \n";
-                            //errs() << functionName <<"\n";
+                            errs() << "inside target lib info \n";
+                            errs() << functionName <<"\n";
+
+                            if(std::find(non_intrinsic.begin(), non_intrinsic.end(), functionName) == non_intrinsic.end()) {
+                                non_intrinsic.push_back(functionName);
+                            }
+
                         }
                     }
 
@@ -1119,6 +1147,7 @@ struct STGInstrumenter : public ModulePass {
     //--------------------------------------------------------------------------------------------
     // Register the appropriate type declarations for the functions called from the instrumentation.
 
+
     bool createFunc(IRBuilder<>& Builder, Module* ModuleOb)
     {
 
@@ -1307,7 +1336,6 @@ struct STGInstrumenter : public ModulePass {
 
         return true;
     }
-
     /*
 
     GlobalVariable* createGlob(IRBuilder<>& Builder, std::string Name, Module* ModuleOb)
