@@ -28,6 +28,8 @@ install_stg_lib()
 	if [ ! $? -eq 0 ]; then
 		sudo -E make install
 	fi
+	make clean
+
 }
 
 install_stg_llvm_pass()
