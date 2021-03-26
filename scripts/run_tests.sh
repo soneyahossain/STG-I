@@ -55,7 +55,7 @@ fi
 
 for dir in "$STGI_EXAMPLE_DIR"/*      # list directories"
 do
-    #echo "$dir"
+    echo "$dir"
     file_path=$(find "$dir" -type f -name "*.cpp")
 
     if [ -z "$file_path" ];then
@@ -67,21 +67,24 @@ do
     fi
 
     # shellcheck disable=SC2046
-    dir_name=$(basename $(dirname "$file_path"))
+    #dir_name=$(basename $(dirname "$file_path"))
+    dir_name=$(basename "$dir")
     filename=$(basename "$file_path")
 
-    echo "$dir_name"
-    #echo "$filename"
+    echo "directory name $dir_name"
+    echo "file name $filename"
 
     #if dir name is simple_geofence then pass input file ( mcdc.txt)
 
     if [ "$dir_name" = "simple_geofence" ]; then
          sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path"  "$STGI_EXAMPLE_DIR"/"$dir_name"/"mcdc.txt"            #calling build script
     else
-          sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path" #calling build script
+         if [ "$dir_name" = "classify_gtest" ]; then
+           sh "$STGI_EXAMPLE_DIR"/"$dir_name"/run.sh
+         else
+           sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path" #calling build script
+         fi
     fi
-
-
     mv stg-out-0 "$dir_name"
 
     DIFF=$(diff -x '*.txt' -r -N "$dir_name"  "$STGI_EXAMPLE_DIR"/"$dir_name"/stg-expec)   # -x means exclude .txt file, -r check recursively , - N show if as full file if other absent

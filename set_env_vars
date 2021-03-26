@@ -3,7 +3,7 @@ if [ -z "$STGI_HOME" ]; then
 fi
 
 # Do we really need this one now that we don't build from source?
-export LLVM_DIR=/usr/lib/llvm-10
+export LLVM_DIR=/usr/lib/llvm-11
 
 if [ -z "$STGI_INC" ]; then
 	export STGI_INC=/usr/local/include/stgi
@@ -15,3 +15,10 @@ fi
 
 export STGI_EXAMPLE_DIR=$STGI_HOME/examples
 export STGI_SCRIPT_DIR=$STGI_HOME/scripts
+
+
+echo $STGI_HOME    # this is the top-level directory for STGI"
+echo $LLVM_DIR     # installation directory for llvm"
+echo $STGI_LIB     # default path for STG library (e.g.: /usr/local/lib/stgi)"
+echo $STGI_INC     # default path for STG headers (e.g.: /usr/local/include/stgi)"
+

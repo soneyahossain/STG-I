@@ -1,0 +1,46 @@
+[
+A : float,
+B : float,
+C : float
+]
+
+//Test: passed
+
+(land
+  (lnot(slt (i32 1) (srem (fptosi i32 A) (fptosi i32 B))))
+  (land
+    (lnot(eq (srem (fptosi i32 A) (fptosi i32 B)) (i32 0)))
+    (land
+      (slt (i32 1) (srem (fptosi i32 B) (fptosi i32 C)))
+      (land
+        (lnot(eq (i32 1) (i32 0)))
+        (land
+          (slt (i32 1) (srem (fptosi i32 C) (fptosi i32 A)))
+          (land
+            (lnot(eq (i32 1) (i32 0)))
+            (land
+              (slt (abs i32 (fptosi i32 A)) (abs i32 (fptosi i32 B)))
+              (land
+                (lnot(sgt (fptosi i32 A) (abs i32 (fptosi i32 C))))
+                (land
+                  (slt (abs i32 (fptosi i32 A)) (abs i32 (fptosi i32 C)))
+                  (land
+                    (lnot(sgt (fptosi i32 A) (abs i32 (fptosi i32 B))))
+                    (land
+                      (slt (abs i32 (fptosi i32 A)) (abs i32 (fptosi i32 B)))
+                      (land
+                        (slt (fptosi i32 A) (abs i32 (fptosi i32 C)))
+                        (lnot(eq (srem (add (i32 0) (i32 3)) (i32 2)) (i32 0)))
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

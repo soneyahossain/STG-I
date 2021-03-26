@@ -1,0 +1,37 @@
+[
+A : float,
+B : float,
+C : float
+]
+
+//Test: passed
+
+(land
+  (lnot(oeq (frem double (fpext double A) (fpext double B)) (double 0.000000)))
+  (land
+    (lnot(oeq (frem double (fpext double B) (fpext double C)) (double 0.000000)))
+    (land
+      (lnot(oeq (frem double (fpext double C) (fpext double A)) (double 0.000000)))
+      (land
+        (fune (frem double (fpext double A) (fpext double B)) (double 0.000000))
+        (land
+          (fune (frem double (fpext double C) (fpext double A)) (double 0.000000))
+          (land
+            (fune (frem double (fpext double B) (fpext double C)) (double 0.000000))
+            (land
+              (eq (srem (add (add (add (i32 0) (i32 1)) (i32 2)) (i32 3)) (i32 2)) (i32 0))
+              (land
+                (lnot(ole (fadd (fpext double A) (fpext double B)) (fpext double C)))
+                (land
+                  (lnot(ole (fadd (fpext double B) (fpext double C)) (fpext double A)))
+                  (oge (fadd (fpext double A) (fpext double C)) (fpext double B))
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

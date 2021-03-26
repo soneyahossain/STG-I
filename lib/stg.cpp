@@ -952,7 +952,7 @@ void stg_update_una_intrinsic(char* result, char* fun_name, char* ret_type, char
 }
 
 
-//got issue with llvm binary intrinsic, alreted paramter orders, might cause problem to other function
+//got issue with llvm binary intrinsic, altered parameter orders, might cause problem to other function
 void stg_update_bin_intrinsic(char* result, char* fun_name, char* type, char* arg1, char* arg2 )
 {
 
@@ -981,6 +981,10 @@ void stg_update_bin_intrinsic(char* result, char* fun_name, char* type, char* ar
         arg_val2 = arg_2;
     }
     //store symbolic values in S-expression syntax
+
+    if(fun_name_.compare("remainder")==0) fun_name_="frem";
+
+
     sym_state[result] = "(" + fun_name_ + " " + rtype + " " + arg_val1 + " " + arg_val2 + ")";
     stg_state << "state[" << result << " --> " << sym_state[result] << "]\n";
 }
@@ -1091,8 +1095,8 @@ void print_maps()
        // std::cout << x.first << ": " << x.second << "\n";
     //}
 }
-void stg_start_intrmnt(){}
-void stg_stop_intrmnt(){}
+void stg_start_instrument(){}
+void stg_stop_instrument(){}
 
 
 
