@@ -1,0 +1,37 @@
+[
+A : u i32,
+B : u i32,
+C : u i32
+]
+
+//Test: passed
+
+(land
+  (lnot(eq (urem A B) (i32 0)))
+  (land
+    (lnot(eq (urem B C) (i32 0)))
+    (land
+      (lnot(eq (urem C A) (i32 0)))
+      (land
+        (ne (urem A B) (i32 0))
+        (land
+          (ne (urem C A) (i32 0))
+          (land
+            (ne (urem B C) (i32 0))
+            (land
+              (eq (urem (add (add (add (i32 0) (i32 1)) (i32 2)) (i32 3)) (i32 2)) (i32 0))
+              (land
+                (lnot(ule (add A B) C))
+                (land
+                  (lnot(ule (add B C) A))
+                  (uge (add A C) B)
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

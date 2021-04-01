@@ -30,7 +30,7 @@ These are the parameters for the distribution:
 void stg_symbolic_variable_int(int* addr, const char *name); //, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
 void stg_symbolic_variable_float(float* addr, const char *name); //, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
 void stg_symbolic_variable_double(double* addr, const char *name); //, double range_min, double range_max, char*  dis_id, double parm_1, double param_2);
-
+void stg_symbolic_variable_uint(unsigned int* addr, const char* name);
 
 /*
  * This version creates a name for each of num elements of the array,

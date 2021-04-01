@@ -64,6 +64,26 @@ void stg_symbolic_variable_int(int* addr, const char* name)//, double range_min,
     stg_pc << name << " : i32";
 }
 
+
+void stg_symbolic_variable_uint(unsigned int* addr, const char* name)
+{
+
+    std::stringstream address;
+    address << addr;
+
+    std::string key = "v(" + address.str() + ")";
+    sym_var_map[key] = name; //updating symbolic map
+    sym_state[key] = name; // updating the main main also
+    stg_state << "state[" << key << " --> " << name << "]\n";
+
+    if (needComma)
+         stg_pc << ",\n";
+    else
+         needComma = true;
+
+    stg_pc << name << " : u i32";
+}
+
 void stg_symbolic_variable_float(float* addr, const char* name)
 {
 
