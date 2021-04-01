@@ -46,9 +46,9 @@ verify_uninstall()
 #
 # inventory of potential STG-I files
 #
-stgi_files="/usr/local/lib/stg.bc /usr/local/include/stgi/stg.h /usr/local/lib/libLLVMSTGInstrumenter.so"
+stgi_files="/usr/local/lib/stg.bc /usr/local/include/stgi/stg.h /usr/local/lib/LLVMSTGInstrumenter.so"
 if [ ! -z $STGI_LIB ]; then
-	stgi_files="$stgi_files $STGI_LIB/stg.bc $STGI_LIB/libLLVMSTGInstrumenter.so"
+	stgi_files="$stgi_files $STGI_LIB/stg.bc $STGI_LIB/LLVMSTGInstrumenter.so"
 fi
 if [ ! -z $STGI_INC ]; then
 	stgi_files="$stgi_files $STGI_INC/stg.h "
