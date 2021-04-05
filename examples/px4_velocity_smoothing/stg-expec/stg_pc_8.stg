@@ -1,0 +1,12 @@
+[
+A : float,
+M_A : float
+]
+
+//Test: passed
+
+(land
+  (lnot(ogt (fadd A (fmul (float 55.200001) (float -7.420000))) M_A))
+  (olt (fadd A (fmul (float 55.200001) (float -7.420000))) (fneg M_A))
+)
+

@@ -117,6 +117,8 @@ void stg_update_char(char *key, char *val);
 // binary operation handle api , such as a+c, a-c, a>b, a<z
 void stg_update_op(char *key, char *lhs, char *op, char *rhs);
 
+void stg_update_una_op(char *key, char *op, char *operand);
+
 
 //handle compare inst
 void stg_update_cmp(char* key, char* lhs, char* predicateName, char* rhs, char* type_ );

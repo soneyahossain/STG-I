@@ -10,11 +10,14 @@
 #include "stg.h"
 #include <sstream>
 #include <cmath>
+#include <list>
+#include <algorithm>
 
 // trivial initialization of map
 std::map<std::string, std::string> sym_state; // <var , symbolic state>
 std::map<std::string, std::string> sym_var_map; // <address of symbolic var,  symbolic name>
 std::map<std::string, std::string> path_conditions; //<path_condition_count, path_condition>
+std::list < std::string > sym_vars;
 
 
 //no longer required *******
@@ -53,6 +56,7 @@ void stg_symbolic_variable_int(int* addr, const char* name)//, double range_min,
 
     std::string key = "v(" + address.str() + ")";
     sym_var_map[key] = name; //updating symbolic map
+    sym_vars.push_back(name);
     sym_state[key] = name; // updating the main main also
     stg_state << "state[" << key << " --> " << name << "]\n";
 
@@ -74,6 +78,7 @@ void stg_symbolic_variable_uint(unsigned int* addr, const char* name)
     std::string key = "v(" + address.str() + ")";
     sym_var_map[key] = name; //updating symbolic map
     sym_state[key] = name; // updating the main main also
+    sym_vars.push_back(name);
     stg_state << "state[" << key << " --> " << name << "]\n";
 
     if (needComma)
@@ -93,6 +98,7 @@ void stg_symbolic_variable_float(float* addr, const char* name)
     std::string key = "v(" + address.str() + ")";
     sym_var_map[key] = name; //updating symbolic map
     sym_state[key] = name; // updating the main main also
+    sym_vars.push_back(name);
     stg_state << "state[" << key << " --> " << name << "]\n";
 
     if (needComma)
@@ -114,6 +120,7 @@ void stg_symbolic_variable_double(double* addr, const char* name)//, double rang
 
     sym_var_map[key] = name; //updating symbolic map
     sym_state[key] = name; // updating the main main also
+    sym_vars.push_back(name);
     stg_state << "state[" << key << " --> " << name << "]\n";
 
     if (needComma)
@@ -251,6 +258,8 @@ void stg_end_test()
     //std::cout << "path_condition:\n" << path_condition <<"\n";
     //end:  code to construct path condition according to constraint grammar
     stg_pc << "]\n\n";
+
+    //print_maps();
 
     ///////////////////////////
 }
@@ -422,8 +431,17 @@ void stg_update_load_i32(int* addr, char* val)
     std::string value(val);
 
     auto itr = sym_state.find(key);
-    if (itr != sym_state.end())
+    if (itr != sym_state.end()){
         key = itr->second;
+        //std::cout <<"key i32============" <<key <<"\n";
+        //if(std::find(sym_vars.begin(), sym_vars.end(), key) == sym_vars.end()){ // not found in the sym var map
+            //if in the else block, perhaps not symbolic , get the concrete value
+            //key = "(i32 " + std::to_string(*addr) + ")";
+            //std::cout <<"Not found in map";
+        //}
+        //else
+          //std::cout <<"found in map ";
+    }
     else {
         //if in the else block, perhaps not symbolic , get the concrete value
         key = "(i32 " + std::to_string(*addr) + ")";
@@ -522,8 +540,15 @@ void stg_update_load_i64(long* addr, char* val)
     std::string value(val);
 
     auto itr = sym_state.find(key);
-    if (itr != sym_state.end())
+    if (itr != sym_state.end()){
         key = itr->second;
+
+
+        //if(std::find(sym_vars.begin(), sym_vars.end(), key) == sym_vars.end()){ // not found in the sym var map
+               //if in the else block, perhaps not symbolic , get the concrete value
+               //key = "(i64 " + std::to_string(*addr) + ")";
+        //}
+    }
     else {
         //if in the else block, perhaps not symbolic , get the concrete value
         //key = std::to_string(*addr);
@@ -541,8 +566,14 @@ void stg_update_load_i1(bool* addr, char* val)
     std::string value(val);
 
     auto itr = sym_state.find(key);
-    if (itr != sym_state.end())
+    if (itr != sym_state.end()){
         key = itr->second;
+
+        //if(std::find(sym_vars.begin(), sym_vars.end(), key) == sym_vars.end()){ // not found in the sym var map
+                    //if in the else block, perhaps not symbolic , get the concrete value
+           // key = "(i1 " + std::to_string(*addr) + ")";
+        //}
+    }
     else {
         //if here, then perhaps not symbolic, get the concrete value
         int c_value = *(addr); //reading the value
@@ -588,7 +619,7 @@ void stg_update_load_i8(void* addr, char* val)
         char* value_ptr = (char*)addr; //converting void pointer to char*
         char c_value = *value_ptr; //reading the value
 
-        key = "(i8 " + std::to_string(c_value) + ")";
+        //key = "(i8 " + std::to_string(c_value) + ")";
         //key = value;
     }
     sym_state[val] = key;
@@ -649,8 +680,6 @@ void stg_update_load_pointer(void* val, void** addr)
 
 }
 
-
-
 void stg_update_load_double(double* addr, char* val)
 {
     std::stringstream loadaddress;
@@ -659,8 +688,14 @@ void stg_update_load_double(double* addr, char* val)
     std::string value(val);
 
     auto itr = sym_state.find(key);
-    if (itr != sym_state.end())
+    if (itr != sym_state.end()){
         key = itr->second;
+
+        //if(std::find(sym_vars.begin(), sym_vars.end(), key) == sym_vars.end()){ // not found in the sym var map
+                    //if in the else block, perhaps not symbolic , get the concrete value
+                   //key = "(double " + std::to_string(*addr) + ")";
+        //}
+    }
     else {
 
         //if in the else block, perhaps not symbolic , get the concrete value
@@ -681,9 +716,16 @@ void stg_update_load_float(float* addr, char* val)
 
     auto itr = sym_state.find(key);
     if (itr != sym_state.end())
-        key = itr->second;
-    else {
-        //if in the else block, perhaps not symbolic , get the concrete value
+    {
+        key = itr->second;  // got something, now check if its a symbolic var
+        //std::cout <<"load key "<< key <<"\n";
+
+        if(std::find(sym_vars.begin(), sym_vars.end(), key) == sym_vars.end()){ // not found in the sym var map
+            //if in the else block, perhaps not symbolic , get the concrete value
+          // key = "(float " + std::to_string(*addr) + ")";
+        }
+    }else
+    {
         key = "(float " + std::to_string(*addr) + ")";
     }
 
@@ -769,6 +811,27 @@ void stg_update_char(char* key, char* val)
     //store symbolic values in S-expression syntax
     sym_state[key] = value;
     stg_state << "state[" << key << " --> " << value << "]\n";
+}
+
+//unary operation such as fneg
+void stg_update_una_op(char *key, char *op, char *operand)
+{
+
+    std::string oprnd(operand);
+    std::string op_(op);
+    std::string oprnd_value;
+
+
+    auto itr = sym_state.find(oprnd);
+    if (itr != sym_state.end())
+        oprnd_value = itr->second;
+    else
+        oprnd_value = oprnd;
+
+
+    sym_state[key] = "(" + op_ + " " + oprnd_value + ")";
+    stg_state << "state[" << key << " --> " << sym_state[key] << "]\n";
+
 }
 
 void stg_update_cast_i1(char* key, char* val_name, char* castOp, char* srcty, char* dstty, bool value)
@@ -1111,9 +1174,9 @@ void print_maps()
        // std::cout << x.first << ": " << x.second << "\n";
    // }
 
-    //for (const auto& x : sym_state) {
-       // std::cout << x.first << ": " << x.second << "\n";
-    //}
+    for (const auto& x : sym_state) {
+        std::cout << x.first << ": " << x.second << "\n";
+    }
 }
 void stg_start_instrument(){}
 void stg_stop_instrument(){}

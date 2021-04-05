@@ -76,6 +76,7 @@ struct STGInstrumenter : public ModulePass {
     Function* stg_update_bin_intrinsic;
     Function* stg_update_prev_bb;
     Function* stg_update_select;
+    Function* stg_update_una_op;
 
     // GlobalVariable* prevBB; // global variable pointer to store basic block
 
@@ -115,7 +116,7 @@ struct STGInstrumenter : public ModulePass {
         //fun:: argu->fun::param map api
         "stg_update_char",
         // miscellaneous
-        "printf", "scanf", "sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit"
+        "printf", "scanf", "sscanf", "fprintf", "_fopen", "fgets", "fclose", "exit", "stg_update_una_op"
     };
 
     std::vector<std::string> non_intrinsic = {
@@ -179,7 +180,7 @@ struct STGInstrumenter : public ModulePass {
 
         const TargetLibraryInfo* TLI;
         std::string function_name = F.getName().str();
-        outs() << "Instrumenting function :  " << function_name << "\n";
+        //outs() << "Instrumenting function :  " << function_name << "\n";
         bool insertOnce = true;
 
         for (BasicBlock& BB : F) // iterating all the basic block
@@ -204,7 +205,10 @@ struct STGInstrumenter : public ModulePass {
                         i.setName(i.getName() + "_" + F.getName()); // if the instruction doesn't have a name, giving it name
                 }
 
-                I = &i; //I->dump();
+                I = &i;
+                //I->dump();
+
+                //errs()<< I;
 
                 if (instrument && insertOnce) {
                     int agrno = 1;
@@ -818,6 +822,51 @@ struct STGInstrumenter : public ModulePass {
                         }
                     }
                 }
+                else if(I->isUnaryOp())
+                {
+                   errs() << "found unary instruction \n";
+                   I->print(errs());
+                   if (!instrument)
+                       continue;
+
+                   //errs() << "inside unary operator .........\n";
+
+                   std::string result = I->getName().str(); // result
+                   std::string type_str;
+                   llvm::raw_string_ostream type(type_str);
+                   I->getType()->print(type);
+
+                   //errs() << "Type===========" << type.str() << "\n";
+
+                   Value* oprnd = I->getOperand(0); //  operand
+                   std::string operand = "";
+
+                   if (ConstantInt* CI = dyn_cast<ConstantInt>(oprnd)) // if value is integer or any constant
+                   {
+                       operand = "(" + type.str() + " " + getIntAsString(CI) + ")";
+                   }
+                   else if (ConstantFP* constfp = llvm::dyn_cast<llvm::ConstantFP>(oprnd)) {
+                       operand = "(" + type.str() + " " + getFloatAsString(constfp, oprnd) + ")";
+                   }
+                   else {
+                       operand = oprnd->getName().str();
+                   }
+
+                   // get operator
+                   std::string opCodeName = I->getOpcodeName();
+
+                   llvm::Value* addAddress_ = builder.CreateGlobalStringPtr(result);
+                   llvm::Value* op = builder.CreateGlobalStringPtr(opCodeName);
+                   llvm::Value* oprnd_val = builder.CreateGlobalStringPtr(operand);
+
+                   std::vector<Value*> args;
+                   args.push_back(addAddress_);
+                   args.push_back(op);
+                   args.push_back(oprnd_val);
+
+                   CallInst::Create(stg_update_una_op, args)->insertAfter(I);
+
+                }
 
                 else if (I->isBinaryOp()) {
 
@@ -1333,6 +1382,13 @@ struct STGInstrumenter : public ModulePass {
         stg_update_select = llvm::Function::Create(
             llvm::FunctionType::get(Builder.getVoidTy(), arg16, false),
             llvm::Function::ExternalLinkage, "stg_update_select", ModuleOb);
+
+
+        std::vector<Type*> arg18(3, Builder.getInt8PtrTy());
+        stg_update_una_op = llvm::Function::Create(
+                  llvm::FunctionType::get(Builder.getVoidTy(), arg18, false),
+                  llvm::Function::ExternalLinkage, "stg_update_una_op", ModuleOb);
+
 
         return true;
     }

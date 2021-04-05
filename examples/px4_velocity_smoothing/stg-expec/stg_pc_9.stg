@@ -1,0 +1,9 @@
+[
+A : float,
+M_A : float
+]
+
+//Test: passed
+
+(ogt (fadd A (fmul (float 55.200001) (float 7.420000))) M_A)
+

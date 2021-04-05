@@ -77,18 +77,19 @@ do
     #if dir name is simple_geofence then pass input file ( mcdc.txt)
 
     if [ "$dir_name" = "simple_geofence" ]; then
-         sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path"  "$STGI_EXAMPLE_DIR"/"$dir_name"/"mcdc.txt"            #calling build script
+      sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path"  "$STGI_EXAMPLE_DIR"/"$dir_name"/"mcdc.txt"            #calling build script
+    elif [ "$dir_name" = "classify_gtest" ]; then
+      sh "$STGI_EXAMPLE_DIR"/"$dir_name"/run.sh
+    elif [ "$dir_name" = "px4_velocity_smoothing" ]; then
+      sh "$STGI_EXAMPLE_DIR"/"$dir_name"/commandLine.sh
     else
-         if [ "$dir_name" = "classify_gtest" ]; then
-           sh "$STGI_EXAMPLE_DIR"/"$dir_name"/run.sh
-         else
-           sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path" #calling build script
-         fi
+      sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path" #calling build script
     fi
+
     mv stg-out-0 "$dir_name"
 
     DIFF=$(diff -x '*.txt' -r -N "$dir_name"  "$STGI_EXAMPLE_DIR"/"$dir_name"/stg-expec)   # -x means exclude .txt file, -r check recursively , - N show if as full file if other absent
-    #echo "$DIFF"
+    echo "$DIFF"
 
     if [ "$DIFF" != "" ];then
       echo "Test Failed for $filename" >> test_result.txt
