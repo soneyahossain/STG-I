@@ -149,17 +149,14 @@ int test_initial_conditions()
 	VelocitySmoothing trajectory;
 	float acceleration = 0.f;
 
-
 #ifdef STG
     stg_begin_test();
 	stg_symbolic_variable_float(&acceleration, "A");//, -20.0f, 20.0f, "uniform" , 0, 0);
 	//stg_input_float(&acceleration, acceleration);
 #endif
 
-
     trajectory.setCurrentAcceleration(acceleration);
 	bool result = true;
-
 
 	if (trajectory.getT1() != 0.0)
 		result = false;
@@ -171,8 +168,6 @@ int test_initial_conditions()
 		result = false;
 	if (trajectory.getVelSp() != 0.0)
 		result = false;
-
-
 	if (trajectory.getCurrentVelocity() != 0.0)
 		result = false;
 	if (trajectory.getCurrentAcceleration() != 0.0)
@@ -180,7 +175,6 @@ int test_initial_conditions()
 
 	stg_end_test();
 	stg_record_test(result);
-
 	return true;
 }
 
@@ -229,8 +223,6 @@ int test_getter_setter()
 int test_computeT1()
 {
 	VelocitySmoothing trajectory;
-
-
 
 	//stg_initial_trajectory(&trajectory);
 	stg_begin_test();
@@ -390,7 +382,6 @@ int test_velsp_pos()
 	stg_symbolic_variable_float(&acceleration, "A");//, -20.0f, 20.0f, "uniform" , 0,0);
 	stg_symbolic_variable_float(&maxAcceleration, "M_A");//, -20.0f, 20.0f, "uniform" , 0,0);
 
-
 	//stg_input_float(&acceleration, acceleration);
 	//stg_input_float(&maxAcceleration, maxAcceleration);
 #endif
@@ -505,7 +496,6 @@ int test_t1_saturation(float t1)
 	trajectory.setMaxAccel(maxAcceleration);
 
 	// for a test, should verify returned T1 value
-
 	// clip negative
 	trajectory.saturateT1ForAccel(trajectory.getCurrentAcceleration(), trajectory.getMaxJerk(), t1, trajectory.getMaxAccel());
 
@@ -529,7 +519,6 @@ int main(int argc, char *argv[])
 	test_t1_saturation(-7.42);
 	test_t1_saturation(7.42);
 	test_t1_saturation(0);
-
 
 #else
 //	RUN_TEST("initial conditions", test_initial_conditions);
