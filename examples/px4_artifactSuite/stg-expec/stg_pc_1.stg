@@ -26,14 +26,8 @@ ALT2 : float
                 (land
                   (ult (add (add (i64 0) (i64 1)) (i64 1)) (sext i64 (i32 3)))
                   (land
-                    (lnot(trunc i1 (i8 0)))
-                    (land
-                      (lnot(trunc i1 (i8 0)))
-                      (land
-                        (lnot(ogt HOME_LAT ALT2))
-                        (lnot(ult (add (add (add (i64 0) (i64 1)) (i64 1)) (i64 1)) (sext i64 (i32 3))))
-                      )
-                    )
+                    (trunc i1 (i8 1))
+                    (lnot(trunc i1 (zext i8 (i1 0))))
                   )
                 )
               )

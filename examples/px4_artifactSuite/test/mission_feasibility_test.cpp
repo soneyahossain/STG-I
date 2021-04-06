@@ -4,7 +4,6 @@
 #include "stgi/stg.h"
 #include <stdio.h>
 
-
 TEST(MissionCheck, CheckCombined)
 {
 
@@ -74,7 +73,7 @@ TEST(MissionCheck, CheckCombined)
 
 }
 
-/*
+
 TEST(MissionCommandCheck, ValidCommand)
 {
     struct mission_s mission;
@@ -466,7 +465,6 @@ TEST(CheckAltitude, InvalidMission2PointsBelowHome)
     ASSERT_EQ(false, isValid);
     //printf("Check 3 waypoints: %s (invalid mission, 2nd point below home)\n", checkHomePositionAltitude(mission, 20, true)?"valid":"invalid");
 }
-*/
 
 int main(int argc, char** argv)
 {
