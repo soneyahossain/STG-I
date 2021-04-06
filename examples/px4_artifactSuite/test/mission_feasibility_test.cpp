@@ -4,7 +4,7 @@
 #include "stgi/stg.h"
 #include <stdio.h>
 
-
+/*
 TEST(MissionCheck, CheckCombined)
 {
 
@@ -426,7 +426,7 @@ TEST(CheckAltitude, InvalidMission)
     //printf("Check 3 waypoints: %s (invalid mission, last point is relative but home is not set)\n", checkHomePositionAltitude(mission, 20, false)?"valid":"invalid");
 }
 
-
+*/
 
 TEST(CheckAltitude, InvalidMission2PointsBelowHome)
 {
