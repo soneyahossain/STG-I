@@ -1,5 +1,4 @@
 [
-MAX_DIS : float,
 LAT0 : double,
 LON0 : double,
 ALT0 : float,
@@ -8,34 +7,121 @@ LON1 : double,
 ALT1 : float,
 LAT2 : double,
 LON2 : double,
-ALT2 : float
+ALT2 : float,
+HLAT : i32,
+LLAT : i32,
+HLON : i32,
+LLON : i32,
+MAX_DIS : float,
+HOME_LAT : float
 ]
 
 //Test: passed
 
 (land
-  (lnot(ole MAX_DIS (float 0.000000)))
+  (lnot(sle (i32 3) (i32 0)))
   (land
-    (slt (i32 0) (i32 3))
+    (trunc i1 (zext i8 (i1 1)))
     (land
-      (lnot(sgt (i32 0) (i32 0)))
+      (lnot(trunc i1 (i8 0)))
       (land
-        (slt (add (i32 0) (i32 1)) (i32 3))
+        (ult (i64 0) (sext i64 (i32 3)))
         (land
-          (sgt (add (i32 0) (i32 1)) (i32 0))
+          (lnot(ne (i32 0) (i32 0)))
           (land
-            (lnot(ogt (fptrunc float (fmul (double 12700.000000) (atan2 double (sqrt double (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))) (sqrt double (fsub (double 1.000000) (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))))))) MAX_DIS))
+            (eq (i64 0) (i64 0))
             (land
-              (lnot(olt (fptrunc float (fmul (double 12700.000000) (atan2 double (sqrt double (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))) (sqrt double (fsub (double 1.000000) (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))))))) (float 0.050000)))
+              (lnot(eq (i32 0) (i32 21)))
               (land
-                (slt (add (add (i32 0) (i32 1)) (i32 1)) (i32 3))
+                (ult (add (i64 0) (i64 1)) (sext i64 (i32 3)))
                 (land
-                  (sgt (add (add (i32 0) (i32 1)) (i32 1)) (i32 0))
+                  (lnot(ne (i32 0) (i32 0)))
                   (land
-                    (lnot(ogt (fptrunc float (fmul (double 12700.000000) (atan2 double (sqrt double (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT2) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))))) (sqrt double (fsub (double 1.000000) (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT2) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))))))))) MAX_DIS))
+                    (lnot(eq (add (i64 0) (i64 1)) (i64 0)))
                     (land
-                      (lnot(olt (fptrunc float (fmul (double 12700.000000) (atan2 double (sqrt double (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT2) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))))) (sqrt double (fsub (double 1.000000) (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT2) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))))))))) (float 0.050000)))
-                      (lnot(slt (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 3)))
+                      (ult (add (add (i64 0) (i64 1)) (i64 1)) (sext i64 (i32 3)))
+                      (land
+                        (lnot(ne (i32 0) (i32 0)))
+                        (land
+                          (lnot(eq (add (add (i64 0) (i64 1)) (i64 1)) (i64 0)))
+                          (land
+                            (lnot(ult (add (add (add (i64 0) (i64 1)) (i64 1)) (i64 1)) (sext i64 (i32 3))))
+                            (land
+                              (lnot(trunc i1 (zext i8 (xor (i1 1) (i1 1)))))
+                              (land
+                                (lnot(ole MAX_DIS (float 0.000000)))
+                                (land
+                                  (slt (i32 0) (i32 3))
+                                  (land
+                                    (lnot(sgt (i32 0) (i32 0)))
+                                    (land
+                                      (slt (add (i32 0) (i32 1)) (i32 3))
+                                      (land
+                                        (sgt (add (i32 0) (i32 1)) (i32 0))
+                                        (land
+                                          (lnot(ogt (fptrunc float (fmul (double 12700.000000) (atan2 double (sqrt double (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))) (sqrt double (fsub (double 1.000000) (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))))))) MAX_DIS))
+                                          (land
+                                            (lnot(olt (fptrunc float (fmul (double 12700.000000) (atan2 double (sqrt double (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))) (sqrt double (fsub (double 1.000000) (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT1) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON0) (double 180.000000)) (fdiv (fmul (double 3.141500) LON1) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT0) (double 180.000000)))))))))) (float 0.050000)))
+                                            (land
+                                              (slt (add (add (i32 0) (i32 1)) (i32 1)) (i32 3))
+                                              (land
+                                                (sgt (add (add (i32 0) (i32 1)) (i32 1)) (i32 0))
+                                                (land
+                                                  (lnot(ogt (fptrunc float (fmul (double 12700.000000) (atan2 double (sqrt double (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT2) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))))) (sqrt double (fsub (double 1.000000) (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT2) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))))))))) MAX_DIS))
+                                                  (land
+                                                    (lnot(olt (fptrunc float (fmul (double 12700.000000) (atan2 double (sqrt double (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT2) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))))) (sqrt double (fsub (double 1.000000) (fadd (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)) (fdiv (fmul (double 3.141500) LAT2) (double 180.000000))) (double 2.000000)))) (fmul (fmul (fmul (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000))) (sin double (fdiv (fsub (fdiv (fmul (double 3.141500) LON1) (double 180.000000)) (fdiv (fmul (double 3.141500) LON2) (double 180.000000))) (double 2.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT2) (double 180.000000)))) (cos double (fdiv (fmul (double 3.141500) LAT1) (double 180.000000)))))))))) (float 0.050000)))
+                                                    (land
+                                                      (lnot(slt (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 3)))
+                                                      (land
+                                                        (lnot(trunc i1 (zext i8 (xor (i1 1) (i1 1)))))
+                                                        (land
+                                                          (slt (i32 0) (i32 3))
+                                                          (land
+                                                            (ogt ALT0 (float 400.000000))
+                                                            (land
+                                                              (lnot(trunc i1 (i8 0)))
+                                                              (land
+                                                                (slt (add (i32 0) (i32 1)) (i32 3))
+                                                                (land
+                                                                  (ogt ALT1 (float 400.000000))
+                                                                  (land
+                                                                    (lnot(trunc i1 (i8 0)))
+                                                                    (land
+                                                                      (slt (add (add (i32 0) (i32 1)) (i32 1)) (i32 3))
+                                                                      (land
+                                                                        (ogt ALT2 (float 400.000000))
+                                                                        (land
+                                                                          (lnot(trunc i1 (i8 0)))
+                                                                          (land
+                                                                            (lnot(slt (add (add (add (i32 0) (i32 1)) (i32 1)) (i32 1)) (i32 3)))
+                                                                            (trunc i1 (zext i8 (xor (trunc i1 (zext i8 0)) (i1 1))))
+                                                                          )
+                                                                        )
+                                                                      )
+                                                                    )
+                                                                  )
+                                                                )
+                                                              )
+                                                            )
+                                                          )
+                                                        )
+                                                      )
+                                                    )
+                                                  )
+                                                )
+                                              )
+                                            )
+                                          )
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
                     )
                   )
                 )

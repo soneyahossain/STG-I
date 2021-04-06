@@ -4,7 +4,7 @@
 #include "stgi/stg.h"
 #include <stdio.h>
 
-/*
+
 TEST(MissionCheck, CheckCombined)
 {
 
@@ -74,7 +74,7 @@ TEST(MissionCheck, CheckCombined)
 
 }
 
-
+/*
 TEST(MissionCommandCheck, ValidCommand)
 {
     struct mission_s mission;
@@ -99,9 +99,6 @@ TEST(MissionCommandCheck, InValidCommand)
     ASSERT_EQ(false, checkMissionItemValidity(mission));
     //printf("Check 3 waypoints with one invalid command: %s\n", checkMissionItemValidity(mission)?"valid":"invalid");
 }
-
-
-
 
 TEST(MissionCommandCheck, InValidWaypoint)
 {
@@ -230,8 +227,6 @@ TEST(CheckGeofence, InsideTooHigh)
     //printf("Inside but too high/reject: 38, 78, 1000, true, 79, 35, 85, 35: %d\n", isGeofenced);
 }
 
-*/
-
 TEST(CheckWayPoints, CloseWaypoints)
 {
     stg_start_instrument();
@@ -348,8 +343,6 @@ TEST(CheckWayPoints, AltitudeBreaker)
     //printf("Check 2 waypoints one is too high: %d\n", checkDistancesBetweenWaypoints(mission, 40));
 }
 
-
-/*
 TEST(CheckAltitude, ValidMission)
 {
 
@@ -473,7 +466,6 @@ TEST(CheckAltitude, InvalidMission2PointsBelowHome)
     ASSERT_EQ(false, isValid);
     //printf("Check 3 waypoints: %s (invalid mission, 2nd point below home)\n", checkHomePositionAltitude(mission, 20, true)?"valid":"invalid");
 }
-
 */
 
 int main(int argc, char** argv)
