@@ -230,6 +230,7 @@ TEST(CheckGeofence, InsideTooHigh)
     //printf("Inside but too high/reject: 38, 78, 1000, true, 79, 35, 85, 35: %d\n", isGeofenced);
 }
 
+*/
 
 TEST(CheckWayPoints, CloseWaypoints)
 {
@@ -346,9 +347,9 @@ TEST(CheckWayPoints, AltitudeBreaker)
     //ASSERT_EQ(false, checkDistancesBetweenWaypoints(mission, 400));
     //printf("Check 2 waypoints one is too high: %d\n", checkDistancesBetweenWaypoints(mission, 40));
 }
-*/
 
 
+/*
 TEST(CheckAltitude, ValidMission)
 {
 
@@ -472,6 +473,8 @@ TEST(CheckAltitude, InvalidMission2PointsBelowHome)
     ASSERT_EQ(false, isValid);
     //printf("Check 3 waypoints: %s (invalid mission, 2nd point below home)\n", checkHomePositionAltitude(mission, 20, true)?"valid":"invalid");
 }
+
+*/
 
 int main(int argc, char** argv)
 {
