@@ -1,0 +1,41 @@
+[
+HOME_LAT : float,
+ALT0 : float,
+ALT1 : float,
+ALT2 : float
+]
+
+//Test: passed
+
+(land
+  (ult (i64 0) (sext i64 (i32 3)))
+  (land
+    (lnot(trunc i1 (i8 0)))
+    (land
+      (lnot(trunc i1 (i8 0)))
+      (land
+        (lnot(ogt HOME_LAT ALT0))
+        (land
+          (ult (add (i64 0) (i64 1)) (sext i64 (i32 3)))
+          (land
+            (lnot(trunc i1 (i8 0)))
+            (land
+              (lnot(trunc i1 (i8 0)))
+              (land
+                (lnot(ogt HOME_LAT ALT1))
+                (land
+                  (ult (add (add (i64 0) (i64 1)) (i64 1)) (sext i64 (i32 3)))
+                  (land
+                    (trunc i1 (i8 1))
+                    (lnot(trunc i1 (zext i8 (i1 0))))
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+

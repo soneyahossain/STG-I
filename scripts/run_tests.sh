@@ -80,6 +80,8 @@ do
       sh "$STGI_SCRIPT_DIR"/buildtest.sh "$file_path"  "$STGI_EXAMPLE_DIR"/"$dir_name"/"mcdc.txt"            #calling build script
     elif [ "$dir_name" = "classify_gtest" ]; then
       sh "$STGI_EXAMPLE_DIR"/"$dir_name"/run.sh
+    elif [ "$dir_name" = "px4_artifactSuite" ]; then
+      sh "$STGI_EXAMPLE_DIR"/"$dir_name"/run.sh
     elif [ "$dir_name" = "px4_velocity_smoothing" ]; then
       sh "$STGI_EXAMPLE_DIR"/"$dir_name"/commandLine.sh
     else

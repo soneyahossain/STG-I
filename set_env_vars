@@ -15,10 +15,11 @@ fi
 
 export STGI_EXAMPLE_DIR=$STGI_HOME/examples
 export STGI_SCRIPT_DIR=$STGI_HOME/scripts
+export GTEST=/usr/src/gtest/include
 
 
 echo $STGI_HOME    # this is the top-level directory for STGI"
 echo $LLVM_DIR     # installation directory for llvm"
 echo $STGI_LIB     # default path for STG library (e.g.: /usr/local/lib/stgi)"
 echo $STGI_INC     # default path for STG headers (e.g.: /usr/local/include/stgi)"
-
+echo $GTEST    # default path for GTEST headers (e.g.: /usr/local/include)"

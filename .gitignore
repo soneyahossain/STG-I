@@ -1,3 +1,12 @@
 /.idea/
 /developer_test/
 /test_programs/
+/out/
+.gitignore
+/.github/
+/pass/STGInstrumenter/fromllvminstall/CMakeCache.txt
+/pass/STGInstrumenter/fromllvminstall/LLVMSTGInstrumenter.so
+/pass/STGInstrumenter/fromllvminstall/install_manifest.txt
+/pass/STGInstrumenter/fromllvminstall/cmake_install.cmake
+/pass/STGInstrumenter/fromllvminstall/Makefile
+/pass/STGInstrumenter/fromllvminstall/CMakeFiles/
