@@ -25,7 +25,7 @@ opt -load="$STGI_LIB"/LLVMSTGInstrumenter.so -STGInstrumenter -partial-instrumen
 llvm-link I_simpler_missionGeofence_checker.bc I_simpler_missionCommand_checker.bc I_simpler_missionPositionAltitude_checker.bc  I_simpler_missionWaypoint_checker.bc I_simpler_mission_feasibility_checker.bc I_mission_feasibility_test.bc "$STGI_LIB"/stg.bc -o linked.bc
 llc -filetype=obj linked.bc
 clang++ -o a.out  linked.o -L /usr/local/lib -l gtest -l pthread
-./a.out --gtest_filter=CheckAltitude.*
+./a.out --gtest_filter=CheckAltitude.*  #only running test from CheckAltitude test suite
 
 rm -rf *.bc
 rm -rf *.o
